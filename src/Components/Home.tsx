@@ -1,7 +1,11 @@
 import React from "react";
+
 import { Box, Grid, Typography } from "@mui/material";
+
 import background2 from "../Images/Home/background2.svg";
 import car from "../Images/Home/car.png";
+
+import MediaCard from "../Widgets/Card";
 
 interface Props {}
 
@@ -31,7 +35,11 @@ const Home = (props: Props) => {
               In the hadlines
             </Typography>
           </Grid>
-          <Grid item container spacing={2}></Grid>
+          <Grid item container spacing={2} justifyContent="space-evenly">
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
