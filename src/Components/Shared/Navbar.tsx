@@ -37,7 +37,7 @@ const StyledTab = styled((props: StyledTabProps) => (
   <Tab disableRipple {...props} />
 ))(({ theme }) => ({
   textTransform: "none",
-  backgroundColor: "black",
+  background: "inherit",
   fontWeight: theme.typography.fontWeightRegular,
   fontSize: theme.typography.pxToRem(20),
   marginRight: theme.spacing(1),
@@ -59,7 +59,7 @@ export default function CustomizedTabs() {
   };
 
   return (
-    <Box sx={{ bgcolor: "black" }}>
+    <Box sx={{ background: "linear-gradient(black 50%, rgb(56, 56, 56))" }}>
       <StyledTabs
         value={value}
         onChange={handleChange}
@@ -72,7 +72,7 @@ export default function CustomizedTabs() {
         <StyledTab label="Alumni" />
         <StyledTab label="About us" />
       </StyledTabs>
-      <Box sx={{ p: 3 }} />
+      <Box sx={{ p: 1.3 }} />
     </Box>
   );
 }
