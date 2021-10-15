@@ -1,12 +1,18 @@
-import {} from "@mui/material";
 import React from "react";
-import "../Styles/Home.css";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import background1 from "../Images/Home/firstImageHome.png";
+import car from "../Images/Home/car.png";
 
 interface Props {}
 
 const Home = (props: Props) => {
-  return <Grid container spacing={1}></Grid>;
+  return (
+    <Grid container>
+      <Box component="div" sx={{ backgroundImage: `${background1}` }}>
+        <img src={car} alt="carImage" />
+      </Box>
+    </Grid>
+  );
 };
 
 export default Home;
