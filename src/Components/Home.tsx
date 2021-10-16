@@ -16,29 +16,98 @@ const Home = (props: Props) => {
         style={{
           // background: `linear-gradient(black 25%, white 25%),linear-gradient(to top ,white 25%, black 25%)`,
           background: `linear-gradient(rgb(56, 56, 56) 13%, white, black)`,
+          width: "100%",
         }}
       >
         <img
           src={car}
           alt="carImage"
           style={{
-            height: "70vh",
+            height: "88vh",
             width: "100%",
             opacity: 0.6,
           }}
         />
       </div>
-      <Grid container sx={{ background: `${background2}` }}>
-        <Grid item container>
+      <Grid container sx={{ backgroundColor: "black" }}>
+        <Grid
+          item
+          container
+          direction="column"
+          alignItems="center"
+          p={3}
+          m={1}
+          justifyContent="space-between"
+        >
           <Grid item>
-            <Typography variant="h3" color="secondary">
-              In the hadlines
+            <Typography
+              variant="h3"
+              color="primary"
+              sx={{ display: "inline", textTransform: "uppercase" }}
+            >
+              {"In the "}
+            </Typography>
+            <Typography
+              variant="h3"
+              color="secondary"
+              sx={{ display: "inline", textTransform: "uppercase" }}
+            >
+              hadlines
             </Typography>
           </Grid>
-          <Grid item container spacing={2} justifyContent="space-evenly">
+          <Grid item container justifyContent="space-evenly" mt={3}>
             <MediaCard />
             <MediaCard />
             <MediaCard />
+          </Grid>
+        </Grid>
+
+        <Grid
+          container
+          spacing={3}
+          direction="column"
+          justifyContent="space-between"
+          p={3}
+          m={1}
+          alignItems="center"
+        >
+          <Grid item>
+            <Typography variant="h3" color="primary" sx={{ display: "inline" }}>
+              {"CFI "}
+            </Typography>
+            <Typography
+              variant="h3"
+              color="secondary"
+              sx={{ display: "inline" }}
+            >
+              SHOTS
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            direction="row"
+            alignItems="center"
+            flexWrap="nowrap"
+            p={2}
+            spacing={4}
+          >
+            <Grid item>
+              <Typography variant="body1" color="primary">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
+                architecto sequi, ad at iste quos qui perferendis quam adipisci
+                molestiae nam nisi nihil suscipit illum officiis, ab laborum
+                placeat temporibus.
+              </Typography>
+            </Grid>
+            <Grid item>
+              <iframe
+                width="300px"
+                src="https://www.youtube.com/embed/MRB56CSroVs"
+                title="CFI"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
