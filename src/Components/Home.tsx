@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box, Grid, Typography } from "@mui/material";
 
-import background2 from "../Images/Home/background2.svg";
+import clublogo from "../Images/Home/3d.svg";
 import car from "../Images/Home/car.png";
 
 import MediaCard from "../Widgets/Card";
@@ -107,6 +107,86 @@ const Home = (props: Props) => {
                 title="CFI"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               ></iframe>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="column"
+          alignItems="center"
+          p={3}
+          m={1}
+          justifyContent="space-between"
+        >
+          <Grid item>
+            <Typography
+              variant="h3"
+              color="primary"
+              sx={{ display: "inline", textTransform: "uppercase" }}
+            >
+              {"cfi "}
+            </Typography>
+            <Typography
+              variant="h3"
+              color="secondary"
+              sx={{ display: "inline", textTransform: "uppercase" }}
+            >
+              clubs
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            container
+            direction="column"
+            justifyContent="space-evenly"
+            mt={3}
+            spacing={4}
+          >
+            <Grid item container justifyContent="center" spacing={4}>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+            </Grid>
+            <Grid item container justifyContent="center" spacing={4}>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+            </Grid>
+            <Grid item container justifyContent="center" spacing={4}>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
+              <Grid item>
+                <img src={clublogo} style={{ height: "150px" }}></img>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
