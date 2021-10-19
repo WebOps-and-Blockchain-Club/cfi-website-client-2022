@@ -8,7 +8,12 @@ import Typography from "@mui/material/Typography";
 
 import headlineImage from "../Images/Home/headline1.png";
 
-export default function MediaCard() {
+type MediaCardProps = {
+  heading?: string;
+  desc?: string;
+};
+
+export default function MediaCard({ heading, desc }: MediaCardProps) {
   return (
     <Card
       sx={{
@@ -29,11 +34,10 @@ export default function MediaCard() {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div" color="secondary">
-          Lizard
+          {heading}
         </Typography>
         <Typography variant="body2" color="primary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {desc}
         </Typography>
       </CardContent>
     </Card>

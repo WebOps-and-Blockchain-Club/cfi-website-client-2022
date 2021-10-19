@@ -3,6 +3,7 @@ import { Grid, Typography } from "@mui/material";
 
 import Heading from "../../Widgets/Heading";
 import MediaCard from "../../Widgets/Card";
+import { CompititionTeamData } from "../../Assets/Data/HomeData";
 
 export default function CompationTeams() {
   return (
@@ -18,20 +19,22 @@ export default function CompationTeams() {
       <Heading white="compitition " red="teams" />
       <Grid item container justifyContent="space-between" mt={3} spacing={7}>
         <Grid item container justifyContent="center" spacing={4}>
-          <Grid item>
-            <MediaCard />
-          </Grid>
-          <Grid item>
-            <MediaCard />
-          </Grid>
+          {CompititionTeamData.slice(0, 2).map((d) => {
+            return (
+              <Grid item>
+                <MediaCard heading={d.title} desc={d.desc} />
+              </Grid>
+            );
+          })}
         </Grid>
         <Grid item container justifyContent="center" spacing={4}>
-          <Grid item>
-            <MediaCard />
-          </Grid>
-          <Grid item>
-            <MediaCard />
-          </Grid>
+          {CompititionTeamData.slice(2).map((d) => {
+            return (
+              <Grid item>
+                <MediaCard heading={d.title} desc={d.desc} />
+              </Grid>
+            );
+          })}
         </Grid>
       </Grid>
     </Grid>

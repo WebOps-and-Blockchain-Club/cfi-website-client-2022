@@ -1,6 +1,8 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 
+import { TopNewsData } from "../../Assets/Data/HomeData";
+
 import Heading from "../../Widgets/Heading";
 import MediaCard from "../../Widgets/Card";
 
@@ -18,9 +20,9 @@ export default function TopNews() {
     >
       <Heading white={"in the "} red="headlines" />
       <Grid item container justifyContent="space-evenly" mt={3}>
-        <MediaCard />
-        <MediaCard />
-        <MediaCard />
+        {TopNewsData.map((n) => (
+          <MediaCard heading={n.title} desc={n.desc} />
+        ))}
       </Grid>
     </Grid>
   );

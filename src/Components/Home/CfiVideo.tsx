@@ -27,10 +27,22 @@ function CfiVideo() {
       >
         <Grid item>
           <Typography variant="body1" color="primary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-            architecto sequi, ad at iste quos qui perferendis quam adipisci
-            molestiae nam nisi nihil suscipit illum officiis, ab laborum placeat
-            temporibus.
+            The Centre for Innovation (CFI) was established on the premise that
+            innovation emerges through community interaction and the freedom to
+            learn and experiment. Constituted in 2008, with the help of funds
+            raised by the class of 1981, this unique 24/7 student lab is located
+            at the New Academic Complex in the heart of campus. After almost a
+            decade of the team's zeal and passion, combined with a comprehensive
+            inventory, ample workspace, guidance from faculty and students, CFI
+            is a house to 14 clubs, 4 competition teams and counting. These
+            clubs' interests are spread over a wide spectrum primarily fostering
+            innovation and invention in technology, with a focus on technologies
+            aimed at contributing positively to the environment and to the
+            society. Several CFI projects have been patented and have received
+            national recognition. The team frequently represents IIT Madras in
+            national and international competitions. It also constitutes an
+            integral part of IIT Madras' entrepreneurial culture, with many CFI
+            projects turning into startups.
           </Typography>
         </Grid>
         <Grid item>
