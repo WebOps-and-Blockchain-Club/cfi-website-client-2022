@@ -44,6 +44,16 @@ export default function MediaCard({ heading, desc, img }: MediaCardProps) {
         >
           {heading}
         </Typography>
+        <Typography
+          gutterBottom
+          variant="subtitle1"
+          component="div"
+          color="primary"
+          sx={{ textAlign: "center" }}
+          mt={3}
+        >
+          Learn more
+        </Typography>
       </CardContent>
     </Card>
   );
