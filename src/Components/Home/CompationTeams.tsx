@@ -17,25 +17,25 @@ export default function CompationTeams() {
       mt={5}
     >
       <Heading white="compitition " red="teams" />
-      <Grid item container justifyContent="space-between" mt={3} spacing={7}>
-        <Grid item container justifyContent="center" spacing={4}>
-          {CompititionTeamData.slice(0, 2).map((d) => {
-            return (
-              <Grid item>
-                <MediaCard heading={d.title} desc={d.desc} img={d.img} />
-              </Grid>
-            );
-          })}
-        </Grid>
-        <Grid item container justifyContent="center" spacing={4}>
-          {CompititionTeamData.slice(2).map((d) => {
-            return (
-              <Grid item>
-                <MediaCard heading={d.title} desc={d.desc} img={d.img} />
-              </Grid>
-            );
-          })}
-        </Grid>
+      <Typography
+        variant="h5"
+        color="primary"
+        sx={{ textAlign: "center", width: "63%", fontWeight: "bold" }}
+        mt={4}
+      >
+        CFI’s Competition teams are groups of highly motivated individuals who
+        work round the clock to meet challenging deadlines of various
+        competitions. Over the years, our teams have have bagged prizes both at
+        the national and international level.
+      </Typography>
+      <Grid item container justifyContent="center" spacing={4} mt={3}>
+        {CompititionTeamData.map((d) => {
+          return (
+            <Grid item>
+              <MediaCard heading={d.title} desc={d.desc} img={d.img} />
+            </Grid>
+          );
+        })}
       </Grid>
     </Grid>
   );
