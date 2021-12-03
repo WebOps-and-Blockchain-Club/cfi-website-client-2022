@@ -7,14 +7,22 @@ function Heading({ white, red }: { white: string; red: string }) {
       <Typography
         variant="h3"
         color="primary"
-        sx={{ display: "inline", textTransform: "uppercase" }}
+        sx={{
+          display: "inline",
+          textTransform: "uppercase",
+          fontFamily: "fantasy",
+        }}
       >
         {white}
       </Typography>
       <Typography
         variant="h3"
         color="secondary"
-        sx={{ display: "inline", textTransform: "uppercase" }}
+        sx={{
+          display: "inline",
+          textTransform: "uppercase",
+          fontFamily: "fantasy",
+        }}
       >
         {red}
       </Typography>

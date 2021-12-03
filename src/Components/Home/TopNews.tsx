@@ -18,10 +18,10 @@ export default function TopNews() {
       mt={3}
       justifyContent="space-between"
     >
-      <Heading white={"in the "} red="headlines" />
+      <Heading white={"head"} red="lines" />
       <Grid item container justifyContent="space-evenly" mt={3}>
         {TopNewsData.map((n) => (
-          <MediaCard heading={n.title} desc={n.desc} />
+          <MediaCard heading={n.title} desc={n.desc} img={n.img} />
         ))}
       </Grid>
     </Grid>

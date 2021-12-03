@@ -22,7 +22,7 @@ export default function CompationTeams() {
           {CompititionTeamData.slice(0, 2).map((d) => {
             return (
               <Grid item>
-                <MediaCard heading={d.title} desc={d.desc} />
+                <MediaCard heading={d.title} desc={d.desc} img={d.img} />
               </Grid>
             );
           })}
@@ -31,7 +31,7 @@ export default function CompationTeams() {
           {CompititionTeamData.slice(2).map((d) => {
             return (
               <Grid item>
-                <MediaCard heading={d.title} desc={d.desc} />
+                <MediaCard heading={d.title} desc={d.desc} img={d.img} />
               </Grid>
             );
           })}

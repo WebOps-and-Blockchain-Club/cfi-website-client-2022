@@ -11,14 +11,15 @@ import headlineImage from "../Images/Home/headline1.png";
 type MediaCardProps = {
   heading?: string;
   desc?: string;
+  img: string;
 };
 
-export default function MediaCard({ heading, desc }: MediaCardProps) {
+export default function MediaCard({ heading, desc, img }: MediaCardProps) {
   return (
     <Card
       sx={{
-        maxWidth: 345,
-        borderRadius: "1em",
+        maxWidth: 350,
+        borderRadius: "3em",
         padding: "1em",
         margin: "0.5em",
         backgroundColor: "inherit",
@@ -27,17 +28,21 @@ export default function MediaCard({ heading, desc }: MediaCardProps) {
     >
       <CardMedia
         component="img"
-        height="140"
-        image={headlineImage}
-        alt="Card image"
-        sx={{ borderRadius: "1em" }}
+        height="70%"
+        width="100%"
+        image={img}
+        alt="newsimg"
+        sx={{ borderRadius: "2em" }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div" color="secondary">
+        <Typography
+          gutterBottom
+          variant="subtitle1"
+          component="div"
+          color="primary"
+          sx={{ textAlign: "center" }}
+        >
           {heading}
-        </Typography>
-        <Typography variant="body2" color="primary">
-          {desc}
         </Typography>
       </CardContent>
     </Card>
