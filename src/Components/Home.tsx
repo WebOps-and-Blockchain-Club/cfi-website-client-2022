@@ -14,31 +14,17 @@ import CompationTeams from "./Home/CompationTeams";
 import ContactUs from "./Home/ContactUs";
 import TopNews from "./Home/TopNews";
 import HomeSocial from "./Home/HomeSocial";
+import TopCarousel from "./Home/Carousel";
 
 interface Props {}
 
 const Home = (props: Props) => {
   return (
     <Grid container>
-      <div
-        style={{
-          backgroundImage: `url(${car})`,
-          width: "100vw",
-          height: "90vh",
-          backgroundBlendMode: "soft-light",
-          backgroundSize: "cover",
-        }}
-      >
-        <Box
-          component="span"
-          sx={{ position: "absolute", bottom: "0" }}
-          m={2}
-          ml={4}
-        >
-          <Heading white="India's largest student run " red="innovation lab" />
-        </Box>
-      </div>
-      <Grid container sx={{ background: `url(${background2})` }}>
+      <Grid item>
+        <TopCarousel />
+      </Grid>
+      <Grid container item sx={{ background: `url(${background2})` }}>
         <TopNews />
         <CfiVideo />
         <CfiClubs />
