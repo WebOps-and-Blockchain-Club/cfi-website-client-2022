@@ -19,7 +19,7 @@ export default function CompationTeams() {
       <Heading white="compitition " red="teams" />
       <Typography
         variant="h5"
-        color="primary"
+        color="primary.contrastText"
         sx={{ textAlign: "center", width: "63%", fontWeight: "bold" }}
         mt={4}
       >

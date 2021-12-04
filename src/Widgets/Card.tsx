@@ -39,7 +39,7 @@ export default function MediaCard({ heading, desc, img }: MediaCardProps) {
           gutterBottom
           variant="subtitle1"
           component="div"
-          color="primary"
+          color="primary.contrastText"
           sx={{ textAlign: "center" }}
         >
           {heading}
@@ -48,7 +48,7 @@ export default function MediaCard({ heading, desc, img }: MediaCardProps) {
           gutterBottom
           variant="subtitle1"
           component="div"
-          color="primary"
+          color="primary.contrastText"
           sx={{ textAlign: "center" }}
           mt={3}
         >

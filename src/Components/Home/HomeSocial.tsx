@@ -32,7 +32,7 @@ export default function HomeSocial() {
         mt={4}
         justifyContent="center"
         alignItems="center"
-        color="primary"
+        color="primary.contrastText"
       ></Grid>
     </Grid>
   );

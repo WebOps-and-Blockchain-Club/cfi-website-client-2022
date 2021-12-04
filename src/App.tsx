@@ -20,7 +20,10 @@ interface theme {
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fff",
+      light: "#080808",
+      main: "#030303",
+      dark: "#000000",
+      contrastText: "#D6D6D6",
     },
     secondary: {
       main: "#FF0000",

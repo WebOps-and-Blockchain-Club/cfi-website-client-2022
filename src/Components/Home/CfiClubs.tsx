@@ -19,7 +19,7 @@ export default function CfiClubs() {
       <Heading white="cfi " red="clubs" />
       <Typography
         variant="h5"
-        color="primary"
+        color="primary.contrastText"
         sx={{ textAlign: "center", width: "68%", fontWeight: "bold" }}
         mt={4}
       >
@@ -30,7 +30,7 @@ export default function CfiClubs() {
       </Typography>
       <Typography
         variant="h5"
-        color="primary"
+        color="primary.contrastText"
         sx={{ textAlign: "center", fontWeight: "bold" }}
         mt={2}
         mb={3}

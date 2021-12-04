@@ -6,7 +6,7 @@ function Heading({ white, red }: { white: string; red: string }) {
     <Grid item>
       <Typography
         variant="h3"
-        color="primary"
+        color="primary.contrastText"
         sx={{
           display: "inline",
           textTransform: "uppercase",
