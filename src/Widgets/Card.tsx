@@ -32,7 +32,7 @@ export default function MediaCard({ heading, desc, img }: MediaCardProps) {
         width="100%"
         image={img}
         alt="newsimg"
-        sx={{ borderRadius: "2em" }}
+        sx={{ borderRadius: "2em", verticalAlign: "middle" }}
       />
       <CardContent>
         <Typography

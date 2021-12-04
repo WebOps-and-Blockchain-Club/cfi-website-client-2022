@@ -3,7 +3,7 @@ import raftarimg from "../../Images/Home/Top News/raftar.png";
 import avishkarimg from "../../Images/Home/Top News/avishkar.png";
 
 import rfrlogo from "../../Images/Home/compitition teams/rfrlogo.png";
-import anveshaklogo from "../../Images/Home/compitition teams/anveshaklogo.png";
+import anveshaklogo from "../../Images/Home/compitition teams/anveshaklogo2.png";
 import avishkarlogo from "../../Images/Home/compitition teams/avishkarlogo.png";
 import abhiyaanlogo from "../../Images/Home/compitition teams/abhiyaanlogo.png";
 
