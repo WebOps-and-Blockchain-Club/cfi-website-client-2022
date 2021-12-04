@@ -8,7 +8,6 @@ export default function ContactUs() {
   return (
     <Grid
       container
-      spacing={3}
       direction="column"
       justifyContent="space-between"
       alignItems="center"
@@ -17,23 +16,18 @@ export default function ContactUs() {
         margin: "auto",
       }}
     >
-      <Heading white="contact " red="us" />
-      <Grid
-        item
-        container
-        alignItems="stretch"
-        justifyContent="space-evenly"
-        p={2}
-        spacing={4}
-      >
+      <Grid item mb={3}>
+        <Heading white="contact " red="us" />
+      </Grid>
+      <Grid item container alignItems="stretch" justifyContent="space-evenly">
         <Grid
           item
           container
           justifyContent="space-around"
           direction="column"
           sx={{ backgroundColor: "#420101", borderRadius: "40px" }}
-          p={4}
-          m={3.5}
+          p={3}
+          m={2}
           xl={5}
           lg={7}
           xs={12}
@@ -47,6 +41,7 @@ export default function ContactUs() {
               marginBottom: "7px",
               color: "primary.contrastText",
               padding: "2px 20px",
+              fontSize: "20px",
               height: "43px",
               border: 0,
             }}
@@ -62,6 +57,7 @@ export default function ContactUs() {
               marginBottom: "7px",
               color: "primary.contrastText",
               padding: "2px 20px",
+              fontSize: "20px",
               height: "43px",
               border: 0,
             }}
@@ -77,6 +73,7 @@ export default function ContactUs() {
               marginBottom: "7px",
               color: "primary.contrastText",
               padding: "2px 20px",
+              fontSize: "20px",
               height: "43px",
               border: 0,
             }}
@@ -91,6 +88,7 @@ export default function ContactUs() {
               marginBottom: "7px",
               color: "primary.contrastText",
               padding: "2px 20px",
+              fontSize: "20px",
               border: 0,
             }}
             className="input"
@@ -107,6 +105,7 @@ export default function ContactUs() {
           alignItems="center"
           justifyContent="center"
           p={3}
+          m={2}
         >
           <Grid
             item
