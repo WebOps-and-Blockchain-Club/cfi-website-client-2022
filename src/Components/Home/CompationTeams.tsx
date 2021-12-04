@@ -7,15 +7,7 @@ import { CompititionTeamData } from "../../Assets/Data/HomeData";
 
 export default function CompationTeams() {
   return (
-    <Grid
-      item
-      container
-      direction="column"
-      alignItems="center"
-      p={3}
-      m={1}
-      mt={5}
-    >
+    <Grid item container direction="column" alignItems="center" m={1} mt={5}>
       <Heading white="compitition " red="teams" />
       <Typography
         variant="h5"

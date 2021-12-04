@@ -12,9 +12,9 @@ export default function ContactUs() {
       direction="column"
       justifyContent="space-between"
       alignItems="center"
-      m={3}
       sx={{
         width: "100%",
+        margin: "auto",
       }}
     >
       <Heading white="contact " red="us" />

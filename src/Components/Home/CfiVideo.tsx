@@ -1,22 +1,27 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import Heading from "../../Widgets/Heading";
 
 function CfiVideo() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Grid
       container
       spacing={3}
       direction="column"
       justifyContent="space-between"
-      p={3}
-      m={1}
+      p={1}
       mt={3}
       alignItems="center"
     >
       <Heading white="about " red="cfi" />
-      <Typography variant="h4" color="primary.contrastText">
+      <Typography variant="h4" color="primary.contrastText" p={2}>
         ‘‘Walk in with an idea, walk out with a product.’’
       </Typography>
       <Grid
@@ -24,20 +29,18 @@ function CfiVideo() {
         container
         direction="row"
         alignItems="center"
-        flexWrap="nowrap"
-        p={2}
-        spacing={4}
+        justifyContent="space-around"
       >
-        <Grid item>
+        <Grid item lg={5} xs={12}>
           <iframe
-            width="600px"
-            height="400px"
+            width="100%"
+            height={matches ? "200px" : "400px"}
             src="https://www.youtube.com/embed/MRB56CSroVs"
             title="CFI"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </Grid>
-        <Grid item>
+        <Grid item lg={5} xs={12}>
           <ol>
             <li>
               <Typography variant="body1" color="primary.contrastText">
