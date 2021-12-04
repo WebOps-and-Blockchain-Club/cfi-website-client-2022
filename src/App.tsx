@@ -1,33 +1,23 @@
 import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
 import Routes from "./Components/Route";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { red, lightGreen } from "@mui/material/colors";
 
 interface Probs {}
-interface PaletteColor {
-  light?: string;
-  main: string;
-  dark?: string;
-  contrastText?: string;
-}
-interface theme {
-  palette: {
-    primary: PaletteColor;
-    secondary: PaletteColor;
-  };
-}
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: "#080808",
-      main: "#030303",
-      dark: "#000000",
-      contrastText: "#D6D6D6",
+      light: "#080808", //Dark grey
+      main: "#030303", //Black
+      dark: "#000000", //Standard Black
+      contrastText: "#D6D6D6", //White
     },
     secondary: {
-      main: "#FF0000",
+      main: "#FF0000", //Red
     },
+  },
+  typography: {
+    fontFamily: ["Proxima Nova", "Proxima Nova Bold"].join(","),
   },
 });
 
