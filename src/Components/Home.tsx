@@ -43,8 +43,8 @@ const Home = (props: Props) => {
         <CfiVideo />
         <CfiClubs />
         <CompationTeams />
-        <HomeSocial />
         <ContactUs />
+        <HomeSocial />
       </Grid>
     </Grid>
   );

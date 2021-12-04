@@ -1,10 +1,8 @@
-import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, TextField, Typography } from "@mui/material";
 
 import Heading from "../../Widgets/Heading";
 
-import background3 from "../../Images/Home/background3.png";
-import contact from "../../Images/Home/contact.png";
+import cfilogo from "../../Images/CFILogo/CFI Logo (with text) - White - Copy.png";
 
 export default function ContactUs() {
   return (
@@ -14,20 +12,17 @@ export default function ContactUs() {
       direction="column"
       justifyContent="space-between"
       alignItems="center"
-      m={3.5}
+      m={3}
       sx={{
-        background: `url(${background3}),linear-gradient(rgb(56, 56, 56) 13%, white, black) `,
         width: "100%",
-        // opacity: "0.7",
       }}
     >
       <Heading white="contact " red="us" />
       <Grid
         item
         container
-        direction="row"
-        alignItems="center"
-        flexWrap="nowrap"
+        alignItems="stretch"
+        justifyContent="space-evenly"
         p={2}
         spacing={4}
       >
@@ -36,30 +31,96 @@ export default function ContactUs() {
           container
           justifyContent="space-around"
           direction="column"
-          spacing={3}
-          alignItems="center"
+          sx={{ backgroundColor: "#420101", borderRadius: "40px" }}
+          p={4}
+          m={3.5}
+          xl={5}
+          lg={7}
+          xs={12}
         >
-          <Heading white="cfi " red="team" />
-          <Grid item>
-            <img src={contact} alt="dummy Image" />
-          </Grid>
+          <input
+            type="text"
+            name="name"
+            style={{
+              backgroundColor: "#080808",
+              borderRadius: "40px",
+              marginBottom: "7px",
+              color: "#FFFFFF",
+              padding: "2px 20px",
+              height: "43px",
+              border: 0,
+            }}
+            className="input"
+            placeholder="Name"
+          />
+          <input
+            type="text"
+            name="name"
+            style={{
+              backgroundColor: "#080808",
+              borderRadius: "40px",
+              marginBottom: "7px",
+              color: "#FFFFFF",
+              padding: "2px 20px",
+              height: "43px",
+              border: 0,
+            }}
+            className="input"
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            name="name"
+            style={{
+              backgroundColor: "#080808",
+              borderRadius: "40px",
+              marginBottom: "7px",
+              color: "#FFFFFF",
+              padding: "2px 20px",
+              height: "43px",
+              border: 0,
+            }}
+            className="input"
+            placeholder="Subject"
+          />
+          <textarea
+            rows={5}
+            style={{
+              backgroundColor: "#080808",
+              borderRadius: "30px",
+              marginBottom: "7px",
+              color: "#FFFFFF",
+              padding: "2px 20px",
+              border: 0,
+            }}
+            className="input"
+            placeholder="message"
+          />
         </Grid>
-        <Grid item>
-          <Typography variant="body1" color="primary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere
-            architecto sequi, ad at iste quos qui perferendis quam adipisci
-            molestiae nam nisi nihil suscipit illum officiis, ab laborum placeat
-            temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing
-            elit. Facere architecto sequi, ad at iste quos qui perferendis quam
-            adipisci molestiae nam nisi nihil suscipit illum officiis, ab
-            laborum placeat temporibus.
-          </Typography>
-          <Typography variant="h5" color="primary" mt={2}>
-            Contact Heads: 12XXX789YY/ 12XXX789YY
-          </Typography>
-          <Typography variant="h5" color="primary" mt={0.5} ml={9}>
-            blah@gmail.com
-          </Typography>
+        <Grid
+          container
+          item
+          sx={{ backgroundColor: "#420101", borderRadius: "40px" }}
+          xl
+          lg={3}
+          xs={12}
+          alignItems="center"
+          justifyContent="center"
+          p={3}
+        >
+          <Grid
+            item
+            sx={{
+              width: "fit-content",
+              height: "fit-content",
+            }}
+          >
+            <img
+              src={cfilogo}
+              alt="cfi logo"
+              style={{ height: "200px", width: "200px" }}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

@@ -33,19 +33,7 @@ export default function HomeSocial() {
         justifyContent="center"
         alignItems="center"
         color="primary"
-      >
-        <Grid item>
-          <Typography variant="body1" color="primary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-            voluptatibus eos, dolorem nisi porro inventore nobis delectus
-            cupiditate hic repudiandae possimus labore nihil optio, ducimus
-            fugit ex commodi? Natus, illo? Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Eveniet, eius quia, praesentium
-            ratione debitis, voluptas est reiciendis ipsam autem ex numquam ea
-            ab maiores eum ipsum nisi nam neque dicta.
-          </Typography>
-        </Grid>
-      </Grid>
+      ></Grid>
     </Grid>
   );
 }
