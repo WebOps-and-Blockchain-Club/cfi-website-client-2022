@@ -98,7 +98,10 @@ export default function ContactUs() {
         <Grid
           container
           item
-          sx={{ backgroundColor: "#420101", borderRadius: "40px" }}
+          sx={{
+            backgroundImage: "linear-gradient(135deg, red, black)",
+            borderRadius: "40px",
+          }}
           xl
           lg={3}
           xs={12}

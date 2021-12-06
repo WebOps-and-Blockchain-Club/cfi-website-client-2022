@@ -21,7 +21,7 @@ export default function CompationTeams() {
         sx={{
           textAlign: "center",
           width: `${matches ? "100%" : "68%"}`,
-          fontWeight: "bold",
+          fontFamily: "Proxima Nova Bold",
         }}
         mt={4}
       >

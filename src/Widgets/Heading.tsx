@@ -16,8 +16,7 @@ function Heading({ white, red }: { white: string; red: string }) {
         sx={{
           display: "inline",
           textTransform: "uppercase",
-          fontFamily: "fantasy",
-          fontWeight: "bolder",
+          fontFamily: "Proxima Nova Bold",
           textAlign: "center",
         }}
       >
@@ -29,8 +28,7 @@ function Heading({ white, red }: { white: string; red: string }) {
         sx={{
           display: "inline",
           textTransform: "uppercase",
-          fontFamily: "fantasy",
-          fontWeight: "bolder",
+          fontFamily: "Proxima Nova Bold",
           textAlign: "center",
         }}
       >
