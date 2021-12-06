@@ -4,7 +4,12 @@ import Heading from "../../Widgets/Heading";
 
 import cfilogo from "../../Images/CFILogo/CFI Logo (with text) - White - Copy.png";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 export default function ContactUs() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Grid
       container
@@ -26,7 +31,7 @@ export default function ContactUs() {
           justifyContent="space-around"
           direction="column"
           sx={{ backgroundColor: "#420101", borderRadius: "40px" }}
-          p={3}
+          p={matches ? 3 : 2}
           m={2}
           xl={5}
           lg={7}
