@@ -16,31 +16,111 @@ export default function NavbarWeb() {
       size="large"
       variant="text"
       aria-label="text button group"
-      style={{ color: "black" }}
+      style={{ backgroundColor: "#030303", width: "100%" }}
     >
       <Link to="/" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Home</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Home
+        </Button>
       </Link>
       <Link to="/clubs" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Clubs</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Clubs
+        </Button>
       </Link>
       <Link to="/achievements" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Achievements</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Achievements
+        </Button>
       </Link>
       <Link to="/competitionteams" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Competition Teams</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Competition Teams
+        </Button>
       </Link>
       <Link to="/achievements" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Media</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Media
+        </Button>
       </Link>
       <Link to="/achievements" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Alumni</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Alumni
+        </Button>
       </Link>
       <Link to="/achievements" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>About Us</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          About Us
+        </Button>
       </Link>
       <Link to="/achievements" style={{ textDecoration: "none" }}>
-        <Button style={{ color: "black" }}>Contact Us</Button>
+        <Button
+          variant="text"
+          style={{
+            color: "#D6D6D6",
+            margin: "2px 15px",
+            fontSize: "24px",
+            fontFamily: "Proxima Nova Bold",
+          }}
+        >
+          Contact Us
+        </Button>
       </Link>
     </ButtonGroup>
   );

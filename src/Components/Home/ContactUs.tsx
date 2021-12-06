@@ -104,7 +104,7 @@ export default function ContactUs() {
           container
           item
           sx={{
-            backgroundImage: "linear-gradient(135deg, red, black)",
+            backgroundImage: "linear-gradient(135deg, #420101, black)",
             borderRadius: "40px",
           }}
           xl

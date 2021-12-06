@@ -28,26 +28,46 @@ export default function TopCarousel() {
       showThumbs={false}
       stopOnHover={false}
     >
-      <div style={{ height: `${matches ? "40vh" : "92vh"}` }}>
-        <img src={car} style={{ height: "inherit" }} />
+      <div
+        style={{
+          height: `${matches ? "40vh" : "92vh"}`,
+          backgroundImage: "linear-gradient(180deg, black, white, black)",
+        }}
+      >
+        <img src={car} style={{ height: "inherit", opacity: "0.7" }} />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
       </div>
-      <div style={{ height: `${matches ? "40vh" : "92vh"}` }}>
-        <img src={car2} style={{ height: "inherit" }} />
+      <div
+        style={{
+          height: `${matches ? "40vh" : "92vh"}`,
+          backgroundImage: "linear-gradient(180deg, black, white, black)",
+        }}
+      >
+        <img src={car2} style={{ height: "inherit", opacity: "0.7" }} />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
       </div>
-      <div style={{ height: `${matches ? "40vh" : "92vh"}` }}>
-        <img src={dron} style={{ height: "inherit" }} />
+      <div
+        style={{
+          height: `${matches ? "40vh" : "92vh"}`,
+          backgroundImage: "linear-gradient(180deg, black, white, black)",
+        }}
+      >
+        <img src={dron} style={{ height: "inherit", opacity: "0.7" }} />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
       </div>
-      <div style={{ height: `${matches ? "40vh" : "92vh"}` }}>
-        <img src={rover} style={{ height: "inherit" }} />
+      <div
+        style={{
+          height: `${matches ? "40vh" : "92vh"}`,
+          backgroundImage: "linear-gradient(180deg, black, white, black)",
+        }}
+      >
+        <img src={rover} style={{ height: "inherit", opacity: "0.6" }} />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
