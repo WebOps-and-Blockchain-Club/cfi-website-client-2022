@@ -13,8 +13,18 @@ export default function CompationTeams() {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Grid item container direction="column" alignItems="center" m={1} mt={5}>
-      <Heading white="compitition " red="teams" />
+    <Grid
+      item
+      container
+      direction="column"
+      alignItems="center"
+      justifyContent="space-between"
+      pt={10}
+      sx={{ minHeight: "100vh" }}
+    >
+      <Grid item>
+        <Heading white="compitition " red="teams" />
+      </Grid>
       <Typography
         variant={matches ? "h6" : "h5"}
         color="primary.contrastText"
@@ -23,14 +33,14 @@ export default function CompationTeams() {
           width: `${matches ? "100%" : "68%"}`,
           fontFamily: "Proxima Nova Bold",
         }}
-        mt={4}
+        mt={3}
       >
         CFI’s Competition teams are groups of highly motivated individuals who
         work round the clock to meet challenging deadlines of various
         competitions. Over the years, our teams have have bagged prizes both at
         the national and international level.
       </Typography>
-      <Grid item container justifyContent="space-evenly" mt={3}>
+      <Grid item container justifyContent="space-evenly">
         {CompititionTeamData.map((d) => {
           return (
             <Grid item>

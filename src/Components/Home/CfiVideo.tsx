@@ -12,42 +12,47 @@ function CfiVideo() {
 
   return (
     <Grid
+      item
       container
-      spacing={3}
       direction="column"
-      justifyContent="space-between"
-      p={1}
-      mt={3}
       alignItems="center"
+      justifyContent="space-between"
+      sx={{ minHeight: "100vh" }}
+      pt={10}
     >
-      <Heading white="about " red="cfi" />
-      <Typography
-        variant={matches ? "h5" : "h4"}
-        color="primary.contrastText"
-        p={2}
-        sx={{ textAlign: "center", fontWeight: "bold" }}
-      >
-        ‘‘Walk in with an idea, walk out with a product.’’
-      </Typography>
+      <Grid item>
+        <Heading white="about " red="cfi" />
+      </Grid>
+      <Grid item>
+        <Typography
+          variant={matches ? "h5" : "h4"}
+          color="primary.contrastText"
+          sx={{ textAlign: "center", fontWeight: "bold" }}
+          mt={3}
+        >
+          ‘‘Walk in with an idea, walk out with a product.’’
+        </Typography>
+      </Grid>
       <Grid
         item
         container
-        direction="row"
+        spacing={4}
         alignItems="center"
-        justifyContent="space-around"
+        mt={3}
+        sx={{ width: "100%" }}
       >
-        <Grid item lg={5} xs={12} p={1}>
+        <Grid item lg={7} xs={11}>
           <iframe
             width="100%"
-            height={matches ? "200px" : "400px"}
-            src="https://www.youtube.com/embed/MRB56CSroVs"
+            height={matches ? "200px" : "500px"}
+            src="https://www.youtube.com/embed/MRB56CSroVs?autoplay=1"
             title="CFI"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
         </Grid>
-        <Grid item lg={5} xs={12} p={1}>
+        <Grid item lg={5} xs={11}>
           <Typography
-            variant={matches ? "body2" : "body1"}
+            variant={matches ? "body2" : "h6"}
             color="primary.contrastText"
           >
             The Centre for Innovation (CFI) was established on the premise that
@@ -58,7 +63,7 @@ function CfiVideo() {
           </Typography>
 
           <Typography
-            variant={matches ? "body2" : "body1"}
+            variant={matches ? "body2" : "h6"}
             color="primary.contrastText"
           >
             After almost a decade of the team's zeal and passion, combined with
@@ -68,7 +73,7 @@ function CfiVideo() {
           </Typography>
 
           <Typography
-            variant={matches ? "body2" : "body1"}
+            variant={matches ? "body2" : "h6"}
             color="primary.contrastText"
           >
             These clubs' interests are spread over a wide spectrum primarily
@@ -78,7 +83,7 @@ function CfiVideo() {
           </Typography>
 
           <Typography
-            variant={matches ? "body2" : "body1"}
+            variant={matches ? "body2" : "h6"}
             color="primary.contrastText"
           >
             Several CFI projects have been patented and have received national

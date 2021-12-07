@@ -8,7 +8,7 @@ export default function NavbarWeb() {
       size="large"
       variant="text"
       aria-label="text button group"
-      style={{ backgroundColor: "#030303", width: "100%" }}
+      style={{ backgroundColor: "#030303", width: "100%", padding: "5px 0" }}
     >
       <Link to="/" style={{ textDecoration: "none" }}>
         <Button

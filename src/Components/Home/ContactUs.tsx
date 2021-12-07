@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Button, Typography } from "@mui/material";
 
 import Heading from "../../Widgets/Heading";
 
@@ -10,12 +10,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 export default function ContactUs() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("xs"));
+  const matchesSm = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Grid
+      item
       container
       direction="column"
-      justifyContent="space-between"
       alignItems="center"
+      justifyContent="space-between"
+      pt={10}
       sx={{
         width: "100%",
         margin: "auto",
@@ -34,7 +37,7 @@ export default function ContactUs() {
           p={matches ? 3 : 2}
           m={2}
           xl={5}
-          lg={7}
+          lg={5}
           xs={12}
         >
           <input
@@ -44,7 +47,8 @@ export default function ContactUs() {
               backgroundColor: "#080808",
               borderRadius: "40px",
               marginBottom: "7px",
-              color: "primary.contrastText",
+              // color: "primary.contrastText",
+              color: "#D6D6D6",
               padding: "2px 20px",
               fontSize: "20px",
               height: "43px",
@@ -60,7 +64,8 @@ export default function ContactUs() {
               backgroundColor: "#080808",
               borderRadius: "40px",
               marginBottom: "7px",
-              color: "primary.contrastText",
+              // color: "primary.contrastText",
+              color: "#D6D6D6",
               padding: "2px 20px",
               fontSize: "20px",
               height: "43px",
@@ -76,7 +81,8 @@ export default function ContactUs() {
               backgroundColor: "#080808",
               borderRadius: "40px",
               marginBottom: "7px",
-              color: "primary.contrastText",
+              // color: "primary.contrastText",
+              color: "#D6D6D6",
               padding: "2px 20px",
               fontSize: "20px",
               height: "43px",
@@ -91,27 +97,37 @@ export default function ContactUs() {
               backgroundColor: "#080808",
               borderRadius: "30px",
               marginBottom: "7px",
-              color: "primary.contrastText",
-              padding: "2px 20px",
+              // not working here
+              // color: "primary.contrastText",
+              color: "#D6D6D6",
+              padding: "4px 20px",
               fontSize: "20px",
+              fontFamily: "Proxima Nova",
               border: 0,
             }}
             className="input"
-            placeholder="message"
+            placeholder="Message"
           />
+          <Button
+            variant="contained"
+            color="secondary"
+            sx={{ borderRadius: "40px" }}
+          >
+            Submit
+          </Button>
         </Grid>
         <Grid
           container
           item
           sx={{
-            backgroundImage: "linear-gradient(135deg, #420101, black)",
+            backgroundImage: "linear-gradient(135deg, #420101, #030303)",
             borderRadius: "40px",
           }}
           xl
-          lg={3}
+          lg={5}
           xs={12}
           alignItems="center"
-          justifyContent="center"
+          justifyContent="space-around"
           p={3}
           m={2}
         >
@@ -128,6 +144,20 @@ export default function ContactUs() {
               style={{ height: "200px", width: "200px" }}
             />
           </Grid>
+          {matchesSm ? (
+            <>
+              <Typography variant="h5" color="primary.contrastText">
+                IIT Madras
+              </Typography>
+              <Typography variant="h5" color="primary.contrastText">
+                Contact no. 00909134
+              </Typography>
+            </>
+          ) : (
+            <Typography variant="h4" color="primary.contrastText">
+              IIT Madras, Contact no. 00909134
+            </Typography>
+          )}
         </Grid>
       </Grid>
     </Grid>

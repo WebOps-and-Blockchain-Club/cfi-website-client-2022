@@ -57,6 +57,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -71,6 +72,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/clubs" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -85,6 +87,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/achievements" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -99,6 +102,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/competitionteams" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -114,6 +118,7 @@ export default function NavbarMob() {
             {" "}
             <Link to="/achievements" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -128,6 +133,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/achievements" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -142,6 +148,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/achievements" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
@@ -156,6 +163,7 @@ export default function NavbarMob() {
           <ListItem button>
             <Link to="/achievements" style={{ textDecoration: "none" }}>
               <Button
+                onClick={handleClose}
                 style={{
                   color: "#D6D6D6",
                   fontSize: "22px",
