@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -34,7 +33,11 @@ export default function TopCarousel() {
           backgroundImage: "linear-gradient(180deg, black, white, black)",
         }}
       >
-        <img src={car} style={{ height: "inherit", opacity: "0.7" }} />
+        <img
+          src={dron}
+          alt="dron"
+          style={{ height: "inherit", opacity: "0.7" }}
+        />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
@@ -45,7 +48,11 @@ export default function TopCarousel() {
           backgroundImage: "linear-gradient(180deg, black, white, black)",
         }}
       >
-        <img src={car2} style={{ height: "inherit", opacity: "0.7" }} />
+        <img
+          src={car}
+          alt="car"
+          style={{ height: "inherit", opacity: "0.7" }}
+        />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
@@ -56,7 +63,11 @@ export default function TopCarousel() {
           backgroundImage: "linear-gradient(180deg, black, white, black)",
         }}
       >
-        <img src={dron} style={{ height: "inherit", opacity: "0.7" }} />
+        <img
+          src={car2}
+          alt="car2"
+          style={{ height: "inherit", opacity: "0.7" }}
+        />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>
@@ -67,7 +78,11 @@ export default function TopCarousel() {
           backgroundImage: "linear-gradient(180deg, black, white, black)",
         }}
       >
-        <img src={rover} style={{ height: "inherit", opacity: "0.6" }} />
+        <img
+          src={rover}
+          alt="rover"
+          style={{ height: "inherit", opacity: "0.6" }}
+        />
         <p className="legend" style={{ backgroundColor: "transparent" }}>
           <Heading white="India's largest student run " red="innovation lab" />
         </p>

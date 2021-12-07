@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import facebook from "../../Images/Home/facebook.png";
 import twitter from "../../Images/Home/twitter.png";
@@ -18,13 +18,13 @@ export default function HomeSocial() {
         p={2}
       >
         <Grid item>
-          <img src={facebook} style={{ height: "50px" }}></img>
+          <img src={facebook} alt="Facebook" style={{ height: "50px" }}></img>
         </Grid>
         <Grid item>
-          <img src={instagram} style={{ height: "50px" }}></img>
+          <img src={instagram} alt="Instagram" style={{ height: "50px" }}></img>
         </Grid>
         <Grid item>
-          <img src={twitter} style={{ height: "50px" }}></img>
+          <img src={twitter} alt="Twitter" style={{ height: "50px" }}></img>
         </Grid>
       </Grid>
       <Grid

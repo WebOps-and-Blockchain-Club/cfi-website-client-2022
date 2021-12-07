@@ -1,14 +1,4 @@
 import React from "react";
-import {
-  Grid,
-  ButtonGroup,
-  Button,
-  Box,
-  Typography,
-  Avatar,
-} from "@mui/material";
-import myPhoto from "../assets/Images/myPhoto.png";
-import { Link } from "react-router-dom";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";

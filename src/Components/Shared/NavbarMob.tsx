@@ -1,13 +1,15 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import Dialog from "@mui/material/Dialog";
-import ListItem from "@mui/material/ListItem";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import AppBar from "@mui/material/AppBar";
-import IconButton from "@mui/material/IconButton";
+import {
+  Button,
+  Dialog,
+  ListItem,
+  List,
+  Divider,
+  IconButton,
+  Slide,
+} from "@mui/material";
+
 import CloseIcon from "@mui/icons-material/Close";
-import Slide from "@mui/material/Slide";
 import { TransitionProps } from "@mui/material/transitions";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";

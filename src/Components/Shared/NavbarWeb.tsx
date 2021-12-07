@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Grid,
-  ButtonGroup,
-  Button,
-  Box,
-  Typography,
-  Avatar,
-} from "@mui/material";
-import myPhoto from "../assets/Images/myPhoto.png";
+import { ButtonGroup, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function NavbarWeb() {

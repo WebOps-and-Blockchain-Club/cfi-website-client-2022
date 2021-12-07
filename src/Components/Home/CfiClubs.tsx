@@ -57,43 +57,43 @@ export default function CfiClubs() {
         >
           <Grid item container justifyContent="center" spacing={1}>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "100px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "100px" }}></img>
             </Grid>
           </Grid>
         </Grid>
@@ -108,47 +108,47 @@ export default function CfiClubs() {
         >
           <Grid item container justifyContent="center" spacing={4}>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
-            </Grid>
-          </Grid>
-          <Grid item container justifyContent="center" spacing={4}>
-            <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
-            </Grid>
-            <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
-            </Grid>
-            <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
-            </Grid>
-            <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
           </Grid>
           <Grid item container justifyContent="center" spacing={4}>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
             <Grid item>
-              <img src={clublogo} style={{ height: "150px" }}></img>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
+            </Grid>
+            <Grid item>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
+            </Grid>
+          </Grid>
+          <Grid item container justifyContent="center" spacing={4}>
+            <Grid item>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
+            </Grid>
+            <Grid item>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
+            </Grid>
+            <Grid item>
+              <img src={clublogo} alt="logo" style={{ height: "150px" }}></img>
             </Grid>
           </Grid>
         </Grid>
