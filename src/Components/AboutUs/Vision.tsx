@@ -1,10 +1,15 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import cfilogo from "../../Images/CFILogo/CFI Logo (with text) - White - Copy.png";
 import { margin, padding } from "@mui/system";
 
 function Vision() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Grid
       container
@@ -15,17 +20,18 @@ function Vision() {
       mb={12}
       alignItems="center"
     >
-      <Typography variant="h4" color="primary.contrastText" p={6}>
-       VISION
+      <Typography variant={matches ? "h5" : "h4"} color="primary.contrastText" p={matches ? 2 : 5} style={{fontFamily:"Proxima Nova Bold"}}>
+       VISION 
       </Typography>
       <Grid
         item
         container
         direction="row"
+        justifyContent="center"
       >
         <Grid item 
         container
-        p={4}
+        p={matches ? 2 : 4}
         lg={6}
         md={6}
         sm={12}
@@ -34,7 +40,7 @@ function Vision() {
         alignItems="center"
         >
           
-            <Typography variant="h4" color="primary.contrastText"  sx={{fontFamily: "Proxima Nova Bold" , marginRight: 10}}>
+            <Typography variant={matches ? "h6" : "h5"} color="primary.contrastText" mr={{md:10}} sx={{fontFamily: "Proxima Nova Bold" }}>
                 “To promote informal learning and foster innovation and invention in technology, with a focus on technologies aimed at contributing positively to the environment and to the society”
               </Typography>
         </Grid>
@@ -45,9 +51,9 @@ function Vision() {
           alignItems="center"
           justifyContent="center"
           p={3}
-          lg={6}
-        md={6}
-        sm={12}
+          lg={5}
+        md={5}
+        sm={9}
         xs={12}
         >
             <img

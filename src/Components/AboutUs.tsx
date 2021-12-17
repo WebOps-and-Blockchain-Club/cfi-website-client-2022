@@ -9,6 +9,7 @@ import History from "./AboutUs/History";
 
 import background2 from "../Images/background2.png";
 import background from "../Images/particles.png";
+import Footer from "./Shared/Footer";
 
 
 /* Landing page images */
@@ -18,7 +19,9 @@ interface Props {}
 const AboutUs = (props: Props) => {
   return (
     <Grid container
-    p={{ xs: 4, md: 6 , lg:10}}
+    pl={{ xs: 2, sm:4 , md: 6 , lg:10}}
+    pr={{ xs: 2, sm:4 , md: 6 , lg:10}}
+    pt={{ xs: 2, sm:4 , md: 6 , lg:10}}
     direction="column"
     justifyItems="center"
     alignItems="center"
@@ -29,6 +32,7 @@ const AboutUs = (props: Props) => {
         <Vision/>
         <Concepts/>
         <History/>
+        <Footer/>
     </Grid>
   );
 };
