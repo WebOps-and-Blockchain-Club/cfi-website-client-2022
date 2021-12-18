@@ -11,6 +11,9 @@ import TopNews from "./Home/TopNews";
 import HomeSocial from "./Home/HomeSocial";
 import TopCarousel from "./Home/Carousel";
 
+
+import background from "../Images/particles.png";
+
 interface Props {}
 
 const Home = (props: Props) => {
@@ -19,7 +22,7 @@ const Home = (props: Props) => {
       <Grid item>
         <TopCarousel />
       </Grid>
-      <Grid container item sx={{ backgroundColor: "primary.main" }}>
+      <Grid container item sx={{ backgroundColor: "primary.main" , backgroundImage: `url(${background})` ,   backgroundSize: 'cover' , backgroundAttachment: 'fixed'  }}>
         <TopNews />
         <CfiVideo />
         <CfiClubs />

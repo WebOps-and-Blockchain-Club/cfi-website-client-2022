@@ -45,6 +45,7 @@ function CfiVideo() {
       >
         <Grid item lg={7} xs={11}>
           <iframe
+            style={{ border: "2px solid black" , borderRadius:"20px"}}
             width="100%"
             height={matches ? "200px" : "500px"}
             src="https://www.youtube.com/embed/MRB56CSroVs?autoplay=1"
