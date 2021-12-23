@@ -9,7 +9,6 @@ import History from "./AboutUs/History";
 
 import background2 from "../Images/background2.png";
 import background from "../Images/particles.png";
-import Footer from "./Shared/Footer";
 
 
 /* Landing page images */
@@ -32,7 +31,6 @@ const AboutUs = (props: Props) => {
         <Vision/>
         <Concepts/>
         <History/>
-        <Footer/>
     </Grid>
   );
 };

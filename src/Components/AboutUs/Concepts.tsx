@@ -64,12 +64,12 @@ function Concepts() {
             sm={10}
             xs={12}
           >
-            <Grid container item sx={{ background: "linear-gradient(138.5deg, #0000006b, #420101)", borderRadius: "40px" , width:"90%" }} alignItems="center"  p={3}
+            <Grid container item  alignItems="center" width="90%"
             justifyContent="center">
               <img
                 src={Idea1}
                 alt="Idea"
-                style={{ width: matches ? "100%" : "85%" , marginTop: matches ? 0 :"5%" , marginBottom: matches ? 0: "5%" }}
+                style={{boxShadow:"6px 6px 6px 6px #7e0000"  , borderRadius: matches ? "40px" : "72px" , width: matches ? "100%" : "99%" }}
               />
             </Grid>
           </Grid>
@@ -161,12 +161,12 @@ function Concepts() {
             sm={10}
             xs={12}
           >
-            <Grid container item sx={{ background: "linear-gradient(138.5deg, #0000006b, #420101)", borderRadius: "40px" , width:"90%" }} alignItems="center" p={3}
+            <Grid container item sx={{ width:"90%" }} 
             justifyContent="center">
               <img
                 src={Idea1}
                 alt="Idea"
-                style={{  width: matches ? "100%" : "85%" , marginTop: matches ? 0 :"5%" , marginBottom: matches ? 0: "5%" }}
+                style={{boxShadow:"6px 6px 6px 6px #7e0000"  , borderRadius: matches ? "40px" : "72px"  , width: matches ? "100%" : "99%" }}
               />
             </Grid>
           </Grid>
