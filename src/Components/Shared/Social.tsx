@@ -6,7 +6,7 @@ import twitter from "../../Images/Social/twitter.png";
 import instagram from "../../Images/Social/instagram.png";
 import youtube from "../../Images/Social/youtube.png";
 import linkedin from "../../Images/Social/linkedin.png";
-import mail from "../../Images/Social/mail.png";
+import mail from "../../Images/Social/email.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import cfilogo from "../../Images/CFILogo/CFI Logo - White.png";
@@ -99,22 +99,22 @@ const Social = (props: Props) => {
           mb={1}
         >
           <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
-            <img src={mail} style={{borderRadius:"20px", height: matches ? "35px": "40px"}}></img>
+            <img src={mail} style={{borderRadius:"20px", height: matches ? "35px": "42px"}}></img>
           </Grid>
           <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
-            <img src={instagram} style={{ height: matches ? matches2 ? "35px" : "40px" : "40px" }}></img>
+            <img src={instagram} style={{ height: matches ? matches2 ? "35px" : "40px" : "42px" }}></img>
           </Grid>
           <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
-            <img src={facebook} style={{ height: matches ? "35px": "40px" }}></img>
+            <img src={facebook} style={{ height: matches ? "35px": "45px" }}></img>
           </Grid>
           <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
-            <img src={youtube} style={{ height: matches ? "35px": "40px" }}></img>
+            <img src={youtube} style={{ height: matches ? "35px": "42px" }}></img>
           </Grid>
           <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
-            <img src={twitter} style={{ height: matches ? "35px": "40px" }}></img>
+            <img src={twitter} style={{ height: matches ? "35px": "42px" }}></img>
           </Grid>
-          <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:2}}>
-            <img src={linkedin} style={{ height: matches ? "35px": "40px"}}></img>
+          <Grid item mr={{ xs: 1, sm:3, md: 3 , lg:3}}>
+            <img src={linkedin} style={{ height: matches ? "35px": "42px"}}></img>
           </Grid>
           
         </Grid>
