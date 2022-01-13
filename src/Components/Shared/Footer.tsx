@@ -61,17 +61,17 @@ const Footer = (props: Props) => {
             >
             &nbsp; CENTER &nbsp;
             </Typography>
-            <Typography
-            variant={matches ? "h6" : "h5"}
-            color="secondary"
-            sx={{
-              display: "inline",
-            textTransform: "uppercase",
-            fontFamily: "Proxima Nova Bold",
-            }}
-            >
-            For innovation
-            </Typography>
+              <Typography
+              variant={matches ? "h6" : "h5"}
+              color="secondary"
+              sx={{
+                display: "inline",
+              textTransform: "uppercase",
+              fontFamily: "Proxima Nova Bold",
+              }}
+              >
+              For innovation
+              </Typography>
             </Grid>
             <Typography
             variant="body2"

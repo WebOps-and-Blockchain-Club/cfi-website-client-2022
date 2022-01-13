@@ -1,18 +1,23 @@
-import React from 'react'
+import React , {useState} from 'react'
 
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography , Box } from "@mui/material";
 
 import Idea1 from "../../Images/AboutUs/idea1.png";
 import Idea2 from "../../Images/AboutUs/idea2.png";
 import Idea3 from "../../Images/AboutUs/idea3.png";
+import Idea4 from "../../Images/AboutUs/idea4.png";
 import { VisionConceptData } from "../../Assets/Data/AboutUsData"
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
+import './aboutus.css'
 function Concepts() {
   const theme = useTheme();
+  const matcheslg = useMediaQuery(theme.breakpoints.down("lg"));
   const matches2 = useMediaQuery(theme.breakpoints.down("md"));
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const [ishover , setIshover] = useState(false) ;
     return (
         <Grid
       container
@@ -113,11 +118,23 @@ function Concepts() {
             sm={12}
             xs={12}
           >
+            <Box style={{  width: matches ? "95%" : "75%" , marginTop: matches ? 0 :"5%" , marginBottom: matches ? 0: "5%" , position:"relative" , height:  matches ? "200px" : matches2? "325px" : matcheslg ?" 250px" : "300px" }}>
+
+              <img
+                src={Idea3}
+                alt="Idea"
+                style={{width:"75%" , height:"70%" , position:"absolute" , left:"0px" , bottom:"0px" , zIndex: ishover ? 5 : 0 }}
+                onMouseEnter ={()=> setIshover(true)}
+                className="aboutus-image2-hover"  
+              />
               <img
                 src={Idea2}
                 alt="Idea"
-                style={{  width: matches ? "95%" : "75%" , marginTop: matches ? 0 :"5%" , marginBottom: matches ? 0: "5%" }}
+                style={{width:"75%" , height:"70%" , position:"absolute" , top:"0px" , right:"0px" , zIndex: ishover ? 0 : 5 }}
+                className="aboutus-image1-hover" 
+                onMouseEnter ={()=> setIshover(false)}           
               />
+            </Box>
           </Grid>
         </Grid>
 
@@ -164,7 +181,7 @@ function Concepts() {
             <Grid container item sx={{ width:"90%" }} 
             justifyContent="center">
               <img
-                src={Idea1}
+                src={Idea4}
                 alt="Idea"
                 style={{boxShadow:"6px 6px 6px 6px #7e0000"  , borderRadius: matches ? "40px" : "72px"  , width: matches ? "100%" : "99%" }}
               />
