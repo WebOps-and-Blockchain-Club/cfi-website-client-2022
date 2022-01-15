@@ -8,7 +8,7 @@ import NavbarWeb from "./NavbarWeb";
 
 export default function Header() {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
 
   return matches ? <NavbarMob /> : <NavbarWeb />;
 }
