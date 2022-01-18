@@ -2,9 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import AboutUs from "./AboutUs";
-import Footer from "./Shared/Footer";
-import Social from "./Shared/Social";
 import Navbar from "./Shared/Navbar";
+import Footer from "./Shared/Footer";
 
 interface Probs {}
 
@@ -14,9 +13,9 @@ const Routes = (probs: Probs) => {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/aboutus" component={AboutUs} />
+        <Route exact path="/about-us" component={AboutUs} />
       </Switch>
-      <Social />
+      <Footer />
     </BrowserRouter>
   );
 };
