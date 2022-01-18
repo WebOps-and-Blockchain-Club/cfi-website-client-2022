@@ -95,44 +95,74 @@ const Footer = (props: Props) => {
       <Grid lg={4} md={12} sm={12} xs={12} sx={{ order: matches2 ? 1 : 0 }}>
         <Grid container justifyContent="center" mt={1} mb={1}>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <img
-              src={mail}
-              style={{
-                borderRadius: "20px",
-                height: matches ? "35px" : "42px",
-              }}
-              alt="Mail"
-            />
+            <a
+              href="mailto:cfi@smail.iitm.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={mail}
+                style={{
+                  borderRadius: "20px",
+                  height: matches ? "35px" : "42px",
+                }}
+                alt="Mail"
+              />
+            </a>
           </Grid>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <img
-              src={instagram}
-              style={{
-                height: matches ? (matches2 ? "35px" : "40px") : "42px",
-              }}
-              alt="Instagram"
-            />
+            <a
+              href="https://www.instagram.com/cfi_iitm_/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={instagram}
+                style={{
+                  height: matches ? (matches2 ? "35px" : "40px") : "42px",
+                }}
+                alt="Instagram"
+              />
+            </a>
           </Grid>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <img
-              src={youtube}
-              style={{ height: matches ? "35px" : "42px" }}
-              alt="YouTube"
-            />
+            <a
+              href="https://www.youtube.com/c/CFIIITMadras"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={youtube}
+                style={{ height: matches ? "35px" : "42px" }}
+                alt="YouTube"
+              />
+            </a>
           </Grid>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <img
-              src={linkedin}
-              style={{ height: matches ? "35px" : "42px" }}
-              alt="LinkedIn"
-            />
+            <a
+              href="https://in.linkedin.com/company/centre-for-innovation-cfi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={linkedin}
+                style={{ height: matches ? "35px" : "42px" }}
+                alt="LinkedIn"
+              />
+            </a>
           </Grid>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
-            <img
-              src={twitter}
-              style={{ height: matches ? "35px" : "42px" }}
-              alt="Twitter"
-            />
+            <a
+              href="https://twitter.com/cfi_iitm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={twitter}
+                style={{ height: matches ? "35px" : "42px" }}
+                alt="Twitter"
+              />
+            </a>
           </Grid>
         </Grid>
       </Grid>
