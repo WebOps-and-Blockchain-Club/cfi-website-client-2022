@@ -1,4 +1,4 @@
-import { Box, Stack, Card, CardMedia } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import React from "react";
 import img from "../../../public/logo512.png";
 import "./MediaStyles.css";
@@ -18,6 +18,8 @@ const Item = (props: Props) => {
         <Stack
           direction={{ xs: "column", sm: "column", md: "row", lg: "row" }}
           spacing={2}
+          pt="25px"
+          pb="25px"
         >
           <div className="image-div">
             <img
@@ -26,10 +28,24 @@ const Item = (props: Props) => {
               alt={props.heading}
             />
           </div>
-          <Stack style={{ margin: 15 }} direction="column" spacing={3}>
-            <h3 className="item-head">
-              <a href={props.articleLink} target="_blank" rel="noreferrer">{props.heading}</a>
-            </h3>
+          <Stack
+            direction="column"
+            spacing={3}
+            alignItems={{
+              xs: "center",
+              sm: "center",
+              md: "flex-start",
+              lg: "flex-start",
+            }}
+          >
+            <a
+              href={props.articleLink}
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "unset" }}
+            >
+              <p className="item-head">{props.heading}</p>
+            </a>
             <p>Publisher: {props.publisher}</p>
             <p>Published Date: {props.date}</p>
           </Stack>
