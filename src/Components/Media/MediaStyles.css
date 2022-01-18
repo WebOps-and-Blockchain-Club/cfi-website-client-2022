@@ -1,0 +1,102 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: aliceblue;
+}
+
+body {
+  font-family: "Proxima Nova";
+  background-color: #030303;
+}
+
+.card-container {
+  background-color: #080808;
+  border-radius: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 50px;
+  border: 2px solid red;
+  margin-bottom: 5%;
+}
+
+.card-container-year,
+h6 {
+  color: red !important;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  padding-left: 35px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.card-heading-text {
+  padding-top: 25px;
+  font-size: 2rem;
+  text-align: center;
+}
+/* 
+@media (min-width: 600px) {
+  .card-heading-text {
+    margin-left: 55px;
+    padding-top: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .card-heading-text {
+    margin-left: 35px;
+    padding-top: 25px;
+  }
+} */
+
+@media (min-width: 600px) {
+  .item-image {
+    height: 205px;
+    width: 348px;
+    object-fit: fill;
+    margin: 25px;
+    margin-left: 45px;
+    border-radius: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .item-image {
+    height: 17.7%;
+    width: 85%;
+    object-fit: fill;
+    margin: 5px;
+    border-radius: 30px;
+  }
+}
+
+.item-image {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: 0.7s ease all;
+  -webkit-transition: 0.7s ease all;
+  -moz-transition: 0.7s ease all;
+
+  box-shadow: 3px 3px 3px 3px #7e0000;
+}
+
+.item-image:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.item-card {
+  margin: auto;
+  /* background-color: #030303; */
+}
+
+.image-div {
+  text-align: center;
+}
+
+.item-head:hover {
+  text-decoration: underline;
+}

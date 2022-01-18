@@ -1,14 +1,15 @@
 import { Box } from "@mui/material";
 import React from "react";
 import "../Styles/Home.css";
-import Media from './Media'
 
 interface Props {}
 
 const Home = (props: Props) => {
-  return <>
-    <Media></Media>
-  </>
+  return (
+    <Box sx={{ textAlign: "center", fontSize: 50, pt: "60px" }}>
+      Welcome to CFI
+    </Box>
+  );
 };
 
 export default Home;
