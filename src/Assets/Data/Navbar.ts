@@ -10,6 +10,10 @@ export const NavbarItems = [
     subItems: [...ClubList, ...CompetitionTeamList],
   },
   {
+    name: "ACHIVEMENTS",
+    link: "/achivements",
+  },
+  {
     name: "MEDIA",
     link: "/media",
   },

@@ -14,14 +14,14 @@ import { TransitionProps } from "@mui/material/transitions";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children?: React.ReactElement;
-  },
-  ref: React.Ref<unknown>
-) {
-  return <Slide direction="left" ref={ref} {...props} />;
-});
+// const Transition = React.forwardRef(function Transition(
+//   props: TransitionProps & {
+//     children?: React.ReactElement;
+//   },
+//   ref: React.Ref<unknown>
+// ) {
+//   return <Slide direction="left" ref={ref} {...props} />;
+// });
 
 export default function NavbarMob() {
   const [open, setOpen] = React.useState(false);
@@ -42,7 +42,7 @@ export default function NavbarMob() {
       <Dialog
         open={open}
         onClose={handleClose}
-        TransitionComponent={Transition}
+        // TransitionComponent={Transition}
         sx={{ backgroundColor: "#030303" }}
       >
         <List sx={{ backgroundColor: "#030303" }}>

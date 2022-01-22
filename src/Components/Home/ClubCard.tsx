@@ -1,62 +1,73 @@
-import { Card, CardMedia, CardContent, Typography } from "@mui/material";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Probs {
   logo: string;
   name: string;
+  link: string;
 }
 
 export default function ClubCard(probs: Probs) {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
-    <Card
-      sx={{
-        width: "150px",
-        height: "140px",
-        borderRadius: "25px",
-        backgroundColor: "secondary.dark",
-        p: "10px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        boxShadow: "3.99948px 3.99948px 22.3971px #0E0E0E",
-      }}
-    >
-      <CardMedia
-        component="img"
-        height="90px"
-        width="90px"
-        image={probs.logo}
-        alt={probs.name}
+    <Link to={probs.link} style={{ textDecoration: "none" }}>
+      <Card
         sx={{
-          verticalAlign: "middle",
-          objectFit: "contain",
-        }}
-      />
-      <CardContent
-        sx={{
-          p: "0",
-          //   pt: "5px",
-          height: "40px",
+          width: matches ? "110px" : "150px",
+          height: matches ? "100px" : "140px",
+          borderRadius: "25px",
+          backgroundColor: "secondary.dark",
+          p: "10px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-evenly",
+          boxShadow: "3.99948px 3.99948px 22.3971px #0E0E0E",
         }}
       >
-        <Typography
-          //   gutterBottom
-          //   variant="subtitle1"
-          component="div"
-          color="primary.contrastText"
+        <CardMedia
+          component="img"
+          width={matches ? "75px" : "90px"}
+          height={matches ? "75px" : "90px"}
+          image={probs.logo}
+          alt={probs.name}
           sx={{
-            textAlign: "center",
-            fontSize: "16px",
-            // fontWeight: "bolder",
-            // letterSpacing: "1px",
+            verticalAlign: "middle",
+            objectFit: "contain",
+          }}
+        />
+        <CardContent
+          sx={{
+            p: "0",
+            height: matches ? "15px" : "40px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+          }}
+          style={{
+            paddingBottom: "0",
           }}
         >
-          {probs.name}
-        </Typography>
-      </CardContent>
-    </Card>
+          <Typography
+            color="primary.contrastText"
+            sx={{
+              textAlign: "center",
+              fontSize: matches ? "12px" : "14px",
+            }}
+          >
+            {probs.name}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }
