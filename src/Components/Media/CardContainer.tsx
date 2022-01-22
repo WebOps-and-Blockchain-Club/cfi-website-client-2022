@@ -23,7 +23,7 @@ const CardContainer = (props: Props) => {
           return (
             <>
               <div className="card-container-year">
-                <h2 style={{ color: "red", margin: 0 }}>{item.year}</h2>
+                <h2 style={{ color: "#d6d6d6", margin: 0 }}>{item.year}</h2>
               </div>
               {item.data.map(
                 (cardData: {
