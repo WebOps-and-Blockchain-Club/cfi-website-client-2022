@@ -1,0 +1,14 @@
+.aboutus-image1-hover:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.aboutus-image2-hover:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.aboutus-image1-hover {
+  transition: 0.5s;
+}
+.aboutus-image2-hover {
+  transition: 0.5s;
+}
