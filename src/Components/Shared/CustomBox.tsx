@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import * as React from "react";
 import bg from "../../Assets/Images/particles.png";
+import Footer from "./Footer";
 import Header from "./Navbar";
 
 interface Props {
@@ -19,6 +20,7 @@ const CustomBox = (props: Props) => {
     >
       <Header />
       {props.children}
+      <Footer />
     </Grid>
   );
 };
