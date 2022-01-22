@@ -11,7 +11,7 @@ function Heading({ white, red }: { white: string; red: string }) {
   return (
     <Grid item>
       <Typography
-        variant={matches ? "h4" : "h3"}
+        variant={matches ? "h5" : "h3"}
         color="primary.contrastText"
         sx={{
           display: "inline",
@@ -23,7 +23,7 @@ function Heading({ white, red }: { white: string; red: string }) {
         {white}
       </Typography>
       <Typography
-        variant={matches ? "h4" : "h3"}
+        variant={matches ? "h5" : "h3"}
         color="secondary"
         sx={{
           display: "inline",

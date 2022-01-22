@@ -16,7 +16,7 @@ function Vision() {
       direction="column"
       justifyContent="center"
       mt={3}
-      mb={12}
+      mb={3}
       alignItems="center"
     >
       <Typography

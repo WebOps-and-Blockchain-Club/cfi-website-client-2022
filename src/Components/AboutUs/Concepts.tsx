@@ -23,7 +23,9 @@ function Concepts() {
       container
       direction="column"
       justifyContent="center"
-      mt={{ sm: 1, md: 2, lg: 3 }}
+      mt={3}
+      mb={12}
+      p={{ xs: 0, sm: 2, md: 4, lg: 8 }}
       alignItems="center"
     >
       <Typography
@@ -31,6 +33,7 @@ function Concepts() {
         color="primary.contrastText"
         p={{ sm: 1, md: 3, lg: 4 }}
         style={{ fontFamily: "Proxima Nova Bold" }}
+        textAlign={"center"}
       >
         The CFI vision is being achieved by espousing three major concepts.
       </Typography>

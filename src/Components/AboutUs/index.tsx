@@ -29,9 +29,9 @@ const AboutUs = (props: Props) => {
       }}
     >
       <Heading white="About " red="Us" />
+      <History />
       <Vision />
       <Concepts />
-      <History />
     </Grid>
   );
 };

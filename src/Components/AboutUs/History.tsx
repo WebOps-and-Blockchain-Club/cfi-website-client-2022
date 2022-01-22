@@ -39,7 +39,8 @@ function History() {
           and the zeal and passion of the CFI team make CFI a gifted asset for
           IIT Madras students. And over time, CFI has successfully evolved into
           a hub which encourages thinking and provokes students to generate
-          novel ideas making it truly the “centre” for innovation.
+          novel ideas making it truly the “centre” for innovation. Set up with
+          the generous funds donated by the batch of 1981
         </Typography>
       </Grid>
     </Grid>
