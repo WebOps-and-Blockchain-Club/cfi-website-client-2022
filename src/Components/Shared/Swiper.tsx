@@ -80,7 +80,7 @@ export default function CustomSwiper(probs: Probs) {
       >
         {probs.data.map((_data: any) => (
           <SwiperSlide className="custom-swiper-slide">
-            <SwiperCard heading={_data.title} img={_data.img} />
+            <SwiperCard heading={_data.title} image={_data.image} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -92,10 +92,10 @@ export default function CustomSwiper(probs: Probs) {
 
 type MediaCardProps = {
   heading: string;
-  img: string;
+  image: string;
 };
 
-function SwiperCard({ heading, img }: MediaCardProps) {
+function SwiperCard({ heading, image }: MediaCardProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
@@ -111,7 +111,7 @@ function SwiperCard({ heading, img }: MediaCardProps) {
     >
       <CardMedia
         component="img"
-        image={img}
+        image={image}
         alt="newsimg"
         sx={{
           borderRadius: "40px 40px 0 0",
