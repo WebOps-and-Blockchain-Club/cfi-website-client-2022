@@ -1,9 +1,5 @@
 import CarouselImage1 from "../../Assets/Images/Home/Landing images/car2.jpg";
 
-import Clinsti from "../Images/Home/Top News/Clinsti_app_launch.png";
-import Raftar from "../Images/Home/Top News/Raftar.jpeg";
-import AvishkarHyperloop from "../Images/Home/Top News/Avishkar_Hyperloop.jpeg";
-
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../Images/ClubLogo/AeroLogo.png";
 import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
@@ -41,39 +37,6 @@ export const CarouselData = [
   {
     image: CarouselImage1,
     linear: "Revolutionizing tech and innovation",
-  },
-];
-
-export const TopNewsData = [
-  {
-    title: "En route to hygiene: launch of the CLinsti app",
-    desc: "CFI launched the much-awaited CLinsti app for technically resolving concerns over cleanliness of the institute.",
-    image: Clinsti,
-  },
-  {
-    title: "Accolades for Team Avishkar in European Hyperloop Week July 2021",
-    desc: "Team Avishkar Hyperloop was awarded the Most Scalable Design Award by Zeleros Hyperloop at the European Hyperloop Week (EHW) 2021 in July '21",
-    image: AvishkarHyperloop,
-  },
-  {
-    title: "#Team Raftar Formula Racing, announces its arrival!!",
-    desc: "Carrying forward their legacy, Raftar Formula Racing set another record this year by winning the 2nd Place Overall in the Formula Student Electric Vehicle Concept Challenger (FSEV-2021) conducted by Formula Bharat.",
-    image: Raftar,
-  },
-  {
-    title: "En route to hygiene: launch of the CLinsti app",
-    desc: "CFI launched the much-awaited CLinsti app for technically resolving concerns over cleanliness of the institute.",
-    image: Clinsti,
-  },
-  {
-    title: "Accolades for Team Avishkar in European Hyperloop Week July 2021",
-    desc: "Team Avishkar Hyperloop was awarded the Most Scalable Design Award by Zeleros Hyperloop at the European Hyperloop Week (EHW) 2021 in July '21",
-    image: AvishkarHyperloop,
-  },
-  {
-    title: "#Team Raftar Formula Racing, announces its arrival!!",
-    desc: "Carrying forward their legacy, Raftar Formula Racing set another record this year by winning the 2nd Place Overall in the Formula Student Electric Vehicle Concept Challenger (FSEV-2021) conducted by Formula Bharat.",
-    image: Raftar,
   },
 ];
 
