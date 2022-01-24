@@ -26,9 +26,9 @@ export type IClub = {
   name: string;
   logo: string;
   oneLiner?: string | null;
-  description: string[];
+  description: string;
   projects?: IContent[] | null;
-  achivements?: IContent[] | null;
+  achievements?: IContent[] | null;
   website?: string | null;
   github?: string | null;
   gallery?: IGallery[] | null;
@@ -73,9 +73,9 @@ export type ITeam = {
   logo: string;
   landing: string;
   oneLiner?: string | null;
-  description: string[];
+  description: string;
   projects?: IContent[] | null;
-  achivements?: IContent[] | null;
+  achievements?: IContent[] | null;
   email: string;
   website?: string | null;
   gallery?: IGallery[] | null;

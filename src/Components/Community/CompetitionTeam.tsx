@@ -98,7 +98,7 @@ const CompetitionTeam = () => {
         </Grid>
 
         {/* ACHIVEMENTS */}
-        {data.achivements && (
+        {data.achievements && (
           <Grid
             item
             container
@@ -118,8 +118,8 @@ const CompetitionTeam = () => {
                 alignItems: "stretch",
               }}
             >
-              {data.achivements.map((_achivement) => (
-                <MediaCard data={_achivement} />
+              {data.achievements.map((_achievement) => (
+                <MediaCard data={_achievement} />
               ))}
             </Grid>
           </Grid>

@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import React from "react";
-import img from "../../../public/logo512.png";
 import "./MediaStyles.css";
 
 interface Props {

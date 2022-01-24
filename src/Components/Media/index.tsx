@@ -11,8 +11,8 @@ const Media = (props: Props) => {
   return (
     <CustomBox>
       <Grid
-        pt={{ xs: 4, sm: 6, md: 10, lg: 14 }}
-        pb={{ xs: 6, sm: 8, md: 10, lg: 12 }}
+        pt={{ xs: 10, sm: 12, md: 14, lg: 16 }}
+        pb={{ xs: 2, sm: 6, md: 10, lg: 14 }}
       >
         <Heading white="" red="MEDIA" />
         <CardContainer data={data}></CardContainer>

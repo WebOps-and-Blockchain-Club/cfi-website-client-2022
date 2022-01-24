@@ -20,7 +20,13 @@ const CardContainer = (props: Props) => {
               (cardData: { heading: string; item_content: any[] }) => {
                 return (
                   <div className="card-container">
-                    <div style={{ padding: "50px 10px" }}>
+                    <div
+                      style={{
+                        padding: "50px 0px 25px 0",
+                        width: "85%",
+                        margin: "auto",
+                      }}
+                    >
                       <MediaTitle
                         red={cardData.heading.split("##")[1]}
                         white={cardData.heading.split("##")[0]}

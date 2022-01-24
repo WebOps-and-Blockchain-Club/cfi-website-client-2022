@@ -10,11 +10,11 @@ import iBotLogo from "../Images/ClubLogo/iBOTLogo.png";
 import iGEMLogo from "../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../Images/ClubLogo/ProgrammingLogo.png";
-import SahaayLogo from "../Images/ClubLogo/SahaayLogo.png";
+import SahaayLogo from "../Images/ClubLogo/SahaayBlackLogo.png";
 import EnvisageLogo from "../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo.png";
 
-import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar.png";
+import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar(withoutName).png";
 import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";

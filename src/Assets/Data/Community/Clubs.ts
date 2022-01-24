@@ -1,5 +1,6 @@
 import { IClubs } from "../../../Types";
 
+// Logo
 import PrintingLogo from "../../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../../Images/ClubLogo/AeroLogo.png";
 import AnalyticsLogo from "../../Images/ClubLogo/AnalyticsLogo.png";
@@ -10,15 +11,15 @@ import iBotLogo from "../../Images/ClubLogo/iBOTLogo.png";
 import iGEMLogo from "../../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../../Images/ClubLogo/ProgrammingLogo.png";
-import SahaayLogo from "../../Images/ClubLogo/SahaayLogo.png";
+import SahaayLogo from "../../Images/ClubLogo/SahaayWhiteLogo.png";
 import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
-import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainLogo.png";
+import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainWithNameLogo.png";
 
 //ELECTRONICS
-import ElectronicsAchivements1 from "../../Images/Community/Clubs/Electronics/Achivements1.jpeg";
-import ElectronicsAchivements2 from "../../Images/Community/Clubs/Electronics/Achivements2.jpeg";
-import ElectronicsAchivements3 from "../../Images/Community/Clubs/Electronics/Achivements3.jpeg";
-import ElectronicsAchivements4 from "../../Images/Community/Clubs/Electronics/Achivements4.gif";
+import ElectronicsAchievements1 from "../../Images/Community/Clubs/Electronics/Achievements1.jpeg";
+import ElectronicsAchievements2 from "../../Images/Community/Clubs/Electronics/Achievements2.jpeg";
+import ElectronicsAchievements3 from "../../Images/Community/Clubs/Electronics/Achievements3.jpeg";
+import ElectronicsAchievements4 from "../../Images/Community/Clubs/Electronics/Achievements4.gif";
 
 import ElectronicsGallery1 from "../../Images/Community/Clubs/Electronics/Gallery1.gif";
 import ElectronicsGallery2 from "../../Images/Community/Clubs/Electronics/Gallery2.jpg";
@@ -36,29 +37,38 @@ import ElectronicsGallery13 from "../../Images/Community/Clubs/Electronics/Galle
 import ElectronicsGallery14 from "../../Images/Community/Clubs/Electronics/Gallery14.jpeg";
 import ElectronicsGallery15 from "../../Images/Community/Clubs/Electronics/Gallery15.gif";
 
+// HORIZON
+import HorizonAchievements2 from "../../Images/Community/Clubs/Horizon/Achievements2.jpg";
+import HorizonAchievements5 from "../../Images/Community/Clubs/Horizon/Achievements5.png";
+
+// SAHAAY
+import SahaayAchievements1 from "../../Images/Community/Clubs/Sahaay/Achievements1.jpeg";
+import SahaayAchievements2 from "../../Images/Community/Clubs/Sahaay/Achievements2.png";
+import SahaayAchievements3 from "../../Images/Community/Clubs/Sahaay/Achievements3.png";
+
 // ENVISAGE
-import EnvisageAchivements1a from "../../Images/Community/Clubs/Envisage/Achivements1a.jpg";
-import EnvisageAchivements1b from "../../Images/Community/Clubs/Envisage/Achivements1b.jpg";
-import EnvisageAchivements1c from "../../Images/Community/Clubs/Envisage/Achivements1c.jpg";
+import EnvisageAchievements1a from "../../Images/Community/Clubs/Envisage/Achievements1a.jpg";
+import EnvisageAchievements1b from "../../Images/Community/Clubs/Envisage/Achievements1b.jpg";
+import EnvisageAchievements1c from "../../Images/Community/Clubs/Envisage/Achievements1c.jpg";
 
 import EnvisageProject1 from "../../Images/Community/Clubs/Envisage/Project1.jpg";
 import EnvisageProject2 from "../../Images/Community/Clubs/Envisage/Project2.jpg";
 import EnvisageProject3 from "../../Images/Community/Clubs/Envisage/Project3.jpg";
-import EnvisageProject4 from "../../Images/Community/Clubs/Envisage/Project4.jpg";
+import EnvisageProject4 from "../../Images/Community/Clubs/Envisage/Project4.png";
 import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png";
 
 // WEBOPS AND BLOCKCHAIN
-import WebOpsAndBlockchainAchivement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/WebOpsAndBlockchainAchivement1.png";
+import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievement1.png";
+import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievement2.png";
 
 export const Clubs: IClubs = {
   "3d-printing-club": {
     name: "3D## Printing Club",
     logo: PrintingLogo,
     oneLiner: '"Building the world, one layer at a time"',
-    description: [
+    description:
       "3D Printing Club was started in the year 2015 with the vision of promoting a new form of manufacturing technology among the students and driving research and innovation in the field of 3D Printing. The 3D Printing Club currently houses multiple 3D printers. Few of them were built during the 3D Printing Summer School conducted over the years with the support of the open source 3D printing community. We undertake projects in collaboration with the other clubs in CFI to produce tailor-made industrial grade parts. The 3D printer is located at the CFI facility and can be commissioned by the students of IIT Madras.",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "Club members Pavitra Mohan, V.Bharathi, Santhi Prassana and Kowshick had participated in the Auroma Innovate 2020 competition and had won the runners up position for their Multi-Material Infinite 3D Printer project.",
@@ -122,10 +132,9 @@ export const Clubs: IClubs = {
     name: "Aero ##Club",
     logo: AeroLogo,
     oneLiner: "Getting High the ‘Wright’ Way !",
-    description: [
+    description:
       "Being one of the earliest clubs founded in CFI, we are a 30-member family of drone and airplane enthusiasts whom the club has envisioned the dream to fly. We formally welcome new members each year, and our senior members take pride in backing the club—the club witnesses active participation with members from diverse branches of engineering and of different age groups. Regular workshops and timely meetings have kept the club lively throughout. The club has witnessed glory in several national and international competitions like IARC (International Aerial Robotics Competition); NAL MICAV (Micro Air Vehicle Flying Competition).  Building our own crafts and watching them take flight is a proud experience for each member and we hope to have young, inspired minds work onboard with us to share the joy of flying!!",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
@@ -150,10 +159,9 @@ export const Clubs: IClubs = {
   "analytics-club": {
     name: "Analytics## Club",
     logo: AnalyticsLogo,
-    description: [
+    description:
       "The Analytics Club, CFI is a collective of passionate students working in many disciplines of Deep Learning and Data Science who apply these techniques to overcome problems in Natural Language Processing, Reinforcement Learning, Computer Vision, among others. Members of the club have worked in the industry as ML consultants, freelancers, and interns. Numerous club teams have managed to win national-level data science competitions such as Gartner HackElite, GS Quantify, Microsoft CodeFundo, Flipkart Grid, and Amex Ignite Program. Each year, chosen club teams compete in the Inter IIT Tech Meet, where they have secured Gold and Silver medals for their exceptional performance.",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "Pranav Pawar and Rohith from the Analytics club won the First Prize in the Machine Learning Challenge and Quant challenge, respectively, in the GS Quantify 2019, conducted by Goldman Sachs in Bangalore.",
@@ -181,11 +189,9 @@ export const Clubs: IClubs = {
   "cvi-club": {
     name: "Computer Vision and## Intelligence Club",
     logo: CVILogo,
-    description: [
-      "The Computer Vision Group of IIT Madras was started in September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.   CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects.",
-      "The club undertakes projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. They are actively involved in projects and conduct sessions among our college community in these areas with the hope of impacting society with bleeding edge technology.",
-    ],
-    achivements: [
+    description:
+      "The Computer Vision Group of IIT Madras was started in September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.   CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects. <br /> The club undertakes projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. They are actively involved in projects and conduct sessions among our college community in these areas with the hope of impacting society with bleeding edge technology.",
+    achievements: [
       {
         description:
           "In Inter IIT 2018, the goal was to achieve satellite image segmentation using a training dataset of only 14 images, of size approx 1200x1200. The output image pixels had to be segmented into 8 classes ( or as background): Swimming Pool, Oceans, Grasslands, Forests, Roads, Railways, Bare soil and Buildings. The club creatively used a mixture of pure computer vision techniques and deep learning approaches for the problem. Our approach was to obtain binary segmentation maps class-wise.",
@@ -208,7 +214,7 @@ export const Clubs: IClubs = {
         image: "",
         email: "itsshreyas1803@gmail.com",
         phone: "8318387585",
-        linkedIn: "https://www.linkedin.com/in/rajeshkumar-k-4711a71b5",
+        linkedIn: "https://www.linkedin.com/in/shreyas-singh-571b2719a/",
       },
       {
         name: "Aditya Mohan",
@@ -222,36 +228,32 @@ export const Clubs: IClubs = {
   "electronics-club": {
     name: "Electronics## Club",
     logo: ElectronicsLogo,
-    oneLiner: "Feel the IR",
-    description: [
-      "The Electronics Club was initiated in the year 2012 by 3 enthusiasts with a vision of building a creative space to cater for projects and ideas in the field of Electronics. Presently, it is a community of over 50 students across all disciplines, led by 7 Core members and managed by 12 Coordinators. The club has evolved in multi-folds since its inception and now caters to a wide array of interests in Core Electronics and related fields (not limited to) such as Robotics, Digital Design, Machine Learning and Signal Processing with real-life applications. The club also conducts comprehensive Mega Sessions and Summer School exposing various domains of Electronics.",
-      "The club is a space for anyone who is curious to experience hands-on electronics, ideate and curate innovative solutions, explore their interests, discover new skills.",
-      "Together, we shall learn, network and grow!",
-    ],
-    achivements: [
+    oneLiner: "Feel the I<sup>2</sup>R",
+    description:
+      "The Electronics Club was initiated in the year 2013 by 3 enthusiasts with a vision of building a creative space to cater for projects and ideas in the field of Electronics. Presently, it is a community of over 50 students across all disciplines, led by 7 Core members and managed by 12 Coordinators. The club has evolved in multi-folds since its inception and now caters to a wide array of interests in Core Electronics and related fields (not limited to) such as Robotics, Digital Design, Machine Learning and Signal Processing with real-life applications. The club also conducts comprehensive Mega Sessions and Summer School exposing various domains of Electronics. <br /> The club is a space for anyone who is curious to experience hands-on electronics, ideate and curate innovative solutions, explore their interests, discover new skills. <br /> <b>Together, we shall learn, network and grow!</b>",
+    achievements: [
       {
         title: "Elec Club - ##SQIL NGO session to School Students in Kerala",
         description:
           "Collaborated with SQIL NGO for a session on “Arduino and NodeMCU basics”. Around 40 students from Grade 9-12 actively participated in the session.",
-        image: ElectronicsAchivements1,
+        image: ElectronicsAchievements1,
       },
       {
         title: "Electronics Club ##Development Board",
         description:
           "Designed an In-house development board around the ESP32 WROOM SoC and comes with WiFi and Bluetooth functionalities. It has an inbuilt IMU sensor used for orientation measurements. It is fairly compact and it has the CFI and Electronics Club logos, giving it a classy look.",
-        image: ElectronicsAchivements2,
+        image: ElectronicsAchievements2,
       },
       {
         title: "Electronics Club ##Kit",
-        description:
-          "A Starter kit for newbies to try and experiment with Electronics, that comprises of Electronics Club Development Board, basic sensors such as Ultrasonics, IR Transmitter/Receiver, Resistors and Capacitors, Switches, Jumpers and etc., A well-curated list of projects possible using the kit can be found",
-        image: ElectronicsAchivements3,
+        description: `A Starter kit for newbies to try and experiment with Electronics, that comprises of Electronics Club Development Board, basic sensors such as Ultrasonics, IR Transmitter/Receiver, Resistors and Capacitors, Switches, Jumpers and etc., A well-curated list of projects possible using the kit can be found <a href="https://cfi-electronics-club.github.io/articles/pages/Getting%20Started.html" target="_blank" rel="noopener noreferrer">here</a>`,
+        image: ElectronicsAchievements3,
       },
       {
-        title: "##Summer School Session",
+        title: "Summer School ##Session",
         description:
           "Organized Electromania: Electroverse of Madness, a set of month-long knowledge transfer sessions, where sessions were grouped into Arduino, PCB Designing, Machine Learning and Digital Design Arenas. Each Arena had week-long sessions that start with the very basics to advanced hands-on projects.",
-        image: ElectronicsAchivements4,
+        image: ElectronicsAchievements4,
       },
     ],
     gallery: [
@@ -323,10 +325,9 @@ export const Clubs: IClubs = {
     name: "##Horizon",
     logo: HorizonLogo,
     oneLiner: "The Physics and Astronomy Club of IIT Madras",
-    description: [
+    description:
       "Horizon, the Physics and Astronomy society of IIT Madras is a registered voluntary student organization, which promotes the learning of physics and astronomy on campus and in the community. The club organizes numerous talks conducted by professors and students alike along with observation sessions that are also conducted off-campus to provide a recluse from the threat of the air and light pollution in the metropolis that is Chennai. Apart from different activities open to the entire student community, the club also undertakes student research projects based on physics and astronomy every year. Many members join the club with little to no prior experience, the only prerequisite being a thirst to learn more about the universe. The club provides them with an opportunity to enjoy the company of other equally enthusiastic students while learning more about the secrets of the cosmos, with one sole purpose in mind – To explore space: the final frontier; to boldly go where no man has gone before!",
-    ],
-    achivements: [
+    achievements: [
       {
         title: "Spaceport ##America Cup",
         description:
@@ -336,6 +337,7 @@ export const Clubs: IClubs = {
         title: "##Astrkweek",
         description:
           "This week happens at the beginning of the odd semester and sees participation from several freshmen. A series of lectures and observation sessions are conducted during this time. It’s an excellent opportunity to be involved in club-activities and get to know more about the club.",
+        image: HorizonAchievements2,
       },
       {
         title: "SWAN and ##Guru Dhwani Antenna Challenge",
@@ -351,6 +353,7 @@ export const Clubs: IClubs = {
         title: "Quarks to ##Quasars",
         description:
           "While students initiate sci-talk in Boltzmann sessions, the professors from different backgrounds of science reign in Quarks to Quasars, a lecture series that has organized various enthralling talks by professors like Prof. G.Srinivasan, Prof. Suresh Govindarajan, Prof. V Balakrishnan, Prof. L. Sriramkumar and Prof. Avinash Deshpande.",
+        image: HorizonAchievements5,
       },
     ],
     email: "horizon.iitm@gmail.com",
@@ -374,12 +377,9 @@ export const Clubs: IClubs = {
   "ibot-club": {
     name: "iBot ##Club",
     logo: iBotLogo,
-    description: [
-      "Initiated in 2008, with a vision to raise the level of Robotics in the institute to an international standard, the iBot club is currently one of the most active clubs in CFI engaging over 600 students. The club aspires to enable students to explore their creativity and engineering skills through robotics by engaging them in exciting mentor based programmes, cultivating in them both technical skills as well as teamwork. It has succeeded in sending teams to competitions like URC, ROBOCON, DRDO, IARC, IAUVC and FIRA.",
-      "By offering indispensable guidance through workshops and tutorials along with equipment to all the interested students, iBot club helps students express their skills, knowledge and creativity through conceptualising and designing state of the art prototypes. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub.",
-      "The iBot Club is home to many of Insti’s robotics enthusiasts who spend a great chunk of their time designing and prototyping robots which can perform any required task. It organises regular workshops to inspire students across varied technical backgrounds to develop their ideas and expose them to the wonders of robotics.",
-    ],
-    achivements: [
+    description:
+      "Initiated in 2008, with a vision to raise the level of Robotics in the institute to an international standard, the iBot club is currently one of the most active clubs in CFI engaging over 600 students. The club aspires to enable students to explore their creativity and engineering skills through robotics by engaging them in exciting mentor based programmes, cultivating in them both technical skills as well as teamwork. It has succeeded in sending teams to competitions like URC, ROBOCON, DRDO, IARC, IAUVC and FIRA. <br /> By offering indispensable guidance through workshops and tutorials along with equipment to all the interested students, iBot club helps students express their skills, knowledge and creativity through conceptualising and designing state of the art prototypes. iBot club is not leaving any stone unturned in the process of becoming a self-sustained student robotics hub. <br /> The iBot Club is home to many of Insti’s robotics enthusiasts who spend a great chunk of their time designing and prototyping robots which can perform any required task. It organises regular workshops to inspire students across varied technical backgrounds to develop their ideas and expose them to the wonders of robotics.",
+    achievements: [
       {
         description:
           "IIT Madras’ iBot club secured a Silver(Overall 4th Place) in the Inter IIT Techmeet 8.O - 2020 conducted by IIT Roorkee. The problem statement was about a Robot which can perform terrace farming. The club’s Prototype was SAMOSA - Semi Automatic Machine Oriented for Step Agriculture. It was subsequently continued by the club as one of the Projects for the year.",
@@ -405,23 +405,23 @@ export const Clubs: IClubs = {
         image: "",
         email: "ed19b009@smail.iitm.ac.in",
         phone: "8639045607",
+        linkedIn: "https://www.linkedin.com/in/manideep-damodara-7053501b5",
       },
       {
         name: "Rinkle Sebastian",
         image: "",
         email: "na19b056@smail.iitm.ac.in",
         phone: "8281704611",
+        linkedIn: "https://www.linkedin.com/in/rinkle-sebastian12a",
       },
     ],
   },
   igem: {
     name: "##iGem",
     logo: iGEMLogo,
-    description: [
-      "Team IGEM is a group of individuals passionate about the fascinating field of synthetic biology. They participate in the iGEM competition every year. For a competition so entirely steeped in innovation, collaboration, and education, the words ‘International Genetically Engineered Machine’ doesn’t quite portray the reality of things – the only machines at work here are the small, yet incredibly complex bundles of life growing on a Petri plate (and very occasionally, our brains)!",
-      "The iGEM competition began in 2003 as a month-long course at the Massachusetts Institute of Technology. It eventually expanded over the years, with around 450 teams taking part in the 2019 edition. IIT-Madras has a long history with iGEM as well, having taken part in more than 10 editions since 2008, and has received many accolades at the international stage including, four gold medals, five silver medals, the Best Foundational Advance project, and Best New BioBrick Part or Device, Engineered in 2008, A Safety Commendation, Asia in 2011, Best New BioBrick Part, Natural, Asia in 2011, Best Human Practices Advance, Asia in 2013 and a nomination for Best Education and Public Engagement in 2019.",
-    ],
-    achivements: [
+    description:
+      "Team IGEM is a group of individuals passionate about the fascinating field of synthetic biology. They participate in the iGEM competition every year. For a competition so entirely steeped in innovation, collaboration, and education, the words ‘International Genetically Engineered Machine’ doesn’t quite portray the reality of things – the only machines at work here are the small, yet incredibly complex bundles of life growing on a Petri plate (and very occasionally, our brains)! <br /> The iGEM competition began in 2003 as a month-long course at the Massachusetts Institute of Technology. It eventually expanded over the years, with around 450 teams taking part in the 2019 edition. IIT-Madras has a long history with iGEM as well, having taken part in more than 10 editions since 2008, and has received many accolades at the international stage including, four gold medals, five silver medals, the Best Foundational Advance project, and Best New BioBrick Part or Device, Engineered in 2008, A Safety Commendation, Asia in 2011, Best New BioBrick Part, Natural, Asia in 2011, Best Human Practices Advance, Asia in 2013 and a nomination for Best Education and Public Engagement in 2019.",
+    achievements: [
       {
         description:
           "The team received a silver medal at the iGEM Giant Jamboree in 2016, a silver medal at the iGEM Giant Jamboree in 2017,  a Gold medal at the iGEM Giant Jamboree in 2018. The team also received a silver medal and was nominated for “Best Education & Public Engagement” for the Language Project in 2019. In 2021 they reached the Semifinals from ~ 30 teams that applied in the Synbio Power Pitch and won a Gold medal and the award for the Best Computational Project in GOGEC.",
@@ -448,11 +448,9 @@ export const Clubs: IClubs = {
   "product-design-club": {
     name: "Product Design## Club",
     logo: ProductDesignLogo,
-    description: [
-      "The Product Design Club of IIT Madras started as an interest group of student innovators in 2019. In 2020, the “Product Design Group” was officially bracketed under CFI as the Product Design Club. The vision of PDC is to develop a culture of design thinking and user-centric product development in the institute through Design Challenges, Impactful Projects, Workshops, and more.",
-      "At the PDC, we are excited by technology and the liberating impact that it can have. We are equally driven by problems that matter, Our projects always strive to solve high-impact problems and meet unmet needs",
-    ],
-    achivements: [
+    description:
+      "The Product Design Club of IIT Madras started as an interest group of student innovators in 2019. In 2020, the “Product Design Group” was officially bracketed under CFI as the Product Design Club. The vision of PDC is to develop a culture of design thinking and user-centric product development in the institute through Design Challenges, Impactful Projects, Workshops, and more. <br /> At the PDC, we are excited by technology and the liberating impact that it can have. We are equally driven by problems that matter, Our projects always strive to solve high-impact problems and meet unmet needs",
+    achievements: [
       {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -482,11 +480,9 @@ export const Clubs: IClubs = {
   "programming-club": {
     name: "Programming## Club",
     logo: ProgrammingLogo,
-    description: [
-      "If you’ve ever wanted to unravel the dusty treasure chest of algorithms, there can be no better place in insti. Join us for a pleasant walk in the park of algorithms, marveling at the structures that are so creatively constructed to organize data and extract useful information from it. We conduct regular sessions to insti the culture of the challenging mind sport of competitive programming, training students towards ICPC and other prestigious contests.",
-      "In ever-changing times, machine learning has risen to be an armageddon against problems faced by society. It has also been proved to be a handy tool for forecasting and mathematical modeling. To nurture and cultivate this skill, we offer club-sponsored projects. The most recent one focused on simulating the motion of multiple planets under mutual gravitational force.",
-    ],
-    achivements: [
+    description:
+      "If you’ve ever wanted to unravel the dusty treasure chest of algorithms, there can be no better place in insti. Join us for a pleasant walk in the park of algorithms, marveling at the structures that are so creatively constructed to organize data and extract useful information from it. We conduct regular sessions to insti the culture of the challenging mind sport of competitive programming, training students towards ICPC and other prestigious contests. <br /> In ever-changing times, machine learning has risen to be an armageddon against problems faced by society. It has also been proved to be a handy tool for forecasting and mathematical modeling. To nurture and cultivate this skill, we offer club-sponsored projects. The most recent one focused on simulating the motion of multiple planets under mutual gravitational force.",
+    achievements: [
       {
         title: "ICPC ##2021",
         description:
@@ -525,27 +521,26 @@ export const Clubs: IClubs = {
   sahaay: {
     name: "Team ##Sahaay",
     logo: SahaayLogo,
-    oneLiner: "Building the world, one layer at a time",
-    description: [
-      "Team Sahaay, as the name suggests was founded to develop technological products and to provide technical solutions to assist specially-abled people in their daily lives. The vision was to establish a team of enthusiastic students who would collaborate with various NGOs and work towards the development of technologies as solutions that greatly impact society.",
-      "Over the past few years, they have broadened our focus to provide interdisciplinary technical solutions to wider social problems, including, but not restricted to sanitation, waste management, protection for the elderly, differently-abled and women, environmental challenges, and arthritis rehabilitation.",
-      "Team Sahaay works on developing innovative, frugal technological solutions to a wide variety of social problems ranging from sanitation to healthcare to assistive devices for the differently-abled. ",
-    ],
-    achivements: [
+    description:
+      "Team Sahaay, as the name suggests was founded to develop technological products and to provide technical solutions to assist specially-abled people in their daily lives. The vision was to establish a team of enthusiastic students who would collaborate with various NGOs and work towards the development of technologies as solutions that greatly impact society. <br /> Over the past few years, they have broadened our focus to provide interdisciplinary technical solutions to wider social problems, including, but not restricted to sanitation, waste management, protection for the elderly, differently-abled and women, environmental challenges, and arthritis rehabilitation. <br /> Team Sahaay works on developing innovative, frugal technological solutions to a wide variety of social problems ranging from sanitation to healthcare to assistive devices for the differently-abled. ",
+    achievements: [
       {
         title: "Assistive Chair for## Arthritis Rehabilitation",
         description:
           "Increasingly hectic lifestyles have resulted in numerous lifestyle-related diseases like obesity, diabetes, etc. This has led to drastic changes in how people view fitness. India’s fitness and wellness industry is worth 1.1 billion $ and is growing at an annual rate of 25%. But, the majority of people don’t work out regularly due to hectic office hours or lack of fitness centers in nearby areas. The team planed to develop India’s first AI-powered workout solution which can give personalized health recommendations to users.",
+        image: SahaayAchievements1,
       },
       {
         title: "Automatic ##Waste Segregator",
         description:
           "One of only 50 teams globally selected for the Singapore Regional Finals of the Hult Prize Silver Medal, 7th Inter IIT Tech Meet, 2018This project aims to solve one of the perennial problems of both India and the world, i.e, improper/partial waste segregation. The team’s first prototype, codenamed AWSOne (Automatic Waste Segregator 1) used a robust mechanical system coupled with the latest technology in the fields of Deep Learning, Computer Vision, augmented with capacitive and inductive sensors to relay an accuracy rate in the identification of waste as one of four main categories viz. Metal, Plastic, Glass and Organic, and then segregate the waste into the appropriate",
+        image: SahaayAchievements2,
       },
       {
         title: "Restroom Seat ##Sanitation",
         description:
           "One of the biggest challenges with public toilets is their sanitation and maintenance. This is when a mechanism for toilet seat sanitation was developed by Arvind Pujari, Kushal Kumar Reddy, Shashwat Jain, Subham Kumar Sahana, and Tanay Garg under Sahaay which was also appreciated by Gandhian Young Technological Innovation in 2017. The news also was published in the Times of India.",
+        image: SahaayAchievements3,
       },
     ],
     email: "teamsahaayiitm@gmail.com",
@@ -570,26 +565,24 @@ export const Clubs: IClubs = {
     name: "Team ##Envisage",
     logo: EnvisageLogo,
     oneLiner: "Where Technology meets Entertainment",
-    description: [
-      "The Annual Technical Festival of IIT Madras, Shaastra introduced a technologically aided cultural show in the year 2013, capitalizing on the entertainment factor. This techno – cultural show was named Envisage and today it is India’s first and only student organized techno-entertainment show. The projects exhibited by Envisage attract a bunch of not-so-technically oriented guests too. The projects are designed in conformity with the tagline of Envisage – “Technology meets Entertainment”. Alongside conducting the show on 1st day of Shaastra, a number of other interactive projects and video games are also developed and exhibited to a vast crowd at KV Stalls during Shaastra. Over the past few years Envisage has been exploring and presenting projects at various avenues like IIM Bangalore, Anna University and in several other universities as part of Samparks, Publicity event of Shaastra. The coming version marks the entry of Envisage into its very 10th year.",
-      "As the tagline “Where Technology Meets Entertainment” suggests, we inspire and enable students to explore their creative and engineering skills through various technical projects for the techno cultural show and the tech exhibition during Shaastra.",
-    ],
-    achivements: [
+    description:
+      "The Annual Technical Festival of IIT Madras, Shaastra introduced a technologically aided cultural show in the year 2013, capitalizing on the entertainment factor. This techno – cultural show was named Envisage and today it is India’s first and only student organized techno-entertainment show. The projects exhibited by Envisage attract a bunch of not-so-technically oriented guests too. The projects are designed in conformity with the tagline of Envisage – “Technology meets Entertainment”. Alongside conducting the show on 1st day of Shaastra, a number of other interactive projects and video games are also developed and exhibited to a vast crowd at KV Stalls during Shaastra. Over the past few years Envisage has been exploring and presenting projects at various avenues like IIM Bangalore, Anna University and in several other universities as part of Samparks, Publicity event of Shaastra. The coming version marks the entry of Envisage into its very 10th year. <br /> As the tagline “Where Technology Meets Entertainment” suggests, we inspire and enable students to explore their creative and engineering skills through various technical projects for the techno cultural show and the tech exhibition during Shaastra.",
+    achievements: [
       {
         description:
           "Two projects from Envisage 6.0 - 3D waterfall, Virtual Instruments and one project from Envisage 9.0 - Smart Mirror participated in the Engineer's Conclave competition of the Inter-IIT Meet.",
         images: [
           {
             heading: "3D Waterfall",
-            image: EnvisageAchivements1a,
+            image: EnvisageAchievements1a,
           },
           {
             heading: "Virtual Instruments",
-            image: EnvisageAchivements1b,
+            image: EnvisageAchievements1b,
           },
           {
             heading: "Smart Mirror",
-            image: EnvisageAchivements1c,
+            image: EnvisageAchievements1c,
           },
         ],
       },
@@ -633,28 +626,35 @@ export const Clubs: IClubs = {
         image: "",
         email: "soumyakollipara@gmail.com",
         phone: "9176415740",
+        linkedIn: "https://www.linkedin.com/in/soumya-kollipara-69aa361a8",
       },
       {
         name: "Battu Lochana Janaki",
         image: "",
         email: "ce18b003@smail.iitm.ac.in",
         phone: "7032377877",
+        linkedIn: "https://www.linkedin.com/in/battu-lochana-janaki-b270b31bb",
       },
     ],
   },
   "webops-and-blockchain-club": {
     name: "WebOps and ##Blockchain Club",
     logo: WebOpsAndBlockchainLogo,
-    description: [
-      "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects.",
-      "We also conducted the Summer School in the month of July 2021 after the break of one year. 200+ students registered for the Summer School. Our club was among the clubs with the highest registrations. Lectures on HTML, CSS, JavaScript, Git and GitHub, Blockchain with hands on coding sessions and projects were conducted during the summer school.",
-    ],
-    achivements: [
+    description:
+      "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects. <br /> We also conducted the Summer School in the month of July 2021 after the break of one year. 500+ students registered for the Summer School. Our club was among the clubs with the highest registrations. Lectures on HTML, CSS, JavaScript, Git and GitHub, Blockchain with hands on coding sessions and projects were conducted during the summer school.",
+    achievements: [
       {
         title: "Lanunch of ##CLinsti App",
         description:
           "This year we successfully launched the all new CLinsti app – a mobile application developed by the joint efforts of Engineering Section and CFI to promote cleanliness and ensure proper waste management in IITM campus. It was launched in October 2021 and is available in both Appstore and play store and it got over 200 downloads within a month of its release.",
-        image: WebOpsAndBlockchainAchivement1,
+        image: WebOpsAndBlockchainAchievement1,
+      },
+      {
+        title:
+          "Chennai Water Logging: \n \n ##An initiative to create a real-time flood map",
+        description:
+          "A platform that enables the public to report water logging details across the Chennai region. The data gathered through this platform aims to improve disaster preparedness and response in communities by gathering, sorting, and presenting data of flooding reports. This Crowd source data, curated through this platform will help to understand the reasons for waterlogging / inundation and help IIT Madras researchers to develop / design remedial measures that may be recommended to GCC, PWD and other relevant Govt. departments for their action.",
+        image: WebOpsAndBlockchainAchievement2,
       },
     ],
     email: "webopsandblockchainclub@gmail.com",

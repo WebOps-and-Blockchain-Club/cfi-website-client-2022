@@ -6,18 +6,21 @@ import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.pn
 import GalleryImage1 from "../../../Assets/Images/Home/Landing images/car2.jpg";
 
 // RAFTAR
-import RaftarAchivements1 from "../../Images/Community/CompetitionTeam/Raftar/Achivements1.png";
-import RaftarAchivements2 from "../../Images/Community/CompetitionTeam/Raftar/Achivements2.png";
-import RaftarAchivements4 from "../../Images/Community/CompetitionTeam/Raftar/Achivements4.png";
+import RaftarAchievements1 from "../../Images/Community/CompetitionTeam/Raftar/Achievements1.png";
+import RaftarAchievements2 from "../../Images/Community/CompetitionTeam/Raftar/Achievements2.png";
+import RaftarAchievements4 from "../../Images/Community/CompetitionTeam/Raftar/Achievements4.png";
+
+// ANVESHAK
+import AnveshakLanding from "../../Images/Community/CompetitionTeam/Anveshak/Landing.jpg";
 
 // AVISHKAR
 import AvishkarLanding from "../../Images/Community/CompetitionTeam/Avishkar/Landing.jpg";
 
-import AvishkarAchivements1a from "../../Images/Community/CompetitionTeam/Avishkar/Achivements1a.jpg";
-import AvishkarAchivements1b from "../../Images/Community/CompetitionTeam/Avishkar/Achivements1b.jpg";
-import AvishkarAchivements1c from "../../Images/Community/CompetitionTeam/Avishkar/Achivements1c.jpg";
-import AvishkarAchivements2a from "../../Images/Community/CompetitionTeam/Avishkar/Achivements2a.png";
-import AvishkarAchivements2b from "../../Images/Community/CompetitionTeam/Avishkar/Achivements2b.jpeg";
+import AvishkarAchievements1a from "../../Images/Community/CompetitionTeam/Avishkar/Achievements1a.jpg";
+import AvishkarAchievements1b from "../../Images/Community/CompetitionTeam/Avishkar/Achievements1b.jpg";
+import AvishkarAchievements1c from "../../Images/Community/CompetitionTeam/Avishkar/Achievements1c.jpg";
+import AvishkarAchievements2a from "../../Images/Community/CompetitionTeam/Avishkar/Achievements2a.png";
+import AvishkarAchievements2b from "../../Images/Community/CompetitionTeam/Avishkar/Achievements2b.jpeg";
 
 import AvishkarProject1 from "../../Images/Community/CompetitionTeam/Avishkar/Project1.jpg";
 import AvishkarProject2 from "../../Images/Community/CompetitionTeam/Avishkar/Project2.jpg";
@@ -36,29 +39,28 @@ export const Teams: ITeams = {
     name: "RAFTAR FORMULA ##RACING",
     logo: RaftarLogo,
     landing: GalleryImage1,
-    description: [
+    description:
       "Raftar is a team of 50 students from different disciplines in IIT Madras with a shared passion for automotive engineering and motorsports. Every year, the team takes up the challenge of building a swift Formula Student race car and works to develop the most competent lot of engineers in the nation. Working at the Centre For Innovation, IIT Madras, Raftar aims to become a globally competitive team and promote the Formula Student culture in India. The Raftar formula racing team is recognized as one of the tireless, most dedicated teams at CFI.",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "Formula Bharat is an Indian Formula Student-style engineering design competition in which students from colleges and universities all over the country compete with a life-size formula-style vehicle in areas of engineering design, overall cost, marketability and dynamic performance. In the Formula Bharat Virtuals – 2021 (Electric Category), Team Raftar secured 1st place in the overall championship and the Engineering design Event. They were also placed as winners of the Best Powertrain Design and Best Battery Design.",
-        image: RaftarAchivements1,
+        image: RaftarAchievements1,
       },
       {
         description:
           "The purpose of the FSEV Concept Challenge (FSEV 2021) is to provide teams with an opportunity to conceptualise and design a Formula Student Electric Vehicle Powertrain Package. In the  FSEV Challenge – 2021(Electric Category), Team Raftar was successful in securing 2nd place in the Overall Challenge simultaneously winning the 2nd place in Engineering Design and Procurement Strategy.",
-        image: RaftarAchivements2,
+        image: RaftarAchievements2,
       },
       {
         description:
           "In the Formula Bharat – 2021 (Combustion Category), Team Raftar unsurprisingly won 1st place in the Overall Championship and the Engineering Design Event. They were also the Winners of the Best CV Powertrain Award by Boschand  Ather Connected Tech Award.",
-        // image: RaftarAchivements2,
+        // image: RaftarAchievements2,
       },
       {
         description:
           "Team Raftar appeared in the Formula Bharat – 2020 (Combustion Category) and won 1st place in the Overall Championship and Engineering Design Event. They successfully placed 1st in the Business Plan Presentation and Fuel Efficiency. Additionally, they achieved Podium Finishes in all dynamic events and broke the record for highest points scored in static events.",
-        image: RaftarAchivements4,
+        image: RaftarAchievements4,
       },
     ],
     projects: [
@@ -91,10 +93,9 @@ export const Teams: ITeams = {
     name: "TEAM ##ABHIYAAN",
     logo: AbhiyaanLogo,
     landing: GalleryImage1,
-    description: [
+    description:
       "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
@@ -109,7 +110,7 @@ export const Teams: ITeams = {
       {
         title: "ROS ##Software driver",
         description:
-          "Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome",
+          'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
       },
     ],
     website: "https://www.teamabhiyaan.com/",
@@ -134,59 +135,45 @@ export const Teams: ITeams = {
   "team-anveshak": {
     name: "TEAM ##ANVESHAK",
     logo: AnveshakLogo,
-    landing: GalleryImage1,
-    description: [
+    landing: AnveshakLanding,
+    description:
       "We, Team Anveshak, are a team of over 30 passionate students from IIT Madras who live and breathe robotics. Since our beginnings around early 2016, we have spent countless days and nights building our own remote operated all-terrain rovers, complete with a robotic manipulator and digger. Our team brings together a set of highly dedicated and skilled students working on mechanical design, system architecture and control, outreach and business relations. We also organize educational workshops for students of our institute on different aspects of robotics. The technical knowledge and practical experience the team imparts to its members is unparalleled, nurturing them into effective team players and leaders of industry and research. \n",
-      "We have contested in a lot of competitions and have got numerous prizes. We got 1st prize and 5th prize respectively in the years 20119 and 2020 in the Indian Rover Challenge.  In the University Rover Challenge 2019 we designed the next generation Mars rover that will one day work along with the astronauts to explore the red planet. We got 12th position in the same. In the Mars Society South Asia Hackathon our team got a chance to visualise mars in a different perspective, focusing on human survival and analyse the possibility of colonisation. In this competition our rover got ranked 12. In the Indian Rover Designing Challenge 2020 we designed the next generation Mars rover which shall be fully equipped and mission ready for future astronaut-assistive exploration operations on Mars. In the International Rover Design Challenge our team designed a rover to explore Martian lava tubes which are expected to have high possibility of existence of life analogous to lava tubes on Earth. We also participated in the European Rover Challenge (ERC) and our rover got ranked 12. Participating in ERC, helped us to work exclusively on the software module and test it on an actual rove virtually. \n",
-      "Our current rover, Dora, is a marked improvement over the previous iterations. The new design is our largest yet, and is significantly more robust. We placed an emphasis on modularity and stability. The rover has a wider base area and an arm with a larger workspace. The electronics are also modularized, allowing for faster debugging and reliability. In addition, the system architecture was optimized and faster algorithms were implemented in order to improve performance. \n",
-      "Our rover features a robotic arm to perform various tasks like opening cupboards, flipping switches, tightening screws, etc. The onboard science laboratory on the rover allows us to perform experiments on soil samples collected in situ, testing for the presence of past or present life. Every year, we build a new rover incorporating new changes and innovations to improve on the previous model.",
+    achievements: [
+      {
+        description:
+          "We bagged 1st prize and 5th prize respectively in the years 2019 and 2020 in the Indian Rover Challenge.",
+      },
+      {
+        description:
+          "In the University Rover Challenge 2019, we designed the next generation Mars rover that will one day work along with the astronauts to explore the red planet. We got 12th position in the same.",
+      },
+      {
+        description:
+          "In the Mars Society South Asia (MSSA) Hackathon our team got a chance to visualise mars in a different perspective, focusing on human survival and analyse the possibility of colonisation. In this competition our rover got ranked 12.",
+      },
+      {
+        description:
+          "In the Indian Rover Designing Challenge 2020 (IRDC) we designed the next generation Mars rover which shall be fully equipped and mission ready for future astronaut-assistive exploration operations on Mars.",
+      },
+      {
+        description:
+          "In the International Rover Design Challenge our team designed a rover to explore Martian lava tubes which are expected to have high possibility of existence of life analogous to lava tubes on Earth.",
+      },
+      {
+        description:
+          "We also participated in the European Rover Challenge (ERC) and our rover got ranked 12. Participating in ERC, helped us to work exclusively on the software module and test it on an actual rove virtually.",
+      },
     ],
-    // achivements: [
-    //   {
-    //     description:
-    //       "Our team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition.",
-    //     images: [
-    //       {
-    //         image: GalleryImage1,
-    //         heading: "The only Asian finalists",
-    //       },
-    //       {
-    //         image: GalleryImage1,
-    //         heading: "Top 10 finish in the SpaceX Pod Competition",
-    //       },
-    //       {
-    //         image: GalleryImage1,
-    //         heading: "Our team with Elon Musk",
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     description:
-    //       "The team participated in the European Hyperloop Week, July 2021 virtually,  with our indigenously developed Hyperloop pod ‘Garv’ and won the ‘Most Scalable Design Award’ as well as nominations in several other categories.",
-    //     images: [
-    //       {
-    //         image: GalleryImage1,
-    //         heading: "Our achievements in the European Hyperloop Week",
-    //       },
-    //       {
-    //         image: GalleryImage1,
-    //         heading: "Winner of the most scalable design award",
-    //       },
-    //     ],
-    //   },
-    // ],
-    // projects: [
-    //   {
-    //     title: "Avishkar’s Hyperloop Pod 2021: ##‘Garv’",
-    //     description:
-    //       "The team built Asia’s most technologically advanced Hyperloop Pod, equipped with contactless propulsion using Linear Induction Motor, contactless braking using Eddy Current Braking, and a compact inverter for propulsion control. Designed entirely online and manufactured near the peak of the pandemic, the Pod was completed in July 2021",
-    //   },
-    //   {
-    //     title: "A 500m long Hyperloop ##test track",
-    //     description:
-    //       "The team is building a 500m long, 2m diameter vacuum tube at the IITM campus, a first of its kind in the world by a student team. The Hyperloop tube is expected to be ready by March 2022. The sub-pilot tube will be a breakthrough in the Hyperloop development and accelerate technology development. The world-leading facility will act as a sub-scale testing ground to the Hyperloop community and lead to breakthroughs. \n After a year-long research, the team has developed this novel and cost-effective tube design and has also filed for a provisional patent for the same. We have also set up a 3.6m long vacuum tube prototype at CFI to test the validity of the design and test the vacuum compatibility of various components of our Hyperloop pod.",
-    //   },
-    // ],
+    projects: [
+      {
+        description:
+          "Our current rover, Dora, is a marked improvement over the previous iterations. The new design is our largest yet, and is significantly more robust. We placed an emphasis on modularity and stability. The rover has a wider base area and an arm with a larger workspace. The electronics are also modularized, allowing for faster debugging and reliability. In addition, the system architecture was optimized and faster algorithms were implemented in order to improve performance.",
+      },
+      {
+        description:
+          "Our rover features a robotic arm to perform various tasks like opening cupboards, flipping switches, tightening screws, etc. The onboard science laboratory on the rover allows us to perform experiments on soil samples collected in situ, testing for the presence of past or present life. Every year, we build a new rover incorporating new changes and innovations to improve on the previous model.",
+      },
+    ],
     email: "teamanveshak@smail.iitm.ac.in",
     contacts: [
       {
@@ -209,24 +196,23 @@ export const Teams: ITeams = {
     name: "TEAM AVISHKAR ##HYPERLOOP",
     logo: AvishkarLogo,
     landing: AvishkarLanding,
-    description: [
+    description:
       "We are a group of 40+ individuals hailing from across the country and pursuing various courses at IITM in different fields of study. Our collective passion brings us together for a cleaner future through sustainable Hyperloop research. With a single-minded focus on scalability, we are working on a whole host of new tube and pod technologies needed to implement a full-scale hyperloop safely. Elon Musk appreciated the technological progress we have made towards that goal at the SpaceX Hyperloop Pod Competition 2019. We built our latest pod Avishkar 'Garv,' during the height of the pandemic through relentless effort. Avishkar 'Garv' is equipped with many novel technologies that we built in-house from scratch and won the 'Most Scalable Design Award' among many others at the European Hyperloop Week.",
-    ],
-    achivements: [
+    achievements: [
       {
         description:
           "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition.",
         images: [
           {
-            image: AvishkarAchivements1a,
+            image: AvishkarAchievements1a,
             heading: "The only Asian finalists",
           },
           {
-            image: AvishkarAchivements1b,
+            image: AvishkarAchievements1b,
             heading: "Top 10 finish in the SpaceX Pod Competition",
           },
           {
-            image: AvishkarAchivements1c,
+            image: AvishkarAchievements1c,
             heading: "Our team with Elon Musk",
           },
         ],
@@ -236,11 +222,11 @@ export const Teams: ITeams = {
           "The team participated in the European Hyperloop Week, July 2021 virtually,  with our indigenously developed Hyperloop pod ‘Garv’ and won the ‘Most Scalable Design Award’ as well as nominations in several other categories.",
         images: [
           {
-            image: AvishkarAchivements2a,
+            image: AvishkarAchievements2a,
             heading: "Our achievements in the European Hyperloop Week",
           },
           {
-            image: AvishkarAchivements2b,
+            image: AvishkarAchievements2b,
             heading: "Winner of the most scalable design award",
           },
         ],
