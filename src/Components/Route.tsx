@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUs from "./AboutUs";
+import Alumni from "./Alumni";
 import Club from "./Community/Club";
 import CompetitionTeam from "./Community/CompetitionTeam";
 import ManagerialTeam from "./Community/ManagerialTeam";
@@ -21,6 +22,7 @@ const AppRoutes = (probs: Probs) => {
         />
         <Route path="/managerial-team" element={<ManagerialTeam />} />
         <Route path="/media" element={<Media />} />
+        <Route path="/alumni" element={<Alumni />} />
         <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
