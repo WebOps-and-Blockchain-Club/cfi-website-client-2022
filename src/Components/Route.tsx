@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Wrapper from "../Utils/scrollToTop";
 import AboutUs from "./AboutUs";
 import Alumni from "./Alumni";
 import Club from "./Community/Club";
@@ -13,18 +14,20 @@ interface Probs {}
 const AppRoutes = (probs: Probs) => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/clubs/:clubname" element={<Club />} />
-        <Route
-          path="/competition-teams/:teamname"
-          element={<CompetitionTeam />}
-        />
-        <Route path="/managerial-team" element={<ManagerialTeam />} />
-        <Route path="/media" element={<Media />} />
-        <Route path="/alumni" element={<Alumni />} />
-        <Route path="/about-us" element={<AboutUs />} />
-      </Routes>
+      <Wrapper>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/clubs/:clubname" element={<Club />} />
+          <Route
+            path="/competition-teams/:teamname"
+            element={<CompetitionTeam />}
+          />
+          <Route path="/managerial-team" element={<ManagerialTeam />} />
+          <Route path="/media" element={<Media />} />
+          <Route path="/alumni" element={<Alumni />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
+      </Wrapper>
     </BrowserRouter>
   );
 };
