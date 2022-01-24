@@ -40,7 +40,7 @@ export default function MediaCard({ data }: Probs) {
             component="img"
             image={data.image}
             sx={{
-              borderRadius: "40px",
+              borderRadius: "20px",
               verticalAlign: "middle",
               objectFit: "cover",
               width: matchesLG ? "100%" : "400px",
@@ -89,14 +89,13 @@ export default function MediaCard({ data }: Probs) {
             component="div"
             color="primary.contrastText"
             fontSize={{
-              xs: "14px",
+              xs: "16px",
               sm: "18px",
             }}
             textAlign={"center"}
             pt={"15px"}
-          >
-            {data.description}
-          </Typography>
+            dangerouslySetInnerHTML={{ __html: data.description }}
+          />
         </CardContent>
       </Card>
       {data.images && (

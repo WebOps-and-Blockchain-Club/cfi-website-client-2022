@@ -70,32 +70,6 @@ const CompetitionTeam = () => {
                 width: "unset",
               }}
             />
-            <Grid item>
-              <Typography
-                variant={matches ? "h5" : "h3"}
-                color="primary.contrastText"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
-                }}
-              >
-                {data.name.split("##")[0]}
-              </Typography>
-              <Typography
-                variant={matches ? "h5" : "h3"}
-                color="secondary"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
-                }}
-              >
-                {data.name.split("##")[1]}
-              </Typography>
-            </Grid>
           </Grid>
         </Grid>
 
@@ -112,19 +86,14 @@ const CompetitionTeam = () => {
             white={data.name.split("##")[0]}
           />
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
-            {data.description.map((desc) => (
-              <Typography
-                // variant={"h5"}
-                color="primary.contrastText"
-                sx={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: "18px",
-                }}
-              >
-                {desc}
-              </Typography>
-            ))}
+            <Typography
+              color="primary.contrastText"
+              sx={{
+                textAlign: "center",
+                fontSize: "18px",
+              }}
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
           </Grid>
         </Grid>
 
@@ -143,6 +112,11 @@ const CompetitionTeam = () => {
               container
               mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
               rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
               {data.achivements.map((_achivement) => (
                 <MediaCard data={_achivement} />
@@ -151,7 +125,7 @@ const CompetitionTeam = () => {
           </Grid>
         )}
 
-        {/* PROJECTS */}
+        {/* HIGHLIGHTS */}
         {data.projects && (
           <Grid
             item
@@ -161,11 +135,16 @@ const CompetitionTeam = () => {
             px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
             alignItems={"center"}
           >
-            <Heading white="PRO" red="JECTS" />
+            <Heading white="HIGH" red="LIGHTS" />
             <Grid
               container
               mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
               rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
               {data.projects.map((_project) => (
                 <MediaCard data={_project} />
@@ -185,10 +164,7 @@ const CompetitionTeam = () => {
             px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           >
             <Grid item>
-              <Heading
-                white={data.name.split("##").join("")}
-                red=" SNAPSHOTS"
-              />
+              <Heading white="" red="SNAPSHOTS" />
             </Grid>
             <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
               <Gallery data={data.gallery} />
@@ -221,7 +197,11 @@ const CompetitionTeam = () => {
             </Typography>
           </Grid>
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
-            <ContactCard members={data.contacts} email={data.email} />
+            <ContactCard
+              title="TEAM"
+              members={data.contacts}
+              email={data.email}
+            />
           </Grid>
         </Grid>
       </Grid>

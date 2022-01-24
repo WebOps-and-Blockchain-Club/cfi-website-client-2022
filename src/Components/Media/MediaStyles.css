@@ -22,8 +22,7 @@ body {
   box-shadow: 5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);
 }
 
-.card-container-year,
-h6 {
+.card-container-year {
   color: #d6d6d6;
   margin-left: 10%;
   margin-bottom: 5%;
@@ -53,7 +52,7 @@ h6 {
     object-fit: fill;
     margin-right: 25px;
     margin-left: 45px;
-    border-radius: 50px;
+    border-radius: 20px;
   }
 }
 

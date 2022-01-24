@@ -43,8 +43,8 @@ const Home = (props: Props) => {
           direction="column"
           alignItems="center"
           width="100vw"
-          sx={{ /*minHeight: "100vh", */ width: "99vw" }}
-          px={{ xs: 4, sm: 8, md: 12, lg: 16 }}
+          sx={{ width: "99vw" }}
+          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>
@@ -67,7 +67,7 @@ const Home = (props: Props) => {
           container
           direction="column"
           alignItems="center"
-          px={{ xs: 4, sm: 8, md: 12, lg: 16 }}
+          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>
@@ -92,7 +92,7 @@ const Home = (props: Props) => {
           container
           direction="column"
           alignItems="center"
-          px={{ xs: 4, sm: 8, md: 12, lg: 16 }}
+          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>
@@ -103,7 +103,7 @@ const Home = (props: Props) => {
               color="primary.contrastText"
               sx={{
                 textAlign: "center",
-                fontSize: matches ? "16px" : "26px",
+                fontSize: matches ? "18px" : "26px",
                 whiteSpace: "pre-line",
               }}
             >
@@ -115,8 +115,8 @@ const Home = (props: Props) => {
             container
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
             justifyContent={"center"}
-            rowGap={{ xs: 2, sm: 4, md: 5, lg: 3 }}
-            columnGap={{ xs: 2, sm: 4, md: 5, lg: 6 }}
+            rowGap={{ xs: 3, sm: 4, md: 5, lg: 3 }}
+            columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
           >
             {ClubList.map((club, i) => {
               if ((i === 6 || i === 10) && window.innerWidth >= 1536)
@@ -143,7 +143,7 @@ const Home = (props: Props) => {
           container
           direction="column"
           alignItems="center"
-          px={{ xs: 4, sm: 8, md: 12, lg: 16 }}
+          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>
@@ -152,7 +152,7 @@ const Home = (props: Props) => {
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
             <Typography
               color="primary.contrastText"
-              sx={{ textAlign: "center", fontSize: matches ? "16px" : "26px" }}
+              sx={{ textAlign: "center", fontSize: matches ? "18px" : "26px" }}
             >
               {CompetitionTeams}
             </Typography>
@@ -163,7 +163,7 @@ const Home = (props: Props) => {
             justifyContent={"center"}
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
             alignItems="center"
-            gap={{ xs: 4, sm: 8, md: 9, lg: 9 }}
+            gap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
           >
             {CompetitionTeamList.map((team) => (
               <CompetitionTeamCard
@@ -181,7 +181,7 @@ const Home = (props: Props) => {
           container
           direction="column"
           alignItems="center"
-          px={{ xs: 4, sm: 8, md: 12, lg: 16 }}
+          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>

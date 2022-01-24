@@ -47,11 +47,10 @@ const Club = () => {
               sx={{
                 textAlign: "center",
                 fontWeight: "bold",
-                fontSize: "26px",
+                fontSize: matches ? "21px" : "26px",
               }}
-            >
-              {data.oneLiner}
-            </Typography>
+              dangerouslySetInnerHTML={{ __html: data.oneLiner }}
+            />
           )}
         </Grid>
 
@@ -78,19 +77,14 @@ const Club = () => {
             />
           </Grid>
           <Grid item width={{ xs: "100%", lg: "50%" }}>
-            {data.description.map((desc) => (
-              <Typography
-                // variant={"h5"}
-                color="primary.contrastText"
-                sx={{
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  fontSize: "18px",
-                }}
-              >
-                {desc}
-              </Typography>
-            ))}
+            <Typography
+              color="primary.contrastText"
+              sx={{
+                textAlign: "center",
+                fontSize: "18px",
+              }}
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            />
           </Grid>
         </Grid>
 
@@ -107,7 +101,11 @@ const Club = () => {
               container
               mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
               rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
-              justifyContent={"center"}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
               {data.achivements.map((_achivement) => (
                 <MediaCard data={_achivement} />
@@ -129,7 +127,11 @@ const Club = () => {
               container
               mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
               rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
-              alignItems={"center"}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "stretch",
+              }}
             >
               {data.projects.map((_project) => (
                 <MediaCard data={_project} />
@@ -183,7 +185,11 @@ const Club = () => {
             </Typography>
           </Grid>
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
-            <ContactCard members={data.contacts} email={data.email}/>
+            <ContactCard
+              title="CLUB"
+              members={data.contacts}
+              email={data.email}
+            />
           </Grid>
         </Grid>
       </Grid>

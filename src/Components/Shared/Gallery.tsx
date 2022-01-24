@@ -28,7 +28,7 @@ export default function Gallery(probs: Probs) {
       slidesPerView={1}
       pagination={{ clickable: true }}
       navigation
-      style={{ width: matches ? "80vw" : "70vw", borderRadius: "40px" }}
+      style={{ width: matches ? "80vw" : "70vw", borderRadius: "20px" }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

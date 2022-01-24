@@ -30,27 +30,19 @@ export default function IntroCard() {
           "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
       }}
     >
-      {/* <Grid
-        sx={{
-          background: "linear-gradient(138.5deg, #000000 42%, #FF0000 109.29%)",
-          padding: "10px",
-          borderRadius: "40px",
-        }}
-      > */}
       <CardMedia
         component="video"
         image={IntroVideo}
         controls
         sx={{
-          borderRadius: "40px",
+          borderRadius: "20px",
           verticalAlign: "middle",
           objectFit: "contain",
-          width: matchesLG ? "70vw" : "400px",
+          width: matchesLG ? "80vw" : "400px",
           backgroundColor:
             "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
         }}
       />
-      {/* </Grid> */}
       <CardContent
         sx={{
           p: "unset",

@@ -4,11 +4,12 @@ import { Card, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { IMember } from "../../Types";
 
 interface Probs {
+  title: string;
   email: string;
   members: IMember[];
 }
 
-export default function ContactCard({ members, email }: Probs) {
+export default function ContactCard({ title, members, email }: Probs) {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
@@ -36,7 +37,7 @@ export default function ContactCard({ members, email }: Probs) {
             textAlign: "center",
           }}
         >
-          CLUB&nbsp;
+          {title}&nbsp;
         </Typography>
         <Typography
           variant={matchesSM ? "h6" : "h5"}
@@ -52,7 +53,12 @@ export default function ContactCard({ members, email }: Probs) {
         </Typography>
       </Grid>
       <Grid pb={4}>
-        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+        <a
+          href={`mailto:${email}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
+        >
           <Typography p={0.5} fontSize={"18px"}>
             {email}
           </Typography>
@@ -69,7 +75,7 @@ export default function ContactCard({ members, email }: Probs) {
             textAlign: "center",
           }}
         >
-          CLUB&nbsp;
+          {title}&nbsp;
         </Typography>
         <Typography
           variant={matchesSM ? "h6" : "h5"}
@@ -101,6 +107,7 @@ export default function ContactCard({ members, email }: Probs) {
               href={`mailto:${_contact.email}`}
               target="_blank"
               rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
               <Typography p={0.5} fontSize={"18px"}>
                 {_contact.email}
