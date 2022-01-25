@@ -16,6 +16,7 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/swiper-bundle";
 import "swiper/swiper-bundle.esm.browser";
+import { Link } from "react-router-dom";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -68,7 +69,11 @@ export default function CustomSwiper(probs: Probs) {
       >
         {probs.data.map((_data: any) => (
           <SwiperSlide className="custom-swiper-slide">
-            <SwiperCard heading={_data.title} image={_data.image} />
+            <SwiperCard
+              heading={_data.title}
+              image={_data.image}
+              link={`/achievements/#${_data.id}`}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -80,59 +85,62 @@ export default function CustomSwiper(probs: Probs) {
 type MediaCardProps = {
   heading: string;
   image: string;
+  link: string;
 };
 
-function SwiperCard({ heading, image }: MediaCardProps) {
+function SwiperCard({ heading, image, link }: MediaCardProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Card
-      sx={{
-        m: "0 5px",
-        width: matches ? "68vw" : "350px",
-        borderRadius: "40px",
-        backgroundColor: "primary.light",
-        boxShadow:
-          "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
-      }}
-    >
-      <CardMedia
-        component="img"
-        image={image}
-        alt="newsimg"
+    <Link to={link} style={{ textDecoration: "none" }}>
+      <Card
         sx={{
-          borderRadius: "40px 40px 0 0",
-          verticalAlign: "middle",
-          objectFit: "cover",
-          height: matches ? "50vw" : "270px",
-        }}
-      />
-      <CardContent
-        sx={{
-          px: "10px",
-          py: "20px",
-          height: matches ? "50px" : "100px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-        style={{
-          paddingBottom: "20px",
+          m: "0 5px",
+          width: matches ? "68vw" : "350px",
+          borderRadius: "40px",
+          backgroundColor: "primary.light",
+          boxShadow:
+            "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
         }}
       >
-        <Typography
-          component="div"
-          color="primary.contrastText"
+        <CardMedia
+          component="img"
+          image={image}
+          alt="newsimg"
           sx={{
-            textAlign: "center",
-            fontSize: matches ? "16px" : "18px",
-            fontWeight: "bold",
-            letterSpacing: "1px",
+            borderRadius: "40px 40px 0 0",
+            verticalAlign: "middle",
+            objectFit: "cover",
+            height: matches ? "50vw" : "270px",
+          }}
+        />
+        <CardContent
+          sx={{
+            px: "10px",
+            py: "20px",
+            height: matches ? "50px" : "100px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+          }}
+          style={{
+            paddingBottom: "20px",
           }}
         >
-          {heading}
-        </Typography>
-      </CardContent>
-    </Card>
+          <Typography
+            component="div"
+            color="primary.contrastText"
+            sx={{
+              textAlign: "center",
+              fontSize: matches ? "16px" : "18px",
+              fontWeight: "bold",
+              letterSpacing: "1px",
+            }}
+          >
+            {heading}
+          </Typography>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

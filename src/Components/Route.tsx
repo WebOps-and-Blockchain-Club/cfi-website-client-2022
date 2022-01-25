@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Wrapper from "../Utils/scrollToTop";
 import AboutUs from "./AboutUs";
+import Achievements from "./Achievements";
 import Alumni from "./Alumni";
 import Club from "./Community/Club";
 import CompetitionTeam from "./Community/CompetitionTeam";
@@ -23,6 +24,7 @@ const AppRoutes = (probs: Probs) => {
             element={<CompetitionTeam />}
           />
           <Route path="/managerial-team" element={<ManagerialTeam />} />
+          <Route path="/achievements" element={<Achievements />} />
           <Route path="/media" element={<Media />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />

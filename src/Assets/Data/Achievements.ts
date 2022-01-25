@@ -8,13 +8,15 @@ import Achievements1 from "../Images/Achievements/Achievements1.jpeg";
 
 export const AchievementsData = [
   {
+    id: "team-igem-bags-gold-medal-at-gogec-2021",
     title: "Team iGEM bags Gold Medal at GOGEC-2021",
     date: "6 December, 2021",
     description:
-      "Participating under the team name Genetic Engineers of Madras (Team GEnoM), the  iGEM team won a Gold Medal and the Best Computational Project at the Global Open Genetic Engineering Competition (GOGEC-2021). Their project aims to combat the increasing environmental concerns raised by industrial whey wastewater discharge. They intend to utilize the whey wastestream as their feedstock to produce bacterial cellulose (BC) by engineering different strains of the K.xylinus bacteria to metabolize lactose thus paving the way for the production of BC based hydrogels.<br /><br />The team also presented this idea in two other avenues namely the Synbio Power Pitch conducted by the Synbio PowerHouse Finland and the National Bioengineering Conference (NBC) organised by NIT Rourkela. They reached the semifinals from among ~30 teams in the Power Pitch and were awarded the Unique Idea Award in NBC 2022.",
+      "Participating under the team name Genetic Engineers of Madras (Team GEnoM), the  iGEM team won a Gold Medal and the Best Computational Project at the Global Open Genetic Engineering Competition (<a href='https://www.gogecconference.org/' target='_blank' rel='noopener noreferrer'>GOGEC-2021</a>). Their project aims to combat the increasing environmental concerns raised by industrial whey wastewater discharge. They intend to utilize the whey wastestream as their feedstock to produce bacterial cellulose (BC) by engineering different strains of the K.xylinus bacteria to metabolize lactose thus paving the way for the production of BC based hydrogels.<br /><br />The team also presented this idea in two other avenues namely the Synbio Power Pitch conducted by the <a href='https://www.synbio.fi/about-1' target='_blank' rel='noopener noreferrer'>Synbio PowerHouse Finland</a> and the National Bioengineering Conference (NBC) organised by NIT Rourkela. They reached the semifinals from among ~30 teams in the Power Pitch and were awarded the Unique Idea Award in NBC 2022.",
     image: Achievements7,
   },
   {
+    id: "team-raftar-formula-racing-makes-it-to-the-top",
     title: "#Team Raftar Formula Racing makes it to the top, once again!",
     date: "November, 2021",
     description:
@@ -22,6 +24,7 @@ export const AchievementsData = [
     image: Achievements6,
   },
   {
+    id: "chennai-water-logging",
     title:
       "Chennai Water Logging: An initiative to create a real-time flood map ",
     date: "Mid November, 2021",
@@ -30,6 +33,7 @@ export const AchievementsData = [
     image: Achievements5,
   },
   {
+    id: "team-abhyuday-makes-its-way-to-spaceport-america-cup-2022",
     title: "Team Abhyuday makes its way to Spaceport America Cup 2022",
     date: "Mid October, 2021",
     description:
@@ -37,13 +41,15 @@ export const AchievementsData = [
     image: Achievements4,
   },
   {
+    id: "lanuch-of-the-clinsti-app",
     title: "En route to hygiene: launch of the CLinsti app",
     data: "2 October, 2021",
     description:
-      "CFI, along with the Engineering Unit, developed the CLinsti App for the redressal of issues regarding cleanliness in IIT Madras. Through the app, residents and students of IIT Madras will be able to post requests concerning waste management in the institute. Following their requests, the users will be updated on the request's status in the app in real-time. The app was officially launched by Prof. Bhaskar Ramamurthi, Director of IIT Madras in a Launch Event organized by CFI on 2nd October. This app is currently available to download from Apple Appstore (link) and Google Playstore (link)",
+      "CFI, along with the Engineering Unit, developed the CLinsti App for the redressal of issues regarding cleanliness in IIT Madras. Through the app, residents and students of IIT Madras will be able to post requests concerning waste management in the institute. Following their requests, the users will be updated on the request's status in the app in real-time. The app was officially launched by Prof. Bhaskar Ramamurthi, Director of IIT Madras in a Launch Event organized by CFI on 2nd October. This app is currently available to download from Apple Appstore (<a href='https://apps.apple.com/in/app/clinsti-iit-madras/id1585949873' target='_blank' rel='noopener noreferrer'>link</a>) and Google Playstore (<a href='https://play.google.com/store/apps/details?id=com.cfi.clinsti' target='_blank' rel='noopener noreferrer'>link</a>)",
     image: Achievements3,
   },
   {
+    id: "team-raftar-formula-racing-announces-its-arrival",
     title: "#Team Raftar Formula Racing, announces its arrival!!",
     date: "Mid Augest, 2021",
     description:
@@ -51,6 +57,7 @@ export const AchievementsData = [
     image: Achievements2,
   },
   {
+    id: "accolades-for-team-avishkar-in-european-hyperloop-week-july-2021",
     title: "Accolades for Team Avishkar in European Hyperloop Week July 2021",
     date: "July, 2021",
     description:

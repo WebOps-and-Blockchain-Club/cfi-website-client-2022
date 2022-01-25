@@ -57,7 +57,7 @@ const Home = (props: Props) => {
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
             alignItems="center"
           >
-            <CustomSwiper data={AchievementsData.slice(0, 6)} />
+            <CustomSwiper data={AchievementsData.slice(0, 9)} />
           </Grid>
         </Grid>
 
