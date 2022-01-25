@@ -1,6 +1,13 @@
 import React from "react";
 
-import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Card,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
@@ -155,6 +162,32 @@ const Alumni = (props: Props) => {
                 dangerouslySetInnerHTML={{ __html: i + 1 + ". " + _content }}
               />
             ))}
+
+            <Grid margin={"auto"} mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
+              <a
+                href="https://joyofgiving.alumni.iitm.ac.in/projects"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Card
+                  sx={{
+                    padding: "10px 20px",
+                    color: "primary.contrastText",
+                    backgroundColor: "secondary.dark",
+                    boxShadow: "3.99948px 3.99948px 22.3971px #0E0E0E",
+                    fontSize: matches ? "21px" : "26px",
+                    fontFamily: "Proxima Nova Bold",
+                    ":hover": {
+                      backgroundColor: "primary.contrastText",
+                      color: "primary.main",
+                    },
+                  }}
+                >
+                  GIVE BACK TO CFI
+                </Card>
+              </a>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
