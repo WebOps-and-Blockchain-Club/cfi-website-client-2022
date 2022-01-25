@@ -31,52 +31,40 @@ export default function CustomSwiper(probs: Probs) {
   const navigationNextRef = React.useRef(null);
   return (
     <Grid
-      width={"100%"}
+      width={matches ? "calc(68vw + 50px)" : "100%"}
       alignItems={"center"}
       display={"flex"}
       flexDirection={"row"}
     >
       <div className="custom-swiper-button-prev" ref={navigationPrevRef} />
       <Swiper
-        loop={false}
-        slidesPerView={matches ? 1 : "auto"}
+        loop={true}
+        slidesPerView={"auto"}
+        spaceBetween={30}
         pagination={false}
         navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
+          prevEl: ".custom-swiper-button-prev",
+          nextEl: ".custom-swiper-button-next",
         }}
-        style={{
-          width: "100%",
-          justifyContent: "space-evenly",
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }}
         speed={1200}
         loopFillGroupWithBlank={true}
         parallax
-        centeredSlidesBounds={true}
         centeredSlides={true}
-        watchSlidesVisibility
-        // breakpoints={{
-        //   0: {
-        //     slidesPerView: 1,
-        //     slidesPerGroup: 1,
-        //   },
-        //   // 600: {
-        //   //   slidesPerView: 3,
-        //   //   spaceBetween: 30,
-        //   // },
-        //   900: {
-        //     slidesPerView: 2,
-        //     slidesPerGroup: 2,
-        //   },
-        //   1200: {
-        //     slidesPerView: 2,
-        //     slidesPerGroup: 2,
-        //   },
-        //   1536: {
-        //     slidesPerView: 3,
-        //     slidesPerGroup: 3,
-        //   },
-        // }}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          600: {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+          },
+        }}
       >
         {probs.data.map((_data: any) => (
           <SwiperSlide className="custom-swiper-slide">
@@ -85,7 +73,6 @@ export default function CustomSwiper(probs: Probs) {
         ))}
       </Swiper>
       <div className="custom-swiper-button-next" ref={navigationNextRef} />
-      {/* <div className="swiper-pagination" ref={events_paginationRef}></div> */}
     </Grid>
   );
 }
@@ -101,7 +88,7 @@ function SwiperCard({ heading, image }: MediaCardProps) {
   return (
     <Card
       sx={{
-        m: "0 10px",
+        m: "0 5px",
         width: matches ? "68vw" : "350px",
         borderRadius: "40px",
         backgroundColor: "primary.light",

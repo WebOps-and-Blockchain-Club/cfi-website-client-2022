@@ -34,8 +34,10 @@
   transform: rotate(180deg);
 }
 
-.custom-swiper-slide {
-  width: 370px !important;
+@media screen and (min-width: 600px) {
+  .custom-swiper-slide {
+    width: fit-content !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -46,9 +48,10 @@
     font-size: 20px !important;
   }
 
-  .custom-swiper-slide {
-    width: 70vw !important;
+  .swiper-container {
+    width: inherit;
   }
+
   .custom-swiper-button-next,
   .custom-swiper-button-prev {
     width: 25px;
