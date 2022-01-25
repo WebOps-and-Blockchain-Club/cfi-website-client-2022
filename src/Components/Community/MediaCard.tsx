@@ -24,7 +24,7 @@ export default function MediaCard({ data }: Probs) {
     <Grid>
       <Card
         sx={{
-          borderRadius: "40px",
+          borderRadius: "20px",
           backgroundColor: "primary.light",
           display: "flex",
           flexDirection: matchesLG ? "column" : "row",

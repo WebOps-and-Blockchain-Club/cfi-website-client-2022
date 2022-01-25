@@ -19,7 +19,7 @@ export default function IntroCard() {
   return (
     <Card
       sx={{
-        borderRadius: "40px",
+        borderRadius: "20px",
         backgroundColor: "primary.light",
         display: "flex",
         flexDirection: matchesLG ? "column" : "row",

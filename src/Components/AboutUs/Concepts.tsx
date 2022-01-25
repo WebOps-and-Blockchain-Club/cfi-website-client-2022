@@ -104,7 +104,7 @@ function Concepts() {
               alt="Idea"
               style={{
                 boxShadow: "6px 6px 6px 6px #7e0000",
-                borderRadius: matches ? "40px" : "72px",
+                borderRadius: "20px",
                 width: matches ? "100%" : "99%",
               }}
             />
@@ -192,6 +192,7 @@ function Concepts() {
                 left: "0px",
                 bottom: "0px",
                 zIndex: ishover ? 5 : 0,
+                borderRadius: "20px",
               }}
               onMouseEnter={() => setIshover(true)}
               className="aboutus-image2-hover"
@@ -206,6 +207,7 @@ function Concepts() {
                 top: "0px",
                 right: "0px",
                 zIndex: ishover ? 0 : 5,
+                borderRadius: "20px",
               }}
               className="aboutus-image1-hover"
               onMouseEnter={() => setIshover(false)}
@@ -283,7 +285,7 @@ function Concepts() {
               alt="Idea"
               style={{
                 boxShadow: "6px 6px 6px 6px #7e0000",
-                borderRadius: matches ? "40px" : "72px",
+                borderRadius: "40px",
                 width: matches ? "100%" : "99%",
               }}
             />

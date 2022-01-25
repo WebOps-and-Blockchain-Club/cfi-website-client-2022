@@ -55,7 +55,7 @@ function Vision() {
           item
           sx={{
             background: "linear-gradient(138.5deg, #0000006b, #420101)",
-            borderRadius: "40px",
+            borderRadius: "20px",
           }}
           alignItems="center"
           justifyContent="center"

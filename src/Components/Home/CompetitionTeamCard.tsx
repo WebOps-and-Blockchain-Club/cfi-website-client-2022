@@ -18,7 +18,7 @@ export default function CompetitionTeamCard({
       <Card
         sx={{
           width: "250px",
-          borderRadius: "40px",
+          borderRadius: "20px",
           backgroundColor: "primary.light",
           boxShadow:
             "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
@@ -30,7 +30,7 @@ export default function CompetitionTeamCard({
           image={logo}
           alt={name}
           sx={{
-            borderRadius: "40px 40px 0 0",
+            borderRadius: "20px 20px 0 0",
             verticalAlign: "middle",
             objectFit: "contain",
             p: "5px",

@@ -21,7 +21,7 @@ export default function ImageCard({ heading, image }: MediaCardProps) {
       sx={{
         m: "0 10px",
         width: matches ? "68vw" : "350px",
-        borderRadius: "40px",
+        borderRadius: "20px",
         backgroundColor: "primary.light",
         boxShadow:
           "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
@@ -32,7 +32,7 @@ export default function ImageCard({ heading, image }: MediaCardProps) {
         image={image}
         alt="newsimg"
         sx={{
-          borderRadius: "40px 40px 0 0",
+          borderRadius: "20px 20px 0 0",
           verticalAlign: "middle",
           objectFit: "cover",
           height: matches ? "50vw" : "270px",

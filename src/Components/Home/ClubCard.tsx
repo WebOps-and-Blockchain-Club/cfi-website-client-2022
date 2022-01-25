@@ -25,7 +25,7 @@ export default function ClubCard(probs: Probs) {
         sx={{
           width: matches ? "110px" : "150px",
           height: matches ? "100px" : "140px",
-          borderRadius: "25px",
+          borderRadius: "20px",
           backgroundColor: "secondary.dark",
           p: "10px",
           display: "flex",
