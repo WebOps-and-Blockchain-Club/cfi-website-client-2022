@@ -45,8 +45,12 @@ const Item = (props: Props) => {
             >
               <p className="item-head">{props.heading}</p>
             </a>
-            <p style={{ textAlign: "center" }}>Publisher: {props.publisher}</p>
-            <p style={{ textAlign: "center" }}>Published Date: {props.date}</p>
+            <p style={{ textAlign: "center", color: "#d6d6d6" }}>
+              Publisher: {props.publisher}
+            </p>
+            <p style={{ textAlign: "center", color: "#d6d6d6" }}>
+              Published Date: {props.date}
+            </p>
           </Stack>
         </Stack>
       </Box>
