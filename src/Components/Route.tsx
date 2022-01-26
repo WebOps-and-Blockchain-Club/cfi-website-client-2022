@@ -7,6 +7,7 @@ import Alumni from "./Alumni";
 import Club from "./Community/Club";
 import CompetitionTeam from "./Community/CompetitionTeam";
 import ManagerialTeam from "./Community/ManagerialTeam";
+import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
 
@@ -28,6 +29,7 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/media" element={<Media />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
       </Wrapper>
     </BrowserRouter>

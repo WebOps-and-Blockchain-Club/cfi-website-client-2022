@@ -5,6 +5,7 @@ import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { ManagerialTeams } from "../../Assets/Data/Community/ManagerialTeam";
+import ContactSection from "./ContactSection";
 
 interface Props {}
 
@@ -42,7 +43,7 @@ const ManagerialTeam = (props: Props) => {
                 style={{ fontFamily: "Proxima Nova Bold" }}
                 textAlign={"center"}
               >
-                {_team.name}
+                {_team.name.split("##").join("")}
               </Typography>
             </Grid>
             <Grid item p={3} sx={{ textAlign: "center" }}>
@@ -52,6 +53,29 @@ const ManagerialTeam = (props: Props) => {
               >
                 {_team.description}
               </Typography>
+            </Grid>
+            <Grid
+              item
+              container
+              direction="column"
+              alignItems="center"
+              py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+            >
+              <Grid item>
+                <Typography
+                  variant={matchesSM ? "h5" : "h4"}
+                  color="primary.contrastText"
+                  style={{ fontFamily: "Proxima Nova Bold" }}
+                  textAlign={"center"}
+                >
+                  CONTACT US
+                </Typography>
+              </Grid>
+              <ContactSection
+                title="TEAM"
+                email={_team.email}
+                members={_team.contacts}
+              />
             </Grid>
           </Grid>
         ))}

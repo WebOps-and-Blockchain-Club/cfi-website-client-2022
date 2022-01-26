@@ -438,7 +438,7 @@ export const Clubs: IClubs = {
       },
       {
         name: "Gayathri Prakash",
-        image: "https://in.linkedin.com/in/gayathri-prakash-37029b185",
+        image: "",
         email: "bs18b004@smail.iitm.ac.in",
         phone: "9384872441",
         linkedIn: "https://in.linkedin.com/in/gayathri-prakash-37029b185",

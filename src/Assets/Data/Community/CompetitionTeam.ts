@@ -36,7 +36,7 @@ import AvishkarGallery8 from "../../Images/Community/CompetitionTeam/Avishkar/Ga
 
 export const Teams: ITeams = {
   "raftar-formula-racing": {
-    name: "RAFTAR FORMULA ##RACING",
+    name: "Raftar Formula ##Racing",
     logo: RaftarLogo,
     landing: GalleryImage1,
     description:
@@ -90,7 +90,7 @@ export const Teams: ITeams = {
     ],
   },
   "team-abhiyaan": {
-    name: "TEAM ##ABHIYAAN",
+    name: "Team ##Abhiyaan",
     logo: AbhiyaanLogo,
     landing: GalleryImage1,
     description:
@@ -133,7 +133,7 @@ export const Teams: ITeams = {
     ],
   },
   "team-anveshak": {
-    name: "TEAM ##ANVESHAK",
+    name: "Team ##Anveshak",
     logo: AnveshakLogo,
     landing: AnveshakLanding,
     description:
@@ -193,7 +193,7 @@ export const Teams: ITeams = {
     ],
   },
   "team-avishkar-hyperloop": {
-    name: "TEAM AVISHKAR ##HYPERLOOP",
+    name: "Team Avishkar ##Hyperloop",
     logo: AvishkarLogo,
     landing: AvishkarLanding,
     description:

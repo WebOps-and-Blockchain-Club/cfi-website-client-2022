@@ -13,7 +13,7 @@ import CustomBox from "../Shared/CustomBox";
 import Gallery from "../Shared/Gallery";
 import Heading from "../Shared/Heading";
 import MediaCard from "./MediaCard";
-import ContactCard from "./ContactCard";
+import ContactSection from "./ContactSection";
 
 const CompetitionTeam = () => {
   const { teamname } = useParams<{ teamname: TeamsName }>();
@@ -184,25 +184,11 @@ const CompetitionTeam = () => {
           <Grid item>
             <Heading white="CONTACT" red=" US" />
           </Grid>
-          <Grid item>
-            <Typography
-              color="primary.contrastText"
-              sx={{
-                textAlign: "center",
-                fontSize: matches ? "16px" : "26px",
-                pt: 5,
-              }}
-            >
-              {data.name.split("##").join("")}
-            </Typography>
-          </Grid>
-          <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
-            <ContactCard
-              title="TEAM"
-              members={data.contacts}
-              email={data.email}
-            />
-          </Grid>
+          <ContactSection
+            title="TEAM"
+            email={data.email}
+            members={data.contacts}
+          />
         </Grid>
       </Grid>
     </CustomBox>
