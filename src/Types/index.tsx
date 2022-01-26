@@ -95,3 +95,8 @@ export enum TeamsName {
   ANVESHAL = "team-anveshak",
   AVISHKAR = "team-avishkar-hyperloop",
 }
+
+export type IContact = {
+  title: string;
+  members: IMember[];
+};
