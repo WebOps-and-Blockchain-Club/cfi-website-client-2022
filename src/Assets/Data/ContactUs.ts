@@ -53,9 +53,18 @@ export const ContactUsData = () => {
     },
   ];
 
+  ManagerialTeams.map((_club: any) =>
+    result.push({
+      title: _club.name,
+      email: _club.email,
+      members: _club.contacts,
+    })
+  );
+
   Object.keys(Clubs).map((_club: string) =>
     result.push({
       title: Clubs[_club as ClubsName].name,
+      email: Clubs[_club as ClubsName].email,
       members: Clubs[_club as ClubsName].contacts,
     })
   );
@@ -63,14 +72,8 @@ export const ContactUsData = () => {
   Object.keys(Teams).map((_team: any) =>
     result.push({
       title: Teams[_team as TeamsName].name,
+      email: Teams[_team as TeamsName].email,
       members: Teams[_team as TeamsName].contacts,
-    })
-  );
-
-  ManagerialTeams.map((_club: any) =>
-    result.push({
-      title: _club.name,
-      members: _club.contacts,
     })
   );
 

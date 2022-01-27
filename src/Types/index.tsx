@@ -13,6 +13,7 @@ export type IContent = {
 export type IMember = {
   name: string;
   image: string;
+  department?: string | null;
   email: string;
   phone: string;
   linkedIn?: string | null;
@@ -98,5 +99,6 @@ export enum TeamsName {
 
 export type IContact = {
   title: string;
+  email?: string | null;
   members: IMember[];
 };

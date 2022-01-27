@@ -73,6 +73,20 @@ const ContactCard = ({ members }: Probs) => {
             >
               {_member.name}
             </Typography>
+            {_member.department && (
+              <Typography
+                component="div"
+                color="primary.contrastText"
+                sx={{
+                  textAlign: "center",
+                  fontSize: "16px",
+                  letterSpacing: "1px",
+                }}
+                mt={2}
+              >
+                {_member.department}
+              </Typography>
+            )}
             <Grid container mt={2} mb={2} gap={2} justifyContent={"center"}>
               <Grid item>
                 <a
@@ -90,19 +104,21 @@ const ContactCard = ({ members }: Probs) => {
                   />
                 </a>
               </Grid>
-              <Grid item>
-                <a
-                  href={`https://api.whatsapp.com/send?phone=+91${_member.phone}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={WhatsAppIcon}
-                    style={{ height: matches ? "30px" : "35px" }}
-                    alt="WhatsApp"
-                  />
-                </a>
-              </Grid>
+              {_member.phone && (
+                <Grid item>
+                  <a
+                    href={`https://api.whatsapp.com/send?phone=+91${_member.phone}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src={WhatsAppIcon}
+                      style={{ height: matches ? "30px" : "35px" }}
+                      alt="WhatsApp"
+                    />
+                  </a>
+                </Grid>
+              )}
               {_member.linkedIn && (
                 <Grid item>
                   <a

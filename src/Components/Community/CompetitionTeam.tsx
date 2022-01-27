@@ -13,7 +13,7 @@ import CustomBox from "../Shared/CustomBox";
 import Gallery from "../Shared/Gallery";
 import Heading from "../Shared/Heading";
 import MediaCard from "./MediaCard";
-import ContactSection from "./ContactSection";
+import ContactSection from "../ContactUs/ContactSection";
 
 const CompetitionTeam = () => {
   const { teamname } = useParams<{ teamname: TeamsName }>();

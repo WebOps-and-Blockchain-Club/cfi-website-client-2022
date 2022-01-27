@@ -4,10 +4,10 @@ import { ContactUsData } from "../../Assets/Data/ContactUs";
 
 import LandingImage from "../../Assets/Images/ContactUs/Landing.png";
 import { IContact } from "../../Types";
+import ContactSection from "./ContactSection";
 
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
-import ContactCard from "./ContactCard";
 
 const ContactUs = () => {
   const theme = useTheme();
@@ -100,9 +100,11 @@ const ContactUs = () => {
               white={_data.title.split("##")[0]}
               red={_data.title.split("##")[1]}
             />
-            <Grid item mt={{ xs: 4, sm: 6, md: 8, lg: 10 }}>
-              <ContactCard members={_data.members} />
-            </Grid>
+            <ContactSection
+              title=""
+              email={_data.email}
+              members={_data.members}
+            />
           </Grid>
         ))}
       </Grid>

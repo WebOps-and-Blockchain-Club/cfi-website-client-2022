@@ -5,7 +5,7 @@ import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { ManagerialTeams } from "../../Assets/Data/Community/ManagerialTeam";
-import ContactSection from "./ContactSection";
+import ContactSection from "../ContactUs/ContactSection";
 
 interface Props {}
 

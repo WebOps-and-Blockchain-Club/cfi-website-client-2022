@@ -190,18 +190,18 @@ export const Teams: ITeams = {
     email: "teamanveshak@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Arun D A",
-        image: AnveshakHead1,
-        email: "ee19b071@smail.iitm.ac.in",
-        phone: "7598194627",
-        linkedIn: "https://www.linkedin.com/in/arun-asokan-5607531aa/",
-      },
-      {
         name: "Sai Karthik Brahma",
         image: AnveshakHead2,
         email: "me19b044@smail.iitm.ac.in",
         phone: "8985149248",
         linkedIn: "https://www.linkedin.com/in/sai-karthik-brahma-32b890218",
+      },
+      {
+        name: "Arun D A",
+        image: AnveshakHead1,
+        email: "ee19b071@smail.iitm.ac.in",
+        phone: "7598194627",
+        linkedIn: "https://www.linkedin.com/in/arun-asokan-5607531aa/",
       },
     ],
   },

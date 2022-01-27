@@ -2,7 +2,7 @@
 import BEHead1 from "../../Images/ContactUs/CFIOffice/B_E_Navaneeth.jpg";
 import BEHead2 from "../../Images/ContactUs/CFIOffice/B_E_Vaidehi.jpeg";
 import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.jpg";
-import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.jpg";
+import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Ankur.jpeg";
 import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpg";
 import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Sohana.jpg";
 import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Harshitha.jpeg";
@@ -47,7 +47,7 @@ export const ManagerialTeams = [
         image: FinanceHead2,
         email: "ankurgupta230063@gmail.com",
         phone: "8708277966",
-        linkedIn: "",
+        linkedIn: "https://www.linkedin.com/in/ankurgupta017/",
       },
     ],
   },
@@ -76,7 +76,7 @@ export const ManagerialTeams = [
         image: PMHead3,
         email: "me19b111@smail.iitm.ac.in",
         phone: "8897576144",
-        linkendIn: "https://www.linkedin.com/in/harshitha-nugala-a61b49197",
+        linkedIn: "https://www.linkedin.com/in/harshitha-nugala-a61b49197",
       },
     ],
   },

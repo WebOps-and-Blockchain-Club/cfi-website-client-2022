@@ -12,7 +12,7 @@ import { ClubsName, IClub } from "../../Types";
 import CustomBox from "../Shared/CustomBox";
 import Gallery from "../Shared/Gallery";
 import Heading from "../Shared/Heading";
-import ContactSection from "./ContactSection";
+import ContactSection from "../ContactUs/ContactSection";
 import MediaCard from "./MediaCard";
 
 const Club = () => {

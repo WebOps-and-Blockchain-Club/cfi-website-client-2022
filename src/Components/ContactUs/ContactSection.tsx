@@ -2,7 +2,7 @@ import * as React from "react";
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import { IMember } from "../../Types";
-import ContactCard from "../ContactUs/ContactCard";
+import ContactCard from "./ContactCard";
 
 interface Probs {
   title: string;
@@ -29,7 +29,7 @@ export default function ContactSection({ title, members, email }: Probs) {
               fontSize: matches ? "16px" : "26px",
             }}
           >
-            EMAIL: &nbsp;
+            {title}&nbsp;EMAIL: &nbsp;
           </Typography>
           <a
             href={`mailto:${email}`}
