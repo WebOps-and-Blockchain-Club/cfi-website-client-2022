@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Wrapper from "../Utils/scrollToTop";
 import AboutUs from "./AboutUs";
 import Achievements from "./Achievements";
@@ -30,6 +30,7 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </Wrapper>
     </BrowserRouter>
