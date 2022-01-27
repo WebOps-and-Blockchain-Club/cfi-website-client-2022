@@ -21,3 +21,15 @@ a {
   text-decoration: underline;
   color: #ff0000;
 }
+
+iframe {
+  width: 480px;
+  height: 270px;
+}
+
+@media screen and (max-width: 600px) {
+  iframe {
+    width: 80vw;
+    height: 45vw;
+  }
+}
