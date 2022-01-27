@@ -7,11 +7,24 @@ export const NavbarItems = [
   },
   {
     name: "COMMUNITY",
-    subItems: [...ClubList, ...CompetitionTeamList],
+    subItems: [
+      {
+        name: "CLUBS",
+        subItems: ClubList,
+      },
+      {
+        name: "COMPETITION TEAMS",
+        subItems: CompetitionTeamList,
+      },
+      {
+        name: "MANAGERIAL TEAM",
+        link: "/managerial-team",
+      },
+    ],
   },
   {
-    name: "ACHIVEMENTS",
-    link: "/achivements",
+    name: "ACHIEVEMENTS",
+    link: "/achievements",
   },
   {
     name: "MEDIA",
@@ -30,3 +43,16 @@ export const NavbarItems = [
     link: "/contact-us",
   },
 ];
+
+export const NavbarMobileView = () => {
+  const list: any[] = [];
+
+  // eslint-disable-next-line array-callback-return
+  NavbarItems.map((_item) => {
+    if (_item.subItems) {
+      _item.subItems.map((_subItem) => list.push(_subItem));
+    } else list.push(_item);
+  });
+
+  return list;
+};
