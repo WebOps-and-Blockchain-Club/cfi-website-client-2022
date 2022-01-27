@@ -36,7 +36,7 @@ const Footer = (props: Props) => {
         alignItems="center"
         mt={1}
         mb={1}
-        sx={{ order: matches2 ? 2 : 0 }}
+        sx={{ order: matches2 ? 1 : 0 }}
       >
         <Grid item container justifyContent="center">
           <img
@@ -92,7 +92,7 @@ const Footer = (props: Props) => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid lg={4} md={12} sm={12} xs={12} sx={{ order: matches2 ? 1 : 0 }}>
+      <Grid lg={4} md={12} sm={12} xs={12} sx={{ order: matches2 ? 2 : 0 }}>
         <Grid container justifyContent="center" mt={1} mb={1}>
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
             <a
