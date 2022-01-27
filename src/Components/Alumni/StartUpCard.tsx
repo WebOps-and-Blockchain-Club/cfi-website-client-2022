@@ -7,7 +7,6 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
 
 interface Probs {
   logo: string;
@@ -20,7 +19,12 @@ export default function StartUpCard(probs: Probs) {
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Link to={probs.link} style={{ textDecoration: "none" }}>
+    <a
+      href={probs.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }}
+    >
       <Card
         sx={{
           width: matches ? "110px" : "150px",
@@ -72,6 +76,6 @@ export default function StartUpCard(probs: Probs) {
           </Typography>
         </CardContent>
       </Card>
-    </Link>
+    </a>
   );
 }

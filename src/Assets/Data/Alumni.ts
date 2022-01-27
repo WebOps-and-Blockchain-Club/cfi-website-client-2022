@@ -5,6 +5,7 @@ import DetectTechnologiesLogo from "../Images/Alumni/DetectTechnologies.png";
 import AibonoLogo from "../Images/Alumni/Aibono.png";
 import PiBeamLogo from "../Images/Alumni/PiBeam.png";
 import LemaLabsLogo from "../Images/Alumni/LemaLabs.png";
+import GalaxeyeSpaceLogo from "../Images/Alumni/GalaxeyeSpace.png";
 
 export const AlumniData = {
   description:
@@ -44,6 +45,11 @@ export const AlumniData = {
       name: "Lema Labs",
       logo: LemaLabsLogo,
       link: "https://lemalabs.com/",
+    },
+    {
+      name: "Galaxeye Space",
+      logo: GalaxeyeSpaceLogo,
+      link: "http://galaxeye.space/",
     },
   ],
   connectToCFI: {

@@ -151,6 +151,7 @@ const Alumni = (props: Props) => {
             <Typography
               textAlign={"start"}
               fontSize={matches ? "18px" : "20px"}
+              color={"primary.contrastText"}
             >
               {AlumniData.contributeToCFI.intro}
             </Typography>
@@ -159,6 +160,7 @@ const Alumni = (props: Props) => {
               <Typography
                 textAlign={"start"}
                 fontSize={matches ? "18px" : "20px"}
+                color={"primary.contrastText"}
                 dangerouslySetInnerHTML={{ __html: i + 1 + ". " + _content }}
               />
             ))}
