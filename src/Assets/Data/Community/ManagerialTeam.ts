@@ -1,3 +1,12 @@
+// TEAM HEADS
+import BEHead1 from "../../Images/ContactUs/CFIOffice/B_E_Navaneeth.jpg";
+import BEHead2 from "../../Images/ContactUs/CFIOffice/B_E_Vaidehi.jpeg";
+import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.jpg";
+import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.jpg";
+import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpg";
+import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Sohana.jpg";
+import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Harshitha.jpeg";
+
 export const ManagerialTeams = [
   {
     name: "Branding and ##Engagement Team",
@@ -6,18 +15,18 @@ export const ManagerialTeams = [
     email: "bnecfi@gmail.com",
     contacts: [
       {
-        name: "Vaidehi Garodia",
-        image: "",
-        email: "na19b014@smail.iitm.ac.in",
-        phone: "8529782258",
-        linkedIn: "https://www.linkedin.com/in/rutuj-dodal-871820150",
-      },
-      {
         name: "Navaneeth C V",
-        image: "",
+        image: BEHead1,
         email: "navaneethcv3@gmail.com",
         phone: "9400434929",
         linkedIn: "https://www.linkedin.com/in/utkarsh-k-a03bba158/",
+      },
+      {
+        name: "Vaidehi Garodia",
+        image: BEHead2,
+        email: "na19b014@smail.iitm.ac.in",
+        phone: "8529782258",
+        linkedIn: "https://www.linkedin.com/in/rutuj-dodal-871820150",
       },
     ],
   },
@@ -28,14 +37,14 @@ export const ManagerialTeams = [
     contacts: [
       {
         name: "Atharva Bhalerao",
-        image: "",
+        image: FinanceHead1,
         email: "ae18b020@smail.iitm.ac.in",
         phone: "7722003546",
         linkedIn: "https://www.linkedin.com/in/atharva-bhalerao-103a701a9/",
       },
       {
         name: "Ankur Gupta",
-        image: "",
+        image: FinanceHead2,
         email: "ankurgupta230063@gmail.com",
         phone: "8708277966",
         linkedIn: "",
@@ -50,21 +59,21 @@ export const ManagerialTeams = [
     contacts: [
       {
         name: "N.V.S.N.Tarun",
-        image: "",
+        image: PMHead1,
         email: "tarunnnallam2002@gmail.com",
         phone: "9390170789",
         linkedIn: "https://www.linkedin.com/in/tarun-nallam-7b486a1a1",
       },
       {
         name: "Bandi Sohana Preeth",
-        image: "",
+        image: PMHead2,
         email: "me19b008@smail.iitm.ac.in",
         phone: "9573056849",
         linkedIn: "https://www.linkedin.com/in/sohana-preeth-b-b6b7021a1",
       },
       {
         name: "Harshitha Nugala",
-        image: "",
+        image: PMHead3,
         email: "me19b111@smail.iitm.ac.in",
         phone: "8897576144",
         linkendIn: "https://www.linkedin.com/in/harshitha-nugala-a61b49197",

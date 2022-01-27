@@ -3,6 +3,9 @@ import { Clubs } from "./Community/Clubs";
 import { Teams } from "./Community/CompetitionTeam";
 import { ManagerialTeams } from "./Community/ManagerialTeam";
 
+// PHOTO
+import COCAS from "../Images/ContactUs/CFIOffice/CACOCAS_Nitish.jpeg"
+
 export const ContactUsData = () => {
   let result: IContact[] = [
     {
@@ -41,7 +44,7 @@ export const ContactUsData = () => {
       members: [
         {
           name: "Nitish Gupta",
-          image: "",
+          image: COCAS,
           email: "sec_cocur@smail.iitm.ac.in",
           phone: "9840903852",
           linkedIn: "https://www.linkedin.com/in/nitish-gupta86",

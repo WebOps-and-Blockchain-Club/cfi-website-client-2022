@@ -1,9 +1,22 @@
 import { ITeams } from "../../../Types";
+
+// LOGO
 import RaftarLogo from "../../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 import GalleryImage1 from "../../../Assets/Images/Home/Landing images/car2.jpg";
+
+// TEAM HEADS IMAGE
+import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.jpg";
+import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Bharath.jpg";
+import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Shashank.jpg";
+import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Amit.jpg";
+import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Bharat.jpg";
+import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Yash.jpg";
+import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Vibhor.jpg";
+import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Arun.png";
+import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Karthik.png";
 
 // RAFTAR
 import RaftarAchievements1 from "../../Images/Community/CompetitionTeam/Raftar/Achievements1.png";
@@ -75,14 +88,14 @@ export const Teams: ITeams = {
     contacts: [
       {
         name: "Karthik Srinivasan",
-        image: "",
+        image: RaftarHead1,
         email: "kodikarthik21@gmail.com",
         phone: "6379796668",
         linkedIn: "https://www.linkedin.com/in/karthik-srinivasan-424558167/",
       },
       {
         name: "Bharath Chandhar",
-        image: "",
+        image: RaftarHead2,
         email: "bharathcn2k@gmail.com",
         phone: "9629878333",
         linkedIn: "https://www.linkedin.com/in/bharath-chandar-20bbb5153/",
@@ -118,14 +131,14 @@ export const Teams: ITeams = {
     contacts: [
       {
         name: "Shashank M Patil",
-        image: "",
+        image: AbhiyaanHead1,
         email: "shashankpatil0705@gmail.com",
         phone: "6362748509",
         linkedIn: "https://www.linkedin.com/in/shashank-m-patil/",
       },
       {
         name: "Amit Dodmani",
-        image: "",
+        image: AbhiyaanHead2,
         email: "amitdodmani4@gmail.com",
         phone: "8147327330",
         linkedIn: "https://www.linkedin.com/in/ishan-chokshi-789829196/",
@@ -177,18 +190,18 @@ export const Teams: ITeams = {
     email: "teamanveshak@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Sai Karthik Brahma",
-        image: "",
-        email: "me19b044@smail.iitm.ac.in",
-        phone: "8985149248",
-        linkedIn: "https://www.linkedin.com/in/sai-karthik-brahma-32b890218",
-      },
-      {
         name: "Arun D A",
-        image: "",
+        image: AnveshakHead1,
         email: "ee19b071@smail.iitm.ac.in",
         phone: "7598194627",
         linkedIn: "https://www.linkedin.com/in/arun-asokan-5607531aa/",
+      },
+      {
+        name: "Sai Karthik Brahma",
+        image: AnveshakHead2,
+        email: "me19b044@smail.iitm.ac.in",
+        phone: "8985149248",
+        linkedIn: "https://www.linkedin.com/in/sai-karthik-brahma-32b890218",
       },
     ],
   },
@@ -276,21 +289,21 @@ export const Teams: ITeams = {
     contacts: [
       {
         name: "Bharat Bhavsar",
-        image: "",
+        image: AvishkarHead1,
         email: "me20m096@smail.iitm.ac.in",
         phone: "9979090823",
         linkedIn: "https://www.linkedin.com/in/bharat-bhavsar-2a9933182/",
       },
       {
         name: "Yash Gautam",
-        image: "",
+        image: AvishkarHead2,
         email: "ae18b021@smail.iitm.ac.in",
         phone: "8602952842",
         linkedIn: "https://www.linkedin.com/in/yash4590",
       },
       {
         name: "Vibhor Jain",
-        image: "",
+        image: AvishkarHead3,
         email: "me20m096@smail.iitm.ac.in",
         phone: "9166836673",
         linkedIn: "https://www.linkedin.com/in/vibhor-jain-6495031a0/",

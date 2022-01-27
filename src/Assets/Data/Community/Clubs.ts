@@ -15,6 +15,35 @@ import SahaayLogo from "../../Images/ClubLogo/SahaayWhiteLogo.png";
 import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainWithNameLogo.png";
 
+// CLUB HEADS
+import PrintingHead1 from "../../Images/ContactUs/Club/3DPrinting_Ishan.jpg";
+import PrintingHead2 from "../../Images/ContactUs/Club/3DPrinting_Bharathi.jpg";
+import AeroHead1 from "../../Images/ContactUs/Club/Aero_SaiKiran.jpeg";
+import AeroHead2 from "../../Images/ContactUs/Club/Aero_Vedant.jpg";
+import AnalyticsHead1 from "../../Images/ContactUs/Club/Analytics_Tanay.jpeg";
+import AnalyticsHead2 from "../../Images/ContactUs/Club/Analytics_Aryan.jpeg";
+import CVIHead1 from "../../Images/ContactUs/Club/CVI_Aditya.jpg";
+import CVIHead2 from "../../Images/ContactUs/Club/CVI_Shreyas.jpg";
+import ElectronicsHead1 from "../../Images/ContactUs/Club/Electronics_Swathi.jpeg";
+import ElectronicsHead2 from "../../Images/ContactUs/Club/Electronics_Sharanesh.jpg";
+import HorizonHead1 from "../../Images/ContactUs/Club/Horizon_Rajeshkumar.png";
+import HorizonHead2 from "../../Images/ContactUs/Club/Horizon_Hrishabh.jpeg";
+import iBotHead1 from "../../Images/ContactUs/Club/iBOT_Manideep.jpeg";
+import iBotHead2 from "../../Images/ContactUs/Club/iBOT_Rinkle.jpeg";
+import iGEMHead1 from "../../Images/ContactUs/Club/iGEM_Gayathri.jpeg";
+import iGEMHead2 from "../../Images/ContactUs/Club/iGEM_Neha.jpg";
+import ProductDesignHead1 from "../../Images/ContactUs/Club/ProductDesign_Abhigyan.jpeg";
+import ProductDesignHead2 from "../../Images/ContactUs/Club/ProductDesign_Sidharth.jfif";
+import ProgrammingHead1 from "../../Images/ContactUs/Club/Programming_Vishnu.jpeg";
+import ProgrammingHead2 from "../../Images/ContactUs/Club/Programming_Vineet.jpg";
+import SahaayHead1 from "../../Images/ContactUs/Club/Sahaay_Abhigna.jpeg";
+import SahaayHead2 from "../../Images/ContactUs/Club/Sahaay_Harshit.jpg";
+import EnvisageHead1 from "../../Images/ContactUs/Club/Envisage_Soumya.jpeg";
+import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Lochana.jpeg";
+import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/WebopsandBlockchain_Rutuj.jpeg";
+import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/WebopsandBlockchain_Utkarsh.jpeg";
+import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/WebopsandBlockchain_Janith.jpeg";
+
 //ELECTRONICS
 import ElectronicsAchievements1 from "../../Images/Community/Clubs/Electronics/Achievements1.jpeg";
 import ElectronicsAchievements2 from "../../Images/Community/Clubs/Electronics/Achievements2.jpeg";
@@ -113,18 +142,18 @@ export const Clubs: IClubs = {
     email: "3dpc.cfi.iitm@gmail.com",
     contacts: [
       {
-        name: "V. Bharathi",
-        image: "",
-        email: "bharathiveerasankar@gmail.com",
-        phone: "9486944477",
-        linkedIn: "https://in.linkedin.com/in/bharathi-veerasankar-85818a158",
-      },
-      {
         name: "Ishan Chokshi",
-        image: "",
+        image: PrintingHead1,
         email: "ishan.c1671@gmail.com",
         phone: "9870708766",
         linkedIn: "https://www.linkedin.com/in/ishan-chokshi-789829196/",
+      },
+      {
+        name: "V. Bharathi",
+        image: PrintingHead2,
+        email: "bharathiveerasankar@gmail.com",
+        phone: "9486944477",
+        linkedIn: "https://in.linkedin.com/in/bharathi-veerasankar-85818a158",
       },
     ],
   },
@@ -143,16 +172,16 @@ export const Clubs: IClubs = {
     email: "aeroclub.cfi@gmail.com",
     contacts: [
       {
-        name: "Vedant Limaye",
-        image: "",
-        email: "me19b185@smail.iitm.ac.in",
-        phone: "9119498097",
-      },
-      {
         name: "Mekala Sai Kiran",
-        image: "",
+        image: AeroHead1,
         email: "ishan.c1671@gmail.com",
         phone: "8897200279",
+      },
+      {
+        name: "Vedant Limaye",
+        image: AeroHead2,
+        email: "me19b185@smail.iitm.ac.in",
+        phone: "9119498097",
       },
     ],
   },
@@ -172,14 +201,14 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "Tanay Dixit",
-        image: "",
+        image: AnalyticsHead1,
         email: "tanay.dixit@smail.iitm.ac.in",
         phone: "7720019240",
         linkedIn: "http://www.linkedin.com/in/tanaydixit",
       },
       {
         name: "Aryan Pandey",
-        image: "",
+        image: AnalyticsHead2,
         email: "na19b030@smail.iitm.ac.in",
         phone: "8105632052",
         linkedIn: "https://www.linkedin.com/in/aryan-pandey-30866419a/",
@@ -210,18 +239,18 @@ export const Clubs: IClubs = {
     email: "cvigroup.cfi@gmail.com",
     contacts: [
       {
-        name: "Shreyas Singh",
-        image: "",
-        email: "itsshreyas1803@gmail.com",
-        phone: "8318387585",
-        linkedIn: "https://www.linkedin.com/in/shreyas-singh-571b2719a/",
-      },
-      {
         name: "Aditya Mohan",
-        image: "",
+        image: CVIHead1,
         email: "h.adityamohan@gmail.com",
         phone: "9500022420",
         linkedIn: "https://www.linkedin.com/in/aditya-mohan-96300818b/",
+      },
+      {
+        name: "Shreyas Singh",
+        image: CVIHead2,
+        email: "itsshreyas1803@gmail.com",
+        phone: "8318387585",
+        linkedIn: "https://www.linkedin.com/in/shreyas-singh-571b2719a/",
       },
     ],
   },
@@ -306,18 +335,18 @@ export const Clubs: IClubs = {
     email: "elecclub.cfi@gmail.com",
     contacts: [
       {
-        name: "Sharanesh R",
-        image: "",
-        email: "ee19b116@smail.iitm.ac.in",
-        phone: "8973359547",
-        linkedIn: "https://www.linkedin.com/in/rsharanesh2002/",
-      },
-      {
         name: "Swathi G",
-        image: "",
+        image: ElectronicsHead1,
         email: "ch19b094@smail.iitm.ac.in",
         phone: "8431838091",
         linkedIn: "https://www.linkedin.com/in/swathi-g-94845219a/",
+      },
+      {
+        name: "Sharanesh R",
+        image: ElectronicsHead2,
+        email: "ee19b116@smail.iitm.ac.in",
+        phone: "8973359547",
+        linkedIn: "https://www.linkedin.com/in/rsharanesh2002/",
       },
     ],
   },
@@ -360,14 +389,14 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "Rajeshkumar K",
-        image: "",
+        image: HorizonHead1,
         email: "k.rajeshkumar.1411@gmail.com",
         phone: "8838385380",
         linkedIn: "https://www.linkedin.com/in/rajeshkumar-k-4711a71b5",
       },
       {
         name: "Hrishabh Srivastava",
-        image: "",
+        image: HorizonHead2,
         email: "hrishabh@smail.iitm.ac.in",
         phone: "8104891380",
         linkedIn: "https://www.linkedin.com/in/hrishabh-srivastava-07454913b/",
@@ -402,14 +431,14 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "D Leela Manideep",
-        image: "",
+        image: iBotHead1,
         email: "ed19b009@smail.iitm.ac.in",
         phone: "8639045607",
         linkedIn: "https://www.linkedin.com/in/manideep-damodara-7053501b5",
       },
       {
         name: "Rinkle Sebastian",
-        image: "",
+        image: iBotHead2,
         email: "na19b056@smail.iitm.ac.in",
         phone: "8281704611",
         linkedIn: "https://www.linkedin.com/in/rinkle-sebastian12a",
@@ -430,18 +459,18 @@ export const Clubs: IClubs = {
     email: "igem@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Neha Swaminathan",
-        image: "",
-        email: "be18b008@smail.iitm.ac.in",
-        phone: "6379698944",
-        linkedIn: "https://in.linkedin.com/in/neha-swaminathan-14b417171",
-      },
-      {
         name: "Gayathri Prakash",
-        image: "",
+        image: iGEMHead1,
         email: "bs18b004@smail.iitm.ac.in",
         phone: "9384872441",
         linkedIn: "https://in.linkedin.com/in/gayathri-prakash-37029b185",
+      },
+      {
+        name: "Neha Swaminathan",
+        image: iGEMHead2,
+        email: "be18b008@smail.iitm.ac.in",
+        phone: "6379698944",
+        linkedIn: "https://in.linkedin.com/in/neha-swaminathan-14b417171",
       },
     ],
   },
@@ -461,19 +490,19 @@ export const Clubs: IClubs = {
       "https://sites.google.com/smail.iitm.ac.in/productdesignclub/home?authuser=1",
     contacts: [
       {
-        name: "Sidharth Tadeparti",
-        image: "",
-        email: "sidt36@gmail.com",
-        phone: "9840045761",
-        linkedIn: "https://www.linkedin.com/in/sidharth-tadeparti-176834194/",
-      },
-      {
         name: "Abhigyan Chattopadyay",
-        image: "",
+        image: ProductDesignHead1,
         email: "ee19b146@smail.iitm.ac.in",
         phone: "9663561420",
         linkedIn:
           "https://www.linkedin.com/in/abhigyan-chattopadhyay-29250619b/",
+      },
+      {
+        name: "Sidharth Tadeparti",
+        image: ProductDesignHead2,
+        email: "sidt36@gmail.com",
+        phone: "9840045761",
+        linkedIn: "https://www.linkedin.com/in/sidharth-tadeparti-176834194/",
       },
     ],
   },
@@ -502,19 +531,19 @@ export const Clubs: IClubs = {
     email: "programmingclubiitm@gmail.com",
     contacts: [
       {
+        name: "Shree Vishnu",
+        image: ProgrammingHead1,
+        email: "cs19b045@smail.iitm.ac.in",
+        phone: "7871512282",
+        linkedIn: "https://www.linkedin.com/in/vishnush/",
+      },
+      {
         name: "Vineet Kumar Dhandharia",
-        image: "",
+        image: ProgrammingHead2,
         email: "cs19b047@smail.iitm.ac.in",
         phone: "9428040833",
         linkedIn:
           "https://www.linkedin.com/in/vineet-kumar-dhandharia-62b96a1b1/",
-      },
-      {
-        name: "Shree Vishnu",
-        image: "",
-        email: "cs19b045@smail.iitm.ac.in",
-        phone: "7871512282",
-        linkedIn: "https://www.linkedin.com/in/vishnush/",
       },
     ],
   },
@@ -547,14 +576,14 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "V Abhigna",
-        image: "",
+        image: SahaayHead1,
         email: "me19b63@smail.iitm.ac.in",
         phone: "8106734686",
         linkedIn: "https://www.linkedin.com/in/abhigna-v/",
       },
       {
         name: "Harshit Raj",
-        image: "",
+        image: SahaayHead2,
         email: "me19b110@smail.iitm.ac.in",
         phone: "9610275692",
         linkedIn: "https://www.linkedin.com/in/harshit-raj-iitm/",
@@ -623,14 +652,14 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "K L Soumya",
-        image: "",
+        image: EnvisageHead1,
         email: "soumyakollipara@gmail.com",
         phone: "9176415740",
         linkedIn: "https://www.linkedin.com/in/soumya-kollipara-69aa361a8",
       },
       {
         name: "Battu Lochana Janaki",
-        image: "",
+        image: EnvisageHead2,
         email: "ce18b003@smail.iitm.ac.in",
         phone: "7032377877",
         linkedIn: "https://www.linkedin.com/in/battu-lochana-janaki-b270b31bb",
@@ -661,21 +690,21 @@ export const Clubs: IClubs = {
     contacts: [
       {
         name: "Rutuj Dodal",
-        image: "",
+        image: WebOpsAndBlockchainHead1,
         email: "ce17b114@smail.iitm.ac.in",
         phone: "9028549540",
         linkedIn: "https://www.linkedin.com/in/rutuj-dodal-871820150/",
       },
       {
         name: "Utkarsh Kumar",
-        image: "",
+        image: WebOpsAndBlockchainHead2,
         email: "me17b123@smail.iitm.ac.in",
         phone: "80039 94946",
         linkedIn: "https://www.linkedin.com/in/utkarsh-k-a03bba158/",
       },
       {
         name: "Janith M S",
-        image: "",
+        image: WebOpsAndBlockchainHead3,
         email: "janithms9920@gmail.com",
         phone: "9944010785",
         linkedIn: "https://www.linkedin.com/in/janith-m-s-949a6720a/",
