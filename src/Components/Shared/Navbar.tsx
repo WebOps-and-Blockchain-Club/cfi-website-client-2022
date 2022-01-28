@@ -17,12 +17,14 @@ import {
   Collapse,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-import cfilogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
-// import cfilogo from "../../Images/CFILogo/CFI_White_WithText.png";
+import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
+import IITMLogo from "../../Assets/Images/IITMadrasLogo.png";
 import { NavbarItems, NavbarMobileView } from "../../Assets/Data/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
+import CloseIcon from "@mui/icons-material/Close";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 import Heading from "./Heading";
 
@@ -51,6 +53,7 @@ export default function Header() {
   // Theme
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   // Mobile Navbar
   const [openNavbar, setOpenNavbar] = React.useState(false);
@@ -119,26 +122,52 @@ export default function Header() {
         >
           <Toolbar
             style={{
-              // height: matches ? 25 : 64,
               alignItems: "center",
               minHeight: "unset",
               justifyContent: "space-between",
+              paddingRight: "20px",
+              paddingLeft: "20px",
             }}
           >
-            <Link
-              to={"/"}
-              style={{
-                textDecoration: "none",
-                marginRight: "24px",
-                display: "flex",
-              }}
+            <Grid
+              container
+              width={"unset"}
+              alignItems={"center"}
+              gap={"12px"}
+              mr={"24px"}
             >
-              <img
-                src={cfilogo}
-                alt="CFILogo"
-                height={!matches && isTop ? 50 : 30}
+              <Link
+                to={"/"}
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                }}
+              >
+                <img
+                  src={CFILogo}
+                  alt="CFILogo"
+                  height={!matches && isTop && !matchesLG ? 50 : 30}
+                />
+              </Link>
+              <FiberManualRecordIcon
+                sx={{ fontSize: !matches && !matchesLG ? 15 : 10 }}
               />
-            </Link>
+              <a
+                href={"https://www.iitm.ac.in"}
+                style={{
+                  textDecoration: "none",
+                  display: "flex",
+                }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={IITMLogo}
+                  alt="CFILogo"
+                  height={!matches && isTop && !matchesLG ? 50 : 30}
+                />
+              </a>
+            </Grid>
             {matches ? (
               <>
                 <Button
@@ -151,7 +180,7 @@ export default function Header() {
                   <MenuIcon sx={{ color: "primary.contrastText" }} />
                 </Button>
                 <Drawer
-                  anchor={"left"}
+                  anchor={"right"}
                   open={openNavbar}
                   onClose={toggleDrawer(false)}
                   ModalProps={{
@@ -164,8 +193,26 @@ export default function Header() {
                     },
                   }}
                 >
-                  <Grid mt={4}>
-                    <Heading white="CFI " red="MENU" />
+                  <Grid pt={"20px"}>
+                    <Grid
+                      container
+                      pl={"20px"}
+                      pr={"20px"}
+                      alignItems={"center"}
+                      justifyContent={"space-between"}
+                    >
+                      <Heading white="" red="MENU" />
+                      <Button
+                        onClick={toggleDrawer(false)}
+                        sx={{
+                          color: "primary.contrastText",
+                          minWidth: "unset",
+                          padding: "unset",
+                        }}
+                      >
+                        <CloseIcon />
+                      </Button>
+                    </Grid>
                     <Grid>{list()}</Grid>
                   </Grid>
                 </Drawer>
@@ -179,7 +226,7 @@ export default function Header() {
                   // width: "100%",
                   height: "20px",
                 }}
-                gap={2}
+                gap={matchesLG ? 0.4 : 2}
               >
                 {NavbarItems.map((item, i) => (
                   <>
@@ -225,6 +272,7 @@ function SubItemWebView({ item }: { item: any }) {
         handleClick={() => {}}
       />
       <div className="dropdown-content">
+        <Box style={{ height: "10px" }} />
         <Box
           sx={{
             backgroundColor: "primary.contrastText",
@@ -239,7 +287,7 @@ function SubItemWebView({ item }: { item: any }) {
                 <Box className="sub-dropdown">
                   <NavbarButton
                     name={_subItem.name}
-                    className="sub-dropbtn dropdown-list"
+                    className="sub-dropbtn dropdown-list dropdown-list-width "
                     icon={<ChevronRightOutlinedIcon />}
                     handleClick={() => {}}
                   />
@@ -271,7 +319,7 @@ function SubItemWebView({ item }: { item: any }) {
                   sx={{
                     fontSize: "16px",
                   }}
-                  className="dropdown-list"
+                  className="dropdown-list dropdown-list-width "
                 >
                   {_subItem.name}
                 </MenuItem>

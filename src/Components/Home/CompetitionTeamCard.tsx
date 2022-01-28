@@ -33,7 +33,8 @@ export default function CompetitionTeamCard({
             borderRadius: "20px 20px 0 0",
             verticalAlign: "middle",
             objectFit: "contain",
-            p: "5px",
+            p: "15px",
+            width: "220px",
           }}
         />
         <CardContent

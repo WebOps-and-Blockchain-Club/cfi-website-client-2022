@@ -48,7 +48,7 @@ const Home = (props: Props) => {
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
           <Grid item>
-            <Heading white="IN THE " red="SPOT LIGHT" />
+            <Heading white="IN THE " red="SPOTLIGHT" />
           </Grid>
           <Grid
             item
