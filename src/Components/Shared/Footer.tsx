@@ -8,7 +8,7 @@ import linkedin from "../../Assets/Images/Social/linkedin.png";
 import mail from "../../Assets/Images/Social/email.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import cfilogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
+import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 
 interface Props {}
 
@@ -24,76 +24,92 @@ const Footer = (props: Props) => {
       }}
       alignItems="center"
       flexDirection={{ xs: "column", sm: "column", md: "row" }}
-      pt={2}
-      pb={2}
     >
       <Grid
+        item
         container
-        lg={4}
-        md={6}
-        sm={12}
-        xs={12}
         alignItems="center"
-        mt={1}
-        mb={1}
-        sx={{ order: matches2 ? 1 : 0 }}
+        justifyContent={"space-between"}
+        flexDirection={{ xs: "column", sm: "column", md: "row" }}
+        pt={2}
+        pb={2}
+        pr={5}
+        pl={5}
+        gap={2}
       >
-        <Grid item container justifyContent="center">
+        <Grid
+          item
+          container
+          alignItems="center"
+          sx={{ width: matches2 ? "100%" : "unset" }}
+          justifyContent={"center"}
+        >
           <img
-            src={cfilogo}
+            src={CFILogo}
             alt="cfi logo"
-            style={{ width: "40px", height: "25px", marginTop: 2 }}
+            style={{ height: matches ? "40px" : "60px", marginTop: 2 }}
           />
-          <Grid item>
-            <Typography
-              variant={matches ? "h6" : "h5"}
-              color="primary.contrastText"
-              sx={{
-                display: "inline",
-                textTransform: "uppercase",
-                fontFamily: "Proxima Nova Bold",
-              }}
-            >
-              &nbsp; CENTRE &nbsp;
-            </Typography>
-            <Typography
-              variant={matches ? "h6" : "h5"}
-              color="secondary"
-              sx={{
-                display: "inline",
-                textTransform: "uppercase",
-                fontFamily: "Proxima Nova Bold",
-              }}
-            >
-              For innovation
-            </Typography>
+          <Grid>
+            <Grid item>
+              <Typography
+                variant={matches ? "subtitle1" : "h5"}
+                color="primary.contrastText"
+                sx={{
+                  display: "inline",
+                  textTransform: "uppercase",
+                  fontFamily: "Proxima Nova Bold",
+                }}
+              >
+                &nbsp;&nbsp;CENTRE &nbsp;
+              </Typography>
+              <Typography
+                variant={matches ? "subtitle1" : "h5"}
+                color="secondary"
+                sx={{
+                  display: "inline",
+                  textTransform: "uppercase",
+                  fontFamily: "Proxima Nova Bold",
+                }}
+              >
+                For innovation
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant={matches ? "subtitle1" : "h5"}
+                color="primary.contrastText"
+                sx={{
+                  display: "inline",
+                  textTransform: "uppercase",
+                  fontFamily: "Proxima Nova Bold",
+                }}
+              >
+                &nbsp;&nbsp;IIT Madras
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid
-        container
-        lg={4}
-        md={6}
-        sm={12}
-        xs={12}
-        alignItems="center"
-        mt={1}
-        mb={1}
-        sx={{ order: matches2 ? 3 : 0 }}
-      >
-        <Grid item container justifyContent="center">
+        <Grid
+          item
+          container
+          alignItems="center"
+          sx={{ order: matches2 ? 3 : 0, width: matches2 ? "100%" : "unset" }}
+          justifyContent={"center"}
+        >
           <Typography
-            variant={matches ? "h6" : "h6"}
+            variant={matches ? "subtitle1" : "h6"}
             color="primary.contrastText"
             sx={{ fontFamily: "Proxima Nova Bold" }}
-            p={1}
           >
             © 2022 &nbsp; All rights reserved
           </Typography>
         </Grid>
-      </Grid>
-      <Grid lg={4} md={12} sm={12} xs={12} sx={{ order: matches2 ? 2 : 0 }}>
-        <Grid container justifyContent="center" mt={1} mb={1}>
+        <Grid
+          item
+          container
+          sx={{ order: matches2 ? 2 : 0, width: matches2 ? "100%" : "unset" }}
+          justifyContent={"space-evenly"}
+        >
           <Grid item mr={{ xs: 1, sm: 3, md: 3, lg: 3 }}>
             <a
               href="mailto:cfi@smail.iitm.ac.in"
@@ -165,6 +181,19 @@ const Footer = (props: Props) => {
             </a>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid
+        container
+        flexDirection={{ xs: "column", sm: "column", md: "row" }}
+        alignItems="center"
+        justifyContent="space-evenly"
+        sx={{ backgroundColor: "primary.light" }}
+        p={1}
+      >
+        <Typography color="primary.contrastText" textAlign="center">
+          Developed by Students of WebOps Team and Branding & Engagement Team,
+          CFI.
+        </Typography>
       </Grid>
     </Grid>
   );
