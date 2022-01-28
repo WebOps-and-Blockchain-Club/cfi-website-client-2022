@@ -2,18 +2,18 @@ import { IClubs } from "../../../Types";
 
 // Logo
 import PrintingLogo from "../../Images/ClubLogo/3DPrintingLogo.png";
-import AeroLogo from "../../Images/ClubLogo/AeroLogo.png";
+import AeroLogo from "../../Images/ClubLogo/AeroWhiteLogo.png";
 import AnalyticsLogo from "../../Images/ClubLogo/AnalyticsLogo.png";
-import CVILogo from "../../Images/ClubLogo/CVILogo.png";
+import CVILogo from "../../Images/ClubLogo/CVIWhiteLogo.png";
 import ElectronicsLogo from "../../Images/ClubLogo/ElectronicsLogo.png";
-import HorizonLogo from "../../Images/ClubLogo/HorizonLogo.png";
-import iBotLogo from "../../Images/ClubLogo/iBOTLogo.png";
+import HorizonLogo from "../../Images/ClubLogo/HorizonWhiteLogo.png";
+import iBotLogo from "../../Images/ClubLogo/iBOTWhiteLogo.png";
 import iGEMLogo from "../../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../../Images/ClubLogo/ProgrammingLogo.png";
 import SahaayLogo from "../../Images/ClubLogo/SahaayWhiteLogo.png";
 import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
-import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainWithNameLogo.png";
+import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainLogo.png";
 
 // CLUB HEADS
 import PrintingHead1 from "../../Images/ContactUs/Club/3DPrinting_Ishan.jpg";
@@ -67,8 +67,11 @@ import ElectronicsGallery14 from "../../Images/Community/Clubs/Electronics/Galle
 import ElectronicsGallery15 from "../../Images/Community/Clubs/Electronics/Gallery15.gif";
 
 // HORIZON
+import HorizonAchievements1 from "../../Images/Community/Clubs/Horizon/Achievements1.png";
 import HorizonAchievements2 from "../../Images/Community/Clubs/Horizon/Achievements2.jpg";
-import HorizonAchievements5 from "../../Images/Community/Clubs/Horizon/Achievements5.png";
+import HorizonAchievements3 from "../../Images/Community/Clubs/Horizon/Achievements3.jpg";
+import HorizonAchievements4 from "../../Images/Community/Clubs/Horizon/Achievements4.png";
+import HorizonAchievements5 from "../../Images/Community/Clubs/Horizon/Achievements5.jpg";
 
 // SAHAAY
 import SahaayAchievements1 from "../../Images/Community/Clubs/Sahaay/Achievements1.jpeg";
@@ -87,8 +90,8 @@ import EnvisageProject4 from "../../Images/Community/Clubs/Envisage/Project4.png
 import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png";
 
 // WEBOPS AND BLOCKCHAIN
-import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievement1.png";
-import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievement2.png";
+import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements1.png";
+import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements2.png";
 
 export const Clubs: IClubs = {
   "3d-printing-club": {
@@ -361,6 +364,7 @@ export const Clubs: IClubs = {
         title: "Spaceport ##America Cup",
         description:
           "A team that started out as a CFI club project got its way into competing in the Spaceport America Cup, 2022, the first ever IIT in the country to do so! The subsystems in the team are - engine, test stand, hardware and software, sponsorship, and PR.",
+        image: HorizonAchievements1,
       },
       {
         title: "##Astrkweek",
@@ -372,11 +376,13 @@ export const Clubs: IClubs = {
         title: "SWAN and ##Guru Dhwani Antenna Challenge",
         description:
           "Horizon has formed a team to participate in the SWAN antenna design challenge conducted by IUCAA. The Indian Sky Watch Array Network (SWAN) Project was started by Raman Research Institute (RRI) to establish a Very Long Baseline Interferometry network by building antennae at educational institutes across the country. In September 2021, Horizon formed a team to participate in the Guru Dhwani Radio Antenna Design Challenge to observe radiation from the Jovian atmosphere. The team is currently working on optimizing the antenna design parameters.",
+        image: HorizonAchievements3,
       },
       {
         title: "InterIIT ##Tech Meet 2021",
         description:
           "Horizon participated on behalf of IITM in the InterIIT Tech Meet 2021 for the ISRO Astrosat visualization tool designing challenge. We built the backend to take care of data manipulation, cleaning, and metadata retrieval - which included the implementation of adaptive search algorithm to find correct bibcodes of publications - and a frontend which provided a 3D interface for the visualization. Our team was placed in the top 10 of the participant IITs.",
+        image: HorizonAchievements4,
       },
       {
         title: "Quarks to ##Quasars",

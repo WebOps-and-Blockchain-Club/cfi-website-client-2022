@@ -1,18 +1,18 @@
 import CarouselImage1 from "../../Assets/Images/Home/Landing images/car2.jpg";
 
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
-import AeroLogo from "../Images/ClubLogo/AeroLogo.png";
+import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
 import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
 import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
-import HorizonLogo from "../Images/ClubLogo/HorizonLogo.png";
+import HorizonLogo from "../Images/ClubLogo/HorizonLogo(withoutName).png";
 import iBotLogo from "../Images/ClubLogo/iBOTLogo.png";
 import iGEMLogo from "../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../Images/ClubLogo/ProgrammingLogo.png";
 import SahaayLogo from "../Images/ClubLogo/SahaayBlackLogo.png";
 import EnvisageLogo from "../Images/ClubLogo/EnvisageLogo.png";
-import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo.png";
+import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo(withoutName).png";
 
 import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar(withoutName).png";
 import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";

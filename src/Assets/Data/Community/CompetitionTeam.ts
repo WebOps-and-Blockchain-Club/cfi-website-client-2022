@@ -2,10 +2,9 @@ import { ITeams } from "../../../Types";
 
 // LOGO
 import RaftarLogo from "../../../Assets/Images/CompetitionTeamLogo/Raftar.png";
-import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
+import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/AbhiyaanRed.png";
 import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
-import GalleryImage1 from "../../../Assets/Images/Home/Landing images/car2.jpg";
 
 // TEAM HEADS IMAGE
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.jpg";
@@ -19,9 +18,15 @@ import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Arun.
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Karthik.png";
 
 // RAFTAR
-import RaftarAchievements1 from "../../Images/Community/CompetitionTeam/Raftar/Achievements1.png";
-import RaftarAchievements2 from "../../Images/Community/CompetitionTeam/Raftar/Achievements2.png";
-import RaftarAchievements4 from "../../Images/Community/CompetitionTeam/Raftar/Achievements4.png";
+import RaftarLanding from "../../Images/Community/CompetitionTeam/Raftar/Landing.jpg";
+
+import RaftarAchievements1 from "../../Images/Community/CompetitionTeam/Raftar/Achievements1.jpg";
+import RaftarAchievements2 from "../../Images/Community/CompetitionTeam/Raftar/Achievements2.jpg";
+import RaftarAchievements3 from "../../Images/Community/CompetitionTeam/Raftar/Achievements3.jpg";
+import RaftarAchievements4 from "../../Images/Community/CompetitionTeam/Raftar/Achievements4.jpg";
+
+// ABHIYAAN
+import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.jpg";
 
 // ANVESHAK
 import AnveshakLanding from "../../Images/Community/CompetitionTeam/Anveshak/Landing.jpg";
@@ -33,7 +38,7 @@ import AvishkarAchievements1a from "../../Images/Community/CompetitionTeam/Avish
 import AvishkarAchievements1b from "../../Images/Community/CompetitionTeam/Avishkar/Achievements1b.jpg";
 import AvishkarAchievements1c from "../../Images/Community/CompetitionTeam/Avishkar/Achievements1c.jpg";
 import AvishkarAchievements2a from "../../Images/Community/CompetitionTeam/Avishkar/Achievements2a.png";
-import AvishkarAchievements2b from "../../Images/Community/CompetitionTeam/Avishkar/Achievements2b.jpeg";
+import AvishkarAchievements2b from "../../Images/Community/CompetitionTeam/Avishkar/Achievements2b.jpg";
 
 import AvishkarProject1 from "../../Images/Community/CompetitionTeam/Avishkar/Project1.jpg";
 import AvishkarProject2 from "../../Images/Community/CompetitionTeam/Avishkar/Project2.jpg";
@@ -41,7 +46,7 @@ import AvishkarProject2 from "../../Images/Community/CompetitionTeam/Avishkar/Pr
 import AvishkarGallery1 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery1.jpg";
 import AvishkarGallery2 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery2.jpg";
 import AvishkarGallery3 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery3.jpg";
-import AvishkarGallery4 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery4.png";
+import AvishkarGallery4 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery4.jpg";
 import AvishkarGallery5 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery5.jpg";
 import AvishkarGallery6 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery6.jpg";
 import AvishkarGallery7 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery7.jpg";
@@ -51,7 +56,7 @@ export const Teams: ITeams = {
   "raftar-formula-racing": {
     name: "Raftar Formula ##Racing",
     logo: RaftarLogo,
-    landing: GalleryImage1,
+    landing: RaftarLanding,
     description:
       "Raftar is a team of 50 students from different disciplines in IIT Madras with a shared passion for automotive engineering and motorsports. Every year, the team takes up the challenge of building a swift Formula Student race car and works to develop the most competent lot of engineers in the nation. Working at the Centre For Innovation, IIT Madras, Raftar aims to become a globally competitive team and promote the Formula Student culture in India. The Raftar formula racing team is recognized as one of the tireless, most dedicated teams at CFI.",
     achievements: [
@@ -68,7 +73,7 @@ export const Teams: ITeams = {
       {
         description:
           "In the Formula Bharat – 2021 (Combustion Category), Team Raftar unsurprisingly won 1st place in the Overall Championship and the Engineering Design Event. They were also the Winners of the Best CV Powertrain Award by Boschand  Ather Connected Tech Award.",
-        // image: RaftarAchievements2,
+        image: RaftarAchievements3,
       },
       {
         description:
@@ -105,7 +110,7 @@ export const Teams: ITeams = {
   "team-abhiyaan": {
     name: "Team ##Abhiyaan",
     logo: AbhiyaanLogo,
-    landing: GalleryImage1,
+    landing: AbhiyaanLanding,
     description:
       "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
     achievements: [
