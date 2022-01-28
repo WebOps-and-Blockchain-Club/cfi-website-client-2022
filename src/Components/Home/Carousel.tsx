@@ -38,11 +38,13 @@ export default function TopCarousel() {
       parallax
     >
       {CarouselData.map((_data) => (
-        <SwiperSlide style={{ height: matches ? "80vw" : "100vh" }}>
+        <SwiperSlide style={{ height: matches ? "90vh" : "100vh" }}>
           <Grid
             style={{
-              height: matches ? "80vw" : "100vh",
-              backgroundImage: `linear-gradient(180deg,#030303 0%,rgba(8, 7, 8, 0) 43.83%,#030303 90.13%), url(${_data.image})`,
+              height: matches ? "90vh" : "100vh",
+              backgroundImage: matches
+                ? `linear-gradient(180deg, #030303 0%, rgba(8, 7, 8, 0) 43.83%, #030303 75.13%), url(${_data.image})`
+                : `linear-gradient(180deg,#030303 0%,rgba(8, 7, 8, 0) 43.83%,#030303 90.13%), url(${_data.image})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -54,13 +56,11 @@ export default function TopCarousel() {
                 bottom: "0",
                 left: "auto",
                 right: "auto",
-                // height: "100%",
                 height: "fit-content",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                // justifyContent: "center",
-                paddingBottom: matches ? "40px" : "100px",
+                paddingBottom: matches ? "80px" : "100px",
               }}
               textAlign="center"
             >
