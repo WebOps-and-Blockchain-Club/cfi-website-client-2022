@@ -52,8 +52,8 @@
     width: inherit;
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
+  .custom-home-swiper-button-next,
+  .custom-home-swiper-button-prev {
     top: 40% !important;
   }
 

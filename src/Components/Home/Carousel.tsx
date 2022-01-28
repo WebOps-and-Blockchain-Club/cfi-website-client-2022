@@ -20,6 +20,8 @@ SwiperCore.use([Parallax, Pagination, Navigation, Autoplay]);
 export default function TopCarousel() {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
 
   return (
     <Swiper
@@ -27,7 +29,10 @@ export default function TopCarousel() {
       loop={true}
       slidesPerView={1}
       pagination={{ clickable: true }}
-      navigation
+      navigation={{
+        prevEl: "swiper-button-prev .custom-home-swiper-button-prev",
+        nextEl: "swiper-button-next .custom-home-swiper-button-next",
+      }}
       style={{ width: "99vw" }}
       autoplay={{
         delay: 2500,
@@ -37,6 +42,10 @@ export default function TopCarousel() {
       loopFillGroupWithBlank
       parallax
     >
+      <div
+        className="swiper-button-prev custom-home-swiper-button-prev"
+        ref={navigationPrevRef}
+      />
       {CarouselData.map((_data) => (
         <SwiperSlide style={{ height: matches ? "90vh" : "100vh" }}>
           <Grid
@@ -48,6 +57,7 @@ export default function TopCarousel() {
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
+              paddingBottom: "100px",
             }}
           >
             <Grid
@@ -103,6 +113,10 @@ export default function TopCarousel() {
           </Grid>
         </SwiperSlide>
       ))}
+      <div
+        className="swiper-button-next custom-home-swiper-button-next"
+        ref={navigationNextRef}
+      />
     </Swiper>
   );
 }
