@@ -22,6 +22,7 @@ const CompetitionTeam = () => {
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <CustomBox>
@@ -52,22 +53,21 @@ const CompetitionTeam = () => {
               width: "100%",
               display: "flex",
               flexDirection: "column",
+              alignItems: "center",
               justifyContent: "end",
-              paddingBottom: matches ? "40px" : "100px",
+              paddingBottom: matches ? "20px" : "60px",
             }}
             textAlign="center"
           >
             <CardMedia
               component="img"
-              height="200px"
               image={data.logo}
               alt={data.name}
               sx={{
-                borderRadius: "40px 40px 0 0",
                 verticalAlign: "middle",
                 objectFit: "contain",
-                p: "5px",
-                width: "unset",
+                height: matchesLG ? "150px" : "250px",
+                maxWidth: matchesLG ? "300px" : "500px",
               }}
             />
           </Grid>

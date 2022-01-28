@@ -21,6 +21,7 @@ const Club = () => {
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <CustomBox>
@@ -61,9 +62,10 @@ const Club = () => {
           direction={{ xs: "column", lg: "row" }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
           alignItems={"center"}
-          rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+          justifyContent={"space-evenly"}
+          rowGap={{ xs: 8, sm: 10, md: 12, lg: 6 }}
         >
-          <Grid item width={{ xs: "100%", lg: "50%" }}>
+          <Grid item maxWidth={{ xs: "100%", lg: "50%" }}>
             <CardMedia
               component="img"
               image={data.logo}
@@ -72,7 +74,8 @@ const Club = () => {
                 borderRadius: "40px 40px 0 0",
                 verticalAlign: "middle",
                 objectFit: "contain",
-                height: "270px",
+                height: matchesLG ? "100%" : "300px",
+                maxWidth: "300px",
               }}
             />
           </Grid>

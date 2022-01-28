@@ -53,11 +53,15 @@ export default function MediaCard({ data }: Probs) {
         <CardContent
           style={{
             padding: "unset",
-            paddingTop: matchesLG ? "15px" : "unset",
           }}
         >
           {data.title && (
-            <Grid item textAlign="center">
+            <Grid
+              item
+              textAlign="center"
+              pb={"15px"}
+              pt={matchesLG ? "15px" : "unset"}
+            >
               <Typography
                 variant={matchesSM ? "h6" : "h5"}
                 color="primary.contrastText"
@@ -92,8 +96,8 @@ export default function MediaCard({ data }: Probs) {
               xs: "16px",
               sm: "18px",
             }}
+            m={0}
             textAlign={"center"}
-            pt={"15px"}
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         </CardContent>
