@@ -30,8 +30,8 @@ export default function TopCarousel() {
       slidesPerView={1}
       pagination={{ clickable: true }}
       navigation={{
-        prevEl: "swiper-button-prev .custom-home-swiper-button-prev",
-        nextEl: "swiper-button-next .custom-home-swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
       }}
       style={{ width: "99vw" }}
       autoplay={{
