@@ -11,14 +11,14 @@ function setupIcons() {
     "link#dark-scheme-manifest"
   );
 
-  function setDark() {
+  function setLight() {
     document.head.append(lightSchemeIcon);
     document.head.append(lightSchemeManifest);
     darkSchemeIcon.remove();
     darkSchemeManifest.remove();
   }
 
-  function setLight() {
+  function setDark() {
     lightSchemeIcon.remove();
     lightSchemeManifest.remove();
     document.head.append(darkSchemeIcon);
