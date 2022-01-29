@@ -724,6 +724,13 @@ export const Clubs: IClubs = {
     email: "webopsandblockchainclub@gmail.com",
     contacts: [
       {
+        name: "Janith M S",
+        image: WebOpsAndBlockchainHead3,
+        email: "janithms9920@gmail.com",
+        phone: "9944010785",
+        linkedIn: "https://www.linkedin.com/in/janith-m-s-949a6720a/",
+      },
+      {
         name: "Rutuj Dodal",
         image: WebOpsAndBlockchainHead1,
         email: "ce17b114@smail.iitm.ac.in",
@@ -736,13 +743,6 @@ export const Clubs: IClubs = {
         email: "me17b123@smail.iitm.ac.in",
         phone: "80039 94946",
         linkedIn: "https://www.linkedin.com/in/utkarsh-k-a03bba158/",
-      },
-      {
-        name: "Janith M S",
-        image: WebOpsAndBlockchainHead3,
-        email: "janithms9920@gmail.com",
-        phone: "9944010785",
-        linkedIn: "https://www.linkedin.com/in/janith-m-s-949a6720a/",
       },
     ],
   },

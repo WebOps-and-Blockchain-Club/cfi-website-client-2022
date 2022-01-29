@@ -15,18 +15,18 @@ export const ManagerialTeams = [
     email: "bnecfi@gmail.com",
     contacts: [
       {
-        name: "Navaneeth C V",
-        image: BEHead1,
-        email: "navaneethcv3@gmail.com",
-        phone: "9400434929",
-        linkedIn: "https://www.linkedin.com/in/utkarsh-k-a03bba158/",
-      },
-      {
         name: "Vaidehi Garodia",
         image: BEHead2,
         email: "na19b014@smail.iitm.ac.in",
         phone: "8529782258",
         linkedIn: "https://www.linkedin.com/in/rutuj-dodal-871820150",
+      },
+      {
+        name: "Navaneeth C V",
+        image: BEHead1,
+        email: "navaneethcv3@gmail.com",
+        phone: "9400434929",
+        linkedIn: "https://www.linkedin.com/in/utkarsh-k-a03bba158/",
       },
     ],
   },
