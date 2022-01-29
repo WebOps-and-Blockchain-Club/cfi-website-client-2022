@@ -54,9 +54,9 @@ const Achievements = (props: Props) => {
           return (
         i%2==0?
         (
-          <div style={{marginTop: i== 0 ? '180px' : '110px'}}  className="row row-1">
+          <section id={achievement.id} style={{marginTop: i== 0 ? '180px' : '110px'}}  className="row row-1">
             <div className="content">
-              <section id={achievement.id}>
+              <section >
                 <div className="details">
                   <span style={{color: 'white'}} className="title">{achievement.title}</span>
                   {/* <span style={{color: 'white'}} >{achievement.date}</span> */}
@@ -73,14 +73,14 @@ const Achievements = (props: Props) => {
             <div className="image">
             <img src={achievement.image} />
             </div>
-          </div>
+          </section>
         ) : (
-          <div style={{marginTop:'110px'}} className="row row-2">
+          <section id={achievement.id} style={{marginTop:'110px'}} className="row row-2">
               <div  className="image">
                 <img src={achievement.image} />
               </div>
               <div className="content" style={{flexDirection:'row-reverse'}}>
-                <section id={achievement.id}>
+                <section >
                   <div className="details">
                     <span style={{color: 'white'}}  className="title">{achievement.title}</span>
                     {/* <span>{achievement.date}</span> */}
@@ -94,7 +94,7 @@ const Achievements = (props: Props) => {
               <div className="square"></div>           
               <div className="branch"></div>           
             </div>
-          </div>
+          </section>
         )
           )
         }
