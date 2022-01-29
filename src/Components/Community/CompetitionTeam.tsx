@@ -44,34 +44,13 @@ const CompetitionTeam = () => {
             backgroundPosition: "center",
           }}
         >
-          <Grid
-            style={{
-              bottom: "0",
-              left: "auto",
-              right: "auto",
-              height: "100%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "end",
-              paddingBottom: matches ? "20px" : "60px",
-            }}
-            textAlign="center"
-          >
-            <CardMedia
-              component="img"
-              image={data.logo}
-              alt={data.name}
-              sx={{
-                verticalAlign: "middle",
-                objectFit: "contain",
-                height: matchesLG ? "150px" : "250px",
-                maxWidth: matchesLG ? "300px" : "500px",
-              }}
-            />
-          </Grid>
+          {!matchesLG && (
+            <CompetitionTeamLogoCard name={data.name} logo={data.logo} />
+          )}
         </Grid>
+        {matchesLG && (
+          <CompetitionTeamLogoCard name={data.name} logo={data.logo} />
+        )}
 
         {/* INTRO */}
         <Grid
@@ -196,3 +175,44 @@ const CompetitionTeam = () => {
 };
 
 export default CompetitionTeam;
+
+const CompetitionTeamLogoCard = ({
+  name,
+  logo,
+}: {
+  name: string;
+  logo: string;
+}) => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
+  return (
+    <Grid
+      style={{
+        bottom: "0",
+        left: "auto",
+        right: "auto",
+        height: "100%",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "end",
+        paddingBottom: matches ? "20px" : "60px",
+      }}
+      textAlign="center"
+    >
+      <CardMedia
+        component="img"
+        image={logo}
+        alt={name}
+        sx={{
+          verticalAlign: "middle",
+          objectFit: "contain",
+          height: matchesLG ? "150px" : "250px",
+          maxWidth: matchesLG ? "300px" : "500px",
+        }}
+      />
+    </Grid>
+  );
+};
