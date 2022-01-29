@@ -27,6 +27,13 @@ import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 
 import GalleryImage1 from "../../Assets/Images/Home/Gallery1.jpg";
+import GalleryImage2 from "../../Assets/Images/Home/Gallery2.jpg";
+import GalleryImage3 from "../../Assets/Images/Home/Gallery3.jpg";
+import GalleryImage4 from "../../Assets/Images/Home/Gallery4.jpg";
+import GalleryImage5 from "../../Assets/Images/Home/Gallery5.jpg";
+import GalleryImage6 from "../../Assets/Images/Home/Gallery6.jpg";
+import GalleryImage7 from "../../Assets/Images/Home/Gallery7.jpg";
+import GalleryImage8 from "../../Assets/Images/Home/Gallery8.jpg";
 
 export const CarouselData = [
   {
@@ -176,12 +183,24 @@ export const HomeGalleryData = [
     image: GalleryImage1,
   },
   {
-    image: GalleryImage1,
+    image: GalleryImage2,
   },
   {
-    image: GalleryImage1,
+    image: GalleryImage3,
   },
   {
-    image: GalleryImage1,
+    image: GalleryImage4,
+  },
+  {
+    image: GalleryImage5,
+  },
+  {
+    image: GalleryImage6,
+  },
+  {
+    image: GalleryImage7,
+  },
+  {
+    image: GalleryImage8,
   },
 ];
