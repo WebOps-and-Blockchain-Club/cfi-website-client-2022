@@ -92,6 +92,8 @@ import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png
 // WEBOPS AND BLOCKCHAIN
 import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements1.png";
 import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements2.png";
+import WebOpsAndBlockchainAchievement3 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements3.jpeg";
+import { link } from "../utils";
 
 export const Clubs: IClubs = {
   "3d-printing-club": {
@@ -225,16 +227,24 @@ export const Clubs: IClubs = {
       "The Computer Vision Group of IIT Madras was started in September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.   CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects. <br /> The club undertakes projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. They are actively involved in projects and conduct sessions among our college community in these areas with the hope of impacting society with bleeding edge technology.",
     achievements: [
       {
+        title: "International Aerial ##Robotics Challenge ",
         description:
-          "In Inter IIT 2018, the goal was to achieve satellite image segmentation using a training dataset of only 14 images, of size approx 1200x1200. The output image pixels had to be segmented into 8 classes ( or as background): Swimming Pool, Oceans, Grasslands, Forests, Roads, Railways, Bare soil and Buildings. The club creatively used a mixture of pure computer vision techniques and deep learning approaches for the problem. Our approach was to obtain binary segmentation maps class-wise.",
+          "CVI represented India at the International Aerial Robotics Competition (IARC). We competed against elite teams from other top Universities in IARC and was acknowledged as the best vision team among all the participating teams.",
       },
       {
+        title: "Helped Indian Railways ##automate railway line inspection ",
         description:
-          "In Inter IIT 2020, The goal was to classify traffic signals in real time for autonomous driving. So, We used a mixture of pure computer vision techniques and deep learning approaches for the problem. The club came up with a solution that included a deep learning based classifier with EfficientNet backbone for classification of over 40+ categories and a frontend UI to interface the results.",
+          "In this project for Indian Railways , CVI developed an infrared-based depth sensor technology to automate the overhead electric line inspection system with minimal human intervention , hence minimizing human risk and making the process cheaper.",
       },
       {
+        title: "UAV’s For Disaster Management - ##Eye in the sky",
         description:
-          "CVI is the only CFI team to have resulted in a startup HYPERVERGE. The HyperVerge Fintech Platform consists of Digital KYC+, Dedupe Fraud Check, Data Verification, Credit Scoring, and Contract Verification. With over 280 million customers onboarded in 2019, it's the natural pick for future focussed fintech companies and transformation focussed enterprises.",
+          "Developed an end-to-end solution based on AI and Computer Vision to improve the efficiency of rescue operations and disaster relief works.  Declared one of the top 20 innovative startups in India and was awarded INR 10 Lacs by IIGP 2.0 (India Innovation Growth Programme 2.0) .Awarded the Microsoft AI for Earth grant exclusively given to only 508 projects from all over the world.  Involved in discussions with the National Disaster Response Force (NDRF) and were invited to test our technology in their mock drills",
+      },
+      {
+        title: "HyperVerge - ##an IITM-incubated startup ",
+        description:
+          "HyperVerge is a startup that had its genesis in our CVI Club (previously known as CVG) of CFI. Today, HyperVerge is one of the top startups in the AI scene in the world. HyperVerge AI ranks high on the AI leaderboards published by NIST, HyperVerge software is used by millions of individuals on a daily basis. With large banks, e-commerce companies, fintechs as customers, HyperVerge AI is deployed at scale.",
       },
     ],
     website: "https://iitmcvg.github.io/",
@@ -367,7 +377,7 @@ export const Clubs: IClubs = {
         image: HorizonAchievements1,
       },
       {
-        title: "##Astrkweek",
+        title: "##Astroweek",
         description:
           "This week happens at the beginning of the odd semester and sees participation from several freshmen. A series of lectures and observation sessions are conducted during this time. It’s an excellent opportunity to be involved in club-activities and get to know more about the club.",
         image: HorizonAchievements2,
@@ -487,8 +497,21 @@ export const Clubs: IClubs = {
       "The Product Design Club of IIT Madras started as an interest group of student innovators in 2019. In 2020, the “Product Design Group” was officially bracketed under CFI as the Product Design Club. The vision of PDC is to develop a culture of design thinking and user-centric product development in the institute through Design Challenges, Impactful Projects, Workshops, and more. <br /> At the PDC, we are excited by technology and the liberating impact that it can have. We are equally driven by problems that matter, Our projects always strive to solve high-impact problems and meet unmet needs",
     achievements: [
       {
+        title: "Our ##Workshops",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "We run a workshop on Entrepreneurship, Creativity, Product design in CFI’s annual summer school, apart from that we create content on product design on our YouTube Channel and run design thinking workshops which are inspired by the frameworks set by IDEO.",
+      },
+      {
+        title: "Freshie Design ##Challenge",
+        description:
+          "This is our flagship event that we conduct every year to introduce freshmen at IIT M to the world of product design through Fusion 360. Participants have the opportunity to come up with creative ideas to solve everyday problems and bring it to life using 3-D Modeling.",
+      },
+      {
+        title: "##Entrepreneurship",
+        description: `At the PDC, entrepreneurship is an implicit goal, we believe that our projects which are carefully chosen have the potential to create value in the long run. Infact, The inaugural heads of our club have gone on to create a successful startup that has received seed funding, check out ${link(
+          "Desklamp.io",
+          "https://www.desklamp.io/blog"
+        )}.`,
       },
     ],
     email: "thepdc.cfi@gmail.com",
@@ -553,7 +576,7 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  sahaay: {
+  "team-sahaay": {
     name: "Team ##Sahaay",
     logo: SahaayLogo,
     description:
@@ -574,7 +597,7 @@ export const Clubs: IClubs = {
       {
         title: "Restroom Seat ##Sanitation",
         description:
-          "One of the biggest challenges with public toilets is their sanitation and maintenance. This is when a mechanism for toilet seat sanitation was developed by Arvind Pujari, Kushal Kumar Reddy, Shashwat Jain, Subham Kumar Sahana, and Tanay Garg under Sahaay which was also appreciated by Gandhian Young Technological Innovation in 2017. The news also was published in the Times of India.",
+          "One of the biggest challenges with public toilets is their sanitation and maintenance. This is when a mechanism for toilet seat sanitation was developed by Arvind Pujari, Kushal Kumar Reddy, Shashwat Jain, Subham Kumar Sahana, and Tanay Garg under Team Sahaay which was also appreciated by Gandhian Young Technological Innovation in 2017. The news also was published in the Times of India.",
         image: SahaayAchievements3,
       },
     ],
@@ -676,10 +699,10 @@ export const Clubs: IClubs = {
     name: "WebOps and ##Blockchain Club",
     logo: WebOpsAndBlockchainLogo,
     description:
-      "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects. <br /> We also conducted the Summer School in the month of July 2021 after the break of one year. 500+ students registered for the Summer School. Our club was among the clubs with the highest registrations. Lectures on HTML, CSS, JavaScript, Git and GitHub, Blockchain with hands on coding sessions and projects were conducted during the summer school.",
+      "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects.",
     achievements: [
       {
-        title: "Lanunch of ##CLinsti App",
+        title: "Launch of ##CLinsti App",
         description:
           "This year we successfully launched the all new CLinsti app – a mobile application developed by the joint efforts of Engineering Section and CFI to promote cleanliness and ensure proper waste management in IITM campus. It was launched in October 2021 and is available in both Appstore and play store and it got over 200 downloads within a month of its release.",
         image: WebOpsAndBlockchainAchievement1,
@@ -690,6 +713,12 @@ export const Clubs: IClubs = {
         description:
           "A platform that enables the public to report water logging details across the Chennai region. The data gathered through this platform aims to improve disaster preparedness and response in communities by gathering, sorting, and presenting data of flooding reports. This Crowd source data, curated through this platform will help to understand the reasons for waterlogging / inundation and help IIT Madras researchers to develop / design remedial measures that may be recommended to GCC, PWD and other relevant Govt. departments for their action.",
         image: WebOpsAndBlockchainAchievement2,
+      },
+      {
+        title: "Summer School## Sessions",
+        description:
+          "We also conducted the Summer School in the month of July 2021 after the break of one year. 500+ students registered for the Summer School. Our club was among the clubs with the highest registrations. Lectures on HTML, CSS, JavaScript, Git and GitHub, Blockchain with hands on coding sessions and projects were conducted during the summer school.",
+        image: WebOpsAndBlockchainAchievement3,
       },
     ],
     email: "webopsandblockchainclub@gmail.com",

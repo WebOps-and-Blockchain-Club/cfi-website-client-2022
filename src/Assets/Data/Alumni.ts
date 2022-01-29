@@ -6,6 +6,7 @@ import AibonoLogo from "../Images/Alumni/Aibono.png";
 import PiBeamLogo from "../Images/Alumni/PiBeam.png";
 import LemaLabsLogo from "../Images/Alumni/LemaLabs.png";
 import GalaxeyeSpaceLogo from "../Images/Alumni/GalaxeyeSpace.png";
+import TvastaLogo from "../Images/Alumni/Tvasta.png";
 
 export const AlumniData = {
   description:
@@ -51,6 +52,11 @@ export const AlumniData = {
       logo: GalaxeyeSpaceLogo,
       link: "http://galaxeye.space/",
     },
+    {
+      name: "Tvasta",
+      logo: TvastaLogo,
+      link: "https://tvasta.construction/",
+    },
   ],
   connectToCFI: {
     description:
@@ -71,9 +77,9 @@ export const AlumniData = {
   contributeToCFI: {
     intro: "Alumni can contribute to CFI through the following ways: \n \n",
     description: [
+      "We are always in search of mentorship and guidance, and if you or your organization could support our skill and knowledge pursuits, we’d be honored to be associated with you.",
       "Monetary donations can be made through the <a href='https://joyofgiving.alumni.iitm.ac.in/projects' target='_blank' rel='noopener noreferrer'>CFI Joy of Giving Portal.</a>",
       "If you believe you or your organization shares beliefs with CFI, we’d love to get involved with you in the context of kind deals or monetary sponsorship.",
-      "We are always in search of mentorship and guidance, and if you or your organization could support our skill and knowledge pursuits, we’d be honored to be associated with you.",
     ],
   },
 };

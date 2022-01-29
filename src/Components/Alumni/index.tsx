@@ -71,7 +71,7 @@ const Alumni = (props: Props) => {
             columnGap={{ xs: 2, sm: 4, md: 5, lg: 6 }}
           >
             {AlumniData.startUp.map((startUp, i) => {
-              if ((i === 4 || i === 10) && window.innerWidth >= 1200)
+              if ((i === 5 || i === 10) && window.innerWidth >= 1200)
                 return (
                   <>
                     <Box width="100%" />

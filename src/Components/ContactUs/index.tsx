@@ -73,19 +73,42 @@ const ContactUs = () => {
                 TEAM
               </Typography>
             </Grid>
-            <Typography
-              style={{
-                color: "#D6D6D6",
-                fontSize: matches ? "18px" : "26px",
-                fontWeight: matches ? "bold" : "bolder",
-                paddingLeft: matches ? "10px" : "100px",
-                paddingRight: matches ? "10px" : "100px",
-              }}
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </Typography>
+            {!matches && (
+              <Typography
+                style={{
+                  color: "#D6D6D6",
+                  fontSize: matches ? "18px" : "26px",
+                  fontWeight: matches ? "bold" : "bolder",
+                  paddingLeft: matches ? "10px" : "100px",
+                  paddingRight: matches ? "10px" : "100px",
+                }}
+                textAlign={"center"}
+              >
+                13 years of staying true to our motto, 'Walk in with and idea,
+                Walk out with a product', CFI is now more than just a student
+                lab, it is a feeling which holds an entire community together.
+              </Typography>
+            )}
           </Grid>
         </Grid>
+
+        {matches && (
+          <Typography
+            style={{
+              color: "#D6D6D6",
+              fontSize: matches ? "16px" : "26px",
+              fontWeight: matches ? "bold" : "bolder",
+              paddingLeft: matches ? "20px" : "100px",
+              paddingRight: matches ? "20px" : "100px",
+            }}
+            textAlign={"center"}
+          >
+            13 years of staying true to our motto, <br /> "Walk in with and
+            idea, Walk out with a product",
+            <br /> CFI is now more than just a student lab, it is a feeling
+            which holds an entire community together.
+          </Typography>
+        )}
 
         {/* CONTACTS */}
         {ContactUsData().map((_data: IContact) => (

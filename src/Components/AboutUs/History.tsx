@@ -32,15 +32,15 @@ function History() {
           variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
           color="primary.contrastText"
         >
-          CFI was started in 2008 with an objective to be a forum for creative
-          output of the budding engineers of IIT Madras. It provides students
-          the necessary platform for realizing their ideas. A great workspace, a
+          Set up with the generous funds donated by the batch of 1981. CFI was
+          started in 2008 with an objective to be a forum for creative output of
+          the budding engineers of IIT Madras. It provides students the
+          necessary platform for realizing their ideas. A great workspace, a
           comprehensive inventory, ample guidance from faculty & senior-students
           and the zeal and passion of the CFI team make CFI a gifted asset for
           IIT Madras students. And over time, CFI has successfully evolved into
           a hub which encourages thinking and provokes students to generate
-          novel ideas making it truly the “centre” for innovation. Set up with
-          the generous funds donated by the batch of 1981
+          novel ideas making it truly the “centre” for innovation.
         </Typography>
       </Grid>
     </Grid>

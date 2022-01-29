@@ -14,7 +14,7 @@ import SahaayLogo from "../Images/ClubLogo/SahaayBlackLogo.png";
 import EnvisageLogo from "../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo(withoutName).png";
 
-import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar(withoutName).png";
+import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
@@ -104,7 +104,7 @@ export const ClubList = [
     link: "/clubs/ibot-club",
   },
   {
-    name: "IGem",
+    name: "iGEM",
     logo: iGEMLogo,
     link: "/clubs/igem",
   },
@@ -119,9 +119,9 @@ export const ClubList = [
     link: "/clubs/programming-club",
   },
   {
-    name: "Sahaay",
+    name: "Team Sahaay",
     logo: SahaayLogo,
-    link: "/clubs/sahaay",
+    link: "/clubs/team-sahaay",
   },
   {
     name: "Team Envisage",
@@ -145,7 +145,7 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
                          at the New Academic Complex in the heart of campus. After almost a
                          decade of the team's zeal and passion, combined with a comprehensive
                          inventory, ample workspace, guidance from faculty and students, CFI is
-                         a house to 14 clubs, 4 competition teams and counting. These clubs'
+                         a house to 13 clubs, 4 competition teams and counting. These clubs'
                          interests are spread over a wide spectrum primarily fostering
                          innovation and invention in technology, with a focus on technologies
                          aimed at contributing positively to the environment and to the
@@ -158,7 +158,7 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
 export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 13 clubs`;
 
 export const CompetitionTeams =
-  "CFI’s Competition teams are groups of highly motivated individuals who work round the clock to meet challenging deadlines of various competitions. Over the years, our teams have have bagged prizes both at the national and international level.";
+  "CFI’s Competition teams are groups of highly motivated individuals who work round the clock to meet challenging deadlines of various competitions. Over the years, our teams have bagged prizes both at the national and international level.";
 
 export const HomeGalleryData = [
   {

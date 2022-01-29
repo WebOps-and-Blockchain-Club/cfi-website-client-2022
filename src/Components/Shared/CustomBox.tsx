@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import * as React from "react";
-import bg from "../../Assets/Images/particles.png";
+import bg from "../../Assets/Images/Particles.png";
 import Footer from "./Footer";
 import Header from "./Navbar";
 

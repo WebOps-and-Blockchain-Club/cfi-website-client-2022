@@ -2,9 +2,9 @@ import { ITeams } from "../../../Types";
 
 // LOGO
 import RaftarLogo from "../../../Assets/Images/CompetitionTeamLogo/Raftar.png";
-import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/AbhiyaanRed.png";
-import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
-import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
+import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
+import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar(withoutName).png";
+import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
 // TEAM HEADS IMAGE
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.jpg";
@@ -83,7 +83,7 @@ export const Teams: ITeams = {
     ],
     projects: [
       {
-        title: "Shift of Power Unit from ##Combustion to Electric",
+        title: "Shift of Powertrain Unit from ##Combustion to Electric",
         description:
           "Seeing the global transition to electric powertrains, Team Raftar designed their first electric car this year. An electric motor gives higher acceleration and eliminates further complications like a gearbox. This in turn increases the vehicle’s simplicity and efficiency. They plan to participate in national and international formula student engineering competitions with this car.",
       },

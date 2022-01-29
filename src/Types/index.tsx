@@ -48,7 +48,7 @@ export type IClubs = {
   igem: IClub;
   "product-design-club": IClub;
   "programming-club": IClub;
-  sahaay: IClub;
+  "team-sahaay": IClub;
   "team-envisage": IClub;
   "webops-and-blockchain-club": IClub;
 };
@@ -64,7 +64,7 @@ export enum ClubsName {
   IGEM = "igem",
   PDC = "product-design-club",
   PROGRAMING = "programming-club",
-  SAHAAY = "sahaay",
+  SAHAAY = "team-sahaay",
   ENVISAGE = "team-envisage",
   WEBOPS = "webops-and-blockchain-club",
 }
