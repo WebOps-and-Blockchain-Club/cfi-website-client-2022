@@ -33,7 +33,7 @@ export default function TopCarousel() {
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
       }}
-      style={{ width: "99vw" }}
+      style={{ width: "100%" }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

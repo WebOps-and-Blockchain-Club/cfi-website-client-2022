@@ -30,9 +30,9 @@ const Home = (props: Props) => {
 
   return (
     <CustomBox>
-      <Grid container>
+      <Grid container sx={{ width: "100%" }}>
         {/* LANDING SECTION */}
-        <Grid item>
+        <Grid item sx={{ width: "100%" }}>
           <TopCarousel />
         </Grid>
 
@@ -42,8 +42,7 @@ const Home = (props: Props) => {
           container
           direction="column"
           alignItems="center"
-          width="100vw"
-          sx={{ width: "99vw" }}
+          sx={{ width: "100%" }}
           px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >

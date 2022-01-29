@@ -16,6 +16,8 @@ const CustomBox = (props: Props) => {
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
+        width: "100vw",
+        maxWidth: "100%",
       }}
     >
       <Header />

@@ -37,7 +37,7 @@ const CompetitionTeam = () => {
         {/* LANDING */}
         <Grid
           style={{
-            width: "99vw",
+            width: "100%",
             height: matches ? "80vw" : "100vh",
             backgroundImage: `linear-gradient(180deg,#030303 0%,rgba(8, 7, 8, 0) 43.83%,#030303 90.13%), url(${data.landing})`,
             backgroundSize: "cover",
