@@ -26,6 +26,7 @@ export type IGallery = {
 export type IClub = {
   name: string;
   logo: string;
+  logoM?: string | null;
   oneLiner?: string | null;
   description: string;
   projects?: IContent[] | null;
@@ -72,6 +73,7 @@ export enum ClubsName {
 export type ITeam = {
   name: string;
   logo: string;
+  logoM?: string | null;
   landing: string;
   oneLiner?: string | null;
   description: string;

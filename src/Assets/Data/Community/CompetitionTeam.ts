@@ -4,7 +4,8 @@ import { ITeams } from "../../../Types";
 import RaftarLogo from "../../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar(withoutName).png";
-import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
+import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
+import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
 // TEAM HEADS IMAGE
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.jpg";
@@ -210,6 +211,7 @@ export const Teams: ITeams = {
   "team-anveshak": {
     name: "Team ##Anveshak",
     logo: AnveshakLogo,
+    logoM: AnveshakLogoM,
     landing: AnveshakLanding,
     description:
       "We, Team Anveshak, are a team of over 30 passionate students from IIT Madras who live and breathe robotics. Since our beginnings around early 2016, we have spent countless days and nights building our own remote operated all-terrain rovers, complete with a robotic manipulator and digger. Our team brings together a set of highly dedicated and skilled students working on mechanical design, system architecture and control, outreach and business relations. We also organize educational workshops for students of our institute on different aspects of robotics. The technical knowledge and practical experience the team imparts to its members is unparalleled, nurturing them into effective team players and leaders of industry and research. \n",

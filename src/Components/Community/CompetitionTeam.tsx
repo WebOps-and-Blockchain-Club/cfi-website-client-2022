@@ -50,7 +50,10 @@ const CompetitionTeam = () => {
           )}
         </Grid>
         {matchesLG && (
-          <CompetitionTeamLogoCard name={data.name} logo={data.logo} />
+          <CompetitionTeamLogoCard
+            name={data.name}
+            logo={data.logoM ? data.logoM : data.logo}
+          />
         )}
 
         {/* INTRO */}
