@@ -150,7 +150,7 @@ export default function Header() {
                 />
               </Link>
               <FiberManualRecordIcon
-                sx={{ fontSize: !matches && !matchesLG ? 15 : 10 }}
+                sx={{ fontSize: !matches && !matchesLG ? 12 : 10 }}
               />
               <a
                 href={"https://www.iitm.ac.in"}
@@ -277,7 +277,8 @@ function SubItemWebView({ item }: { item: any }) {
           sx={{
             backgroundColor: "primary.contrastText",
             color: "primary.main",
-            paddingBottom: "10px",
+            paddingBottom: "6px",
+            paddingTop: "6px",
             borderRadius: "4px",
           }}
         >
@@ -296,7 +297,8 @@ function SubItemWebView({ item }: { item: any }) {
                       sx={{
                         backgroundColor: "primary.contrastText",
                         color: "primary.main",
-                        paddingBottom: "10px",
+                        paddingTop: "6px",
+                        paddingBottom: "6px",
                         borderRadius: "4px",
                       }}
                     >

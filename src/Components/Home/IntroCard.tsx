@@ -34,6 +34,7 @@ export default function IntroCard() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           frameBorder={"0"}
           style={{ borderRadius: "20px" }}
+          allowFullScreen
         />
       </Grid>
       <CardContent

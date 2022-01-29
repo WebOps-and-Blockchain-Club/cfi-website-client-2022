@@ -45,6 +45,7 @@ export default function MediaCard({ data }: Probs) {
               objectFit: "cover",
               width: matchesLG ? "100%" : "400px",
               marginRight: matchesLG ? "0" : "20px",
+              marginBottom: matchesLG ? "15px" : "unset",
               backgroundColor:
                 "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
             }}
