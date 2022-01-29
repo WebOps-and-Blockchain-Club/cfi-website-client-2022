@@ -1,19 +1,13 @@
 import React from "react";
 
-import {
-  Box,
-  Card,
-  Grid,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { AlumniData } from "../../Assets/Data/Alumni";
 import MediaCard from "../Community/MediaCard";
 import StartUpCard from "./StartUpCard";
+import WebsiteBtn from "../Shared/WebsiteBtn";
 
 interface Props {}
 
@@ -166,29 +160,59 @@ const Alumni = (props: Props) => {
             ))}
 
             <Grid margin={"auto"} mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
-              <a
+              <WebsiteBtn
+                title="GIVE BACK TO CFI"
+                link={"https://joyofgiving.alumni.iitm.ac.in/projects"}
+              />
+              {/* <a
                 href="https://joyofgiving.alumni.iitm.ac.in/projects"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
+                className="website-a-btn"
               >
-                <Card
+                <Grid
+                  // className="website-btn"
+                  container
+                  alignItems={"center"}
+                  gap={2}
                   sx={{
-                    padding: "10px 20px",
+                    padding: "15px 20px",
                     color: "primary.contrastText",
                     backgroundColor: "secondary.dark",
                     boxShadow: "3.99948px 3.99948px 22.3971px #0E0E0E",
                     fontSize: matches ? "21px" : "26px",
                     fontFamily: "Proxima Nova Bold",
-                    ":hover": {
-                      backgroundColor: "primary.contrastText",
-                      color: "primary.main",
-                    },
+                    // ":hover": {
+                    //   backgroundColor: "primary.contrastText",
+                    //   color: "primary.main",
+                    // transition: "all 1s ease-in, all 1s ease-out",
+                    // },
+                    // ":after": {
+                    //   content: '""',
+                    //   background: `url(${icon})`,
+                    //   height: "34px",
+                    //   width: "34px",
+                    // },
                   }}
                 >
                   GIVE BACK TO CFI
-                </Card>
-              </a>
+                  {/* <LaunchRoundedIcon
+                    sx={{ fontSize: matches ? 25 : 30, fontWeight: "bolder" }}
+                  /> */}
+              {/*} <SvgIcon
+                    component={icon}
+                    inheritViewBox
+                    sx={{
+                      color: "primary.contrastText",
+                      // ":hover": {
+                      //   color: "primary.main",
+                      // },
+                    }}
+                    className="website-icon"
+                  />
+                </Grid>
+              </a> */}
             </Grid>
           </Grid>
         </Grid>

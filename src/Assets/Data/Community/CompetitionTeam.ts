@@ -108,6 +108,7 @@ export const Teams: ITeams = {
           "Seeing the global transition to electric powertrains, Team Raftar designed their first electric car this year. An electric motor gives higher acceleration and eliminates further complications like a gearbox. This in turn increases the vehicle’s simplicity and efficiency. They plan to participate in national and international formula student engineering competitions with this car.",
       },
     ],
+    website: "https://cfi.iitm.ac.in/raftar/",
     gallery: [
       {
         image: RaftarGallery1,
@@ -129,7 +130,6 @@ export const Teams: ITeams = {
       },
     ],
     email: "raftar@smail.iitm.ac.in",
-    website: "https://cfi.iitm.ac.in/raftar/",
     contacts: [
       {
         name: "Karthik Srinivasan",
@@ -171,6 +171,7 @@ export const Teams: ITeams = {
           'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
       },
     ],
+    website: "https://www.teamabhiyaan.com/",
     gallery: [
       {
         image: AbhiyaanGallery1,
@@ -188,7 +189,6 @@ export const Teams: ITeams = {
         image: AbhiyaanGallery5,
       },
     ],
-    website: "https://www.teamabhiyaan.com/",
     email: "abhiyaan@smail.iitm.ac.in",
     contacts: [
       {
@@ -249,6 +249,7 @@ export const Teams: ITeams = {
           "Our rover features a robotic arm to perform various tasks like opening cupboards, flipping switches, tightening screws, etc. The onboard science laboratory on the rover allows us to perform experiments on soil samples collected in situ, testing for the presence of past or present life. Every year, we build a new rover incorporating new changes and innovations to improve on the previous model.",
       },
     ],
+    website: "https://www.teamabhiyaan.com/",
     gallery: [
       {
         image: AnveshakGallery1,
@@ -341,6 +342,7 @@ export const Teams: ITeams = {
         image: AvishkarProject2,
       },
     ],
+    website: "https://avishkarhyperloop.com/",
     gallery: [
       {
         image: AvishkarGallery1,

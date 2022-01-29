@@ -63,14 +63,13 @@ export default function TopCarousel() {
             <Grid
               style={{
                 position: "fixed",
-                bottom: "0",
                 left: "auto",
                 right: "auto",
                 height: "fit-content",
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
-                paddingBottom: matches ? "80px" : "100px",
+                marginTop: "70vh",
               }}
               textAlign="center"
             >

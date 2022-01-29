@@ -14,6 +14,7 @@ import Gallery from "../Shared/Gallery";
 import Heading from "../Shared/Heading";
 import MediaCard from "./MediaCard";
 import ContactSection from "../ContactUs/ContactSection";
+import WebsiteBtn from "../Shared/WebsiteBtn";
 
 const CompetitionTeam = () => {
   const { teamname } = useParams<{ teamname: TeamsName }>();
@@ -132,6 +133,20 @@ const CompetitionTeam = () => {
           </Grid>
         )}
 
+        {/* WEBSITE LINK */}
+        {data.website && (
+          <Grid
+            item
+            container
+            direction="column"
+            alignItems="center"
+            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
+          >
+            <WebsiteBtn title={`VISIT TEAM WEBSITE`} link={data.website} />
+          </Grid>
+        )}
+
         {/* GALLERY */}
         {data.gallery && (
           <Grid
@@ -143,7 +158,7 @@ const CompetitionTeam = () => {
             px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
           >
             <Grid item>
-              <Heading white="" red="SNAPSHOTS" />
+              <Heading white="SNAP" red="SHOTS" />
             </Grid>
             <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
               <Gallery data={data.gallery} />

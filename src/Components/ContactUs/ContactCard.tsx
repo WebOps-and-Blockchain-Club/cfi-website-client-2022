@@ -93,6 +93,7 @@ const ContactCard = ({ members }: Probs) => {
                   href={`mailto:${_member.email}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  title={_member.email}
                 >
                   <img
                     src={EmailIcon}
@@ -110,6 +111,7 @@ const ContactCard = ({ members }: Probs) => {
                     href={`https://api.whatsapp.com/send?phone=+91${_member.phone}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    title={_member.phone}
                   >
                     <img
                       src={WhatsAppIcon}
