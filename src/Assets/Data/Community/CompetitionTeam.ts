@@ -25,11 +25,31 @@ import RaftarAchievements2 from "../../Images/Community/CompetitionTeam/Raftar/A
 import RaftarAchievements3 from "../../Images/Community/CompetitionTeam/Raftar/Achievements3.jpg";
 import RaftarAchievements4 from "../../Images/Community/CompetitionTeam/Raftar/Achievements4.jpg";
 
+import RaftarGallery1 from "../../Images/Community/CompetitionTeam/Raftar/Gallery1.jpg";
+import RaftarGallery2 from "../../Images/Community/CompetitionTeam/Raftar/Gallery2.jpg";
+import RaftarGallery3 from "../../Images/Community/CompetitionTeam/Raftar/Gallery3.jpg";
+import RaftarGallery4 from "../../Images/Community/CompetitionTeam/Raftar/Gallery4.jpg";
+import RaftarGallery5 from "../../Images/Community/CompetitionTeam/Raftar/Gallery5.jpg";
+import RaftarGallery6 from "../../Images/Community/CompetitionTeam/Raftar/Gallery6.jpg";
+
 // ABHIYAAN
 import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.jpg";
 
+import AbhiyaanGallery1 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery1.jpg";
+import AbhiyaanGallery2 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery2.jpg";
+import AbhiyaanGallery3 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery3.jpg";
+import AbhiyaanGallery4 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery4.jpg";
+import AbhiyaanGallery5 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery5.jpg";
+
 // ANVESHAK
 import AnveshakLanding from "../../Images/Community/CompetitionTeam/Anveshak/Landing.jpg";
+
+import AnveshakGallery1 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery1.jpg";
+import AnveshakGallery2 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery2.jpg";
+import AnveshakGallery3 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery3.jpg";
+import AnveshakGallery4 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery4.jpg";
+import AnveshakGallery5 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery5.jpg";
+import AnveshakGallery6 from "../../Images/Community/CompetitionTeam/Anveshak/Gallery6.jpg";
 
 // AVISHKAR
 import AvishkarLanding from "../../Images/Community/CompetitionTeam/Avishkar/Landing.jpg";
@@ -88,6 +108,26 @@ export const Teams: ITeams = {
           "Seeing the global transition to electric powertrains, Team Raftar designed their first electric car this year. An electric motor gives higher acceleration and eliminates further complications like a gearbox. This in turn increases the vehicle’s simplicity and efficiency. They plan to participate in national and international formula student engineering competitions with this car.",
       },
     ],
+    gallery: [
+      {
+        image: RaftarGallery1,
+      },
+      {
+        image: RaftarGallery2,
+      },
+      {
+        image: RaftarGallery3,
+      },
+      {
+        image: RaftarGallery4,
+      },
+      {
+        image: RaftarGallery5,
+      },
+      {
+        image: RaftarGallery6,
+      },
+    ],
     email: "raftar@smail.iitm.ac.in",
     website: "https://cfi.iitm.ac.in/raftar/",
     contacts: [
@@ -129,6 +169,23 @@ export const Teams: ITeams = {
         title: "ROS ##Software driver",
         description:
           'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
+      },
+    ],
+    gallery: [
+      {
+        image: AbhiyaanGallery1,
+      },
+      {
+        image: AbhiyaanGallery2,
+      },
+      {
+        image: AbhiyaanGallery3,
+      },
+      {
+        image: AbhiyaanGallery4,
+      },
+      {
+        image: AbhiyaanGallery5,
       },
     ],
     website: "https://www.teamabhiyaan.com/",
@@ -190,6 +247,26 @@ export const Teams: ITeams = {
       {
         description:
           "Our rover features a robotic arm to perform various tasks like opening cupboards, flipping switches, tightening screws, etc. The onboard science laboratory on the rover allows us to perform experiments on soil samples collected in situ, testing for the presence of past or present life. Every year, we build a new rover incorporating new changes and innovations to improve on the previous model.",
+      },
+    ],
+    gallery: [
+      {
+        image: AnveshakGallery1,
+      },
+      {
+        image: AnveshakGallery2,
+      },
+      {
+        image: AnveshakGallery3,
+      },
+      {
+        image: AnveshakGallery4,
+      },
+      {
+        image: AnveshakGallery5,
+      },
+      {
+        image: AnveshakGallery6,
       },
     ],
     email: "teamanveshak@smail.iitm.ac.in",
