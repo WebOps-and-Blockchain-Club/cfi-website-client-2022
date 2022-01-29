@@ -52,8 +52,8 @@ export default function TopCarousel() {
             style={{
               height: matches ? "90vh" : "100vh",
               backgroundImage: matches
-                ? `linear-gradient(180deg, #030303 0%, rgba(8, 7, 8, 0) 43.83%, #030303 75.13%), url(${_data.image})`
-                : `linear-gradient(180deg,#030303 0%,rgba(8, 7, 8, 0) 43.83%,#030303 90.13%), url(${_data.image})`,
+                ? `linear-gradient(180deg, #030303 0%, rgba(8, 7, 8, 0) 43.83%, #030303 75.13%), url(${_data.imageP})`
+                : `linear-gradient(180deg,#030303 0%,rgba(8, 7, 8, 0) 43.83%,#030303 90.13%), url(${_data.imageW})`,
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",

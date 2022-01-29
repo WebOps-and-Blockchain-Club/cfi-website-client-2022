@@ -1,4 +1,11 @@
-import CarouselImage1 from "../../Assets/Images/Home/Landing images/car2.jpg";
+import HomeLanding1W from "../Images/Home/Landing1W.jpg";
+import HomeLanding2 from "../Images/Home/Landing2.jpg";
+import HomeLanding3W from "../Images/Home/Landing3W.jpg";
+import HomeLanding4W from "../Images/Home/Landing4.jpg";
+
+import HomeLanding1P from "../Images/Home/Landing1P.jpg";
+import HomeLanding3P from "../Images/Home/Landing3P.jpg";
+import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
@@ -19,23 +26,27 @@ import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 
-import GalleryImage1 from "../../Assets/Images/Home/Landing images/car2.jpg";
+import GalleryImage1 from "../../Assets/Images/Home/Gallery1.jpg";
 
 export const CarouselData = [
   {
-    image: CarouselImage1,
+    imageW: HomeLanding1W,
+    imageP: HomeLanding1P,
     linear: "India’s largest 24x7 student-run innovation lab",
   },
   {
-    image: CarouselImage1,
+    imageW: HomeLanding2,
+    imageP: HomeLanding2,
     linear: "A community of young innovators and thinkers",
   },
   {
-    image: CarouselImage1,
+    imageW: HomeLanding3W,
+    imageP: HomeLanding3P,
     linear: "Fuelled by the spirit of innovation",
   },
   {
-    image: CarouselImage1,
+    imageW: HomeLanding4W,
+    imageP: HomeLanding4P,
     linear: "Revolutionizing tech and innovation",
   },
 ];
