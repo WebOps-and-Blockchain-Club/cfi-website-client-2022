@@ -6,9 +6,7 @@ const Wrapper = ({ children }: { children: any }) => {
   useLayoutEffect(() => {
     if (location.hash) {
       const element = document.getElementById(location.hash.split("#")[1]);
-      document.documentElement.scrollTo({
-        top: element ? element.offsetTop : 0,
-      });
+      element?.scrollIntoView();
     } else document.documentElement.scrollTo(0, 0);
   }, [location.pathname, location.hash]);
   return children;

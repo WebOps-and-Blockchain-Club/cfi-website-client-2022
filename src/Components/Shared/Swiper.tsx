@@ -72,7 +72,7 @@ export default function CustomSwiper(probs: Probs) {
             <SwiperCard
               heading={_data.title}
               image={_data.image}
-              link={`/achievements/#${_data.id}`}
+              link={`/achievements#${_data.id}`}
             />
           </SwiperSlide>
         ))}
@@ -137,7 +137,7 @@ function SwiperCard({ heading, image, link }: MediaCardProps) {
               letterSpacing: "1px",
             }}
           >
-            {heading}
+            {heading.split("##").join("")}
           </Typography>
         </CardContent>
       </Card>

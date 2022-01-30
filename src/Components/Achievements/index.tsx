@@ -1,20 +1,19 @@
-import React , {useState} from "react";
+import React from "react";
 
-import { Grid, Typography , Box } from "@mui/material";
+import { Grid, Typography, Box, useTheme, useMediaQuery } from "@mui/material";
 
 import CustomBox from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { AchievementsData } from "../../Assets/Data/Achievements";
-import Idea2 from "../../Assets/Images/AboutUs/idea2.png";
 
-import '../../Styles/achievements.css'
+import "../../Styles/achievements.css";
 
 interface Props {}
 
 const Achievements = (props: Props) => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
-
-  
   return (
     <CustomBox>
       <Grid
@@ -28,81 +27,81 @@ const Achievements = (props: Props) => {
         alignItems="center"
       >
         <Heading white="ACHIEVE" red="MENTS" />
-        {/* { AchievementsData.map((_achievement) => 
-        (
-          <section id={_achievement.id}>
-            <Grid minHeight={"100vh"}>
-              <Typography
-                color={"white"}
-                dangerouslySetInnerHTML={{ __html: _achievement.description }}
-              />
-            </Grid>
-          </section>
-        ) 
-        )}  */}
 
-   
+        <Box className="achievements-wrapper">
+          <Box className="center-line">
+            <Box style={{ marginLeft: "-22.5px" }} className="square"></Box>
+          </Box>
 
-        
-        <Box className="achievements-wrapper" >
-          <Box className="center-line" >
-          <Box style={{ marginLeft:'-22.5px'}} className="square"></Box>
-        </Box>
-        
-        {AchievementsData.map((achievement , i) => 
-        {
-          return (
-        i%2==0?
-        (
-          <section id={achievement.id} style={{marginTop: i== 0 ? '180px' : '110px'}}  className="row row-1">
-            <div className="content">
-              <section >
-                <div className="details">
-                  <span style={{color: 'white'}} className="title">{achievement.title}</span>
-                  {/* <span style={{color: 'white'}} >{achievement.date}</span> */}
+          {AchievementsData.map((achievement, i) => {
+            return i % 2 === 0 ? (
+              <section
+                id={achievement.id}
+                style={{
+                  paddingTop: i === 0 ? "180px" : "55px",
+                  paddingBottom: "55px",
+                }}
+                className="row row-1"
+              >
+                <div className="content">
+                  <section>
+                    <div className="details">
+                      <span style={{ color: "#D6D6D6" }} className="title">
+                        {achievement.title}
+                      </span>
+                    </div>
+                    <Typography
+                      color="primary.contrastText"
+                      fontSize={matches ? "16px" : "18px"}
+                      textAlign={"justify"}
+                      dangerouslySetInnerHTML={{
+                        __html: achievement.description,
+                      }}
+                    />
+                  </section>
+                  <div className="square"></div>
+                  <div className="branch"></div>
                 </div>
-                <Typography
-                color={"white"}
-                dangerouslySetInnerHTML={{ __html: achievement.description }}
-              />
-              </section>  
-              <div className="square"></div>           
-              <div className="branch"></div>           
-            </div>
 
-            <div className="image">
-            <img src={achievement.image} />
-            </div>
-          </section>
-        ) : (
-          <section id={achievement.id} style={{marginTop:'110px'}} className="row row-2">
-              <div  className="image">
-                <img src={achievement.image} />
-              </div>
-              <div className="content" style={{flexDirection:'row-reverse'}}>
-                <section >
-                  <div className="details">
-                    <span style={{color: 'white'}}  className="title">{achievement.title}</span>
-                    {/* <span>{achievement.date}</span> */}
-                  </div>
-                  <Typography
-                color={"white"}
-                dangerouslySetInnerHTML={{ __html: achievement.description }}
-              />
-      
-                </section>  
-              <div className="square"></div>           
-              <div className="branch"></div>           
-            </div>
-          </section>
-        )
-          )
-        }
-        )}
-          
+                <div className="image">
+                  <img src={achievement.image} alt={achievement.title} />
+                </div>
+              </section>
+            ) : (
+              <section
+                id={achievement.id}
+                style={{ paddingTop: "55px", paddingBottom: "55px" }}
+                className="row row-2"
+              >
+                <div className="image">
+                  <img src={achievement.image} alt={achievement.title} />
+                </div>
+                <div
+                  className="content"
+                  style={{ flexDirection: "row-reverse" }}
+                >
+                  <section>
+                    <div className="details">
+                      <span style={{ color: "#D6D6D6" }} className="title">
+                        {achievement.title}
+                      </span>
+                    </div>
+                    <Typography
+                      color="primary.contrastText"
+                      fontSize={matches ? "16px" : "18px"}
+                      textAlign={"justify"}
+                      dangerouslySetInnerHTML={{
+                        __html: achievement.description,
+                      }}
+                    />
+                  </section>
+                  <div className="square"></div>
+                  <div className="branch"></div>
+                </div>
+              </section>
+            );
+          })}
         </Box>
-
-
       </Grid>
     </CustomBox>
   );

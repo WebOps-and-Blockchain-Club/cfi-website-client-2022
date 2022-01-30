@@ -1,5 +1,5 @@
 .achievements-wrapper {
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 50px auto;
   padding: 0 20px;
   min-height: 100vh;
@@ -69,7 +69,7 @@
 
 .achievements-wrapper .row .image img {
   width: 65%;
-  border-radius: 35px;
+  border-radius: 20px;
 }
 .achievements-wrapper .row-1 .image img {
   margin-right: 10%;
@@ -85,7 +85,8 @@
   justify-content: space-between;
 } */
 .row section .details .title {
-  font-size: 22px;
+  text-align: justify;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .row section p {
@@ -101,7 +102,7 @@
   font-weight: 400;
   transition: all 0.3s ease;
 } */
-@media (max-width: 790px) {
+@media (max-width: 900px) {
   .achievements-wrapper .center-line {
     left: 40px;
   }
@@ -139,13 +140,18 @@
     left: -60px;
   } */
 }
-@media (max-width: 440px) {
+@media (max-width: 600px) {
+  .row section .details .title {
+    font-size: 1.25rem;
+  }
+
   .achievements-wrapper .center-line,
   .row section::before {
     display: none;
   }
 
   .achievements-wrapper {
+    padding: 0;
     margin-top: -120px;
   }
 
