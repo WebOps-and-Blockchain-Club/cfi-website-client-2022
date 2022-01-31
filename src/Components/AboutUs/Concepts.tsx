@@ -62,6 +62,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? (matches ? "h6" : "h5") : "h4"}
             color="primary.contrastText"
+            textAlign={"justify"}
             sx={{ fontFamily: "Proxima Nova Bold", marginBottom: "10px" }}
           >
             Walk in with an idea, walk out with a product
@@ -69,6 +70,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? "body1" : "h6"}
             color="primary.contrastText"
+            textAlign={"justify"}
           >
             Among the general demographic, students are more likely to come up
             with new, creative and outrageous ideas. Add to this the fact that
@@ -136,6 +138,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? (matches ? "h6" : "h5") : "h4"}
             color="primary.contrastText"
+            textAlign={"justify"}
             sx={{ fontFamily: "Proxima Nova Bold", marginBottom: "10px" }}
           >
             A futuristic lab environment
@@ -143,6 +146,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? "body1" : "h6"}
             color="primary.contrastText"
+            textAlign={"justify"}
           >
             The interiors of CFI are being developed in collaboration with a
             celebrated green architect. The interiors are being designed to
@@ -247,6 +251,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? "body1" : "h6"}
             color="primary.contrastText"
+            textAlign={"justify"}
           >
             CFI will support large student projects. These projects maybe for
             international contests such as Formula-SAE, University Rover
@@ -259,6 +264,7 @@ function Concepts() {
           <Typography
             variant={matches2 ? "body1" : "h6"}
             color="primary.contrastText"
+            textAlign={"justify"}
           >
             India is increasingly aware that for uniform progress, we have to
             look for solutions to problems in the villages and other sub-urban

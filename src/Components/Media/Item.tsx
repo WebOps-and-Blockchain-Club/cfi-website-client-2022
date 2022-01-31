@@ -45,10 +45,14 @@ const Item = (props: Props) => {
             >
               <p className="item-head">{props.heading}</p>
             </a>
-            <p style={{ textAlign: "center", color: "#d6d6d6" }}>
+            <p
+              style={{ textAlign: "justify", color: "#d6d6d6", width: "100%" }}
+            >
               Publisher: {props.publisher}
             </p>
-            <p style={{ textAlign: "center", color: "#d6d6d6" }}>
+            <p
+              style={{ textAlign: "justify", color: "#d6d6d6", width: "100%" }}
+            >
               Published Date: {props.date}
             </p>
           </Stack>

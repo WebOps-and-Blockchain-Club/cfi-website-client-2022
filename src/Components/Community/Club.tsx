@@ -83,7 +83,7 @@ const Club = () => {
             <Typography
               color="primary.contrastText"
               sx={{
-                textAlign: "center",
+                textAlign: "justify",
                 fontSize: "18px",
               }}
               dangerouslySetInnerHTML={{ __html: data.description }}

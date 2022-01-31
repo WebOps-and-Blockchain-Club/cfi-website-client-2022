@@ -42,8 +42,9 @@ const ContactUs = () => {
               width: "100%",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "start",
-              paddingTop: matches ? "60px" : "120px",
+              justifyContent: "space-between",
+              paddingTop: matches ? "7vh" : "15vh",
+              paddingBottom: "5vh",
             }}
             textAlign="center"
           >

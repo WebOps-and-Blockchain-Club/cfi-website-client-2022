@@ -52,7 +52,7 @@ export default function IntroCard() {
             xs: "14px",
             sm: "18px",
           }}
-          textAlign={"center"}
+          textAlign={"justify"}
         >
           {AboutCFI}
         </Typography>

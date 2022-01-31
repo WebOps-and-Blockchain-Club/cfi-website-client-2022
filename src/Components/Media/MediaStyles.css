@@ -27,6 +27,7 @@ body {
   margin: 0;
   font-size: 1.5rem;
   font-weight: bolder;
+  text-align: justify;
 }
 
 .item-head:hover {
@@ -57,7 +58,7 @@ body {
   }
 
   .item-head {
-    text-align: center;
+    text-align: justify;
     font-size: 1.25rem;
   }
 }
