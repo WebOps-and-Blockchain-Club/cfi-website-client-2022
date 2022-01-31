@@ -43,36 +43,13 @@ const ContactUs = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              paddingTop: matches ? "7vh" : "15vh",
-              paddingBottom: "5vh",
             }}
+            pt={{ xs: 8, sm: 12, md: 14, lg: 16 }}
+            pb={"5vh"}
             textAlign="center"
           >
             <Grid item>
-              <Typography
-                variant={matches ? "h5" : "h3"}
-                color="primary.contrastText"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
-                }}
-              >
-                CFI&nbsp;
-              </Typography>
-              <Typography
-                variant={matches ? "h5" : "h3"}
-                color="secondary"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
-                }}
-              >
-                TEAM
-              </Typography>
+              <Heading white="CFI" red=" TEAM" />
             </Grid>
             {!matches && (
               <Typography
