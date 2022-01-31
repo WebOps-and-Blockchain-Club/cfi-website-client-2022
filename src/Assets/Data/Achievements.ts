@@ -23,7 +23,7 @@ export const AchievementsData = [
   },
   {
     id: "team-raftar-formula-racing-makes-it-to-the-top",
-    title: "#Team Raftar Formula Racing makes it to the top, once again!",
+    title: "Team Raftar Formula Racing makes it to the top, once again!",
     date: "November, 2021",
     description: `Raftar Formula Racing won the Overall Championship in the Electric category in the ${link(
       "Formula Bharat Virtuals",
@@ -67,7 +67,7 @@ export const AchievementsData = [
   },
   {
     id: "team-raftar-formula-racing-announces-its-arrival",
-    title: "#Team Raftar Formula Racing, announces its arrival!!",
+    title: "Team Raftar Formula Racing, announces its arrival!!",
     date: "Mid Augest, 2021",
     description: `Carrying on their legacy, Raftar Formula Racing set another record this year by winning the 2nd Place Overall in the Formula Student Electric Vehicle Concept Challenge (${link(
       "FSEV-2021",
