@@ -5,6 +5,7 @@ import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import {
   AboutCFIOneLinear,
   CFIClubs,
+  CFIStats,
   ClubList,
   CompetitionTeamList,
   CompetitionTeams,
@@ -21,6 +22,7 @@ import TopCarousel from "./Carousel";
 import IntroCard from "./IntroCard";
 import ClubCard from "./ClubCard";
 import CompetitionTeamCard from "./CompetitionTeamCard";
+import StatsCard from "./StatsCard";
 
 interface Props {}
 
@@ -82,6 +84,23 @@ const Home = (props: Props) => {
           </Grid>
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
             <IntroCard />
+          </Grid>
+          <Grid
+            item
+            container
+            mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
+            justifyContent={"center"}
+            rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+            columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+            style={{ maxWidth: "1200px" }}
+          >
+            {CFIStats.map((_stat) => (
+              <StatsCard
+                title={_stat.title}
+                number={_stat.number}
+                icon={_stat.icon}
+              />
+            ))}
           </Grid>
         </Grid>
 

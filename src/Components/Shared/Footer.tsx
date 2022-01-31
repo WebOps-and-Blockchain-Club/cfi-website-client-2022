@@ -1,11 +1,11 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 
-import twitter from "../../Assets/Images/Social/twitter.png";
-import instagram from "../../Assets/Images/Social/instagram.png";
-import youtube from "../../Assets/Images/Social/youtube.png";
-import linkedin from "../../Assets/Images/Social/linkedin.png";
-import mail from "../../Assets/Images/Social/email.png";
+import twitter from "../../Assets/Icons/Social/twitter.png";
+import instagram from "../../Assets/Icons/Social/instagram.png";
+import youtube from "../../Assets/Icons/Social/youtube.png";
+import linkedin from "../../Assets/Icons/Social/linkedin.png";
+import mail from "../../Assets/Icons/Social/email.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";

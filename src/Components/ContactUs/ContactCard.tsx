@@ -9,9 +9,9 @@ import {
 } from "@mui/material";
 import { IMember } from "../../Types";
 
-import EmailIcon from "../../Assets/Images/Social/email.png";
-import WhatsAppIcon from "../../Assets/Images/Social/whatsapp1.png";
-import LinkedInIcon from "../../Assets/Images/Social/linkedin.png";
+import EmailIcon from "../../Assets/Icons/Social/email.png";
+import WhatsAppIcon from "../../Assets/Icons/Social/whatsapp1.png";
+import LinkedInIcon from "../../Assets/Icons/Social/linkedin.png";
 
 interface Probs {
   members: IMember[];

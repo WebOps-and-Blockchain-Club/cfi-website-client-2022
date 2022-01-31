@@ -7,12 +7,21 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
+import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
+import PeopleIcon from "../Icons/Stats/People.svg";
+import FootfallIcon from "../Icons/Stats/Footfall.svg";
+import StartupsIcon from "../Icons/Stats/Startups.svg";
+import AwardsIcon from "../Icons/Stats/Awards.svg";
+import CollaborationIcon from "../Icons/Stats/Collab.svg";
+import RecordsIcon from "../Icons/Stats/Record.svg";
+import IndustryProjectsIcon from "../Icons/Stats/IndustryProjects.svg";
+
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
 import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
 import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
-import HorizonLogo from "../Images/ClubLogo/HorizonLogo(withoutName).png";
+import HorizonLogo from "../Images/ClubLogo/HorizonWhiteLogo(withoutName).png";
 import iBotLogo from "../Images/ClubLogo/iBOTLogo.png";
 import iGEMLogo from "../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../Images/ClubLogo/ProductDesignLogo.png";
@@ -172,6 +181,49 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
                          national and international competitions. It also constitutes an
                          integral part of IIT Madras' entrepreneurial culture, with many CFI
                          projects turning into startups.`;
+
+export const CFIStats = [
+  {
+    title: "Current Projects in CFI",
+    number: "60+",
+    icon: CurrentProjectsIcon,
+  },
+  {
+    title: "People Involved in CFI",
+    number: "740+",
+    icon: PeopleIcon,
+  },
+  {
+    title: "Average Footfall Per Day",
+    number: "70",
+    icon: FootfallIcon,
+  },
+  {
+    title: "Startups from CFI",
+    number: "15+",
+    icon: StartupsIcon,
+  },
+  {
+    title: "National & International Awards",
+    number: "27",
+    icon: AwardsIcon,
+  },
+  {
+    title: "Collaborations with NGOs",
+    number: "10",
+    icon: CollaborationIcon,
+  },
+  {
+    title: "World Records Set by CFI",
+    number: "4",
+    icon: RecordsIcon,
+  },
+  {
+    title: "Industry Projects in CFI",
+    number: "15+",
+    icon: IndustryProjectsIcon,
+  },
+];
 
 export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 13 clubs`;
 
