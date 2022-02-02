@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import * as React from "react";
-import bg from "../../Assets/Images/Particles.png";
+import bg from "../../Assets/Images/Particles.svg";
 import Footer from "./Footer";
 import Header from "./Navbar";
 
@@ -15,6 +15,7 @@ const CustomBox = (props: Props) => {
         backgroundColor: "#030303",
         backgroundImage: `url(${bg})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundAttachment: "fixed",
         width: "100vw",
         maxWidth: "100%",

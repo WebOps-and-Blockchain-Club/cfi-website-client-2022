@@ -1,10 +1,10 @@
-import Achievements7 from "../Images/Achievements/Achievements7.png";
-import Achievements6 from "../Images/Achievements/Achievements6.png";
-import Achievements5 from "../Images/Achievements/Achievements5.png";
-import Achievements4 from "../Images/Achievements/Achievements4.png";
-import Achievements3 from "../Images/Achievements/Achievements3.png";
-import Achievements2 from "../Images/Achievements/Achievements2.png";
-import Achievements1 from "../Images/Achievements/Achievements1.png";
+import Achievements7 from "../Images/Achievements/Achievements7.jpg";
+import Achievements6 from "../Images/Achievements/Achievements6.jpg";
+import Achievements5 from "../Images/Achievements/Achievements5.jpg";
+import Achievements4 from "../Images/Achievements/Achievements4.jpg";
+import Achievements3 from "../Images/Achievements/Achievements3.jpg";
+import Achievements2 from "../Images/Achievements/Achievements2.jpg";
+import Achievements1 from "../Images/Achievements/Achievements1.jpg";
 import { link } from "./utils";
 
 export const AchievementsData = [

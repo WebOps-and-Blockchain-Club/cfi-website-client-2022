@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import { Grid, Typography, Box } from "@mui/material";
 
-import Idea1 from "../../Assets/Images/AboutUs/idea1.png";
-import Idea2 from "../../Assets/Images/AboutUs/idea2.png";
-import Idea3 from "../../Assets/Images/AboutUs/idea3.png";
-import Idea4 from "../../Assets/Images/AboutUs/idea4.png";
+import Idea1 from "../../Assets/Images/AboutUs/idea1.jpg";
+import Idea2 from "../../Assets/Images/AboutUs/idea2.jpg";
+import Idea3 from "../../Assets/Images/AboutUs/idea3.jpg";
+import Idea4 from "../../Assets/Images/AboutUs/idea4.jpg";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 

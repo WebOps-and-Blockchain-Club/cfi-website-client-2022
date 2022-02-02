@@ -41,6 +41,8 @@ import AbhiyaanGallery2 from "../../Images/Community/CompetitionTeam/Abhiyaan/Ga
 import AbhiyaanGallery3 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery3.jpg";
 import AbhiyaanGallery4 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery4.jpg";
 import AbhiyaanGallery5 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery5.jpg";
+import AbhiyaanGallery6 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery6.jpg";
+import AbhiyaanGallery7 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery7.jpg";
 
 // ANVESHAK
 import AnveshakLanding from "../../Images/Community/CompetitionTeam/Anveshak/Landing.jpg";
@@ -189,6 +191,12 @@ export const Teams: ITeams = {
       {
         image: AbhiyaanGallery5,
       },
+      {
+        image: AbhiyaanGallery6,
+      },
+      {
+        image: AbhiyaanGallery7,
+      },
     ],
     email: "abhiyaan@smail.iitm.ac.in",
     contacts: [
@@ -204,7 +212,7 @@ export const Teams: ITeams = {
         image: AbhiyaanHead2,
         email: "amitdodmani4@gmail.com",
         phone: "8147327330",
-        linkedIn: "https://www.linkedin.com/in/ishan-chokshi-789829196/",
+        linkedIn: "https://www.linkedin.com/in/amit-dodmani-b1a906a4/",
       },
     ],
   },
@@ -214,7 +222,7 @@ export const Teams: ITeams = {
     logoM: AnveshakLogoM,
     landing: AnveshakLanding,
     description:
-      "We, Team Anveshak, are a team of over 30 passionate students from IIT Madras who live and breathe robotics. Since our beginnings around early 2016, we have spent countless days and nights building our own remote operated all-terrain rovers, complete with a robotic manipulator and digger. Our team brings together a set of highly dedicated and skilled students working on mechanical design, system architecture and control, outreach and business relations. We also organize educational workshops for students of our institute on different aspects of robotics. The technical knowledge and practical experience the team imparts to its members is unparalleled, nurturing them into effective team players and leaders of industry and research. \n",
+      "We, Team Anveshak, are a team of over 30+ passionate students from IIT Madras who live and breathe robotics. Since our beginnings around early 2016, we have spent countless days and nights building our own remote operated all-terrain rovers, complete with a robotic manipulator and digger. Our team brings together a set of highly dedicated and skilled students working on mechanical design, system architecture and control, outreach and business relations. We also organize educational workshops for students of our institute on different aspects of robotics. The technical knowledge and practical experience the team imparts to its members is unparalleled, nurturing them into effective team players and leaders of industry and research. \n",
     achievements: [
       {
         description:
@@ -222,7 +230,7 @@ export const Teams: ITeams = {
       },
       {
         description:
-          "In the University Rover Challenge 2019, we designed the next generation Mars rover that will one day work along with the astronauts to explore the red planet. We got 12th position in the same.",
+          "In the University Rover Challenge 2019, we designed the next generation Mars rover that will one day work along with the astronauts to explore the red planet. Ended up as one of the top 12 teams in the world out of more than 84+ teams.",
       },
       {
         description:
@@ -251,7 +259,7 @@ export const Teams: ITeams = {
           "Our rover features a robotic arm to perform various tasks like opening cupboards, flipping switches, tightening screws, etc. The onboard science laboratory on the rover allows us to perform experiments on soil samples collected in situ, testing for the presence of past or present life. Every year, we build a new rover incorporating new changes and innovations to improve on the previous model.",
       },
     ],
-    website: "https://www.teamabhiyaan.com/",
+    website: "http://www.anveshak.team/",
     gallery: [
       {
         image: AnveshakGallery1,
@@ -298,8 +306,9 @@ export const Teams: ITeams = {
       "We are a group of 40+ individuals hailing from across the country and pursuing various courses at IITM in different fields of study. Our collective passion brings us together for a cleaner future through sustainable Hyperloop research. With a single-minded focus on scalability, we are working on a whole host of new tube and pod technologies needed to implement a full-scale hyperloop safely. Elon Musk appreciated the technological progress we have made towards that goal at the SpaceX Hyperloop Pod Competition 2019. We built our latest pod Avishkar 'Garv,' during the height of the pandemic through relentless effort. Avishkar 'Garv' is equipped with many novel technologies that we built in-house from scratch and won the 'Most Scalable Design Award' among many others at the European Hyperloop Week.",
     achievements: [
       {
+        title: "Finalist at ##SpaceX Hyperloop Pod Competition",
         description:
-          "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition.",
+          "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition. Team Avishkar Hyperloop also met and interacted with ElonMusk, who was all praise for their stupendous work.",
         images: [
           {
             image: AvishkarAchievements1a,
@@ -316,8 +325,9 @@ export const Teams: ITeams = {
         ],
       },
       {
+        title: "Winner of the most ##scalable design award",
         description:
-          "The team participated in the European Hyperloop Week, July 2021 virtually,  with our indigenously developed Hyperloop pod ‘Garv’ and won the ‘Most Scalable Design Award’ as well as nominations in several other categories.",
+          "Our team participated in the European Hyperloop Week, July 2021 virtually, with our indigenously developed Hyperloop pod ‘Garv’ and won the ‘Most Scalable Design Award’. We were also nominated among the top 5 teams around the globe in mechanical, levitation, propulsion, and complete pod award categories at the EHW ’21. Team Avishkar Hyperloop was the only team competing virtually to have won an award and also the only virtually participating team with top 5 in these many categories.",
         images: [
           {
             image: AvishkarAchievements2a,
@@ -325,7 +335,7 @@ export const Teams: ITeams = {
           },
           {
             image: AvishkarAchievements2b,
-            heading: "Winner of the most scalable design award",
+            heading: "Winner of the Most Scalable Design Award",
           },
         ],
       },
@@ -334,11 +344,11 @@ export const Teams: ITeams = {
       {
         title: "Avishkar’s Hyperloop Pod 2021: ##‘Garv’",
         description:
-          "The team built Asia’s most technologically advanced Hyperloop Pod, equipped with contactless propulsion using Linear Induction Motor, contactless braking using Eddy Current Braking, and a compact inverter for propulsion control. Designed entirely online and manufactured near the peak of the pandemic, the Pod was completed in July 2021",
+          "The team built Asia’s most technologically advanced Hyperloop Pod, equipped with contactless propulsion using Linear Induction Motor, contactless braking using Eddy Current Braking, and a compact inverter for propulsion control. Designed entirely online and manufactured near the peak of the pandemic, the Pod was completed in July 2021.",
         image: AvishkarProject1,
       },
       {
-        title: "A 500m long Hyperloop ##test track",
+        title: "The Hyperloop tube is expected to be ##ready by Summer 2022",
         description:
           "The team is building a 500m long, 2m diameter vacuum tube at the IITM campus, a first of its kind in the world by a student team. The Hyperloop tube is expected to be ready by March 2022. The sub-pilot tube will be a breakthrough in the Hyperloop development and accelerate technology development. The world-leading facility will act as a sub-scale testing ground to the Hyperloop community and lead to breakthroughs. \n After a year-long research, the team has developed this novel and cost-effective tube design and has also filed for a provisional patent for the same. We have also set up a 3.6m long vacuum tube prototype at CFI to test the validity of the design and test the vacuum compatibility of various components of our Hyperloop pod.",
         image: AvishkarProject2,
@@ -376,21 +386,21 @@ export const Teams: ITeams = {
       {
         name: "Bharat Bhavsar",
         image: AvishkarHead1,
-        email: "me20m096@smail.iitm.ac.in",
+        email: "ae18b021@smail.iitm.ac.in",
         phone: "9979090823",
         linkedIn: "https://www.linkedin.com/in/bharat-bhavsar-2a9933182/",
       },
       {
         name: "Yash Gautam",
         image: AvishkarHead2,
-        email: "ae18b021@smail.iitm.ac.in",
+        email: "me20m096@smail.iitm.ac.in",
         phone: "8602952842",
         linkedIn: "https://www.linkedin.com/in/yash4590",
       },
       {
         name: "Vibhor Jain",
         image: AvishkarHead3,
-        email: "me20m096@smail.iitm.ac.in",
+        email: "ce19b100@smail.iitm.ac.in",
         phone: "9166836673",
         linkedIn: "https://www.linkedin.com/in/vibhor-jain-6495031a0/",
       },

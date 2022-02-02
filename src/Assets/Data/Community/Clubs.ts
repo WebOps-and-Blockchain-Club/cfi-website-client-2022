@@ -73,6 +73,15 @@ import HorizonAchievements3 from "../../Images/Community/Clubs/Horizon/Achieveme
 import HorizonAchievements4 from "../../Images/Community/Clubs/Horizon/Achievements4.png";
 import HorizonAchievements5 from "../../Images/Community/Clubs/Horizon/Achievements5.jpg";
 
+// IBOT
+import IBotGallery1 from "../../Images/Community/Clubs/iBot/Gallery1.jpeg";
+import IBotGallery2 from "../../Images/Community/Clubs/iBot/Gallery2.jpeg";
+import IBotGallery3 from "../../Images/Community/Clubs/iBot/Gallery3.jpeg";
+import IBotGallery4 from "../../Images/Community/Clubs/iBot/Gallery4.jpeg";
+import IBotGallery5 from "../../Images/Community/Clubs/iBot/Gallery5.jpeg";
+import IBotGallery6 from "../../Images/Community/Clubs/iBot/Gallery6.jpeg";
+import IBotGallery7 from "../../Images/Community/Clubs/iBot/Gallery7.jpeg";
+
 // SAHAAY
 import SahaayAchievements1 from "../../Images/Community/Clubs/Sahaay/Achievements1.jpeg";
 import SahaayAchievements2 from "../../Images/Community/Clubs/Sahaay/Achievements2.png";
@@ -427,11 +436,11 @@ export const Clubs: IClubs = {
     achievements: [
       {
         description:
-          "IIT Madras’ iBot club secured a Silver(Overall 4th Place) in the Inter IIT Techmeet 8.O - 2020 conducted by IIT Roorkee. The problem statement was about a Robot which can perform terrace farming. The club’s Prototype was SAMOSA - Semi Automatic Machine Oriented for Step Agriculture. It was subsequently continued by the club as one of the Projects for the year.",
+          "Unsurprisingly, the club secured a Bronze (Overall 7th place) in the Inter IIT Techmeet 9.O - 2021 conducted by IIT Guwahati. The problem statement was AgroBot which would perform multiple agricultural tasks such as Weeding, Transplantation, Seed sowing and need to be economically favourable for marginal farmers. The club’s proposition came in the form of development of a robot which could perform all the above tasks along with Ploughing, Fertilising in addition. In due course, it was transformed as a club project - Project MPAV - Multi purpose agricultural vehicle.",
       },
       {
         description:
-          "Unsurprisingly, the club secured a Bronze (Overall 7th place) in the Inter IIT Techmeet 9.O - 2021 conducted by IIT Guwahati. The problem statement was AgroBot which would perform multiple agricultural tasks such as Weeding, Transplantation, Seed sowing and need to be economically favourable for marginal farmers. The club’s proposition came in the form of development of a robot which could perform all the above tasks along with Ploughing, Fertilising in addition. In due course, it was transformed as a club project - Project MPAV - Multi purpose agricultural vehicle.",
+          "IIT Madras’ iBot club secured a Silver(Overall 4th Place) in the Inter IIT Techmeet 8.O - 2020 conducted by IIT Roorkee. The problem statement was about a Robot which can perform terrace farming. The club’s Prototype was SAMOSA - Semi Automatic Machine Oriented for Step Agriculture. It was subsequently continued by the club as one of the Projects for the year.",
       },
       {
         description:
@@ -440,6 +449,29 @@ export const Clubs: IClubs = {
       {
         description:
           "One of the club projects, Project Artemis, got patented in the year 2017. It is basically a Rail Road Crack detection Robot. It was recognised for the unique design which enables it to travel on the inside of the track with wheels perpendicular to the ground and the innovative use of sensor technology to detect the surface cracks on the tracks.",
+      },
+    ],
+    gallery: [
+      {
+        image: IBotGallery1,
+      },
+      {
+        image: IBotGallery2,
+      },
+      {
+        image: IBotGallery3,
+      },
+      {
+        image: IBotGallery4,
+      },
+      {
+        image: IBotGallery5,
+      },
+      {
+        image: IBotGallery6,
+      },
+      {
+        image: IBotGallery7,
       },
     ],
     email: "ibotcfi@gmail.com",
@@ -702,16 +734,21 @@ export const Clubs: IClubs = {
       "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects.",
     achievements: [
       {
-        title: "Launch of ##CLinsti App",
-        description:
-          "This year we successfully launched the all new CLinsti app – a mobile application developed by the joint efforts of Engineering Section and CFI to promote cleanliness and ensure proper waste management in IITM campus. It was launched in October 2021 and is available in both Appstore and play store and it got over 200 downloads within a month of its release.",
-        image: WebOpsAndBlockchainAchievement1,
-      },
-      {
         title:
           "Chennai Water Logging: \n \n ##An initiative to create a real-time flood map",
         description:
           "A platform that enables the public to report water logging details across the Chennai region. The data gathered through this platform aims to improve disaster preparedness and response in communities by gathering, sorting, and presenting data of flooding reports. This Crowd source data, curated through this platform will help to understand the reasons for waterlogging / inundation and help IIT Madras researchers to develop / design remedial measures that may be recommended to GCC, PWD and other relevant Govt. departments for their action.",
+        image: WebOpsAndBlockchainAchievement1,
+      },
+      {
+        title: "Launch of ##CLinsti App",
+        description: `This year we successfully launched the all new CLinsti app – a mobile application developed by the joint efforts of Engineering Section and CFI to promote cleanliness and ensure proper waste management in IITM campus. It was launched in October 2021 and is available in both Appstore(${link(
+          "link",
+          "https://apps.apple.com/in/app/clinsti-iit-madras/id1585949873"
+        )}) and Google Play Store(${link(
+          "link",
+          "https://play.google.com/store/apps/details?id=com.cfi.clinsti"
+        )}) and it got over 200 downloads within a month of its release.`,
         image: WebOpsAndBlockchainAchievement2,
       },
       {

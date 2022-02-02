@@ -2,7 +2,7 @@ import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import { ContactUsData } from "../../Assets/Data/ContactUs";
 
-import LandingImage from "../../Assets/Images/ContactUs/Landing.png";
+import LandingImage from "../../Assets/Images/ContactUs/Landing.jpg";
 import { IContact } from "../../Types";
 import ContactSection from "./ContactSection";
 
