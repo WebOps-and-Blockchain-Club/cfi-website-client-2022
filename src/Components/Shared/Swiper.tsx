@@ -16,7 +16,7 @@ import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
 import "swiper/swiper-bundle";
 import "swiper/swiper-bundle.esm.browser";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -92,7 +92,7 @@ function SwiperCard({ heading, image, link }: MediaCardProps) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Link to={link} style={{ textDecoration: "none" }}>
+    <HashLink to={link} style={{ textDecoration: "none" }}>
       <Card
         sx={{
           m: "0 5px",
@@ -141,6 +141,6 @@ function SwiperCard({ heading, image, link }: MediaCardProps) {
           </Typography>
         </CardContent>
       </Card>
-    </Link>
+    </HashLink>
   );
 }
