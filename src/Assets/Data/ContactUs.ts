@@ -34,6 +34,7 @@ export const ContactUsData = () => {
     },
     {
       title: "Student Executive ##Head",
+      email: "cfi@smail.iitm.ac.in",
       members: [
         {
           name: "Dhanveerraj J M",

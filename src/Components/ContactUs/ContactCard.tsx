@@ -1,8 +1,11 @@
 import {
+  Button,
   Card,
   CardContent,
   CardMedia,
   Grid,
+  IconButton,
+  Snackbar,
   Typography,
   useMediaQuery,
   useTheme,
@@ -12,12 +15,30 @@ import { IMember } from "../../Types";
 import EmailIcon from "../../Assets/Icons/Social/email.png";
 import WhatsAppIcon from "../../Assets/Icons/Social/whatsapp1.png";
 import LinkedInIcon from "../../Assets/Icons/Social/linkedin.png";
+import React from "react";
+import CloseIcon from "@mui/icons-material/Close";
 
 interface Probs {
   members: IMember[];
 }
 
 const ContactCard = ({ members }: Probs) => {
+  const [copyEmail, setCopyEmail] = React.useState<string | null>(null);
+  const handleClick = (email: string) => {
+    navigator.clipboard.writeText(email);
+    setCopyEmail(email);
+  };
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setCopyEmail(null);
+  };
+
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
@@ -28,6 +49,22 @@ const ContactCard = ({ members }: Probs) => {
       gap={{ xs: 4, sm: 4, md: 6, lg: 8, xl: 12 }}
       justifyContent={"center"}
     >
+      <Snackbar
+        open={copyEmail !== null}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={`Email ${copyEmail} copied to clipboard`}
+        action={
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+        }
+      />
       {members.map((_member: IMember) => (
         <Card
           sx={{
@@ -89,11 +126,13 @@ const ContactCard = ({ members }: Probs) => {
             )}
             <Grid container mt={2} mb={2} gap={2} justifyContent={"center"}>
               <Grid item>
-                <a
-                  href={`mailto:${_member.email}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={_member.email}
+                <Button
+                  onClick={() => handleClick(_member.email)}
+                  sx={{
+                    padding: "unset",
+                    minWidth: "unset",
+                    textTransform: "unset",
+                  }}
                 >
                   <img
                     src={EmailIcon}
@@ -103,7 +142,7 @@ const ContactCard = ({ members }: Probs) => {
                     }}
                     alt="Email"
                   />
-                </a>
+                </Button>
               </Grid>
               {_member.phone && (
                 <Grid item>
