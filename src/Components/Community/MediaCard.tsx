@@ -29,7 +29,7 @@ export default function MediaCard({ data }: Probs) {
           display: "flex",
           flexDirection: matchesLG ? "column" : "row",
           alignItems: "center",
-          justifyContent: "center",
+          // justifyContent: "center",
           p: matchesSM ? "15px" : "30px",
           boxShadow:
             "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
@@ -44,7 +44,7 @@ export default function MediaCard({ data }: Probs) {
               verticalAlign: "middle",
               objectFit: "cover",
               width: matchesLG ? "100%" : "400px",
-              marginRight: matchesLG ? "0" : "20px",
+              marginRight: matchesLG ? "0" : "30px",
               marginBottom: matchesLG ? "15px" : "unset",
               backgroundColor:
                 "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
@@ -98,7 +98,10 @@ export default function MediaCard({ data }: Probs) {
               sm: "18px",
             }}
             m={0}
-            textAlign={"center"}
+            textAlign={"justify"}
+            sx={{
+              textAlignLast: data.image && !matchesLG ? "start" : "center",
+            }}
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
         </CardContent>

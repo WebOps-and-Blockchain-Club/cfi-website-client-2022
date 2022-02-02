@@ -20,7 +20,7 @@ export default function ImageCard({ heading, image }: MediaCardProps) {
     <Card
       sx={{
         m: "0 10px",
-        width: matches ? "68vw" : "350px",
+        width: matches ? "68vw" : "265px",
         borderRadius: "20px",
         backgroundColor: "primary.light",
         boxShadow:
@@ -35,7 +35,7 @@ export default function ImageCard({ heading, image }: MediaCardProps) {
           borderRadius: "20px 20px 0 0",
           verticalAlign: "middle",
           objectFit: "cover",
-          height: matches ? "50vw" : "270px",
+          height: matches ? "50vw" : "220px",
         }}
       />
       <CardContent

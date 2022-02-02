@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import CustomBox from "../Shared/CustomBox";
+import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { ManagerialTeams } from "../../Assets/Data/Community/ManagerialTeam";
 import ContactSection from "../ContactUs/ContactSection";
@@ -15,16 +15,7 @@ const ManagerialTeam = (props: Props) => {
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <CustomBox>
-      <Grid
-        container
-        pl={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        pr={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        pt={{ xs: 10, sm: 12, md: 14, lg: 16 }}
-        pb={{ xs: 2, sm: 6, md: 10, lg: 14 }}
-        direction="column"
-        justifyItems="center"
-        alignItems="center"
-      >
+      <CustomGridPage>
         <Heading white="Managerial " red=" Team" />
         {ManagerialTeams.map((_team) => (
           <Grid
@@ -33,10 +24,10 @@ const ManagerialTeam = (props: Props) => {
             justifyContent="center"
             mt={3}
             mb={3}
-            p={{ xs: 0, sm: 2, md: 4, lg: 8 }}
+            py={{ xs: 0, sm: 2, md: 4, lg: 8 }}
             alignItems="center"
           >
-            <Grid item p={{ sm: 1, md: 3, lg: 4 }}>
+            <Grid item py={{ sm: 1, md: 3, lg: 4 }}>
               <Typography
                 variant={matchesSM ? "h5" : "h4"}
                 color="primary.contrastText"
@@ -46,10 +37,11 @@ const ManagerialTeam = (props: Props) => {
                 {_team.name.split("##").join("")}
               </Typography>
             </Grid>
-            <Grid item p={3} sx={{ textAlign: "center" }}>
+            <Grid item py={3} sx={{ textAlign: "center" }}>
               <Typography
                 variant={matchesMD ? (matchesSM ? "subtitle1" : "h6") : "h5"}
                 color="primary.contrastText"
+                sx={{ textAlign: "justify" }} //, textAlignLast: "center" }}
               >
                 {_team.description}
               </Typography>
@@ -79,7 +71,7 @@ const ManagerialTeam = (props: Props) => {
             </Grid>
           </Grid>
         ))}
-      </Grid>
+      </CustomGridPage>
     </CustomBox>
   );
 };

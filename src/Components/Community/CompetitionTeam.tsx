@@ -9,7 +9,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Teams } from "../../Assets/Data/Community/CompetitionTeam";
 import { ITeam, TeamsName } from "../../Types";
-import CustomBox from "../Shared/CustomBox";
+import CustomBox, { CustomGridSection } from "../Shared/CustomBox";
 import Gallery from "../Shared/Gallery";
 import Heading from "../Shared/Heading";
 import MediaCard from "./MediaCard";
@@ -57,13 +57,7 @@ const CompetitionTeam = () => {
         )}
 
         {/* INTRO */}
-        <Grid
-          item
-          container
-          direction={"column"}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        >
+        <CustomGridSection>
           <Heading
             red={data.name.split("##")[1]}
             white={data.name.split("##")[0]}
@@ -72,24 +66,18 @@ const CompetitionTeam = () => {
             <Typography
               color="primary.contrastText"
               sx={{
-                textAlign: "center",
+                textAlign: "justify",
+                textAlignLast: "center",
                 fontSize: "18px",
               }}
               dangerouslySetInnerHTML={{ __html: data.description }}
             />
           </Grid>
-        </Grid>
+        </CustomGridSection>
 
         {/* ACHIVEMENTS */}
         {data.achievements && (
-          <Grid
-            item
-            container
-            direction={"column"}
-            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-            alignItems={"center"}
-          >
+          <CustomGridSection>
             <Heading white="ACHIEVE" red="MENTS" />
             <Grid
               container
@@ -105,19 +93,12 @@ const CompetitionTeam = () => {
                 <MediaCard data={_achievement} />
               ))}
             </Grid>
-          </Grid>
+          </CustomGridSection>
         )}
 
         {/* HIGHLIGHTS */}
         {data.projects && (
-          <Grid
-            item
-            container
-            direction={"column"}
-            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-            alignItems={"center"}
-          >
+          <CustomGridSection>
             <Heading white="HIGH" red="LIGHTS" />
             <Grid
               container
@@ -133,51 +114,30 @@ const CompetitionTeam = () => {
                 <MediaCard data={_project} />
               ))}
             </Grid>
-          </Grid>
+          </CustomGridSection>
         )}
 
         {/* WEBSITE LINK */}
         {data.website && (
-          <Grid
-            item
-            container
-            direction="column"
-            alignItems="center"
-            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          >
+          <CustomGridSection>
             <WebsiteBtn title={`VISIT TEAM WEBSITE`} link={data.website} />
-          </Grid>
+          </CustomGridSection>
         )}
 
         {/* GALLERY */}
         {data.gallery && (
-          <Grid
-            item
-            container
-            direction="column"
-            alignItems="center"
-            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          >
+          <CustomGridSection>
             <Grid item>
               <Heading white="SNAP" red="SHOTS" />
             </Grid>
             <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
               <Gallery data={data.gallery} />
             </Grid>
-          </Grid>
+          </CustomGridSection>
         )}
 
         {/* CONTACT */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="CONTACT" red=" US" />
           </Grid>
@@ -186,7 +146,7 @@ const CompetitionTeam = () => {
             email={data.email}
             members={data.contacts}
           />
-        </Grid>
+        </CustomGridSection>
       </Grid>
     </CustomBox>
   );

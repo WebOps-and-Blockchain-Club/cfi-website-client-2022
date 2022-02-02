@@ -25,13 +25,13 @@ const ContactCard = ({ members }: Probs) => {
       item
       container
       direction={"row"}
-      gap={{ xs: 6, sm: 8, md: 12, lg: 16 }}
+      gap={{ xs: 4, sm: 4, md: 6, lg: 8, xl: 12 }}
       justifyContent={"center"}
     >
       {members.map((_member: IMember) => (
         <Card
           sx={{
-            width: matches ? "220px" : "280px",
+            width: matches ? "220px" : "275px",
             borderRadius: "20px",
             backgroundColor: "primary.light",
             boxShadow:
@@ -46,7 +46,7 @@ const ContactCard = ({ members }: Probs) => {
               borderRadius: "20px 20px 0 0",
               verticalAlign: "middle",
               objectFit: "cover",
-              height: matches ? "190px" : "270px",
+              height: matches ? "190px" : "265px",
             }}
           />
           <CardContent

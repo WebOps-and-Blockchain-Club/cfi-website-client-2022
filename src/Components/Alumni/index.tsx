@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import CustomBox from "../Shared/CustomBox";
+import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import { AlumniData } from "../../Assets/Data/Alumni";
 import MediaCard from "../Community/MediaCard";
@@ -17,16 +17,7 @@ const Alumni = (props: Props) => {
   const matches2 = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <CustomBox>
-      <Grid
-        container
-        pl={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        pr={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-        pt={{ xs: 10, sm: 12, md: 14, lg: 16 }}
-        pb={{ xs: 2, sm: 6, md: 10, lg: 14 }}
-        direction="column"
-        justifyItems="center"
-        alignItems="center"
-      >
+      <CustomGridPage>
         {/* INTRO */}
         <Heading white="" red="ALUMNI" />
         <Grid
@@ -39,7 +30,10 @@ const Alumni = (props: Props) => {
           <Typography
             variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
             color="primary.contrastText"
-            textAlign={"center"}
+            sx={{
+              textAlign: "justify",
+              textAlignLast: "center",
+            }}
           >
             {AlumniData.description}
           </Typography>
@@ -61,11 +55,11 @@ const Alumni = (props: Props) => {
             container
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
             justifyContent={"center"}
-            rowGap={{ xs: 2, sm: 4, md: 2.5, lg: 3 }}
+            rowGap={{ xs: 2, sm: 4, md: 5, lg: 3 }}
             columnGap={{ xs: 2, sm: 4, md: 5, lg: 6 }}
           >
             {AlumniData.startUp.map((startUp, i) => {
-              if ((i === 5 || i === 10) && window.innerWidth >= 1200)
+              if ((i === 5 || i === 10) && window.innerWidth >= 1300)
                 return (
                   <>
                     <Box width="100%" />
@@ -102,7 +96,8 @@ const Alumni = (props: Props) => {
             <Typography
               color="primary.contrastText"
               sx={{
-                textAlign: "center",
+                textAlign: "justify",
+                textAlignLast: "center",
                 fontSize: matches ? "18px" : "26px",
                 whiteSpace: "pre-line",
               }}
@@ -140,7 +135,7 @@ const Alumni = (props: Props) => {
             container
             direction={"column"}
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
-            px={{ xs: 2, md: 10 }}
+            px={{ xs: 0, md: 10 }}
           >
             <Typography
               textAlign={"start"}
@@ -164,59 +159,10 @@ const Alumni = (props: Props) => {
                 title="GIVE BACK TO CFI"
                 link={"https://joyofgiving.alumni.iitm.ac.in/projects"}
               />
-              {/* <a
-                href="https://joyofgiving.alumni.iitm.ac.in/projects"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
-                className="website-a-btn"
-              >
-                <Grid
-                  // className="website-btn"
-                  container
-                  alignItems={"center"}
-                  gap={2}
-                  sx={{
-                    padding: "15px 20px",
-                    color: "primary.contrastText",
-                    backgroundColor: "secondary.dark",
-                    boxShadow: "3.99948px 3.99948px 22.3971px #0E0E0E",
-                    fontSize: matches ? "21px" : "26px",
-                    fontFamily: "Proxima Nova Bold",
-                    // ":hover": {
-                    //   backgroundColor: "primary.contrastText",
-                    //   color: "primary.main",
-                    // transition: "all 1s ease-in, all 1s ease-out",
-                    // },
-                    // ":after": {
-                    //   content: '""',
-                    //   background: `url(${icon})`,
-                    //   height: "34px",
-                    //   width: "34px",
-                    // },
-                  }}
-                >
-                  GIVE BACK TO CFI
-                  {/* <LaunchRoundedIcon
-                    sx={{ fontSize: matches ? 25 : 30, fontWeight: "bolder" }}
-                  /> */}
-              {/*} <SvgIcon
-                    component={icon}
-                    inheritViewBox
-                    sx={{
-                      color: "primary.contrastText",
-                      // ":hover": {
-                      //   color: "primary.main",
-                      // },
-                    }}
-                    className="website-icon"
-                  />
-                </Grid>
-              </a> */}
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </CustomGridPage>
     </CustomBox>
   );
 };

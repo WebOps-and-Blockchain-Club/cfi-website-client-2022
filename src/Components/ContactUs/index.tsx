@@ -6,7 +6,7 @@ import LandingImage from "../../Assets/Images/ContactUs/Landing.png";
 import { IContact } from "../../Types";
 import ContactSection from "./ContactSection";
 
-import CustomBox from "../Shared/CustomBox";
+import CustomBox, { CustomGridSection } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 
 const ContactUs = () => {
@@ -90,13 +90,7 @@ const ContactUs = () => {
 
         {/* CONTACTS */}
         {ContactUsData().map((_data: IContact) => (
-          <Grid
-            item
-            container
-            direction={"column"}
-            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-            px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          >
+          <CustomGridSection>
             <Heading
               white={_data.title.split("##")[0]}
               red={_data.title.split("##")[1]}
@@ -106,7 +100,7 @@ const ContactUs = () => {
               email={_data.email}
               members={_data.members}
             />
-          </Grid>
+          </CustomGridSection>
         ))}
       </Grid>
     </CustomBox>

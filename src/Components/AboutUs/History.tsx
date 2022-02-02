@@ -31,6 +31,7 @@ function History() {
         <Typography
           variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
           color="primary.contrastText"
+          sx={{ textAlign: "justify", textAlignLast: "center" }}
         >
           Set up with the generous funds donated by the batch of 1981. CFI was
           started in 2008 with an objective to be a forum for creative output of

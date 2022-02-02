@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Header from "./Navbar";
 
 interface Props {
-  children: React.ReactChild[] | React.ReactChildren[] | React.ReactChild;
+  children: React.ReactChild[] | React.ReactChildren[] | React.ReactChild | React.ReactNode;
 }
 
 const CustomBox = (props: Props) => {
@@ -27,4 +27,37 @@ const CustomBox = (props: Props) => {
   );
 };
 
+const CustomGridPage = (props: Props) => {
+  return (
+    <Grid
+      container
+      px={{ xs: 4, sm: 7, md: 10, lg: 14, xl: 18 }}
+      pt={{ xs: 10, sm: 12, md: 14, lg: 16 }}
+      pb={{ xs: 2, sm: 6, md: 10, lg: 14 }}
+      direction="column"
+      justifyItems="center"
+      alignItems="center"
+    >
+      {props.children}
+    </Grid>
+  );
+};
+
+const CustomGridSection = (props: Props) => {
+  return (
+    <Grid
+      item
+      container
+      direction="column"
+      alignItems="center"
+      sx={{ width: "100%" }}
+      px={{ xs: 4, sm: 7, md: 10, lg: 14, xl: 18 }}
+      py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+    >
+      {props.children}
+    </Grid>
+  );
+};
+
 export default CustomBox;
+export { CustomGridPage, CustomGridSection };

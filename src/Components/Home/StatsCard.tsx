@@ -21,8 +21,8 @@ export default function StatsCard(probs: Probs) {
   return (
     <Card
       sx={{
-        width: matches ? "130px" : "240px",
-        height: matches ? "140px" : "190px",
+        width: matches ? "110px" : "240px",
+        height: matches ? "100px" : "190px",
         borderRadius: "20px",
         backgroundColor: "primary.light",
         p: "10px",
@@ -35,7 +35,7 @@ export default function StatsCard(probs: Probs) {
     >
       <CardMedia
         component="img"
-        height={matches ? "30px" : "60px"}
+        height={matches ? "25px" : "60px"}
         image={probs.icon}
         alt={probs.title}
         sx={{

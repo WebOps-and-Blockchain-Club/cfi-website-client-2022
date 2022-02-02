@@ -17,7 +17,7 @@ export default function CompetitionTeamCard({
     <Link to={link} style={{ textDecoration: "none" }}>
       <Card
         sx={{
-          width: "250px",
+          width: "230px",
           borderRadius: "20px",
           backgroundColor: "primary.light",
           boxShadow:
@@ -26,7 +26,7 @@ export default function CompetitionTeamCard({
       >
         <CardMedia
           component="img"
-          height="200px"
+          height="160px"
           image={logo}
           alt={name}
           sx={{
@@ -34,7 +34,7 @@ export default function CompetitionTeamCard({
             verticalAlign: "middle",
             objectFit: "contain",
             p: "15px",
-            width: "220px",
+            width: "200px",
           }}
         />
         <CardContent

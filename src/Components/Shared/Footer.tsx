@@ -97,7 +97,7 @@ const Footer = (props: Props) => {
           justifyContent={"center"}
         >
           <Typography
-            variant={matches ? "subtitle1" : "h6"}
+            variant={matches ? "subtitle2" : "h6"}
             color="primary.contrastText"
             sx={{ fontFamily: "Proxima Nova Bold" }}
           >

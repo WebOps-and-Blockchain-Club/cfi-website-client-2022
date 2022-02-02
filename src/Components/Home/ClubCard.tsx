@@ -23,7 +23,7 @@ export default function ClubCard(probs: Probs) {
     <Link to={probs.link} style={{ textDecoration: "none" }}>
       <Card
         sx={{
-          width: matches ? "110px" : "150px",
+          width: matches ? "110px" : "140px",
           height: matches ? "100px" : "140px",
           borderRadius: "20px",
           backgroundColor: "secondary.dark",

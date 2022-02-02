@@ -13,7 +13,7 @@ import {
 } from "../../Assets/Data/Home";
 import { AchievementsData } from "../../Assets/Data/Achievements";
 
-import CustomBox from "../Shared/CustomBox";
+import CustomBox, { CustomGridSection } from "../Shared/CustomBox";
 import CustomSwiper from "../Shared/Swiper";
 import Heading from "../Shared/Heading";
 import Gallery from "../Shared/Gallery";
@@ -39,15 +39,7 @@ const Home = (props: Props) => {
         </Grid>
 
         {/* TOP NEWS SECTION */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          sx={{ width: "100%" }}
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="IN THE " red="SPOTLIGHT" />
           </Grid>
@@ -60,17 +52,10 @@ const Home = (props: Props) => {
           >
             <CustomSwiper data={AchievementsData.slice(0, 9)} />
           </Grid>
-        </Grid>
+        </CustomGridSection>
 
         {/* INTRO TO CFI */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="ABOUT " red="CFI" />
           </Grid>
@@ -82,7 +67,12 @@ const Home = (props: Props) => {
               {AboutCFIOneLinear}
             </Typography>
           </Grid>
-          <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
+          <Grid
+            item
+            container
+            mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
+            maxWidth={"100%"}
+          >
             <IntroCard />
           </Grid>
           <Grid
@@ -102,17 +92,10 @@ const Home = (props: Props) => {
               />
             ))}
           </Grid>
-        </Grid>
+        </CustomGridSection>
 
         {/* CFI CLUBS */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="CFI  " red="CLUBS" />
           </Grid>
@@ -120,9 +103,9 @@ const Home = (props: Props) => {
             <Typography
               color="primary.contrastText"
               sx={{
-                textAlign: "center",
+                textAlign: "justify",
+                textAlignLast: "center",
                 fontSize: matches ? "18px" : "26px",
-                whiteSpace: "pre-line",
               }}
             >
               {CFIClubs}
@@ -133,11 +116,16 @@ const Home = (props: Props) => {
             container
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
             justifyContent={"center"}
-            rowGap={{ xs: 3, sm: 4, md: 5, lg: 3 }}
+            rowGap={{
+              xs: 3,
+              sm: 4,
+              md: 5,
+              lg: window.innerWidth >= 1500 ? 3 : 6,
+            }}
             columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
           >
             {ClubList.map((club, i) => {
-              if ((i === 6 || i === 10) && window.innerWidth >= 1536)
+              if ((i === 6 || i === 10) && window.innerWidth >= 1500)
                 return (
                   <>
                     <Box width="100%" />
@@ -153,24 +141,21 @@ const Home = (props: Props) => {
               );
             })}
           </Grid>
-        </Grid>
+        </CustomGridSection>
 
         {/* COMPETITION TEAMS */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="COMPETITION  " red="TEAMS" />
           </Grid>
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
             <Typography
               color="primary.contrastText"
-              sx={{ textAlign: "center", fontSize: matches ? "18px" : "26px" }}
+              sx={{
+                textAlign: "justify",
+                textAlignLast: "center",
+                fontSize: matches ? "18px" : "26px",
+              }}
             >
               {CompetitionTeams}
             </Typography>
@@ -191,24 +176,17 @@ const Home = (props: Props) => {
               />
             ))}
           </Grid>
-        </Grid>
+        </CustomGridSection>
 
         {/* CFI SHANPSHOTS */}
-        <Grid
-          item
-          container
-          direction="column"
-          alignItems="center"
-          px={{ xs: 2, sm: 4, md: 6, lg: 10 }}
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
-        >
+        <CustomGridSection>
           <Grid item>
             <Heading white="CFI " red="SNAPSHOTS" />
           </Grid>
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
             <Gallery data={HomeGalleryData} />
           </Grid>
-        </Grid>
+        </CustomGridSection>
       </Grid>
     </CustomBox>
   );

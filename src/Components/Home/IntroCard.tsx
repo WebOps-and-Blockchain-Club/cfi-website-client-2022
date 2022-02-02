@@ -27,7 +27,7 @@ export default function IntroCard() {
           "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
       }}
     >
-      <Grid container justifyContent={"center"}>
+      <Grid container justifyContent={"center"} sx={{ maxWidth: "100%" }}>
         <iframe
           src="https://www.youtube.com/embed/WaxfRS13RGU"
           title="CFI"
