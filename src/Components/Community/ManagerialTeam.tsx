@@ -12,19 +12,16 @@ interface Props {}
 const ManagerialTeam = (props: Props) => {
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <CustomBox>
       <CustomGridPage>
         <Heading white="Managerial " red=" Team" />
-        {ManagerialTeams.map((_team) => (
+        {ManagerialTeams.map((_team, i) => (
           <Grid
             container
             direction="column"
             justifyContent="center"
-            mt={3}
-            mb={3}
-            py={{ xs: 0, sm: 2, md: 4, lg: 8 }}
+            py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
             alignItems="center"
           >
             <Grid item py={{ sm: 1, md: 3, lg: 4 }}>
@@ -37,21 +34,49 @@ const ManagerialTeam = (props: Props) => {
                 {_team.name.split("##").join("")}
               </Typography>
             </Grid>
-            <Grid item py={3} sx={{ textAlign: "center" }}>
+            <Grid
+              item
+              container
+              direction={i % 2 === 0 ? "row" : "row-reverse"}
+              alignItems="center"
+              justifyContent="space-between"
+              pt={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+              gap={{ xs: 2, sm: 3, md: 4 }}
+            >
               <Typography
-                variant={matchesMD ? (matchesSM ? "subtitle1" : "h6") : "h5"}
                 color="primary.contrastText"
-                sx={{ textAlign: "justify" }} //, textAlignLast: "center" }}
+                sx={{
+                  fontSize: "18px",
+                  textAlign: "justify",
+                  width: matchesSM ? "100%" : "50%",
+                }}
               >
                 {_team.description}
               </Typography>
+              <Grid
+                container
+                item
+                alignItems="center"
+                width={matchesSM ? "100%" : "40%"}
+                justifyContent="center"
+              >
+                <img
+                  src={_team.image}
+                  alt="Idea"
+                  style={{
+                    boxShadow: "6px 6px 6px 6px #7e0000",
+                    borderRadius: "20px",
+                    width: "100%",
+                  }}
+                />
+              </Grid>
             </Grid>
             <Grid
               item
               container
               direction="column"
               alignItems="center"
-              py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+              pt={{ xs: 8, sm: 10, md: 12, lg: 12 }}
             >
               <Grid item>
                 <Typography

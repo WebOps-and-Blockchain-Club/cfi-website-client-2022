@@ -73,15 +73,15 @@ function Concepts() {
             textAlign={"justify"}
           >
             Among the general demographic, students are more likely to come up
-            with new, creative and outrageous ideas. Add to this the fact that
+            with new, creative, and outrageous ideas. Add to this the fact that
             students at IIT Madras are competent in engineering studies, we get
             a potent mix of creative and skilled set of people who are ready to
             innovate. To realize these strengths of the student community, the
-            CFI will provide the right environment and resources. CFI will try
-            to be a place where a student can ‘walk in with an idea and walk out
-            with a product’. The innovation itself is sometimes only a small
-            part of the story as it encourages students to think freely. Free
-            thinking leaders are an asset to and future leaders of any society.
+            CFI provides the right environment and resources. CFI strives to be
+            a place where a student can ‘walk in with an idea and walk out with
+            a product’. The innovation itself is sometimes only a small part of
+            the story as it encourages students to think freely. Free thinking
+            leaders are an asset to and future leaders of any society.
           </Typography>
         </Grid>
         <Grid
@@ -148,16 +148,16 @@ function Concepts() {
             color="primary.contrastText"
             textAlign={"justify"}
           >
-            The interiors of CFI are being developed in collaboration with a
-            celebrated green architect. The interiors are being designed to
-            stimulate creative thinking, to be non-linear and adaptive, to be
-            informal and ice-cream shop relaxing. The most important part of the
-            innovation process is free thinking and the interiors of CFI aims at
-            giving that freedom to its users. CFI will have large empty spaces.
-            Large empty spaces serve as areas which clear up mental clutter,
-            especially when users are in a creative block. They also serve as
-            space for future expansion. CFI will also have a gallery that will
-            showcase successful projects.
+            The interiors of the new building for CFI are being developed in
+            collaboration with a celebrated green architect. The interiors are
+            being designed to stimulate creative thinking, to be non-linear and
+            adaptive, to be informal and ice-cream shop relaxing. The most
+            important part of the innovation process is free thinking and the
+            interiors of CFI aim at giving that freedom to its users. CFI will
+            have large empty spaces. Large empty spaces serve as areas that
+            clear up mental clutter, especially when users are in a creative
+            block. They also serve as space for future expansion. CFI will also
+            have a gallery that will showcase successful projects.
           </Typography>
         </Grid>
         <Grid
@@ -245,6 +245,7 @@ function Concepts() {
             variant={matches2 ? (matches ? "h6" : "h5") : "h4"}
             color="primary.contrastText"
             sx={{ fontFamily: "Proxima Nova Bold", marginBottom: "10px" }}
+            textAlign={"justify"}
           >
             Support large student team projects
           </Typography>
@@ -253,13 +254,12 @@ function Concepts() {
             color="primary.contrastText"
             textAlign={"justify"}
           >
-            CFI will support large student projects. These projects maybe for
-            international contests such as Formula-SAE, University Rover
-            Challenge, Intelligent Ground Vehicle Challenge or the famous
-            Hyperloop Competition. They may also be for showcasing Shaastra
-            series of Spirit of Engineering (SoE) projects. Such projects
-            encourage teamwork and build character and confidence in the
-            students and serve as inspiration to other students.
+            CFI provides support to large student projects. These projects
+            include the ones for international contests such as Formula-SAE,
+            University Rover Challenge, Intelligent Ground Vehicle Challenge, or
+            the famous Hyperloop Competition. Such projects encourage teamwork
+            and build character and confidence in the students and serve as
+            inspiration to other students.
           </Typography>
           <Typography
             variant={matches2 ? "body1" : "h6"}
@@ -269,10 +269,10 @@ function Concepts() {
             India is increasingly aware that for uniform progress, we have to
             look for solutions to problems in the villages and other sub-urban
             societies. These solutions are unlikely to come from outside India
-            as the problems themselves are very India specific. CFI intends to
+            as the problems themselves are very India-specific. CFI intends to
             encourage students to look at socially relevant projects.
-            Additionally, the CFI will also encourage projects that look at
-            environment friendly solutions.
+            Additionally, CFI also encourages projects that look at
+            environment-friendly solutions.
           </Typography>
         </Grid>
         <Grid

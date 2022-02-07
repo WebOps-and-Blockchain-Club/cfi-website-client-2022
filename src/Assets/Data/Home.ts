@@ -21,7 +21,7 @@ import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
 import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
 import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
-import HorizonLogo from "../Images/ClubLogo/HorizonLogo(withoutName).png";
+import HorizonLogo from "../Images/ClubLogo/HorizonWhiteLogo(withoutName).png";
 import iBotLogo from "../Images/ClubLogo/iBOTLogo.png";
 import iGEMLogo from "../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../Images/ClubLogo/ProductDesignLogo.png";

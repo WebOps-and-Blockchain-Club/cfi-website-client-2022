@@ -100,7 +100,7 @@ export default function MediaCard({ data }: Probs) {
             m={0}
             textAlign={"justify"}
             sx={{
-              textAlignLast: data.image && !matchesLG ? "start" : "center",
+              textAlignLast: "center",
             }}
             dangerouslySetInnerHTML={{ __html: data.description }}
           />

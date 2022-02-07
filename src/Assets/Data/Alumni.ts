@@ -11,6 +11,8 @@ import TvastaLogo from "../Images/Alumni/Tvasta.png";
 export const AlumniData = {
   description:
     "CFI has been set up by the generous donation of the batch of 1981. Since its inception, alumni groups from different batches have shown interest in its activities and have been associated with CFI in various ways, from funding teams and donating high-end machines to mentoring some of the ongoing projects in CFI. Several members of the CFI Family have taken their ideas from a nascent project to a fully-fledged commercial enterprise.",
+  startUpDescription:
+    "CFI is extremely proud of the iconic startups that had their genesis in the premises of CFI. Most of the founding members of the startups met each other as active members of CFI during their days in the institute. The zeal and passion that they had towards their work at CFI made them go a step ahead in their fields giving birth to some of the leading startups of the decade.",
   startUp: [
     {
       name: "Ather Energy",

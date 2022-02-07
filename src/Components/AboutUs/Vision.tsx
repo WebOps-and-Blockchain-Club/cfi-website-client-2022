@@ -3,7 +3,7 @@ import { Grid, Typography } from "@mui/material";
 
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import cfilogo from "../../Assets/Images/CFILogo/CFI Logo (with text) - White - Copy.png";
+import VisionImg from "../../Assets/Images/AboutUs/Vision.png";
 
 function Vision() {
   const theme = useTheme();
@@ -12,22 +12,35 @@ function Vision() {
   return (
     <Grid
       container
-      rowSpacing={3}
       direction="column"
       justifyContent="center"
       mt={3}
       mb={3}
       alignItems="center"
     >
-      <Typography
-        variant={matches ? "h5" : "h4"}
-        color="primary.contrastText"
-        p={matches ? 2 : 5}
-        style={{ fontFamily: "Proxima Nova Bold" }}
-      >
-        VISION
-      </Typography>
+      <Grid item p={{ sm: 1, md: 3, lg: 4 }}>
+        <Typography
+          variant={matches ? "h5" : "h4"}
+          color="primary.contrastText"
+          style={{ fontFamily: "Proxima Nova Bold" }}
+        >
+          VISION
+        </Typography>
+      </Grid>
       <Grid item container direction="row" justifyContent="center">
+        <Grid
+          container
+          item
+          alignItems="center"
+          justifyContent="center"
+          p={3}
+          lg={5}
+          md={5}
+          sm={9}
+          xs={12}
+        >
+          <img src={VisionImg} alt="cfi logo" style={{ width: "100%" }} />
+        </Grid>
         <Grid
           item
           container
@@ -42,34 +55,18 @@ function Vision() {
           <Typography
             variant={matches ? "h6" : "h5"}
             color="primary.contrastText"
-            mr={{ md: 10 }}
-            sx={{ fontFamily: "Proxima Nova Bold" }}
+            ml={{ md: 10 }}
+            sx={{
+              fontFamily: "Proxima Nova Bold",
+              fontStyle: "italic",
+              fontSize: matches ? "1.32rem" : "1.7rem",
+            }}
+            textAlign="justify"
           >
             “To promote informal learning and foster innovation and invention in
             technology, with a focus on technologies aimed at contributing
             positively to the environment and to the society”
           </Typography>
-        </Grid>
-        <Grid
-          container
-          item
-          sx={{
-            background: "linear-gradient(138.5deg, #0000006b, #420101)",
-            borderRadius: "20px",
-          }}
-          alignItems="center"
-          justifyContent="center"
-          p={3}
-          lg={5}
-          md={5}
-          sm={9}
-          xs={12}
-        >
-          <img
-            src={cfilogo}
-            alt="cfi logo"
-            style={{ width: "50%", marginTop: "10%", marginBottom: "10%" }}
-          />
         </Grid>
       </Grid>
     </Grid>
