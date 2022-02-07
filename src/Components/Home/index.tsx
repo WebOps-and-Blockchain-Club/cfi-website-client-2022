@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
 
 import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
@@ -24,6 +25,8 @@ import ClubCard from "./ClubCard";
 import CompetitionTeamCard from "./CompetitionTeamCard";
 import StatsCard from "./StatsCard";
 
+import "../../Styles/home.css";
+
 interface Props {}
 
 const Home = (props: Props) => {
@@ -36,23 +39,28 @@ const Home = (props: Props) => {
         {/* LANDING SECTION */}
         <Grid item sx={{ width: "100%" }}>
           <TopCarousel />
+          <div className="arrow bounce">
+            <a className="fa fa-arrow-down fa-2x" href="#top-news" />
+          </div>
         </Grid>
 
         {/* TOP NEWS SECTION */}
-        <CustomGridSection>
-          <Grid item>
-            <Heading white="IN THE " red="SPOTLIGHT" />
-          </Grid>
-          <Grid
-            item
-            container
-            justifyContent={"center"}
-            mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
-            alignItems="center"
-          >
-            <CustomSwiper data={AchievementsData.slice(0, 9)} />
-          </Grid>
-        </CustomGridSection>
+        <section id="top-news" style={{ width: "100%" }}>
+          <CustomGridSection>
+            <Grid item>
+              <Heading white="IN THE " red="SPOTLIGHT" />
+            </Grid>
+            <Grid
+              item
+              container
+              justifyContent={"center"}
+              mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
+              alignItems="center"
+            >
+              <CustomSwiper data={AchievementsData.slice(0, 9)} />
+            </Grid>
+          </CustomGridSection>
+        </section>
 
         {/* INTRO TO CFI */}
         <CustomGridSection>

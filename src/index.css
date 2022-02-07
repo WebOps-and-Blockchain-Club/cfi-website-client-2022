@@ -1,6 +1,5 @@
-html {
-  scroll-snap-type: y proximity;
-  scroll-behavior: auto;
+* {
+  scroll-behavior: smooth;
 }
 
 body {

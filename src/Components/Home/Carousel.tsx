@@ -28,7 +28,7 @@ export default function TopCarousel() {
       spaceBetween={0}
       loop={true}
       slidesPerView={1}
-      pagination={{ clickable: true }}
+      pagination={false}
       navigation={{
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",
