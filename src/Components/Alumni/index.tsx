@@ -8,6 +8,7 @@ import { AlumniData } from "../../Assets/Data/Alumni";
 import MediaCard from "../Community/MediaCard";
 import StartUpCard from "./StartUpCard";
 import WebsiteBtn from "../Shared/WebsiteBtn";
+import useWindowSize from "../../Utils/windowSize";
 
 interface Props {}
 
@@ -15,6 +16,8 @@ const Alumni = (props: Props) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matches2 = useMediaQuery(theme.breakpoints.down("md"));
+  const [width] = useWindowSize();
+
   return (
     <CustomBox>
       <CustomGridPage>
@@ -50,6 +53,18 @@ const Alumni = (props: Props) => {
           <Grid item>
             <Heading white="ALUMNI  " red="STARTUPS" />
           </Grid>
+          <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
+            <Typography
+              color="primary.contrastText"
+              sx={{
+                textAlign: "justify",
+                textAlignLast: "center",
+                fontSize: matches ? "18px" : "26px",
+              }}
+            >
+              {AlumniData.startUpDescription}
+            </Typography>
+          </Grid>
           <Grid
             item
             container
@@ -59,7 +74,7 @@ const Alumni = (props: Props) => {
             columnGap={{ xs: 2, sm: 4, md: 5, lg: 6 }}
           >
             {AlumniData.startUp.map((startUp, i) => {
-              if ((i === 5 || i === 10) && window.innerWidth >= 1300)
+              if ((i === 5 || i === 10) && width >= 1300)
                 return (
                   <>
                     <Box width="100%" />
@@ -135,7 +150,6 @@ const Alumni = (props: Props) => {
             container
             direction={"column"}
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
-            px={{ xs: 0, md: 10 }}
           >
             <Typography
               textAlign={"start"}

@@ -26,12 +26,14 @@ import CompetitionTeamCard from "./CompetitionTeamCard";
 import StatsCard from "./StatsCard";
 
 import "../../Styles/home.css";
+import useWindowSize from "../../Utils/windowSize";
 
 interface Props {}
 
 const Home = (props: Props) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const [width] = useWindowSize();
 
   return (
     <CustomBox>
@@ -128,12 +130,12 @@ const Home = (props: Props) => {
               xs: 3,
               sm: 4,
               md: 5,
-              lg: window.innerWidth >= 1500 ? 3 : 6,
+              lg: width >= 1500 ? 3 : 6,
             }}
             columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
           >
             {ClubList.map((club, i) => {
-              if ((i === 6 || i === 10) && window.innerWidth >= 1500)
+              if ((i === 6 || i === 10) && width >= 1500)
                 return (
                   <>
                     <Box width="100%" />
