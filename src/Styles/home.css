@@ -1,14 +1,14 @@
-a {
-  color: #d6d6d6;
-  text-decoration: none;
-}
-
 .arrow {
   position: absolute;
   top: 90vh;
   z-index: 1000;
   text-align: center;
   width: 100%;
+}
+
+.arrow a {
+  color: #d6d6d6;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {

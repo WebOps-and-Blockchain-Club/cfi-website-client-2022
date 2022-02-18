@@ -348,9 +348,9 @@ export const Teams: ITeams = {
         image: AvishkarProject1,
       },
       {
-        title: "The Hyperloop tube is expected to be ##ready by Summer 2022",
+        title: "A 500m long Hyperloop ##test track",
         description:
-          "The team is building a 500m long, 2m diameter vacuum tube at the IITM campus, a first of its kind in the world by a student team. The Hyperloop tube is expected to be ready by March 2022. The sub-pilot tube will be a breakthrough in the Hyperloop development and accelerate technology development. The world-leading facility will act as a sub-scale testing ground to the Hyperloop community and lead to breakthroughs. \n After a year-long research, the team has developed this novel and cost-effective tube design and has also filed for a provisional patent for the same. We have also set up a 3.6m long vacuum tube prototype at CFI to test the validity of the design and test the vacuum compatibility of various components of our Hyperloop pod.",
+          "The team is building a 500m long, 2m diameter vacuum tube at the IITM campus, a first of its kind in the world by a student team. The Hyperloop tube is expected to be ready by Summer 2022. The sub-pilot tube will be a breakthrough in the Hyperloop development and accelerate technology development. The world-leading facility will act as a sub-scale testing ground to the Hyperloop community and lead to breakthroughs. \n After a year-long research, the team has developed this novel and cost-effective tube design and has also filed for a provisional patent for the same. We have also set up a 3.6m long vacuum tube prototype at CFI to test the validity of the design and test the vacuum compatibility of various components of our Hyperloop pod.",
         image: AvishkarProject2,
       },
     ],

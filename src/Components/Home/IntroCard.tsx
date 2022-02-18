@@ -38,8 +38,8 @@ export default function IntroCard() {
           style={{
             borderRadius: "20px",
             float: "left",
-            marginBottom: width > 1450 ? "0" : "5px",
-            marginRight: width > 1450 ? "0" : "20px",
+            marginBottom: width > 1450 || width < 1100 ? "0" : "5px",
+            marginRight: width > 1450 || width < 1100 ? "0" : "20px",
           }}
           allowFullScreen
         />

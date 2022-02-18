@@ -62,7 +62,7 @@ const ContactUs = () => {
                 }}
                 textAlign={"center"}
               >
-                13 years of staying true to our motto, 'Walk in with and idea,
+                13 years of staying true to our motto, 'Walk in with an idea,
                 Walk out with a product', CFI is now more than just a student
                 lab, it is a feeling which holds an entire community together.
               </Typography>
@@ -81,7 +81,7 @@ const ContactUs = () => {
             }}
             textAlign={"center"}
           >
-            13 years of staying true to our motto, <br /> "Walk in with and
+            13 years of staying true to our motto, <br /> "Walk in with an
             idea, Walk out with a product",
             <br /> CFI is now more than just a student lab, it is a feeling
             which holds an entire community together.

@@ -38,7 +38,7 @@ export const AchievementsData = [
     date: "Mid November, 2021",
     description: `${link(
       "chennaiwaterlogging.org",
-      "https://chennaiwaterlogging.org/"
+      "http://chennaiwaterlogging.org/"
     )} is a platform that enables users/the public to report details such as flood location and water depth, as well as add photos of flood sites with a description across the Chennai region as frequently as possible. All reports are gathered onto a real-time flood map. The data gathered through this platform aims to improve disaster preparedness and response in communities by gathering, sorting, and presenting data of flooding reports. This Crowd-sourced data, curated through this platform will help to understand the reasons for waterlogging / inundation and help IIT Madras researchers to develop/design remedial measures that may be recommended to GCC, PWD, and other relevant Govt. departments for their action.`,
     image: Achievements5,
   },
