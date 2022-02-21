@@ -1,6 +1,9 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Routes from "./Components/Route";
+import { AuthContextProvider } from "./Utils/context";
+import { ApolloProvider } from "@apollo/client";
+import client from "./Graphql";
 
 interface Probs {}
 
@@ -24,9 +27,13 @@ const theme = createTheme({
 
 const App = (probs: Probs) => {
   return (
-    <ThemeProvider theme={theme}>
-      <Routes />
-    </ThemeProvider>
+    <ApolloProvider client={client}>
+      <AuthContextProvider>
+        <ThemeProvider theme={theme}>
+          <Routes />
+        </ThemeProvider>
+      </AuthContextProvider>
+    </ApolloProvider>
   );
 };
 

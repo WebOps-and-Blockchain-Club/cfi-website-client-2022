@@ -1,3 +1,6 @@
+import Logout from "../../Components/Shared/Logout";
+import { UserRole } from "../../generated/graphql";
+import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
 
 export const NavbarItems = [
@@ -55,4 +58,25 @@ export const NavbarMobileView = () => {
   });
 
   return list;
+};
+
+export const NavbarAdminList = (role: UserRole) => {
+  const navList = [
+    {
+      name: "ADD BLOG",
+      link: "/admin/blog/add",
+      role: RoleAccess.BlogAccess,
+    },
+    {
+      name: "BLOG",
+      link: "/admin/blog",
+      role: RoleAccess.BlogAccess,
+    },
+    {
+      name: "LOGOUT",
+      component: Logout,
+      role: RoleAccess.BlogAccess,
+    },
+  ];
+  return navList.filter((nav) => nav.role.includes(role));
 };

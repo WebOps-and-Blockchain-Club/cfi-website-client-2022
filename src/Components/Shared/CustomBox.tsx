@@ -5,7 +5,11 @@ import Footer from "./Footer";
 import Header from "./Navbar";
 
 interface Props {
-  children: React.ReactChild[] | React.ReactChildren[] | React.ReactChild | React.ReactNode;
+  children:
+    | React.ReactChild[]
+    | React.ReactChildren[]
+    | React.ReactChild
+    | React.ReactNode;
 }
 
 const CustomBox = (props: Props) => {
@@ -19,7 +23,11 @@ const CustomBox = (props: Props) => {
         backgroundAttachment: "fixed",
         width: "100vw",
         maxWidth: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
+      minHeight="100vh"
     >
       <Header />
       {props.children}

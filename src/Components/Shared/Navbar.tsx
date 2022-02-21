@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Button,
   Grid,
@@ -19,7 +19,11 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 import IITMLogo from "../../Assets/Images/IITMadrasLogo.png";
-import { NavbarItems, NavbarMobileView } from "../../Assets/Data/Navbar";
+import {
+  NavbarAdminList,
+  NavbarItems,
+  NavbarMobileView,
+} from "../../Assets/Data/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
@@ -29,8 +33,16 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Heading from "./Heading";
 
 import "../../Styles/navbar.css";
+import AuthContext from "../../Utils/context";
 
 export default function Header() {
+  const { state } = useContext(AuthContext)!;
+  const navMobList = state.role
+    ? NavbarAdminList(state.role!)
+    : NavbarMobileView();
+
+  const navWebList = state.role ? NavbarAdminList(state.role!) : NavbarItems;
+
   //Is Top
   const [isTop, setIsTop] = React.useState(true);
 
@@ -78,7 +90,7 @@ export default function Header() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {NavbarMobileView().map((_item, index) => (
+        {navMobList.map((_item, index) => (
           <ListItem button key={index}>
             {_item.link && (
               <NavbarButton
@@ -228,7 +240,7 @@ export default function Header() {
                 }}
                 gap={matchesLG ? 0.4 : 2}
               >
-                {NavbarItems.map((item, i) => (
+                {navWebList.map((item: any, i) => (
                   <>
                     {item.link && (
                       <Grid>
@@ -238,8 +250,9 @@ export default function Header() {
                         />
                       </Grid>
                     )}
+                    {item.component && <item.component />}
                     {item.subItems && <SubItemWebView item={item} />}
-                    {i !== NavbarItems.length - 1 && (
+                    {i !== navWebList.length - 1 && (
                       <Divider
                         orientation="vertical"
                         flexItem
@@ -378,7 +391,7 @@ function SubItemMobileView({
   );
 }
 
-function NavbarButton({
+export function NavbarButton({
   name,
   handleClick,
   mouseOverClick,
