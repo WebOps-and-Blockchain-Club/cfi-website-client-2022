@@ -12,17 +12,17 @@ import Gallery6 from "../Images/OpenHouse/Gallery6.jpg";
 export const OpenHouseData = [
   {
     content:
-      "Open House 2022, our flagship event, a display of all the recent work and achievements of our in-house teams and clubs is scheduled to be held on 13th March, 2022. The Open House will be the first of its kind, in hybrid mode - that is, through both offline and online platforms. The teams will be showcasing their projects, the result of a year of hard work and dedication.",
+      "The CFI Open House is the flagship event conducted annually to display recent projects and accomplishments of its student innovators. The event serves as an opportunity to network with experts and prominent industrialists who facilitate innovation in technology and entrepreneurship. On a different face, the event exposes several potential tech startups to the public, media, and eminent industrialists for their valuable acknowledgement.",
     image: Image1,
   },
   {
     content:
-      "The entire CFI team is enthusiastically preparing for the upcoming big day. The impact of Covid associated lockdowns could be strongly felt in the extent of progress that could be achieved, specifically in hardware work. Nevertheless, the teams came up with novel solutions like modularization of project works. After almost two years of being away from the institute, the project members have now been able to speed up their pace through the institute’s initiative of calling students back to campus.",
+      "CFI Open House 2022 will be the 13th edition of the annual showcase and is scheduled to be held on March 13th 2022 (Sunday), from 1 PM onwards. It will be held in a hybrid model - physically and on the metaverse. The event is anticipated to gather a crowd of more than 1500, including over 100 eminent industrialists and IITM Alumni. The physical event will be held at the Terrace hall at IITM beside the NAC building, while the virtual event will be hosted on the metaverse platform, Gather Town.",
     image: Image2,
   },
   {
     content:
-      "We aspire to set new records through this year’s Open House by not only giving a high-spirited experience to the on-ground visitors, but also by planning a completely interactive and lively experience through the virtual platform for the online audience. It gives us a heightened sense of joy and enthusiasm seeing the efforts throughout the year congregate and come to fulfilment.",
+      "CFI Open House 2022 will be inaugurated by the Director of IIT Madras, Prof V. Kamakoti. The new CFI website is also set to be officially launched by the Director of IIT Madras. The Open House will host over 60 projects this year, including Abhiyaan’s autonomous vehicle - the Bolt, Abhyuday’s rocket, Avishkar Hyperloop, the Sports Science and Analytics projects (in collaboration with the Sports Science Centre of Excellence, IIT Madras), the Bird Diverter project (in partnership with the Wildlife Institute Of India), and projects on blockchain technology. The event will also host numerous industry-proposed projects such as the Job Aggregator project with TMI Group and the Dental Implant Project.",
     image: Image3,
   },
 ];

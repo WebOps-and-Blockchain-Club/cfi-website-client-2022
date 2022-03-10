@@ -159,7 +159,7 @@ const OpenHouse = (props: Props) => {
           direction={"column"}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
-          <Heading white="2022 " red="SPONS0RS" />
+          <Heading white="2022 " red="SPONSORS" />
           <Grid
             container
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
