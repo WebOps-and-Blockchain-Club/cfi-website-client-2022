@@ -10,6 +10,7 @@ import ManagerialTeam from "./Community/ManagerialTeam";
 import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
+import OpenHouse from "./OpenHouse";
 
 interface Probs {}
 
@@ -26,6 +27,7 @@ const AppRoutes = (probs: Probs) => {
           />
           <Route path="/managerial-team" element={<ManagerialTeam />} />
           <Route path="/achievements" element={<Achievements />} />
+          <Route path="/open-house" element={<OpenHouse />} />
           <Route path="/media" element={<Media />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />

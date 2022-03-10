@@ -82,7 +82,7 @@ export default function Header() {
           <ListItem button key={index}>
             {_item.link && (
               <NavbarButton
-                name={_item.name}
+                data={_item}
                 handleClick={() => {
                   navigate(_item.link);
                   setOpenNavbar(false);
@@ -92,7 +92,7 @@ export default function Header() {
             {_item.subItems && (
               <SubItemMobileView
                 id={index}
-                name={_item.name}
+                data={_item}
                 items={_item.subItems}
                 toggleDrawer={() => setOpenNavbar(false)}
                 checked={checked}
@@ -233,7 +233,7 @@ export default function Header() {
                     {item.link && (
                       <Grid>
                         <NavbarButton
-                          name={item.name}
+                          data={item}
                           handleClick={() => navigate(item.link)}
                         />
                       </Grid>
@@ -266,7 +266,7 @@ function SubItemWebView({ item }: { item: any }) {
   return (
     <Box className="dropdown">
       <NavbarButton
-        name={item.name}
+        data={item}
         className="dropbtn"
         icon={<ExpandMore />}
         handleClick={() => {}}
@@ -287,7 +287,7 @@ function SubItemWebView({ item }: { item: any }) {
               return (
                 <Box className="sub-dropdown">
                   <NavbarButton
-                    name={_subItem.name}
+                    data={_subItem}
                     className="sub-dropbtn dropdown-list dropdown-list-width "
                     icon={<ChevronRightOutlinedIcon />}
                     handleClick={() => {}}
@@ -335,14 +335,14 @@ function SubItemWebView({ item }: { item: any }) {
 
 function SubItemMobileView({
   id,
-  name,
+  data,
   items,
   toggleDrawer,
   checked,
   setChecked,
 }: {
   id: number;
-  name: string;
+  data: any;
   items: any[];
   toggleDrawer: Function;
   checked: number | null | undefined;
@@ -353,7 +353,7 @@ function SubItemMobileView({
   return (
     <Grid>
       <NavbarButton
-        name={name}
+        data={data}
         handleClick={() => {
           if (checked === id) setChecked(null);
           else setChecked(id);
@@ -364,7 +364,7 @@ function SubItemMobileView({
         <Grid container direction={"column"} pt={"10px"} pb={"10px"}>
           {items.map((_item) => (
             <NavbarButton
-              name={_item.name}
+              data={_item}
               handleClick={() => {
                 toggleDrawer();
                 navigate(_item.link);
@@ -379,14 +379,14 @@ function SubItemMobileView({
 }
 
 function NavbarButton({
-  name,
+  data,
   handleClick,
   mouseOverClick,
   className,
   icon,
   isSub,
 }: {
-  name: string;
+  data: any;
   handleClick: Function;
   mouseOverClick?: Function | undefined;
   className?: string | undefined;
@@ -404,18 +404,20 @@ function NavbarButton({
         color: "primary.contrastText",
         fontSize: "14px",
         letterSpacing: "1px",
-        fontFamily: "Proxima Nova",
+        border: data.highlight ? "3px solid #FF0000" : "unset",
         fontWeight: matches ? "400" : "900",
         padding: "7px 10px",
         paddingLeft: isSub ? "40px" : "7px",
         lineHeight: "unset",
         justifyContent: "unset",
         textAlign: matches ? "start" : "center",
-        borderRadius: "4px",
+        borderRadius: "13px",
         height: matches ? "unset" : "30px",
         ":hover": {
           backgroundColor: matches ? "unset" : "primary.contrastText",
           color: matches ? "unset" : "primary.main",
+          borderRadius: "4px",
+          border: "unset",
         },
       }}
       endIcon={icon ? icon : null}
@@ -424,7 +426,7 @@ function NavbarButton({
         if (!!mouseOverClick) mouseOverClick();
       }}
     >
-      {name}
+      {data.name}
     </Button>
   );
 }
