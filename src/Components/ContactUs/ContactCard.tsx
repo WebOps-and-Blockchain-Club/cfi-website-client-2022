@@ -80,10 +80,10 @@ const ContactCard = ({ members }: Probs) => {
             image={_member.image}
             alt={_member.name}
             sx={{
-              borderRadius: "20px 20px 0 0",
-              verticalAlign: "middle",
+              verticalAlign: "start",
               objectFit: "cover",
               height: matches ? "190px" : "265px",
+              backgroundColor: "#d6d6d6",
             }}
           />
           <CardContent

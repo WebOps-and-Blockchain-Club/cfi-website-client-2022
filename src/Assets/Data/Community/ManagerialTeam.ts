@@ -1,11 +1,11 @@
 // TEAM HEADS
-import BEHead1 from "../../Images/ContactUs/CFIOffice/B_E_Navaneeth.jpg";
-import BEHead2 from "../../Images/ContactUs/CFIOffice/B_E_Vaidehi.jpeg";
-import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.jpg";
-import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Ankur.jpeg";
-import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpg";
-import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Sohana.jpg";
-import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Harshitha.jpeg";
+import BEHead1 from "../../Images/ContactUs/CFIOffice/B_E_Navaneeth.png";
+import BEHead2 from "../../Images/ContactUs/CFIOffice/B_E_Vaidehi.png";
+import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.png";
+import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Ankur.png";
+import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Tarun.png";
+import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Sohana.png";
+import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Harshitha.png";
 
 // TEAM IMAGES
 import BEImage from "../../Images/Community/ManagerialTeam/BE.jpg";

@@ -20,7 +20,7 @@ import IndustryProjectsIcon from "../Icons/Stats/IndustryProjects.svg";
 
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
-import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
+import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo(withoutName).png";
 import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
 import HorizonLogo from "../Images/ClubLogo/HorizonWhiteLogo(withoutName).png";

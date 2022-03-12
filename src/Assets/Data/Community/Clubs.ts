@@ -16,33 +16,37 @@ import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainLogo.png";
 
 // CLUB HEADS
-import PrintingHead1 from "../../Images/ContactUs/Club/3DPrinting_Ishan.jpg";
-import PrintingHead2 from "../../Images/ContactUs/Club/3DPrinting_Bharathi.jpg";
-import AeroHead1 from "../../Images/ContactUs/Club/Aero_SaiKiran.jpeg";
-import AeroHead2 from "../../Images/ContactUs/Club/Aero_Vedant.jpg";
-import AnalyticsHead1 from "../../Images/ContactUs/Club/Analytics_Tanay.jpeg";
-import AnalyticsHead2 from "../../Images/ContactUs/Club/Analytics_Aryan.jpeg";
-import CVIHead1 from "../../Images/ContactUs/Club/CVI_Aditya.jpg";
-import CVIHead2 from "../../Images/ContactUs/Club/CVI_Shreyas.jpg";
-import ElectronicsHead1 from "../../Images/ContactUs/Club/Electronics_Swathi.jpeg";
-import ElectronicsHead2 from "../../Images/ContactUs/Club/Electronics_Sharanesh.jpg";
+import PrintingHead1 from "../../Images/ContactUs/Club/3DPrinting_Ishan.png";
+import PrintingHead2 from "../../Images/ContactUs/Club/3DPrinting_Bharathi.png";
+import AeroHead1 from "../../Images/ContactUs/Club/Aero_SaiKiran.png";
+import AeroHead2 from "../../Images/ContactUs/Club/Aero_Vedant.png";
+import AnalyticsHead1 from "../../Images/ContactUs/Club/Analytics_Tanay.png";
+import AnalyticsHead2 from "../../Images/ContactUs/Club/Analytics_Aryan.png";
+import CVIHead1 from "../../Images/ContactUs/Club/CVI_Aditya.png";
+import CVIHead2 from "../../Images/ContactUs/Club/CVI_Shreyas.png";
+import ElectronicsHead1 from "../../Images/ContactUs/Club/Electronics_Swathi.png";
+import ElectronicsHead2 from "../../Images/ContactUs/Club/Electronics_Sharanesh.png";
 import HorizonHead1 from "../../Images/ContactUs/Club/Horizon_Rajeshkumar.png";
-import HorizonHead2 from "../../Images/ContactUs/Club/Horizon_Hrishabh.jpeg";
-import iBotHead1 from "../../Images/ContactUs/Club/iBOT_Manideep.jpeg";
-import iBotHead2 from "../../Images/ContactUs/Club/iBOT_Rinkle.jpeg";
-import iGEMHead1 from "../../Images/ContactUs/Club/iGEM_Gayathri.jpeg";
-import iGEMHead2 from "../../Images/ContactUs/Club/iGEM_Neha.jpg";
-import ProductDesignHead1 from "../../Images/ContactUs/Club/ProductDesign_Abhigyan.jpeg";
-import ProductDesignHead2 from "../../Images/ContactUs/Club/ProductDesign_Sidharth.jfif";
-import ProgrammingHead1 from "../../Images/ContactUs/Club/Programming_Vishnu.jpeg";
-import ProgrammingHead2 from "../../Images/ContactUs/Club/Programming_Vineet.jpg";
-import SahaayHead1 from "../../Images/ContactUs/Club/Sahaay_Abhigna.jpeg";
-import SahaayHead2 from "../../Images/ContactUs/Club/Sahaay_Harshit.jpg";
-import EnvisageHead1 from "../../Images/ContactUs/Club/Envisage_Soumya.jpeg";
-import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Lochana.jpeg";
-import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/WebopsandBlockchain_Rutuj.jpeg";
-import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/WebopsandBlockchain_Utkarsh.jpeg";
-import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/WebopsandBlockchain_Janith.jpeg";
+import HorizonHead2 from "../../Images/ContactUs/Club/Horizon_Hrishabh.png";
+import iBotHead1 from "../../Images/ContactUs/Club/iBOT_Manideep.png";
+import iBotHead2 from "../../Images/ContactUs/Club/iBOT_Rinkle.png";
+import iGEMHead1 from "../../Images/ContactUs/Club/iGEM_Gayathri.png";
+import iGEMHead2 from "../../Images/ContactUs/Club/iGEM_Neha.png";
+import ProductDesignHead1 from "../../Images/ContactUs/Club/ProductDesign_Abhigyan.png";
+import ProductDesignHead2 from "../../Images/ContactUs/Club/ProductDesign_Sidharth.png";
+import ProgrammingHead1 from "../../Images/ContactUs/Club/Programming_Vishnu.png";
+import ProgrammingHead2 from "../../Images/ContactUs/Club/Programming_Vineet.png";
+import SahaayHead1 from "../../Images/ContactUs/Club/Sahaay_Abhigna.png";
+import SahaayHead2 from "../../Images/ContactUs/Club/Sahaay_Harshit.png";
+import EnvisageHead1 from "../../Images/ContactUs/Club/Envisage_Soumya.png";
+import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Lochana.png";
+import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/WebopsandBlockchain_Rutuj.png";
+import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/WebopsandBlockchain_Utkarsh.png";
+import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/WebopsandBlockchain_Janith.png";
+
+//ANALYTICS
+import AnalyticsAchievements1 from "../../Images/Community/Clubs/Analytics/Achievements1.gif";
+import AnalyticsAchievements2 from "../../Images/Community/Clubs/Analytics/Achievements2.png";
 
 //ELECTRONICS
 import ElectronicsAchievements1 from "../../Images/Community/Clubs/Electronics/Achievements1.jpeg";
@@ -81,6 +85,7 @@ import IBotGallery4 from "../../Images/Community/Clubs/iBot/Gallery4.jpeg";
 import IBotGallery5 from "../../Images/Community/Clubs/iBot/Gallery5.jpeg";
 import IBotGallery6 from "../../Images/Community/Clubs/iBot/Gallery6.jpeg";
 import IBotGallery7 from "../../Images/Community/Clubs/iBot/Gallery7.jpeg";
+import IBotGallery8 from "../../Images/Community/Clubs/iBot/Gallery8.jpeg";
 
 // SAHAAY
 import SahaayAchievements1 from "../../Images/Community/Clubs/Sahaay/Achievements1.jpeg";
@@ -202,12 +207,24 @@ export const Clubs: IClubs = {
   "analytics-club": {
     name: "Analytics## Club",
     logo: AnalyticsLogo,
-    description:
-      "The Analytics Club, CFI is a collective of passionate students working in many disciplines of Deep Learning and Data Science who apply these techniques to overcome problems in Natural Language Processing, Reinforcement Learning, Computer Vision, among others. Members of the club have worked in the industry as ML consultants, freelancers, and interns. Numerous club teams have managed to win national-level data science competitions such as Gartner HackElite, GS Quantify, Microsoft CodeFundo, Flipkart Grid, and Amex Ignite Program. Each year, chosen club teams compete in the Inter IIT Tech Meet, where they have secured Gold and Silver medals for their exceptional performance.",
+    description: `The Analytics Club, CFI is a collective of passionate students working in many disciplines of Deep Learning and Data Science who apply these techniques to overcome problems in Natural Language Processing, Reinforcement Learning, Computer Vision, among others. Members of the club have worked in the industry as ML consultants, freelancers, and interns. Numerous club teams have managed to win national-level data science competitions such as Gartner HackElite, GS Quantify, Microsoft CodeFundo, Flipkart Grid, and Amex Ignite Program. Each year, chosen club teams compete in the Inter IIT Tech Meet, where they have secured Gold and Silver medals for their exceptional performance. Github - ${link(
+      "Link",
+      "https://github.com/analytics-club-iitm"
+    )}`,
     achievements: [
       {
-        description:
-          "Pranav Pawar and Rohith from the Analytics club won the First Prize in the Machine Learning Challenge and Quant challenge, respectively, in the GS Quantify 2019, conducted by Goldman Sachs in Bangalore.",
+        description: `Our ${link(
+          "project on style transfer",
+          "https://github.com/analytics-club-iitm/MiniProject-Style-Transfer"
+        )} gave the students a glimpse into what goes into making the funky camera filters that one uses on social media platforms. The unique aspect of this session was that it built the project from the ground up, ie: from setting up one laptop and access to a server to all the way building a deployable dashboard.`,
+        image: AnalyticsAchievements1,
+      },
+      {
+        description: `We made and initiated a ${link(
+          "Community Run Paper Archive",
+          "https://github.com/analytics-club-iitm/Paper-Archive"
+        )} which lists summaries of various papers in the fields of Computer Vision, Natural Language Processing and Reinforcement Learning.`,
+        image: AnalyticsAchievements2,
       },
     ],
     github: "https://github.com/analytics-club-iitm",
@@ -472,6 +489,9 @@ export const Clubs: IClubs = {
       },
       {
         image: IBotGallery7,
+      },
+      {
+        image: IBotGallery8,
       },
     ],
     email: "ibotcfi@gmail.com",
