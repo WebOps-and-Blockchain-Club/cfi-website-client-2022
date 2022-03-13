@@ -14,6 +14,7 @@ import Heading from "../Shared/Heading";
 import Gallery from "../Shared/Gallery";
 import Logo from "../../Assets/Images/OpenHouse/OpenHouse2022White.png";
 import Gather from "../../Assets/Images/OpenHouse/GatherLogo.svg";
+import OSLogo from "../../Assets/Images/OpenHouse/OSLogo.jpg";
 import { OpenHouseData, OpenHouseGallery } from "../../Assets/Data/OpenHouse";
 
 interface Props {}
@@ -170,21 +171,55 @@ const OpenHouse = (props: Props) => {
               alignItems: "center",
             }}
           >
-            <CardMedia
-              component="img"
-              image={Gather}
-              alt={"data.name"}
-              sx={{
-                borderRadius: "20px",
-                verticalAlign: "middle",
-                objectFit: "contain",
-                // backgroundColor: "primary.light",
-                // boxShadow:
-                //   "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
-                // padding: "20px",
-                width: "300px",
-              }}
-            />
+            <a href="https://www.gather.town/" target="_blank" rel="noreferrer">
+              <CardMedia
+                component="img"
+                image={Gather}
+                alt={"data.name"}
+                sx={{
+                  borderRadius: "20px",
+                  verticalAlign: "middle",
+                  objectFit: "contain",
+                  // backgroundColor: "primary.light",
+                  // boxShadow:
+                  //   "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
+                  // padding: "20px",
+                  width: "300px",
+                }}
+              />
+            </a>
+          </Grid>
+          <Grid
+            container
+            mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
+            rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <a
+              href="https://www.ovenstory.in/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <CardMedia
+                component="img"
+                image={OSLogo}
+                alt={"data.name"}
+                sx={{
+                  borderRadius: "20px",
+                  verticalAlign: "middle",
+                  objectFit: "contain",
+                  // backgroundColor: "primary.light",
+                  // boxShadow:
+                  //   "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
+                  // padding: "20px",
+                  width: "300px",
+                }}
+              />
+            </a>
           </Grid>
         </Grid>
 
