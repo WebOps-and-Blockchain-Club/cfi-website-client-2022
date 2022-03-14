@@ -1,6 +1,7 @@
 import React from "react";
 import { createTheme, ThemeProvider } from "@mui/material";
 import Routes from "./Components/Route";
+import ReactGA from 'react-ga';
 
 interface Probs {}
 
@@ -23,6 +24,12 @@ const theme = createTheme({
 });
 
 const App = (probs: Probs) => {
+  React.useEffect(() => {
+    ReactGA.initialize("UA-208849633-1");
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Routes />
