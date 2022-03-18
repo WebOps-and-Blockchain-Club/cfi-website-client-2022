@@ -2,6 +2,7 @@
   "name": "client-2021",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://cfi.iitm.ac.in/",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
