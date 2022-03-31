@@ -6,3 +6,29 @@ query GetMe {
     role
   }
 }
+
+query GetBlog($blogId: String!) {
+  getBlog(BlogId: $blogId) {
+    id
+    title
+    description
+    readingTime
+    views
+    content
+    author
+    club
+    status
+    updatedAt
+    blogs {
+      id
+      name
+    }
+  }
+}
+
+query GetTags {
+  getTags {
+    id
+    name
+  }
+}

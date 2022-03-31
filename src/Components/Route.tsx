@@ -14,6 +14,7 @@ import ManagerialTeam from "./Community/ManagerialTeam";
 import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
+import NewBlog from "./Admin/NewBlog";
 
 interface Probs {}
 
@@ -35,6 +36,8 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/managerial-team" element={<ManagerialTeam />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/blog" element={<Media />} />
+          <Route path="/blog/:id" element={<Media />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
@@ -43,7 +46,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin"
             element={
-              RoleAccess.BlogAccess.includes(state.user.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -53,7 +56,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/blog"
             element={
-              RoleAccess.BlogAccess.includes(state.user.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -61,20 +64,10 @@ const AppRoutes = (probs: Probs) => {
             }
           />
           <Route
-            path="/admin/blog/add"
+            path="/admin/blog/new"
             element={
-              RoleAccess.BlogAccess.includes(state.user.role!) ? (
-                <Admin />
-              ) : (
-                <Navigate to="/admin/sign-in" />
-              )
-            }
-          />
-          <Route
-            path="/admin/blog/edit/:id"
-            element={
-              RoleAccess.BlogAccess.includes(state.user.role!) ? (
-                <Admin />
+              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
+                <NewBlog />
               ) : (
                 <Navigate to="/admin/sign-in" />
               )
@@ -83,7 +76,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/sign-in"
             element={
-              RoleAccess.BlogAccess.includes(state.user.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
                 <Navigate to="/admin" />
               ) : (
                 <AdminLogin />

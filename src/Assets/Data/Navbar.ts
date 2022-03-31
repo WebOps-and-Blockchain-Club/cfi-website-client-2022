@@ -64,7 +64,7 @@ export const NavbarAdminList = (role: UserRole) => {
   const navList = [
     {
       name: "ADD BLOG",
-      link: "/admin/blog/add",
+      link: "/admin/blog/new",
       role: RoleAccess.BlogAccess,
     },
     {

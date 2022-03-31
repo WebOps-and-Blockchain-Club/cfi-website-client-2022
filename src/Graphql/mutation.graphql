@@ -10,3 +10,24 @@ mutation Login($loginInputs: LoginInput!) {
 mutation Logout {
   logout
 }
+
+mutation CreateBlog($createBlogInput: CreateBlogInput!) {
+  createBlog(CreateBlogInput: $createBlogInput) {
+    id
+  }
+}
+
+mutation EditBlog($editBlogInput: EditBlogInput!, $editBlogBlogId: String!) {
+  editBlog(EditBlogInput: $editBlogInput, BlogId: $editBlogBlogId)
+}
+
+mutation UpdateBlogStatus(
+  $blogStatus: String!
+  $updateBlogStatusBlogId: String!
+) {
+  updateBlogStatus(BlogStatus: $blogStatus, BlogId: $updateBlogStatusBlogId)
+}
+
+mutation CreateTag($createTagInput: CreateTagInput!) {
+  createTag(CreateTagInput: $createTagInput)
+}
