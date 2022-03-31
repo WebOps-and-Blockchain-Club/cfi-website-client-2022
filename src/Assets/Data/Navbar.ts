@@ -1,4 +1,5 @@
 import Logout from "../../Components/Shared/Logout";
+import SIPAuth from "../../Components/SIP/Auth";
 import { UserRole } from "../../generated/graphql";
 import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
@@ -79,4 +80,24 @@ export const NavbarAdminList = (role: UserRole) => {
     },
   ];
   return navList.filter((nav) => nav.role.includes(role));
+};
+
+export const NavbarSIPList = () => {
+  return [
+    {
+      name: "HOME",
+      link: "/sip",
+    },
+    {
+      name: "PROPOSE PROJECT",
+      link: "/sip/projects/add",
+    },
+    {
+      name: "PROJECTS",
+      link: "/sip/projects",
+    },
+    {
+      component: SIPAuth,
+    },
+  ];
 };

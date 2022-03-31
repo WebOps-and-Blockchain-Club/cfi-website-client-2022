@@ -15,6 +15,10 @@ import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
 import NewBlog from "./Admin/NewBlog";
+import SIP from "./SIP";
+import ProjectsList from "./SIP/Projects";
+import NewProject from "./SIP/NewProject";
+import Project from "./SIP/Project";
 
 interface Probs {}
 
@@ -38,6 +42,19 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/media" element={<Media />} />
           <Route path="/blog" element={<Media />} />
           <Route path="/blog/:id" element={<Media />} />
+          <Route path="/sip" element={<SIP />} />
+          <Route path="/sip/projects" element={<ProjectsList />} />
+          <Route path="/sip/projects/:id" element={<Project />} />
+          <Route
+            path="/sip/projects/add"
+            element={
+              RoleAccess.SIPAddProjectAccess.includes(state.user?.role) ? (
+                <NewProject />
+              ) : (
+                <Navigate to="/sip" />
+              )
+            }
+          />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />

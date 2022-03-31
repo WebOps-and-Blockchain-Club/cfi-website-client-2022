@@ -23,6 +23,7 @@ import {
   NavbarAdminList,
   NavbarItems,
   NavbarMobileView,
+  NavbarSIPList,
 } from "../../Assets/Data/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -42,11 +43,15 @@ export default function Header() {
   const navMobList =
     state.user?.role && location.pathname.includes("admin")
       ? NavbarAdminList(state.user?.role!)
+      : location.pathname.includes("sip")
+      ? NavbarSIPList()
       : NavbarMobileView();
 
   const navWebList =
     state.user?.role && location.pathname.includes("admin")
       ? NavbarAdminList(state.user?.role!)
+      : location.pathname.includes("sip")
+      ? NavbarSIPList()
       : NavbarItems;
 
   //Is Top
