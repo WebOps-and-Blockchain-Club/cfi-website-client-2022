@@ -10,9 +10,9 @@ const Admin = (probs: Probs) => {
   return (
     <CustomBox>
       <CustomGridPage>
-        <Grid color={"red"}>{state.email}</Grid>
-        <Grid color={"red"}>{state.name}</Grid>
-        <Grid color={"red"}>{state.role}</Grid>
+        <Grid color={"red"}>{state.user.email}</Grid>
+        <Grid color={"red"}>{state.user.name}</Grid>
+        <Grid color={"red"}>{state.user.role}</Grid>
       </CustomGridPage>
     </CustomBox>
   );

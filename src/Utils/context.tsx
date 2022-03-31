@@ -1,9 +1,9 @@
 import React from "react";
-import { useGetMeQuery, UserRole } from "../generated/graphql";
+import { useGetMeQuery, User } from "../generated/graphql";
 
 interface UserContext {
   state: any;
-  signIn: (_role: UserRole, _email: string, _name: string) => void;
+  signIn: (_user: User) => void;
   signOut: () => void;
 }
 
@@ -25,42 +25,34 @@ function AuthContextProvider(props: {
       prevState: any,
       action: {
         type: any;
-        role?: UserRole | undefined;
-        name?: string | undefined;
-        email?: string | undefined;
+        user?: User | undefined;
       }
     ) => {
       switch (action.type) {
         case "RESTORE_TOKEN":
           return {
             ...prevState,
-            role: action.role,
-            name: action.name,
-            email: action.email,
+            user: action.user,
             isLoading: false,
           };
         case "SIGN_IN":
           return {
             ...prevState,
-            role: action.role,
-            name: action.name,
-            email: action.email,
+            user: action.user,
             isLoading: false,
           };
         case "SIGN_OUT":
           return {
             ...prevState,
             isAuthenticated: false,
-            role: null,
-            name: null,
-            email: null,
+            user: undefined,
             isLoading: false,
           };
       }
     },
     {
       isLoading: true,
-      role: null,
+      user: null,
     }
   );
 
@@ -69,21 +61,17 @@ function AuthContextProvider(props: {
     if (!loading && data?.getMe)
       dispatch({
         type: "RESTORE_TOKEN",
-        role: data.getMe.role,
-        email: data.getMe.email,
-        name: data.getMe.name,
+        user: data.getMe,
       });
   }, [data, loading, error]);
 
   const authContext = React.useMemo(
     () => ({
       state,
-      signIn: (_role: UserRole, _email: string, _name: string) => {
+      signIn: (_user: User) => {
         dispatch({
           type: "SIGN_IN",
-          role: _role,
-          email: _email,
-          name: _name,
+          user: _user,
         });
       },
       signOut: () => {

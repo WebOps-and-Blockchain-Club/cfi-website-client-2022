@@ -100,19 +100,12 @@ export type LoginInput = {
   token: Scalars['String'];
 };
 
-export type LoginOutput = {
-  authorized: Scalars['Boolean'];
-  email: Scalars['String'];
-  name: Scalars['String'];
-  role: UserRole;
-};
-
 export type Mutation = {
   createBlog: Scalars['Boolean'];
   createTag: Scalars['Boolean'];
   editBlog: Scalars['Boolean'];
   editTag: Scalars['Boolean'];
-  login: LoginOutput;
+  login: User;
   logout: Scalars['Boolean'];
   updateBlogStatus: Scalars['Boolean'];
 };
@@ -219,7 +212,7 @@ export type LoginMutationVariables = Exact<{
 }>;
 
 
-export type LoginMutation = { login: { authorized: boolean, role: UserRole, email: string, name: string } };
+export type LoginMutation = { login: { id: string, role: UserRole, email: string, name: string } };
 
 export type LogoutMutationVariables = Exact<{ [key: string]: never; }>;
 
@@ -229,13 +222,13 @@ export type LogoutMutation = { logout: boolean };
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeQuery = { getMe: { email: string, name: string, role: UserRole } };
+export type GetMeQuery = { getMe: { id: string, email: string, name: string, role: UserRole } };
 
 
 export const LoginDocument = gql`
     mutation Login($loginInputs: LoginInput!) {
   login(LoginInputs: $loginInputs) {
-    authorized
+    id
     role
     email
     name
@@ -301,6 +294,7 @@ export type LogoutMutationOptions = ApolloReactCommon.BaseMutationOptions<Logout
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
+    id
     email
     name
     role

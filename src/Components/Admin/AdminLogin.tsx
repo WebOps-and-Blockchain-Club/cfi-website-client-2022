@@ -27,9 +27,9 @@ const AdminLogin = (probs: Probs) => {
       setSnackbarMessage("Invalid User");
     } else if (error) {
       setSnackbarMessage(error.message);
-    } else if (data?.login.authorized) {
+    } else if (data?.login) {
       setSnackbarMessage("Succesfully Logged In");
-      signIn(data.login.role, data.login.email, data.login.name);
+      signIn(data.login);
     }
   }, [data, loading, error, signIn]);
 

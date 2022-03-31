@@ -43,7 +43,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -53,7 +53,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/blog"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -63,7 +63,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/blog/add"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -73,7 +73,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/blog/edit/:id"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -83,7 +83,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/sign-in"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user.role!) ? (
                 <Navigate to="/admin" />
               ) : (
                 <AdminLogin />
@@ -93,7 +93,7 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/sign-out"
             element={
-              RoleAccess.BlogAccess.includes(state.role!) ? (
+              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
                 <Navigate to="/admin" />
               ) : (
                 <Navigate to="/admin/sign-in" />

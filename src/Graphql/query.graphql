@@ -1,5 +1,6 @@
 query GetMe {
   getMe {
+    id
     email
     name
     role
