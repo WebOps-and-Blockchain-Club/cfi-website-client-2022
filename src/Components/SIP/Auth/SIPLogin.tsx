@@ -6,7 +6,9 @@ import { useLoginMutation } from "../../../generated/graphql";
 import AuthContext from "../../../Utils/context";
 import { RoleAccess } from "../../../Utils/config";
 
-interface Probs {}
+interface Probs {
+  btnMessage?: string;
+}
 
 const SIPLogin = (probs: Probs) => {
   const [snackbarMessage, setSnackbarMessage] = React.useState<
@@ -21,7 +23,8 @@ const SIPLogin = (probs: Probs) => {
     if (loading) setSnackbarMessage("Loading...");
     else if (
       error?.message.includes("Invalid user") ||
-      (data?.login && !RoleAccess.SIPAddProjectAccess.includes(data?.login.role!))
+      (data?.login &&
+        !RoleAccess.SIPAddProjectAccess.includes(data?.login.role!))
     ) {
       setSnackbarMessage("Invalid User");
     } else if (error) {
@@ -74,7 +77,7 @@ const SIPLogin = (probs: Probs) => {
       />
       <GoogleLogin
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID!}
-        buttonText="Log in with Google"
+        buttonText={probs.btnMessage ? probs.btnMessage : "Log in with Google"}
         onSuccess={handleLogin}
         onFailure={handleFailure}
         cookiePolicy={"single_host_origin"}

@@ -84,6 +84,7 @@ const ProjectForm = (probs: Probs) => {
         p={4}
         gap={4}
         justifyContent="center"
+        boxShadow="5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);"
       >
         <Heading white="PROPOSE " red="PROJECT" />
         <Grid item container gap={4}>

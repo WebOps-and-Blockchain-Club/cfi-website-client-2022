@@ -33,6 +33,23 @@ query GetTags {
   }
 }
 
+query GetProjects($filters: FilterProject) {
+  getProjects(Filters: $filters) {
+    projects {
+      id
+      title
+      clubs {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+    count
+  }
+}
+
 query GetProject($projectId: String!) {
   getProject(ProjectId: $projectId) {
     id
@@ -48,6 +65,9 @@ query GetProject($projectId: String!) {
     updatedAt
     clubs {
       id
+      name
+    }
+    createdBy {
       name
     }
     comments {

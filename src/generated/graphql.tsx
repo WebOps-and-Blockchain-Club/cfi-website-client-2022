@@ -229,6 +229,7 @@ export type Pagination = {
 export type Project = {
   clubs: Array<Club>;
   comments: Array<Comment>;
+  createdBy: User;
   id: Scalars['String'];
   q1?: Maybe<Scalars['String']>;
   q2?: Maybe<Scalars['String']>;
@@ -392,12 +393,19 @@ export type GetTagsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetTagsQuery = { getTags?: Array<{ id: string, name: string }> | null };
 
+export type GetProjectsQueryVariables = Exact<{
+  filters?: InputMaybe<FilterProject>;
+}>;
+
+
+export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
+
 export type GetProjectQueryVariables = Exact<{
   projectId: Scalars['String'];
 }>;
 
 
-export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, comments: Array<{ id: string, description: string, createdAt: any }> } | null };
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdAt: any }> } | null };
 
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -762,6 +770,55 @@ export type GetTagsQueryResult = ApolloReactCommon.QueryResult<GetTagsQuery, Get
 export function refetchGetTagsQuery(variables?: GetTagsQueryVariables) {
       return { query: GetTagsDocument, variables: variables }
     }
+export const GetProjectsDocument = gql`
+    query GetProjects($filters: FilterProject) {
+  getProjects(Filters: $filters) {
+    projects {
+      id
+      title
+      clubs {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+    count
+  }
+}
+    `;
+
+/**
+ * __useGetProjectsQuery__
+ *
+ * To run a query within a React component, call `useGetProjectsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetProjectsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetProjectsQuery({
+ *   variables: {
+ *      filters: // value for 'filters'
+ *   },
+ * });
+ */
+export function useGetProjectsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetProjectsQuery, GetProjectsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
+      }
+export function useGetProjectsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetProjectsQuery, GetProjectsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
+        }
+export type GetProjectsQueryHookResult = ReturnType<typeof useGetProjectsQuery>;
+export type GetProjectsLazyQueryHookResult = ReturnType<typeof useGetProjectsLazyQuery>;
+export type GetProjectsQueryResult = ApolloReactCommon.QueryResult<GetProjectsQuery, GetProjectsQueryVariables>;
+export function refetchGetProjectsQuery(variables?: GetProjectsQueryVariables) {
+      return { query: GetProjectsDocument, variables: variables }
+    }
 export const GetProjectDocument = gql`
     query GetProject($projectId: String!) {
   getProject(ProjectId: $projectId) {
@@ -778,6 +835,9 @@ export const GetProjectDocument = gql`
     updatedAt
     clubs {
       id
+      name
+    }
+    createdBy {
       name
     }
     comments {
