@@ -14,11 +14,12 @@ interface Probs {
       id: string;
       name: string;
     }[];
-    createdBy: {
+    createdBy?: {
       name: string;
     };
   };
   handleClubClick: Function;
+  handleEdit?: Function | null;
 }
 
 const ProjectCard = (probs: Probs) => {
@@ -73,6 +74,15 @@ const ProjectCard = (probs: Probs) => {
                 onClick={() => probs.handleClubClick(_club.name)}
               />
             ))}
+          </Grid>
+        )}
+        {probs.handleEdit && (
+          <Grid container gap={2} pt={1}>
+            <Chip
+              label={"Edit"}
+              sx={{ backgroundColor: "secondary.main" }}
+              onClick={() => probs.handleClubClick(probs.project.id)}
+            />
           </Grid>
         )}
       </CardContent>

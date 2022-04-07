@@ -381,6 +381,11 @@ export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetMeQuery = { getMe: { id: string, email: string, name: string, role: UserRole } };
 
+export type GetMeSipQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, clubs: Array<{ id: string, name: string }> }> | null } };
+
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
 }>;
@@ -680,6 +685,55 @@ export type GetMeLazyQueryHookResult = ReturnType<typeof useGetMeLazyQuery>;
 export type GetMeQueryResult = ApolloReactCommon.QueryResult<GetMeQuery, GetMeQueryVariables>;
 export function refetchGetMeQuery(variables?: GetMeQueryVariables) {
       return { query: GetMeDocument, variables: variables }
+    }
+export const GetMeSipDocument = gql`
+    query GetMeSIP {
+  getMe {
+    id
+    email
+    name
+    role
+    projects {
+      id
+      title
+      status
+      clubs {
+        id
+        name
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetMeSipQuery__
+ *
+ * To run a query within a React component, call `useGetMeSipQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetMeSipQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetMeSipQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetMeSipQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeSipQuery, GetMeSipQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
+      }
+export function useGetMeSipLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeSipQuery, GetMeSipQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
+        }
+export type GetMeSipQueryHookResult = ReturnType<typeof useGetMeSipQuery>;
+export type GetMeSipLazyQueryHookResult = ReturnType<typeof useGetMeSipLazyQuery>;
+export type GetMeSipQueryResult = ApolloReactCommon.QueryResult<GetMeSipQuery, GetMeSipQueryVariables>;
+export function refetchGetMeSipQuery(variables?: GetMeSipQueryVariables) {
+      return { query: GetMeSipDocument, variables: variables }
     }
 export const GetBlogDocument = gql`
     query GetBlog($blogId: String!) {

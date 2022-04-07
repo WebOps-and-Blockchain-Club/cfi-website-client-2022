@@ -7,6 +7,24 @@ query GetMe {
   }
 }
 
+query GetMeSIP {
+  getMe {
+    id
+    email
+    name
+    role
+    projects {
+      id
+      title
+      status
+      clubs {
+        id
+        name
+      }
+    }
+  }
+}
+
 query GetBlog($blogId: String!) {
   getBlog(BlogId: $blogId) {
     id
