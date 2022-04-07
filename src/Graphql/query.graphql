@@ -32,3 +32,35 @@ query GetTags {
     name
   }
 }
+
+query GetProject($projectId: String!) {
+  getProject(ProjectId: $projectId) {
+    id
+    title
+    q1
+    q2
+    q3
+    q4
+    q5
+    q6
+    q7
+    status
+    updatedAt
+    clubs {
+      id
+      name
+    }
+    comments {
+      id
+      description
+      createdAt
+    }
+  }
+}
+
+query GetClubs {
+  getClubs {
+    id
+    name
+  }
+}

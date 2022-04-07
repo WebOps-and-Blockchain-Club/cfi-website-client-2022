@@ -8,7 +8,6 @@ interface Probs {}
 
 const SIPAuth = (probs: Probs) => {
   const { state } = useContext(AuthContext)!;
-  console.log(state);
   if (state?.user?.role === UserRole.User) return <Logout />;
   return <SIPLogin />;
 };

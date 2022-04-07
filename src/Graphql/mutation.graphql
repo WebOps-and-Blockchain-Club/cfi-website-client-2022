@@ -31,3 +31,10 @@ mutation UpdateBlogStatus(
 mutation CreateTag($createTagInput: CreateTagInput!) {
   createTag(CreateTagInput: $createTagInput)
 }
+
+mutation CreateProject($createProjectInput: CreateProjectInput!) {
+  createProject(CreateProjectInput: $createProjectInput) {
+    id
+    status
+  }
+}

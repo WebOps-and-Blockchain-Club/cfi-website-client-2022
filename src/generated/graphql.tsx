@@ -16,12 +16,14 @@ export type Scalars = {
   Float: number;
   /** The javascript `Date` as string. Type represents date and time as the ISO Date string. */
   DateTime: any;
+  /** The `Upload` scalar type represents a file upload. */
+  Upload: any;
 };
 
 export type Blog = {
   author: Scalars['String'];
   blogs: Array<Tag>;
-  club: Club;
+  club: ClubEnum;
   content: Scalars['String'];
   description: Scalars['String'];
   id: Scalars['String'];
@@ -39,7 +41,13 @@ export enum BlogStatus {
   Rejected = 'REJECTED'
 }
 
-export enum Club {
+export type Club = {
+  id: Scalars['String'];
+  name: Scalars['String'];
+  projects: Array<Project>;
+};
+
+export enum ClubEnum {
   AeroClub = 'AERO_CLUB',
   AnalyticsClub = 'ANALYTICS_CLUB',
   Cvi = 'CVI',
@@ -55,9 +63,15 @@ export enum Club {
   WebopsAndBlockchainClub = 'WEBOPS_AND_BLOCKCHAIN_CLUB'
 }
 
+export type Comment = {
+  createdAt: Scalars['DateTime'];
+  description: Scalars['String'];
+  id: Scalars['String'];
+};
+
 export type CreateBlogInput = {
   author: Scalars['String'];
-  club: Club;
+  club: ClubEnum;
   content: Scalars['String'];
   description: Scalars['String'];
   readingTime: Scalars['String'];
@@ -65,15 +79,26 @@ export type CreateBlogInput = {
   title: Scalars['String'];
 };
 
+export type CreateClubInput = {
+  name: Scalars['String'];
+};
+
+export type CreateCommentInput = {
+  description: Scalars['String'];
+  projectId: Scalars['String'];
+};
+
 export type CreateProjectInput = {
-  club: Scalars['String'];
-  q1: Scalars['String'];
-  q2: Scalars['String'];
-  q3: Scalars['String'];
-  q4: Scalars['String'];
-  q5: Scalars['String'];
-  q6: Scalars['String'];
-  q7: Scalars['String'];
+  clubIds: Array<Scalars['String']>;
+  id?: InputMaybe<Scalars['String']>;
+  q1?: InputMaybe<Scalars['String']>;
+  q2?: InputMaybe<Scalars['String']>;
+  q3?: InputMaybe<Scalars['String']>;
+  q4?: InputMaybe<Scalars['String']>;
+  q5?: InputMaybe<Scalars['String']>;
+  q6?: InputMaybe<Scalars['String']>;
+  q7?: InputMaybe<Scalars['String']>;
+  status: ProjectStatus;
   title: Scalars['String'];
 };
 
@@ -83,23 +108,11 @@ export type CreateTagInput = {
 
 export type EditBlogInput = {
   author?: InputMaybe<Scalars['String']>;
-  club?: InputMaybe<Club>;
+  club?: InputMaybe<ClubEnum>;
   content?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   readingTime?: InputMaybe<Scalars['String']>;
   tagIds?: InputMaybe<Array<Scalars['String']>>;
-  title?: InputMaybe<Scalars['String']>;
-};
-
-export type EditProjectInput = {
-  club?: InputMaybe<Club>;
-  q1?: InputMaybe<Scalars['String']>;
-  q2?: InputMaybe<Scalars['String']>;
-  q3?: InputMaybe<Scalars['String']>;
-  q4?: InputMaybe<Scalars['String']>;
-  q5?: InputMaybe<Scalars['String']>;
-  q6?: InputMaybe<Scalars['String']>;
-  q7?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
 };
 
@@ -114,7 +127,8 @@ export type FilterBlog = {
 };
 
 export type FilterProject = {
-  club?: InputMaybe<Club>;
+  clubIds?: InputMaybe<Array<Scalars['String']>>;
+  clubNames?: InputMaybe<Array<Scalars['String']>>;
   search?: InputMaybe<Scalars['String']>;
 };
 
@@ -128,25 +142,45 @@ export type GetProjectsOutput = {
   projects?: Maybe<Array<Project>>;
 };
 
+export type Image = {
+  createdAt: Scalars['DateTime'];
+  id: Scalars['String'];
+  name: Scalars['String'];
+  url: Scalars['String'];
+};
+
 export type LoginInput = {
   token: Scalars['String'];
 };
 
 export type Mutation = {
   createBlog: Blog;
+  createClub: Scalars['Boolean'];
+  createComment: Comment;
   createProject: Project;
   createTag: Scalars['Boolean'];
   editBlog: Scalars['Boolean'];
-  editProject: Scalars['Boolean'];
   editTag: Scalars['Boolean'];
   login: User;
   logout: Scalars['Boolean'];
   updateBlogStatus: Scalars['Boolean'];
+  uploadImage: Array<Image>;
 };
 
 
 export type MutationCreateBlogArgs = {
   CreateBlogInput: CreateBlogInput;
+};
+
+
+export type MutationCreateClubArgs = {
+  CreateClubInput: CreateClubInput;
+};
+
+
+export type MutationCreateCommentArgs = {
+  CreateCommentInput: CreateCommentInput;
+  ProjectId: Scalars['String'];
 };
 
 
@@ -166,12 +200,6 @@ export type MutationEditBlogArgs = {
 };
 
 
-export type MutationEditProjectArgs = {
-  EditProjectInput: EditProjectInput;
-  ProjectId: Scalars['String'];
-};
-
-
 export type MutationEditTagArgs = {
   EditTagInput: EditTagInput;
   TagId: Scalars['String'];
@@ -188,34 +216,53 @@ export type MutationUpdateBlogStatusArgs = {
   BlogStatus: Scalars['String'];
 };
 
+
+export type MutationUploadImageArgs = {
+  Image: Array<Scalars['Upload']>;
+};
+
 export type Pagination = {
   skip: Scalars['Float'];
   take: Scalars['Float'];
 };
 
 export type Project = {
-  club: Club;
+  clubs: Array<Club>;
+  comments: Array<Comment>;
   id: Scalars['String'];
-  q1: Scalars['String'];
-  q2: Scalars['String'];
-  q3: Scalars['String'];
-  q4: Scalars['String'];
-  q5: Scalars['String'];
-  q6: Scalars['String'];
-  q7: Scalars['String'];
+  q1?: Maybe<Scalars['String']>;
+  q2?: Maybe<Scalars['String']>;
+  q3?: Maybe<Scalars['String']>;
+  q4?: Maybe<Scalars['String']>;
+  q5?: Maybe<Scalars['String']>;
+  q6?: Maybe<Scalars['String']>;
+  q7?: Maybe<Scalars['String']>;
+  status: ProjectStatus;
   title: Scalars['String'];
   updatedAt: Scalars['DateTime'];
 };
 
+export enum ProjectStatus {
+  Draft = 'DRAFT',
+  Public = 'PUBLIC'
+}
+
 export type Query = {
+  deleteImage: Scalars['Boolean'];
   getBlog?: Maybe<Blog>;
   getBlogs: GetBlogsOutput;
+  getClubs: Array<Club>;
   getMe: User;
   getProject?: Maybe<Project>;
   getProjects: GetProjectsOutput;
   getTag?: Maybe<Tag>;
   getTags?: Maybe<Array<Tag>>;
   updateViews?: Maybe<Scalars['Boolean']>;
+};
+
+
+export type QueryDeleteImageArgs = {
+  ImageName: Scalars['String'];
 };
 
 
@@ -268,6 +315,7 @@ export type User = {
   email: Scalars['String'];
   id: Scalars['String'];
   name: Scalars['String'];
+  projects?: Maybe<Array<Project>>;
   role: UserRole;
 };
 
@@ -320,6 +368,13 @@ export type CreateTagMutationVariables = Exact<{
 
 export type CreateTagMutation = { createTag: boolean };
 
+export type CreateProjectMutationVariables = Exact<{
+  createProjectInput: CreateProjectInput;
+}>;
+
+
+export type CreateProjectMutation = { createProject: { id: string, status: ProjectStatus } };
+
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -330,12 +385,24 @@ export type GetBlogQueryVariables = Exact<{
 }>;
 
 
-export type GetBlogQuery = { getBlog?: { id: string, title: string, description: string, readingTime: string, views: number, content: string, author: string, club: Club, status: BlogStatus, updatedAt: any, blogs: Array<{ id: string, name: string }> } | null };
+export type GetBlogQuery = { getBlog?: { id: string, title: string, description: string, readingTime: string, views: number, content: string, author: string, club: ClubEnum, status: BlogStatus, updatedAt: any, blogs: Array<{ id: string, name: string }> } | null };
 
 export type GetTagsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetTagsQuery = { getTags?: Array<{ id: string, name: string }> | null };
+
+export type GetProjectQueryVariables = Exact<{
+  projectId: Scalars['String'];
+}>;
+
+
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, comments: Array<{ id: string, description: string, createdAt: any }> } | null };
+
+export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetClubsQuery = { getClubs: Array<{ id: string, name: string }> };
 
 
 export const LoginDocument = gql`
@@ -532,6 +599,40 @@ export function useCreateTagMutation(baseOptions?: ApolloReactHooks.MutationHook
 export type CreateTagMutationHookResult = ReturnType<typeof useCreateTagMutation>;
 export type CreateTagMutationResult = ApolloReactCommon.MutationResult<CreateTagMutation>;
 export type CreateTagMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateTagMutation, CreateTagMutationVariables>;
+export const CreateProjectDocument = gql`
+    mutation CreateProject($createProjectInput: CreateProjectInput!) {
+  createProject(CreateProjectInput: $createProjectInput) {
+    id
+    status
+  }
+}
+    `;
+export type CreateProjectMutationFn = ApolloReactCommon.MutationFunction<CreateProjectMutation, CreateProjectMutationVariables>;
+
+/**
+ * __useCreateProjectMutation__
+ *
+ * To run a mutation, you first call `useCreateProjectMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateProjectMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createProjectMutation, { data, loading, error }] = useCreateProjectMutation({
+ *   variables: {
+ *      createProjectInput: // value for 'createProjectInput'
+ *   },
+ * });
+ */
+export function useCreateProjectMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateProjectMutation, CreateProjectMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateProjectMutation, CreateProjectMutationVariables>(CreateProjectDocument, options);
+      }
+export type CreateProjectMutationHookResult = ReturnType<typeof useCreateProjectMutation>;
+export type CreateProjectMutationResult = ApolloReactCommon.MutationResult<CreateProjectMutation>;
+export type CreateProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateProjectMutation, CreateProjectMutationVariables>;
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -660,4 +761,99 @@ export type GetTagsLazyQueryHookResult = ReturnType<typeof useGetTagsLazyQuery>;
 export type GetTagsQueryResult = ApolloReactCommon.QueryResult<GetTagsQuery, GetTagsQueryVariables>;
 export function refetchGetTagsQuery(variables?: GetTagsQueryVariables) {
       return { query: GetTagsDocument, variables: variables }
+    }
+export const GetProjectDocument = gql`
+    query GetProject($projectId: String!) {
+  getProject(ProjectId: $projectId) {
+    id
+    title
+    q1
+    q2
+    q3
+    q4
+    q5
+    q6
+    q7
+    status
+    updatedAt
+    clubs {
+      id
+      name
+    }
+    comments {
+      id
+      description
+      createdAt
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetProjectQuery__
+ *
+ * To run a query within a React component, call `useGetProjectQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetProjectQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetProjectQuery({
+ *   variables: {
+ *      projectId: // value for 'projectId'
+ *   },
+ * });
+ */
+export function useGetProjectQuery(baseOptions: ApolloReactHooks.QueryHookOptions<GetProjectQuery, GetProjectQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
+      }
+export function useGetProjectLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetProjectQuery, GetProjectQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
+        }
+export type GetProjectQueryHookResult = ReturnType<typeof useGetProjectQuery>;
+export type GetProjectLazyQueryHookResult = ReturnType<typeof useGetProjectLazyQuery>;
+export type GetProjectQueryResult = ApolloReactCommon.QueryResult<GetProjectQuery, GetProjectQueryVariables>;
+export function refetchGetProjectQuery(variables: GetProjectQueryVariables) {
+      return { query: GetProjectDocument, variables: variables }
+    }
+export const GetClubsDocument = gql`
+    query GetClubs {
+  getClubs {
+    id
+    name
+  }
+}
+    `;
+
+/**
+ * __useGetClubsQuery__
+ *
+ * To run a query within a React component, call `useGetClubsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetClubsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetClubsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetClubsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetClubsQuery, GetClubsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
+      }
+export function useGetClubsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetClubsQuery, GetClubsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
+        }
+export type GetClubsQueryHookResult = ReturnType<typeof useGetClubsQuery>;
+export type GetClubsLazyQueryHookResult = ReturnType<typeof useGetClubsLazyQuery>;
+export type GetClubsQueryResult = ApolloReactCommon.QueryResult<GetClubsQuery, GetClubsQueryVariables>;
+export function refetchGetClubsQuery(variables?: GetClubsQueryVariables) {
+      return { query: GetClubsDocument, variables: variables }
     }

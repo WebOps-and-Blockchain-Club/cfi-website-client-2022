@@ -1,17 +1,17 @@
-import { Club } from "../generated/graphql";
+import { ClubEnum } from "../generated/graphql";
 
 export const ClubsArr = [
-  Club.ThreedPrintingClub,
-  Club.AeroClub,
-  Club.AnalyticsClub,
-  Club.Cvi,
-  Club.ElectronicsClub,
-  Club.Horizon,
-  Club.Ibot,
-  Club.Igem,
-  Club.ProductDesignClub,
-  Club.ProgrammingClub,
-  Club.TeamSahaay,
-  Club.TeamEnvisage,
-  Club.WebopsAndBlockchainClub,
+  ClubEnum.ThreedPrintingClub,
+  ClubEnum.AeroClub,
+  ClubEnum.AnalyticsClub,
+  ClubEnum.Cvi,
+  ClubEnum.ElectronicsClub,
+  ClubEnum.Horizon,
+  ClubEnum.Ibot,
+  ClubEnum.Igem,
+  ClubEnum.ProductDesignClub,
+  ClubEnum.ProgrammingClub,
+  ClubEnum.TeamSahaay,
+  ClubEnum.TeamEnvisage,
+  ClubEnum.WebopsAndBlockchainClub,
 ];
