@@ -38,3 +38,9 @@ mutation CreateProject($createProjectInput: CreateProjectInput!) {
     status
   }
 }
+
+mutation CreateComment($createCommentInput: CreateCommentInput!) {
+  createComment(CreateCommentInput: $createCommentInput) {
+    id
+  }
+}

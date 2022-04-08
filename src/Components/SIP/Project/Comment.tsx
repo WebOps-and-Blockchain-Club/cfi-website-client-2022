@@ -1,66 +1,72 @@
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-import React, { useContext } from "react";
-import { UserRole } from "../../../generated/graphql";
-import AuthContext from "../../../Utils/context";
-import CommentForm from "../../Form/CommentForm";
-import SIPLogin from "../Auth/SIPLogin";
+import React from "react";
+import Heading from "../../Shared/Heading";
 
 interface Probs {
   comments: {
     id: string;
     description: string;
-    createdAt: any;
+    createdBy: {
+      name: string;
+    };
   }[];
 }
 
 const Comment = (probs: Probs) => {
-  const { state } = useContext(AuthContext)!;
   const theme = useTheme();
-  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-  console.log(probs.comments);
-  if (state?.user?.role === UserRole.User)
-    return (
-      <Grid item container gap={5} my={5}>
-        {probs.comments && probs.comments.length !== 0 && (
-          <>
+
+  return (
+    <Grid item container justifyContent="center">
+      {probs.comments && probs.comments.length !== 0 && (
+        <>
+          <Heading white="COMM" red="ENTS" />
+          {probs.comments.map((_comment) => (
             <Grid
               item
               container
-              textAlign="center"
-              pt={matchesLG ? "15px" : "unset"}
+              flexDirection="column"
+              p={matchesSM ? "15px" : "30px"}
+              mt={5}
+              sx={{
+                borderRadius: "20px",
+                backgroundColor: "primary.light",
+                boxShadow:
+                  "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
+              }}
             >
               <Typography
-                variant={matchesSM ? "h6" : "h5"}
+                gutterBottom
+                component="div"
                 color="primary.contrastText"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
+                fontSize={{
+                  xs: "16px",
+                  sm: "18px",
                 }}
-              >
-                COMM
-              </Typography>
+                m={0}
+                textAlign={"justify"}
+                dangerouslySetInnerHTML={{
+                  __html: _comment.description,
+                }}
+              />
               <Typography
-                variant={matchesSM ? "h6" : "h5"}
-                color="secondary"
-                sx={{
-                  display: "inline",
-                  textTransform: "uppercase",
-                  fontFamily: "Proxima Nova Bold",
-                  textAlign: "center",
+                gutterBottom
+                component="div"
+                color="primary.contrastText"
+                fontSize={{
+                  xs: "16px",
+                  sm: "18px",
                 }}
+                m={0}
               >
-                ENT
+                By {_comment.createdBy.name}
               </Typography>
             </Grid>
-          </>
-        )}
-        <CommentForm />
-      </Grid>
-    );
-  return <SIPLogin btnMessage="Login To Comment" />;
+          ))}
+        </>
+      )}
+    </Grid>
+  );
 };
 
 export default Comment;

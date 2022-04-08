@@ -91,7 +91,9 @@ query GetProject($projectId: String!) {
     comments {
       id
       description
-      createdAt
+      createdBy {
+        name
+      }
     }
   }
 }

@@ -65,6 +65,7 @@ export enum ClubEnum {
 
 export type Comment = {
   createdAt: Scalars['DateTime'];
+  createdBy: User;
   description: Scalars['String'];
   id: Scalars['String'];
 };
@@ -180,7 +181,6 @@ export type MutationCreateClubArgs = {
 
 export type MutationCreateCommentArgs = {
   CreateCommentInput: CreateCommentInput;
-  ProjectId: Scalars['String'];
 };
 
 
@@ -376,6 +376,13 @@ export type CreateProjectMutationVariables = Exact<{
 
 export type CreateProjectMutation = { createProject: { id: string, status: ProjectStatus } };
 
+export type CreateCommentMutationVariables = Exact<{
+  createCommentInput: CreateCommentInput;
+}>;
+
+
+export type CreateCommentMutation = { createComment: { id: string } };
+
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -410,7 +417,7 @@ export type GetProjectQueryVariables = Exact<{
 }>;
 
 
-export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdAt: any }> } | null };
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
 
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -646,6 +653,39 @@ export function useCreateProjectMutation(baseOptions?: ApolloReactHooks.Mutation
 export type CreateProjectMutationHookResult = ReturnType<typeof useCreateProjectMutation>;
 export type CreateProjectMutationResult = ApolloReactCommon.MutationResult<CreateProjectMutation>;
 export type CreateProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateProjectMutation, CreateProjectMutationVariables>;
+export const CreateCommentDocument = gql`
+    mutation CreateComment($createCommentInput: CreateCommentInput!) {
+  createComment(CreateCommentInput: $createCommentInput) {
+    id
+  }
+}
+    `;
+export type CreateCommentMutationFn = ApolloReactCommon.MutationFunction<CreateCommentMutation, CreateCommentMutationVariables>;
+
+/**
+ * __useCreateCommentMutation__
+ *
+ * To run a mutation, you first call `useCreateCommentMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateCommentMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createCommentMutation, { data, loading, error }] = useCreateCommentMutation({
+ *   variables: {
+ *      createCommentInput: // value for 'createCommentInput'
+ *   },
+ * });
+ */
+export function useCreateCommentMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateCommentMutation, CreateCommentMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateCommentMutation, CreateCommentMutationVariables>(CreateCommentDocument, options);
+      }
+export type CreateCommentMutationHookResult = ReturnType<typeof useCreateCommentMutation>;
+export type CreateCommentMutationResult = ApolloReactCommon.MutationResult<CreateCommentMutation>;
+export type CreateCommentMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateCommentMutation, CreateCommentMutationVariables>;
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -897,7 +937,9 @@ export const GetProjectDocument = gql`
     comments {
       id
       description
-      createdAt
+      createdBy {
+        name
+      }
     }
   }
 }
