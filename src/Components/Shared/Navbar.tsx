@@ -101,27 +101,28 @@ export default function Header() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {navMobList.map((_item, index) => (
+        {navMobList.map((item, index) => (
           <ListItem button key={index}>
-            {_item.link && (
+            {item.link && (
               <NavbarButton
-                name={_item.name}
+                name={item.name}
                 handleClick={() => {
-                  navigate(_item.link);
+                  navigate(item.link);
                   setOpenNavbar(false);
                 }}
               />
             )}
-            {_item.subItems && (
+            {item.subItems && (
               <SubItemMobileView
                 id={index}
-                name={_item.name}
-                items={_item.subItems}
+                name={item.name}
+                items={item.subItems}
                 toggleDrawer={() => setOpenNavbar(false)}
                 checked={checked}
                 setChecked={setChecked}
               />
             )}
+            {item.component && <item.component />}
           </ListItem>
         ))}
       </List>
