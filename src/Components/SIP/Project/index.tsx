@@ -17,6 +17,7 @@ import CommentForm from "../../Form/CommentForm";
 import SIPLogin from "../Auth/SIPLogin";
 import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
+import { SIPData } from "../../../Assets/Data/SIP";
 
 interface Probs {}
 
@@ -66,17 +67,6 @@ const Project = (probs: Probs) => {
                       <Grid item pt={matchesLG ? "15px" : "unset"}>
                         <Typography
                           variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
                           color="secondary"
                           sx={{
                             display: "inline",
@@ -84,7 +74,17 @@ const Project = (probs: Probs) => {
                             fontFamily: "Proxima Nova Bold",
                           }}
                         >
-                          1
+                          1.{" "}
+                        </Typography>
+                        <Typography
+                          variant={matchesSM ? "h6" : "h5"}
+                          color="primary.contrastText"
+                          sx={{
+                            display: "inline",
+                            fontFamily: "Proxima Nova Bold",
+                          }}
+                        >
+                          {SIPData.questions[0]}
                         </Typography>
                       </Grid>
                       <Typography
@@ -108,17 +108,6 @@ const Project = (probs: Probs) => {
                       <Grid item pt={matchesLG ? "15px" : "unset"}>
                         <Typography
                           variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
                           color="secondary"
                           sx={{
                             display: "inline",
@@ -126,7 +115,17 @@ const Project = (probs: Probs) => {
                             fontFamily: "Proxima Nova Bold",
                           }}
                         >
-                          2
+                          2.{" "}
+                        </Typography>
+                        <Typography
+                          variant={matchesSM ? "h6" : "h5"}
+                          color="primary.contrastText"
+                          sx={{
+                            display: "inline",
+                            fontFamily: "Proxima Nova Bold",
+                          }}
+                        >
+                          {SIPData.questions[1]}
                         </Typography>
                       </Grid>
                       <Typography
@@ -150,17 +149,6 @@ const Project = (probs: Probs) => {
                       <Grid item pt={matchesLG ? "15px" : "unset"}>
                         <Typography
                           variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
                           color="secondary"
                           sx={{
                             display: "inline",
@@ -168,7 +156,17 @@ const Project = (probs: Probs) => {
                             fontFamily: "Proxima Nova Bold",
                           }}
                         >
-                          3
+                          3.{" "}
+                        </Typography>
+                        <Typography
+                          variant={matchesSM ? "h6" : "h5"}
+                          color="primary.contrastText"
+                          sx={{
+                            display: "inline",
+                            fontFamily: "Proxima Nova Bold",
+                          }}
+                        >
+                          {SIPData.questions[2]}
                         </Typography>
                       </Grid>
                       <Typography
@@ -192,17 +190,6 @@ const Project = (probs: Probs) => {
                       <Grid item pt={matchesLG ? "15px" : "unset"}>
                         <Typography
                           variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
                           color="secondary"
                           sx={{
                             display: "inline",
@@ -210,7 +197,17 @@ const Project = (probs: Probs) => {
                             fontFamily: "Proxima Nova Bold",
                           }}
                         >
-                          4
+                          4.{" "}
+                        </Typography>
+                        <Typography
+                          variant={matchesSM ? "h6" : "h5"}
+                          color="primary.contrastText"
+                          sx={{
+                            display: "inline",
+                            fontFamily: "Proxima Nova Bold",
+                          }}
+                        >
+                          {SIPData.questions[3]}
                         </Typography>
                       </Grid>
                       <Typography
@@ -225,132 +222,6 @@ const Project = (probs: Probs) => {
                         textAlign={"justify"}
                         dangerouslySetInnerHTML={{
                           __html: data.getProject.q4!,
-                        }}
-                      />
-                    </>
-                  )}
-                  {data.getProject.q5 && (
-                    <>
-                      <Grid item pt={matchesLG ? "15px" : "unset"}>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="secondary"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          5
-                        </Typography>
-                      </Grid>
-                      <Typography
-                        gutterBottom
-                        component="div"
-                        color="primary.contrastText"
-                        fontSize={{
-                          xs: "16px",
-                          sm: "18px",
-                        }}
-                        m={0}
-                        textAlign={"justify"}
-                        dangerouslySetInnerHTML={{
-                          __html: data.getProject.q5!,
-                        }}
-                      />
-                    </>
-                  )}
-                  {data.getProject.q6 && (
-                    <>
-                      <Grid item pt={matchesLG ? "15px" : "unset"}>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="secondary"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          6
-                        </Typography>
-                      </Grid>
-                      <Typography
-                        gutterBottom
-                        component="div"
-                        color="primary.contrastText"
-                        fontSize={{
-                          xs: "16px",
-                          sm: "18px",
-                        }}
-                        m={0}
-                        textAlign={"justify"}
-                        dangerouslySetInnerHTML={{
-                          __html: data.getProject.q6!,
-                        }}
-                      />
-                    </>
-                  )}
-                  {data.getProject.q7 && (
-                    <>
-                      <Grid item pt={matchesLG ? "15px" : "unset"}>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="primary.contrastText"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          QUESTION{" "}
-                        </Typography>
-                        <Typography
-                          variant={matchesSM ? "h6" : "h5"}
-                          color="secondary"
-                          sx={{
-                            display: "inline",
-                            textTransform: "uppercase",
-                            fontFamily: "Proxima Nova Bold",
-                          }}
-                        >
-                          7
-                        </Typography>
-                      </Grid>
-                      <Typography
-                        gutterBottom
-                        component="div"
-                        color="primary.contrastText"
-                        fontSize={{
-                          xs: "16px",
-                          sm: "18px",
-                        }}
-                        m={0}
-                        textAlign={"justify"}
-                        dangerouslySetInnerHTML={{
-                          __html: data.getProject.q7!,
                         }}
                       />
                     </>

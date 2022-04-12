@@ -48,9 +48,6 @@ const NewProject = (probs: Probs) => {
           !value.q1 ||
           !value.q2 ||
           !value.q3 ||
-          !value.q4 ||
-          !value.q5 ||
-          !value.q6 ||
           clubIds.length === 0)
       ) {
         setCError("Enter all the required fields");
@@ -64,9 +61,6 @@ const NewProject = (probs: Probs) => {
               q2: value.q2,
               q3: value.q3,
               q4: value.q4,
-              q5: value.q5,
-              q6: value.q6,
-              q7: value.q7,
               status,
               clubIds,
             },

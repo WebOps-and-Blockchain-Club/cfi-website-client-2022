@@ -207,69 +207,6 @@ const ProjectForm = (probs: Probs) => {
           />
         </Grid>
 
-        <Grid item container gap={4} direction="column">
-          <Typography
-            gutterBottom
-            component="div"
-            color="primary.contrastText"
-            fontSize={{
-              xs: "16px",
-              sm: "18px",
-            }}
-            m={0}
-            textAlign={"justify"}
-          >
-            Question 5
-          </Typography>
-          <MarkDownEditor
-            id="q5"
-            value={projectInput?.q5!}
-            onChange={handleChange}
-          />
-        </Grid>
-
-        <Grid item container gap={4} direction="column">
-          <Typography
-            gutterBottom
-            component="div"
-            color="primary.contrastText"
-            fontSize={{
-              xs: "16px",
-              sm: "18px",
-            }}
-            m={0}
-            textAlign={"justify"}
-          >
-            Question 6
-          </Typography>
-          <MarkDownEditor
-            id="q6"
-            value={projectInput?.q6!}
-            onChange={handleChange}
-          />
-        </Grid>
-
-        <Grid item container gap={4} direction="column">
-          <Typography
-            gutterBottom
-            component="div"
-            color="primary.contrastText"
-            fontSize={{
-              xs: "16px",
-              sm: "18px",
-            }}
-            m={0}
-            textAlign={"justify"}
-          >
-            Question 7
-          </Typography>
-          <MarkDownEditor
-            id="q7"
-            value={projectInput?.q7!}
-            onChange={handleChange}
-          />
-        </Grid>
-
         <Grid item container justifyContent={"space-evenly"}>
           <Button
             sx={{

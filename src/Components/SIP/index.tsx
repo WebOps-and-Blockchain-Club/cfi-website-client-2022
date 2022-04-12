@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import React, { useContext } from "react";
-import { SIPDate } from "../../Assets/Data/SIP";
+import { SIPData } from "../../Assets/Data/SIP";
 import { UserRole } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
@@ -43,7 +43,7 @@ const SIP = (probs: Probs) => {
               textAlignLast: "center",
             }}
           >
-            {SIPDate.content}
+            {SIPData.content}
           </Typography>
         </Grid>
         <Grid
@@ -54,7 +54,7 @@ const SIP = (probs: Probs) => {
           mt={"25px"}
           justifyContent={"center"}
         >
-          {SIPDate.quotes.map((n) => (
+          {SIPData.quotes.map((n) => (
             <Card
               sx={{
                 m: "0 10px",

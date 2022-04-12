@@ -96,9 +96,6 @@ export type CreateProjectInput = {
   q2?: InputMaybe<Scalars['String']>;
   q3?: InputMaybe<Scalars['String']>;
   q4?: InputMaybe<Scalars['String']>;
-  q5?: InputMaybe<Scalars['String']>;
-  q6?: InputMaybe<Scalars['String']>;
-  q7?: InputMaybe<Scalars['String']>;
   status: ProjectStatus;
   title: Scalars['String'];
 };
@@ -235,9 +232,6 @@ export type Project = {
   q2?: Maybe<Scalars['String']>;
   q3?: Maybe<Scalars['String']>;
   q4?: Maybe<Scalars['String']>;
-  q5?: Maybe<Scalars['String']>;
-  q6?: Maybe<Scalars['String']>;
-  q7?: Maybe<Scalars['String']>;
   status: ProjectStatus;
   title: Scalars['String'];
   updatedAt: Scalars['DateTime'];
@@ -417,7 +411,7 @@ export type GetProjectQueryVariables = Exact<{
 }>;
 
 
-export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, q5?: string | null, q6?: string | null, q7?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
 
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -922,9 +916,6 @@ export const GetProjectDocument = gql`
     q2
     q3
     q4
-    q5
-    q6
-    q7
     status
     updatedAt
     clubs {
