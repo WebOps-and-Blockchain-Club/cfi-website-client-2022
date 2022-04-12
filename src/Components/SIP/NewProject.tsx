@@ -43,8 +43,7 @@ const NewProject = (probs: Probs) => {
         setCError("Enter the title of the project");
       } else if (
         status === ProjectStatus.Public &&
-        (!value.id ||
-          !value.title ||
+        (!value.title ||
           !value.q1 ||
           !value.q2 ||
           !value.q3 ||
@@ -100,7 +99,14 @@ const NewProject = (probs: Probs) => {
           }
         />
         {createProjectData?.createProject.id && (
-          <SuccessDialog message="Comment Added" callBack={submitCallBack} />
+          <SuccessDialog
+            message={
+              createProjectData?.createProject.status === ProjectStatus.Public
+                ? "Project Proposed"
+                : "Draft Saved"
+            }
+            callBack={submitCallBack}
+          />
         )}
         <ProjectForm
           initialValues={data}

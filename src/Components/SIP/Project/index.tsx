@@ -1,13 +1,14 @@
 import {
   Card,
   CardContent,
+  Chip,
   Grid,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useGetProjectQuery, UserRole } from "../../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import Heading from "../../Shared/Heading";
@@ -18,11 +19,13 @@ import SIPLogin from "../Auth/SIPLogin";
 import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import { SIPData } from "../../../Assets/Data/SIP";
+import moment from "moment";
 
 interface Probs {}
 
 const Project = (probs: Probs) => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const { state } = useContext(AuthContext)!;
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
@@ -33,6 +36,11 @@ const Project = (probs: Probs) => {
       projectId: id!,
     },
   });
+
+  const setClubNameFilter = (value: string) => {
+    navigate(`/sip/projects?club=${value}`);
+  };
+
   return (
     <CustomBox>
       <CustomGridPage>
@@ -45,6 +53,28 @@ const Project = (probs: Probs) => {
               <Typography color="primary.contrastText" textAlign={"center"}>
                 By {data.getProject.createdBy.name}
               </Typography>
+              <Typography
+                component="div"
+                color="primary.contrastText"
+                textAlign={"center"}
+              >
+                Last updated at{" "}
+                {moment(data.getProject.updatedAt).format(
+                  "MMMM Do YYYY, h:mm a"
+                )}
+              </Typography>
+              {data.getProject.clubs && (
+                <Grid container gap={2} pt={1} justifyContent="center">
+                  {data.getProject.clubs.map((_club) => (
+                    <Chip
+                      label={_club.name}
+                      sx={{ backgroundColor: "primary.contrastText" }}
+                      size="small"
+                      onClick={() => setClubNameFilter(_club.name)}
+                    />
+                  ))}
+                </Grid>
+              )}
             </Grid>
 
             <Grid item container flexDirection={"column"} mt={5}>

@@ -17,6 +17,7 @@ query GetMeSIP {
       id
       title
       status
+      updatedAt
       clubs {
         id
         name
@@ -56,6 +57,7 @@ query GetProjects($filters: FilterProject) {
     projects {
       id
       title
+      updatedAt
       clubs {
         id
         name

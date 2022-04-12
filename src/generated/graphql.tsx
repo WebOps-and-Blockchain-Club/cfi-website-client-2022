@@ -385,7 +385,7 @@ export type GetMeQuery = { getMe: { id: string, email: string, name: string, rol
 export type GetMeSipQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, clubs: Array<{ id: string, name: string }> }> | null } };
+export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }> }> | null } };
 
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
@@ -404,7 +404,7 @@ export type GetProjectsQueryVariables = Exact<{
 }>;
 
 
-export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
+export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
 
 export type GetProjectQueryVariables = Exact<{
   projectId: Scalars['String'];
@@ -731,6 +731,7 @@ export const GetMeSipDocument = gql`
       id
       title
       status
+      updatedAt
       clubs {
         id
         name
@@ -864,6 +865,7 @@ export const GetProjectsDocument = gql`
     projects {
       id
       title
+      updatedAt
       clubs {
         id
         name

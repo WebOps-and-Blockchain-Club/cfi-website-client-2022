@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import React from "react";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 interface Probs {
   project: {
@@ -17,6 +18,7 @@ interface Probs {
     createdBy?: {
       name: string;
     };
+    updatedAt: string;
   };
   handleClubClick: Function;
   handleEdit?: Function | null;
@@ -64,6 +66,18 @@ const ProjectCard = (probs: Probs) => {
             {probs.project.title}
           </Typography>
         </Link>
+        <Typography
+          component="div"
+          color="primary.contrastText"
+          sx={{
+            textAlign: "justify",
+            fontSize: matches ? "12px" : "14px",
+            letterSpacing: "1px",
+          }}
+        >
+          Last updated at{" "}
+          {moment(probs.project.updatedAt).format("MMMM Do YYYY, h:mm a")}
+        </Typography>
         {probs.project.clubs && (
           <Grid container gap={2} pt={1}>
             {probs.project.clubs.map((_club) => (
