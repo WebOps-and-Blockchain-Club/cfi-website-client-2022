@@ -37,4 +37,39 @@ function Heading({ white, red }: { white: string; red: string }) {
   );
 }
 
+function HeadingSub({ white, red }: { white: string; red: string }) {
+  const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+
+  return (
+    <Grid item textAlign="center">
+      <Typography
+        variant={matchesSM ? "h6" : "h5"}
+        color="primary.contrastText"
+        sx={{
+          display: "inline",
+          textTransform: "uppercase",
+          fontFamily: "Proxima Nova Bold",
+          textAlign: "center",
+        }}
+      >
+        {white}
+      </Typography>
+      <Typography
+        variant={matchesSM ? "h6" : "h5"}
+        color="secondary"
+        sx={{
+          display: "inline",
+          textTransform: "uppercase",
+          fontFamily: "Proxima Nova Bold",
+          textAlign: "center",
+        }}
+      >
+        {red}
+      </Typography>
+    </Grid>
+  );
+}
+
 export default Heading;
+export { HeadingSub };

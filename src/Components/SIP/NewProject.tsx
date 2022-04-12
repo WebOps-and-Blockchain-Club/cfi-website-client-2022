@@ -1,5 +1,3 @@
-import IconButton from "@mui/material/IconButton";
-import Snackbar from "@mui/material/Snackbar";
 import React from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
@@ -10,7 +8,9 @@ import {
 } from "../../generated/graphql";
 import ProjectForm from "../Form/ProjectForm";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
-import CloseIcon from "@mui/icons-material/Close";
+import Loading from "../Shared/Dialog/Loading";
+import ErrorDialog from "../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../Shared/Dialog/SuccessDialog";
 
 interface Probs {}
 
@@ -30,22 +30,8 @@ const NewProject = (probs: Probs) => {
 
   const [
     createProjectMutation,
-    { loading: createLoading, error: createError },
-  ] = useCreateProjectMutation({
-    onCompleted(data) {
-      if (
-        data?.createProject &&
-        data.createProject.status === ProjectStatus.Draft
-      ) {
-        setSearchParams({ id: data.createProject.id });
-      } else if (
-        data?.createProject &&
-        data.createProject.status === ProjectStatus.Public
-      ) {
-        navigate(`/sip/projects/${data.createProject.id}`);
-      }
-    },
-  });
+    { data: createProjectData, loading: createLoading, error: createError },
+  ] = useCreateProjectMutation();
 
   const handleCreateProject = async (
     value: Partial<CreateProjectInput>,
@@ -92,31 +78,36 @@ const NewProject = (probs: Probs) => {
     }
   };
 
+  const submitCallBack = () => {
+    if (
+      createProjectData?.createProject &&
+      createProjectData.createProject.status === ProjectStatus.Draft
+    ) {
+      setSearchParams({ id: createProjectData.createProject.id });
+    } else if (
+      createProjectData?.createProject &&
+      createProjectData.createProject.status === ProjectStatus.Public
+    ) {
+      navigate(`/sip/projects/${createProjectData.createProject.id}`);
+    }
+  };
+
   return (
     <CustomBox>
       <CustomGridPage>
-        <Snackbar
-          open={!!error || !!createError || !!cError}
-          autoHideDuration={loading ? null : 6000}
-          // onClose={handleClose}
+        <Loading loading={!!loading || !!createLoading} />
+        <ErrorDialog
           message={
-            JSON.stringify(error) +
-            JSON.stringify(createError) +
-            loading +
-            createLoading +
-            cError
-          }
-          action={
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              // onClick={handleClose}
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
+            !!cError
+              ? cError
+              : !!error || !!createError
+              ? "Some Error Occurred"
+              : null
           }
         />
+        {createProjectData?.createProject.id && (
+          <SuccessDialog message="Comment Added" callBack={submitCallBack} />
+        )}
         <ProjectForm
           initialValues={data}
           handleCreateProject={handleCreateProject}

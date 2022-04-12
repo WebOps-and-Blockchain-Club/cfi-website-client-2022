@@ -1,37 +1,32 @@
 import React, { useContext } from "react";
 import GoogleLogin from "react-google-login";
-import { IconButton, Snackbar } from "@mui/material";
-import CloseIcon from "@mui/icons-material/Close";
 import { useLoginMutation } from "../../../generated/graphql";
 import AuthContext from "../../../Utils/context";
 import { RoleAccess } from "../../../Utils/config";
+import Loading from "../../Shared/Dialog/Loading";
+import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
 
 interface Probs {
   btnMessage?: string;
 }
 
 const SIPLogin = (probs: Probs) => {
-  const [snackbarMessage, setSnackbarMessage] = React.useState<
-    string | undefined
-  >();
-
   const { signIn } = useContext(AuthContext)!;
+
+  const [errorMessage, setErrorMessage] = React.useState<string>();
 
   const [loginMutation, { data, loading, error }] = useLoginMutation();
 
   React.useEffect(() => {
-    if (loading) setSnackbarMessage("Loading...");
-    else if (
+    if (
       error?.message.includes("Invalid user") ||
       (data?.login &&
         !RoleAccess.SIPAddProjectAccess.includes(data?.login.role!))
     ) {
-      setSnackbarMessage("Invalid User");
+      setErrorMessage("Invalid User");
     } else if (error) {
-      setSnackbarMessage(error.message);
-    } else if (data?.login) {
-      setSnackbarMessage("Succesfully Logged In");
-      signIn(data.login);
+      setErrorMessage(error.message);
     }
   }, [data, loading, error, signIn]);
 
@@ -53,28 +48,15 @@ const SIPLogin = (probs: Probs) => {
     console.log(googleData);
   };
 
-  const handleClose = () => {
-    setSnackbarMessage(undefined);
-  };
+  const loginCallback = () => signIn(data?.login!);
 
   return (
     <>
-      <Snackbar
-        open={!!snackbarMessage}
-        autoHideDuration={loading ? null : 6000}
-        onClose={handleClose}
-        message={snackbarMessage}
-        action={
-          <IconButton
-            size="small"
-            aria-label="close"
-            color="inherit"
-            onClick={handleClose}
-          >
-            <CloseIcon fontSize="small" />
-          </IconButton>
-        }
-      />
+      <Loading loading={!!loading} />
+      <ErrorDialog message={errorMessage} />
+      {data?.login && (
+        <SuccessDialog message="Login Successfully" callBack={loginCallback} />
+      )}
       <GoogleLogin
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID!}
         buttonText={probs.btnMessage ? probs.btnMessage : "Log in with Google"}
@@ -82,6 +64,7 @@ const SIPLogin = (probs: Probs) => {
         onFailure={handleFailure}
         cookiePolicy={"single_host_origin"}
         hostedDomain={"smail.iitm.ac.in"}
+        prompt={"consent"}
       />
     </>
   );

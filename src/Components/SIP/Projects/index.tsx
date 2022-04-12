@@ -1,14 +1,13 @@
 import Grid from "@mui/material/Grid";
-import IconButton from "@mui/material/IconButton";
-import Snackbar from "@mui/material/Snackbar";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { useGetProjectsQuery } from "../../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
-import Heading from "../../Shared/Heading";
+import Heading, { HeadingSub } from "../../Shared/Heading";
 import { CustomTextField } from "../../Shared/InputField";
 import ProjectCard from "./ProjectCard";
-import CloseIcon from "@mui/icons-material/Close";
+import Loading from "../../Shared/Dialog/Loading";
+import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 
 interface Probs {}
 
@@ -36,22 +35,8 @@ const ProjectsList = (probs: Probs) => {
   return (
     <CustomBox>
       <CustomGridPage>
-        <Snackbar
-          open={!!error || !!loading}
-          autoHideDuration={loading ? null : 6000}
-          // onClose={handleClose}
-          message={JSON.stringify(error) + loading}
-          action={
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              // onClick={handleClose}
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          }
-        />
+        <Loading loading={!!loading} />
+        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
         <Heading white="PROPOSED " red="PROJECTS" />
         <Grid item container py={{ xs: 4, sm: 5, md: 6, lg: 6 }}>
           <CustomTextField
@@ -73,6 +58,9 @@ const ProjectsList = (probs: Probs) => {
             gap={4}
             justifyContent="center"
           >
+            {data.getProjects.projects?.length === 0 && (
+              <HeadingSub white="NO PROJECTS" red=" FOUND" />
+            )}
             {data.getProjects.projects?.map((_project) => (
               <ProjectCard
                 project={_project}

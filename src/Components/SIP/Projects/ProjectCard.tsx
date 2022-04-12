@@ -81,7 +81,7 @@ const ProjectCard = (probs: Probs) => {
             <Chip
               label={"Edit"}
               sx={{ backgroundColor: "secondary.main" }}
-              onClick={() => probs.handleClubClick(probs.project.id)}
+              onClick={() => probs.handleEdit!(probs.project.id)}
             />
           </Grid>
         )}

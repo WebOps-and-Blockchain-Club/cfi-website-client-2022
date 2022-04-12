@@ -1,11 +1,13 @@
 import React from "react";
-import { Button, Grid, IconButton, Snackbar, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import MarkDownEditor from "./Editor";
 import {
   refetchGetProjectQuery,
   useCreateCommentMutation,
 } from "../../generated/graphql";
-import CloseIcon from "@mui/icons-material/Close";
+import Loading from "../Shared/Dialog/Loading";
+import ErrorDialog from "../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../Shared/Dialog/SuccessDialog";
 
 interface Probs {
   projectId: string;
@@ -52,22 +54,9 @@ const CommentForm = (probs: Probs) => {
         justifyContent="center"
         boxShadow="5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);"
       >
-        <Snackbar
-          open={!!data || !!loading || !!error}
-          autoHideDuration={loading ? null : 6000}
-          // onClose={handleClose}
-          message={JSON.stringify(data) + JSON.stringify(error) + loading}
-          action={
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              // onClick={handleClose}
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          }
-        />
+        <Loading loading={!!loading} />
+        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        {data?.createComment.id && <SuccessDialog message="Comment Added" />}
         <Grid item container gap={4} direction="column">
           <Typography
             gutterBottom

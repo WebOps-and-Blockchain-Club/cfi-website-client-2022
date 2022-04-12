@@ -1,15 +1,7 @@
 import React from "react";
-import {
-  Button,
-  Checkbox,
-  Grid,
-  TextField,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import { Button, Checkbox, Grid, TextField, Typography } from "@mui/material";
 import { CustomAutocomplete, CustomTextField } from "../Shared/InputField";
-import Heading from "../Shared/Heading";
+import Heading, { HeadingSub } from "../Shared/Heading";
 import MarkDownEditor from "./Editor";
 import {
   CreateProjectInput,
@@ -26,9 +18,6 @@ interface Probs {
 }
 
 const ProjectForm = (probs: Probs) => {
-  const theme = useTheme();
-  const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
-
   const [projectInput, setProjectInput] =
     React.useState<Partial<CreateProjectInput>>();
 
@@ -132,32 +121,7 @@ const ProjectForm = (probs: Probs) => {
           </Grid>
         )}
 
-        <Grid item textAlign="center">
-          <Typography
-            variant={matchesSM ? "h6" : "h5"}
-            color="primary.contrastText"
-            sx={{
-              display: "inline",
-              textTransform: "uppercase",
-              fontFamily: "Proxima Nova Bold",
-              textAlign: "center",
-            }}
-          >
-            QUESTION
-          </Typography>
-          <Typography
-            variant={matchesSM ? "h6" : "h5"}
-            color="secondary"
-            sx={{
-              display: "inline",
-              textTransform: "uppercase",
-              fontFamily: "Proxima Nova Bold",
-              textAlign: "center",
-            }}
-          >
-            NAIRE
-          </Typography>
-        </Grid>
+        <HeadingSub white="QUESTION" red="NAIRE" />
 
         <Grid item container gap={4} direction="column">
           <Typography

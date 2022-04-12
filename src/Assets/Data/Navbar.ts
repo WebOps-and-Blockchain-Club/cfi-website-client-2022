@@ -1,5 +1,6 @@
 import Logout from "../../Components/Shared/Logout";
 import SIPAuth from "../../Components/SIP/Auth";
+import ProposeProjectButton from "../../Components/SIP/ProposeProjectButton";
 import { UserRole } from "../../generated/graphql";
 import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
@@ -89,8 +90,7 @@ export const NavbarSIPList = () => {
       link: "/sip",
     },
     {
-      name: "PROPOSE PROJECT",
-      link: "/sip/projects/add",
+      component: ProposeProjectButton,
     },
     {
       name: "PROJECTS",

@@ -2,8 +2,6 @@ import {
   Card,
   CardContent,
   Grid,
-  IconButton,
-  Snackbar,
   Typography,
   useMediaQuery,
   useTheme,
@@ -14,10 +12,11 @@ import { useGetProjectQuery, UserRole } from "../../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import Heading from "../../Shared/Heading";
 import Comment from "./Comment";
-import CloseIcon from "@mui/icons-material/Close";
 import AuthContext from "../../../Utils/context";
 import CommentForm from "../../Form/CommentForm";
 import SIPLogin from "../Auth/SIPLogin";
+import Loading from "../../Shared/Dialog/Loading";
+import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 
 interface Probs {}
 
@@ -36,22 +35,8 @@ const Project = (probs: Probs) => {
   return (
     <CustomBox>
       <CustomGridPage>
-        <Snackbar
-          open={!!error || !!loading}
-          autoHideDuration={loading ? null : 6000}
-          // onClose={handleClose}
-          message={JSON.stringify(error) + loading}
-          action={
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              // onClick={handleClose}
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          }
-        />
+        <Loading loading={!!loading} />
+        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
         {data?.getProject && (
           <Grid item container>
             <Grid item container flexDirection={"column"}>

@@ -1,10 +1,11 @@
-import { Grid, IconButton, Snackbar } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
 import { ProjectStatus, useGetMeSipQuery } from "../../generated/graphql";
 import ProjectCard from "./Projects/ProjectCard";
 import Heading from "../Shared/Heading";
+import Loading from "../Shared/Dialog/Loading";
+import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 
 interface Probs {}
 
@@ -18,27 +19,13 @@ const SIPUser = (probs: Probs) => {
   };
 
   const handleEdit = (value: string) => {
-    navigate(`/sip/projects?add?id=${value}`);
+    navigate(`/sip/projects/add?id=${value}`);
   };
 
   return (
     <>
-      <Snackbar
-        open={!!error || !!loading}
-        autoHideDuration={loading ? null : 6000}
-        // onClose={handleClose}
-        message={JSON.stringify(error) + loading}
-        action={
-          <IconButton
-            size="small"
-            aria-label="close"
-            color="inherit"
-            // onClick={handleClose}
-          >
-            <CloseIcon fontSize="small" />
-          </IconButton>
-        }
-      />
+      <Loading loading={!!loading} />
+      <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
       {data && (
         <>
           <Heading white="YOUR " red="PROJECTS" />
