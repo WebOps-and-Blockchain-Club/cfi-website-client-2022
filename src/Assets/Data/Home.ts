@@ -8,6 +8,7 @@ import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
 import Highlights1 from "../Images/Home/Highlights1.png";
+import Highlights2 from "../Images/Home/Highlights2.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
 import PeopleIcon from "../Icons/Stats/People.svg";
@@ -77,15 +78,18 @@ export const HighlightsData = () => {
       image: Highlights1,
       title: "CFI Open House, 2022 - 13th edition of flagship event",
     },
+    {
+      url: "/sip",
+      image: Highlights2,
+      title: "Student Innovation Program, 2022 - Bring your ideas to life",
+    },
   ];
   AchievementsData.map((_data) =>
-    data.push(
-      {
-        url: `/achievements#${_data.id}`,
-        image: _data.image,
-        title: _data.title,
-      },
-    )
+    data.push({
+      url: `/achievements#${_data.id}`,
+      image: _data.image,
+      title: _data.title,
+    })
   );
 
   return data;
