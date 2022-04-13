@@ -83,7 +83,12 @@ const ProjectCard = (probs: Probs) => {
             {probs.project.clubs.map((_club) => (
               <Chip
                 label={_club.name}
-                sx={{ backgroundColor: "primary.contrastText" }}
+                sx={{
+                  backgroundColor: "primary.contrastText",
+                  ":hover": {
+                    backgroundColor: "primary.contrastText",
+                  },
+                }}
                 size="small"
                 onClick={() => probs.handleClubClick(_club.name)}
               />
@@ -94,7 +99,12 @@ const ProjectCard = (probs: Probs) => {
           <Grid container gap={2} pt={1}>
             <Chip
               label={"Edit"}
-              sx={{ backgroundColor: "secondary.main" }}
+              sx={{
+                backgroundColor: "secondary.main",
+                ":hover": {
+                  backgroundColor: "secondary.main",
+                },
+              }}
               onClick={() => probs.handleEdit!(probs.project.id)}
             />
           </Grid>

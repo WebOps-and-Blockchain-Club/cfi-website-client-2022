@@ -9,7 +9,11 @@ import {
 } from "@mui/material";
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useGetProjectQuery, UserRole } from "../../../generated/graphql";
+import {
+  ProjectStatus,
+  useGetProjectQuery,
+  UserRole,
+} from "../../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import Heading from "../../Shared/Heading";
 import Comment from "./Comment";
@@ -68,7 +72,12 @@ const Project = (probs: Probs) => {
                   {data.getProject.clubs.map((_club) => (
                     <Chip
                       label={_club.name}
-                      sx={{ backgroundColor: "primary.contrastText" }}
+                      sx={{
+                        backgroundColor: "primary.contrastText",
+                        ":hover": {
+                          backgroundColor: "primary.contrastText",
+                        },
+                      }}
                       size="small"
                       onClick={() => setClubNameFilter(_club.name)}
                     />
@@ -266,7 +275,9 @@ const Project = (probs: Probs) => {
 
             <Grid item container justifyContent="center" mt={5}>
               {state?.user?.role === UserRole.User ? (
-                <CommentForm projectId={data.getProject.id} />
+                data.getProject.status === ProjectStatus.Public && (
+                  <CommentForm projectId={data.getProject.id} />
+                )
               ) : (
                 <SIPLogin btnMessage="Login To Comment" />
               )}

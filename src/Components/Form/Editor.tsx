@@ -20,6 +20,7 @@ const MarkDownEditor = (probs: Probs) => {
         id={probs.id}
         apiKey="mkq4wx2fqdpsudg39muuml92d69h1mo1gsbjspljadf570fm"
         init={{
+          width: "100%",
           menubar: false,
           plugins: [
             "advlist autolink lists link image charmap print preview anchor",

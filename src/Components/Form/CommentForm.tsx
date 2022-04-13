@@ -81,9 +81,15 @@ const CommentForm = (probs: Probs) => {
         <Grid item container justifyContent={"space-evenly"}>
           <Button
             sx={{
-              padding: "10px 20px",
+              padding: "5px 20px",
               color: "primary.contrastText",
               backgroundColor: "secondary.dark",
+              fontWeight: "bold",
+              fontSize: "16px",
+              ":hover": {
+                backgroundColor: "secondary.main",
+                color: "primary.contrastText",
+              },
             }}
             type="submit"
           >
