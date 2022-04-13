@@ -105,11 +105,7 @@ export default function Header() {
           <ListItem button key={index}>
             {item.link && (
               <NavbarButton
-<<<<<<< HEAD
                 name={item.name}
-=======
-                data={_item}
->>>>>>> d820b076c7b90facfce5303cf1cc01fbd2434ac0
                 handleClick={() => {
                   navigate(item.link);
                   setOpenNavbar(false);
@@ -119,13 +115,8 @@ export default function Header() {
             {item.subItems && (
               <SubItemMobileView
                 id={index}
-<<<<<<< HEAD
                 name={item.name}
                 items={item.subItems}
-=======
-                data={_item}
-                items={_item.subItems}
->>>>>>> d820b076c7b90facfce5303cf1cc01fbd2434ac0
                 toggleDrawer={() => setOpenNavbar(false)}
                 checked={checked}
                 setChecked={setChecked}
@@ -266,7 +257,7 @@ export default function Header() {
                     {item.link && (
                       <Grid>
                         <NavbarButton
-                          data={item}
+                          name={item.name}
                           handleClick={() => navigate(item.link)}
                         />
                       </Grid>
@@ -300,7 +291,7 @@ function SubItemWebView({ item }: { item: any }) {
   return (
     <Box className="dropdown">
       <NavbarButton
-        data={item}
+        name={item.name}
         className="dropbtn"
         icon={<ExpandMore />}
         handleClick={() => {}}
@@ -321,7 +312,7 @@ function SubItemWebView({ item }: { item: any }) {
               return (
                 <Box className="sub-dropdown">
                   <NavbarButton
-                    data={_subItem}
+                    name={_subItem.name}
                     className="sub-dropbtn dropdown-list dropdown-list-width "
                     icon={<ChevronRightOutlinedIcon />}
                     handleClick={() => {}}
@@ -369,14 +360,14 @@ function SubItemWebView({ item }: { item: any }) {
 
 function SubItemMobileView({
   id,
-  data,
+  name,
   items,
   toggleDrawer,
   checked,
   setChecked,
 }: {
   id: number;
-  data: any;
+  name: string;
   items: any[];
   toggleDrawer: Function;
   checked: number | null | undefined;
@@ -387,7 +378,7 @@ function SubItemMobileView({
   return (
     <Grid>
       <NavbarButton
-        data={data}
+        name={name}
         handleClick={() => {
           if (checked === id) setChecked(null);
           else setChecked(id);
@@ -398,7 +389,7 @@ function SubItemMobileView({
         <Grid container direction={"column"} pt={"10px"} pb={"10px"}>
           {items.map((_item) => (
             <NavbarButton
-              data={_item}
+              name={_item.name}
               handleClick={() => {
                 toggleDrawer();
                 navigate(_item.link);
@@ -412,20 +403,15 @@ function SubItemMobileView({
   );
 }
 
-<<<<<<< HEAD
 export function NavbarButton({
   name,
-=======
-function NavbarButton({
-  data,
->>>>>>> d820b076c7b90facfce5303cf1cc01fbd2434ac0
   handleClick,
   mouseOverClick,
   className,
   icon,
   isSub,
 }: {
-  data: any;
+  name: string;
   handleClick: Function;
   mouseOverClick?: Function | undefined;
   className?: string | undefined;
@@ -443,20 +429,18 @@ function NavbarButton({
         color: "primary.contrastText",
         fontSize: "14px",
         letterSpacing: "1px",
-        border: data.highlight ? "3px solid #FF0000" : "unset",
+        fontFamily: "Proxima Nova",
         fontWeight: matches ? "400" : "900",
         padding: "7px 10px",
         paddingLeft: isSub ? "40px" : "7px",
         lineHeight: "unset",
         justifyContent: "unset",
         textAlign: matches ? "start" : "center",
-        borderRadius: "13px",
+        borderRadius: "4px",
         height: matches ? "unset" : "30px",
         ":hover": {
           backgroundColor: matches ? "unset" : "primary.contrastText",
           color: matches ? "unset" : "primary.main",
-          borderRadius: "4px",
-          border: "unset",
         },
       }}
       endIcon={icon ? icon : null}
@@ -465,7 +449,7 @@ function NavbarButton({
         if (!!mouseOverClick) mouseOverClick();
       }}
     >
-      {data.name}
+      {name}
     </Button>
   );
 }
