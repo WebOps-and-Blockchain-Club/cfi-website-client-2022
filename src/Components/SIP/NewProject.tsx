@@ -3,6 +3,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   CreateProjectInput,
   ProjectStatus,
+  refetchGetMeSipQuery,
+  refetchGetProjectsQuery,
   useCreateProjectMutation,
   useGetProjectQuery,
 } from "../../generated/graphql";
@@ -17,7 +19,6 @@ interface Probs {}
 const NewProject = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
-  console.log(searchParams.get("id"));
 
   const [cError, setCError] = React.useState<string>();
 
@@ -31,7 +32,9 @@ const NewProject = (probs: Probs) => {
   const [
     createProjectMutation,
     { data: createProjectData, loading: createLoading, error: createError },
-  ] = useCreateProjectMutation();
+  ] = useCreateProjectMutation({
+    refetchQueries: [refetchGetMeSipQuery(), refetchGetProjectsQuery()],
+  });
 
   const handleCreateProject = async (
     value: Partial<CreateProjectInput>,
