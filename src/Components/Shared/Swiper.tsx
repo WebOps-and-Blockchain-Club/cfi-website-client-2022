@@ -72,7 +72,7 @@ export default function CustomSwiper(probs: Probs) {
             <SwiperCard
               heading={_data.title}
               image={_data.image}
-              link={`/achievements#${_data.id}`}
+              link={_data.url}
             />
           </SwiperSlide>
         ))}

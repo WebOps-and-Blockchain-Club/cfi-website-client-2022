@@ -4,6 +4,7 @@ import Routes from "./Components/Route";
 import { AuthContextProvider } from "./Utils/context";
 import { ApolloProvider } from "@apollo/client";
 import client from "./Graphql";
+import ReactGA from 'react-ga';
 
 interface Probs {}
 
@@ -26,6 +27,12 @@ const theme = createTheme({
 });
 
 const App = (probs: Probs) => {
+  React.useEffect(() => {
+    ReactGA.initialize("UA-208849633-1");
+
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <ApolloProvider client={client}>
       <AuthContextProvider>

@@ -7,6 +7,8 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
+import Highlights1 from "../Images/Home/Highlights1.png";
+
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
 import PeopleIcon from "../Icons/Stats/People.svg";
 import FootfallIcon from "../Icons/Stats/Footfall.svg";
@@ -18,7 +20,7 @@ import IndustryProjectsIcon from "../Icons/Stats/IndustryProjects.svg";
 
 import PrintingLogo from "../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../Images/ClubLogo/AeroLogo(withoutName).png";
-import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo.png";
+import AnalyticsLogo from "../Images/ClubLogo/AnalyticsLogo(withoutName).png";
 import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
 import HorizonLogo from "../Images/ClubLogo/HorizonWhiteLogo(withoutName).png";
@@ -43,6 +45,7 @@ import GalleryImage5 from "../../Assets/Images/Home/Gallery5.jpg";
 import GalleryImage6 from "../../Assets/Images/Home/Gallery6.jpg";
 import GalleryImage7 from "../../Assets/Images/Home/Gallery7.jpg";
 import GalleryImage8 from "../../Assets/Images/Home/Gallery8.jpg";
+import { AchievementsData } from "./Achievements";
 
 export const CarouselData = [
   {
@@ -66,6 +69,27 @@ export const CarouselData = [
     linear: "Revolutionizing tech and innovation",
   },
 ];
+
+export const HighlightsData = () => {
+  const data: any[] = [
+    {
+      url: "/open-house",
+      image: Highlights1,
+      title: "CFI Open House, 2022 - 13th edition of flagship event",
+    },
+  ];
+  AchievementsData.map((_data) =>
+    data.push(
+      {
+        url: `/achievements#${_data.id}`,
+        image: _data.image,
+        title: _data.title,
+      },
+    )
+  );
+
+  return data;
+};
 
 export const CompetitionTeamList = [
   {

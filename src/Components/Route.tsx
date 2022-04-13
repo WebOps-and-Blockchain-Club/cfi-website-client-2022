@@ -14,11 +14,15 @@ import ManagerialTeam from "./Community/ManagerialTeam";
 import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
+<<<<<<< HEAD
 import NewBlog from "./Admin/NewBlog";
 import SIP from "./SIP";
 import ProjectsList from "./SIP/Projects";
 import NewProject from "./SIP/NewProject";
 import Project from "./SIP/Project";
+=======
+import OpenHouse from "./OpenHouse";
+>>>>>>> d820b076c7b90facfce5303cf1cc01fbd2434ac0
 
 interface Probs {}
 
@@ -39,6 +43,7 @@ const AppRoutes = (probs: Probs) => {
           />
           <Route path="/managerial-team" element={<ManagerialTeam />} />
           <Route path="/achievements" element={<Achievements />} />
+          <Route path="/open-house" element={<OpenHouse />} />
           <Route path="/media" element={<Media />} />
           <Route path="/blog" element={<Media />} />
           <Route path="/blog/:id" element={<Media />} />

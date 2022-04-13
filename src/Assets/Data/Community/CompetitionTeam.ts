@@ -8,13 +8,13 @@ import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.pn
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
 // TEAM HEADS IMAGE
-import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.jpg";
-import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Bharath.jpg";
-import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Shashank.jpg";
-import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Amit.jpg";
-import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Bharat.jpg";
-import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Yash.jpg";
-import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Vibhor.jpg";
+import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.png";
+import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Bharath.png";
+import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Shashank.png";
+import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Amit.png";
+import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Bharat.png";
+import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Yash.png";
+import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Vibhor.png";
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Arun.png";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Karthik.png";
 
@@ -246,7 +246,7 @@ export const Teams: ITeams = {
       },
       {
         description:
-          "We also participated in the European Rover Challenge (ERC) and our rover got ranked 12. Participating in ERC, helped us to work exclusively on the software module and test it on an actual rove virtually.",
+          "We also participated in the European Rover Challenge (ERC) and our rover got ranked 12. Participating in ERC, helped us to work exclusively on the software module and test it on an actual rover virtually.",
       },
     ],
     projects: [
@@ -303,12 +303,12 @@ export const Teams: ITeams = {
     logo: AvishkarLogo,
     landing: AvishkarLanding,
     description:
-      "We are a group of 40+ individuals hailing from across the country and pursuing various courses at IITM in different fields of study. Our collective passion brings us together for a cleaner future through sustainable Hyperloop research. With a single-minded focus on scalability, we are working on a whole host of new tube and pod technologies needed to implement a full-scale hyperloop safely. Elon Musk appreciated the technological progress we have made towards that goal at the SpaceX Hyperloop Pod Competition 2019. We built our latest pod Avishkar 'Garv,' during the height of the pandemic through relentless effort. Avishkar 'Garv' is equipped with many novel technologies that we built in-house from scratch and won the 'Most Scalable Design Award' among many others at the European Hyperloop Week.",
+      "We are a group of 60+ individuals hailing from across the country and pursuing various courses at IITM in different fields of study. Our collective passion brings us together for a cleaner future through sustainable Hyperloop research. With a single-minded focus on scalability, we are working on a whole host of new tube and pod technologies needed to implement a full-scale hyperloop safely. Elon Musk appreciated the technological progress we have made towards that goal at the SpaceX Hyperloop Pod Competition 2019. We built our latest pod Avishkar 'Garv,' during the height of the pandemic through relentless effort. Avishkar 'Garv' is equipped with many novel technologies that we built in-house from scratch and won the 'Most Scalable Design Award' among many others at the European Hyperloop Week.",
     achievements: [
       {
         title: "Finalist at ##SpaceX Hyperloop Pod Competition",
         description:
-          "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition. Team Avishkar Hyperloop also met and interacted with ElonMusk, who was all praise for their stupendous work.",
+          "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition. Team Avishkar Hyperloop also met and interacted with Elon Musk, who was all praise for their stupendous work.",
         images: [
           {
             image: AvishkarAchievements1a,

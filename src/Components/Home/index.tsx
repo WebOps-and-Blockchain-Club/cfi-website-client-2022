@@ -10,9 +10,9 @@ import {
   ClubList,
   CompetitionTeamList,
   CompetitionTeams,
+  HighlightsData,
   HomeGalleryData,
 } from "../../Assets/Data/Home";
-import { AchievementsData } from "../../Assets/Data/Achievements";
 
 import CustomBox, { CustomGridSection } from "../Shared/CustomBox";
 import CustomSwiper from "../Shared/Swiper";
@@ -59,7 +59,7 @@ const Home = (props: Props) => {
               mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
               alignItems="center"
             >
-              <CustomSwiper data={AchievementsData.slice(0, 9)} />
+              <CustomSwiper data={HighlightsData().slice(0, 9)} />
             </Grid>
           </CustomGridSection>
         </section>

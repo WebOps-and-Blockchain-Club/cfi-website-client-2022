@@ -4,10 +4,10 @@ import { Teams } from "./Community/CompetitionTeam";
 import { ManagerialTeams } from "./Community/ManagerialTeam";
 
 // PHOTO
-import FACAD1 from "../Images/ContactUs/CFIOffice/FACAD_Prabhu.jpg";
-import FACAD2 from "../Images/ContactUs/CFIOffice/FACAD_Satyanarayanan.jpg";
-import COCAS from "../Images/ContactUs/CFIOffice/CACOCAS_Nitish.jpeg";
-import CFIHead from "../Images/ContactUs/CFIOffice/CFIHead_Dhanveer.jpg";
+import FACAD1 from "../Images/ContactUs/CFIOffice/FACAD_Prabhu.png";
+import FACAD2 from "../Images/ContactUs/CFIOffice/FACAD_Satyanarayanan.png";
+import COCAS from "../Images/ContactUs/CFIOffice/CACOCAS_Nitish.png";
+import CFIHead from "../Images/ContactUs/CFIOffice/CFIHead_Dhanveer.png";
 
 export const ContactUsData = () => {
   let result: IContact[] = [
