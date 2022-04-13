@@ -161,6 +161,7 @@ export type Mutation = {
   editTag: Scalars['Boolean'];
   login: User;
   logout: Scalars['Boolean'];
+  toggleLikeProject: Scalars['Boolean'];
   updateBlogStatus: Scalars['Boolean'];
   uploadImage: Array<Image>;
 };
@@ -208,6 +209,11 @@ export type MutationLoginArgs = {
 };
 
 
+export type MutationToggleLikeProjectArgs = {
+  ProjectId: Scalars['String'];
+};
+
+
 export type MutationUpdateBlogStatusArgs = {
   BlogId: Scalars['String'];
   BlogStatus: Scalars['String'];
@@ -228,6 +234,8 @@ export type Project = {
   comments: Array<Comment>;
   createdBy: User;
   id: Scalars['String'];
+  isLiked: Scalars['Boolean'];
+  likeCount: Scalars['Float'];
   q1?: Maybe<Scalars['String']>;
   q2?: Maybe<Scalars['String']>;
   q3?: Maybe<Scalars['String']>;
@@ -370,6 +378,13 @@ export type CreateProjectMutationVariables = Exact<{
 
 export type CreateProjectMutation = { createProject: { id: string, status: ProjectStatus } };
 
+export type ToggleLikeProjectMutationVariables = Exact<{
+  projectId: Scalars['String'];
+}>;
+
+
+export type ToggleLikeProjectMutation = { toggleLikeProject: boolean };
+
 export type CreateCommentMutationVariables = Exact<{
   createCommentInput: CreateCommentInput;
 }>;
@@ -392,7 +407,7 @@ export type GetMeQuery = { getMe: { id: string, email: string, name: string, rol
 export type GetMeSipQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }> }> | null } };
+export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }> }> | null } };
 
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
@@ -411,14 +426,14 @@ export type GetProjectsQueryVariables = Exact<{
 }>;
 
 
-export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
+export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
 
 export type GetProjectQueryVariables = Exact<{
   projectId: Scalars['String'];
 }>;
 
 
-export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, status: ProjectStatus, updatedAt: any, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
 
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -654,6 +669,37 @@ export function useCreateProjectMutation(baseOptions?: ApolloReactHooks.Mutation
 export type CreateProjectMutationHookResult = ReturnType<typeof useCreateProjectMutation>;
 export type CreateProjectMutationResult = ApolloReactCommon.MutationResult<CreateProjectMutation>;
 export type CreateProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateProjectMutation, CreateProjectMutationVariables>;
+export const ToggleLikeProjectDocument = gql`
+    mutation ToggleLikeProject($projectId: String!) {
+  toggleLikeProject(ProjectId: $projectId)
+}
+    `;
+export type ToggleLikeProjectMutationFn = ApolloReactCommon.MutationFunction<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>;
+
+/**
+ * __useToggleLikeProjectMutation__
+ *
+ * To run a mutation, you first call `useToggleLikeProjectMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useToggleLikeProjectMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [toggleLikeProjectMutation, { data, loading, error }] = useToggleLikeProjectMutation({
+ *   variables: {
+ *      projectId: // value for 'projectId'
+ *   },
+ * });
+ */
+export function useToggleLikeProjectMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>(ToggleLikeProjectDocument, options);
+      }
+export type ToggleLikeProjectMutationHookResult = ReturnType<typeof useToggleLikeProjectMutation>;
+export type ToggleLikeProjectMutationResult = ApolloReactCommon.MutationResult<ToggleLikeProjectMutation>;
+export type ToggleLikeProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>;
 export const CreateCommentDocument = gql`
     mutation CreateComment($createCommentInput: CreateCommentInput!) {
   createComment(CreateCommentInput: $createCommentInput) {
@@ -772,6 +818,8 @@ export const GetMeSipDocument = gql`
       title
       status
       updatedAt
+      likeCount
+      isLiked
       clubs {
         id
         name
@@ -906,6 +954,8 @@ export const GetProjectsDocument = gql`
       id
       title
       updatedAt
+      likeCount
+      isLiked
       clubs {
         id
         name
@@ -960,6 +1010,8 @@ export const GetProjectDocument = gql`
     q4
     status
     updatedAt
+    likeCount
+    isLiked
     clubs {
       id
       name

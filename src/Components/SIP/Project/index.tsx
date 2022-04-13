@@ -24,6 +24,7 @@ import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import { SIPData } from "../../../Assets/Data/SIP";
 import moment from "moment";
+import LikeButton from "../LikeButton";
 
 interface Probs {}
 
@@ -265,6 +266,13 @@ const Project = (probs: Probs) => {
                       />
                     </>
                   )}
+                  <Grid item pt={2}>
+                    <LikeButton
+                      projectId={data.getProject.id}
+                      likeCount={data.getProject.likeCount}
+                      isLiked={data.getProject.isLiked}
+                    />
+                  </Grid>
                 </CardContent>
               </Card>
             </Grid>

@@ -39,6 +39,10 @@ mutation CreateProject($createProjectInput: CreateProjectInput!) {
   }
 }
 
+mutation ToggleLikeProject($projectId: String!) {
+  toggleLikeProject(ProjectId: $projectId)
+}
+
 mutation CreateComment($createCommentInput: CreateCommentInput!) {
   createComment(CreateCommentInput: $createCommentInput) {
     id

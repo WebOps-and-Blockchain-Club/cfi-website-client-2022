@@ -6,6 +6,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
+import LikeButton from "../LikeButton";
 
 interface Probs {
   project: {
@@ -15,6 +16,8 @@ interface Probs {
       id: string;
       name: string;
     }[];
+    likeCount: number;
+    isLiked: boolean;
     createdBy?: {
       name: string;
     };
@@ -78,6 +81,13 @@ const ProjectCard = (probs: Probs) => {
           Last updated at{" "}
           {moment(probs.project.updatedAt).format("MMMM Do YYYY, h:mm a")}
         </Typography>
+        <Grid item pt={1}>
+          <LikeButton
+            projectId={probs.project.id}
+            likeCount={probs.project.likeCount}
+            isLiked={probs.project.isLiked}
+          />
+        </Grid>
         {probs.project.clubs && (
           <Grid container gap={2} pt={1}>
             {probs.project.clubs.map((_club) => (

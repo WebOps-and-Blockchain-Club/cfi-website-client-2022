@@ -18,6 +18,8 @@ query GetMeSIP {
       title
       status
       updatedAt
+      likeCount
+      isLiked
       clubs {
         id
         name
@@ -58,6 +60,8 @@ query GetProjects($filters: FilterProject) {
       id
       title
       updatedAt
+      likeCount
+      isLiked
       clubs {
         id
         name
@@ -80,6 +84,8 @@ query GetProject($projectId: String!) {
     q4
     status
     updatedAt
+    likeCount
+    isLiked
     clubs {
       id
       name
