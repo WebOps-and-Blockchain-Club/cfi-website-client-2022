@@ -1,13 +1,16 @@
-import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { createUploadLink } from "apollo-upload-client";
+import dotenv from "dotenv";
 
-const link = new HttpLink({
-  uri: "http://localhost:8000/graphql",
+dotenv.config();
+const link = createUploadLink({
+  uri: `${process.env.REACT_APP_BACKEND_URL}/graphql`,
   credentials: "include",
 });
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: link,
+  link: link as any,
   credentials: "include",
 });
 

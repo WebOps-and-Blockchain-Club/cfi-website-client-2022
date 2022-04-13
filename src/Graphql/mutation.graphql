@@ -44,3 +44,9 @@ mutation CreateComment($createCommentInput: CreateCommentInput!) {
     id
   }
 }
+
+mutation UploadImage($image: [Upload!]!) {
+  uploadImage(Image: $image) {
+    url
+  }
+}
