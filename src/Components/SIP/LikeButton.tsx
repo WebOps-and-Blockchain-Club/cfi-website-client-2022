@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "@mui/material/Button";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -6,8 +6,11 @@ import {
   refetchGetMeSipQuery,
   refetchGetProjectQuery,
   refetchGetProjectsQuery,
+  UserRole,
   useToggleLikeProjectMutation,
 } from "../../generated/graphql";
+import AuthContext from "../../Utils/context";
+import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 
 interface Probs {
   projectId: string;
@@ -17,7 +20,9 @@ interface Probs {
 
 const LikeButton = (probs: Probs) => {
   const [likeCount, setLikeCount] = React.useState<number>();
+  const [error, setError] = React.useState<string>();
   const [isLiked, setIsLiked] = React.useState<boolean>();
+  const { state } = useContext(AuthContext)!;
 
   const [toggleLikeProjectMutation] = useToggleLikeProjectMutation({
     refetchQueries: [
@@ -34,28 +39,35 @@ const LikeButton = (probs: Probs) => {
 
   const toggleLike = () => {
     try {
-      toggleLikeProjectMutation({
-        variables: {
-          projectId: probs.projectId,
-        },
-      });
+      if (state?.user?.role === UserRole.User) {
+        toggleLikeProjectMutation({
+          variables: {
+            projectId: probs.projectId,
+          },
+        });
+        if (isLiked) setLikeCount(likeCount! - 1);
+        else setLikeCount(likeCount! + 1);
+        setIsLiked(!isLiked);
+      } else {
+        setError("Login to Continue");
+      }
     } catch (e) {
       console.log(e);
     }
-    if (isLiked) setLikeCount(likeCount! - 1);
-    else setLikeCount(likeCount! + 1);
-    setIsLiked(!isLiked);
   };
 
   return (
-    <Button
-      variant="outlined"
-      startIcon={isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-      color="secondary"
-      onClick={toggleLike}
-    >
-      {likeCount}
-    </Button>
+    <>
+      {error && <ErrorDialog message={error} />}
+      <Button
+        variant="outlined"
+        startIcon={isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+        color="secondary"
+        onClick={toggleLike}
+      >
+        {likeCount}
+      </Button>
+    </>
   );
 };
 
