@@ -11,6 +11,7 @@ import {
 } from "../../generated/graphql";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import { SIPData } from "../../Assets/Data/SIP";
 
 interface Probs {
   initialValues: GetProjectQuery | undefined;
@@ -135,7 +136,7 @@ const ProjectForm = (probs: Probs) => {
             m={0}
             textAlign={"justify"}
           >
-            Question 1
+            {SIPData.questions[0]}
           </Typography>
           <MarkDownEditor
             id="q1"
@@ -156,7 +157,7 @@ const ProjectForm = (probs: Probs) => {
             m={0}
             textAlign={"justify"}
           >
-            Question 2
+            {SIPData.questions[1]}
           </Typography>
           <MarkDownEditor
             id="q2"
@@ -177,7 +178,7 @@ const ProjectForm = (probs: Probs) => {
             m={0}
             textAlign={"justify"}
           >
-            Question 3
+            {SIPData.questions[2]}
           </Typography>
           <MarkDownEditor
             id="q3"
@@ -198,7 +199,7 @@ const ProjectForm = (probs: Probs) => {
             m={0}
             textAlign={"justify"}
           >
-            Question 4
+            {SIPData.questions[3]}
           </Typography>
           <MarkDownEditor
             id="q4"

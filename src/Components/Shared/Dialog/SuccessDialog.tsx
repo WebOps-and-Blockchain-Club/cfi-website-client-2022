@@ -30,7 +30,7 @@ const SuccessDialog = (probs: Probs) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">Error</DialogTitle>
+      <DialogTitle id="alert-dialog-title">Success</DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           {probs.message}

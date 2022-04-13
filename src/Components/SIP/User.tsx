@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ProjectStatus, useGetMeSipQuery } from "../../generated/graphql";
 import ProjectCard from "./Projects/ProjectCard";
-import Heading from "../Shared/Heading";
+import Heading, { HeadingSub } from "../Shared/Heading";
 import Loading from "../Shared/Dialog/Loading";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 
@@ -36,6 +36,9 @@ const SIPUser = (probs: Probs) => {
             gap={4}
             justifyContent="center"
           >
+            {data.getMe.projects?.length === 0 && (
+              <HeadingSub white="NO PROJECTS" red=" ADDED" />
+            )}
             {data.getMe.projects?.map((_project) => (
               <ProjectCard
                 project={_project}
