@@ -18,7 +18,7 @@ import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import Heading from "../../Shared/Heading";
 import Comment from "./Comment";
 import AuthContext from "../../../Utils/context";
-import CommentForm from "../../Form/CommentForm";
+import CommentForm from "./CommentForm";
 import SIPLogin from "../Auth/SIPLogin";
 import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";

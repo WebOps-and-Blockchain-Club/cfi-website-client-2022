@@ -1,13 +1,13 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
-import MarkDownEditor from "./Editor";
+import MarkDownEditor from "../../Form/Editor";
 import {
   refetchGetProjectQuery,
   useCreateCommentMutation,
-} from "../../generated/graphql";
-import Loading from "../Shared/Dialog/Loading";
-import ErrorDialog from "../Shared/Dialog/ErrorDialog";
-import SuccessDialog from "../Shared/Dialog/SuccessDialog";
+} from "../../../generated/graphql";
+import Loading from "../../Shared/Dialog/Loading";
+import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
 
 interface Probs {
   projectId: string;

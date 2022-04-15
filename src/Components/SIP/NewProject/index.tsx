@@ -7,12 +7,12 @@ import {
   refetchGetProjectsQuery,
   useCreateProjectMutation,
   useGetProjectQuery,
-} from "../../generated/graphql";
-import ProjectForm from "../Form/ProjectForm";
-import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
-import Loading from "../Shared/Dialog/Loading";
-import ErrorDialog from "../Shared/Dialog/ErrorDialog";
-import SuccessDialog from "../Shared/Dialog/SuccessDialog";
+} from "../../../generated/graphql";
+import ProjectForm from "./ProjectForm";
+import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
+import Loading from "../../Shared/Dialog/Loading";
+import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
 
 interface Probs {}
 

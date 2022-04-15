@@ -1,17 +1,17 @@
 import React from "react";
 import { Button, Checkbox, Grid, TextField, Typography } from "@mui/material";
-import { CustomAutocomplete, CustomTextField } from "../Shared/InputField";
-import Heading, { HeadingSub } from "../Shared/Heading";
-import MarkDownEditor from "./Editor";
+import { CustomAutocomplete, CustomTextField } from "../../Shared/InputField";
+import Heading, { HeadingSub } from "../../Shared/Heading";
+import MarkDownEditor from "../../Form/Editor";
 import {
   CreateProjectInput,
   GetProjectQuery,
   ProjectStatus,
   useGetClubsQuery,
-} from "../../generated/graphql";
+} from "../../../generated/graphql";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import { SIPData } from "../../Assets/Data/SIP";
+import { SIPData } from "../../../Assets/Data/SIP";
 
 interface Probs {
   initialValues: GetProjectQuery | undefined;

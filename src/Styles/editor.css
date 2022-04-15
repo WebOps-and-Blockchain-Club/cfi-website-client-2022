@@ -1,0 +1,5 @@
+.editor img {
+  width: 100%;
+  object-fit: contain;
+  height: fit-content;
+}
