@@ -48,6 +48,7 @@ const Comment = (probs: Probs) => {
                 dangerouslySetInnerHTML={{
                   __html: _comment.description,
                 }}
+                className="editor"
               />
               <Typography
                 gutterBottom

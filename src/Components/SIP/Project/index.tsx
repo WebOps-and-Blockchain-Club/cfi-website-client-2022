@@ -25,6 +25,7 @@ import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import { SIPData } from "../../../Assets/Data/SIP";
 import moment from "moment";
 import LikeButton from "../LikeButton";
+import "../../../Styles/editor.css";
 
 interface Probs {}
 
@@ -140,6 +141,7 @@ const Project = (probs: Probs) => {
                         dangerouslySetInnerHTML={{
                           __html: data.getProject.q1!,
                         }}
+                        className="editor"
                       />
                     </>
                   )}
@@ -181,6 +183,7 @@ const Project = (probs: Probs) => {
                         dangerouslySetInnerHTML={{
                           __html: data.getProject.q2!,
                         }}
+                        className="editor"
                       />
                     </>
                   )}
@@ -222,6 +225,7 @@ const Project = (probs: Probs) => {
                         dangerouslySetInnerHTML={{
                           __html: data.getProject.q3!,
                         }}
+                        className="editor"
                       />
                     </>
                   )}
@@ -263,6 +267,7 @@ const Project = (probs: Probs) => {
                         dangerouslySetInnerHTML={{
                           __html: data.getProject.q4!,
                         }}
+                        className="editor"
                       />
                     </>
                   )}
