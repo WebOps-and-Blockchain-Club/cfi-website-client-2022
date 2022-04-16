@@ -20,7 +20,7 @@ const AdminLogin = (probs: Probs) => {
   React.useEffect(() => {
     if (
       error?.message.includes("Invalid user") ||
-      (data?.login && !RoleAccess.BlogAccess.includes(data?.login.role!))
+      (data?.login && !RoleAccess.Admin.includes(data?.login.role!))
     ) {
       setErrorMessage("Invalid User");
     } else if (error) {

@@ -1,4 +1,4 @@
-import Logout from "../../Components/Shared/Logout";
+import CreateBlogButton from "../../Components/Blog/CreateBlog/CreateBlogButton";
 import SIPAuth from "../../Components/SIP/Auth";
 import ProposeProjectButton from "../../Components/SIP/ProposeProjectButton";
 import { UserRole } from "../../generated/graphql";
@@ -67,25 +67,37 @@ export const NavbarMobileView = () => {
   return list;
 };
 
-export const NavbarAdminList = (role: UserRole) => {
-  const navList = [
-    {
-      name: "ADD BLOG",
-      link: "/admin/blog/new",
-      role: RoleAccess.BlogAccess,
-    },
-    {
-      name: "BLOG",
-      link: "/admin/blog",
-      role: RoleAccess.BlogAccess,
-    },
-    {
-      name: "LOGOUT",
-      component: Logout,
-      role: RoleAccess.BlogAccess,
-    },
-  ];
-  return navList.filter((nav) => nav.role.includes(role));
+export const NavbarBlogList = (role: UserRole) => {
+  if (role && RoleAccess.CreateBlogAccess.includes(role))
+    return [
+      {
+        name: "BLOG",
+        link: "/blog",
+      },
+      {
+        component: CreateBlogButton,
+      },
+      {
+        name: "MY BLOG",
+        link: "/my-blog",
+      },
+      {
+        component: SIPAuth,
+      },
+    ];
+  else
+    return [
+      {
+        name: "BLOG",
+        link: "/blog",
+      },
+      {
+        component: CreateBlogButton,
+      },
+      {
+        component: SIPAuth,
+      },
+    ];
 };
 
 export const NavbarSIPList = () => {

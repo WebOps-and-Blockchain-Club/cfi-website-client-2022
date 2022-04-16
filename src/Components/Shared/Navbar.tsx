@@ -20,7 +20,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 import IITMLogo from "../../Assets/Images/IITMadrasLogo.png";
 import {
-  NavbarAdminList,
+  NavbarBlogList,
   NavbarItems,
   NavbarMobileView,
   NavbarSIPList,
@@ -40,19 +40,17 @@ export default function Header() {
   // Navbar Items List
   const location = useLocation();
   const { state } = useContext(AuthContext)!;
-  const navMobList =
-    state.user?.role && location.pathname.includes("admin")
-      ? NavbarAdminList(state.user?.role!)
-      : location.pathname.includes("sip")
-      ? NavbarSIPList()
-      : NavbarMobileView();
+  const navMobList = location.pathname.includes("blog")
+    ? NavbarBlogList(state.user?.role!)
+    : location.pathname.includes("sip")
+    ? NavbarSIPList()
+    : NavbarMobileView();
 
-  const navWebList =
-    state.user?.role && location.pathname.includes("admin")
-      ? NavbarAdminList(state.user?.role!)
-      : location.pathname.includes("sip")
-      ? NavbarSIPList()
-      : NavbarItems;
+  const navWebList = location.pathname.includes("blog")
+    ? NavbarBlogList(state.user?.role!)
+    : location.pathname.includes("sip")
+    ? NavbarSIPList()
+    : NavbarItems;
 
   //Is Top
   const [isTop, setIsTop] = React.useState(true);

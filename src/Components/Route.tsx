@@ -5,8 +5,8 @@ import AuthContext from "../Utils/context";
 import Wrapper from "../Utils/scrollToTop";
 import AboutUs from "./AboutUs";
 import Achievements from "./Achievements";
-import Admin from "./Admin";
-import AdminLogin from "./Admin/Auth/AdminLogin";
+// import Admin from "./Admin";
+// import AdminLogin from "./Admin/Auth/AdminLogin";
 import Alumni from "./Alumni";
 import Club from "./Community/Club";
 import CompetitionTeam from "./Community/CompetitionTeam";
@@ -14,12 +14,13 @@ import ManagerialTeam from "./Community/ManagerialTeam";
 import ContactUs from "./ContactUs";
 import Home from "./Home";
 import Media from "./Media";
-import NewBlog from "./Admin/Blog/NewBlog";
+import NewBlog from "./Blog/CreateBlog";
 import SIP from "./SIP";
 import ProjectsList from "./SIP/Projects";
 import NewProject from "./SIP/NewProject";
 import Project from "./SIP/Project";
 import OpenHouse from "./OpenHouse";
+import Blog from "./Blog";
 
 interface Probs {}
 
@@ -42,8 +43,28 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/open-house" element={<OpenHouse />} />
           <Route path="/media" element={<Media />} />
-          <Route path="/blog" element={<Media />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route
+            path="/my-blog"
+            element={
+              RoleAccess.CreateBlogAccess.includes(state.user?.role!) ? (
+                <Blog />
+              ) : (
+                <Navigate to="/blog" />
+              )
+            }
+          />
           <Route path="/blog/:id" element={<Media />} />
+          <Route
+            path="/blog/new"
+            element={
+              RoleAccess.CreateBlogAccess.includes(state.user?.role!) ? (
+                <NewBlog />
+              ) : (
+                <Navigate to="/blog" />
+              )
+            }
+          />
           <Route path="/sip" element={<SIP />} />
           <Route path="/sip/projects" element={<ProjectsList />} />
           <Route path="/sip/projects/:id" element={<Project />} />
@@ -62,7 +83,7 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/contact-us" element={<ContactUs />} />
 
           {/* ADMIN */}
-          <Route
+          {/* <Route
             path="/admin"
             element={
               RoleAccess.BlogAccess.includes(state.user?.role!) ? (
@@ -77,16 +98,6 @@ const AppRoutes = (probs: Probs) => {
             element={
               RoleAccess.BlogAccess.includes(state.user?.role!) ? (
                 <Admin />
-              ) : (
-                <Navigate to="/admin/sign-in" />
-              )
-            }
-          />
-          <Route
-            path="/admin/blog/new"
-            element={
-              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
-                <NewBlog />
               ) : (
                 <Navigate to="/admin/sign-in" />
               )
@@ -111,7 +122,7 @@ const AppRoutes = (probs: Probs) => {
                 <Navigate to="/admin/sign-in" />
               )
             }
-          />
+          /> */}
 
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
