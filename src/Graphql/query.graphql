@@ -28,22 +28,92 @@ query GetMeSIP {
   }
 }
 
+query GetMeBlogs {
+  getMe {
+    blogs {
+      id
+      title
+      description
+      image {
+        name
+        url
+      }
+      author
+      views
+      readingTime
+      status
+      updatedAt
+      club {
+        id
+        name
+      }
+      tags {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+  }
+}
+
+query GetBlogs {
+  getMe {
+    blogs {
+      id
+      title
+      description
+      image {
+        name
+        url
+      }
+      author
+      views
+      readingTime
+      status
+      updatedAt
+      club {
+        id
+        name
+      }
+      tags {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+  }
+}
+
 query GetBlog($blogId: String!) {
   getBlog(BlogId: $blogId) {
     id
     title
     description
-    readingTime
-    views
-    content
+    image {
+      name
+      url
+    }
     author
-    club
+    views
+    readingTime
     status
     updatedAt
-    blogs {
+    club {
       id
       name
     }
+    tags {
+      id
+      name
+    }
+    createdBy {
+      name
+    }
+    content
   }
 }
 

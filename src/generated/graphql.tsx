@@ -21,14 +21,16 @@ export type Scalars = {
 };
 
 export type Blog = {
-  author: Scalars['String'];
-  blogs: Array<Tag>;
-  club: ClubEnum;
-  content: Scalars['String'];
-  description: Scalars['String'];
+  author?: Maybe<Scalars['String']>;
+  club?: Maybe<Club>;
+  content?: Maybe<Scalars['String']>;
+  createdBy: User;
+  description?: Maybe<Scalars['String']>;
   id: Scalars['String'];
-  readingTime: Scalars['String'];
+  image?: Maybe<Image>;
+  readingTime?: Maybe<Scalars['Float']>;
   status: BlogStatus;
+  tags?: Maybe<Array<Tag>>;
   title: Scalars['String'];
   updatedAt: Scalars['DateTime'];
   views: Scalars['Float'];
@@ -47,22 +49,6 @@ export type Club = {
   projects: Array<Project>;
 };
 
-export enum ClubEnum {
-  AeroClub = 'AERO_CLUB',
-  AnalyticsClub = 'ANALYTICS_CLUB',
-  Cvi = 'CVI',
-  ElectronicsClub = 'ELECTRONICS_CLUB',
-  Horizon = 'HORIZON',
-  Ibot = 'IBOT',
-  Igem = 'IGEM',
-  ProductDesignClub = 'PRODUCT_DESIGN_CLUB',
-  ProgrammingClub = 'PROGRAMMING_CLUB',
-  TeamEnvisage = 'TEAM_ENVISAGE',
-  TeamSahaay = 'TEAM_SAHAAY',
-  ThreedPrintingClub = 'THREED_PRINTING_CLUB',
-  WebopsAndBlockchainClub = 'WEBOPS_AND_BLOCKCHAIN_CLUB'
-}
-
 export type Comment = {
   createdAt: Scalars['DateTime'];
   createdBy: User;
@@ -71,12 +57,15 @@ export type Comment = {
 };
 
 export type CreateBlogInput = {
-  author: Scalars['String'];
-  club: ClubEnum;
-  content: Scalars['String'];
-  description: Scalars['String'];
-  readingTime: Scalars['String'];
-  tagIds: Array<Scalars['String']>;
+  author?: InputMaybe<Scalars['String']>;
+  clubId?: InputMaybe<Scalars['String']>;
+  content?: InputMaybe<Scalars['String']>;
+  description?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['String']>;
+  imageData?: InputMaybe<Scalars['Upload']>;
+  readingTime?: InputMaybe<Scalars['Float']>;
+  status: BlogStatus;
+  tagIds?: InputMaybe<Array<Scalars['String']>>;
   title: Scalars['String'];
 };
 
@@ -104,21 +93,13 @@ export type CreateTagInput = {
   name: Scalars['String'];
 };
 
-export type EditBlogInput = {
-  author?: InputMaybe<Scalars['String']>;
-  club?: InputMaybe<ClubEnum>;
-  content?: InputMaybe<Scalars['String']>;
-  description?: InputMaybe<Scalars['String']>;
-  readingTime?: InputMaybe<Scalars['String']>;
-  tagIds?: InputMaybe<Array<Scalars['String']>>;
-  title?: InputMaybe<Scalars['String']>;
-};
-
 export type EditTagInput = {
   name?: InputMaybe<Scalars['String']>;
 };
 
 export type FilterBlog = {
+  clubId?: InputMaybe<Array<Scalars['String']>>;
+  clubName?: InputMaybe<Array<Scalars['String']>>;
   search?: InputMaybe<Scalars['String']>;
   tagIds?: InputMaybe<Array<Scalars['String']>>;
   tagNames?: InputMaybe<Array<Scalars['String']>>;
@@ -157,7 +138,8 @@ export type Mutation = {
   createComment: Comment;
   createProject: Project;
   createTag: Scalars['Boolean'];
-  editBlog: Scalars['Boolean'];
+  deleteAllProjects: Scalars['Boolean'];
+  deleteComment: Scalars['Boolean'];
   editTag: Scalars['Boolean'];
   login: User;
   logout: Scalars['Boolean'];
@@ -192,9 +174,13 @@ export type MutationCreateTagArgs = {
 };
 
 
-export type MutationEditBlogArgs = {
-  BlogId: Scalars['String'];
-  EditBlogInput: EditBlogInput;
+export type MutationDeleteAllProjectsArgs = {
+  ProjectId: Scalars['String'];
+};
+
+
+export type MutationDeleteCommentArgs = {
+  CommentId: Scalars['String'];
 };
 
 
@@ -346,15 +332,7 @@ export type CreateBlogMutationVariables = Exact<{
 }>;
 
 
-export type CreateBlogMutation = { createBlog: { id: string } };
-
-export type EditBlogMutationVariables = Exact<{
-  editBlogInput: EditBlogInput;
-  editBlogBlogId: Scalars['String'];
-}>;
-
-
-export type EditBlogMutation = { editBlog: boolean };
+export type CreateBlogMutation = { createBlog: { id: string, status: BlogStatus } };
 
 export type UpdateBlogStatusMutationVariables = Exact<{
   blogStatus: Scalars['String'];
@@ -409,12 +387,22 @@ export type GetMeSipQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }> }> | null } };
 
+export type GetMeBlogsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } }> | null } };
+
+export type GetBlogsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } }> | null } };
+
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
 }>;
 
 
-export type GetBlogQuery = { getBlog?: { id: string, title: string, description: string, readingTime: string, views: number, content: string, author: string, club: ClubEnum, status: BlogStatus, updatedAt: any, blogs: Array<{ id: string, name: string }> } | null };
+export type GetBlogQuery = { getBlog?: { id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, content?: string | null, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } } | null };
 
 export type GetTagsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -511,6 +499,7 @@ export const CreateBlogDocument = gql`
     mutation CreateBlog($createBlogInput: CreateBlogInput!) {
   createBlog(CreateBlogInput: $createBlogInput) {
     id
+    status
   }
 }
     `;
@@ -540,38 +529,6 @@ export function useCreateBlogMutation(baseOptions?: ApolloReactHooks.MutationHoo
 export type CreateBlogMutationHookResult = ReturnType<typeof useCreateBlogMutation>;
 export type CreateBlogMutationResult = ApolloReactCommon.MutationResult<CreateBlogMutation>;
 export type CreateBlogMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateBlogMutation, CreateBlogMutationVariables>;
-export const EditBlogDocument = gql`
-    mutation EditBlog($editBlogInput: EditBlogInput!, $editBlogBlogId: String!) {
-  editBlog(EditBlogInput: $editBlogInput, BlogId: $editBlogBlogId)
-}
-    `;
-export type EditBlogMutationFn = ApolloReactCommon.MutationFunction<EditBlogMutation, EditBlogMutationVariables>;
-
-/**
- * __useEditBlogMutation__
- *
- * To run a mutation, you first call `useEditBlogMutation` within a React component and pass it any options that fit your needs.
- * When your component renders, `useEditBlogMutation` returns a tuple that includes:
- * - A mutate function that you can call at any time to execute the mutation
- * - An object with fields that represent the current status of the mutation's execution
- *
- * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
- *
- * @example
- * const [editBlogMutation, { data, loading, error }] = useEditBlogMutation({
- *   variables: {
- *      editBlogInput: // value for 'editBlogInput'
- *      editBlogBlogId: // value for 'editBlogBlogId'
- *   },
- * });
- */
-export function useEditBlogMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<EditBlogMutation, EditBlogMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<EditBlogMutation, EditBlogMutationVariables>(EditBlogDocument, options);
-      }
-export type EditBlogMutationHookResult = ReturnType<typeof useEditBlogMutation>;
-export type EditBlogMutationResult = ApolloReactCommon.MutationResult<EditBlogMutation>;
-export type EditBlogMutationOptions = ApolloReactCommon.BaseMutationOptions<EditBlogMutation, EditBlogMutationVariables>;
 export const UpdateBlogStatusDocument = gql`
     mutation UpdateBlogStatus($blogStatus: String!, $updateBlogStatusBlogId: String!) {
   updateBlogStatus(BlogStatus: $blogStatus, BlogId: $updateBlogStatusBlogId)
@@ -858,23 +815,155 @@ export type GetMeSipQueryResult = ApolloReactCommon.QueryResult<GetMeSipQuery, G
 export function refetchGetMeSipQuery(variables?: GetMeSipQueryVariables) {
       return { query: GetMeSipDocument, variables: variables }
     }
+export const GetMeBlogsDocument = gql`
+    query GetMeBlogs {
+  getMe {
+    blogs {
+      id
+      title
+      description
+      image {
+        name
+        url
+      }
+      author
+      views
+      readingTime
+      status
+      updatedAt
+      club {
+        id
+        name
+      }
+      tags {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetMeBlogsQuery__
+ *
+ * To run a query within a React component, call `useGetMeBlogsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetMeBlogsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetMeBlogsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetMeBlogsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeBlogsQuery, GetMeBlogsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
+      }
+export function useGetMeBlogsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeBlogsQuery, GetMeBlogsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
+        }
+export type GetMeBlogsQueryHookResult = ReturnType<typeof useGetMeBlogsQuery>;
+export type GetMeBlogsLazyQueryHookResult = ReturnType<typeof useGetMeBlogsLazyQuery>;
+export type GetMeBlogsQueryResult = ApolloReactCommon.QueryResult<GetMeBlogsQuery, GetMeBlogsQueryVariables>;
+export function refetchGetMeBlogsQuery(variables?: GetMeBlogsQueryVariables) {
+      return { query: GetMeBlogsDocument, variables: variables }
+    }
+export const GetBlogsDocument = gql`
+    query GetBlogs {
+  getMe {
+    blogs {
+      id
+      title
+      description
+      image {
+        name
+        url
+      }
+      author
+      views
+      readingTime
+      status
+      updatedAt
+      club {
+        id
+        name
+      }
+      tags {
+        id
+        name
+      }
+      createdBy {
+        name
+      }
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetBlogsQuery__
+ *
+ * To run a query within a React component, call `useGetBlogsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetBlogsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetBlogsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetBlogsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetBlogsQuery, GetBlogsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
+      }
+export function useGetBlogsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetBlogsQuery, GetBlogsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
+        }
+export type GetBlogsQueryHookResult = ReturnType<typeof useGetBlogsQuery>;
+export type GetBlogsLazyQueryHookResult = ReturnType<typeof useGetBlogsLazyQuery>;
+export type GetBlogsQueryResult = ApolloReactCommon.QueryResult<GetBlogsQuery, GetBlogsQueryVariables>;
+export function refetchGetBlogsQuery(variables?: GetBlogsQueryVariables) {
+      return { query: GetBlogsDocument, variables: variables }
+    }
 export const GetBlogDocument = gql`
     query GetBlog($blogId: String!) {
   getBlog(BlogId: $blogId) {
     id
     title
     description
-    readingTime
-    views
-    content
+    image {
+      name
+      url
+    }
     author
-    club
+    views
+    readingTime
     status
     updatedAt
-    blogs {
+    club {
       id
       name
     }
+    tags {
+      id
+      name
+    }
+    createdBy {
+      name
+    }
+    content
   }
 }
     `;

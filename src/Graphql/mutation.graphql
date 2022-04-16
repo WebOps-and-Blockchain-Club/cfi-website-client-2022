@@ -14,11 +14,8 @@ mutation Logout {
 mutation CreateBlog($createBlogInput: CreateBlogInput!) {
   createBlog(CreateBlogInput: $createBlogInput) {
     id
+    status
   }
-}
-
-mutation EditBlog($editBlogInput: EditBlogInput!, $editBlogBlogId: String!) {
-  editBlog(EditBlogInput: $editBlogInput, BlogId: $editBlogBlogId)
 }
 
 mutation UpdateBlogStatus(
