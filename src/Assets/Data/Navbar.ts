@@ -79,7 +79,7 @@ export const NavbarBlogList = (role: UserRole) => {
       },
       {
         name: "MY BLOG",
-        link: "/my-blog",
+        link: "/blog/my",
       },
       {
         component: SIPAuth,

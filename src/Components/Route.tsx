@@ -21,6 +21,7 @@ import NewProject from "./SIP/NewProject";
 import Project from "./SIP/Project";
 import OpenHouse from "./OpenHouse";
 import Blog from "./Blog";
+import MyBlog from "./Blog/MyBlog";
 
 interface Probs {}
 
@@ -45,10 +46,10 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/media" element={<Media />} />
           <Route path="/blog" element={<Blog />} />
           <Route
-            path="/my-blog"
+            path="/blog/my"
             element={
               RoleAccess.CreateBlogAccess.includes(state.user?.role!) ? (
-                <Blog />
+                <MyBlog />
               ) : (
                 <Navigate to="/blog" />
               )

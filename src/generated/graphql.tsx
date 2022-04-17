@@ -390,19 +390,21 @@ export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, 
 export type GetMeBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } }> | null } };
+export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
 
-export type GetBlogsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetBlogsQueryVariables = Exact<{
+  filters?: InputMaybe<FilterBlog>;
+}>;
 
 
-export type GetBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } }> | null } };
+export type GetBlogsQuery = { getBlogs: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
 
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
 }>;
 
 
-export type GetBlogQuery = { getBlog?: { id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, content?: string | null, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { name: string } } | null };
+export type GetBlogQuery = { getBlog?: { id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, content?: string | null, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } } | null };
 
 export type GetTagsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -840,6 +842,7 @@ export const GetMeBlogsDocument = gql`
         name
       }
       createdBy {
+        id
         name
       }
     }
@@ -877,8 +880,8 @@ export function refetchGetMeBlogsQuery(variables?: GetMeBlogsQueryVariables) {
       return { query: GetMeBlogsDocument, variables: variables }
     }
 export const GetBlogsDocument = gql`
-    query GetBlogs {
-  getMe {
+    query GetBlogs($filters: FilterBlog) {
+  getBlogs(Filters: $filters) {
     blogs {
       id
       title
@@ -901,6 +904,7 @@ export const GetBlogsDocument = gql`
         name
       }
       createdBy {
+        id
         name
       }
     }
@@ -920,6 +924,7 @@ export const GetBlogsDocument = gql`
  * @example
  * const { data, loading, error } = useGetBlogsQuery({
  *   variables: {
+ *      filters: // value for 'filters'
  *   },
  * });
  */
@@ -961,6 +966,7 @@ export const GetBlogDocument = gql`
       name
     }
     createdBy {
+      id
       name
     }
     content
