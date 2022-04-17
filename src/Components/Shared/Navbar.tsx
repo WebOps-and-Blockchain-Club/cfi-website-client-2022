@@ -20,6 +20,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 import IITMLogo from "../../Assets/Images/IITMadrasLogo.png";
 import {
+  NavbarADMINList,
   NavbarBlogList,
   NavbarItems,
   NavbarMobileView,
@@ -40,13 +41,17 @@ export default function Header() {
   // Navbar Items List
   const location = useLocation();
   const { state } = useContext(AuthContext)!;
-  const navMobList = location.pathname.includes("blog")
+  const navMobList = location.pathname.includes("admin")
+    ? NavbarADMINList()
+    : location.pathname.includes("blog")
     ? NavbarBlogList(state.user?.role!)
     : location.pathname.includes("sip")
     ? NavbarSIPList()
     : NavbarMobileView();
 
-  const navWebList = location.pathname.includes("blog")
+  const navWebList = location.pathname.includes("admin")
+    ? NavbarADMINList()
+    : location.pathname.includes("blog")
     ? NavbarBlogList(state.user?.role!)
     : location.pathname.includes("sip")
     ? NavbarSIPList()

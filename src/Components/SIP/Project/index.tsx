@@ -19,13 +19,13 @@ import Heading from "../../Shared/Heading";
 import Comment from "./Comment";
 import AuthContext from "../../../Utils/context";
 import CommentForm from "./CommentForm";
-import SIPLogin from "../Auth/SIPLogin";
 import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import { SIPData } from "../../../Assets/Data/SIP";
 import moment from "moment";
 import LikeButton from "../LikeButton";
 import "../../../Styles/editor.css";
+import Login from "../../Auth/Login";
 
 interface Probs {}
 
@@ -292,7 +292,11 @@ const Project = (probs: Probs) => {
                   <CommentForm projectId={data.getProject.id} />
                 )
               ) : (
-                <SIPLogin btnMessage="Login To Comment" />
+                <Login
+                  btnMessage="Login To Comment"
+                  isSmailOnly={true}
+                  roles={[UserRole.User]}
+                />
               )}
             </Grid>
           </Grid>

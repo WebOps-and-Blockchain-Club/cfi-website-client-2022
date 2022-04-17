@@ -1,17 +1,18 @@
 import React, { useContext } from "react";
 import GoogleLogin from "react-google-login";
-import { useLoginMutation } from "../../../generated/graphql";
-import AuthContext from "../../../Utils/context";
-import { RoleAccess } from "../../../Utils/config";
-import Loading from "../../Shared/Dialog/Loading";
-import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
-import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
+import { useLoginMutation, UserRole } from "../../generated/graphql";
+import AuthContext from "../../Utils/context";
+import Loading from "../Shared/Dialog/Loading";
+import ErrorDialog from "../Shared/Dialog/ErrorDialog";
+import SuccessDialog from "../Shared/Dialog/SuccessDialog";
 
 interface Probs {
   btnMessage?: string;
+  roles?: UserRole[];
+  isSmailOnly?: boolean;
 }
 
-const SIPLogin = (probs: Probs) => {
+const Login = (probs: Probs) => {
   const { signIn } = useContext(AuthContext)!;
 
   const [errorMessage, setErrorMessage] = React.useState<string>();
@@ -21,14 +22,13 @@ const SIPLogin = (probs: Probs) => {
   React.useEffect(() => {
     if (
       error?.message.includes("Invalid user") ||
-      (data?.login &&
-        !RoleAccess.SIPAddProjectAccess.includes(data?.login.role!))
+      (data?.login && probs.roles && !probs.roles?.includes(data?.login.role!))
     ) {
       setErrorMessage("Invalid User");
     } else if (error) {
       setErrorMessage(error.message);
     }
-  }, [data, loading, error, signIn]);
+  }, [data, loading, error, signIn, probs.roles]);
 
   const handleLogin = async (googleData: any) => {
     try {
@@ -63,11 +63,11 @@ const SIPLogin = (probs: Probs) => {
         onSuccess={handleLogin}
         onFailure={handleFailure}
         cookiePolicy={"single_host_origin"}
-        hostedDomain={"smail.iitm.ac.in"}
+        hostedDomain={probs.isSmailOnly ? "smail.iitm.ac.in" : undefined}
         prompt={"consent"}
       />
     </>
   );
 };
 
-export default SIPLogin;
+export default Login;

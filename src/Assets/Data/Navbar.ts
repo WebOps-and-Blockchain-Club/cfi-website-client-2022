@@ -1,9 +1,11 @@
 import CreateBlogButton from "../../Components/Blog/CreateBlog/CreateBlogButton";
-import SIPAuth from "../../Components/SIP/Auth";
+import SIPAuth from "../../Components/SIP/SIPAuth";
 import ProposeProjectButton from "../../Components/SIP/ProposeProjectButton";
 import { UserRole } from "../../generated/graphql";
 import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
+import BlogAuth from "../../Components/Blog/BlogAuth";
+import AdminAuth from "../../Components/Admin/AdminAuth";
 
 export const NavbarItems = [
   {
@@ -82,7 +84,7 @@ export const NavbarBlogList = (role: UserRole) => {
         link: "/blog/my",
       },
       {
-        component: SIPAuth,
+        component: BlogAuth,
       },
     ];
   else
@@ -95,9 +97,25 @@ export const NavbarBlogList = (role: UserRole) => {
         component: CreateBlogButton,
       },
       {
-        component: SIPAuth,
+        component: BlogAuth,
       },
     ];
+};
+
+export const NavbarADMINList = () => {
+  return [
+    {
+      name: "HOME",
+      link: "/admin",
+    },
+    {
+      name: "BLOG",
+      link: "/admin/blog",
+    },
+    {
+      component: AdminAuth,
+    },
+  ];
 };
 
 export const NavbarSIPList = () => {

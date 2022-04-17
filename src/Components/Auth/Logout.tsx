@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { useLogoutMutation } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
-import { NavbarButton } from "./Navbar";
+import { NavbarButton } from "../Shared/Navbar";
 import { IconButton, Snackbar } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 

@@ -5,8 +5,7 @@ import AuthContext from "../Utils/context";
 import Wrapper from "../Utils/scrollToTop";
 import AboutUs from "./AboutUs";
 import Achievements from "./Achievements";
-// import Admin from "./Admin";
-// import AdminLogin from "./Admin/Auth/AdminLogin";
+import Admin from "./Admin";
 import Alumni from "./Alumni";
 import Club from "./Community/Club";
 import CompetitionTeam from "./Community/CompetitionTeam";
@@ -23,6 +22,7 @@ import OpenHouse from "./OpenHouse";
 import Blog from "./Blog";
 import MyBlog from "./Blog/MyBlog";
 import ViewBlog from "./Blog/ViewBlog";
+import { AdminLoginPage } from "./Admin/AdminAuth";
 
 interface Probs {}
 
@@ -85,10 +85,10 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/contact-us" element={<ContactUs />} />
 
           {/* ADMIN */}
-          {/* <Route
+          <Route
             path="/admin"
             element={
-              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
                 <Admin />
               ) : (
                 <Navigate to="/admin/sign-in" />
@@ -98,8 +98,8 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/blog"
             element={
-              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
-                <Admin />
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
+                <Blog />
               ) : (
                 <Navigate to="/admin/sign-in" />
               )
@@ -108,23 +108,23 @@ const AppRoutes = (probs: Probs) => {
           <Route
             path="/admin/sign-in"
             element={
-              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
                 <Navigate to="/admin" />
               ) : (
-                <AdminLogin />
+                <AdminLoginPage />
               )
             }
           />
           <Route
             path="/admin/sign-out"
             element={
-              RoleAccess.BlogAccess.includes(state.user?.role!) ? (
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
                 <Navigate to="/admin" />
               ) : (
                 <Navigate to="/admin/sign-in" />
               )
             }
-          /> */}
+          />
 
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
