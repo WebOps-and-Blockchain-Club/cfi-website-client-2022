@@ -22,6 +22,7 @@ import Project from "./SIP/Project";
 import OpenHouse from "./OpenHouse";
 import Blog from "./Blog";
 import MyBlog from "./Blog/MyBlog";
+import ViewBlog from "./Blog/ViewBlog";
 
 interface Probs {}
 
@@ -55,7 +56,7 @@ const AppRoutes = (probs: Probs) => {
               )
             }
           />
-          <Route path="/blog/:id" element={<Media />} />
+          <Route path="/blog/:id" element={<ViewBlog />} />
           <Route
             path="/blog/new"
             element={

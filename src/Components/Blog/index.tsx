@@ -26,7 +26,6 @@ const Blog = () => {
   const setClubNameFilter = (value: string) => setSearchParams({ club: value });
   const setTagNameFilter = (value: string) => setSearchParams({ tag: value });
 
-
   React.useEffect(() => {
     const timer = setTimeout(() => setSearch(searchParams.get("search")), 1000);
     return () => clearTimeout(timer);
@@ -57,7 +56,7 @@ const Blog = () => {
             container
             py={{ xs: 4, sm: 5, md: 6, lg: 6 }}
             gap={4}
-            justifyContent="center"
+            justifyContent="stretch"
           >
             {data.getBlogs.blogs?.length === 0 && (
               <HeadingSub white="NO BLOGS" red=" ADDED" />

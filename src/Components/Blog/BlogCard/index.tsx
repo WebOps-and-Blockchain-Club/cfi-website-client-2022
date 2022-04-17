@@ -73,6 +73,7 @@ const BlogCard = (probs: Probs) => {
   return (
     <Card
       sx={{
+        width: "100%",
         borderRadius: "20px",
         display: "flex",
         flexDirection: matchesLG ? "column" : "row",
@@ -97,7 +98,7 @@ const BlogCard = (probs: Probs) => {
       )}
       <CardContent
         sx={{
-          px: "10px",
+          px: "30px",
           py: "20px",
           display: "flex",
           flexDirection: "column",
@@ -177,7 +178,7 @@ const BlogCard = (probs: Probs) => {
           </Typography>
         </Grid>
         {(RoleAccess.BlogAdminAccess.includes(state.user?.role) ||
-          state.user.id === probs.blog.createdBy.id) && (
+          state.user?.id === probs.blog.createdBy.id) && (
           <Grid container gap={2} pt={1}>
             <Chip
               label={"Edit"}
