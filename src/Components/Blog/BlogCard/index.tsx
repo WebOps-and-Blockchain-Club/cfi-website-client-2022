@@ -10,12 +10,11 @@ import {
   useTheme,
 } from "@mui/material";
 import moment from "moment";
-import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import { BlogStatus } from "../../../generated/graphql";
-import { RoleAccess } from "../../../Utils/config";
-import AuthContext from "../../../Utils/context";
 import { HeadingSub } from "../../Shared/Heading";
+import EditBlogButton from "../EditBlogButton";
 
 interface Probs {
   blog: {
@@ -61,14 +60,6 @@ const BlogCard = (probs: Probs) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
-
-  const { state } = useContext(AuthContext)!;
-
-  const navigate = useNavigate();
-
-  const handleEdit = (value: string) => {
-    navigate(`/blog/new?id=${value}`);
-  };
 
   return (
     <Card
@@ -177,21 +168,7 @@ const BlogCard = (probs: Probs) => {
             {probs.blog.views} views &bull; {probs.blog.readingTime} mins read
           </Typography>
         </Grid>
-        {(RoleAccess.BlogAdminAccess.includes(state.user?.role) ||
-          state.user?.id === probs.blog.createdBy.id) && (
-          <Grid container gap={2} pt={1}>
-            <Chip
-              label={"Edit"}
-              sx={{
-                backgroundColor: "secondary.main",
-                ":hover": {
-                  backgroundColor: "secondary.main",
-                },
-              }}
-              onClick={() => handleEdit(probs.blog.id)}
-            />
-          </Grid>
-        )}
+        <EditBlogButton {...probs} />
       </CardContent>
     </Card>
   );

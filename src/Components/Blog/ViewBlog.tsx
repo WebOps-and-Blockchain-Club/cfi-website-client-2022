@@ -16,6 +16,7 @@ import Heading from "../Shared/Heading";
 import Loading from "../Shared/Dialog/Loading";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 import moment from "moment";
+import EditBlogButton from "./EditBlogButton";
 
 interface Probs {}
 
@@ -100,6 +101,7 @@ const ViewBlog = (probs: Probs) => {
                 mins read
               </Typography>
             </Grid>
+            <EditBlogButton blog={data.getBlog} />
             <Grid container gap={2} pt={2} justifyContent="center">
               <Typography
                 component="div"

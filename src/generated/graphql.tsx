@@ -38,12 +38,15 @@ export type Blog = {
 
 export enum BlogStatus {
   Approved = 'APPROVED',
+  ApprovedByClub = 'APPROVED_BY_CLUB',
   Draft = 'DRAFT',
   Pending = 'PENDING',
-  Rejected = 'REJECTED'
+  Rejected = 'REJECTED',
+  RejectedByClub = 'REJECTED_BY_CLUB'
 }
 
 export type Club = {
+  email: Scalars['String'];
   id: Scalars['String'];
   name: Scalars['String'];
   projects: Array<Project>;
@@ -143,6 +146,7 @@ export type Mutation = {
   editTag: Scalars['Boolean'];
   login: User;
   logout: Scalars['Boolean'];
+  suggestEdit: Scalars['Boolean'];
   toggleLikeProject: Scalars['Boolean'];
   updateBlogStatus: Scalars['Boolean'];
   uploadImage: Array<Image>;
@@ -192,6 +196,12 @@ export type MutationEditTagArgs = {
 
 export type MutationLoginArgs = {
   LoginInputs: LoginInput;
+};
+
+
+export type MutationSuggestEditArgs = {
+  BlogId: Scalars['String'];
+  Content: Scalars['String'];
 };
 
 
