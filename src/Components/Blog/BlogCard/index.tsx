@@ -12,10 +12,11 @@ import {
 import moment from "moment";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { BlogStatus } from "../../../generated/graphql";
+import { BlogStatus, UserRole } from "../../../generated/graphql";
 import { RoleAccess } from "../../../Utils/config";
 import AuthContext from "../../../Utils/context";
 import AdminEditBlogButton from "../../Admin/Blog/AdminEditBlogButton";
+import BlogApprove from "../../Admin/Blog/BlogApprove";
 import { HeadingSub } from "../../Shared/Heading";
 import EditBlogButton from "../EditBlogButton";
 
@@ -115,6 +116,22 @@ const BlogCard = (probs: Probs) => {
         >
           <HeadingSub white={probs.blog.title} red="" />
         </Link>
+        {(probs.blog.createdBy.id === state.user?.id ||
+          probs.blog.club?.email === state.user?.email ||
+          [UserRole.Admin].includes(state.user?.role!)) && (
+          <Grid item width="fit-content">
+            <HeadingSub white="Blog Status: " red={probs.blog.status} />
+          </Grid>
+        )}
+        {((probs.blog.club?.email === state.user?.email &&
+          [
+            BlogStatus.Pending,
+            BlogStatus.ApprovedByClub,
+            BlogStatus.RejectedByClub,
+          ].includes(probs.blog.status)) ||
+          [UserRole.Admin].includes(state.user?.role!)) && (
+          <BlogApprove blogId={probs.blog.id} />
+        )}
         <Grid item container gap={2}>
           <Typography
             component="div"
