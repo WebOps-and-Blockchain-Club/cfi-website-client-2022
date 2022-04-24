@@ -46,6 +46,7 @@ query GetMeBlogs {
       club {
         id
         name
+        email
       }
       tags {
         id
@@ -77,6 +78,7 @@ query GetBlogs($filters: FilterBlog) {
       club {
         id
         name
+        email
       }
       tags {
         id
@@ -107,6 +109,7 @@ query GetBlog($blogId: String!) {
     club {
       id
       name
+      email
     }
     tags {
       id

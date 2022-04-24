@@ -17,6 +17,8 @@ import Loading from "../Shared/Dialog/Loading";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 import moment from "moment";
 import EditBlogButton from "./EditBlogButton";
+import AdminEditBlogButton from "../Admin/Blog/AdminEditBlogButton";
+import SuggestBlogEdit from "../Admin/Blog/SuggestEdit";
 
 interface Probs {}
 
@@ -102,6 +104,7 @@ const ViewBlog = (probs: Probs) => {
               </Typography>
             </Grid>
             <EditBlogButton blog={data.getBlog} />
+            <AdminEditBlogButton blog={data.getBlog} />
             <Grid container gap={2} pt={2} justifyContent="center">
               <Typography
                 component="div"
@@ -148,6 +151,13 @@ const ViewBlog = (probs: Probs) => {
                   )}
                 </CardContent>
               </Card>
+            </Grid>
+            <Grid item container justifyContent="center" mt={5}>
+              <SuggestBlogEdit
+                blogId={data.getBlog.id}
+                blogClubEmail={data.getBlog.club?.email!}
+                blogStatus={data.getBlog.status}
+              />
             </Grid>
           </Grid>
         )}

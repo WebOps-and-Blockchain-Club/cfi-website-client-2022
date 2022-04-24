@@ -10,9 +10,12 @@ import {
   useTheme,
 } from "@mui/material";
 import moment from "moment";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BlogStatus } from "../../../generated/graphql";
+import { RoleAccess } from "../../../Utils/config";
+import AuthContext from "../../../Utils/context";
+import AdminEditBlogButton from "../../Admin/Blog/AdminEditBlogButton";
 import { HeadingSub } from "../../Shared/Heading";
 import EditBlogButton from "../EditBlogButton";
 
@@ -43,6 +46,7 @@ interface Probs {
       | {
           id: string;
           name: string;
+          email: string;
         }
       | null
       | undefined;
@@ -60,6 +64,8 @@ const BlogCard = (probs: Probs) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
+
+  const { state } = useContext(AuthContext)!;
 
   return (
     <Card
@@ -100,7 +106,11 @@ const BlogCard = (probs: Probs) => {
         }}
       >
         <Link
-          to={`/blog/${probs.blog.id}`}
+          to={
+            RoleAccess.BlogAdminAccess.includes(state.user?.role!)
+              ? `/admin/blog/${probs.blog.id}`
+              : `/blog/${probs.blog.id}`
+          }
           style={{ textDecoration: "none", width: "fit-content" }}
         >
           <HeadingSub white={probs.blog.title} red="" />
@@ -169,6 +179,7 @@ const BlogCard = (probs: Probs) => {
           </Typography>
         </Grid>
         <EditBlogButton {...probs} />
+        <AdminEditBlogButton {...probs} />
       </CardContent>
     </Card>
   );

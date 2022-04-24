@@ -25,6 +25,10 @@ mutation UpdateBlogStatus(
   updateBlogStatus(BlogStatus: $blogStatus, BlogId: $updateBlogStatusBlogId)
 }
 
+mutation SuggestEdit($content: String!, $blogId: String!) {
+  suggestEdit(Content: $content, BlogId: $blogId)
+}
+
 mutation CreateTag($createTagInput: CreateTagInput!) {
   createTag(CreateTagInput: $createTagInput)
 }

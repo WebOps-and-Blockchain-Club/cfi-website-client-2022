@@ -352,6 +352,14 @@ export type UpdateBlogStatusMutationVariables = Exact<{
 
 export type UpdateBlogStatusMutation = { updateBlogStatus: boolean };
 
+export type SuggestEditMutationVariables = Exact<{
+  content: Scalars['String'];
+  blogId: Scalars['String'];
+}>;
+
+
+export type SuggestEditMutation = { suggestEdit: boolean };
+
 export type CreateTagMutationVariables = Exact<{
   createTagInput: CreateTagInput;
 }>;
@@ -400,21 +408,21 @@ export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, 
 export type GetMeBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
+export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string, email: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
 
 export type GetBlogsQueryVariables = Exact<{
   filters?: InputMaybe<FilterBlog>;
 }>;
 
 
-export type GetBlogsQuery = { getBlogs: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
+export type GetBlogsQuery = { getBlogs: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string, email: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
 
 export type GetBlogQueryVariables = Exact<{
   blogId: Scalars['String'];
 }>;
 
 
-export type GetBlogQuery = { getBlog?: { id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, content?: string | null, image?: { name: string, url: string } | null, club?: { id: string, name: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } } | null };
+export type GetBlogQuery = { getBlog?: { id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, content?: string | null, image?: { name: string, url: string } | null, club?: { id: string, name: string, email: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } } | null };
 
 export type GetTagsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -573,6 +581,38 @@ export function useUpdateBlogStatusMutation(baseOptions?: ApolloReactHooks.Mutat
 export type UpdateBlogStatusMutationHookResult = ReturnType<typeof useUpdateBlogStatusMutation>;
 export type UpdateBlogStatusMutationResult = ApolloReactCommon.MutationResult<UpdateBlogStatusMutation>;
 export type UpdateBlogStatusMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateBlogStatusMutation, UpdateBlogStatusMutationVariables>;
+export const SuggestEditDocument = gql`
+    mutation SuggestEdit($content: String!, $blogId: String!) {
+  suggestEdit(Content: $content, BlogId: $blogId)
+}
+    `;
+export type SuggestEditMutationFn = ApolloReactCommon.MutationFunction<SuggestEditMutation, SuggestEditMutationVariables>;
+
+/**
+ * __useSuggestEditMutation__
+ *
+ * To run a mutation, you first call `useSuggestEditMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useSuggestEditMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [suggestEditMutation, { data, loading, error }] = useSuggestEditMutation({
+ *   variables: {
+ *      content: // value for 'content'
+ *      blogId: // value for 'blogId'
+ *   },
+ * });
+ */
+export function useSuggestEditMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<SuggestEditMutation, SuggestEditMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<SuggestEditMutation, SuggestEditMutationVariables>(SuggestEditDocument, options);
+      }
+export type SuggestEditMutationHookResult = ReturnType<typeof useSuggestEditMutation>;
+export type SuggestEditMutationResult = ApolloReactCommon.MutationResult<SuggestEditMutation>;
+export type SuggestEditMutationOptions = ApolloReactCommon.BaseMutationOptions<SuggestEditMutation, SuggestEditMutationVariables>;
 export const CreateTagDocument = gql`
     mutation CreateTag($createTagInput: CreateTagInput!) {
   createTag(CreateTagInput: $createTagInput)
@@ -846,6 +886,7 @@ export const GetMeBlogsDocument = gql`
       club {
         id
         name
+        email
       }
       tags {
         id
@@ -908,6 +949,7 @@ export const GetBlogsDocument = gql`
       club {
         id
         name
+        email
       }
       tags {
         id
@@ -970,6 +1012,7 @@ export const GetBlogDocument = gql`
     club {
       id
       name
+      email
     }
     tags {
       id

@@ -31,6 +31,7 @@ interface Probs {
       | {
           id: string;
           name: string;
+          email: string;
         }
       | null
       | undefined;
