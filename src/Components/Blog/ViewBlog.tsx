@@ -8,9 +8,14 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { BlogStatus, useGetBlogQuery, UserRole } from "../../generated/graphql";
+import {
+  BlogStatus,
+  useGetBlogQuery,
+  UserRole,
+  useUpdateViewsMutation,
+} from "../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading, { HeadingSub } from "../Shared/Heading";
 import Loading from "../Shared/Dialog/Loading";
@@ -38,12 +43,22 @@ const ViewBlog = (probs: Probs) => {
     },
   });
 
+  const [updateViewsMutation] = useUpdateViewsMutation();
+
   const setClubNameFilter = (value: string) => {
     navigate(`/blog?club=${value}`);
   };
   const setTagNameFilter = (value: string) => {
     navigate(`/blog?tag=${value}`);
   };
+
+  useEffect(() => {
+    updateViewsMutation({
+      variables: {
+        blogId: id!,
+      },
+    }).catch((e) => console.log(e));
+  }, [id, updateViewsMutation]);
 
   return (
     <CustomBox>

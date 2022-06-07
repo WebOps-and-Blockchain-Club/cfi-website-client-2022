@@ -150,6 +150,7 @@ export type Mutation = {
   suggestEdit: Scalars['Boolean'];
   toggleLikeProject: Scalars['Boolean'];
   updateBlogStatus: Scalars['Boolean'];
+  updateViews?: Maybe<Scalars['Boolean']>;
   uploadImage: Array<Image>;
 };
 
@@ -217,6 +218,11 @@ export type MutationUpdateBlogStatusArgs = {
 };
 
 
+export type MutationUpdateViewsArgs = {
+  BlogId: Scalars['String'];
+};
+
+
 export type MutationUploadImageArgs = {
   Image: Array<Scalars['Upload']>;
 };
@@ -257,7 +263,6 @@ export type Query = {
   getProjects: GetProjectsOutput;
   getTag?: Maybe<Tag>;
   getTags?: Maybe<Array<Tag>>;
-  updateViews?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -291,11 +296,6 @@ export type QueryGetProjectsArgs = {
 export type QueryGetTagArgs = {
   TagId?: InputMaybe<Scalars['String']>;
   TagName?: InputMaybe<Scalars['String']>;
-};
-
-
-export type QueryUpdateViewsArgs = {
-  BlogId: Scalars['String'];
 };
 
 export type Tag = {
@@ -360,6 +360,13 @@ export type SuggestEditMutationVariables = Exact<{
 
 
 export type SuggestEditMutation = { suggestEdit: boolean };
+
+export type UpdateViewsMutationVariables = Exact<{
+  blogId: Scalars['String'];
+}>;
+
+
+export type UpdateViewsMutation = { updateViews?: boolean | null };
 
 export type CreateTagMutationVariables = Exact<{
   createTagInput: CreateTagInput;
@@ -614,6 +621,37 @@ export function useSuggestEditMutation(baseOptions?: ApolloReactHooks.MutationHo
 export type SuggestEditMutationHookResult = ReturnType<typeof useSuggestEditMutation>;
 export type SuggestEditMutationResult = ApolloReactCommon.MutationResult<SuggestEditMutation>;
 export type SuggestEditMutationOptions = ApolloReactCommon.BaseMutationOptions<SuggestEditMutation, SuggestEditMutationVariables>;
+export const UpdateViewsDocument = gql`
+    mutation UpdateViews($blogId: String!) {
+  updateViews(BlogId: $blogId)
+}
+    `;
+export type UpdateViewsMutationFn = ApolloReactCommon.MutationFunction<UpdateViewsMutation, UpdateViewsMutationVariables>;
+
+/**
+ * __useUpdateViewsMutation__
+ *
+ * To run a mutation, you first call `useUpdateViewsMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useUpdateViewsMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [updateViewsMutation, { data, loading, error }] = useUpdateViewsMutation({
+ *   variables: {
+ *      blogId: // value for 'blogId'
+ *   },
+ * });
+ */
+export function useUpdateViewsMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateViewsMutation, UpdateViewsMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<UpdateViewsMutation, UpdateViewsMutationVariables>(UpdateViewsDocument, options);
+      }
+export type UpdateViewsMutationHookResult = ReturnType<typeof useUpdateViewsMutation>;
+export type UpdateViewsMutationResult = ApolloReactCommon.MutationResult<UpdateViewsMutation>;
+export type UpdateViewsMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateViewsMutation, UpdateViewsMutationVariables>;
 export const CreateTagDocument = gql`
     mutation CreateTag($createTagInput: CreateTagInput!) {
   createTag(CreateTagInput: $createTagInput)
