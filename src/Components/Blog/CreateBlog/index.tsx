@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   BlogStatus,
   CreateBlogInput,
+  refetchGetBlogQuery,
   refetchGetBlogsQuery,
   refetchGetMeBlogsQuery,
   useCreateBlogMutation,
@@ -22,6 +23,14 @@ const NewBlog = (probs: Probs) => {
 
   const [cError, setCError] = React.useState<string>();
 
+  // GET BLOG QUERY
+  const { data, loading, error } = useGetBlogQuery({
+    variables: {
+      blogId: searchParams.get("id")!,
+    },
+    skip: !searchParams.get("id"),
+  });
+
   // CREATE BLOG MUTATION
   const [
     createBlogMutation,
@@ -37,15 +46,11 @@ const NewBlog = (probs: Probs) => {
         navigate(`/blog/${data?.createBlog.id}`);
       }
     },
-    refetchQueries: [refetchGetMeBlogsQuery(), refetchGetBlogsQuery()],
-  });
-
-  // GET BLOG QUERY
-  const { data, loading, error } = useGetBlogQuery({
-    variables: {
-      blogId: searchParams.get("id")!,
-    },
-    skip: !searchParams.get("id"),
+    refetchQueries: [
+      refetchGetMeBlogsQuery(),
+      refetchGetBlogsQuery(),
+      refetchGetBlogQuery({ blogId: data?.getBlog?.id! }),
+    ],
   });
 
   // PREVIEW FUNCTION HANDLER
@@ -71,7 +76,7 @@ const NewBlog = (probs: Probs) => {
         status === BlogStatus.Pending &&
         (!value.title ||
           !value.description ||
-          !value.imageData ||
+          (!value.imageData && !value.imageUrl) ||
           !value.readingTime ||
           !value.content ||
           !value.author ||
@@ -87,6 +92,7 @@ const NewBlog = (probs: Probs) => {
               title: value.title,
               description: value.description,
               imageData: value.imageData,
+              imageUrl: value.imageUrl,
               readingTime: value.readingTime,
               content: value.content,
               author: value.author,

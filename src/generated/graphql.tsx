@@ -66,6 +66,7 @@ export type CreateBlogInput = {
   description?: InputMaybe<Scalars['String']>;
   id?: InputMaybe<Scalars['String']>;
   imageData?: InputMaybe<Scalars['Upload']>;
+  imageUrl?: InputMaybe<Scalars['String']>;
   readingTime?: InputMaybe<Scalars['Float']>;
   status: BlogStatus;
   tagIds?: InputMaybe<Array<Scalars['String']>>;
