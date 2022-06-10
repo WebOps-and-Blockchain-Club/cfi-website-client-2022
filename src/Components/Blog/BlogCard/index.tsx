@@ -89,8 +89,11 @@ const BlogCard = (probs: Probs) => {
             borderRadius: "20px 20px 0 0",
             verticalAlign: "middle",
             objectFit: "cover",
-            height: matches ? "50vw" : "250px",
-            width: matches ? "62.5vw" : "312.5px",
+            height: matchesLG ? "50vw" : "100%",
+            width: matchesLG ? "100vw" : "312.5px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         />
       )}

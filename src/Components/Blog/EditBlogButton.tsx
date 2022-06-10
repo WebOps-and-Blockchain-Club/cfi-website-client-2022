@@ -1,5 +1,5 @@
 import { Chip, Grid } from "@mui/material";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { BlogStatus } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
@@ -65,6 +65,7 @@ const EditBlogButton = (probs: Probs) => {
             <Chip
               label={"Edit"}
               sx={{
+                color: "primary.contrastText",
                 backgroundColor: "secondary.main",
                 ":hover": {
                   backgroundColor: "secondary.main",
