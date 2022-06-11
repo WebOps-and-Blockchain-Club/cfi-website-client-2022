@@ -1,13 +1,4 @@
-import {
-  Grid,
-  FormControl,
-  InputLabel,
-  Box,
-  Select,
-  OutlinedInput,
-  Chip,
-  MenuItem,
-} from "@mui/material";
+import { Grid, Checkbox, useTheme, useMediaQuery } from "@mui/material";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { useGetBlogsQuery } from "../../generated/graphql";
@@ -15,17 +6,21 @@ import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 import Loading from "../Shared/Dialog/Loading";
 import Heading, { HeadingSub } from "../Shared/Heading";
-import { CustomTextField } from "../Shared/InputField";
+import { CustomAutocomplete, CustomTextField } from "../Shared/InputField";
 import BlogCard from "./BlogCard";
-import { SelectChangeEvent } from "@mui/material/Select";
 import { useGetTagsQuery, useGetClubsQuery } from "../../generated/graphql";
-import { useNavigate } from "react-router-dom";
+import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
+
 const Blog = () => {
-  const navigate = useNavigate();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+
   const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = React.useState(searchParams.get("search"));
+
   const { data: tags } = useGetTagsQuery();
   const { data: clubs } = useGetClubsQuery();
-  const [search, setSearch] = React.useState(searchParams.get("search"));
   const { data, loading, error } = useGetBlogsQuery({
     variables: {
       filters: {
@@ -35,65 +30,30 @@ const Blog = () => {
       },
     },
   });
+  const Tag = tags?.getTags ? tags?.getTags.map((tag) => tag.name) : [];
+  const Club = clubs?.getClubs ? clubs?.getClubs.map((club) => club.name) : [];
 
-  const setClubNameFilter = (value: string) => setSearchParams({ club: value });
-  const setTagNameFilter = (value: string) => setSearchParams({ tag: value });
   React.useEffect(() => {
     const timer = setTimeout(() => setSearch(searchParams.get("search")), 1000);
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams.get("search")]);
-  const Tag = tags?.getTags ? tags?.getTags.map((tag) => tag.name) : [];
-  const Club = clubs?.getClubs ? clubs?.getClubs.map((club) => club.name) : [];
-  const [tagName, settagName] = React.useState<string[]>([]);
-  const [clubName, setclubName] = React.useState<string[]>([]);
-  const setFilter = (event: SelectChangeEvent<typeof tagName>) => {
-    const {
-      target: { value },
-    } = event;
 
-    settagName(typeof value === "string" ? value.split(",") : value);
-    if (value.length !== 0 && clubName.length !== 0) {
-      setSearchParams({
-        tag: typeof value === "string" ? value : value.join(),
-        club: clubName.join(""),
-      });
-    } else if (value.length !== 0 && clubName.length === 0) {
-      setSearchParams({
-        tag: typeof value === "string" ? value : value.join(),
-      });
-    } else if (value.length === 0 && clubName.length !== 0) {
-      setSearchParams({
-        club: clubName.join(""),
-      });
-    } else {
-      navigate("/blog");
-    }
+  const handleFilter = (key: keyof typeof obj, value: string) => {
+    let obj: { search?: string; tag?: string; club?: string } = {};
+    if (searchParams.get("search"))
+      obj = { ...obj, search: searchParams.get("search")! };
+    if (searchParams.get("tag"))
+      obj = { ...obj, tag: searchParams.get("tag")! };
+    if (searchParams.get("club"))
+      obj = { ...obj, club: searchParams.get("club")! };
+    if (value) obj = { ...obj, [key]: value };
+    if (!value) delete obj[key];
+    setSearchParams(obj);
   };
+  const setClubNameFilter = (value: string) => handleFilter("club", value);
+  const setTagNameFilter = (value: string) => handleFilter("tag", value);
 
-  const setFilterClub = (event: SelectChangeEvent<typeof clubName>) => {
-    const {
-      target: { value },
-    } = event;
-
-    setclubName(typeof value === "string" ? value.split(",") : value);
-    if (value.length !== 0 && tagName.length !== 0) {
-      setSearchParams({
-        club: typeof value === "string" ? value : value.join(),
-        tag: tagName.join(""),
-      });
-    } else if (value.length !== 0 && tagName.length === 0) {
-      setSearchParams({
-        club: typeof value === "string" ? value : value.join(),
-      });
-    } else if (value.length === 0 && tagName.length !== 0) {
-      setSearchParams({
-        tag: tagName.join(""),
-      });
-    } else {
-      navigate("/blog");
-    }
-  };
   return (
     <CustomBox>
       <CustomGridPage>
@@ -108,7 +68,7 @@ const Blog = () => {
             fullWidth
             value={searchParams.get("search")}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setSearchParams({ search: e.target.value })
+              handleFilter("search", e.target.value)
             }
           />
           <Grid
@@ -119,85 +79,69 @@ const Blog = () => {
             spacing={1}
             mt={1}
           >
-            <Grid item xs={8}>
-              <div>
-                <FormControl
-                  sx={{ m: 1, width: 300, backgroundColor: "white" }}
-                >
-                  <InputLabel id="tag-filter">Tag Filter</InputLabel>
-                  <Select
-                    labelId="tag-filter"
-                    id="tags"
-                    multiple
-                    value={tagName}
-                    onChange={setFilter}
-                    input={
-                      <OutlinedInput
-                        id="tag_filter"
-                        sx={{ color: "primary" }}
-                        label="Tag Filter"
-                      />
-                    }
-                    renderValue={(selected) => {
-                      return (
-                        <Box
-                          sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}
-                        >
-                          {selected.map((value) => (
-                            <Chip key={value} label={value} />
-                          ))}
-                        </Box>
-                      );
-                    }}
-                  >
-                    {Tag.map((tag) => (
-                      <MenuItem key={tag} value={tag}>
-                        {tag}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </div>
-            </Grid>
-            <Grid item xs={8}>
-              <div>
-                <FormControl
-                  sx={{ m: 1, width: 300, backgroundColor: "white" }}
-                >
-                  <InputLabel id="club-filter">Club Filter</InputLabel>
-                  <Select
-                    labelId="club-filter"
-                    id="clubs"
-                    multiple
-                    value={clubName}
-                    onChange={setFilterClub}
-                    input={
-                      <OutlinedInput
-                        id="club_filter"
-                        sx={{ color: "primary" }}
-                        label="Club Filter"
-                      />
-                    }
-                    renderValue={(selected) => {
-                      return (
-                        <Box
-                          sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}
-                        >
-                          {selected.map((value) => (
-                            <Chip key={value} label={value} />
-                          ))}
-                        </Box>
-                      );
-                    }}
-                  >
-                    {Club.map((club) => (
-                      <MenuItem key={club} value={club}>
-                        {club}
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </div>
+            <Grid item container gap={4}>
+              <CustomAutocomplete
+                multiple
+                id="tag-filter"
+                size="small"
+                options={Tag}
+                sx={{ flex: 1, minWidth: matches ? "100%" : "unset" }}
+                disableCloseOnSelect
+                getOptionLabel={(option: any) => option}
+                renderOption={(props, option, { selected }) => (
+                  <li {...props}>
+                    <Checkbox
+                      icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+                      checkedIcon={<CheckBoxIcon fontSize="small" />}
+                      style={{ marginRight: 8 }}
+                      checked={selected}
+                    />
+                    {option as any}
+                  </li>
+                )}
+                renderInput={(params) => (
+                  <CustomTextField {...params} label="Filter By Tags" />
+                )}
+                value={
+                  !!searchParams.get("tag")
+                    ? searchParams.get("tag")?.split(",")
+                    : []
+                }
+                onChange={(event, value) =>
+                  handleFilter("tag", (value as any).join(","))
+                }
+              />
+              <CustomAutocomplete
+                multiple
+                id="club-filter"
+                size="small"
+                options={Club}
+                sx={{ flex: 1, minWidth: matches ? "100%" : "unset" }}
+                disableCloseOnSelect
+                getOptionLabel={(option: any) => option}
+                renderOption={(props, option, { selected }) => (
+                  <li {...props}>
+                    <Checkbox
+                      icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
+                      checkedIcon={<CheckBoxIcon fontSize="small" />}
+                      style={{ marginRight: 8 }}
+                      checked={selected}
+                    />
+                    {option as any}
+                  </li>
+                )}
+                renderInput={(params) => (
+                  <CustomTextField {...params} label="Filter By Clubs" />
+                )}
+                value={
+                  !!searchParams.get("club")
+                    ? searchParams.get("club")?.split(",")
+                    : []
+                }
+                onChange={(event, value) =>
+                  handleFilter("club", (value as any).join(","))
+                }
+              />
             </Grid>
           </Grid>
         </Grid>
