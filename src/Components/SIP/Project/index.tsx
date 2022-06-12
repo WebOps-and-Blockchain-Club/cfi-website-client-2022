@@ -10,6 +10,7 @@ import {
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
+  LoginType,
   ProjectStatus,
   useGetProjectQuery,
   UserRole,
@@ -296,6 +297,7 @@ const Project = (probs: Probs) => {
                   btnMessage="Login To Comment"
                   isSmailOnly={true}
                   roles={[UserRole.User]}
+                  loginType={LoginType.Sip}
                 />
               )}
             </Grid>

@@ -1,5 +1,5 @@
 import React from "react";
-import { useGetMeQuery, User } from "../generated/graphql";
+import { useGetMeQuery, useLogoutMutation, User } from "../generated/graphql";
 
 interface UserContext {
   state: any;
@@ -19,6 +19,7 @@ function AuthContextProvider(props: {
     | undefined;
 }) {
   const { data, loading, error } = useGetMeQuery();
+  const [LogoutMutation] = useLogoutMutation();
 
   const [state, dispatch] = React.useReducer(
     (
@@ -75,10 +76,11 @@ function AuthContextProvider(props: {
         });
       },
       signOut: () => {
+        LogoutMutation();
         dispatch({ type: "SIGN_OUT" });
       },
     }),
-    [state]
+    [LogoutMutation, state]
   );
 
   return (

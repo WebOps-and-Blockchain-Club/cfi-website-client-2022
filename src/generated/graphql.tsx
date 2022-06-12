@@ -74,6 +74,7 @@ export type CreateBlogInput = {
 };
 
 export type CreateClubInput = {
+  email: Scalars['String'];
   name: Scalars['String'];
 };
 
@@ -133,8 +134,15 @@ export type Image = {
 };
 
 export type LoginInput = {
+  loginType: LoginType;
   token: Scalars['String'];
 };
+
+export enum LoginType {
+  Admin = 'ADMIN',
+  Blog = 'BLOG',
+  Sip = 'SIP'
+}
 
 export type Mutation = {
   createBlog: Blog;

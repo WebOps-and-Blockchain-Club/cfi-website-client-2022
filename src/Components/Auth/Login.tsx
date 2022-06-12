@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import GoogleLogin from "react-google-login";
-import { useLoginMutation, UserRole } from "../../generated/graphql";
+import { LoginType, useLoginMutation, UserRole } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
 import Loading from "../Shared/Dialog/Loading";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
@@ -10,6 +10,7 @@ interface Probs {
   btnMessage?: string;
   roles?: UserRole[];
   isSmailOnly?: boolean;
+  loginType: LoginType;
 }
 
 const Login = (probs: Probs) => {
@@ -36,6 +37,7 @@ const Login = (probs: Probs) => {
         variables: {
           loginInputs: {
             token: googleData.tokenId,
+            loginType: probs.loginType,
           },
         },
       });
@@ -53,7 +55,10 @@ const Login = (probs: Probs) => {
   return (
     <>
       <Loading loading={!!loading} />
-      <ErrorDialog message={errorMessage} />
+      <ErrorDialog
+        message={errorMessage}
+        handleClose={() => setErrorMessage(undefined)}
+      />
       {data?.login && (
         <SuccessDialog message="Login Successfully" callBack={loginCallback} />
       )}

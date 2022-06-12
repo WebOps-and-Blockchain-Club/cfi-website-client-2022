@@ -8,6 +8,7 @@ interface Probs {
   btnMessage?: string;
   roles?: UserRole[];
   isSmailOnly?: boolean;
+  loginType: LoginType;
 }
 
 const Auth = (probs: Probs) => {
