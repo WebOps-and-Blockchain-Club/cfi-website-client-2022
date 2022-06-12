@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import * as React from "react";
 import { useLocation } from "react-router-dom";
 import bg from "../../Assets/Images/Particles.svg";
-import { UserRole } from "../../generated/graphql";
+import { useLogoutMutation, UserRole } from "../../generated/graphql";
 import { RoleAccess } from "../../Utils/config";
 import AuthContext from "../../Utils/context";
 import Footer from "./Footer";
@@ -17,8 +17,18 @@ interface Props {
 }
 
 const CustomBox = (props: Props) => {
-  const { state, signOut } = React.useContext(AuthContext)!;
+  const { state } = React.useContext(AuthContext)!;
   const location = useLocation();
+
+  const [LogoutMutation] = useLogoutMutation();
+
+  const logOut = async () => {
+    try {
+      await LogoutMutation();
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   React.useEffect(() => {
     if (state.user) {
@@ -26,16 +36,17 @@ const CustomBox = (props: Props) => {
         location.pathname.includes("admin") &&
         !RoleAccess.BlogAdminAccess.includes(state.user.role)
       )
-        signOut();
+        logOut();
       else if (
         ((location.pathname.includes("blog") &&
           !location.pathname.includes("admin")) ||
           location.pathname.includes("sip")) &&
         state.user.role !== UserRole.User
       )
-        signOut();
+        logOut();
     }
-  }, [location, signOut, state.user]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location, state.user]);
 
   return (
     <Grid

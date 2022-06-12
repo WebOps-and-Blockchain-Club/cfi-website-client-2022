@@ -34,7 +34,7 @@ const AdminLogin = (probs: Probs) => {
         variables: {
           loginInputs: {
             token: googleData.tokenId,
-            loginType: LoginType.Admin
+            loginType: LoginType.Admin,
           },
         },
       });
