@@ -21,6 +21,8 @@ interface Probs {
 const BlogApprove = (probs: Probs) => {
   const { state } = useContext(AuthContext)!;
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
   const [updateBlogStatusMutation, { data, loading, error }] =
     useUpdateBlogStatusMutation({
       refetchQueries: [
@@ -42,10 +44,19 @@ const BlogApprove = (probs: Probs) => {
     }
   };
 
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <Grid item container gap={2}>
       <Loading loading={!!loading} />
-      {error && <ErrorDialog message={"Some Error Occurred"} />}
+      {errorMessage && (
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
+      )}
       {data?.updateBlogStatus && <SuccessDialog message={"Status Updated"} />}
       <Button
         component="span"

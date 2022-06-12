@@ -43,6 +43,12 @@ const CommentForm = (probs: Probs) => {
     }
   };
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <form style={{ width: "100%" }} onSubmit={onSubmit}>
       <Grid
@@ -55,7 +61,10 @@ const CommentForm = (probs: Probs) => {
         boxShadow="5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);"
       >
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         {data?.createComment.id && <SuccessDialog message="Comment Added" />}
         <Grid item container gap={4} direction="column">
           <Typography

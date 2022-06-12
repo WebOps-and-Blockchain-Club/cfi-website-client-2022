@@ -32,11 +32,20 @@ const ProjectsList = (probs: Probs) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams.get("search")]);
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         <Heading white="PROPOSED " red="PROJECTS" />
         <Grid item container py={{ xs: 4, sm: 5, md: 6, lg: 6 }}>
           <CustomTextField

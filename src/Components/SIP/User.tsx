@@ -22,10 +22,19 @@ const SIPUser = (probs: Probs) => {
     navigate(`/sip/projects/add?id=${value}`);
   };
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <>
       <Loading loading={!!loading} />
-      <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+      <ErrorDialog
+        message={errorMessage}
+        handleClose={() => setErrorMessage(undefined)}
+      />
       {data && (
         <>
           <Heading white="YOUR " red="PROJECTS" />

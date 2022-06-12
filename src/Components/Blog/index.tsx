@@ -54,11 +54,20 @@ const Blog = () => {
   const setClubNameFilter = (value: string) => handleFilter("club", value);
   const setTagNameFilter = (value: string) => handleFilter("tag", value);
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         <Heading white="CFI " red="BLOGS" />
         <Grid item container py={{ xs: 4, sm: 5, md: 6, lg: 6 }}>
           <CustomTextField

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserRole } from "../../generated/graphql";
+import { LoginType, UserRole } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
 import Logout from "./Logout";
 import Login from "./Login";

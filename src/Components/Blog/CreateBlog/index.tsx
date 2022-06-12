@@ -21,7 +21,7 @@ const NewBlog = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  const [cError, setCError] = React.useState<string>();
+  const [errorMessage, setErrorMessage] = React.useState<string>();
 
   // GET BLOG QUERY
   const { data, loading, error } = useGetBlogQuery({
@@ -61,7 +61,7 @@ const NewBlog = (probs: Probs) => {
   ) => {
     await handleCreateBlog(value, status, tagIds);
     if (searchParams.get("id")) navigate(`/blog/${searchParams.get("id")}`);
-    else setCError("Fill the minimum details before previewing");
+    else setErrorMessage("Fill the minimum details before previewing");
   };
 
   const handleCreateBlog = async (
@@ -71,7 +71,7 @@ const NewBlog = (probs: Probs) => {
   ) => {
     try {
       if (!value || !value.title) {
-        setCError("Enter the title of the project");
+        setErrorMessage("Enter the title of the project");
       } else if (
         status === BlogStatus.Pending &&
         (!value.title ||
@@ -83,7 +83,7 @@ const NewBlog = (probs: Probs) => {
           !value.clubId ||
           tagIds.length === 0)
       ) {
-        setCError("Enter all the required fields");
+        setErrorMessage("Enter all the required fields");
       } else {
         await createBlogMutation({
           variables: {
@@ -108,18 +108,18 @@ const NewBlog = (probs: Probs) => {
     }
   };
 
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+    if (createError) setErrorMessage("Some Error Occurred");
+  }, [error, createError]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading || !!createLoading} />
         <ErrorDialog
-          message={
-            !!cError
-              ? cError
-              : !!error || !!createError
-              ? "Some Error Occurred"
-              : null
-          }
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
         />
         {createData?.createBlog.id && (
           <SuccessDialog

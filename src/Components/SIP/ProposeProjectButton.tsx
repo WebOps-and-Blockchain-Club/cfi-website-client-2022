@@ -10,16 +10,21 @@ interface Probs {}
 const ProposeProjectButton = (probs: Probs) => {
   const { state } = useContext(AuthContext)!;
   const navigate = useNavigate();
-  const [authError, setAuthError] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
 
   const handleClick = () => {
     if (state?.user?.role === UserRole.User) navigate("/sip/projects/add");
-    else setAuthError(true);
+    else setErrorMessage("Login to Continue");
   };
 
   return (
     <>
-      {authError && <ErrorDialog message={"Login to Continue"} />}
+      {errorMessage && (
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
+      )}
       <NavbarButton name="PROPOSE PROJECT" handleClick={handleClick} />
     </>
   );

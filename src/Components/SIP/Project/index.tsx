@@ -48,11 +48,20 @@ const Project = (probs: Probs) => {
     navigate(`/sip/projects?club=${value}`);
   };
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         {data?.getProject && (
           <Grid item container>
             <Grid item container flexDirection={"column"}>
