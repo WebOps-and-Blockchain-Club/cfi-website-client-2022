@@ -22,6 +22,7 @@ const NewBlog = (probs: Probs) => {
   const navigate = useNavigate();
 
   const [errorMessage, setErrorMessage] = React.useState<string>();
+  const [viewDraft, setViewDraft] = React.useState<boolean>(false);
 
   // GET BLOG QUERY
   const { data, loading, error } = useGetBlogQuery({
@@ -59,9 +60,8 @@ const NewBlog = (probs: Probs) => {
     status: BlogStatus,
     tagIds: string[]
   ) => {
+    setViewDraft(true);
     await handleCreateBlog(value, status, tagIds);
-    if (searchParams.get("id")) navigate(`/blog/${searchParams.get("id")}`);
-    else setErrorMessage("Fill the minimum details before previewing");
   };
 
   const handleCreateBlog = async (
@@ -128,7 +128,11 @@ const NewBlog = (probs: Probs) => {
                 ? "Blog Submitted for Approval"
                 : "Draft Saved"
             }
-            // callBack={submitCallBack}
+            callBack={
+              viewDraft
+                ? () => navigate(`/blog/${createData.createBlog.id}`)
+                : null
+            }
           />
         )}
         <BlogForm

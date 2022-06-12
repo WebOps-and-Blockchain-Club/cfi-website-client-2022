@@ -116,6 +116,16 @@ const AppRoutes = (probs: Probs) => {
             }
           />
           <Route
+            path="/admin/blog/new"
+            element={
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
+                <NewBlog />
+              ) : (
+                <Navigate to="/admin/sign-in" />
+              )
+            }
+          />
+          <Route
             path="/admin/sign-in"
             element={
               RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
