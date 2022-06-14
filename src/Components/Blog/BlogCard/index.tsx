@@ -13,7 +13,6 @@ import moment from "moment";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BlogStatus, UserRole } from "../../../generated/graphql";
-import { RoleAccess } from "../../../Utils/config";
 import AuthContext from "../../../Utils/context";
 import AdminEditBlogButton from "../../Admin/Blog/AdminEditBlogButton";
 import BlogApprove from "../../Admin/Blog/BlogApprove";
@@ -110,11 +109,7 @@ const BlogCard = (probs: Probs) => {
         }}
       >
         <Link
-          to={
-            RoleAccess.BlogAdminAccess.includes(state.user?.role!)
-              ? `/admin/blog/${probs.blog.id}`
-              : `/blog/${probs.blog.id}`
-          }
+          to={`./${probs.blog.id}`}
           style={{ textDecoration: "none", width: "fit-content" }}
         >
           <HeadingSub white={probs.blog.title} red="" />

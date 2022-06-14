@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import React, { useContext } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   BlogStatus,
   CreateBlogInput,
@@ -14,12 +14,14 @@ import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import Loading from "../../Shared/Dialog/Loading";
 import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
+import AuthContext from "../../../Utils/context";
+import { RoleAccess } from "../../../Utils/config";
 
 interface Probs {}
 
 const NewBlog = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const { state } = useContext(AuthContext)!;
 
   const [errorMessage, setErrorMessage] = React.useState<string>();
   const [viewDraft, setViewDraft] = React.useState<boolean>(false);
@@ -37,16 +39,6 @@ const NewBlog = (probs: Probs) => {
     createBlogMutation,
     { data: createData, loading: createLoading, error: createError },
   ] = useCreateBlogMutation({
-    onCompleted(data) {
-      if (data?.createBlog && data?.createBlog.status === BlogStatus.Draft) {
-        setSearchParams({ id: data?.createBlog.id });
-      } else if (
-        data?.createBlog &&
-        data?.createBlog.status === BlogStatus.Pending
-      ) {
-        navigate(`/blog/${data?.createBlog.id}`);
-      }
-    },
     refetchQueries: [
       refetchGetMeBlogsQuery(),
       refetchGetBlogsQuery(),
@@ -108,6 +100,16 @@ const NewBlog = (probs: Probs) => {
     }
   };
 
+  const successCB = () => {
+    if (viewDraft || createData?.createBlog.status === BlogStatus.Pending) {
+      if (RoleAccess.BlogAdminAccess.includes(state.user.role))
+        window.open(`/admin/blog/${createData?.createBlog.id}`, "_blank");
+      else window.open(`/blog/${createData?.createBlog.id}`, "_blank");
+    } else if (createData?.createBlog.status === BlogStatus.Draft) {
+      setSearchParams({ id: createData?.createBlog.id! });
+    } else return null;
+  };
+
   React.useEffect(() => {
     if (error) setErrorMessage("Some Error Occurred");
     if (createError) setErrorMessage("Some Error Occurred");
@@ -128,11 +130,7 @@ const NewBlog = (probs: Probs) => {
                 ? "Blog Submitted for Approval"
                 : "Draft Saved"
             }
-            callBack={
-              viewDraft
-                ? () => navigate(`/blog/${createData.createBlog.id}`)
-                : null
-            }
+            callBack={successCB}
           />
         )}
         <BlogForm
