@@ -11,7 +11,6 @@ import {
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
-  BlogStatus,
   useGetBlogQuery,
   UserRole,
   useUpdateViewsMutation,
@@ -83,15 +82,15 @@ const ViewBlog = (probs: Probs) => {
                 [UserRole.Admin].includes(state.user?.role!)) && (
                 <HeadingSub white="Blog Status: " red={data.getBlog.status} />
               )}
-              {((data.getBlog.club?.email === state.user?.email &&
-                [
-                  BlogStatus.Pending,
-                  BlogStatus.ApprovedByClub,
-                  BlogStatus.RejectedByClub,
-                ].includes(data.getBlog.status)) ||
-                [UserRole.Admin].includes(state.user?.role!)) && (
-                <BlogApprove blogId={data.getBlog.id} />
-              )}
+              <BlogApprove
+                blog={{
+                  id: data.getBlog.id,
+                  status: data.getBlog.status,
+                  club: {
+                    email: data.getBlog.club?.email!,
+                  },
+                }}
+              />
               <Grid item container gap={2} justifyContent="center">
                 <Typography
                   component="div"

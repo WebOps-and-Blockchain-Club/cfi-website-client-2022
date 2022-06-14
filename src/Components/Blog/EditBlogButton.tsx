@@ -56,7 +56,6 @@ const EditBlogButton = (probs: Probs) => {
     <>
       {[
         BlogStatus.Draft,
-        BlogStatus.Pending,
         BlogStatus.RejectedByClub,
         BlogStatus.Rejected,
       ].includes(probs.blog.status) &&

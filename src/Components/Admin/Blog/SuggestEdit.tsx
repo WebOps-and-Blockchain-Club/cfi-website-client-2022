@@ -56,7 +56,6 @@ const SuggestBlogEdit = (probs: Probs) => {
       {((probs.blogClubEmail === state.user?.email &&
         [
           BlogStatus.Pending,
-          BlogStatus.ApprovedByClub,
           BlogStatus.RejectedByClub,
           BlogStatus.Rejected,
         ].includes(probs.blogStatus)) ||

@@ -121,15 +121,15 @@ const BlogCard = (probs: Probs) => {
             <HeadingSub white="Blog Status: " red={probs.blog.status} />
           </Grid>
         )}
-        {((probs.blog.club?.email === state.user?.email &&
-          [
-            BlogStatus.Pending,
-            BlogStatus.ApprovedByClub,
-            BlogStatus.RejectedByClub,
-          ].includes(probs.blog.status)) ||
-          [UserRole.Admin].includes(state.user?.role!)) && (
-          <BlogApprove blogId={probs.blog.id} />
-        )}
+        <BlogApprove
+          blog={{
+            id: probs.blog.id,
+            status: probs.blog.status,
+            club: {
+              email: probs.blog.club?.email!,
+            },
+          }}
+        />
         <Grid item container gap={2}>
           <Typography
             component="div"
