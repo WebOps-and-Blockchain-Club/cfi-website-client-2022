@@ -64,7 +64,7 @@ const BlogApprove = (probs: Probs) => {
         />
       )}
       {data?.updateBlogStatus && <SuccessDialog message={"Status Updated"} />}
-      {((state.user.role === UserRole.Member &&
+      {((state.user?.role === UserRole.Member &&
         probs.blog.club?.email === state.user?.email &&
         probs.blog.status === BlogStatus.Pending) ||
         (state.user?.role === UserRole.Admin &&
