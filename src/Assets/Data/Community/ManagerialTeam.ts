@@ -1,11 +1,10 @@
 // TEAM HEADS
-import BEHead1 from "../../Images/ContactUs/CFIOffice/B_E_Navaneeth.png";
-import BEHead2 from "../../Images/ContactUs/CFIOffice/B_E_Vaidehi.png";
-import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Finance_Atharva.png";
-import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Finance_Ankur.png";
-import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Tarun.png";
-import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Sohana.png";
-import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Harshitha.png";
+import BEHead1 from "../../Images/ContactUs/CFIOffice/Appukrishnan.png";
+import BEHead2 from "../../Images/ContactUs/CFIOffice/Naincy.png";
+import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
+import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
+import PMHead1 from "../../Images/ContactUs/CFIOffice/akshay_kumar.png";
+import PMHead2 from "../../Images/ContactUs/CFIOffice/Revanth.png";
 
 // TEAM IMAGES
 import BEImage from "../../Images/Community/ManagerialTeam/BE.jpg";
@@ -21,18 +20,18 @@ export const ManagerialTeams = [
     email: "bnecfi@gmail.com",
     contacts: [
       {
-        name: "Vaidehi Garodia",
+        name: "Naincy Sachan ",
         image: BEHead2,
-        email: "na19b014@smail.iitm.ac.in",
-        phone: "8529782258",
-        linkedIn: "https://www.linkedin.com/in/vaidehi-garodia-6ba9351b7/",
+        email: "hs20h030@smail.iitm.ac.in",
+        phone: "8604826106",
+        linkedIn: "https://www.linkedin.com/in/naincy-sachan-a18b77215",
       },
       {
-        name: "Navaneeth C V",
+        name: "Appukrishnan M V",
         image: BEHead1,
-        email: "navaneethcv3@gmail.com",
-        phone: "9400434929",
-        linkedIn: "http://www.linkedin.com/in/navaneethcv/",
+        email: "hs20h012@smail.iitm.ac.in",
+        phone: "9961768764",
+        linkedIn: "https://www.linkedin.com/in/appukrishnan-m-v-1575761bb",
       },
     ],
   },
@@ -43,18 +42,18 @@ export const ManagerialTeams = [
     image: FinanceImage,
     contacts: [
       {
-        name: "Atharva Bhalerao",
+        name: "Ratan Danush ",
         image: FinanceHead1,
-        email: "ae18b020@smail.iitm.ac.in",
-        phone: "7722003546",
-        linkedIn: "https://www.linkedin.com/in/atharva-bhalerao-103a701a9/",
+        email: "me19b066@smail.iitm.ac.in",
+        phone: "9791699221",
+        linkedIn: "https://www.linkedin.com/in/ratan-danush-95a1a31b4/",
       },
       {
-        name: "Ankur Gupta",
+        name: "Revati Sawant",
         image: FinanceHead2,
-        email: "ankurgupta230063@gmail.com",
-        phone: "8708277966",
-        linkedIn: "https://www.linkedin.com/in/ankurgupta017/",
+        email: "ed19b025@smail.iitm.ac.in",
+        phone: "7219220159",
+        linkedIn: "https://www.linkedin.com/in/revati-sawant-4403051aa/",
       },
     ],
   },
@@ -66,26 +65,19 @@ export const ManagerialTeams = [
     image: PMImage,
     contacts: [
       {
-        name: "N.V.S.N.Tarun",
+        name: "Akshay kumar Jinde",
         image: PMHead1,
-        email: "tarunnnallam2002@gmail.com",
-        phone: "9390170789",
-        linkedIn: "https://www.linkedin.com/in/tarun-nallam-7b486a1a1",
+        email: "me19b116@smail.iitm.ac.in",
+        phone: "9573304289",
+        linkedIn: "https://www.linkedin.com/in/jinde-akshay-kumar-8408111b2",
       },
       {
-        name: "Bandi Sohana Preeth",
+        name: "Madala Revanth Yadav ",
         image: PMHead2,
-        email: "me19b008@smail.iitm.ac.in",
-        phone: "9573056849",
-        linkedIn: "https://www.linkedin.com/in/sohana-preeth-b-b6b7021a1",
-      },
-      {
-        name: "Harshitha Nugala",
-        image: PMHead3,
-        email: "me19b111@smail.iitm.ac.in",
-        phone: "8897576144",
-        linkedIn: "https://www.linkedin.com/in/harshitha-nugala-a61b49197",
-      },
+        email: "na20b033@smail.iitm.ac.in",
+        phone: "8500321996",
+        linkedIn: "http://www.linkedin.com/in/madala-revanth-yadav-b08b51216",
+      }
     ],
   },
 ];

@@ -6,8 +6,8 @@ import { ManagerialTeams } from "./Community/ManagerialTeam";
 // PHOTO
 import FACAD1 from "../Images/ContactUs/CFIOffice/FACAD_Prabhu.png";
 import FACAD2 from "../Images/ContactUs/CFIOffice/FACAD_Satyanarayanan.png";
-import COCAS from "../Images/ContactUs/CFIOffice/CACOCAS_Nitish.png";
-import CFIHead from "../Images/ContactUs/CFIOffice/CFIHead_Dhanveer.png";
+import COCAS from "../Images/ContactUs/CFIOffice/Baibhabi.png";
+import CFIHead from "../Images/ContactUs/CFIOffice/Abhigyan.png";
 
 export const ContactUsData = () => {
   let result: IContact[] = [
@@ -37,11 +37,11 @@ export const ContactUsData = () => {
       email: "cfi@smail.iitm.ac.in",
       members: [
         {
-          name: "Dhanveerraj J M",
+          name: "Abhigyan Chattopadhyay",
           image: CFIHead,
-          email: "cfi@smail.iitm.ac.in",
-          phone: "9488553190",
-          linkedIn: "https://www.linkedin.com/in/dhanveerraj-j-m",
+          email: "abhigyan@smail.iitm.ac.in",
+          phone: "9663561420",
+          linkedIn: "https://www.linkedin.com/in/abhigyan-chattopadhyay-29250619b/",
         },
       ],
     },
@@ -49,11 +49,11 @@ export const ContactUsData = () => {
       title: "Co-Curricular Affairs ##Secretary",
       members: [
         {
-          name: "Nitish Gupta",
+          name: "Baibhabi Patnaik",
           image: COCAS,
           email: "sec_cocur@smail.iitm.ac.in",
-          phone: "9840903852",
-          linkedIn: "https://www.linkedin.com/in/nitish-gupta86",
+          phone: "9989591690",
+          linkedIn: "https://www.linkedin.com/in/baibhabi-patnaik-b1563419b",
         },
       ],
     },
