@@ -10,6 +10,7 @@ import {
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
+  LoginType,
   ProjectStatus,
   useGetProjectQuery,
   UserRole,
@@ -47,11 +48,20 @@ const Project = (probs: Probs) => {
     navigate(`/sip/projects?club=${value}`);
   };
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         {data?.getProject && (
           <Grid item container>
             <Grid item container flexDirection={"column"}>
@@ -296,6 +306,7 @@ const Project = (probs: Probs) => {
                   btnMessage="Login To Comment"
                   isSmailOnly={true}
                   roles={[UserRole.User]}
+                  loginType={LoginType.Sip}
                 />
               )}
             </Grid>

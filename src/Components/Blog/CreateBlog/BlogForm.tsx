@@ -50,7 +50,7 @@ const BlogForm = (probs: Probs) => {
     id: string;
     name: string;
   }>();
-  const [preview, setPreview] = React.useState<string>();
+  const [previewImg, setPreviewImg] = React.useState<string>();
   const [btnState, setBtnState] = React.useState<string>();
 
   const selectedTagsId = () => {
@@ -84,18 +84,22 @@ const BlogForm = (probs: Probs) => {
 
   React.useEffect(() => {
     if (probs.initialValues?.getBlog) {
-      setBlogInput(probs.initialValues?.getBlog);
       if (probs.initialValues.getBlog.tags)
         setSelectedTags(probs.initialValues.getBlog.tags);
       if (probs.initialValues.getBlog.club)
         setSelectedClub(probs.initialValues.getBlog.club);
-      setPreview(probs.initialValues?.getBlog?.image?.url);
+      if (probs.initialValues?.getBlog?.image?.url) {
+        setBlogInput({
+          ...probs.initialValues?.getBlog,
+          imageUrl: probs.initialValues?.getBlog?.image?.url,
+        });
+        setPreviewImg(probs.initialValues?.getBlog?.image?.url);
+      } else {
+        setBlogInput(probs.initialValues?.getBlog);
+      }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [probs.initialValues?.getBlog]);
-
-  React.useEffect(() => {
-    console.log(selectedClub);
-  }, [selectedClub]);
 
   return (
     <form style={{ width: "100%" }} onSubmit={onSubmit}>
@@ -212,7 +216,11 @@ const BlogForm = (probs: Probs) => {
               renderInput={(params) => (
                 <CustomTextField {...params} label="Select Club" />
               )}
-              value={{ id: selectedClub?.id, name: selectedClub?.name }}
+              value={
+                !!selectedClub
+                  ? { id: selectedClub?.id, name: selectedClub?.name }
+                  : null
+              }
               onChange={(event, value) => setSelectedClub(value as any)}
             />
           )}
@@ -225,10 +233,10 @@ const BlogForm = (probs: Probs) => {
           alignItems="center"
           justifyContent="center"
         >
-          {preview && (
+          {previewImg && (
             <CardMedia
               component="img"
-              image={preview}
+              image={previewImg}
               alt="newsimg"
               sx={{
                 borderRadius: "20px",
@@ -248,7 +256,7 @@ const BlogForm = (probs: Probs) => {
               console.log(e.target.files![0]);
               handleChange("imageData" as never, e.target.files![0]);
               const objectUrl = URL.createObjectURL(e.target.files![0]);
-              setPreview(objectUrl);
+              setPreviewImg(objectUrl);
             }}
           />
           <label htmlFor="blog-img-upload-btn">
@@ -267,7 +275,7 @@ const BlogForm = (probs: Probs) => {
               }}
               startIcon={<PhotoCamera />}
             >
-              {preview ? "Re-Select Image" : "Select Image"}
+              {previewImg ? "Re-Select Image" : "Select Image"}
             </Button>
           </label>
           <Typography

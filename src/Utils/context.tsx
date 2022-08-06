@@ -1,5 +1,6 @@
 import React from "react";
 import { useGetMeQuery, User } from "../generated/graphql";
+import client from "../Graphql";
 
 interface UserContext {
   state: any;
@@ -18,7 +19,9 @@ function AuthContextProvider(props: {
     | null
     | undefined;
 }) {
-  const { data, loading, error } = useGetMeQuery();
+  const { data, loading, error } = useGetMeQuery({
+    fetchPolicy: "no-cache",
+  });
 
   const [state, dispatch] = React.useReducer(
     (
@@ -73,9 +76,11 @@ function AuthContextProvider(props: {
           type: "SIGN_IN",
           user: _user,
         });
+        client.resetStore();
       },
       signOut: () => {
         dispatch({ type: "SIGN_OUT" });
+        window.location.reload();
       },
     }),
     [state]

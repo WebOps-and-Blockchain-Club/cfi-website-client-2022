@@ -58,7 +58,9 @@ const LikeButton = (probs: Probs) => {
 
   return (
     <>
-      {error && <ErrorDialog message={error} />}
+      {error && (
+        <ErrorDialog message={error} handleClose={() => setError(undefined)} />
+      )}
       <Button
         variant="outlined"
         startIcon={isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}

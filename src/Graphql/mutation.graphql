@@ -1,3 +1,4 @@
+# User
 mutation Login($loginInputs: LoginInput!) {
   login(LoginInputs: $loginInputs) {
     id
@@ -11,6 +12,7 @@ mutation Logout {
   logout
 }
 
+# Blog
 mutation CreateBlog($createBlogInput: CreateBlogInput!) {
   createBlog(CreateBlogInput: $createBlogInput) {
     id
@@ -29,10 +31,15 @@ mutation SuggestEdit($content: String!, $blogId: String!) {
   suggestEdit(Content: $content, BlogId: $blogId)
 }
 
+mutation UpdateViews($blogId: String!) {
+  updateViews(BlogId: $blogId)
+}
+
 mutation CreateTag($createTagInput: CreateTagInput!) {
   createTag(CreateTagInput: $createTagInput)
 }
 
+# Projects(SIP)
 mutation CreateProject($createProjectInput: CreateProjectInput!) {
   createProject(CreateProjectInput: $createProjectInput) {
     id

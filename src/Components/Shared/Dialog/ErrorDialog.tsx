@@ -9,6 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 
 interface Probs {
   message: string | null | undefined;
+  handleClose: () => void;
 }
 
 const ErrorDialog = (probs: Probs) => {
@@ -18,14 +19,10 @@ const ErrorDialog = (probs: Probs) => {
     setOpen(!!probs.message);
   }, [probs.message]);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   return (
     <Dialog
       open={open}
-      onClose={handleClose}
+      onClose={probs.handleClose}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
@@ -36,7 +33,7 @@ const ErrorDialog = (probs: Probs) => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>
+        <Button onClick={probs.handleClose}>
           <CloseIcon />
           Close
         </Button>

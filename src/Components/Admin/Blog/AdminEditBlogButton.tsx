@@ -90,7 +90,6 @@ const AdminEditBlogButton = (probs: Probs) => {
       {((probs.blog.club?.email === state.user?.email &&
         [
           BlogStatus.Pending,
-          BlogStatus.ApprovedByClub,
           BlogStatus.RejectedByClub,
           BlogStatus.Rejected,
         ].includes(probs.blog.status)) ||

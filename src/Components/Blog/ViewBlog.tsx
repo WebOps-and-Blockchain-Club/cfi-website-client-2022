@@ -8,9 +8,13 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { BlogStatus, useGetBlogQuery, UserRole } from "../../generated/graphql";
+import {
+  useGetBlogQuery,
+  UserRole,
+  useUpdateViewsMutation,
+} from "../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading, { HeadingSub } from "../Shared/Heading";
 import Loading from "../Shared/Dialog/Loading";
@@ -38,6 +42,8 @@ const ViewBlog = (probs: Probs) => {
     },
   });
 
+  const [updateViewsMutation] = useUpdateViewsMutation();
+
   const setClubNameFilter = (value: string) => {
     navigate(`/blog?club=${value}`);
   };
@@ -45,11 +51,28 @@ const ViewBlog = (probs: Probs) => {
     navigate(`/blog?tag=${value}`);
   };
 
+  useEffect(() => {
+    updateViewsMutation({
+      variables: {
+        blogId: id!,
+      },
+    }).catch((e) => console.log(e));
+  }, [id, updateViewsMutation]);
+
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         {data?.getBlog && (
           <Grid item container>
             <Grid item container flexDirection={"column"}>
@@ -59,15 +82,15 @@ const ViewBlog = (probs: Probs) => {
                 [UserRole.Admin].includes(state.user?.role!)) && (
                 <HeadingSub white="Blog Status: " red={data.getBlog.status} />
               )}
-              {((data.getBlog.club?.email === state.user?.email &&
-                [
-                  BlogStatus.Pending,
-                  BlogStatus.ApprovedByClub,
-                  BlogStatus.RejectedByClub,
-                ].includes(data.getBlog.status)) ||
-                [UserRole.Admin].includes(state.user?.role!)) && (
-                <BlogApprove blogId={data.getBlog.id} />
-              )}
+              <BlogApprove
+                blog={{
+                  id: data.getBlog.id,
+                  status: data.getBlog.status,
+                  club: {
+                    email: data.getBlog.club?.email!,
+                  },
+                }}
+              />
               <Grid item container gap={2} justifyContent="center">
                 <Typography
                   component="div"

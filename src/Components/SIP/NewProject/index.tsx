@@ -20,7 +20,7 @@ const NewProject = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const navigate = useNavigate();
 
-  const [cError, setCError] = React.useState<string>();
+  const [errorMessage, setErrorMessage] = React.useState<string>();
 
   const { data, loading, error } = useGetProjectQuery({
     variables: {
@@ -43,7 +43,7 @@ const NewProject = (probs: Probs) => {
   ) => {
     try {
       if (!value || !value.title) {
-        setCError("Enter the title of the project");
+        setErrorMessage("Enter the title of the project");
       } else if (
         status === ProjectStatus.Public &&
         (!value.title ||
@@ -52,7 +52,7 @@ const NewProject = (probs: Probs) => {
           !value.q3 ||
           clubIds.length === 0)
       ) {
-        setCError("Enter all the required fields");
+        setErrorMessage("Enter all the required fields");
       } else {
         await createProjectMutation({
           variables: {
@@ -88,18 +88,18 @@ const NewProject = (probs: Probs) => {
     }
   };
 
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+    if (createError) setErrorMessage("Some Error Occurred");
+  }, [error, createError]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading || !!createLoading} />
         <ErrorDialog
-          message={
-            !!cError
-              ? cError
-              : !!error || !!createError
-              ? "Some Error Occurred"
-              : null
-          }
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
         />
         {createProjectData?.createProject.id && (
           <SuccessDialog

@@ -1,8 +1,9 @@
-import React from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import React, { useContext } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   BlogStatus,
   CreateBlogInput,
+  refetchGetBlogQuery,
   refetchGetBlogsQuery,
   refetchGetMeBlogsQuery,
   useCreateBlogMutation,
@@ -13,32 +14,17 @@ import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import Loading from "../../Shared/Dialog/Loading";
 import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
+import AuthContext from "../../../Utils/context";
+import { RoleAccess } from "../../../Utils/config";
 
 interface Probs {}
 
 const NewBlog = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate();
+  const { state } = useContext(AuthContext)!;
 
-  const [cError, setCError] = React.useState<string>();
-
-  // CREATE BLOG MUTATION
-  const [
-    createBlogMutation,
-    { data: createData, loading: createLoading, error: createError },
-  ] = useCreateBlogMutation({
-    onCompleted(data) {
-      if (data?.createBlog && data?.createBlog.status === BlogStatus.Draft) {
-        setSearchParams({ id: data?.createBlog.id });
-      } else if (
-        data?.createBlog &&
-        data?.createBlog.status === BlogStatus.Pending
-      ) {
-        navigate(`/blog/${data?.createBlog.id}`);
-      }
-    },
-    refetchQueries: [refetchGetMeBlogsQuery(), refetchGetBlogsQuery()],
-  });
+  const [errorMessage, setErrorMessage] = React.useState<string>();
+  const [viewDraft, setViewDraft] = React.useState<boolean>(false);
 
   // GET BLOG QUERY
   const { data, loading, error } = useGetBlogQuery({
@@ -48,15 +34,26 @@ const NewBlog = (probs: Probs) => {
     skip: !searchParams.get("id"),
   });
 
+  // CREATE BLOG MUTATION
+  const [
+    createBlogMutation,
+    { data: createData, loading: createLoading, error: createError },
+  ] = useCreateBlogMutation({
+    refetchQueries: [
+      refetchGetMeBlogsQuery(),
+      refetchGetBlogsQuery(),
+      refetchGetBlogQuery({ blogId: data?.getBlog?.id! }),
+    ],
+  });
+
   // PREVIEW FUNCTION HANDLER
   const handleSaveAndPreview = async (
     value: Partial<CreateBlogInput>,
     status: BlogStatus,
     tagIds: string[]
   ) => {
+    setViewDraft(true);
     await handleCreateBlog(value, status, tagIds);
-    if (searchParams.get("id")) navigate(`/blog/${searchParams.get("id")}`);
-    else setCError("Fill the minimum details before previewing");
   };
 
   const handleCreateBlog = async (
@@ -66,19 +63,19 @@ const NewBlog = (probs: Probs) => {
   ) => {
     try {
       if (!value || !value.title) {
-        setCError("Enter the title of the project");
+        setErrorMessage("Enter the title of the project");
       } else if (
         status === BlogStatus.Pending &&
         (!value.title ||
           !value.description ||
-          !value.imageData ||
+          (!value.imageData && !value.imageUrl) ||
           !value.readingTime ||
           !value.content ||
           !value.author ||
           !value.clubId ||
           tagIds.length === 0)
       ) {
-        setCError("Enter all the required fields");
+        setErrorMessage("Enter all the required fields");
       } else {
         await createBlogMutation({
           variables: {
@@ -87,6 +84,7 @@ const NewBlog = (probs: Probs) => {
               title: value.title,
               description: value.description,
               imageData: value.imageData,
+              imageUrl: value.imageUrl,
               readingTime: value.readingTime,
               content: value.content,
               author: value.author,
@@ -102,18 +100,28 @@ const NewBlog = (probs: Probs) => {
     }
   };
 
+  const successCB = () => {
+    if (viewDraft || createData?.createBlog.status === BlogStatus.Pending) {
+      if (RoleAccess.BlogAdminAccess.includes(state.user.role))
+        window.open(`/admin/blog/${createData?.createBlog.id}`, "_blank");
+      else window.open(`/blog/${createData?.createBlog.id}`, "_blank");
+    } else if (createData?.createBlog.status === BlogStatus.Draft) {
+      setSearchParams({ id: createData?.createBlog.id! });
+    } else return null;
+  };
+
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+    if (createError) setErrorMessage("Some Error Occurred");
+  }, [error, createError]);
+
   return (
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading || !!createLoading} />
         <ErrorDialog
-          message={
-            !!cError
-              ? cError
-              : !!error || !!createError
-              ? "Some Error Occurred"
-              : null
-          }
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
         />
         {createData?.createBlog.id && (
           <SuccessDialog
@@ -122,7 +130,7 @@ const NewBlog = (probs: Probs) => {
                 ? "Blog Submitted for Approval"
                 : "Draft Saved"
             }
-            // callBack={submitCallBack}
+            callBack={successCB}
           />
         )}
         <BlogForm

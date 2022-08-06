@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import GoogleLogin from "react-google-login";
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
-import { useLoginMutation } from "../../../generated/graphql";
+import { LoginType, useLoginMutation } from "../../../generated/graphql";
 import AuthContext from "../../../Utils/context";
 import { RoleAccess } from "../../../Utils/config";
 import Loading from "../../Shared/Dialog/Loading";
@@ -34,6 +34,7 @@ const AdminLogin = (probs: Probs) => {
         variables: {
           loginInputs: {
             token: googleData.tokenId,
+            loginType: LoginType.Admin,
           },
         },
       });
@@ -52,7 +53,10 @@ const AdminLogin = (probs: Probs) => {
     <CustomBox>
       <CustomGridPage>
         <Loading loading={!!loading} />
-        <ErrorDialog message={errorMessage} />
+        <ErrorDialog
+          message={errorMessage}
+          handleClose={() => setErrorMessage(undefined)}
+        />
         {data?.login && !errorMessage && (
           <SuccessDialog
             message="Login Successfully"

@@ -8,7 +8,7 @@ import React from "react";
 
 interface Probs {
   message: string | null | undefined;
-  callBack?: Function;
+  callBack?: Function | null;
 }
 
 const SuccessDialog = (probs: Probs) => {

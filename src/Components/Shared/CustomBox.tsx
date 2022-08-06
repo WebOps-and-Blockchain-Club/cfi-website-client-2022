@@ -1,6 +1,10 @@
 import { Grid } from "@mui/material";
 import * as React from "react";
+import { useLocation } from "react-router-dom";
 import bg from "../../Assets/Images/Particles.svg";
+import { useLogoutMutation, UserRole } from "../../generated/graphql";
+import { RoleAccess } from "../../Utils/config";
+import AuthContext from "../../Utils/context";
 import Footer from "./Footer";
 import Header from "./Navbar";
 
@@ -13,6 +17,37 @@ interface Props {
 }
 
 const CustomBox = (props: Props) => {
+  const { state } = React.useContext(AuthContext)!;
+  const location = useLocation();
+
+  const [LogoutMutation] = useLogoutMutation();
+
+  const logOut = async () => {
+    try {
+      await LogoutMutation();
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  React.useEffect(() => {
+    if (state.user) {
+      if (
+        location.pathname.includes("admin") &&
+        !RoleAccess.BlogAdminAccess.includes(state.user.role)
+      )
+        logOut();
+      else if (
+        ((location.pathname.includes("blog") &&
+          !location.pathname.includes("admin")) ||
+          location.pathname.includes("sip")) &&
+        state.user.role !== UserRole.User
+      )
+        logOut();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location, state.user]);
+
   return (
     <Grid
       style={{

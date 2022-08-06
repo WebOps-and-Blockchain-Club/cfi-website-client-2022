@@ -13,7 +13,6 @@ import moment from "moment";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { BlogStatus, UserRole } from "../../../generated/graphql";
-import { RoleAccess } from "../../../Utils/config";
 import AuthContext from "../../../Utils/context";
 import AdminEditBlogButton from "../../Admin/Blog/AdminEditBlogButton";
 import BlogApprove from "../../Admin/Blog/BlogApprove";
@@ -89,8 +88,11 @@ const BlogCard = (probs: Probs) => {
             borderRadius: "20px 20px 0 0",
             verticalAlign: "middle",
             objectFit: "cover",
-            height: matches ? "50vw" : "250px",
-            width: matches ? "62.5vw" : "312.5px",
+            height: matchesLG ? "50vw" : "100%",
+            width: matchesLG ? "100vw" : "312.5px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         />
       )}
@@ -107,11 +109,7 @@ const BlogCard = (probs: Probs) => {
         }}
       >
         <Link
-          to={
-            RoleAccess.BlogAdminAccess.includes(state.user?.role!)
-              ? `/admin/blog/${probs.blog.id}`
-              : `/blog/${probs.blog.id}`
-          }
+          to={`./${probs.blog.id}`}
           style={{ textDecoration: "none", width: "fit-content" }}
         >
           <HeadingSub white={probs.blog.title} red="" />
@@ -123,15 +121,15 @@ const BlogCard = (probs: Probs) => {
             <HeadingSub white="Blog Status: " red={probs.blog.status} />
           </Grid>
         )}
-        {((probs.blog.club?.email === state.user?.email &&
-          [
-            BlogStatus.Pending,
-            BlogStatus.ApprovedByClub,
-            BlogStatus.RejectedByClub,
-          ].includes(probs.blog.status)) ||
-          [UserRole.Admin].includes(state.user?.role!)) && (
-          <BlogApprove blogId={probs.blog.id} />
-        )}
+        <BlogApprove
+          blog={{
+            id: probs.blog.id,
+            status: probs.blog.status,
+            club: {
+              email: probs.blog.club?.email!,
+            },
+          }}
+        />
         <Grid item container gap={2}>
           <Typography
             component="div"

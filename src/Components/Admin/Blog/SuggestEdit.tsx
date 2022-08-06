@@ -20,6 +20,7 @@ interface Probs {
 const SuggestBlogEdit = (probs: Probs) => {
   const { state } = useContext(AuthContext)!;
 
+  const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
   const [commentInput, setCommentInput] = React.useState<string>();
 
   const handleChange = (id: string, value: string) => {
@@ -46,12 +47,15 @@ const SuggestBlogEdit = (probs: Probs) => {
     }
   };
 
+  React.useEffect(() => {
+    if (error) setErrorMessage("Some Error Occurred");
+  }, [error]);
+
   return (
     <>
       {((probs.blogClubEmail === state.user?.email &&
         [
           BlogStatus.Pending,
-          BlogStatus.ApprovedByClub,
           BlogStatus.RejectedByClub,
           BlogStatus.Rejected,
         ].includes(probs.blogStatus)) ||
@@ -67,7 +71,10 @@ const SuggestBlogEdit = (probs: Probs) => {
             boxShadow="5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);"
           >
             <Loading loading={!!loading} />
-            <ErrorDialog message={!!error ? "Some Error Occurred" : null} />
+            <ErrorDialog
+              message={errorMessage}
+              handleClose={() => setErrorMessage(undefined)}
+            />
             {data?.suggestEdit && (
               <SuccessDialog message="Edit Suggestion Mail Sent" />
             )}
