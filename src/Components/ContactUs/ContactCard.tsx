@@ -147,7 +147,7 @@ const ContactCard = ({ members }: Probs) => {
               {_member.phone && (
                 <Grid item>
                   <a
-                    href={`https://api.whatsapp.com/send?phone=+91${_member.phone}`}
+                    href={`https://wa.me/+91${_member.phone}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     title={_member.phone}

@@ -5,6 +5,7 @@ import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
 import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
 import PMHead1 from "../../Images/ContactUs/CFIOffice/akshay_kumar.png";
 import PMHead2 from "../../Images/ContactUs/CFIOffice/Revanth.png";
+import PMHead3 from "../../Images/ContactUs/CFIOffice/mrunmayee.png";
 
 // TEAM IMAGES
 import BEImage from "../../Images/Community/ManagerialTeam/BE.jpg";
@@ -77,7 +78,12 @@ export const ManagerialTeams = [
         email: "na20b033@smail.iitm.ac.in",
         phone: "8500321996",
         linkedIn: "http://www.linkedin.com/in/madala-revanth-yadav-b08b51216",
-      }
+      },{
+        name: "Mrunmayee Dhonde",
+        image: PMHead3,
+        email: "ph20b007@smail.iitm.ac.in",
+        phone: "8237816930",
+      }      
     ],
   },
 ];
