@@ -2,6 +2,7 @@ import {
   Button,
   Card,
   CardContent,
+  CardMedia,
   Chip,
   Grid,
   Typography,
@@ -26,13 +27,15 @@ import SuggestBlogEdit from "../Admin/Blog/SuggestEdit";
 import AuthContext from "../../Utils/context";
 import BlogApprove from "../Admin/Blog/BlogApprove";
 
-interface Probs {}
+interface Probs { }
 
 const ViewBlog = (probs: Probs) => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
+
 
   const { state } = useContext(AuthContext)!;
 
@@ -41,6 +44,8 @@ const ViewBlog = (probs: Probs) => {
       blogId: id!,
     },
   });
+
+  console.log(data?.getBlog?.image?.url)
 
   const [updateViewsMutation] = useUpdateViewsMutation();
 
@@ -80,8 +85,8 @@ const ViewBlog = (probs: Probs) => {
               {(data.getBlog.createdBy.id === state.user?.id ||
                 data.getBlog.club?.email === state.user?.email ||
                 [UserRole.Admin].includes(state.user?.role!)) && (
-                <HeadingSub white="Blog Status: " red={data.getBlog.status} />
-              )}
+                  <HeadingSub white="Blog Status: " red={data.getBlog.status} />
+                )}
               <BlogApprove
                 blog={{
                   id: data.getBlog.id,
@@ -161,11 +166,37 @@ const ViewBlog = (probs: Probs) => {
             <Grid item container flexDirection={"column"} mt={5}>
               <Card
                 sx={{
+                  backgroundColor: "transparent",
+                  justifyContent: "center",
+                  display: "flex"
+                }}
+              >
+                {data?.getBlog?.image?.url &&
+                  <CardMedia
+                    component="img"
+                    image={data?.getBlog?.image?.url}
+                    alt={data?.getBlog?.image?.url}
+                    sx={{
+                      borderRadius: "20px",
+                      verticalAlign: "middle",
+                      objectFit: "cover",
+                      height: matchesLG ? "50vw" : "100%",
+                      width: matchesLG ? "70vw" : "312.5px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                  </CardMedia>}
+              </Card>
+              <Card
+                sx={{
                   borderRadius: "20px",
-                  backgroundColor: "primary.light",
+                  //  backgroundColor: "primary.light",
+                  backgroundColor: "transparent",
                   p: matchesSM ? "15px" : "30px",
-                  boxShadow:
-                    "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
+                  // boxShadow:
+                  //   "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
                 }}
               >
                 <CardContent
