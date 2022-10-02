@@ -34,9 +34,9 @@ export const NavbarItems = [
     link: "/achievements",
   },
   {
-    name: "OPEN HOUSE",
-    link: "/open-house",
-    highlight: true,
+    name: "BLOGS",
+    link: "/blog",
+    // highlight: true,
   },
   {
     name: "MEDIA",
