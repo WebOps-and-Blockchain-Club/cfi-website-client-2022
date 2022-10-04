@@ -22,6 +22,7 @@ const MarkDownEditor = (probs: Probs) => {
         init={{
           width: "100%",
           menubar: false,
+          block_formats: 'Paragraph=p;Header 1=h2;Header 2=h4;',
           plugins: [
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",

@@ -45,8 +45,6 @@ const ViewBlog = (probs: Probs) => {
     },
   });
 
-  console.log(data?.getBlog?.image?.url)
-
   const [updateViewsMutation] = useUpdateViewsMutation();
 
   const setClubNameFilter = (value: string) => {
@@ -100,9 +98,9 @@ const ViewBlog = (probs: Probs) => {
                 <Typography
                   component="div"
                   color="primary.contrastText"
-                  textAlign="justify"
+                  textAlign="center"
                 >
-                  {data.getBlog.createdBy.name},{" "}
+                  <div>{data.getBlog.createdBy.name}</div>
                   <Button
                     variant="text"
                     sx={{
@@ -114,8 +112,11 @@ const ViewBlog = (probs: Probs) => {
                   >
                     {data.getBlog.club?.name}
                   </Button>{" "}
-                  &bull;{" "}
-                  {moment(data.getBlog.updatedAt).format("MMMM Do, YYYY")}
+                  {/* &bull;{" "}
+                  {matchesSM?"gggg":"jjjj"} */}
+                  <div>
+                    {moment(data.getBlog.updatedAt).format("MMMM Do, YYYY")}
+                  </div>
                 </Typography>
               </Grid>
               {data.getBlog.tags && (
