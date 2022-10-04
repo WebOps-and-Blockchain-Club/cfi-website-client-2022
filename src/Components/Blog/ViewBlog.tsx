@@ -17,7 +17,7 @@ import {
   useUpdateViewsMutation,
 } from "../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
-import Heading, { HeadingSub } from "../Shared/Heading";
+import { HeadingSub, HeadingSub1 } from "../Shared/Heading";
 import Loading from "../Shared/Dialog/Loading";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 import moment from "moment";
@@ -79,7 +79,7 @@ const ViewBlog = (probs: Probs) => {
         {data?.getBlog && (
           <Grid item container>
             <Grid item container flexDirection={"column"}>
-              <Heading white={data.getBlog.title} red="" />
+              <HeadingSub1 white={data.getBlog.title} red="" />
               {(data.getBlog.createdBy.id === state.user?.id ||
                 data.getBlog.club?.email === state.user?.email ||
                 [UserRole.Admin].includes(state.user?.role!)) && (
