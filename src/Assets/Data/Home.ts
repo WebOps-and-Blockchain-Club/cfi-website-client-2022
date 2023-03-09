@@ -122,9 +122,15 @@ export const CompetitionTeamList = [
   },
   {
     name: "Team Abhyuday",
-    link: "/cmpetition-teams/team-abhyuday",
+    link: "/competition-teams/team-abhyuday",
     logo: AvishkarLogo,
-    desc: "Hello"
+    desc: "Hello",
+  },
+  {
+    name: "Team Agnirath",
+    link: "/competition-teams/team-agnirath",
+    logo: AnveshakLogo,
+    desc: "Hello",
   }
 ];
 
@@ -194,6 +200,11 @@ export const ClubList = [
     logo: WebOpsAndBlockchainLogo,
     link: "/clubs/webops-and-blockchain-club",
   },
+  {
+    name: "Maths Club",
+    logo: WebOpsAndBlockchainLogo,
+    link: "/clubs/maths-club"
+  }
 ];
 
 export const AboutCFIOneLinear =

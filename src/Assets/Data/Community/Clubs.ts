@@ -205,6 +205,36 @@ export const Clubs: IClubs = {
       },
     ],
   },
+  "maths-club": {
+    name: "Maths ##Club",
+    logo: AeroLogo,
+    oneLiner: "Getting High the ‘Wright’ Way !",
+    description:
+      "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
+    achievements: [
+      {
+        description:
+          "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
+      },
+    ],
+    email: "mathsclub.cfi@gmail.com",
+    contacts: [
+      {
+        name: "Pranit Zope",
+        image: AeroHead1,
+        email: "ae20b046@smail.iitm.ac.in",
+        phone: "9879253473",
+        linkedIn: "https://www.linkedin.com/in/pranit-zope-05b001215/"
+      },
+      {
+        name: "Akshat Nagar",
+        image: AeroHead2,
+        email: "ae20b009@smail.iitm.ac.in",
+        phone: "9997677804",
+        linkedIn: "https://www.linkedin.com/in/theakshatnagar"
+      },
+    ],
+  },
   "analytics-club": {
     name: "Analytics## Club",
     logo: AnalyticsLogo,
