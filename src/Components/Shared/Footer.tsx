@@ -101,7 +101,7 @@ const Footer = (props: Props) => {
             color="primary.contrastText"
             sx={{ fontFamily: "Proxima Nova Bold" }}
           >
-            © 2022 &nbsp; All rights reserved
+            © 2023 &nbsp; All rights reserved
           </Typography>
         </Grid>
         <Grid

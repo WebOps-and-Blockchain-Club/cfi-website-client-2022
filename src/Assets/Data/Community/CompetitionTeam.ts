@@ -34,7 +34,7 @@ import RaftarGallery5 from "../../Images/Community/CompetitionTeam/Raftar/Galler
 import RaftarGallery6 from "../../Images/Community/CompetitionTeam/Raftar/Gallery6.jpg";
 
 // ABHIYAAN
-import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.jpg";
+import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.png";
 
 import AbhiyaanGallery1 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery1.jpg";
 import AbhiyaanGallery2 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery2.jpg";
@@ -161,6 +161,15 @@ export const Teams: ITeams = {
         description:
           "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
       },
+      {
+        description: "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger."
+      },
+      {
+        description: "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA."
+      },
+      {
+        description: "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus."
+      },
     ],
     projects: [
       {
@@ -201,18 +210,25 @@ export const Teams: ITeams = {
     email: "abhiyaan@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Shashank M Patil",
+        name: "Suraj Rathi",
         image: AbhiyaanHead1,
-        email: "shashankpatil0705@gmail.com",
-        phone: "6362748509",
-        linkedIn: "https://www.linkedin.com/in/shashank-m-patil/",
+        email: "suraj.rathi00@gmail.com",
+        phone: "+8830534626",
+        linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
       },
       {
-        name: "Amit Dodmani",
+        name: "Arun Krishna",
         image: AbhiyaanHead2,
-        email: "amitdodmani4@gmail.com",
-        phone: "8147327330",
-        linkedIn: "https://www.linkedin.com/in/amit-dodmani-b1a906a4/",
+        email: "arunkrish2603@gmail.com",
+        phone: "7550143818",
+        linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
+      },
+      {
+        name: "Sudharsan",
+        image: AbhiyaanHead2,
+        email: "s.sudharsan.raja@gmail.com",
+        phone: "7550117832",
+        linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
       },
     ],
   },
