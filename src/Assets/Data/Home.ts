@@ -76,7 +76,7 @@ export const HighlightsData = () => {
     {
       url: "/open-house",
       image: Highlights1,
-      title: "CFI Open House, 2022 - 13th edition of flagship event",
+      title: "CFI Open House, 2023 - 14th edition of flagship event",
     },
     {
       url: "/sip",
@@ -119,6 +119,18 @@ export const CompetitionTeamList = [
     logo: AvishkarLogo,
     desc: "It was started as a simple student project at the CFI. The team consisting of 40 highly enthusiastic students, is working on a project to develop a radically new mode of transport, The Hyperloop. Hyperloop is, described as a sealed tube or system of tubes with low air pressure through which a pod may travel substantially free of air resistance or friction.The team was among the 47 teams in the world qualified for the preliminary design round of the same.  Recently it was awarded the Most Scalable Design Award by Zeleros Hyperloop at the European Hyperloop Week (EHW)’21. They were also nominated among the top 5 teams around the globe in mechanical, levitation, propulsion and complete pod award categories at the EHW ’21.",
     link: "/competition-teams/team-avishkar-hyperloop",
+  },
+  {
+    name: "Team Agnirath",
+    logo: "",
+    desc: "",
+    link: "/competition-teams/team-agnirath",
+  },
+  {
+    name: "Team Abhyuday",
+    logo: "",
+    desc: "",
+    link: "/competition-teams/team-abhyuday",
   },
 ];
 
@@ -187,6 +199,11 @@ export const ClubList = [
     name: "Webops and Blockchain Club",
     logo: WebOpsAndBlockchainLogo,
     link: "/clubs/webops-and-blockchain-club",
+  },
+  {
+    name: "Maths Club",
+    logo: "",
+    link: "/clubs/maths-club",
   },
 ];
 

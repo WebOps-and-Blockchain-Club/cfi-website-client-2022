@@ -406,4 +406,52 @@ export const Teams: ITeams = {
       },
     ],
   },
+  "team-agnirath": {
+    name: "Team Agnirath",
+    logo: "",
+    landing: "",
+    description: "",
+    email: "",
+    achievements: [
+      {
+        description:
+          "The Team is preparing to go to Australia in October to showcase their work",
+      },
+    ],
+    contacts: [
+      {
+        name: "Bindusara",
+        image: "",
+        email: "",
+        phone: "8296354579",
+      },
+      {
+        name: "Rishabh",
+        image: "",
+        email: "",
+        phone: "7710936213",
+      },
+      {
+        name: "Aditya",
+        image: "",
+        email: "",
+        phone: "9884913874",
+      },
+    ],
+  },
+  "team-abhyuday": {
+    name: "Team Abhyuday",
+    landing: "",
+    logo: "",
+    description: "",
+    email: "",
+    contacts: [
+      {
+        name: "",
+        phone: "9983321407",
+        image: "",
+        email: "",
+      },
+    ],
+  },
 };

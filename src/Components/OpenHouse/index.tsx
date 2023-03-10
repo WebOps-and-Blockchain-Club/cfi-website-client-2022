@@ -17,7 +17,7 @@ import Gather from "../../Assets/Images/OpenHouse/GatherLogo.svg";
 import OSLogo from "../../Assets/Images/OpenHouse/OSLogo.jpg";
 import { OpenHouseData, OpenHouseGallery } from "../../Assets/Data/OpenHouse";
 
-interface Props {}
+interface Props { }
 
 const OpenHouse = (props: Props) => {
   const theme = useTheme();
@@ -79,7 +79,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Offline - Terrace Hall (Near NAC) <br />
+                  Offline - Sudha and Shankar Innovation Hub, near NAC<br />
                   Online - Gather Town
                 </Typography>
               </Grid>
@@ -109,7 +109,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  13th March, 2022 - 1:00PM
+                  12th March, 2023 - 10:00AM Onwards
                 </Typography>
               </Grid>
             </Grid>

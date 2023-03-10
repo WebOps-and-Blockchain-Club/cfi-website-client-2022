@@ -10,7 +10,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 
-interface Props {}
+interface Props { }
 
 const Footer = (props: Props) => {
   const theme = useTheme();
@@ -101,7 +101,7 @@ const Footer = (props: Props) => {
             color="primary.contrastText"
             sx={{ fontFamily: "Proxima Nova Bold" }}
           >
-            © 2022 &nbsp; All rights reserved
+            © 2023 &nbsp; All rights reserved
           </Typography>
         </Grid>
         <Grid
