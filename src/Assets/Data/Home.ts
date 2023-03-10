@@ -7,7 +7,7 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
-import Highlights1 from "../Images/Home/Highlights1.png";
+import Highlights1 from "../Images/Home/Highlights_1.png";
 import Highlights2 from "../Images/Home/Highlights2.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
@@ -76,7 +76,7 @@ export const HighlightsData = () => {
     {
       url: "/open-house",
       image: Highlights1,
-      title: "CFI Open House, 2022 - 13th edition of flagship event",
+      title: "CFI Open House, 2022 - 14th edition of flagship event",
     },
     {
       url: "/sip",
@@ -270,7 +270,7 @@ export const CFIStats = [
   },
 ];
 
-export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 13 clubs`;
+export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 14 clubs`;
 
 export const CompetitionTeams =
   "CFI’s Competition teams are groups of highly motivated individuals who work round the clock to meet challenging deadlines of various competitions. Over the years, our teams have bagged prizes both at the national and international level.";

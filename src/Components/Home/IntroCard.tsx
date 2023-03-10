@@ -31,7 +31,7 @@ export default function IntroCard() {
     >
       <Grid>
         <iframe
-          src="https://www.youtube.com/embed/WaxfRS13RGU"
+          src="https://drive.google.com/file/d/1YUEzLo81pg-6wl5XhsojB1e14cmfZnkP/view?usp=sharing"
           title="CFI"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           frameBorder={"0"}
