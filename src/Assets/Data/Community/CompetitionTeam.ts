@@ -17,6 +17,8 @@ import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Yash.
 import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Vibhor.png";
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Arun.png";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Karthik.png";
+import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Ashish.webp";
+import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Aaditya.webp";
 
 // RAFTAR
 import RaftarLanding from "../../Images/Community/CompetitionTeam/Raftar/Landing.jpg";
@@ -420,19 +422,22 @@ export const Teams: ITeams = {
       {
         name: "Bindusara",
         image: "",
-        email: "",
+        email: "na20b013@smail.iitm.ac.in",
+        linkedIn: "linkedin.com/in/bindusara-reddy-890b131b9/",
         phone: "8296354579",
       },
       {
         name: "Rishabh",
         image: "",
-        email: "",
+        email: "goldenrishabh@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202/",
         phone: "7710936213",
       },
       {
         name: "Aditya",
         image: "",
-        email: "",
+        email: "na20b004@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211/",
         phone: "9884913874",
       },
     ],
@@ -445,10 +450,18 @@ export const Teams: ITeams = {
     email: "",
     contacts: [
       {
-        name: "",
+        name: "Ashish Kumar Shroti",
         phone: "9983321407",
-        image: "",
-        email: "",
+        image: AbhyudayHead1,
+        email: "me19b083@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti/",
+      },
+      {
+        name: "Edupuganti Aaditya",
+        phone: "9390257854",
+        image: AbhyudayHead2,
+        email: "ae19b104@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2/",
       },
     ],
   },

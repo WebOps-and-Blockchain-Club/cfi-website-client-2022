@@ -36,8 +36,8 @@ import ProductDesignHead1 from "../../Images/ContactUs/Club/Shreepoorna.png";
 import ProductDesignHead2 from "../../Images/ContactUs/Club/Sushil.png";
 import ProgrammingHead1 from "../../Images/ContactUs/Club/Aditya.png";
 import ProgrammingHead2 from "../../Images/ContactUs/Club/Mantra.png";
-import SahaayHead1 from "../../Images/ContactUs/Club/Prakhar.png";
-import SahaayHead2 from "../../Images/ContactUs/Club/Anish.png";
+// import SahaayHead1 from "../../Images/ContactUs/Club/Prakhar.png";
+// import SahaayHead2 from "../../Images/ContactUs/Club/Anish.png";
 import EnvisageHead1 from "../../Images/ContactUs/Club/Shihad.png";
 import EnvisageHead2 from "../../Images/ContactUs/Club/Pavithra.png";
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/Jayanth.png";
@@ -662,19 +662,25 @@ export const Clubs: IClubs = {
     ],
     email: "teamsahaayiitm@gmail.com",
     contacts: [
+      // {
+      //   name: "Prakhar Maheshwari",
+      //   image: SahaayHead1,
+      //   email: "ph20b010@smail.iitm.ac.in",
+      //   phone: "7906641128",
+      //   linkedIn: "https://www.linkedin.com/in/prakhar-maheshwari-b0b797204",
+      // },
+      // {
+      //   name: "Anish Pophale",
+      //   image: SahaayHead2,
+      //   email: "ch20b012@smail.iitm.ac.in",
+      //   phone: "7038221689",
+      //   linkedIn: "https://in.linkedin.com/in/anish-pophale-192b98220",
+      // },
       {
-        name: "Prakhar Maheshwari",
-        image: SahaayHead1,
-        email: "ph20b010@smail.iitm.ac.in",
-        phone: "7906641128",
-        linkedIn: "https://www.linkedin.com/in/prakhar-maheshwari-b0b797204",
-      },
-      {
-        name: "Anish Pophale",
-        image: SahaayHead2,
-        email: "ch20b012@smail.iitm.ac.in",
-        phone: "7038221689",
-        linkedIn: "https://in.linkedin.com/in/anish-pophale-192b98220",
+        name: "Shrid Suresh",
+        phone: "7358722528",
+        email: "",
+        image: "",
       },
     ],
   },
