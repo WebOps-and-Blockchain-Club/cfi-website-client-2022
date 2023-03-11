@@ -217,7 +217,7 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
                          at the New Academic Complex in the heart of campus. After almost a
                          decade of the team's zeal and passion, combined with a comprehensive
                          inventory, ample workspace, guidance from faculty and students, CFI is
-                         a house to 13 clubs, 4 competition teams and counting. These clubs'
+                         a house to 14 clubs, 6 competition teams and counting. These clubs'
                          interests are spread over a wide spectrum primarily fostering
                          innovation and invention in technology, with a focus on technologies
                          aimed at contributing positively to the environment and to the

@@ -79,8 +79,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Offline - Terrace Hall (Near NAC) <br />
-                  Online - Gather Town
+                  Sudha & Shankar Innovation Hub (Near NAC) <br />
                 </Typography>
               </Grid>
             </Grid>
@@ -109,7 +108,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  13th March, 2022 - 1:00PM
+                  12th March, 2023 - 10:00AM
                 </Typography>
               </Grid>
             </Grid>
