@@ -8,8 +8,8 @@ import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.pn
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
 // TEAM HEADS IMAGE
-import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.png";
-import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Bharath.png";
+import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.webp";
+import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Parth.webp";
 import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Shashank.png";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Amit.png";
 import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Bharat.png";
@@ -135,18 +135,16 @@ export const Teams: ITeams = {
     email: "raftar@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Karthik Srinivasan",
+        name: "Karthik Karumanchi",
         image: RaftarHead1,
-        email: "kodikarthik21@gmail.com",
-        phone: "6379796668",
-        linkedIn: "https://www.linkedin.com/in/karthik-srinivasan-424558167/",
+        email: "",
+        phone: "8754910510",
       },
       {
-        name: "Bharath Chandhar",
+        name: "Parth Lathi",
         image: RaftarHead2,
-        email: "bharathcn2k@gmail.com",
-        phone: "9629878333",
-        linkedIn: "https://www.linkedin.com/in/bharath-chandar-20bbb5153/",
+        email: "",
+        phone: "9619690259",
       },
     ],
   },

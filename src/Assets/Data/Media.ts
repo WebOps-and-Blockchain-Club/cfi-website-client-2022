@@ -1,3 +1,7 @@
+// 2022
+import Media2022a_1 from "../Images/Media/2022/a1.jpg";
+import Media2022a_2 from "../Images/Media/2022/a2.webp";
+
 import Media2021b_1 from "../Images/Media/2021/b1.png";
 import Media2021b_2 from "../Images/Media/2021/b2.png";
 import Media2021b_3 from "../Images/Media/2021/b3.jpg";
@@ -31,6 +35,36 @@ import Media2019a_2 from "../Images/Media/2019/a2.png";
 import Media2019a_1 from "../Images/Media/2019/a1.png";
 
 const data = [
+  {
+    year: "2022",
+    data: [
+      {
+        heading:
+          "Raftar Formula Racing## develops its first electric racing car",
+        item_content: [
+          {
+            heading:
+              "IIT Madras students’ Raftar Formula Racing Team unveils its first electric racing car",
+            publisher: "The Hindu",
+            imgSrc: Media2022a_1,
+            date: "28 November, 2022",
+
+            articleLink:
+              "https://www.thehindubusinessline.com/news/iit-madras-students-raftar-formula-racing-team-unveils-its-first-electric-racing-car/article66194961.ece",
+          },
+          {
+            heading:
+              "IIT Madras students develop first electric formula racing car, courtesy of Raftar",
+            publisher: "India Today",
+            imgSrc: Media2022a_2,
+            date: "28 November, 202",
+            articleLink:
+              "https://www.indiatoday.in/education-today/news/story/iit-madras-students-develop-first-electric-formula-racing-car-courtesy-of-raftar-2302694-2022-11-28",
+          },
+        ],
+      },
+    ],
+  },
   {
     year: "2021",
     data: [
