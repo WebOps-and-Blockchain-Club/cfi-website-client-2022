@@ -30,7 +30,154 @@ import Media2019a_3 from "../Images/Media/2019/a3.png";
 import Media2019a_2 from "../Images/Media/2019/a2.png";
 import Media2019a_1 from "../Images/Media/2019/a1.png";
 
+//2022
+import Media2022a_1 from "../Images/Media/2022/a1.jpg";
+import Media2022a_2 from "../Images/Media/2022/a2.jpg";
+import Media2022a_3 from "../Images/Media/2022/a3.jpg";
+
+import Media2022b_1 from "../Images/Media/2022/b1.jpg";
+import Media2022b_2 from "../Images/Media/2022/b2.jpg";
+import Media2022b_3 from "../Images/Media/2022/b3.jpg";
+import Media2022b_4 from "../Images/Media/2022/b4.jpg";
+import Media2022b_5 from "../Images/Media/2022/b5.jpg";
+import Media2022b_6 from "../Images/Media/2022/b6.jpg";
+import Media2022b_7 from "../Images/Media/2022/b7.jpg";
+import Media2022b_8 from "../Images/Media/2022/b8.jpg";
+
+import Media2022c_1 from "../Images/Media/2022/c1.jpg";
+
+//2023
+import Media2023a_1 from "../Images/Media/2023/a1.jpg";
+
 const data = [
+  {
+    year: "2023",
+    data: [
+      {
+        heading: "Avishkar Hyperloop## : Indigenous Hyperloop",
+        item_content: [
+          {
+            heading: "An indigenous hyperloop takes shape in Chennai",
+            publisher: "ET Auto",
+            date: "31 January, 2023",
+            imgSrc: Media2023a_1,
+            articleLink: "https://www.team-bhp.com/news/iit-madras-techies-develop-indigenous-hyperloop",
+          },
+          {
+            heading: "IIT Madras techies develop indigenous hyperloop",
+            publisher: "Team BHP",
+            date: "30 January, 2023",
+            imgSrc: Media2023a_1,
+            articleLink: "https://www.team-bhp.com/news/iit-madras-techies-develop-indigenous-hyperloop"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    year: "2022",
+    data: [
+      {
+        heading: "CFI## Open House",
+        item_content: [
+          {
+            heading: "After two years break, IIT Madras students showcase 60 innovative projects",
+            publisher: "India Today",
+            date: "14 March, 2022",
+            imgSrc: Media2022c_1,
+            articleLink: "https://www.indiatoday.in/india/story/iit-madras-60-innovative-projects-showcase-1924957-2022-03-13"
+          }
+        ]
+      },
+      {
+        heading: "Avishkar Hyperloop## collaborates with Indian Railways",
+        item_content: [
+          {
+            heading: "Indian Railways In Collaboration With IIT Madras Introduces Indigenous Hyperloop System",
+            publisher: "Outlook India",
+            date: "1 June, 2022",
+            imgSrc: Media2022b_4,
+            articleLink: "https://www.outlookindia.com/travel/indian-railways-in-collaboration-with-iit-madras-introduces-indigenous-hyperloop-system-news-199674",
+          },
+          {
+            heading: "https://www.outlookindia.com/travel/indian-railways-in-collaboration-with-iit-madras-introduces-indigenous-hyperloop-system-news-199674",
+            publisher: "News9live",
+            date: "28 May, 2022",
+            imgSrc: Media2022b_5,
+            articleLink: "https://www.news9live.com/utility/indian-railways-collaborates-with-iit-madras-for-hyperloop-system-know-cost-features-and-other-details-173041",
+          },
+          {
+            heading: "India to have its own Hyperloop system! Indian Railways to collaborate with IIT Madras",
+            publisher: "The Financial Express",
+            date: "23 May, 2022",
+            imgSrc: Media2022b_2,
+            articleLink: "https://www.financialexpress.com/infrastructure/railways/india-to-have-its-own-hyperloop-system-indian-railways-to-collaborate-with-iit-madras-check-details/2534468/", 
+          },
+          {
+            heading: "Railways approves Rs 8.34 cr Hyperloop Tech Project with IIT Madras",
+            publisher: "Construction World",
+            date: "22 May, 2022",
+            imgSrc: Media2022b_8,
+            articleLink: "https://www.constructionworld.in/transport-infrastructure/metro-rail-and-railways-infrastructure/railways-approves-rs-8.34-cr-hyperloop-tech-project-with-iit-madras/34303",
+          },
+          {
+            heading: "Team Avishkar of IIT Madras to collaborate with IR for Hyperloop technology transportation",
+            publisher: "Metro Rail News",
+            date: "21 May, 2022",
+            imgSrc: Media2022b_1,
+            articleLink: "https://www.metrorailnews.in/team-avishkar-of-iit-madras-to-collaborate-with-ir-for-hyperloop-technology-transportation/",
+          },
+          {
+            heading: "IIT Madras, Indian Railways Partner To Develop India's First Indigenous Hyperloop",
+            publisher: "India Times",
+            date: "21 May, 2022",
+            imgSrc: Media2022b_7,
+            articleLink: "https://www.indiatimes.com/technology/science-and-future/iit-madras-indian-railways-partner-to-develop-indias-first-indigenous-hyperloop-570120.html",
+          },
+          {
+            heading: "Railways, IIT-Madras to develop India’s own Hyperloop",
+            publisher: "The Indian Express",
+            date: "20 May, 2022",
+            imgSrc: Media2022b_6,
+            articleLink: "https://indianexpress.com/article/india/railways-iit-madras-to-develop-indias-own-hyperloop-7926719/",
+          },
+          {
+            heading: "Railways approves funding for IIT Madras’ Hyperloop technology",
+            publisher: "The Hindu Business Line",
+            date: "19 May, 2022",
+            imgSrc: Media2022b_3,
+            articleLink: "https://www.thehindubusinessline.com/news/railways-approves-funding-for-iit-madras-hyperloop-technology/article65430902.ece",
+          }
+        ]
+      },
+      {
+        heading: "Avishkar Hyperloop## secures funding from LTTS",
+        item_content: [
+          {
+            heading: "IIT Madras Backed Avishkar Team Gets Funding and Technical Support from L&T Technology Services: What is Hyperloop Technology?",
+            publisher: "Dataquest",
+            date: "12 May, 2022",
+            imgSrc: Media2022a_3,
+            articleLink: "https://www.dqindia.com/iit-madras-backed-avishkar-team-gets-funding-and-technical-support-from-lt-technology-services-what-is-hyperloop-technology/",
+          },
+          {
+            heading: "500-meter-long hyperloop test facility to come up in India, IIT-Madras students’ team secures funding",
+            publisher: "WION",
+            date: "11 May, 2022",
+            imgSrc: Media2022a_1,
+            articleLink: "https://www.wionews.com/india-news/500-meter-long-hyperloop-test-facility-to-come-up-in-india-iit-madras-students-team-secures-funding-478140",
+          },
+          {
+            heading: "L&T Technology backs IIT Madras’ Avishkar Team to develop hyperloop technology",
+            publisher: "The Hindu Business Line",
+            date: "11 May, 2022",
+            imgSrc: Media2022a_2,
+            articleLink: "https://www.thehindubusinessline.com/news/lt-technology-backs-iit-madras-avishkar-team-to-develop-hyperloop-technology/article65404247.ece"
+          },
+        ]
+      }
+    ]
+  },
   {
     year: "2021",
     data: [

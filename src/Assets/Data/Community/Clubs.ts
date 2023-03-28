@@ -42,6 +42,7 @@ import EnvisageHead1 from "../../Images/ContactUs/Club/Shihad.png";
 import EnvisageHead2 from "../../Images/ContactUs/Club/Pavithra.png";
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/Jayanth.png";
 import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/Anirudh.png";
+import MathsHead from "../../Images/ContactUs/Club/Haricharan.png"
 
 //ANALYTICS
 import AnalyticsAchievements1 from "../../Images/Community/Clubs/Analytics/Achievements1.gif";
@@ -202,6 +203,29 @@ export const Clubs: IClubs = {
         email: "ae20b009@smail.iitm.ac.in",
         phone: "9997677804",
         linkedIn: "https://www.linkedin.com/in/theakshatnagar"
+      },
+    ],
+  },
+  "maths-club": {
+    name: "Maths ##Club",
+    logo: AeroLogo,
+    oneLiner: "Getting High the ‘Wright’ Way !",
+    description:
+      "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
+    achievements: [
+      {
+        description:
+          "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
+      },
+    ],
+    email: "mathsclub.cfi@gmail.com",
+    contacts: [
+      {
+        name: "Haricharan B",
+        image: MathsHead,
+        email: "ae20b046@smail.iitm.ac.in",
+        phone: "9879253473",
+        linkedIn: "https://www.linkedin.com/in/pranit-zope-05b001215/"
       },
     ],
   },
@@ -521,6 +545,12 @@ export const Clubs: IClubs = {
       "Team IGEM is a group of individuals passionate about the fascinating field of synthetic biology. They participate in the iGEM competition every year. For a competition so entirely steeped in innovation, collaboration, and education, the words ‘International Genetically Engineered Machine’ doesn’t quite portray the reality of things – the only machines at work here are the small, yet incredibly complex bundles of life growing on a Petri plate (and very occasionally, our brains)! <br /> The iGEM competition began in 2003 as a month-long course at the Massachusetts Institute of Technology. It eventually expanded over the years, with around 450 teams taking part in the 2019 edition. IIT-Madras has a long history with iGEM as well, having taken part in more than 10 editions since 2008, and has received many accolades at the international stage including, four gold medals, five silver medals, the Best Foundational Advance project, and Best New BioBrick Part or Device, Engineered in 2008, A Safety Commendation, Asia in 2011, Best New BioBrick Part, Natural, Asia in 2011, Best Human Practices Advance, Asia in 2013 and a nomination for Best Education and Public Engagement in 2019.",
     achievements: [
       {
+        description: "Igem Indian league won the GRAND PRIZE" 
+      },
+      {
+        description: 'Won the “Science Contribution award” and “Industry Advisory award” and “Funny innovation award”'
+      },
+      {
         description:
           "The team received a silver medal at the iGEM Giant Jamboree in 2016, a silver medal at the iGEM Giant Jamboree in 2017,  a Gold medal at the iGEM Giant Jamboree in 2018. The team also received a silver medal and was nominated for “Best Education & Public Engagement” for the Language Project in 2019. In 2021 they reached the Semifinals from ~ 30 teams that applied in the Synbio Power Pitch and won a Gold medal and the award for the Best Computational Project in GOGEC.",
       },
@@ -528,14 +558,14 @@ export const Clubs: IClubs = {
     email: "igem@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Shobhan",
+        name: "Shobhan Karthick",
         image: iGEMHead1,
         email: "be19b009@smail.iitm.ac.in",
         phone: "6385188219",
         linkedIn: "https://www.linkedin.com/in/shobhan-karthick/",
       },
       {
-        name: "Varshini",
+        name: "Varshini S",
         image: iGEMHead2,
         email: "be19b006@smail.iitm.ac.in",
         phone: "9840216729",

@@ -7,7 +7,7 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
-import Highlights1 from "../Images/Home/Highlights1.png";
+import Highlights1 from "../Images/Home/Highlights_1.png";
 import Highlights2 from "../Images/Home/Highlights2.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
@@ -76,7 +76,7 @@ export const HighlightsData = () => {
     {
       url: "/open-house",
       image: Highlights1,
-      title: "CFI Open House, 2022 - 13th edition of flagship event",
+      title: "CFI Open House, 2022 - 14th edition of flagship event",
     },
     {
       url: "/sip",
@@ -120,6 +120,18 @@ export const CompetitionTeamList = [
     desc: "It was started as a simple student project at the CFI. The team consisting of 40 highly enthusiastic students, is working on a project to develop a radically new mode of transport, The Hyperloop. Hyperloop is, described as a sealed tube or system of tubes with low air pressure through which a pod may travel substantially free of air resistance or friction.The team was among the 47 teams in the world qualified for the preliminary design round of the same.  Recently it was awarded the Most Scalable Design Award by Zeleros Hyperloop at the European Hyperloop Week (EHW)’21. They were also nominated among the top 5 teams around the globe in mechanical, levitation, propulsion and complete pod award categories at the EHW ’21.",
     link: "/competition-teams/team-avishkar-hyperloop",
   },
+  {
+    name: "Team Abhyuday",
+    link: "/competition-teams/team-abhyuday",
+    logo: AvishkarLogo,
+    desc: "Hello",
+  },
+  {
+    name: "Team Agnirath",
+    link: "/competition-teams/team-agnirath",
+    logo: AnveshakLogo,
+    desc: "Hello",
+  }
 ];
 
 export const ClubList = [
@@ -188,6 +200,11 @@ export const ClubList = [
     logo: WebOpsAndBlockchainLogo,
     link: "/clubs/webops-and-blockchain-club",
   },
+  {
+    name: "Maths Club",
+    logo: WebOpsAndBlockchainLogo,
+    link: "/clubs/maths-club"
+  }
 ];
 
 export const AboutCFIOneLinear =
@@ -200,7 +217,7 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
                          at the New Academic Complex in the heart of campus. After almost a
                          decade of the team's zeal and passion, combined with a comprehensive
                          inventory, ample workspace, guidance from faculty and students, CFI is
-                         a house to 13 clubs, 4 competition teams and counting. These clubs'
+                         a house to 14 clubs, 6 competition teams and counting. These clubs'
                          interests are spread over a wide spectrum primarily fostering
                          innovation and invention in technology, with a focus on technologies
                          aimed at contributing positively to the environment and to the
@@ -253,7 +270,7 @@ export const CFIStats = [
   },
 ];
 
-export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 13 clubs`;
+export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 14 clubs`;
 
 export const CompetitionTeams =
   "CFI’s Competition teams are groups of highly motivated individuals who work round the clock to meet challenging deadlines of various competitions. Over the years, our teams have bagged prizes both at the national and international level.";

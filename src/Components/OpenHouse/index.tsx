@@ -12,7 +12,7 @@ import ScheduleIcon from "@mui/icons-material/Schedule";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import Gallery from "../Shared/Gallery";
-import Logo from "../../Assets/Images/OpenHouse/OpenHouse2022White.png";
+import Logo from "../../Assets/Images/OpenHouse/OpenHouse2023_white.png";
 import Gather from "../../Assets/Images/OpenHouse/GatherLogo.svg";
 import OSLogo from "../../Assets/Images/OpenHouse/OSLogo.jpg";
 import { OpenHouseData, OpenHouseGallery } from "../../Assets/Data/OpenHouse";
@@ -79,8 +79,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Offline - Terrace Hall (Near NAC) <br />
-                  Online - Gather Town
+                  Sudha & Shankar Innovation Hub (Near NAC) <br />
                 </Typography>
               </Grid>
             </Grid>
@@ -109,7 +108,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  13th March, 2022 - 1:00PM
+                  12th March, 2023 - 10:00AM
                 </Typography>
               </Grid>
             </Grid>
