@@ -7,6 +7,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import LikeButton from "../LikeButton";
+import WhatsappBtn from "../../Shared/WhatsappBtn";
 
 interface Probs {
   project: {
@@ -16,6 +17,7 @@ interface Probs {
       id: string;
       name: string;
     }[];
+    contact: string;
     likeCount: number;
     isLiked: boolean;
     createdBy?: {
@@ -87,6 +89,7 @@ const ProjectCard = (probs: Probs) => {
             likeCount={probs.project.likeCount}
             isLiked={probs.project.isLiked}
           />
+          <WhatsappBtn phone={probs.project.contact} matches={matches}></WhatsappBtn>
         </Grid>
         {probs.project.clubs && (
           <Grid container gap={2} pt={1}>

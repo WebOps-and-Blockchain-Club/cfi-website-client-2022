@@ -14,7 +14,7 @@ import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
 
-interface Probs {}
+interface Probs { }
 
 const NewProject = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -65,6 +65,7 @@ const NewProject = (probs: Probs) => {
               q4: value.q4,
               status,
               clubIds,
+              contact: value.contact!
             },
           },
         });

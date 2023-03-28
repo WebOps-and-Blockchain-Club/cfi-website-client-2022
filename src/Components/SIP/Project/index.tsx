@@ -27,8 +27,9 @@ import moment from "moment";
 import LikeButton from "../LikeButton";
 import "../../../Styles/editor.css";
 import Login from "../../Auth/Login";
+import WhatsappBtn from "../../Shared/WhatsappBtn";
 
-interface Probs {}
+interface Probs { }
 
 const Project = (probs: Probs) => {
   const { id } = useParams<{ id: string }>();
@@ -287,7 +288,10 @@ const Project = (probs: Probs) => {
                       likeCount={data.getProject.likeCount}
                       isLiked={data.getProject.isLiked}
                     />
+                    <WhatsappBtn phone={data.getProject.contact} matches={matchesSM}></WhatsappBtn>
                   </Grid>
+
+
                 </CardContent>
               </Card>
             </Grid>

@@ -91,6 +91,20 @@ const ProjectForm = (probs: Probs) => {
             }
           />
         </Grid>
+        <Grid item container gap={4}>
+          <CustomTextField
+            id="contact"
+            label="Phone No."
+            variant="outlined"
+            size="small"
+            required
+            fullWidth
+            value={projectInput?.contact}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange("title" as never, e.target.value)
+            }
+          />
+        </Grid>
         {data && (
           <Grid item container gap={4}>
             <CustomAutocomplete

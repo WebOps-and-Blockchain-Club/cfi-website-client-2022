@@ -9,7 +9,7 @@ import ProjectCard from "./ProjectCard";
 import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 
-interface Probs {}
+interface Probs { }
 
 const ProjectsList = (probs: Probs) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,6 +58,8 @@ const ProjectsList = (probs: Probs) => {
               setSearchParams({ search: e.target.value })
             }
           />
+
+
         </Grid>
         {data && (
           <Grid
