@@ -1,24 +1,16 @@
-import { Grid, Checkbox, useTheme, useMediaQuery, Button, Card, CardContent, Typography } from "@mui/material";
+import { Grid, useTheme, useMediaQuery, Button, Card, CardContent, Typography } from "@mui/material";
 import React, { useContext } from "react";
-import { useSearchParams } from "react-router-dom";
-import { useGetBlogsQuery } from "../../generated/graphql";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
-import Loading from "../Shared/Dialog/Loading";
 import Heading, { HeadingSub } from "../Shared/Heading";
-import { CustomAutocomplete, CustomTextField } from "../Shared/InputField";
+import { CustomTextField } from "../Shared/InputField";
 import { useCreateClubMutation, useGetClubsQuery } from "../../generated/graphql";
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
-import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import AuthContext from "../../Utils/context";
 import { UserRole } from "../../generated/graphql";
-import { useNavigate } from "react-router-dom";
 import SuccessDialog from "../Shared/Dialog/SuccessDialog";
-import BlogCard from "../Blog/BlogCard/index";
 
 const Blog = () => {
   const theme = useTheme();
-  const navigate= useNavigate();
   const { state }= useContext(AuthContext)!;
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
@@ -27,8 +19,8 @@ const Blog = () => {
   const [email, setEmail]= React.useState<string>('');
 
   const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
-  const [createClubMutation, {data, error, loading}]= useCreateClubMutation();
-  const {data: clubs, error: clubs_error, loading: clubs_loading}= useGetClubsQuery();
+  const [createClubMutation, {data, error}]= useCreateClubMutation();
+  const {data: clubs}= useGetClubsQuery();
 
   const handleClick =async () => {
     if (state?.user?.role === UserRole.Admin) {
