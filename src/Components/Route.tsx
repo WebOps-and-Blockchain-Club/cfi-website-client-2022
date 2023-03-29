@@ -23,6 +23,7 @@ import Blog from "./Blog";
 import MyBlog from "./Blog/MyBlog";
 import ViewBlog from "./Blog/ViewBlog";
 import { AdminLoginPage } from "./Admin/AdminAuth";
+import Addclub from "./Add/Addclub"
 
 interface Probs {}
 
@@ -120,6 +121,16 @@ const AppRoutes = (probs: Probs) => {
             element={
               RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
                 <NewBlog />
+              ) : (
+                <Navigate to="/admin/sign-in" />
+              )
+            }
+          />
+          <Route
+            path="/admin/addclub"
+            element={
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
+                <Addclub />
               ) : (
                 <Navigate to="/admin/sign-in" />
               )

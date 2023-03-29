@@ -98,6 +98,10 @@ export type CreateTagInput = {
   name: Scalars['String'];
 };
 
+export type CreateTagsInput = {
+  names: Array<Scalars['String']>;
+};
+
 export type EditTagInput = {
   name?: InputMaybe<Scalars['String']>;
 };
@@ -150,6 +154,7 @@ export type Mutation = {
   createComment: Comment;
   createProject: Project;
   createTag: Scalars['Boolean'];
+  createTags: Scalars['Boolean'];
   deleteAllProjects: Scalars['Boolean'];
   deleteComment: Scalars['Boolean'];
   editTag: Scalars['Boolean'];
@@ -185,6 +190,11 @@ export type MutationCreateProjectArgs = {
 
 export type MutationCreateTagArgs = {
   CreateTagInput: CreateTagInput;
+};
+
+
+export type MutationCreateTagsArgs = {
+  CreateTagsInput: CreateTagsInput;
 };
 
 
@@ -411,6 +421,13 @@ export type UploadImageMutationVariables = Exact<{
 
 export type UploadImageMutation = { uploadImage: Array<{ url: string }> };
 
+export type CreateClubMutationVariables = Exact<{
+  createClubInput: CreateClubInput;
+}>;
+
+
+export type CreateClubMutation = { createClub: boolean };
+
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -462,7 +479,7 @@ export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: s
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetClubsQuery = { getClubs: Array<{ id: string, name: string }> };
+export type GetClubsQuery = { getClubs: Array<{ id: string, name: string, email: string }> };
 
 
 export const LoginDocument = gql`
@@ -822,6 +839,37 @@ export function useUploadImageMutation(baseOptions?: ApolloReactHooks.MutationHo
 export type UploadImageMutationHookResult = ReturnType<typeof useUploadImageMutation>;
 export type UploadImageMutationResult = ApolloReactCommon.MutationResult<UploadImageMutation>;
 export type UploadImageMutationOptions = ApolloReactCommon.BaseMutationOptions<UploadImageMutation, UploadImageMutationVariables>;
+export const CreateClubDocument = gql`
+    mutation CreateClub($createClubInput: CreateClubInput!) {
+  createClub(CreateClubInput: $createClubInput)
+}
+    `;
+export type CreateClubMutationFn = ApolloReactCommon.MutationFunction<CreateClubMutation, CreateClubMutationVariables>;
+
+/**
+ * __useCreateClubMutation__
+ *
+ * To run a mutation, you first call `useCreateClubMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useCreateClubMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [createClubMutation, { data, loading, error }] = useCreateClubMutation({
+ *   variables: {
+ *      createClubInput: // value for 'createClubInput'
+ *   },
+ * });
+ */
+export function useCreateClubMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateClubMutation, CreateClubMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<CreateClubMutation, CreateClubMutationVariables>(CreateClubDocument, options);
+      }
+export type CreateClubMutationHookResult = ReturnType<typeof useCreateClubMutation>;
+export type CreateClubMutationResult = ApolloReactCommon.MutationResult<CreateClubMutation>;
+export type CreateClubMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateClubMutation, CreateClubMutationVariables>;
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -1260,6 +1308,7 @@ export const GetClubsDocument = gql`
   getClubs {
     id
     name
+    email
   }
 }
     `;
