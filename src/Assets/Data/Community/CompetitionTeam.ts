@@ -406,63 +406,63 @@ export const Teams: ITeams = {
       },
     ],
   },
-  "team-agnirath": {
-    name: "Team Agnirath",
-    logo: "",
-    landing: "",
-    description: "",
-    email: "",
-    achievements: [
-      {
-        description:
-          "The Team is preparing to go to Australia in October to showcase their work",
-      },
-    ],
-    contacts: [
-      {
-        name: "Bindusara",
-        image: "",
-        email: "na20b013@smail.iitm.ac.in",
-        linkedIn: "linkedin.com/in/bindusara-reddy-890b131b9/",
-        phone: "8296354579",
-      },
-      {
-        name: "Rishabh",
-        image: "",
-        email: "goldenrishabh@smail.iitm.ac.in",
-        linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202/",
-        phone: "7710936213",
-      },
-      {
-        name: "Aditya",
-        image: "",
-        email: "na20b004@smail.iitm.ac.in",
-        linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211/",
-        phone: "9884913874",
-      },
-    ],
-  },
-  "team-abhyuday": {
-    name: "Team Abhyuday",
-    landing: "",
-    logo: "",
-    description: "",
-    email: "",
-    contacts: [
-      {
-        name: "Ashish Kumar Shroti",
-        phone: "9983321407",
-        image: AbhyudayHead1,
-        email: "me19b083@smail.iitm.ac.in",
-        linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti/",
-      },
-      {
-        name: "Edupuganti Aaditya",
-        phone: "9390257854",
-        image: AbhyudayHead2,
-        email: "ae19b104@smail.iitm.ac.in",
-        linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2/",
-      },
-    ],
-  },
+  // "team-agnirath": {
+  //   name: "Team Agnirath",
+  //   logo: "",
+  //   landing: "",
+  //   description: "",
+  //   email: "",
+  //   achievements: [
+  //     {
+  //       description:
+  //         "The Team is preparing to go to Australia in October to showcase their work",
+  //     },
+  //   ],
+  //   contacts: [
+  //     {
+  //       name: "Bindusara",
+  //       image: "",
+  //       email: "na20b013@smail.iitm.ac.in",
+  //       linkedIn: "linkedin.com/in/bindusara-reddy-890b131b9/",
+  //       phone: "8296354579",
+  //     },
+  //     {
+  //       name: "Rishabh",
+  //       image: "",
+  //       email: "goldenrishabh@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202/",
+  //       phone: "7710936213",
+  //     },
+  //     {
+  //       name: "Aditya",
+  //       image: "",
+  //       email: "na20b004@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211/",
+  //       phone: "9884913874",
+  //     },
+  //   ],
+  // },
+  // "team-abhyuday": {
+  //   name: "Team Abhyuday",
+  //   landing: "",
+  //   logo: "",
+  //   description: "",
+  //   email: "",
+  //   contacts: [
+  //     {
+  //       name: "Ashish Kumar Shroti",
+  //       phone: "9983321407",
+  //       image: AbhyudayHead1,
+  //       email: "me19b083@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti/",
+  //     },
+  //     {
+  //       name: "Edupuganti Aaditya",
+  //       phone: "9390257854",
+  //       image: AbhyudayHead2,
+  //       email: "ae19b104@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2/",
+  //     },
+  //   ],
+  // },
 };

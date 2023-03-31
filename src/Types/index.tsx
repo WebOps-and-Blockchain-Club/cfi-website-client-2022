@@ -52,7 +52,7 @@ export type IClubs = {
   "team-sahaay": IClub;
   "team-envisage": IClub;
   "webops-and-blockchain-club": IClub;
-  "maths-club": IClub;
+  // "maths-club": IClub;
 
 };
 
@@ -70,7 +70,7 @@ export enum ClubsName {
   SAHAAY = "team-sahaay",
   ENVISAGE = "team-envisage",
   WEBOPS = "webops-and-blockchain-club",
-  MATHS = "maths-club"
+  // MATHS = "maths-club"
 }
 
 export type ITeam = {
@@ -93,8 +93,8 @@ export type ITeams = {
   "team-abhiyaan": ITeam;
   "team-anveshak": ITeam;
   "team-avishkar-hyperloop": ITeam;
-  "team-agnirath": ITeam;
-  "team-abhyuday": ITeam
+  // "team-agnirath": ITeam;
+  // "team-abhyuday": ITeam
 };
 
 export enum TeamsName {
@@ -102,8 +102,8 @@ export enum TeamsName {
   ABHIYAAN = "team-abhiyaan",
   ANVESHAL = "team-anveshak",
   AVISHKAR = "team-avishkar-hyperloop",
-  AGNIRATH = "team-agnirath",
-  ABHYUDAY = "team-abhyuday"
+  // AGNIRATH = "team-agnirath",
+  // ABHYUDAY = "team-abhyuday"
 }
 
 export type IContact = {

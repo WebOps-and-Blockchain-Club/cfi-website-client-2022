@@ -663,25 +663,11 @@ export const Clubs: IClubs = {
     email: "teamsahaayiitm@gmail.com",
     contacts: [
       // {
-      //   name: "Prakhar Maheshwari",
-      //   image: SahaayHead1,
-      //   email: "ph20b010@smail.iitm.ac.in",
-      //   phone: "7906641128",
-      //   linkedIn: "https://www.linkedin.com/in/prakhar-maheshwari-b0b797204",
+      //   name: "Shrid Suresh",
+      //   phone: "7358722528",
+      //   email: "",
+      //   image: "",
       // },
-      // {
-      //   name: "Anish Pophale",
-      //   image: SahaayHead2,
-      //   email: "ch20b012@smail.iitm.ac.in",
-      //   phone: "7038221689",
-      //   linkedIn: "https://in.linkedin.com/in/anish-pophale-192b98220",
-      // },
-      {
-        name: "Shrid Suresh",
-        phone: "7358722528",
-        email: "",
-        image: "",
-      },
     ],
   },
   "team-envisage": {
@@ -809,12 +795,12 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  "maths-club": {
-    name: "Maths club",
-    logo: "",
-    description:
-      "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
-    email: "",
-    contacts: [],
-  },
+  // "maths-club": {
+  //   name: "Maths club",
+  //   logo: "",
+  //   description:
+  //     "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
+  //   email: "",
+  //   contacts: [],
+  // },
 };
