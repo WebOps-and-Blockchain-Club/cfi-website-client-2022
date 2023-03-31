@@ -245,6 +245,7 @@ export type Project = {
   clubs: Array<Club>;
   comments: Array<Comment>;
   createdBy: User;
+  contact: string;
   id: Scalars['String'];
   isLiked: Scalars['Boolean'];
   likeCount: Scalars['Float'];
@@ -1152,6 +1153,7 @@ export const GetProjectsDocument = gql`
       updatedAt
       likeCount
       isLiked
+      contact
       clubs {
         id
         name
@@ -1208,6 +1210,7 @@ export const GetProjectDocument = gql`
     updatedAt
     likeCount
     isLiked
+    contact
     clubs {
       id
       name

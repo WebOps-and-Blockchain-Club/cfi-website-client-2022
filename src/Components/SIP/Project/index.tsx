@@ -282,14 +282,22 @@ const Project = (probs: Probs) => {
                       />
                     </>
                   )}
-                  <Grid item pt={2}>
-                    <LikeButton
-                      projectId={data.getProject.id}
-                      likeCount={data.getProject.likeCount}
-                      isLiked={data.getProject.isLiked}
-                    />
-                    <WhatsappBtn phone={data.getProject.contact} matches={matchesSM}></WhatsappBtn>
+                  <Grid container mt={2} mb={2} gap={2} justifyContent={"left"}>
+                    <Grid item pt={2} >
+                      <LikeButton
+                        projectId={data.getProject.id}
+                        likeCount={data.getProject.likeCount}
+                        isLiked={data.getProject.isLiked}
+                      />
+
+                    </Grid>
+                    <Grid item pt={2}>
+                      <WhatsappBtn phone={data.getProject.contact} matches={matchesSM}></WhatsappBtn>
+                    </Grid  >
+
                   </Grid>
+
+
 
 
                 </CardContent>
