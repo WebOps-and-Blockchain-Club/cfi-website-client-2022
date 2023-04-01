@@ -92,6 +92,7 @@ export type CreateProjectInput = {
   q4?: InputMaybe<Scalars['String']>;
   status: ProjectStatus;
   title: Scalars['String'];
+  contact: Scalars['String'];
 };
 
 export type CreateTagInput = {
@@ -244,6 +245,7 @@ export type Project = {
   clubs: Array<Club>;
   comments: Array<Comment>;
   createdBy: User;
+  contact: string;
   id: Scalars['String'];
   isLiked: Scalars['Boolean'];
   likeCount: Scalars['Float'];
@@ -419,7 +421,7 @@ export type GetMeQuery = { getMe: { id: string, email: string, name: string, rol
 export type GetMeSipQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }> }> | null } };
+export type GetMeSipQuery = { getMe: { id: string, email: string, name: string, role: UserRole, projects?: Array<{ id: string, title: string, contact: string, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }> }> | null } };
 
 export type GetMeBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -450,14 +452,14 @@ export type GetProjectsQueryVariables = Exact<{
 }>;
 
 
-export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
+export type GetProjectsQuery = { getProjects: { count: number, projects?: Array<{ id: string, title: string, updatedAt: any, contact: string, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string } }> | null } };
 
 export type GetProjectQueryVariables = Exact<{
   projectId: Scalars['String'];
 }>;
 
 
-export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, status: ProjectStatus, updatedAt: any, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
+export type GetProjectQuery = { getProject?: { id: string, title: string, q1?: string | null, q2?: string | null, q3?: string | null, q4?: string | null, status: ProjectStatus, updatedAt: any, contact: string, likeCount: number, isLiked: boolean, clubs: Array<{ id: string, name: string }>, createdBy: { name: string }, comments: Array<{ id: string, description: string, createdBy: { name: string } }> } | null };
 
 export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -495,9 +497,9 @@ export type LoginMutationFn = ApolloReactCommon.MutationFunction<LoginMutation, 
  * });
  */
 export function useLoginMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<LoginMutation, LoginMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<LoginMutation, LoginMutationVariables>(LoginDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<LoginMutation, LoginMutationVariables>(LoginDocument, options);
+}
 export type LoginMutationHookResult = ReturnType<typeof useLoginMutation>;
 export type LoginMutationResult = ApolloReactCommon.MutationResult<LoginMutation>;
 export type LoginMutationOptions = ApolloReactCommon.BaseMutationOptions<LoginMutation, LoginMutationVariables>;
@@ -525,9 +527,9 @@ export type LogoutMutationFn = ApolloReactCommon.MutationFunction<LogoutMutation
  * });
  */
 export function useLogoutMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<LogoutMutation, LogoutMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<LogoutMutation, LogoutMutationVariables>(LogoutDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<LogoutMutation, LogoutMutationVariables>(LogoutDocument, options);
+}
 export type LogoutMutationHookResult = ReturnType<typeof useLogoutMutation>;
 export type LogoutMutationResult = ApolloReactCommon.MutationResult<LogoutMutation>;
 export type LogoutMutationOptions = ApolloReactCommon.BaseMutationOptions<LogoutMutation, LogoutMutationVariables>;
@@ -559,9 +561,9 @@ export type CreateBlogMutationFn = ApolloReactCommon.MutationFunction<CreateBlog
  * });
  */
 export function useCreateBlogMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateBlogMutation, CreateBlogMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<CreateBlogMutation, CreateBlogMutationVariables>(CreateBlogDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<CreateBlogMutation, CreateBlogMutationVariables>(CreateBlogDocument, options);
+}
 export type CreateBlogMutationHookResult = ReturnType<typeof useCreateBlogMutation>;
 export type CreateBlogMutationResult = ApolloReactCommon.MutationResult<CreateBlogMutation>;
 export type CreateBlogMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateBlogMutation, CreateBlogMutationVariables>;
@@ -591,9 +593,9 @@ export type UpdateBlogStatusMutationFn = ApolloReactCommon.MutationFunction<Upda
  * });
  */
 export function useUpdateBlogStatusMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateBlogStatusMutation, UpdateBlogStatusMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<UpdateBlogStatusMutation, UpdateBlogStatusMutationVariables>(UpdateBlogStatusDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<UpdateBlogStatusMutation, UpdateBlogStatusMutationVariables>(UpdateBlogStatusDocument, options);
+}
 export type UpdateBlogStatusMutationHookResult = ReturnType<typeof useUpdateBlogStatusMutation>;
 export type UpdateBlogStatusMutationResult = ApolloReactCommon.MutationResult<UpdateBlogStatusMutation>;
 export type UpdateBlogStatusMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateBlogStatusMutation, UpdateBlogStatusMutationVariables>;
@@ -623,9 +625,9 @@ export type SuggestEditMutationFn = ApolloReactCommon.MutationFunction<SuggestEd
  * });
  */
 export function useSuggestEditMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<SuggestEditMutation, SuggestEditMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<SuggestEditMutation, SuggestEditMutationVariables>(SuggestEditDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<SuggestEditMutation, SuggestEditMutationVariables>(SuggestEditDocument, options);
+}
 export type SuggestEditMutationHookResult = ReturnType<typeof useSuggestEditMutation>;
 export type SuggestEditMutationResult = ApolloReactCommon.MutationResult<SuggestEditMutation>;
 export type SuggestEditMutationOptions = ApolloReactCommon.BaseMutationOptions<SuggestEditMutation, SuggestEditMutationVariables>;
@@ -654,9 +656,9 @@ export type UpdateViewsMutationFn = ApolloReactCommon.MutationFunction<UpdateVie
  * });
  */
 export function useUpdateViewsMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UpdateViewsMutation, UpdateViewsMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<UpdateViewsMutation, UpdateViewsMutationVariables>(UpdateViewsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<UpdateViewsMutation, UpdateViewsMutationVariables>(UpdateViewsDocument, options);
+}
 export type UpdateViewsMutationHookResult = ReturnType<typeof useUpdateViewsMutation>;
 export type UpdateViewsMutationResult = ApolloReactCommon.MutationResult<UpdateViewsMutation>;
 export type UpdateViewsMutationOptions = ApolloReactCommon.BaseMutationOptions<UpdateViewsMutation, UpdateViewsMutationVariables>;
@@ -685,9 +687,9 @@ export type CreateTagMutationFn = ApolloReactCommon.MutationFunction<CreateTagMu
  * });
  */
 export function useCreateTagMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateTagMutation, CreateTagMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<CreateTagMutation, CreateTagMutationVariables>(CreateTagDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<CreateTagMutation, CreateTagMutationVariables>(CreateTagDocument, options);
+}
 export type CreateTagMutationHookResult = ReturnType<typeof useCreateTagMutation>;
 export type CreateTagMutationResult = ApolloReactCommon.MutationResult<CreateTagMutation>;
 export type CreateTagMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateTagMutation, CreateTagMutationVariables>;
@@ -719,9 +721,9 @@ export type CreateProjectMutationFn = ApolloReactCommon.MutationFunction<CreateP
  * });
  */
 export function useCreateProjectMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateProjectMutation, CreateProjectMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<CreateProjectMutation, CreateProjectMutationVariables>(CreateProjectDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<CreateProjectMutation, CreateProjectMutationVariables>(CreateProjectDocument, options);
+}
 export type CreateProjectMutationHookResult = ReturnType<typeof useCreateProjectMutation>;
 export type CreateProjectMutationResult = ApolloReactCommon.MutationResult<CreateProjectMutation>;
 export type CreateProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateProjectMutation, CreateProjectMutationVariables>;
@@ -750,9 +752,9 @@ export type ToggleLikeProjectMutationFn = ApolloReactCommon.MutationFunction<Tog
  * });
  */
 export function useToggleLikeProjectMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>(ToggleLikeProjectDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>(ToggleLikeProjectDocument, options);
+}
 export type ToggleLikeProjectMutationHookResult = ReturnType<typeof useToggleLikeProjectMutation>;
 export type ToggleLikeProjectMutationResult = ApolloReactCommon.MutationResult<ToggleLikeProjectMutation>;
 export type ToggleLikeProjectMutationOptions = ApolloReactCommon.BaseMutationOptions<ToggleLikeProjectMutation, ToggleLikeProjectMutationVariables>;
@@ -783,9 +785,9 @@ export type CreateCommentMutationFn = ApolloReactCommon.MutationFunction<CreateC
  * });
  */
 export function useCreateCommentMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<CreateCommentMutation, CreateCommentMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<CreateCommentMutation, CreateCommentMutationVariables>(CreateCommentDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<CreateCommentMutation, CreateCommentMutationVariables>(CreateCommentDocument, options);
+}
 export type CreateCommentMutationHookResult = ReturnType<typeof useCreateCommentMutation>;
 export type CreateCommentMutationResult = ApolloReactCommon.MutationResult<CreateCommentMutation>;
 export type CreateCommentMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateCommentMutation, CreateCommentMutationVariables>;
@@ -816,9 +818,9 @@ export type UploadImageMutationFn = ApolloReactCommon.MutationFunction<UploadIma
  * });
  */
 export function useUploadImageMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<UploadImageMutation, UploadImageMutationVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useMutation<UploadImageMutation, UploadImageMutationVariables>(UploadImageDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useMutation<UploadImageMutation, UploadImageMutationVariables>(UploadImageDocument, options);
+}
 export type UploadImageMutationHookResult = ReturnType<typeof useUploadImageMutation>;
 export type UploadImageMutationResult = ApolloReactCommon.MutationResult<UploadImageMutation>;
 export type UploadImageMutationOptions = ApolloReactCommon.BaseMutationOptions<UploadImageMutation, UploadImageMutationVariables>;
@@ -849,19 +851,19 @@ export const GetMeDocument = gql`
  * });
  */
 export function useGetMeQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeQuery, GetMeQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetMeQuery, GetMeQueryVariables>(GetMeDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetMeQuery, GetMeQueryVariables>(GetMeDocument, options);
+}
 export function useGetMeLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeQuery, GetMeQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetMeQuery, GetMeQueryVariables>(GetMeDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetMeQuery, GetMeQueryVariables>(GetMeDocument, options);
+}
 export type GetMeQueryHookResult = ReturnType<typeof useGetMeQuery>;
 export type GetMeLazyQueryHookResult = ReturnType<typeof useGetMeLazyQuery>;
 export type GetMeQueryResult = ApolloReactCommon.QueryResult<GetMeQuery, GetMeQueryVariables>;
 export function refetchGetMeQuery(variables?: GetMeQueryVariables) {
-      return { query: GetMeDocument, variables: variables }
-    }
+  return { query: GetMeDocument, variables: variables }
+}
 export const GetMeSipDocument = gql`
     query GetMeSIP {
   getMe {
@@ -901,19 +903,19 @@ export const GetMeSipDocument = gql`
  * });
  */
 export function useGetMeSipQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeSipQuery, GetMeSipQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
+}
 export function useGetMeSipLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeSipQuery, GetMeSipQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetMeSipQuery, GetMeSipQueryVariables>(GetMeSipDocument, options);
+}
 export type GetMeSipQueryHookResult = ReturnType<typeof useGetMeSipQuery>;
 export type GetMeSipLazyQueryHookResult = ReturnType<typeof useGetMeSipLazyQuery>;
 export type GetMeSipQueryResult = ApolloReactCommon.QueryResult<GetMeSipQuery, GetMeSipQueryVariables>;
 export function refetchGetMeSipQuery(variables?: GetMeSipQueryVariables) {
-      return { query: GetMeSipDocument, variables: variables }
-    }
+  return { query: GetMeSipDocument, variables: variables }
+}
 export const GetMeBlogsDocument = gql`
     query GetMeBlogs {
   getMe {
@@ -964,19 +966,19 @@ export const GetMeBlogsDocument = gql`
  * });
  */
 export function useGetMeBlogsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeBlogsQuery, GetMeBlogsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
+}
 export function useGetMeBlogsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeBlogsQuery, GetMeBlogsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetMeBlogsQuery, GetMeBlogsQueryVariables>(GetMeBlogsDocument, options);
+}
 export type GetMeBlogsQueryHookResult = ReturnType<typeof useGetMeBlogsQuery>;
 export type GetMeBlogsLazyQueryHookResult = ReturnType<typeof useGetMeBlogsLazyQuery>;
 export type GetMeBlogsQueryResult = ApolloReactCommon.QueryResult<GetMeBlogsQuery, GetMeBlogsQueryVariables>;
 export function refetchGetMeBlogsQuery(variables?: GetMeBlogsQueryVariables) {
-      return { query: GetMeBlogsDocument, variables: variables }
-    }
+  return { query: GetMeBlogsDocument, variables: variables }
+}
 export const GetBlogsDocument = gql`
     query GetBlogs($filters: FilterBlog) {
   getBlogs(Filters: $filters) {
@@ -1028,19 +1030,19 @@ export const GetBlogsDocument = gql`
  * });
  */
 export function useGetBlogsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetBlogsQuery, GetBlogsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
+}
 export function useGetBlogsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetBlogsQuery, GetBlogsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetBlogsQuery, GetBlogsQueryVariables>(GetBlogsDocument, options);
+}
 export type GetBlogsQueryHookResult = ReturnType<typeof useGetBlogsQuery>;
 export type GetBlogsLazyQueryHookResult = ReturnType<typeof useGetBlogsLazyQuery>;
 export type GetBlogsQueryResult = ApolloReactCommon.QueryResult<GetBlogsQuery, GetBlogsQueryVariables>;
 export function refetchGetBlogsQuery(variables?: GetBlogsQueryVariables) {
-      return { query: GetBlogsDocument, variables: variables }
-    }
+  return { query: GetBlogsDocument, variables: variables }
+}
 export const GetBlogDocument = gql`
     query GetBlog($blogId: String!) {
   getBlog(BlogId: $blogId) {
@@ -1091,19 +1093,19 @@ export const GetBlogDocument = gql`
  * });
  */
 export function useGetBlogQuery(baseOptions: ApolloReactHooks.QueryHookOptions<GetBlogQuery, GetBlogQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetBlogQuery, GetBlogQueryVariables>(GetBlogDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetBlogQuery, GetBlogQueryVariables>(GetBlogDocument, options);
+}
 export function useGetBlogLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetBlogQuery, GetBlogQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetBlogQuery, GetBlogQueryVariables>(GetBlogDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetBlogQuery, GetBlogQueryVariables>(GetBlogDocument, options);
+}
 export type GetBlogQueryHookResult = ReturnType<typeof useGetBlogQuery>;
 export type GetBlogLazyQueryHookResult = ReturnType<typeof useGetBlogLazyQuery>;
 export type GetBlogQueryResult = ApolloReactCommon.QueryResult<GetBlogQuery, GetBlogQueryVariables>;
 export function refetchGetBlogQuery(variables: GetBlogQueryVariables) {
-      return { query: GetBlogDocument, variables: variables }
-    }
+  return { query: GetBlogDocument, variables: variables }
+}
 export const GetTagsDocument = gql`
     query GetTags {
   getTags {
@@ -1129,19 +1131,19 @@ export const GetTagsDocument = gql`
  * });
  */
 export function useGetTagsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetTagsQuery, GetTagsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetTagsQuery, GetTagsQueryVariables>(GetTagsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetTagsQuery, GetTagsQueryVariables>(GetTagsDocument, options);
+}
 export function useGetTagsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetTagsQuery, GetTagsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetTagsQuery, GetTagsQueryVariables>(GetTagsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetTagsQuery, GetTagsQueryVariables>(GetTagsDocument, options);
+}
 export type GetTagsQueryHookResult = ReturnType<typeof useGetTagsQuery>;
 export type GetTagsLazyQueryHookResult = ReturnType<typeof useGetTagsLazyQuery>;
 export type GetTagsQueryResult = ApolloReactCommon.QueryResult<GetTagsQuery, GetTagsQueryVariables>;
 export function refetchGetTagsQuery(variables?: GetTagsQueryVariables) {
-      return { query: GetTagsDocument, variables: variables }
-    }
+  return { query: GetTagsDocument, variables: variables }
+}
 export const GetProjectsDocument = gql`
     query GetProjects($filters: FilterProject) {
   getProjects(Filters: $filters) {
@@ -1151,6 +1153,7 @@ export const GetProjectsDocument = gql`
       updatedAt
       likeCount
       isLiked
+      contact
       clubs {
         id
         name
@@ -1181,19 +1184,19 @@ export const GetProjectsDocument = gql`
  * });
  */
 export function useGetProjectsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetProjectsQuery, GetProjectsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
+}
 export function useGetProjectsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetProjectsQuery, GetProjectsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetProjectsQuery, GetProjectsQueryVariables>(GetProjectsDocument, options);
+}
 export type GetProjectsQueryHookResult = ReturnType<typeof useGetProjectsQuery>;
 export type GetProjectsLazyQueryHookResult = ReturnType<typeof useGetProjectsLazyQuery>;
 export type GetProjectsQueryResult = ApolloReactCommon.QueryResult<GetProjectsQuery, GetProjectsQueryVariables>;
 export function refetchGetProjectsQuery(variables?: GetProjectsQueryVariables) {
-      return { query: GetProjectsDocument, variables: variables }
-    }
+  return { query: GetProjectsDocument, variables: variables }
+}
 export const GetProjectDocument = gql`
     query GetProject($projectId: String!) {
   getProject(ProjectId: $projectId) {
@@ -1207,6 +1210,7 @@ export const GetProjectDocument = gql`
     updatedAt
     likeCount
     isLiked
+    contact
     clubs {
       id
       name
@@ -1242,19 +1246,19 @@ export const GetProjectDocument = gql`
  * });
  */
 export function useGetProjectQuery(baseOptions: ApolloReactHooks.QueryHookOptions<GetProjectQuery, GetProjectQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
+}
 export function useGetProjectLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetProjectQuery, GetProjectQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetProjectQuery, GetProjectQueryVariables>(GetProjectDocument, options);
+}
 export type GetProjectQueryHookResult = ReturnType<typeof useGetProjectQuery>;
 export type GetProjectLazyQueryHookResult = ReturnType<typeof useGetProjectLazyQuery>;
 export type GetProjectQueryResult = ApolloReactCommon.QueryResult<GetProjectQuery, GetProjectQueryVariables>;
 export function refetchGetProjectQuery(variables: GetProjectQueryVariables) {
-      return { query: GetProjectDocument, variables: variables }
-    }
+  return { query: GetProjectDocument, variables: variables }
+}
 export const GetClubsDocument = gql`
     query GetClubs {
   getClubs {
@@ -1280,16 +1284,16 @@ export const GetClubsDocument = gql`
  * });
  */
 export function useGetClubsQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetClubsQuery, GetClubsQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return ApolloReactHooks.useQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
-      }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
+}
 export function useGetClubsLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetClubsQuery, GetClubsQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return ApolloReactHooks.useLazyQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
-        }
+  const options = { ...defaultOptions, ...baseOptions }
+  return ApolloReactHooks.useLazyQuery<GetClubsQuery, GetClubsQueryVariables>(GetClubsDocument, options);
+}
 export type GetClubsQueryHookResult = ReturnType<typeof useGetClubsQuery>;
 export type GetClubsLazyQueryHookResult = ReturnType<typeof useGetClubsLazyQuery>;
 export type GetClubsQueryResult = ApolloReactCommon.QueryResult<GetClubsQuery, GetClubsQueryVariables>;
 export function refetchGetClubsQuery(variables?: GetClubsQueryVariables) {
-      return { query: GetClubsDocument, variables: variables }
-    }
+  return { query: GetClubsDocument, variables: variables }
+}

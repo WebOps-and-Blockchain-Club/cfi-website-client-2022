@@ -10,7 +10,7 @@ import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
 
-interface Props {}
+interface Props { }
 
 const Footer = (props: Props) => {
   const theme = useTheme();

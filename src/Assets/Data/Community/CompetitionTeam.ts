@@ -8,8 +8,8 @@ import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.pn
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
 // TEAM HEADS IMAGE
-import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.png";
-import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Bharath.png";
+import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Karthik.webp";
+import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Parth.webp";
 import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Shashank.png";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Amit.png";
 import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Bharat.png";
@@ -17,6 +17,8 @@ import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Yash.
 import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Vibhor.png";
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Arun.png";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Karthik.png";
+import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Ashish.webp";
+import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Aaditya.webp";
 
 // RAFTAR
 import RaftarLanding from "../../Images/Community/CompetitionTeam/Raftar/Landing.jpg";
@@ -137,16 +139,14 @@ export const Teams: ITeams = {
       {
         name: "Karthik Karumanchi",
         image: RaftarHead1,
-        email: "kodikarthik21@gmail.com",
+        email: "",
         phone: "8754910510",
-        linkedIn: "https://www.linkedin.com/in/karthik-srinivasan-424558167/",
       },
       {
         name: "Parth Lathi",
         image: RaftarHead2,
-        email: "bharathcn2k@gmail.com",
+        email: "",
         phone: "9619690259",
-        linkedIn: "https://www.linkedin.com/in/bharath-chandar-20bbb5153/",
       },
     ],
   },
@@ -162,13 +162,16 @@ export const Teams: ITeams = {
           "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
       },
       {
-        description: "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger."
+        description:
+          "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger.",
       },
       {
-        description: "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA."
+        description:
+          "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA.",
       },
       {
-        description: "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus."
+        description:
+          "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus.",
       },
     ],
     projects: [
@@ -223,170 +226,173 @@ export const Teams: ITeams = {
         phone: "7550143818",
         linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
       },
-      {
-        name: "Sudharsan",
-        image: AbhiyaanHead2,
-        email: "s.sudharsan.raja@gmail.com",
-        phone: "7550117832",
-        linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
-      },
+      // {
+      //   name: "Sudharsan",
+      //   image: AbhiyaanHead2,
+      //   email: "s.sudharsan.raja@gmail.com",
+      //   phone: "7550117832",
+      //   linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
+      // },
     ],
   },
-  "team-abhyuday": {
-    name: "Team ##Abhyuday",
-    logo: AnveshakLogo,
-    landing: AnveshakLanding,
-    description:
-      "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
-    achievements: [
-      {
-        description:
-          "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
-      },
-      {
-        description: "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger."
-      },
-      {
-        description: "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA."
-      },
-      {
-        description: "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus."
-      },
-    ],
-    projects: [
-      {
-        title: "Project ##MACRo",
-        description:
-          "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
-      },
-      {
-        title: "ROS ##Software driver",
-        description:
-          'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
-      },
-    ],
-    website: "https://www.abhyudayiitm.com/",
-    gallery: [
-      {
-        image: AbhiyaanGallery1,
-      },
-      {
-        image: AbhiyaanGallery2,
-      },
-      {
-        image: AbhiyaanGallery3,
-      },
-      {
-        image: AbhiyaanGallery4,
-      },
-      {
-        image: AbhiyaanGallery5,
-      },
-      {
-        image: AbhiyaanGallery6,
-      },
-      {
-        image: AbhiyaanGallery7,
-      },
-    ],
-    email: "abhiyaan@smail.iitm.ac.in",
-    contacts: [
-      {
-        name: "Suraj Rathi",
-        image: AbhiyaanHead1,
-        email: "suraj.rathi00@gmail.com",
-        phone: "8830534626",
-        linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
-      },
-      {
-        name: "Arun Krishna",
-        image: AbhiyaanHead2,
-        email: "arunkrish2603@gmail.com",
-        phone: "7550143818",
-        linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
-      },
-      {
-        name: "Sudharsan",
-        image: AbhiyaanHead2,
-        email: "s.sudharsan.raja@gmail.com",
-        phone: "7550117832",
-        linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
-      },
-    ],
-  },
-  "team-agnirath": {
-    name: "Team ##Agnirath",
-    logo: AbhiyaanLogo,
-    landing: AbhiyaanLanding,
-    description:
-      "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
-    achievements: [
-      {
-        description:
-          "The Team is preparing to go to Australia in October to showcase their work",
-      },
-    ],
-    projects: [
-      {
-        title: "Project ##MACRo",
-        description:
-          "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
-      },
-      {
-        title: "ROS ##Software driver",
-        description:
-          'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
-      },
-    ],
-    website: "https://agnirathiitm.com/",
-    gallery: [
-      {
-        image: AbhiyaanGallery1,
-      },
-      {
-        image: AbhiyaanGallery2,
-      },
-      {
-        image: AbhiyaanGallery3,
-      },
-      {
-        image: AbhiyaanGallery4,
-      },
-      {
-        image: AbhiyaanGallery5,
-      },
-      {
-        image: AbhiyaanGallery6,
-      },
-      {
-        image: AbhiyaanGallery7,
-      },
-    ],
-    email: "agnirath@smail.iitm.ac.in",
-    contacts: [
-      {
-        name: "Bindusara",
-        image: AbhiyaanHead1,
-        email: "suraj.rathi00@gmail.com",
-        phone: "8296354579",
-        linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
-      },
-      {
-        name: "Rishabh",
-        image: AbhiyaanHead2,
-        email: "arunkrish2603@gmail.com",
-        phone: "7710936213",
-        linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
-      },
-      {
-        name: "Aditya",
-        image: AbhiyaanHead2,
-        email: "s.sudharsan.raja@gmail.com",
-        phone: "9884913874",
-        linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
-      },
-    ],
-  },
+  // "team-abhyuday": {
+  //   name: "Team ##Abhyuday",
+  //   logo: AnveshakLogo,
+  //   landing: AnveshakLanding,
+  //   description:
+  //     "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
+  //   achievements: [
+  //     {
+  //       description:
+  //         "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
+  //     },
+  //     {
+  //       description:
+  //         "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger.",
+  //     },
+  //     {
+  //       description:
+  //         "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA.",
+  //     },
+  //     {
+  //       description:
+  //         "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus.",
+  //     },
+  //   ],
+  //   projects: [
+  //     {
+  //       title: "Project ##MACRo",
+  //       description:
+  //         "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
+  //     },
+  //     {
+  //       title: "ROS ##Software driver",
+  //       description:
+  //         'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
+  //     },
+  //   ],
+  //   website: "https://www.abhyudayiitm.com/",
+  //   gallery: [
+  //     {
+  //       image: AbhiyaanGallery1,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery2,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery3,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery4,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery5,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery6,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery7,
+  //     },
+  //   ],
+  //   email: "abhiyaan@smail.iitm.ac.in",
+  //   contacts: [
+  //     {
+  //       name: "Suraj Rathi",
+  //       image: AbhiyaanHead1,
+  //       email: "suraj.rathi00@gmail.com",
+  //       phone: "8830534626",
+  //       linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
+  //     },
+  //     {
+  //       name: "Arun Krishna",
+  //       image: AbhiyaanHead2,
+  //       email: "arunkrish2603@gmail.com",
+  //       phone: "7550143818",
+  //       linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
+  //     },
+  //     {
+  //       name: "Sudharsan",
+  //       image: AbhiyaanHead2,
+  //       email: "s.sudharsan.raja@gmail.com",
+  //       phone: "7550117832",
+  //       linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
+  //     },
+  //   ],
+  // },
+  // "team-agnirath": {
+  //   name: "Team ##Agnirath",
+  //   logo: AbhiyaanLogo,
+  //   landing: AbhiyaanLanding,
+  //   description:
+  //     "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
+  //   achievements: [
+  //     {
+  //       description:
+  //         "The Team is preparing to go to Australia in October to showcase their work",
+  //     },
+  //   ],
+  //   projects: [
+  //     {
+  //       title: "Project ##MACRo",
+  //       description:
+  //         "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
+  //     },
+  //     {
+  //       title: "ROS ##Software driver",
+  //       description:
+  //         'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
+  //     },
+  //   ],
+  //   website: "https://agnirathiitm.com/",
+  //   gallery: [
+  //     {
+  //       image: AbhiyaanGallery1,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery2,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery3,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery4,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery5,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery6,
+  //     },
+  //     {
+  //       image: AbhiyaanGallery7,
+  //     },
+  //   ],
+  //   email: "agnirath@smail.iitm.ac.in",
+  //   contacts: [
+  //     {
+  //       name: "Bindusara",
+  //       image: AbhiyaanHead1,
+  //       email: "suraj.rathi00@gmail.com",
+  //       phone: "8296354579",
+  //       linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
+  //     },
+  //     {
+  //       name: "Rishabh",
+  //       image: AbhiyaanHead2,
+  //       email: "arunkrish2603@gmail.com",
+  //       phone: "7710936213",
+  //       linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
+  //     },
+  //     {
+  //       name: "Aditya",
+  //       image: AbhiyaanHead2,
+  //       email: "s.sudharsan.raja@gmail.com",
+  //       phone: "9884913874",
+  //       linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
+  //     },
+  //   ],
+  // },
   "team-anveshak": {
     name: "Team ##Anveshak",
     logo: AnveshakLogo,
@@ -577,4 +583,63 @@ export const Teams: ITeams = {
       },
     ],
   },
+  // "team-agnirath": {
+  //   name: "Team Agnirath",
+  //   logo: "",
+  //   landing: "",
+  //   description: "",
+  //   email: "",
+  //   achievements: [
+  //     {
+  //       description:
+  //         "The Team is preparing to go to Australia in October to showcase their work",
+  //     },
+  //   ],
+  //   contacts: [
+  //     {
+  //       name: "Bindusara",
+  //       image: "",
+  //       email: "na20b013@smail.iitm.ac.in",
+  //       linkedIn: "linkedin.com/in/bindusara-reddy-890b131b9/",
+  //       phone: "8296354579",
+  //     },
+  //     {
+  //       name: "Rishabh",
+  //       image: "",
+  //       email: "goldenrishabh@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202/",
+  //       phone: "7710936213",
+  //     },
+  //     {
+  //       name: "Aditya",
+  //       image: "",
+  //       email: "na20b004@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211/",
+  //       phone: "9884913874",
+  //     },
+  //   ],
+  // },
+  // "team-abhyuday": {
+  //   name: "Team Abhyuday",
+  //   landing: "",
+  //   logo: "",
+  //   description: "",
+  //   email: "",
+  //   contacts: [
+  //     {
+  //       name: "Ashish Kumar Shroti",
+  //       phone: "9983321407",
+  //       image: AbhyudayHead1,
+  //       email: "me19b083@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti/",
+  //     },
+  //     {
+  //       name: "Edupuganti Aaditya",
+  //       phone: "9390257854",
+  //       image: AbhyudayHead2,
+  //       email: "ae19b104@smail.iitm.ac.in",
+  //       linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2/",
+  //     },
+  //   ],
+  // },
 };

@@ -7,6 +7,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import moment from "moment";
 import LikeButton from "../LikeButton";
+import WhatsappBtn from "../../Shared/WhatsappBtn";
 
 interface Probs {
   project: {
@@ -16,6 +17,7 @@ interface Probs {
       id: string;
       name: string;
     }[];
+    contact: string;
     likeCount: number;
     isLiked: boolean;
     createdBy?: {
@@ -28,6 +30,7 @@ interface Probs {
 }
 
 const ProjectCard = (probs: Probs) => {
+
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
@@ -81,12 +84,19 @@ const ProjectCard = (probs: Probs) => {
           Last updated at{" "}
           {moment(probs.project.updatedAt).format("MMMM Do YYYY, h:mm a")}
         </Typography>
-        <Grid item pt={1}>
-          <LikeButton
-            projectId={probs.project.id}
-            likeCount={probs.project.likeCount}
-            isLiked={probs.project.isLiked}
-          />
+        <Grid container mt={2} mb={2} gap={2} justifyContent={"left"}>
+          <Grid item pt={1}>
+            <LikeButton
+              projectId={probs.project.id}
+              likeCount={probs.project.likeCount}
+              isLiked={probs.project.isLiked}
+            />
+
+          </Grid>
+          <Grid item pt={1}>
+            <WhatsappBtn phone={probs.project.contact} matches={matches}></WhatsappBtn>
+          </Grid>
+
         </Grid>
         {probs.project.clubs && (
           <Grid container gap={2} pt={1}>

@@ -50,6 +50,7 @@ const ProjectForm = (probs: Probs) => {
       );
     }
     if (btnState === "SUBMIT") {
+
       probs.handleCreateProject(
         projectInput,
         ProjectStatus.Public,
@@ -88,6 +89,21 @@ const ProjectForm = (probs: Probs) => {
             value={projectInput?.title}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleChange("title" as never, e.target.value)
+            }
+          />
+        </Grid>
+        <Grid item container gap={4}>
+          <CustomTextField
+            id="contact"
+            label="Phone No."
+            variant="outlined"
+            size="small"
+            required
+            fullWidth
+            autoComplete="off"
+            value={projectInput?.contact}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handleChange("contact" as never, e.target.value)
             }
           />
         </Grid>

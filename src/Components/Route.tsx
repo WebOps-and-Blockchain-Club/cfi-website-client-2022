@@ -24,7 +24,7 @@ import MyBlog from "./Blog/MyBlog";
 import ViewBlog from "./Blog/ViewBlog";
 import { AdminLoginPage } from "./Admin/AdminAuth";
 
-interface Probs {}
+interface Probs { }
 
 const AppRoutes = (probs: Probs) => {
   const { state } = useContext(AuthContext)!;

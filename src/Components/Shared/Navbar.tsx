@@ -44,18 +44,18 @@ export default function Header() {
   const navMobList = location.pathname.includes("admin")
     ? NavbarADMINList()
     : location.pathname.includes("blog")
-    ? NavbarBlogList(state.user?.role!)
-    : location.pathname.includes("sip")
-    ? NavbarSIPList()
-    : NavbarMobileView();
+      ? NavbarBlogList(state.user?.role!)
+      : location.pathname.includes("sip")
+        ? NavbarSIPList()
+        : NavbarMobileView();
 
   const navWebList = location.pathname.includes("admin")
     ? NavbarADMINList()
     : location.pathname.includes("blog")
-    ? NavbarBlogList(state.user?.role!)
-    : location.pathname.includes("sip")
-    ? NavbarSIPList()
-    : NavbarItems;
+      ? NavbarBlogList(state.user?.role!)
+      : location.pathname.includes("sip")
+        ? NavbarSIPList()
+        : NavbarItems;
 
   //Is Top
   const [isTop, setIsTop] = React.useState(true);
@@ -297,7 +297,7 @@ function SubItemWebView({ item }: { item: any }) {
         name={item.name}
         className="dropbtn"
         icon={<ExpandMore />}
-        handleClick={() => {}}
+        handleClick={() => { }}
       />
       <div className="dropdown-content">
         <Box style={{ height: "10px" }} />
@@ -318,7 +318,7 @@ function SubItemWebView({ item }: { item: any }) {
                     name={_subItem.name}
                     className="sub-dropbtn dropdown-list dropdown-list-width "
                     icon={<ChevronRightOutlinedIcon />}
-                    handleClick={() => {}}
+                    handleClick={() => { }}
                   />
                   <div className="sub-dropdown-content">
                     <Box

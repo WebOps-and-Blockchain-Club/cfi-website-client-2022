@@ -27,8 +27,9 @@ import moment from "moment";
 import LikeButton from "../LikeButton";
 import "../../../Styles/editor.css";
 import Login from "../../Auth/Login";
+import WhatsappBtn from "../../Shared/WhatsappBtn";
 
-interface Probs {}
+interface Probs { }
 
 const Project = (probs: Probs) => {
   const { id } = useParams<{ id: string }>();
@@ -281,13 +282,24 @@ const Project = (probs: Probs) => {
                       />
                     </>
                   )}
-                  <Grid item pt={2}>
-                    <LikeButton
-                      projectId={data.getProject.id}
-                      likeCount={data.getProject.likeCount}
-                      isLiked={data.getProject.isLiked}
-                    />
+                  <Grid container mt={2} mb={2} gap={2} justifyContent={"left"}>
+                    <Grid item pt={2} >
+                      <LikeButton
+                        projectId={data.getProject.id}
+                        likeCount={data.getProject.likeCount}
+                        isLiked={data.getProject.isLiked}
+                      />
+
+                    </Grid>
+                    <Grid item pt={2}>
+                      <WhatsappBtn phone={data.getProject.contact} matches={matchesSM}></WhatsappBtn>
+                    </Grid  >
+
                   </Grid>
+
+
+
+
                 </CardContent>
               </Card>
             </Grid>

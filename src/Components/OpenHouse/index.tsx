@@ -79,7 +79,9 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Sudha & Shankar Innovation Hub (Near NAC) <br />
+                  Offline - Sudha and Shankar Innovation Hub, near NAC
+                  <br />
+                  Online - Gather Town
                 </Typography>
               </Grid>
             </Grid>
@@ -108,7 +110,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  12th March, 2023 - 10:00AM
+                  12th March, 2023 - 10:00AM Onwards
                 </Typography>
               </Grid>
             </Grid>

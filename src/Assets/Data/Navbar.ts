@@ -34,6 +34,10 @@ export const NavbarItems = [
     link: "/achievements",
   },
   {
+    name: "SIP'23",
+    link: "/sip",
+  },
+  {
     name: "BLOGS",
     link: "/blog",
     // highlight: true,

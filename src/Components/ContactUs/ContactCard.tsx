@@ -13,10 +13,10 @@ import {
 import { IMember } from "../../Types";
 
 import EmailIcon from "../../Assets/Icons/Social/email.png";
-import WhatsAppIcon from "../../Assets/Icons/Social/whatsapp1.png";
 import LinkedInIcon from "../../Assets/Icons/Social/linkedin.png";
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import WhatsappBtn from "../Shared/WhatsappBtn";
 
 interface Probs {
   members: IMember[];
@@ -145,20 +145,7 @@ const ContactCard = ({ members }: Probs) => {
                 </Button>
               </Grid>
               {_member.phone && (
-                <Grid item>
-                  <a
-                    href={`https://wa.me/+91${_member.phone}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={_member.phone}
-                  >
-                    <img
-                      src={WhatsAppIcon}
-                      style={{ height: matches ? "30px" : "35px" }}
-                      alt="WhatsApp"
-                    />
-                  </a>
-                </Grid>
+                <WhatsappBtn phone={_member.phone} matches={matches}></WhatsappBtn>
               )}
               {_member.linkedIn && (
                 <Grid item>
