@@ -36,10 +36,12 @@ export const NavbarItems = [
   {
     name: "SIP'23",
     link: "/sip",
+    newTab: true,
   },
   {
     name: "BLOGS",
     link: "/blog",
+    newTab: true,
     // highlight: true,
   },
   {

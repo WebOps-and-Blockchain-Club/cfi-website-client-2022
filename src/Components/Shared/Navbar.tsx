@@ -110,7 +110,7 @@ export default function Header() {
               <NavbarButton
                 name={item.name}
                 handleClick={() => {
-                  navigate(item.link);
+                  item.newTab ? window.open(item.link, '_blank') : navigate(item.link)
                   setOpenNavbar(false);
                 }}
               />
@@ -261,7 +261,7 @@ export default function Header() {
                       <Grid>
                         <NavbarButton
                           name={item.name}
-                          handleClick={() => navigate(item.link)}
+                          handleClick={() => item.newTab ? window.open(item.link, '_blank') : navigate(item.link)}
                         />
                       </Grid>
                     )}
