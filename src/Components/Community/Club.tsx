@@ -102,7 +102,7 @@ const Club = () => {
               }}
             >
               {data.achievements.map((_achievement) => (
-                <MediaCard data={_achievement} />
+                <MediaCard data={_achievement} id={"undefined"} />
               ))}
             </Grid>
           </Grid>
@@ -128,7 +128,7 @@ const Club = () => {
               }}
             >
               {data.projects.map((_project) => (
-                <MediaCard data={_project} />
+                <MediaCard data={_project} id={"undefined"} />
               ))}
             </Grid>
           </Grid>

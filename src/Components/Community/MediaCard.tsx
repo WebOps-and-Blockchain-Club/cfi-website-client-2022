@@ -14,14 +14,15 @@ import ImageCard from "./ImageCard";
 
 interface Probs {
   data: IContent;
+  id: string | undefined;
 }
 
-export default function MediaCard({ data }: Probs) {
+export default function MediaCard({ data, id }: Probs) {
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Grid>
+    <Grid id={id ? id : 'undefined'}>
       <Card
         sx={{
           borderRadius: "20px",
@@ -38,7 +39,7 @@ export default function MediaCard({ data }: Probs) {
         {data.image && (
           <CardMedia
             component="img"
-            image={data.image}
+            src={data.image}
             sx={{
               borderRadius: "20px",
               verticalAlign: "middle",

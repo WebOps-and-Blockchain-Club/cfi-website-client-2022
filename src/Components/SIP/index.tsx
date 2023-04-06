@@ -1,10 +1,18 @@
 import {
-  Card,
-  CardContent,
   CardMedia,
   Typography,
   useMediaQuery,
   useTheme,
+  Drawer,
+  Button,
+  useScrollTrigger,
+  Fade,
+  Box,
+  Fab,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
 } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import React, { useContext } from "react";
@@ -14,37 +22,160 @@ import AuthContext from "../../Utils/context";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import SIPUser from "./User";
+import MediaCard from "../Community/MediaCard";
+import Logo from "../../Assets/Images/SIP/Logo.png";
+import CloseIcon from "@mui/icons-material/Close";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 interface Probs {}
+interface Props {
+  window?: () => Window;
+  children: React.ReactElement;
+}
 
-const SIP = (probs: Probs) => {
+
+function ScrollTop(props: Props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const anchor = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    );
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      });
+    }
+    console.log("anchor 1");
+  };
+  return (
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 20, right: 20 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
+
+const SIP = (probs: Probs, props: Props) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const matches2 = useMediaQuery(theme.breakpoints.down("md"));
+  const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   const { state } = useContext(AuthContext)!;
+  const [contents, setContents]= React.useState<boolean>(false);
+
+  function disableScroll() {
+    // Get the current page scroll position
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  
+    // if any scroll is attempted,
+    // set this to the previous value
+    window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+    };
+  }
+          
+  function enableScroll() {
+      window.onscroll = function() {};
+  }
+
+  function toggleDrawer
+    (open: boolean)  {
+      setContents(open);
+    };
+
+  const handleRef= (event: React.MouseEvent<HTMLDivElement>, id: string) => {
+    const anchor2 = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
+      `#${id}`,
+    );
+    if (anchor2) {
+      anchor2.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      })
+    }
+  }
 
   return (
     <CustomBox>
       <CustomGridPage>
+        <ScrollTop {...props}>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
         <Heading white="STUDENT " red="INNOVATION PROGRAM" />
+        <Button onClick={()=> toggleDrawer(true)}>
+          <div id="back-to-top-anchor" style={{color: "white"}}>Click to See Contents</div>
+        </Button>
         <Grid
+          item
           container
-          direction="column"
+          direction={matches ? "column" : "row"}
           justifyContent="center"
-          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
           alignItems="center"
+          py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+          gap={10}
         >
-          <Typography
-            variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
-            color="primary.contrastText"
-            sx={{
-              textAlign: "justify",
-              textAlignLast: "center",
-            }}
-          >
-            {SIPData.content}
-          </Typography>
+          <Grid item>
+            <CardMedia
+              component="img"
+              image={Logo}
+              alt={"data.name"}
+              sx={{
+                verticalAlign: "middle",
+                objectFit: "contain",
+                height: matchesLG ? "100%" : "400px",
+                maxWidth: matches ? "80vw" : "40vw",
+              }}
+            />
+          </Grid>
+          <Grid item container maxWidth={matches ? "80vw" : "40vw"} gap={4}>
+            <Grid
+              container
+              item
+              direction="row"
+              alignItems="center"
+              justifyContent={matches ? "center" : "start"}
+              gap={2}
+            >
+              <Grid item>
+                <Typography
+                  variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
+                  style={{
+                    color: "#d6d6d6",
+                    fontFamily: "Proxima Nova",
+                  }}
+                  textAlign={matches ? "center" : "start"}
+                >
+                  <i>Walk in with an Idea, Walk out with a Product</i> <br /><br />
+                </Typography>
+                <Typography
+                  variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
+                  style={{
+                    color: "#d6d6d6",
+                    fontFamily: "Proxima Nova",
+                  }}
+                  textAlign={matches ? "center" : "start"}
+                >
+                  {SIPData.content} <br />
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
         <Grid
           item
@@ -54,55 +185,14 @@ const SIP = (probs: Probs) => {
           mt={"25px"}
           justifyContent={"center"}
         >
-          {SIPData.quotes.map((n) => (
-            <Card
-              sx={{
-                m: "0 10px",
-                width: matches ? "68vw" : "350px",
-                borderRadius: "20px",
-                backgroundColor: "primary.light",
-                boxShadow:
-                  "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
-              }}
-            >
-              <CardMedia
-                component="img"
-                image={n.image}
-                alt="newsimg"
-                sx={{
-                  borderRadius: "20px 20px 0 0",
-                  verticalAlign: "middle",
-                  objectFit: "cover",
-                  height: matches ? "50vw" : "220px",
-                }}
-              />
-              <CardContent
-                sx={{
-                  px: "10px",
-                  py: "20px",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-evenly",
-                }}
-                style={{
-                  paddingBottom: "20px",
-                }}
-              >
-                <Typography
-                  component="div"
-                  color="primary.contrastText"
-                  sx={{
-                    textAlign: "center",
-                    fontSize: matches ? "16px" : "18px",
-                    fontWeight: "bold",
-                    letterSpacing: "1px",
-                  }}
-                >
-                  {n.content}
-                </Typography>
-              </CardContent>
-            </Card>
-          ))}
+          {SIPData.quotes.map((n) => {
+            const {id}= {...n};
+            let data= {title: n.title, description: n.description, image: n.image};
+            return (
+              <MediaCard data={data} id={id} />
+            )
+          }
+          )}
         </Grid>
         {state?.user?.role === UserRole.User && (
           <Grid
@@ -115,6 +205,88 @@ const SIP = (probs: Probs) => {
             <SIPUser />
           </Grid>
         )}
+        <Drawer
+        anchor={"left"}
+        variant={"persistent"}
+        open={contents}
+        onClose={()=> {
+          disableScroll();
+          toggleDrawer(false);
+          enableScroll();
+        }}
+        PaperProps={{
+          sx: {
+            backgroundColor: "primary.light",
+            color: "primary.contrastText",
+          },
+        }}
+        >
+          <Grid pt={"20px"}>
+            <Grid
+              container
+              pl={"20px"}
+              pr={"20px"}
+              alignItems={"center"}
+              justifyContent={"space-between"}
+              minWidth={"30vw"}
+            >
+              <Typography
+                variant={matches ? "h6" : "h5"}
+                color="red"
+                sx={{
+                  display: "inline",
+                  fontFamily: "Proxima Nova",
+                  textAlign: "center",
+                  marginRight: "10px"
+                }}
+              >
+                Contents
+              </Typography>
+              <Button
+                onClick={() => {
+                  disableScroll();
+                  toggleDrawer(false);
+                  enableScroll();
+                }}
+                sx={{
+                  color: "primary.contrastText",
+                  minWidth: "unset",
+                  padding: "unset",
+                }}
+              >
+                <CloseIcon />
+              </Button>
+            </Grid>
+            <Grid>
+                <List>
+                  {
+                    SIPData.quotes.map((n, index)=> {
+                      return (
+                        <ListItem disablePadding>
+                          <div style={{ width: "100%"}} onClick={e => {
+                            handleRef(e, n.id);
+                          }}>
+                            <ListItemButton>
+                              <ListItemText primary={(index+1) + '.  ' +n.title} />
+                            </ListItemButton>
+                          </div>
+                        </ListItem>
+                      )
+                    })
+                  }
+                  <ListItem disablePadding>
+                    <div style={{ width: "100%"}} onClick={e => {
+                      handleRef(e, 'your-projects');
+                    }}>
+                      <ListItemButton>
+                        <ListItemText primary={'7.  Your Projects (Login to View)'} />
+                      </ListItemButton>
+                    </div>
+                  </ListItem>
+                </List>
+              </Grid>
+          </Grid>
+        </Drawer>
       </CustomGridPage>
     </CustomBox>
   );

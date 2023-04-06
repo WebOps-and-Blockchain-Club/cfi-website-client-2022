@@ -4,6 +4,7 @@ import { UserRole } from "../../generated/graphql";
 import AuthContext from "../../Utils/context";
 import ErrorDialog from "../Shared/Dialog/ErrorDialog";
 import { NavbarButton } from "../Shared/Navbar";
+import "../../Styles/submit.css";
 
 interface Probs {}
 
@@ -25,7 +26,7 @@ const ProposeProjectButton = (probs: Probs) => {
           handleClose={() => setErrorMessage(undefined)}
         />
       )}
-      <NavbarButton name="PROPOSE PROJECT" handleClick={handleClick} />
+      <NavbarButton name="SUBMIT NOW!" className={"submit"} handleClick={handleClick} />
     </>
   );
 };

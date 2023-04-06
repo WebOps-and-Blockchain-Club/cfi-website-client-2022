@@ -129,11 +129,11 @@ export const NavbarSIPList = () => {
       link: "/sip",
     },
     {
-      component: ProposeProjectButton,
-    },
-    {
       name: "PROJECTS",
       link: "/sip/projects",
+    },
+    {
+      component: ProposeProjectButton,
     },
     {
       component: SIPAuth,
