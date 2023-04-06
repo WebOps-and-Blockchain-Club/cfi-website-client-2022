@@ -138,6 +138,10 @@ export const NavbarSIPList = () => {
       link: "/sip/projects",
     },
     {
+      name: "FAQS",
+      link: "/sip/faqs",
+    },
+    {
       component: SIPAuth,
     },
   ];

@@ -8,7 +8,7 @@ import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
 import Highlights1 from "../Images/Home/Highlights_1.png";
-import Highlights2 from "../Images/Home/Highlights2.png";
+import Highlights2 from "../Images/SIP/Logo.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
 import PeopleIcon from "../Icons/Stats/People.svg";
