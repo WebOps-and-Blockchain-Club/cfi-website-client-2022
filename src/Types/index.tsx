@@ -53,7 +53,6 @@ export type IClubs = {
   "team-envisage": IClub;
   "webops-and-blockchain-club": IClub;
   // "maths-club": IClub;
-
 };
 
 export enum ClubsName {

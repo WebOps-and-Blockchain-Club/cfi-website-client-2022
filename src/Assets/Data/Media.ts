@@ -34,6 +34,25 @@ import Media2019a_3 from "../Images/Media/2019/a3.png";
 import Media2019a_2 from "../Images/Media/2019/a2.png";
 import Media2019a_1 from "../Images/Media/2019/a1.png";
 
+//2022
+// import Media2022a_1 from "../Images/Media/2022/a1.jpg";
+// import Media2022a_2 from "../Images/Media/2022/a2.jpg";
+import Media2022a_3 from "../Images/Media/2022/a3.jpg";
+
+import Media2022b_1 from "../Images/Media/2022/b1.jpg";
+import Media2022b_2 from "../Images/Media/2022/b2.jpg";
+import Media2022b_3 from "../Images/Media/2022/b3.jpg";
+import Media2022b_4 from "../Images/Media/2022/b4.jpg";
+import Media2022b_5 from "../Images/Media/2022/b5.jpg";
+import Media2022b_6 from "../Images/Media/2022/b6.jpg";
+import Media2022b_7 from "../Images/Media/2022/b7.jpg";
+import Media2022b_8 from "../Images/Media/2022/b8.jpg";
+
+import Media2022c_1 from "../Images/Media/2022/c1.jpg";
+
+//2023
+import Media2023a_1 from "../Images/Media/2023/a1.jpg";
+
 const data = [
   {
     year: "2022",

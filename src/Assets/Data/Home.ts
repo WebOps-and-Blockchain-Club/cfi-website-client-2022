@@ -7,7 +7,7 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
-import Highlights1 from "../Images/Home/Highlights1.png";
+import Highlights1 from "../Images/Home/Highlights_1.png";
 import Highlights2 from "../Images/Home/Highlights2.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
@@ -217,7 +217,7 @@ export const AboutCFI = `The Centre for Innovation (CFI) was established on the 
                          at the New Academic Complex in the heart of campus. After almost a
                          decade of the team's zeal and passion, combined with a comprehensive
                          inventory, ample workspace, guidance from faculty and students, CFI is
-                         a house to 13 clubs, 4 competition teams and counting. These clubs'
+                         a house to 14 clubs, 6 competition teams and counting. These clubs'
                          interests are spread over a wide spectrum primarily fostering
                          innovation and invention in technology, with a focus on technologies
                          aimed at contributing positively to the environment and to the
@@ -270,7 +270,7 @@ export const CFIStats = [
   },
 ];
 
-export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 13 clubs`;
+export const CFIClubs = `Clubs at CFI are its functioning organs. Divided based on interest, each club represents a student group highly enthusiastic in that specific field. Knowledge transfer, resulting in reducing the learning period is the strength of clubs at CFI. \n \n CFI is now home to 14 clubs`;
 
 export const CompetitionTeams =
   "CFI’s Competition teams are groups of highly motivated individuals who work round the clock to meet challenging deadlines of various competitions. Over the years, our teams have bagged prizes both at the national and international level.";

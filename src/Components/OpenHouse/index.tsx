@@ -12,12 +12,12 @@ import ScheduleIcon from "@mui/icons-material/Schedule";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import Gallery from "../Shared/Gallery";
-import Logo from "../../Assets/Images/OpenHouse/OpenHouse2022White.png";
+import Logo from "../../Assets/Images/OpenHouse/OpenHouse2023_white.png";
 import Gather from "../../Assets/Images/OpenHouse/GatherLogo.svg";
 import OSLogo from "../../Assets/Images/OpenHouse/OSLogo.jpg";
 import { OpenHouseData, OpenHouseGallery } from "../../Assets/Data/OpenHouse";
 
-interface Props { }
+interface Props {}
 
 const OpenHouse = (props: Props) => {
   const theme = useTheme();
@@ -79,7 +79,8 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Offline - Sudha and Shankar Innovation Hub, near NAC<br />
+                  Offline - Sudha and Shankar Innovation Hub, near NAC
+                  <br />
                   Online - Gather Town
                 </Typography>
               </Grid>
