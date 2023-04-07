@@ -22,7 +22,7 @@ import AuthContext from "../../Utils/context";
 import CustomBox, { CustomGridPage } from "../Shared/CustomBox";
 import Heading from "../Shared/Heading";
 import SIPUser from "./User";
-import MediaCard from "../Community/MediaCard";
+import MediaCard from "../Community/MediaCardColumn";
 import Logo from "../../Assets/Images/SIP/Logo.png";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -274,15 +274,20 @@ const SIP = (probs: Probs, props: Props) => {
                       )
                     })
                   }
-                  <ListItem disablePadding>
-                    <div style={{ width: "100%"}} onClick={e => {
-                      handleRef(e, 'your-projects');
-                    }}>
-                      <ListItemButton>
-                        <ListItemText primary={'7.  Your Projects (Login to View)'} />
-                      </ListItemButton>
-                    </div>
-                  </ListItem>
+                  {
+                    state?.user?.role === UserRole.User && (
+                      <ListItem disablePadding>
+                        
+                        <div style={{ width: "100%"}} onClick={e => {
+                          handleRef(e, 'your-projects');
+                        }}>
+                          <ListItemButton>
+                            <ListItemText primary={'7.  Your Projects'} />
+                          </ListItemButton>
+                        </div>
+                      </ListItem>
+                    )
+                  }
                 </List>
               </Grid>
           </Grid>
