@@ -8,6 +8,7 @@ export type IContent = {
   description: string;
   image?: string | null;
   images?: ISwiper[] | null;
+  colImages?: string[] | null
 };
 
 export type IMember = {
