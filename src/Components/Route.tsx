@@ -23,6 +23,7 @@ import Blog from "./Blog";
 import MyBlog from "./Blog/MyBlog";
 import ViewBlog from "./Blog/ViewBlog";
 import { AdminLoginPage } from "./Admin/AdminAuth";
+import Faqs from "./SIP/Faqs";
 
 interface Probs { }
 
@@ -80,6 +81,7 @@ const AppRoutes = (probs: Probs) => {
               )
             }
           />
+          <Route path="/sip/faqs" element={<Faqs />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
