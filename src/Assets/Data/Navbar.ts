@@ -119,6 +119,10 @@ export const NavbarADMINList = () => {
       link: "/admin/blog",
     },
     {
+      name: "CLUBS",
+      link: "/admin/addclub",
+    },
+    {
       component: AdminAuth,
     },
   ];
@@ -131,15 +135,13 @@ export const NavbarSIPList = () => {
       link: "/sip",
     },
     {
-      component: ProposeProjectButton,
-    },
-    {
       name: "PROJECTS",
       link: "/sip/projects",
     },
     {
       name: "FAQS",
       link: "/sip/faqs",
+      component: ProposeProjectButton,
     },
     {
       component: SIPAuth,

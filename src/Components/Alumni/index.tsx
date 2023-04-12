@@ -129,7 +129,7 @@ const Alumni = (props: Props) => {
             columnGap={{ xs: 2, sm: 4, md: 5, lg: 6 }}
           >
             {AlumniData.connectToCFI.content.map((_content, i) => (
-              <MediaCard data={_content} />
+              <MediaCard data={_content} id={"undefined"} />
             ))}
           </Grid>
         </Grid>

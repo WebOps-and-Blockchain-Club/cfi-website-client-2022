@@ -1,0 +1,29 @@
+.submit {
+    color: white;
+    animation: fader 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fader {
+    0% {
+        color: yellow;
+        text-shadow:0.5px 0.5px 6px orange;
+    }
+
+    50% {
+        color: white;
+        text-shadow: 2px 2px 6px white;
+    }
+
+    100% {
+        color: yellow;
+        text-shadow: 0.5px 0.5px 4px orange;
+    }
+}
+
+.submit:hover {
+    -webkit-animation: 0;
+    -webkit-animation-play-state: paused;
+    background-color: #d6d6d6;
+    color: #080808;
+}

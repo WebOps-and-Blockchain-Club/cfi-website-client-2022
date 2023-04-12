@@ -186,5 +186,6 @@ query GetClubs {
   getClubs {
     id
     name
+    email
   }
 }
