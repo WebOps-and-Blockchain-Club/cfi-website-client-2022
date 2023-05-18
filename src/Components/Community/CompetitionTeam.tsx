@@ -90,7 +90,7 @@ const CompetitionTeam = () => {
               }}
             >
               {data.achievements.map((_achievement) => (
-                <MediaCard data={_achievement} />
+                <MediaCard data={_achievement} id={"undefined"} />
               ))}
             </Grid>
           </CustomGridSection>
@@ -111,7 +111,7 @@ const CompetitionTeam = () => {
               }}
             >
               {data.projects.map((_project) => (
-                <MediaCard data={_project} />
+                <MediaCard data={_project} id={"undefined"} />
               ))}
             </Grid>
           </CustomGridSection>

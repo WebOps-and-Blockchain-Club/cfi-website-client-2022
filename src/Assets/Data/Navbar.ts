@@ -119,6 +119,10 @@ export const NavbarADMINList = () => {
       link: "/admin/blog",
     },
     {
+      name: "CLUBS",
+      link: "/admin/addclub",
+    },
+    {
       component: AdminAuth,
     },
   ];

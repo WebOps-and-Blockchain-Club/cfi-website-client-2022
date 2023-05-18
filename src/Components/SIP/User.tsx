@@ -36,7 +36,7 @@ const SIPUser = (probs: Probs) => {
         handleClose={() => setErrorMessage(undefined)}
       />
       {data && (
-        <>
+        <div id="your-projects">
           <Heading white="YOUR " red="PROJECTS" />
           <Grid
             item
@@ -58,7 +58,7 @@ const SIPUser = (probs: Probs) => {
               />
             ))}
           </Grid>
-        </>
+        </div>
       )}
     </>
   );

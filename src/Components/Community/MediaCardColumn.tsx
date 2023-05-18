@@ -11,15 +11,13 @@ import {
 
 import { IContent, ISwiper } from "../../Types";
 import ImageCard from "./ImageCard";
-import { ResponsiveStyleValue } from "@mui/system";
 
 interface Probs {
   data: IContent;
-  textAlign?: ResponsiveStyleValue<AlignSetting>;
-  id?: string;
+  id: string | undefined;
 }
 
-export default function MediaCard({ data, id, textAlign }: Probs) {
+export default function MediaCard({ data, id }: Probs) {
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
@@ -30,7 +28,7 @@ export default function MediaCard({ data, id, textAlign }: Probs) {
           borderRadius: "20px",
           backgroundColor: "primary.light",
           display: "flex",
-          flexDirection: matchesLG ? "column" : "row",
+          flexDirection: "column",
           alignItems: "center",
           // justifyContent: "center",
           p: matchesSM ? "15px" : "30px",
@@ -38,23 +36,6 @@ export default function MediaCard({ data, id, textAlign }: Probs) {
             "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
         }}
       >
-        {data.image && (
-          <CardMedia
-            component="img"
-            src={data.image}
-            sx={{
-              borderRadius: "20px",
-              verticalAlign: "middle",
-              objectFit: "cover",
-              width: matchesLG ? "100%" : "400px",
-              marginRight: matchesLG ? "0" : "30px",
-              marginBottom: matchesLG ? "15px" : "unset",
-              backgroundColor:
-                "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
-            }}
-          />
-        )}
-
         <CardContent
           style={{
             padding: "unset",
@@ -63,7 +44,7 @@ export default function MediaCard({ data, id, textAlign }: Probs) {
           {data.title && (
             <Grid
               item
-              textAlign={textAlign ?? "center"}
+              textAlign="center"
               pb={"15px"}
               pt={matchesLG ? "15px" : "unset"}
             >
@@ -93,7 +74,6 @@ export default function MediaCard({ data, id, textAlign }: Probs) {
               </Typography>
             </Grid>
           )}
-
           <Typography
             gutterBottom
             component="div"
@@ -105,40 +85,27 @@ export default function MediaCard({ data, id, textAlign }: Probs) {
             m={0}
             textAlign={"justify"}
             sx={{
-              textAlignLast: textAlign ?? "center",
+              textAlignLast: "center",
             }}
             dangerouslySetInnerHTML={{ __html: data.description }}
           />
-          {
-            data.colImages && (
-              <Grid
-                item
-                container
-                rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
-                columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
-                mt={"25px"}
-                justifyContent={"center"}
-              >
-                {data.colImages.map((img: string) => (
-                  <CardMedia
-                    component="img"
-                    image={img}
-                    sx={{
-                      borderRadius: "20px",
-                      verticalAlign: "middle",
-                      objectFit: "cover",
-                      width: matchesLG ? "100%" : "75%",
-                      marginRight: matchesLG ? "0" : "30px",
-                      marginBottom: matchesLG ? "15px" : "unset",
-                      backgroundColor:
-                        "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
-                    }}
-                  />
-                ))}
-              </Grid>
-            )
-          }
         </CardContent>
+        {data.image && (
+          <CardMedia
+            component="img"
+            src={data.image}
+            sx={{
+              borderRadius: "20px",
+              verticalAlign: "middle",
+              objectFit: "cover",
+              width: matchesLG ? "100%" : "400px",
+              marginRight: matchesLG ? "0" : "30px",
+              marginBottom: matchesLG ? "15px" : "unset",
+              backgroundColor:
+                "linear-gradient(138.5deg, #000000 42%, rgba(255, 0, 0, 0) 109.29%)",
+            }}
+          />
+        )}
       </Card>
       {data.images && (
         <Grid

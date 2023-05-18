@@ -40,7 +40,7 @@ const FaqData = [
   },
   {
     question: "Deadline for ##final project idea submission",
-    answer: "22nd April.",
+    answer: "24th April.",
   },
   {
     question: "How do I ##make sure my idea gets selected?",

@@ -62,3 +62,8 @@ mutation UploadImage($image: [Upload!]!) {
     url
   }
 }
+
+# club
+mutation CreateClub($createClubInput: CreateClubInput!) {
+  createClub(CreateClubInput: $createClubInput)
+}
