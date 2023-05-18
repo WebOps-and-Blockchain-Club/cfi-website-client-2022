@@ -810,7 +810,7 @@ export const Clubs: IClubs = {
         image: WebOpsAndBlockchainAchievement3,
       },
     ],
-    email: "webopsandblockchainclub@gmail.com",
+    email: "cfiwebops@smail.iitm.ac.in",
     contacts: [
       {
         name: "Rasagnya",

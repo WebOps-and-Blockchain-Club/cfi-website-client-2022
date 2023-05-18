@@ -3,7 +3,7 @@ import BEHead1 from "../../Images/ContactUs/CFIOffice/BnE_Himavarshini.jpg";
 import BEHead2 from "../../Images/ContactUs/CFIOffice/BnE_Angela.jpeg";
 import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
 import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
-import PMHead1 from "../../Images/ContactUs/CFIOffice/akshay_kumar.png";
+import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Asharam.jpg";
 import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpeg";
 import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Sai_Charan.jpeg";
 
@@ -64,13 +64,13 @@ export const ManagerialTeams = [
     email: "iitmcfioffice@gmail.com",
     image: PMImage,
     contacts: [
-      // {
-      //   name: "Asharam Khatik",
-      //   image: PMHead1,
-      //   email: "ce20b019@smail.iitm.ac.in",
-      //   phone: "9799849201",
-      //   linkedIn: "https://www.linkedin.com/in/asharam-khatik-b917b5200/",
-      // },
+      {
+        name: "Asharam Khatik",
+        image: PMHead1,
+        email: "ce20b019@smail.iitm.ac.in",
+        phone: "9799849201",
+        linkedIn: "https://www.linkedin.com/in/asharam-khatik-b917b5200/",
+      },
       {
         name: "Tarun Seetha",
         image: PMHead2,
