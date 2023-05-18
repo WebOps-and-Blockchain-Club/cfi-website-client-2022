@@ -1,11 +1,11 @@
 // TEAM HEADS
-import BEHead1 from "../../Images/ContactUs/CFIOffice/Appukrishnan.png";
-import BEHead2 from "../../Images/ContactUs/CFIOffice/Naincy.png";
+import BEHead1 from "../../Images/ContactUs/CFIOffice/BnE_Himavarshini.jpg";
+import BEHead2 from "../../Images/ContactUs/CFIOffice/BnE_Angela.jpeg";
 import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
 import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
 import PMHead1 from "../../Images/ContactUs/CFIOffice/akshay_kumar.png";
-import PMHead2 from "../../Images/ContactUs/CFIOffice/Revanth.png";
-import PMHead3 from "../../Images/ContactUs/CFIOffice/mrunmayee.png";
+import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpeg";
+import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Sai_Charan.jpeg";
 
 // TEAM IMAGES
 import BEImage from "../../Images/Community/ManagerialTeam/BE.jpg";
@@ -21,18 +21,17 @@ export const ManagerialTeams = [
     email: "bnecfi@gmail.com",
     contacts: [
       {
-        name: "Naincy Sachan ",
-        image: BEHead2,
-        email: "hs20h030@smail.iitm.ac.in",
-        phone: "8604826106",
-        linkedIn: "https://www.linkedin.com/in/naincy-sachan-a18b77215",
+        name: "K Himavarshini",
+        image: BEHead1,
+        email: "ed21b036@smail.iitm.ac.in",
+        phone: "6305298763",
+        linkedIn: "https://www.linkedin.com/in/himavarshini-k-59889822a/",
       },
       {
-        name: "Appukrishnan M V",
-        image: BEHead1,
-        email: "hs20h012@smail.iitm.ac.in",
-        phone: "9961768764",
-        linkedIn: "https://www.linkedin.com/in/appukrishnan-m-v-1575761bb",
+        name: "Angela",
+        image: BEHead2,
+        email: "ee21b018@smail.iitm.ac.in",
+        phone: "9660767606",
       },
     ],
   },
@@ -65,25 +64,27 @@ export const ManagerialTeams = [
     email: "iitmcfioffice@gmail.com",
     image: PMImage,
     contacts: [
+      // {
+      //   name: "Asharam Khatik",
+      //   image: PMHead1,
+      //   email: "ce20b019@smail.iitm.ac.in",
+      //   phone: "9799849201",
+      //   linkedIn: "https://www.linkedin.com/in/asharam-khatik-b917b5200/",
+      // },
       {
-        name: "Akshay kumar Jinde",
-        image: PMHead1,
-        email: "me19b116@smail.iitm.ac.in",
-        phone: "9573304289",
-        linkedIn: "https://www.linkedin.com/in/jinde-akshay-kumar-8408111b2",
+        name: "Tarun Seetha",
+        image: PMHead2,
+        email: "ch20b094@smail.iitm.ac.in",
+        phone: "9390210079",
+        linkedIn: "https://www.linkedin.com/in/tarun-seetha-2bba231b6/",
       },
       {
-        name: "Madala Revanth Yadav ",
-        image: PMHead2,
-        email: "na20b033@smail.iitm.ac.in",
-        phone: "8500321996",
-        linkedIn: "http://www.linkedin.com/in/madala-revanth-yadav-b08b51216",
-      },{
-        name: "Mrunmayee Dhonde",
+        name: "Muravath Sai Charan",
         image: PMHead3,
-        email: "ph20b007@smail.iitm.ac.in",
-        phone: "8237816930",
-      }      
+        email: "ee21b092@smail.iitm.ac.in",
+        phone: "7993386037",
+        linkedIn: "https://www.linkedin.com/in/sai-charan-muravath-1865b924a/",
+      },
     ],
   },
 ];
