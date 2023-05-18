@@ -130,9 +130,9 @@ export const NavbarSIPList = () => {
       name: "HOME",
       link: "/sip",
     },
-    {
-      component: ProposeProjectButton,
-    },
+    // {
+    //   component: ProposeProjectButton,
+    // },
     {
       name: "PROJECTS",
       link: "/sip/projects",
