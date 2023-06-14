@@ -3,7 +3,7 @@ import { ITeams } from "../../../Types";
 // LOGO
 import RaftarLogo from "../../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
-import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar(withoutName).png";
+import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 
@@ -79,6 +79,7 @@ import AvishkarGallery5 from "../../Images/Community/CompetitionTeam/Avishkar/Ga
 import AvishkarGallery6 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery6.jpg";
 import AvishkarGallery7 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery7.jpg";
 import AvishkarGallery8 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery8.jpg";
+import { link } from "../utils";
 
 export const Teams: ITeams = {
   "raftar-formula-racing": {
@@ -499,13 +500,15 @@ export const Teams: ITeams = {
     name: "Team Avishkar ##Hyperloop",
     logo: AvishkarLogo,
     landing: AvishkarLanding,
-    description:
-      "We are a group of 60+ individuals hailing from across the country and pursuing various courses at IITM in different fields of study. Our collective passion brings us together for a cleaner future through sustainable Hyperloop research. With a single-minded focus on scalability, we are working on a whole host of new tube and pod technologies needed to implement a full-scale hyperloop safely. Elon Musk appreciated the technological progress we have made towards that goal at the SpaceX Hyperloop Pod Competition 2019. We built our latest pod Avishkar 'Garv,' during the height of the pandemic through relentless effort. Avishkar 'Garv' is equipped with many novel technologies that we built in-house from scratch and won the 'Most Scalable Design Award' among many others at the European Hyperloop Week.",
+    description: `Avishkar Hyperloop is an ${link(
+      "internationally acclaimed",
+      "https://drive.google.com/file/d/1aMSJBl0srDIbtWAMwjzkDgAuebH2vCBs/view?usp=sharing"
+    )} student team of 70+ from IIT Madras focused on revolutionising transportation with sustainable Hyperloop technologies - backed by the Indian Government! Last July, we developed our latest pod which had upgrades such as contactless propulsion with improved efficiency, contactless braking, and was designed for a custom track that supports levitation. We also finished in the global top-5 at European Hyperloop Week (EHW) 2022, bagging nominations in Traction systems, Electrical systems, and the Complete Pod category.`,
     achievements: [
       {
-        title: "Finalist at ##SpaceX Hyperloop Pod Competition",
+        title: "GLOBAL TOP-5 IN THE ##EUROPEAN HYPERLOOP WEEK 2022",
         description:
-          "The team finished in the top-10 among 1500+ participating teams worldwide in SpaceX Hyperloop Pod Competition, July 2019. Moreover, we were the only Asian finalists at the competition. Team Avishkar Hyperloop also met and interacted with Elon Musk, who was all praise for their stupendous work.",
+          "The team participated in the European Hyperloop Week 2022 that took place in Delft, The Netherlands with their recent Pod 5.0. The team emerged in the Global Top-5 in Electrical, Traction, Complete Pod Categories.",
         images: [
           {
             image: AvishkarAchievements1a,
@@ -522,9 +525,9 @@ export const Teams: ITeams = {
         ],
       },
       {
-        title: "Winner of the most ##scalable design award",
+        title: "ANNOUNCEMENT OF SUPPORT BY ##THE INDIAN RAILWAYS",
         description:
-          "Our team participated in the European Hyperloop Week, July 2021 virtually, with our indigenously developed Hyperloop pod ‘Garv’ and won the ‘Most Scalable Design Award’. We were also nominated among the top 5 teams around the globe in mechanical, levitation, propulsion, and complete pod award categories at the EHW ’21. Team Avishkar Hyperloop was the only team competing virtually to have won an award and also the only virtually participating team with top 5 in these many categories.",
+          "Hon’ble Railway Minister, Shri Ashwini Vaishnaw, visited the CFI workspace where the team showcased their work and shared their vision of Indian Hyperloop. The Railway Minister announced support for this vision and signed the MoU with the team for building the 500m long Hyperloop testing facility, which upon commissioning will be the World’s largest student-run Hyperloop testing facility.",
         images: [
           {
             image: AvishkarAchievements2a,
@@ -536,19 +539,29 @@ export const Teams: ITeams = {
           },
         ],
       },
+      {
+        title: "INTERACTION WITH ##PRIME MINISTER",
+        description:
+          "The team recently received the chance to interact with the Prime Minister, Shri Narendra Modi about our Hyperloop technology, at the Vande Bharat flagging off event at Chennai! The PM was very excited to hear our progress and to hear details of our revolutionary work - both in pod and infrastructure domains. Here are some pictures from the event. Seeing the PM's enthusiasm for Hyperloop and his faith in our work reinforced our belief that this is indeed going to revolutionise India. The team hopes to get him to see a levitating pod run in our 400m tube this year!",
+      },
     ],
     projects: [
       {
-        title: "Avishkar’s Hyperloop Pod 2021: ##‘Garv’",
+        title: "AVISHKAR HYPERLOOP’S POD 2022 : ##THE POD 5.0",
         description:
-          "The team built Asia’s most technologically advanced Hyperloop Pod, equipped with contactless propulsion using Linear Induction Motor, contactless braking using Eddy Current Braking, and a compact inverter for propulsion control. Designed entirely online and manufactured near the peak of the pandemic, the Pod was completed in July 2021.",
+          "The team’s most recent technological marvel, the Pod 5.0, is designed to be Asia’s first Hyperloop Pod that runs on their own custom-built track that supports levitation. Completed in July of 2022, this Pod was shown to the world in the European Hyperloop Week 2022 where it was nominated in key categories like Electrical Systems, Traction Systems and the Complete Pod category. ",
         image: AvishkarProject1,
       },
       {
-        title: "A 500m long Hyperloop ##test track",
+        title: "THE ##CUSTOM-BUILT TRACK",
         description:
-          "The team is building a 500m long, 2m diameter vacuum tube at the IITM campus, a first of its kind in the world by a student team. The Hyperloop tube is expected to be ready by Summer 2022. The sub-pilot tube will be a breakthrough in the Hyperloop development and accelerate technology development. The world-leading facility will act as a sub-scale testing ground to the Hyperloop community and lead to breakthroughs. \n After a year-long research, the team has developed this novel and cost-effective tube design and has also filed for a provisional patent for the same. We have also set up a 3.6m long vacuum tube prototype at CFI to test the validity of the design and test the vacuum compatibility of various components of our Hyperloop pod.",
+          "Our latest pod has been designed to run on a custom-track that supports levitation, unlike the internationally renowned I-rail track. With this track design, we aim to set the global standard for a Hyperloop track that is easy to manufacture, cost effective and scalable. We hope to collaborate with international players to refine the Hyperloop track design.",
         image: AvishkarProject2,
+      },
+      {
+        title: "THE 400-METER LONG VACUUM TUBE ##HYPERLOOP TESTING FACILITY",
+        description:
+          "The team is building a tube that is 400m long and 2m wide (diameter) at the Discovery Campus of IIT Madras, Thaiyur, a first of its kind in the world by a student team. This Vacuum tube is expected to be fully built and functional by mid 2023. Once fully functional, this facility will be the world’s largest Hyperloop testing facility that is run by a student team. This facility will act as a sub-scale testing ground for Hyperloop, and will be the hub for Hyperloop in India - initiating conferences, competitions and accelerated research and testing. Since infrastructure takes upto 70% of the total cost of Hyperloop system, our patented tube design is a prime example of frugality of innovation. The team has set up a 3.6m long vacuum tube prototype at the CFI workspace to test the validity of the design and the compatibility of various components of the pod, and has successfully tested the vacuum holding capabilities of the design - which now serves as the green signal for our upcoming project.",
       },
     ],
     website: "https://avishkarhyperloop.com/",
