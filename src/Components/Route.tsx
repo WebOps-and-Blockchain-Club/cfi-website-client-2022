@@ -25,6 +25,8 @@ import ViewBlog from "./Blog/ViewBlog";
 import { AdminLoginPage } from "./Admin/AdminAuth";
 import Faqs from "./SIP/Faqs";
 import Addclub from "./Add/Addclub"
+import SummerSchool from "./SummerSchool";
+import Register from "./SummerSchool/Register/index";
 
 interface Probs { }
 
@@ -86,6 +88,10 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+
+          {/* Summer School*/}
+          <Route path="/summer-school" element={<SummerSchool />} />
+          <Route path="/summer-school/register" element={<Register />} />
 
           {/* ADMIN */}
           <Route

@@ -191,7 +191,7 @@ const Footer = (props: Props) => {
         p={1}
       >
         <Typography color="primary.contrastText" textAlign="center">
-          Developed by Students of WebOps Team and Branding & Engagement Team,
+          Developed by Students of WebOps and Blockchain Club and Branding & Engagement Team,
           CFI.
         </Typography>
       </Grid>

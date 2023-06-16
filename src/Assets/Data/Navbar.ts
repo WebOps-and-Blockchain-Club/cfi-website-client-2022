@@ -150,3 +150,20 @@ export const NavbarSIPList = () => {
     },
   ];
 };
+
+export const NavbarSummerSchoolList = () => {
+  return [
+    {
+      name: "HOME",
+      link: "/summer-school",
+    },
+    {
+      name: "REGISTER",
+      link: "/summer-school/register",
+    },
+    {
+      name: "PROFILE",
+      link: "/summer-school/profile",
+    },
+  ];
+};

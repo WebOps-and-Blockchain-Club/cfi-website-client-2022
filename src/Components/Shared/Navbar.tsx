@@ -25,6 +25,7 @@ import {
   NavbarItems,
   NavbarMobileView,
   NavbarSIPList,
+  NavbarSummerSchoolList,
 } from "../../Assets/Data/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMore from "@mui/icons-material/ExpandMore";
@@ -46,16 +47,16 @@ export default function Header() {
     : location.pathname.includes("blog")
       ? NavbarBlogList(state.user?.role!)
       : location.pathname.includes("sip")
-        ? NavbarSIPList()
-        : NavbarMobileView();
+        ? NavbarSIPList() : location.pathname.includes("summer-school") ? NavbarSummerSchoolList()
+          : NavbarMobileView();
 
   const navWebList = location.pathname.includes("admin")
     ? NavbarADMINList()
     : location.pathname.includes("blog")
       ? NavbarBlogList(state.user?.role!)
       : location.pathname.includes("sip")
-        ? NavbarSIPList()
-        : NavbarItems;
+        ? NavbarSIPList() : location.pathname.includes("summer-school") ? NavbarSummerSchoolList()
+          : NavbarItems;
 
   //Is Top
   const [isTop, setIsTop] = React.useState(true);
