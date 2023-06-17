@@ -1,6 +1,6 @@
 // TEAM HEADS
 import BEHead1 from "../../Images/ContactUs/CFIOffice/BnE_Himavarshini.jpg";
-import BEHead2 from "../../Images/ContactUs/CFIOffice/BnE_Angela.jpeg";
+import BEHead2 from "../../Images/ContactUs/CFIOffice/BnE_Angela.png";
 import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
 import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
 import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Asharam.jpg";
