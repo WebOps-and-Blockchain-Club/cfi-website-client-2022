@@ -32,6 +32,7 @@ const Login = (probs: Probs) => {
   }, [data, loading, error, signIn, probs.roles]);
 
   const handleLogin = async (googleData: any) => {
+    console.log(googleData.tokenId)
     try {
       await loginMutation({
         variables: {

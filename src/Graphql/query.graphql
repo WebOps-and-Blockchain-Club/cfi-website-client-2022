@@ -61,6 +61,19 @@ query GetMeBlogs {
   }
 }
 
+query GetMeSummerSchool {
+  getMe {
+    id
+    email
+    name
+    role
+    clubs {
+      id
+      slot
+    }
+  }
+}
+
 query GetBlogs($filters: FilterBlog) {
   getBlogs(Filters: $filters) {
     blogs {

@@ -1,29 +1,39 @@
 import { Button, Checkbox, Grid, TextField, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import { useGetClubsQuery } from '../../../generated/graphql';
+import { AddCLubsInput } from '../../../generated/graphql';
 import { CustomAutocomplete, CustomTextField } from '../../Shared/InputField';
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import content from "../../../Assets/Data/SummerSchool"
 
 
 interface Props {
     handleSubmit: Function;
+    initialVals: { id: string; slot: string; title: string }[] | undefined
 }
-const RegisterForm = () => {
-    const { data } = useGetClubsQuery();
+const RegisterForm = (props: Props) => {
+    const data = content.sessions;
 
-    const onSubmit = () => {
-        if (selectedClubs.length == 0) setErrorMessage("Select atleast one club to proceed");
-        // props.handleSubmit();
+    // const [input, setInput] = useState<Partial<AddCLubsInput>>();
+
+    const [name, setName] = useState<string>();
+    const [contact, setContact] = useState<string>();
+
+    const [error, setError] = useState<string>();
+
+    const onSubmit = (e: any) => {
+        e.preventDefault();
+        if (selectedClubs.length == 0) setError("Select atleast one club to proceed");
+        let slots = selectedClubs.map(club => club.slot).join(" ")
+        let clubIds = selectedClubs.map(club => club.id)
+        let final_inp = { name, contact, slots, clubIds }
+        props.handleSubmit(
+            final_inp
+        );
     }
 
-    const clubSlot = {
-        "A": ["Club", "club1"],
-        "B": ["club3", "club4", "club5"]
-    } as { [key: string]: string[] };
 
-
-    const isOtherClubsSelectedInSlot = (clubName: string, slot: string) => {
+    const isOtherClubsSelectedInSlot = (slot: string) => {
         const selectedSlots = selectedClubs.map(club => club.slot);
         return selectedSlots.includes(slot);
     };
@@ -31,15 +41,21 @@ const RegisterForm = () => {
     const onAutoCompleteChange = (event: any, value: any) => {
         let club = value[value.length - 1];
 
-        if (value.length != 0 && isOtherClubsSelectedInSlot(club.name, club.slot) && value.length >= selectedClubs.length) value.pop()
+        if (value.length != 0 && isOtherClubsSelectedInSlot(club.slot) && value.length >= selectedClubs.length) value.pop()
 
         setSelectedClubs(value as any);
-
     }
 
     const [selectedClubs, setSelectedClubs] = useState<
-        { id: string; name: string; slot: string }[]
+        { id: string; slot: string; title: string }[]
     >([]);
+
+    useEffect(() => {
+        console.log(props.initialVals)
+        if (props.initialVals) {
+            setSelectedClubs(props.initialVals);
+        }
+    }, [props.initialVals]);
 
     return (
         <form style={{ width: "100%", paddingTop: "2rem" }}>
@@ -60,6 +76,8 @@ const RegisterForm = () => {
                         size="small"
                         required
                         fullWidth
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
+                        value={name}
                     />
                 </Grid>
                 <Grid item container gap={4}>
@@ -70,6 +88,8 @@ const RegisterForm = () => {
                         size="small"
                         required
                         fullWidth
+                        value={contact}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setContact(e.target.value)}
                     />
                 </Grid>
                 {
@@ -79,23 +99,22 @@ const RegisterForm = () => {
                             size="small"
                             aria-required
                             multiple
-                            options={data.getClubs}
+                            options={data}
                             disableCloseOnSelect
-                            getOptionLabel={(option: any) => option.name}
+                            getOptionLabel={(option: any) => option.title}
                             renderOption={(props, option, { selected }) => {
-                                const club = option as any
-                                const isDisabled = isOtherClubsSelectedInSlot(club.name, club.slot);
-                                // console.log('here')
-                                // console.log(selected && (isDisabled))
+                                const session = option as any
+                                const isDisabled = isOtherClubsSelectedInSlot(session.slot);
+                                if (selectedClubs.includes(session)) selected = true;
                                 return <li {...props}>
                                     <Checkbox
                                         icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
                                         checkedIcon={<CheckBoxIcon fontSize="small" />}
                                         style={{ marginRight: 8 }}
-                                        checked={selected && selectedClubs.includes(club)}
-                                        disabled={!selectedClubs.includes(club) && isDisabled}
+                                        checked={selected && selectedClubs.includes(session)}
+                                        disabled={!selectedClubs.includes(session) && isDisabled}
                                     />
-                                    {club.name + " - " + "Slot " + club.slot}
+                                    <p style={{ margin: "0" }} className={!selectedClubs.includes(session) && isDisabled ? "disabled" : ""}>{"Slot " + session.slot + " - " + session.title} </p>
                                 </li>
                             }
                             }
@@ -134,7 +153,4 @@ const RegisterForm = () => {
 }
 
 export default RegisterForm
-function setErrorMessage(arg0: string) {
-    throw new Error('Function not implemented.');
-}
 

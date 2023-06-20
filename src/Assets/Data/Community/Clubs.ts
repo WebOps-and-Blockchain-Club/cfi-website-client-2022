@@ -8,12 +8,13 @@ import CVILogo from "../../Images/ClubLogo/CVIWhiteLogo.png";
 import ElectronicsLogo from "../../Images/ClubLogo/ElectronicsLogo.png";
 import HorizonLogo from "../../Images/ClubLogo/HorizonWhiteLogo.png";
 import iBotLogo from "../../Images/ClubLogo/iBOTWhiteLogo.png";
-import iGEMLogo from "../../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../../Images/ClubLogo/ProgrammingLogo.png";
 import SahaayLogo from "../../Images/ClubLogo/SahaayWhiteLogo.png";
 import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainLogo.png";
+import BiotechLogo from "../../Images/ClubLogo/BiotechLogo.png";
+import MathsLogo from "../../Images/ClubLogo/MathLogo.png";
 
 // CLUB HEADS
 import PrintingHead1 from "../../Images/ContactUs/Club/3DP_Suparn.jpg";
@@ -30,8 +31,6 @@ import HorizonHead1 from "../../Images/ContactUs/Club/Horizon_Aditya.jpg";
 import HorizonHead2 from "../../Images/ContactUs/Club/Horizon_Aadyot.jpeg";
 import iBotHead1 from "../../Images/ContactUs/Club/IBot_Satya_Sai.png";
 import iBotHead2 from "../../Images/ContactUs/Club/IBot_Abishek.jpg";
-import iGEMHead1 from "../../Images/ContactUs/Club/Shobhan.png";
-import iGEMHead2 from "../../Images/ContactUs/Club/Varshini.png";
 import ProductDesignHead1 from "../../Images/ContactUs/Club/PDC_Bharath.jpeg";
 import ProductDesignHead2 from "../../Images/ContactUs/Club/PDC_Swathi.jpg";
 import ProgrammingHead1 from "../../Images/ContactUs/Club/Programming_Chahel.jpeg";
@@ -43,7 +42,18 @@ import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Arjun.jpeg";
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/W&B_Rasagnya.jpeg";
 import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_Satwik.jpeg";
 import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/W&B_Akshay.jpg";
-import MathsHead from "../../Images/ContactUs/Club/Haricharan.png";
+import BiotechHead1 from "../../Images/ContactUs/Club/Biotech_Aditya.jpeg";
+import BiotechHead2 from "../../Images/ContactUs/Club/Biotech_Raghav.jpg";
+import MathsHead1 from "../../Images/ContactUs/Club/Maths_Haricharan.png";
+import MathsHead2 from "../../Images/ContactUs/Club/Maths_Sreeja.png";
+
+//AERO
+import AeroAchievement1 from "../../Images/Community/Clubs/Aero/AeroAchievement1.jpeg";
+import AeroGallery1 from "../../Images/Community/Clubs/Aero/AeroGallery1.png";
+import AeroGallery2 from "../../Images/Community/Clubs/Aero/AeroGallery2.jpeg";
+import AeroGallery3 from "../../Images/Community/Clubs/Aero/AeroGallery3.jpeg";
+import AeroGallery4 from "../../Images/Community/Clubs/Aero/AeroGallery4.jpg";
+import AeroGallery5 from "../../Images/Community/Clubs/Aero/AeroGallery5.jpg";
 
 //ANALYTICS
 import AnalyticsAchievements1 from "../../Images/Community/Clubs/Analytics/Achievements1.gif";
@@ -108,6 +118,10 @@ import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png
 import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements1.png";
 import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements2.png";
 import WebOpsAndBlockchainAchievement3 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements3.jpeg";
+
+//MATHS
+import MathsProject1 from "../../Images/Community/Clubs/Maths/Project1.png";
+import MathsProject2 from "../../Images/Community/Clubs/Maths/Project2.png";
 import { link } from "../utils";
 
 export const Clubs: IClubs = {
@@ -185,6 +199,12 @@ export const Clubs: IClubs = {
       "Being one of the earliest clubs founded in CFI, we are a 30-member family of drone and airplane enthusiasts whom the club has envisioned the dream to fly. We formally welcome new members each year, and our senior members take pride in backing the club—the club witnesses active participation with members from diverse branches of engineering and of different age groups. Regular workshops and timely meetings have kept the club lively throughout. The club has witnessed glory in several national and international competitions like IARC (International Aerial Robotics Competition); NAL MICAV (Micro Air Vehicle Flying Competition).  Building our own crafts and watching them take flight is a proud experience for each member and we hope to have young, inspired minds work onboard with us to share the joy of flying!!",
     achievements: [
       {
+        title: "4th place in ##NRC Competition",
+        description:
+          "4th Place in NRC Competition: Project GAIA participated and secured fourth place in Unacademy's National Robotics Competition 2022, competing against 200+ teams and over 800 participants from across India. Team Gaia presented an autonomous drone with an attached manipulator arm capable of scooping soil to plant seeds for conducting mass afforestation drives in areas inaccessible to humans. Currently, the idea and mechanism are in the patenting process.",
+        image: AeroAchievement1,
+      },
+      {
         description:
           "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
       },
@@ -206,30 +226,24 @@ export const Clubs: IClubs = {
         linkedIn: "https://www.linkedin.com/in/sanjeet-iyer-032849267/",
       },
     ],
+    gallery: [
+      {
+        image: AeroGallery2,
+      },
+      {
+        image: AeroGallery3,
+      },
+      {
+        image: AeroGallery4,
+      },
+      {
+        image: AeroGallery5,
+      },
+      {
+        image: AeroGallery1,
+      },
+    ],
   },
-  // "maths-club": {
-  //   name: "Maths ##Club",
-  //   logo: AeroLogo,
-  //   oneLiner: "Getting High the ‘Wright’ Way !",
-  //   description:
-  //     "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
-  //   achievements: [
-  //     {
-  //       description:
-  //         "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
-  //     },
-  //   ],
-  //   email: "mathsclub.cfi@gmail.com",
-  //   contacts: [
-  //     {
-  //       name: "Haricharan B",
-  //       image: MathsHead,
-  //       email: "ae20b046@smail.iitm.ac.in",
-  //       phone: "9879253473",
-  //       linkedIn: "https://www.linkedin.com/in/pranit-zope-05b001215/",
-  //     },
-  //   ],
-  // },
   "analytics-club": {
     name: "Analytics## Club",
     logo: AnalyticsLogo,
@@ -539,43 +553,6 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  igem: {
-    name: "##iGem",
-    logo: iGEMLogo,
-    description:
-      "Team IGEM is a group of individuals passionate about the fascinating field of synthetic biology. They participate in the iGEM competition every year. For a competition so entirely steeped in innovation, collaboration, and education, the words ‘International Genetically Engineered Machine’ doesn’t quite portray the reality of things – the only machines at work here are the small, yet incredibly complex bundles of life growing on a Petri plate (and very occasionally, our brains)! <br /> The iGEM competition began in 2003 as a month-long course at the Massachusetts Institute of Technology. It eventually expanded over the years, with around 450 teams taking part in the 2019 edition. IIT-Madras has a long history with iGEM as well, having taken part in more than 10 editions since 2008, and has received many accolades at the international stage including, four gold medals, five silver medals, the Best Foundational Advance project, and Best New BioBrick Part or Device, Engineered in 2008, A Safety Commendation, Asia in 2011, Best New BioBrick Part, Natural, Asia in 2011, Best Human Practices Advance, Asia in 2013 and a nomination for Best Education and Public Engagement in 2019.",
-    achievements: [
-      {
-        title: "##Idec",
-        description:
-          "Won the “Science Contribution award” and “Industry Advisory award” and “Funny innovation award”",
-      },
-      {
-        description: "Igem Indian league won the GRAND PRIZE",
-      },
-      {
-        description:
-          "The team received a silver medal at the iGEM Giant Jamboree in 2016, a silver medal at the iGEM Giant Jamboree in 2017,  a Gold medal at the iGEM Giant Jamboree in 2018. The team also received a silver medal and was nominated for “Best Education & Public Engagement” for the Language Project in 2019. In 2021 they reached the Semifinals from ~ 30 teams that applied in the Synbio Power Pitch and won a Gold medal and the award for the Best Computational Project in GOGEC.",
-      },
-    ],
-    email: "igem@smail.iitm.ac.in",
-    contacts: [
-      {
-        name: "Shobhan Karthick",
-        image: iGEMHead1,
-        email: "be19b009@smail.iitm.ac.in",
-        phone: "6385188219",
-        linkedIn: "https://www.linkedin.com/in/shobhan-karthick/",
-      },
-      {
-        name: "Varshini S",
-        image: iGEMHead2,
-        email: "be19b006@smail.iitm.ac.in",
-        phone: "9840216729",
-        linkedIn: "https://www.linkedin.com/in/varshini-s-061190215/",
-      },
-    ],
-  },
   "product-design-club": {
     name: "Product Design## Club",
     logo: ProductDesignLogo,
@@ -835,12 +812,72 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  // "maths-club": {
-  //   name: "Maths club",
-  //   logo: "",
-  //   description:
-  //     "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
-  //   email: "",
-  //   contacts: [],
-  // },
+  "biotech-club": {
+    name: "Biotech ##Club",
+    logo: BiotechLogo,
+    oneLiner: "Thinking outside the Petri dish",
+    description:
+      "The Biotech Club, born in 2023 as a vertical under iGEM, is a group of passionate individuals determined to showcase the wonders of biotech to the student community. Our vision is to create an inclusive interdisciplinary haven where students can explore exciting ideas and endless possibilities in biotechnology. The club organizes a series of captivating events and engaging workshops to stimulate your brain, facing those ideas that keep you up at night (zombie apocalypse, anyone?). Apart from this, the club undertakes student projects in biotechnology. At the Biotech Club, the only prerequisite is a deep-seated desire to dive into biotechnology. The club offers a haven for anyone looking to get their hands dirty, ideate and dig deep to come up with solutions.<br /> <b>Together we’ll turn dreams into reality, one DNA strand at a time!</b>",
+    email: "biotechcfi@gmail.com",
+    contacts: [
+      {
+        name: "Aditya Ray",
+        email: "be21b002@smail.iitm.ac.in",
+        phone: "9903719964",
+        image: BiotechHead1,
+        linkedIn: "https://www.linkedin.com/in/aditya-ray-17001a23a/",
+      },
+      {
+        name: "Raghav",
+        email: "bs21b026@smail.iitm.ac.in",
+        phone: "9920486640",
+        image: BiotechHead2,
+        linkedIn: "https://www.linkedin.com/in/raghav-mathur-813230234",
+      },
+    ],
+    achievements: [
+      {
+        title: "Stay tuned!",
+        description:
+          "Remember, every expert was once a beginner. So, if our club's achievements seem a bit scarce at the moment, just think of us as experts in the making, with a touch of 'learning as we go' charm!",
+      },
+    ],
+  },
+  "maths-club": {
+    name: "Mathematics ##Club",
+    logo: MathsLogo,
+    email: "mathematicsclubiitm@gmail.com",
+    description:
+      "Mathematics club, CFI is a group of motivated and enthusiastic students conducting research on various topics in the field of Mathematics and aiming to develop a thriving Math culture. Started in November 2022, our team has conducted numerous workshops, problem-solving sessions, and contests, including our flagship event Integration Bee. Our areas of research include Probability and Statistics, Calculus, Game Theory, Galois Theory and Group Theory.",
+    projects: [
+      {
+        title: "Integration Bee",
+        image: MathsProject1,
+        description:
+          "We conducted our flagship event, IITM’s own Integration Bee in April 2023, in which over 150 students participated. Participants had a lot of fun solving some fancy integrals using common techniques like substitution, limit of sum, contour integrals, power series, and more!",
+      },
+      {
+        title: "Project on Monte Carlo Simulations",
+        image: MathsProject2,
+        description:
+          "Our first project on Monte Carlo Simulations involved numeric simulations of probability problems which cannot be solved analytically. Among the few projects in CFI to include freshmen, we came up with solutions to problems like natural selection and genetic drift, Arrhenius equation, and Kepler's law for arbitrary potentials.",
+      },
+    ],
+    contacts: [
+      {
+        name: "Haricharan B",
+        phone: "8248003579",
+        email: "haricharanb@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/haricharan-balasundaram/",
+        image: MathsHead1,
+      },
+      {
+        name: "Sreejaa Kumar",
+        phone: "9500039714",
+        email: "ee21b134@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/sreejaa-kumar/",
+        image: MathsHead2,
+      },
+    ],
+  },
 };

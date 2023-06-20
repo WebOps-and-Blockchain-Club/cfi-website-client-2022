@@ -6,11 +6,12 @@ import AbhiyaanLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhiyaan.pn
 import AvishkarLogo from "../../../Assets/Images/CompetitionTeamLogo/Avishkar(withoutName).png";
 import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
-
+import AgnirathLogo from "../../../Assets/Images/CompetitionTeamLogo/Agnirath.png";
+import IGemLogo from "../../../Assets/Images/CompetitionTeamLogo/IGem.png";
 // TEAM HEADS IMAGE
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Madhav.jpeg";
 import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Ragavendiran.jpeg";
-import RaftarHead3 from "../../Images/ContactUs/CompetitionTeam/Raftar_Ashwin.jpeg";
+import RaftarHead3 from "../../Images/ContactUs/CompetitionTeam/Raftar_Harish.png";
 import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Arun.jpeg";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Sudharsan.jpeg";
 import AbhiyaanHead3 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Aneesh.jpg";
@@ -20,6 +21,12 @@ import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Siddh
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Varun.jpg";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Aniketh.jpeg";
 import AnveshakHead3 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Shivendra.jpeg";
+import AgnirathHead1 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Aditya.jpg";
+import AgnirathHead2 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Bindusara.jpg";
+import AgnirathHead3 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Rishabh.jpg";
+import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/IGem_Aarohee.jpeg";
+import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/IGem_Sanjana.jpg";
+
 // import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Ashish.webp";
 // import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Aaditya.webp";
 
@@ -30,6 +37,8 @@ import RaftarAchievements1 from "../../Images/Community/CompetitionTeam/Raftar/A
 import RaftarAchievements2 from "../../Images/Community/CompetitionTeam/Raftar/Achievements2.jpg";
 import RaftarAchievements3 from "../../Images/Community/CompetitionTeam/Raftar/Achievements3.jpg";
 import RaftarAchievements4 from "../../Images/Community/CompetitionTeam/Raftar/Achievements4.jpg";
+import RaftarAchievements5 from "../../Images/Community/CompetitionTeam/Raftar/Achievements5.png";
+import RaftarAchievements6 from "../../Images/Community/CompetitionTeam/Raftar/Achievements6.png";
 
 import RaftarGallery1 from "../../Images/Community/CompetitionTeam/Raftar/Gallery1.jpg";
 import RaftarGallery2 from "../../Images/Community/CompetitionTeam/Raftar/Gallery2.jpg";
@@ -39,7 +48,7 @@ import RaftarGallery5 from "../../Images/Community/CompetitionTeam/Raftar/Galler
 import RaftarGallery6 from "../../Images/Community/CompetitionTeam/Raftar/Gallery6.jpg";
 
 // ABHIYAAN
-import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.png";
+import AbhiyaanLanding from "../../Images/Community/CompetitionTeam/Abhiyaan/Landing.jpg";
 
 import AbhiyaanGallery1 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery1.jpg";
 import AbhiyaanGallery2 from "../../Images/Community/CompetitionTeam/Abhiyaan/Gallery2.jpeg";
@@ -80,6 +89,22 @@ import AvishkarGallery6 from "../../Images/Community/CompetitionTeam/Avishkar/Ga
 import AvishkarGallery7 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery7.jpg";
 import AvishkarGallery8 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery8.jpg";
 
+//AGNIRATH
+import AgnirathLanding from "../../Images/Community/CompetitionTeam/Agnirath/Landing.png";
+import AgnirathProject1 from "../../Images/Community/CompetitionTeam/Agnirath/Project1.jpeg";
+import AgnirathGallery1 from "../../Images/Community/CompetitionTeam/Agnirath/Gallery1.jpg";
+import AgnirathGallery2 from "../../Images/Community/CompetitionTeam/Agnirath/Gallery2.jpeg";
+
+//IGEM
+import IGemLanding from "../../Images/Community/CompetitionTeam/IGem/Landing.png";
+import IGemProject1_a from "../../Images/Community/CompetitionTeam/IGem/Project1_a.png";
+import IGemProject1_b from "../../Images/Community/CompetitionTeam/IGem/Project1_b.png";
+import IGemProject2 from "../../Images/Community/CompetitionTeam/IGem/Project2.png";
+import IGemProject3_a from "../../Images/Community/CompetitionTeam/IGem/Project3_a.png";
+import IGemProject3_b from "../../Images/Community/CompetitionTeam/IGem/Project3_b.png";
+import IGemGallery1 from "../../Images/Community/CompetitionTeam/IGem/Gallery1.jpg";
+import IGemGallery2 from "../../Images/Community/CompetitionTeam/IGem/Gallery2.jpg";
+
 export const Teams: ITeams = {
   "raftar-formula-racing": {
     name: "Raftar Formula ##Racing",
@@ -88,6 +113,16 @@ export const Teams: ITeams = {
     description:
       "Raftar is a team of 50 students from different disciplines in IIT Madras with a shared passion for automotive engineering and motorsports. Every year, the team takes up the challenge of building a swift Formula Student race car and works to develop the most competent lot of engineers in the nation. Working at the Centre For Innovation, IIT Madras, Raftar aims to become a globally competitive team and promote the Formula Student culture in India. The Raftar formula racing team is recognized as one of the tireless, most dedicated teams at CFI.",
     achievements: [
+      {
+        image: RaftarAchievements5,
+        description:
+          "Team Raftar entered the RFR23, our first-ever electric car in Formula Bharat 2023. We finished 3rd overall in the Electric Category. This included a 2nd overall in Static Events having won first place in the Business Plan Presentation event and 2nd in the Engineering Design event. We also got 3rd place in the Mathworks Modelling Award challenge.",
+      },
+      {
+        image: RaftarAchievements6,
+        description:
+          "In 2022 the team participated at the Formula Bharat Virtuals and Pi-EV competitions online. We absolutely dominated both competitions, winning awards in every event including, Best Battery Design, Best Powertrain Design, Engineering Design Event, among many others.",
+      },
       {
         description:
           "Formula Bharat is an Indian Formula Student-style engineering design competition in which students from colleges and universities all over the country compete with a life-size formula-style vehicle in areas of engineering design, overall cost, marketability and dynamic performance. In the Formula Bharat Virtuals – 2021 (Electric Category), Team Raftar secured 1st place in the overall championship and the Engineering design Event. They were also placed as winners of the Best Powertrain Design and Best Battery Design.",
@@ -111,9 +146,9 @@ export const Teams: ITeams = {
     ],
     projects: [
       {
-        title: "Shift of Powertrain Unit from ##Combustion to Electric",
+        title: "Shift from Combustion to an ##Electric Powertrain",
         description:
-          "Seeing the global transition to electric powertrains, Team Raftar designed their first electric car this year. An electric motor gives higher acceleration and eliminates further complications like a gearbox. This in turn increases the vehicle’s simplicity and efficiency. They plan to participate in national and international formula student engineering competitions with this car.",
+          "With the global shift to sustainability and lesser carbon emissions, Raftar decided to build their own electric powertrain. They are also working on developing an EV testbed in collaboration with the automotive industry. Having won the best powertrain award at FB Virtuals 2022 and a podium finish at Formula Bharat 2023, they now have their targets set for Formula Student Germany later this year.",
       },
     ],
     website: "https://cfi.iitm.ac.in/raftar/",
@@ -154,11 +189,11 @@ export const Teams: ITeams = {
         linkedIn: "https://www.linkedin.com/in/ragavendiran-n-76b132241/",
       },
       {
-        name: "Sai Ashwin",
+        name: "Harish R",
         image: RaftarHead3,
-        email: "me20b154@smail.iitm.ac.in",
-        phone: "9500002556",
-        linkedIn: "https://www.linkedin.com/in/sai-ashwin-673220183/",
+        email: "harishr@smail.iitm.ac.in",
+        phone: "9786324868",
+        linkedIn: "https://www.linkedin.com/in/harish-r-1458b81bb/",
       },
     ],
   },
@@ -328,79 +363,6 @@ export const Teams: ITeams = {
   //       image: AbhiyaanHead2,
   //       email: "s.sudharsan.raja@gmail.com",
   //       phone: "7550117832",
-  //       linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
-  //     },
-  //   ],
-  // },
-  // "team-agnirath": {
-  //   name: "Team ##Agnirath",
-  //   logo: AbhiyaanLogo,
-  //   landing: AbhiyaanLanding,
-  //   description:
-  //     "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
-  //   achievements: [
-  //     {
-  //       description:
-  //         "The Team is preparing to go to Australia in October to showcase their work",
-  //     },
-  //   ],
-  //   projects: [
-  //     {
-  //       title: "Project ##MACRo",
-  //       description:
-  //         "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
-  //     },
-  //     {
-  //       title: "ROS ##Software driver",
-  //       description:
-  //         'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
-  //     },
-  //   ],
-  //   website: "https://agnirathiitm.com/",
-  //   gallery: [
-  //     {
-  //       image: AbhiyaanGallery1,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery2,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery3,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery4,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery5,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery6,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery7,
-  //     },
-  //   ],
-  //   email: "agnirath@smail.iitm.ac.in",
-  //   contacts: [
-  //     {
-  //       name: "Bindusara",
-  //       image: AbhiyaanHead1,
-  //       email: "suraj.rathi00@gmail.com",
-  //       phone: "8296354579",
-  //       linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
-  //     },
-  //     {
-  //       name: "Rishabh",
-  //       image: AbhiyaanHead2,
-  //       email: "arunkrish2603@gmail.com",
-  //       phone: "7710936213",
-  //       linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
-  //     },
-  //     {
-  //       name: "Aditya",
-  //       image: AbhiyaanHead2,
-  //       email: "s.sudharsan.raja@gmail.com",
-  //       phone: "9884913874",
   //       linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
   //     },
   //   ],
@@ -603,63 +565,126 @@ export const Teams: ITeams = {
       },
     ],
   },
-  // "team-agnirath": {
-  //   name: "Team Agnirath",
-  //   logo: "",
-  //   landing: "",
-  //   description: "",
-  //   email: "",
-  //   achievements: [
-  //     {
-  //       description:
-  //         "The Team is preparing to go to Australia in October to showcase their work",
-  //     },
-  //   ],
-  //   contacts: [
-  //     {
-  //       name: "Bindusara",
-  //       image: "",
-  //       email: "na20b013@smail.iitm.ac.in",
-  //       linkedIn: "linkedin.com/in/bindusara-reddy-890b131b9/",
-  //       phone: "8296354579",
-  //     },
-  //     {
-  //       name: "Rishabh",
-  //       image: "",
-  //       email: "goldenrishabh@smail.iitm.ac.in",
-  //       linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202/",
-  //       phone: "7710936213",
-  //     },
-  //     {
-  //       name: "Aditya",
-  //       image: "",
-  //       email: "na20b004@smail.iitm.ac.in",
-  //       linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211/",
-  //       phone: "9884913874",
-  //     },
-  //   ],
-  // },
-  // "team-abhyuday": {
-  //   name: "Team Abhyuday",
-  //   landing: "",
-  //   logo: "",
-  //   description: "",
-  //   email: "",
-  //   contacts: [
-  //     {
-  //       name: "Ashish Kumar Shroti",
-  //       phone: "9983321407",
-  //       image: AbhyudayHead1,
-  //       email: "me19b083@smail.iitm.ac.in",
-  //       linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti/",
-  //     },
-  //     {
-  //       name: "Edupuganti Aaditya",
-  //       phone: "9390257854",
-  //       image: AbhyudayHead2,
-  //       email: "ae19b104@smail.iitm.ac.in",
-  //       linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2/",
-  //     },
-  //   ],
-  // },
+  "team-agnirath": {
+    name: "Team ##Agnirath",
+    logo: AgnirathLogo,
+    landing: AgnirathLanding,
+    description:
+      "Team Agnirath began its journey in 2021 with a vision to develop competent engineers for a sustainable future through solar research ,with a mainstream effort to  build an efficient and novel state of the art solar car.We are a team of 45 passionate people with the zeal to build a competent and sustainable car that will be racing against the best teams over various competitions across the world, namely Bridgestone World Solar Challenge(Australia) and The American Solar Challenge.Currently the team is working on AARUSH, a highly enhanced solar car to participate in the BWSC 2023 ,Australia.",
+
+    projects: [
+      {
+        title: "Proof Of ##Concept",
+        image: AgnirathProject1,
+        description:
+          "Team Agnirath built the prototype for their actual car for the team to get valuable hands-on work experience before starting the manufacturing process for our solar car.",
+      },
+    ],
+    website: "https://agnirathiitm.com/",
+    gallery: [
+      {
+        image: AgnirathGallery1,
+      },
+      {
+        image: AgnirathGallery2,
+      },
+    ],
+    email: "agnirath@smail.iitm.ac.in",
+    contacts: [
+      {
+        name: "Aditya Ravindran",
+        image: AgnirathHead1,
+        email: "na20b004@smail.iitm.ac.in",
+        phone: "9884913874",
+        linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211",
+      },
+      {
+        name: "Bindusara Reddy",
+        image: AgnirathHead2,
+        email: "na20b013@smail.iitm.ac.in",
+        phone: "8296354579",
+        linkedIn: "https://www.linkedin.com/in/bindusara-reddy-890b131b9",
+      },
+      {
+        name: "Rishabh Sharma",
+        image: AgnirathHead3,
+        email: "na20b051@smail.iitm.ac.in",
+        phone: "7710936213",
+        linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202",
+      },
+    ],
+  },
+  igem: {
+    name: "##IGem",
+    logo: IGemLogo,
+    landing: IGemLanding,
+    email: "igem@smail.iitm.ac.in",
+    description:
+      "iGEM, IIT Madras is a group of individuals passionate about the fascinating field of synthetic biology. We participate in the International Genetically Engineered Machine competition every year. The 'machines' at work here are the small, yet incredibly complex bundles of life growing on a Petri plate! Teams from around the world compete by addressing daily issues with their designs of engineered biological systems. The goal of the competition is to develop an international collaborative community for the growing field of synthetic biology. IIT Madras has a long history with iGEM as well, having taken part in more than ten editions since 2008, and has received numerous accolades at the international stage.",
+    projects: [
+      {
+        title: "Our ##Current Project",
+        description:
+          "The project our team is currently working on is the construction of a library of synthetic ribosome binding sites (RBS). We have chosen to work with Lactococcus lactis, a GRAS organism (Generally Regarded as Safe) as our test system. The data from this project would allow researchers and industries to rationally tune protein expression for their specific purposes.",
+        images: [
+          { heading: "", image: IGemProject1_a },
+          { heading: "", image: IGemProject1_b },
+        ],
+      },
+      {
+        title: "Our ##Previous Projects",
+        image: IGemProject2,
+        description:
+          "Some of the projects our team has worked on in the past include:<ul><li>The production of bacterial cellulose using whey wastewater as the substrate. (2020)</li><li>The biosynthesis of the anti-cancer drug camptothecin using a recombinant fungal host. (2019)</li><li>The creation of a database of host organisms that are useful for synthetic biology applications. (2017)</li></ul>",
+      },
+      {
+        title: "Integrated ##Human Practices",
+        images: [
+          { heading: "", image: IGemProject3_a },
+          { heading: "", image: IGemProject3_b },
+        ],
+        description:
+          "While synthetic biology is a valuable tool for human advancement, it is also necessary to be mindful of its impact on society. In order to make synthetic biology accessible to the public, we have initiated the Language Project, which aims to communicate key biology concepts in regional languages. During the COVID-19 pandemic, we also initiated a Vaccine Awareness Series to educate the public on the science and technology behind vaccines.",
+      },
+    ],
+    achievements: [
+      {
+        title: "iGEM Indian League 2022: ##Grand Prize Winners",
+        description:
+          "iGEM Indian League is a new iGEM Chapter in India, with an aim to reimagine the landscape of synthetic biology in the country.",
+      },
+      {
+        title:
+          "iDEC 2022: ##Scientific Contribution Award, Industry Advisory Group Award",
+        description:
+          "The International Directed Evolution Competition (iDEC) is an international public welfare initiative dedicated to building a scientific community to promote research in directed evolution, engage the academic community, and share knowledge.",
+      },
+      {
+        title: "GOGEC 2021: ##Best Computational Project, Gold Medal",
+        description:
+          "The Global Open Genetic Engineering Competition (GOGEC) is an online conference where students can present their research and proposals in synthetic biology and connect with like-minded peers.",
+      },
+      {
+        title: "iGEM: ##2019, 2017, 2016 - Silver Medal ; 2018 - Gold Medal",
+        description:
+          "The International Genetically Engineered Machine (iGEM) Competition is a platform for multidisciplinary students all over the world to design, build, and test synthetic biology projects. Teams document their work through deliverables like wikis, videos, and presentations and are evaluated by expert judging panels.",
+      },
+    ],
+    gallery: [{ image: IGemGallery1 }, { image: IGemGallery2 }],
+    contacts: [
+      {
+        name: "Aarohee Vora",
+        phone: "7045525122",
+        email: "aaroheeavora@gmail.com",
+        linkedIn: "https://www.linkedin.com/in/aarohee-vora-681417213",
+        image: IGemHead1,
+      },
+      {
+        name: "Sanjana Adluru",
+        phone: "6309022288",
+        email: "be20b028@smail.iitm.ac.in",
+        image: IGemHead2,
+      },
+    ],
+  },
 };

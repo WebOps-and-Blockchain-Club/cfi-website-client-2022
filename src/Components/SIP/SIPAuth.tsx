@@ -2,7 +2,7 @@ import React from "react";
 import { LoginType, UserRole } from "../../generated/graphql";
 import Auth from "../Auth";
 
-interface Probs {}
+interface Probs { }
 
 const SIPAuth = (probs: Probs) => {
   return (

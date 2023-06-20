@@ -26,17 +26,19 @@ import CVILogo from "../Images/ClubLogo/CVILogo.png";
 import ElectronicsLogo from "../Images/ClubLogo/ElectronicsLogo.png";
 import HorizonLogo from "../Images/ClubLogo/HorizonWhiteLogo(withoutName).png";
 import iBotLogo from "../Images/ClubLogo/iBOTLogo.png";
-import iGEMLogo from "../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../Images/ClubLogo/ProgrammingLogo.png";
 import SahaayLogo from "../Images/ClubLogo/SahaayBlackLogo.png";
 import EnvisageLogo from "../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo(withoutName).png";
+import BiotechLogo from "../Images/ClubLogo/BiotechLogo.png";
+import MathsLogo from "../Images/ClubLogo/MathLogo.png";
 
 import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
+import IGemLogo from "../../Assets/Images/CompetitionTeamLogo/IGem.png";
 
 import GalleryImage1 from "../../Assets/Images/Home/Gallery1.jpg";
 import GalleryImage2 from "../../Assets/Images/Home/Gallery2.jpg";
@@ -120,18 +122,24 @@ export const CompetitionTeamList = [
     desc: "It was started as a simple student project at the CFI. The team consisting of 40 highly enthusiastic students, is working on a project to develop a radically new mode of transport, The Hyperloop. Hyperloop is, described as a sealed tube or system of tubes with low air pressure through which a pod may travel substantially free of air resistance or friction.The team was among the 47 teams in the world qualified for the preliminary design round of the same.  Recently it was awarded the Most Scalable Design Award by Zeleros Hyperloop at the European Hyperloop Week (EHW)’21. They were also nominated among the top 5 teams around the globe in mechanical, levitation, propulsion and complete pod award categories at the EHW ’21.",
     link: "/competition-teams/team-avishkar-hyperloop",
   },
-  // {
-  //   name: "Team Agnirath",
-  //   logo: "",
-  //   desc: "",
-  //   link: "/competition-teams/team-agnirath",
-  // },
+  {
+    name: "Team Agnirath",
+    logo: "",
+    desc: "",
+    link: "/competition-teams/team-agnirath",
+  },
   // {
   //   name: "Team Abhyuday",
   //   logo: "",
   //   desc: "",
   //   link: "/competition-teams/team-abhyuday",
   // },
+  {
+    name: "iGEM",
+    logo: IGemLogo,
+    desc: "",
+    link: "/competition-teams/igem",
+  },
 ];
 
 export const ClubList = [
@@ -171,11 +179,6 @@ export const ClubList = [
     link: "/clubs/ibot-club",
   },
   {
-    name: "iGEM",
-    logo: iGEMLogo,
-    link: "/clubs/igem",
-  },
-  {
     name: "Product Design Club",
     logo: ProductDesignLogo,
     link: "/clubs/product-design-club",
@@ -200,11 +203,16 @@ export const ClubList = [
     logo: WebOpsAndBlockchainLogo,
     link: "/clubs/webops-and-blockchain-club",
   },
-  // {
-  //   name: "Maths Club",
-  //   logo: "",
-  //   link: "/clubs/maths-club",
-  // },
+  {
+    name: "Biotech Club",
+    logo: BiotechLogo,
+    link: "/clubs/biotech-club",
+  },
+  {
+    name: "Maths Club",
+    logo: MathsLogo,
+    link: "/clubs/maths-club",
+  },
 ];
 
 export const AboutCFIOneLinear =

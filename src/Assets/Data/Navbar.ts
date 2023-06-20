@@ -6,6 +6,9 @@ import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
 import BlogAuth from "../../Components/Blog/BlogAuth";
 import AdminAuth from "../../Components/Admin/AdminAuth";
+import RegisterButton from "../../Components/SummerSchool/Register/RegisterButton";
+import SummerSchoolAuth from "../../Components/SummerSchool/SummerSchoolAuth";
+import ProfileButton from "../../Components/SummerSchool/ProfileButton";
 
 export const NavbarItems = [
   {
@@ -158,12 +161,13 @@ export const NavbarSummerSchoolList = () => {
       link: "/summer-school",
     },
     {
-      name: "REGISTER",
-      link: "/summer-school/register",
+      component: RegisterButton,
     },
     {
-      name: "PROFILE",
-      link: "/summer-school/profile",
+      component: ProfileButton,
+    },
+    {
+      component: SummerSchoolAuth,
     },
   ];
 };
