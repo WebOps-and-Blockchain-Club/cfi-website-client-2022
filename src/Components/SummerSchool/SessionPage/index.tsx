@@ -53,6 +53,12 @@ const SessionPage = () => {
                             Slot {data.slot} </Typography>
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             Timings {data.time} </Typography>
+                        {data.club && <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
+                            {data.club} </Typography>}
+                        {
+                            data.clubs && data.clubs.map(club => <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
+                                {club} </Typography>)
+                        }
 
                     </Grid>
 

@@ -29,6 +29,7 @@ import SummerSchool from "./SummerSchool";
 import Register from "./SummerSchool/Register/index";
 import { Session } from "inspector";
 import SessionPage from "./SummerSchool/SessionPage";
+import Profile from "./SummerSchool/Profile";
 
 interface Probs { }
 
@@ -99,7 +100,7 @@ const AppRoutes = (probs: Probs) => {
             <Navigate to="/summer-school" />
           )} />
           <Route path="/summer-school/profile" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
-            <Register />
+            <Profile />
           ) : (
             <Navigate to="/summer-school" />
           )} />
