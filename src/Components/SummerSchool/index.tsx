@@ -20,8 +20,6 @@ const SummerSchool = () => {
         const searchParams = createSearchParams({ name: nameQueryParam }).toString();
         const destination = `register?${searchParams}`;
 
-        console.log(destination);
-
         navigate(destination);
     }
     return (
@@ -32,13 +30,13 @@ const SummerSchool = () => {
 
                 <Grid item>
                     <Typography
-                        variant={matches2 ? (matches ? "subtitle1" : "h6") : "h6"}
+                        variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
                         style={{
                             color: "#d6d6d6",
                             fontFamily: "Proxima Nova",
                             paddingTop: "2rem"
                         }}
-                        textAlign={matches ? "center" : "start"}
+                        textAlign="center"
                         dangerouslySetInnerHTML={{ __html: content.description }}
                     >
                     </Typography>

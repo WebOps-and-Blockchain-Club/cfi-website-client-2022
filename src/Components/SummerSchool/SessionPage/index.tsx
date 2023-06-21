@@ -34,7 +34,6 @@ const SessionPage = () => {
     }>();
 
     useEffect(() => {
-        console.log(title)
         let x = content.sessions.find((s) => s.title == title?.split("-").join(" "))
         if (x) setData(x);
     }, [])
@@ -52,7 +51,7 @@ const SessionPage = () => {
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             Slot {data.slot} </Typography>
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
-                            Timings {data.time} </Typography>
+                            {data.time} </Typography>
                         {data.club && <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             {data.club} </Typography>}
                         {
@@ -129,7 +128,7 @@ const SessionPage = () => {
                                         return <Grid container direction="column"
                                         >
                                             <Grid item>
-                                                <HeadingSub white={`Day ${session.session_nums || index + 1} - `} red={session.title || ""}></HeadingSub>
+                                                <HeadingSub white={`Day ${session.session_nums || index + 1}`} red={session.title ? ` - ${session.title}` : ""}></HeadingSub>
                                             </Grid>
 
                                             {

@@ -51,7 +51,6 @@ const Register = () => {
         try {
             if (!submitData) setErrorMessage('Enter all the required fields')
             else {
-                console.log(submitData)
                 await SSRegisterMutation({
                     variables: {
                         addClubsInput: submitData

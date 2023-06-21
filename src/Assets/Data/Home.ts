@@ -76,10 +76,10 @@ export const CarouselData = [
 
 export const HighlightsData = () => {
   const data: any[] = [
-    {
-      url: "/summer-school",
-      title: "CFI Summer School, 2023",
-    },
+    // {
+    //   url: "/summer-school",
+    //   title: "CFI Summer School, 2023",
+    // },
     {
       url: "/open-house",
       image: Highlights1,
