@@ -49,6 +49,7 @@ import GalleryImage6 from "../../Assets/Images/Home/Gallery6.jpg";
 import GalleryImage7 from "../../Assets/Images/Home/Gallery7.jpg";
 import GalleryImage8 from "../../Assets/Images/Home/Gallery8.jpg";
 import { AchievementsData } from "./Achievements";
+import { title } from "process";
 
 export const CarouselData = [
   {
@@ -75,6 +76,10 @@ export const CarouselData = [
 
 export const HighlightsData = () => {
   const data: any[] = [
+    {
+      url: "/summer-school",
+      title: "CFI Summer School, 2023",
+    },
     {
       url: "/open-house",
       image: Highlights1,

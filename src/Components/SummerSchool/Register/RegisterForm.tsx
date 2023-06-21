@@ -5,13 +5,15 @@ import { CustomAutocomplete, CustomTextField } from '../../Shared/InputField';
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import content from "../../../Assets/Data/SummerSchool"
+import ErrorDialog from '../../Shared/Dialog/ErrorDialog';
 
 
 interface Props {
     handleSubmit: Function;
-    initialVals: { id: string; slot: string; title: string }[] | undefined
+    initialVals?: { id: string; slot: string; title: string }[] | undefined
+    search?: string
 }
-const RegisterForm = (props: Props) => {
+const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
     const data = content.sessions;
 
     // const [input, setInput] = useState<Partial<AddCLubsInput>>();
@@ -24,12 +26,15 @@ const RegisterForm = (props: Props) => {
     const onSubmit = (e: any) => {
         e.preventDefault();
         if (selectedClubs.length == 0) setError("Select atleast one club to proceed");
-        let slots = selectedClubs.map(club => club.slot).join(" ")
-        let clubIds = selectedClubs.map(club => club.id)
-        let final_inp = { name, contact, slots, clubIds }
-        props.handleSubmit(
-            final_inp
-        );
+        else {
+            let slots = selectedClubs.map(club => club.slot).join(" ")
+            let clubIds = selectedClubs.map(club => club.id)
+            let final_inp = { name, contact, slots, clubIds }
+            handleSubmit(
+                final_inp
+            );
+        }
+
     }
 
 
@@ -51,14 +56,19 @@ const RegisterForm = (props: Props) => {
     >([]);
 
     useEffect(() => {
-        console.log(props.initialVals)
-        if (props.initialVals) {
-            setSelectedClubs(props.initialVals);
+        if (initialVals) {
+            setSelectedClubs(initialVals);
         }
-    }, [props.initialVals]);
+    }, [initialVals]);
 
     return (
         <form style={{ width: "100%", paddingTop: "2rem" }}>
+            {
+                error && <ErrorDialog
+                    message={error}
+                    handleClose={() => setError(undefined)}
+                />
+            }
             <Grid
                 container
                 bgcolor={"primary.light"}
@@ -106,12 +116,13 @@ const RegisterForm = (props: Props) => {
                                 const session = option as any
                                 const isDisabled = isOtherClubsSelectedInSlot(session.slot);
                                 if (selectedClubs.includes(session)) selected = true;
+                                var checked = selected && selectedClubs.includes(session)
                                 return <li {...props}>
                                     <Checkbox
                                         icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
                                         checkedIcon={<CheckBoxIcon fontSize="small" />}
                                         style={{ marginRight: 8 }}
-                                        checked={selected && selectedClubs.includes(session)}
+                                        checked={checked}
                                         disabled={!selectedClubs.includes(session) && isDisabled}
                                     />
                                     <p style={{ margin: "0" }} className={!selectedClubs.includes(session) && isDisabled ? "disabled" : ""}>{"Slot " + session.slot + " - " + session.title} </p>

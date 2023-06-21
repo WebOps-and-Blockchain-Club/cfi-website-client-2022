@@ -42,8 +42,8 @@ const Register = () => {
                 state.push({ id, slot, title });
             }
         }
-        if (searchParams) content.sessions.forEach(session => { if (searchParams.get.name == session.title) state.push({ id: session.id, slot: session.slot, title: session.title }) })
-        console.log(state)
+        if (searchParams) content.sessions.forEach(session => { if (searchParams.get('name')?.split('-').join(" ") == session.title) state.push({ id: session.id, slot: session.slot, title: session.title }) })
+
         return state
     }
 
@@ -52,13 +52,12 @@ const Register = () => {
             if (!submitData) setErrorMessage('Enter all the required fields')
             else {
                 console.log(submitData)
-                console.log(new Date())
                 await SSRegisterMutation({
                     variables: {
                         addClubsInput: submitData
                     }
                 })
-                console.log(new Date())
+
             }
         } catch (error) {
             console.log(error)
@@ -91,7 +90,7 @@ const Register = () => {
                     />
                 )}
                 <Heading red='Register' white=''></Heading>
-                <RegisterForm initialVals={getInitVals()} handleSubmit={handleSubmit} />
+                <RegisterForm initialVals={getInitVals()} handleSubmit={handleSubmit} search={searchParams.get('name')?.split('-').join(" ")} />
             </CustomGridPage>
         </CustomBox>
     )

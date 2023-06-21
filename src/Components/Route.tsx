@@ -27,6 +27,8 @@ import Faqs from "./SIP/Faqs";
 import Addclub from "./Add/Addclub"
 import SummerSchool from "./SummerSchool";
 import Register from "./SummerSchool/Register/index";
+import { Session } from "inspector";
+import SessionPage from "./SummerSchool/SessionPage";
 
 interface Probs { }
 
@@ -101,6 +103,7 @@ const AppRoutes = (probs: Probs) => {
           ) : (
             <Navigate to="/summer-school" />
           )} />
+          < Route path="/summer-school/session/:title" element={<SessionPage />} />
 
 
           {/* ADMIN */}
