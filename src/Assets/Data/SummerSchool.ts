@@ -19,6 +19,7 @@ const data = {
   sessions: [
     {
       club: "Biotech Club",
+      id: "biotech-club",
       description:
         "We'll embark on a journey exploring various fields in biotechnology, ranging from cognitive neuroscience to protein modelling. We want to give all participants a flavour of the ongoing ideas in biotechnology.",
       title1: "Learn to Think ##Outside the Petri Dish!",
@@ -606,7 +607,6 @@ const data = {
         `,
       syllabus: "Unity and Blender",
     },
-
     {
       club: "Programming Club",
       title1: "Code##Crafts",
@@ -615,7 +615,7 @@ const data = {
       description:
         "Elevate your coding prowess at our Software Dev Camp and shape the future of technology",
       slot: "F1",
-      time: "5:00 PM - 7:30 PM (Tue, Thu, Sat)",
+      time: "6:45 PM - 7:45 PM (Tue, Thu, Sat)",
       id: "programming-club",
       fulldesc: `
         The camp comprises a total of 9 sessions, including one mini-project, a debugging contest (subject to feasibility), and a hands-on project as the culmination.<br/>
@@ -641,7 +641,7 @@ const data = {
       title1: "Competitive Coding ##Conclave",
       title: "Competitive Coding Conclave",
       poster: Programming2,
-      time: "5:00 PM - 7:30 PM (Tue, Thu, Sat)",
+      time: "5:00 PM - 6:30 PM (Tue, Thu, Sat)",
       description:
         "Unleash your coding potential and conquer the world of algorithms at our extremely beginner friendly Competitive Programming Camp!",
       slot: "F2",

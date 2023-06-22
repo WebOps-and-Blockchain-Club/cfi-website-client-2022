@@ -25,6 +25,7 @@ export type AddCLubsInput = {
   contact: Scalars['String'];
   name: Scalars['String'];
   slots: Scalars['String'];
+  smail: Scalars['String'];
 };
 
 export type Blog = {
@@ -161,6 +162,7 @@ export enum LoginType {
 
 export type Mutation = {
   addCLubs: User;
+  addSlot: Club;
   createBlog: Blog;
   createClub: Scalars['Boolean'];
   createComment: Comment;
@@ -182,6 +184,12 @@ export type Mutation = {
 
 export type MutationAddCLubsArgs = {
   addClubsInput: AddCLubsInput;
+};
+
+
+export type MutationAddSlotArgs = {
+  clubId: Scalars['String'];
+  slot: Scalars['String'];
 };
 
 
@@ -356,6 +364,7 @@ export type User = {
   projects?: Maybe<Array<Project>>;
   role: UserRole;
   slots?: Maybe<Scalars['String']>;
+  smail?: Maybe<Scalars['String']>;
 };
 
 export enum UserRole {

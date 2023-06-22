@@ -20,6 +20,8 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
 
     const [name, setName] = useState<string>();
     const [contact, setContact] = useState<string>();
+    const [smail, setSmail] = useState<string | undefined>();
+
 
     const [error, setError] = useState<string>();
 
@@ -29,7 +31,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
         else {
             let slots = selectedClubs.map(club => club.slot).join(" ")
             let clubIds = selectedClubs.map(club => club.id)
-            let final_inp = { name, contact, slots, clubIds }
+            let final_inp = { name, contact, smail, slots, clubIds }
             handleSubmit(
                 final_inp
             );
@@ -93,13 +95,23 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
                 <Grid item container gap={4}>
                     <CustomTextField
                         id="phone"
-                        label="Phone No."
+                        label="Mobile No."
                         variant="outlined"
                         size="small"
-                        required
                         fullWidth
                         value={contact}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setContact(e.target.value)}
+                    />
+                </Grid>
+                <Grid item container gap={4}>
+                    <CustomTextField
+                        id="smail"
+                        label="Email (Smail ID if from IITM)"
+                        variant="outlined"
+                        size="small"
+                        fullWidth
+                        value={smail}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSmail(e.target.value)}
                     />
                 </Grid>
                 {
@@ -125,7 +137,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
                                         checked={checked}
                                         disabled={!selectedClubs.includes(session) && isDisabled}
                                     />
-                                    <p style={{ margin: "0" }} className={!selectedClubs.includes(session) && isDisabled ? "disabled" : ""}>{"Slot " + session.slot + " - " + session.title} </p>
+                                    <p style={{ margin: "0" }} className={!selectedClubs.includes(session) && isDisabled ? "disabled" : ""}>{"Slot " + session.slot + ` ( ${session.time} ) ` + " - " + session.title + " by "} <b>{(session.club ?? session.clubs.join(" and "))}</b>  </p>
                                 </li>
                             }
                             }

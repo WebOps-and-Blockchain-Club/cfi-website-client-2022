@@ -127,10 +127,7 @@ const SessionPage = () => {
                                     data.sessionwise.map((session, index) => {
                                         return <Grid container direction="column"
                                         >
-                                            <Grid item>
-                                                <HeadingSub white={`Day ${session.session_nums || index + 1}`} red={session.title ? ` - ${session.title}` : ""}></HeadingSub>
-                                            </Grid>
-
+                                            <HeadingSub white={`Day ${session.session_nums || index + 1}`} red={session.title ? ` - ${session.title}` : ""}></HeadingSub>
                                             {
                                                 session.description &&
                                                 <Typography
