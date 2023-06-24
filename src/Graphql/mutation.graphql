@@ -67,3 +67,13 @@ mutation UploadImage($image: [Upload!]!) {
 mutation CreateClub($createClubInput: CreateClubInput!) {
   createClub(CreateClubInput: $createClubInput)
 }
+
+mutation AddCLubs($addClubsInput: AddCLubsInput!) {
+  addCLubs(addClubsInput: $addClubsInput) {
+    id
+    clubs {
+      id
+      slot
+    }
+  }
+}

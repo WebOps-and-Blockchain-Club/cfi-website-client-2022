@@ -71,14 +71,14 @@ function HeadingSub({ white, red }: { white: string; red: string }) {
   );
 }
 
-function HeadingSub1({ white, red }: { white: string; red: string }) {
+function HeadingSub1({ white, red, size }: { white: string; red: string; size?: "button" | "caption" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "inherit" | "subtitle1" | "subtitle2" | "body1" | "body2" | "overline" | undefined }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Grid item textAlign="center">
       <Typography
-        variant={matches ? "h5" : "h3"}
+        variant={matches ? "h6" : size || "h3"}
         color="primary.contrastText"
         sx={{
           display: "inline",
@@ -90,7 +90,7 @@ function HeadingSub1({ white, red }: { white: string; red: string }) {
         {white}
       </Typography>
       <Typography
-        variant={matches ? "h5" : "h3"}
+        variant={matches ? "h6" : size || "h3"}
         color="secondary"
         sx={{
           display: "inline",
@@ -101,7 +101,7 @@ function HeadingSub1({ white, red }: { white: string; red: string }) {
       >
         {red}
       </Typography>
-    </Grid>
+    </Grid >
   );
 }
 

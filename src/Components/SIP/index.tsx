@@ -27,7 +27,7 @@ import Logo from "../../Assets/Images/SIP/Logo.png";
 import CloseIcon from "@mui/icons-material/Close";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-interface Probs {}
+interface Probs { }
 interface Props {
   window?: () => Window;
   children: React.ReactElement;
@@ -74,30 +74,30 @@ const SIP = (probs: Probs, props: Props) => {
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
 
   const { state } = useContext(AuthContext)!;
-  const [contents, setContents]= React.useState<boolean>(false);
+  const [contents, setContents] = React.useState<boolean>(false);
 
   function disableScroll() {
     // Get the current page scroll position
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  
+
     // if any scroll is attempted,
     // set this to the previous value
-    window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
+    window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
     };
   }
-          
+
   function enableScroll() {
-      window.onscroll = function() {};
+    window.onscroll = function () { };
   }
 
   function toggleDrawer
-    (open: boolean)  {
-      setContents(open);
-    };
+    (open: boolean) {
+    setContents(open);
+  };
 
-  const handleRef= (event: React.MouseEvent<HTMLDivElement>, id: string) => {
+  const handleRef = (event: React.MouseEvent<HTMLDivElement>, id: string) => {
     const anchor2 = ((event.target as HTMLDivElement).ownerDocument || document).querySelector(
       `#${id}`,
     );
@@ -113,13 +113,13 @@ const SIP = (probs: Probs, props: Props) => {
     <CustomBox>
       <CustomGridPage>
         <ScrollTop {...props}>
-        <Fab size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
+          <Fab size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </ScrollTop>
         <Heading white="STUDENT " red="INNOVATION PROGRAM" />
-        <Button onClick={()=> toggleDrawer(true)}>
-          <div id="back-to-top-anchor" style={{color: "white"}}>Click to See Contents</div>
+        <Button onClick={() => toggleDrawer(true)}>
+          <div id="back-to-top-anchor" style={{ color: "white" }}>Click to See Contents</div>
         </Button>
         <Grid
           item
@@ -186,8 +186,8 @@ const SIP = (probs: Probs, props: Props) => {
           justifyContent={"center"}
         >
           {SIPData.quotes.map((n) => {
-            const {id}= {...n};
-            let data= {title: n.title, description: n.description, image: n.image};
+            const { id } = { ...n };
+            let data = { title: n.title, description: n.description, image: n.image };
             return (
               <MediaCard data={data} id={id} />
             )
@@ -206,20 +206,20 @@ const SIP = (probs: Probs, props: Props) => {
           </Grid>
         )}
         <Drawer
-        anchor={"left"}
-        variant={"persistent"}
-        open={contents}
-        onClose={()=> {
-          disableScroll();
-          toggleDrawer(false);
-          enableScroll();
-        }}
-        PaperProps={{
-          sx: {
-            backgroundColor: "primary.light",
-            color: "primary.contrastText",
-          },
-        }}
+          anchor={"left"}
+          variant={"persistent"}
+          open={contents}
+          onClose={() => {
+            disableScroll();
+            toggleDrawer(false);
+            enableScroll();
+          }}
+          PaperProps={{
+            sx: {
+              backgroundColor: "primary.light",
+              color: "primary.contrastText",
+            },
+          }}
         >
           <Grid pt={"20px"}>
             <Grid
@@ -258,38 +258,38 @@ const SIP = (probs: Probs, props: Props) => {
               </Button>
             </Grid>
             <Grid>
-                <List>
-                  {
-                    SIPData.quotes.map((n, index)=> {
-                      return (
-                        <ListItem disablePadding>
-                          <div style={{ width: "100%"}} onClick={e => {
-                            handleRef(e, n.id);
-                          }}>
-                            <ListItemButton>
-                              <ListItemText primary={(index+1) + '.  ' +n.title} />
-                            </ListItemButton>
-                          </div>
-                        </ListItem>
-                      )
-                    })
-                  }
-                  {
-                    state?.user?.role === UserRole.User && (
+              <List>
+                {
+                  SIPData.quotes.map((n, index) => {
+                    return (
                       <ListItem disablePadding>
-                        
-                        <div style={{ width: "100%"}} onClick={e => {
-                          handleRef(e, 'your-projects');
+                        <div style={{ width: "100%" }} onClick={e => {
+                          handleRef(e, n.id);
                         }}>
                           <ListItemButton>
-                            <ListItemText primary={'7.  Your Projects'} />
+                            <ListItemText primary={(index + 1) + '.  ' + n.title} />
                           </ListItemButton>
                         </div>
                       </ListItem>
                     )
-                  }
-                </List>
-              </Grid>
+                  })
+                }
+                {
+                  state?.user?.role === UserRole.User && (
+                    <ListItem disablePadding>
+
+                      <div style={{ width: "100%" }} onClick={e => {
+                        handleRef(e, 'your-projects');
+                      }}>
+                        <ListItemButton>
+                          <ListItemText primary={'7.  Your Projects'} />
+                        </ListItemButton>
+                      </div>
+                    </ListItem>
+                  )
+                }
+              </List>
+            </Grid>
           </Grid>
         </Drawer>
       </CustomGridPage>

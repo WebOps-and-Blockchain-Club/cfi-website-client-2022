@@ -20,6 +20,14 @@ export type Scalars = {
   Upload: any;
 };
 
+export type AddCLubsInput = {
+  clubIds: Array<Scalars['String']>;
+  contact: Scalars['String'];
+  name: Scalars['String'];
+  slots: Scalars['String'];
+  smail: Scalars['String'];
+};
+
 export type Blog = {
   author?: Maybe<Scalars['String']>;
   club?: Maybe<Club>;
@@ -50,6 +58,8 @@ export type Club = {
   id: Scalars['String'];
   name: Scalars['String'];
   projects: Array<Project>;
+  slot?: Maybe<Scalars['String']>;
+  users?: Maybe<Array<User>>;
 };
 
 export type Comment = {
@@ -146,10 +156,13 @@ export type LoginInput = {
 export enum LoginType {
   Admin = 'ADMIN',
   Blog = 'BLOG',
-  Sip = 'SIP'
+  Sip = 'SIP',
+  Summerschool = 'SUMMERSCHOOL'
 }
 
 export type Mutation = {
+  addCLubs: User;
+  addSlot: Club;
   createBlog: Blog;
   createClub: Scalars['Boolean'];
   createComment: Comment;
@@ -166,6 +179,17 @@ export type Mutation = {
   updateBlogStatus: Scalars['Boolean'];
   updateViews?: Maybe<Scalars['Boolean']>;
   uploadImage: Array<Image>;
+};
+
+
+export type MutationAddCLubsArgs = {
+  addClubsInput: AddCLubsInput;
+};
+
+
+export type MutationAddSlotArgs = {
+  clubId: Scalars['String'];
+  slot: Scalars['String'];
 };
 
 
@@ -332,11 +356,15 @@ export type TagBlogsArgs = {
 
 export type User = {
   blogs?: Maybe<Array<Blog>>;
+  clubs?: Maybe<Array<Club>>;
+  contact?: Maybe<Scalars['String']>;
   email: Scalars['String'];
   id: Scalars['String'];
   name: Scalars['String'];
   projects?: Maybe<Array<Project>>;
   role: UserRole;
+  slots?: Maybe<Scalars['String']>;
+  smail?: Maybe<Scalars['String']>;
 };
 
 export enum UserRole {
@@ -430,6 +458,13 @@ export type CreateClubMutationVariables = Exact<{
 
 export type CreateClubMutation = { createClub: boolean };
 
+export type AddCLubsMutationVariables = Exact<{
+  addClubsInput: AddCLubsInput;
+}>;
+
+
+export type AddCLubsMutation = { addCLubs: { id: string, clubs?: Array<{ id: string, slot?: string | null }> | null } };
+
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -444,6 +479,11 @@ export type GetMeBlogsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: string, description?: string | null, author?: string | null, views: number, readingTime?: number | null, status: BlogStatus, updatedAt: any, image?: { name: string, url: string } | null, club?: { id: string, name: string, email: string } | null, tags?: Array<{ id: string, name: string }> | null, createdBy: { id: string, name: string } }> | null } };
+
+export type GetMeSummerSchoolQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetMeSummerSchoolQuery = { getMe: { id: string, email: string, name: string, role: UserRole, clubs?: Array<{ id: string, slot?: string | null }> | null } };
 
 export type GetBlogsQueryVariables = Exact<{
   filters?: InputMaybe<FilterBlog>;
@@ -872,6 +912,43 @@ export function useCreateClubMutation(baseOptions?: ApolloReactHooks.MutationHoo
 export type CreateClubMutationHookResult = ReturnType<typeof useCreateClubMutation>;
 export type CreateClubMutationResult = ApolloReactCommon.MutationResult<CreateClubMutation>;
 export type CreateClubMutationOptions = ApolloReactCommon.BaseMutationOptions<CreateClubMutation, CreateClubMutationVariables>;
+export const AddCLubsDocument = gql`
+    mutation AddCLubs($addClubsInput: AddCLubsInput!) {
+  addCLubs(addClubsInput: $addClubsInput) {
+    id
+    clubs {
+      id
+      slot
+    }
+  }
+}
+    `;
+export type AddCLubsMutationFn = ApolloReactCommon.MutationFunction<AddCLubsMutation, AddCLubsMutationVariables>;
+
+/**
+ * __useAddCLubsMutation__
+ *
+ * To run a mutation, you first call `useAddCLubsMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddCLubsMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addCLubsMutation, { data, loading, error }] = useAddCLubsMutation({
+ *   variables: {
+ *      addClubsInput: // value for 'addClubsInput'
+ *   },
+ * });
+ */
+export function useAddCLubsMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<AddCLubsMutation, AddCLubsMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<AddCLubsMutation, AddCLubsMutationVariables>(AddCLubsDocument, options);
+      }
+export type AddCLubsMutationHookResult = ReturnType<typeof useAddCLubsMutation>;
+export type AddCLubsMutationResult = ApolloReactCommon.MutationResult<AddCLubsMutation>;
+export type AddCLubsMutationOptions = ApolloReactCommon.BaseMutationOptions<AddCLubsMutation, AddCLubsMutationVariables>;
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -1027,6 +1104,50 @@ export type GetMeBlogsLazyQueryHookResult = ReturnType<typeof useGetMeBlogsLazyQ
 export type GetMeBlogsQueryResult = ApolloReactCommon.QueryResult<GetMeBlogsQuery, GetMeBlogsQueryVariables>;
 export function refetchGetMeBlogsQuery(variables?: GetMeBlogsQueryVariables) {
       return { query: GetMeBlogsDocument, variables: variables }
+    }
+export const GetMeSummerSchoolDocument = gql`
+    query GetMeSummerSchool {
+  getMe {
+    id
+    email
+    name
+    role
+    clubs {
+      id
+      slot
+    }
+  }
+}
+    `;
+
+/**
+ * __useGetMeSummerSchoolQuery__
+ *
+ * To run a query within a React component, call `useGetMeSummerSchoolQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetMeSummerSchoolQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetMeSummerSchoolQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetMeSummerSchoolQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetMeSummerSchoolQuery, GetMeSummerSchoolQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetMeSummerSchoolQuery, GetMeSummerSchoolQueryVariables>(GetMeSummerSchoolDocument, options);
+      }
+export function useGetMeSummerSchoolLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetMeSummerSchoolQuery, GetMeSummerSchoolQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetMeSummerSchoolQuery, GetMeSummerSchoolQueryVariables>(GetMeSummerSchoolDocument, options);
+        }
+export type GetMeSummerSchoolQueryHookResult = ReturnType<typeof useGetMeSummerSchoolQuery>;
+export type GetMeSummerSchoolLazyQueryHookResult = ReturnType<typeof useGetMeSummerSchoolLazyQuery>;
+export type GetMeSummerSchoolQueryResult = ApolloReactCommon.QueryResult<GetMeSummerSchoolQuery, GetMeSummerSchoolQueryVariables>;
+export function refetchGetMeSummerSchoolQuery(variables?: GetMeSummerSchoolQueryVariables) {
+      return { query: GetMeSummerSchoolDocument, variables: variables }
     }
 export const GetBlogsDocument = gql`
     query GetBlogs($filters: FilterBlog) {

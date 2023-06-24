@@ -1,3 +1,4 @@
+import Achievements8 from "../Images/Community/Clubs/WebOpsAndBlockchain/Achievements4.jpeg";
 import Achievements7 from "../Images/Achievements/Achievements7.jpg";
 import Achievements6 from "../Images/Achievements/Achievements6.jpg";
 import Achievements5 from "../Images/Achievements/Achievements5.jpg";
@@ -5,9 +6,18 @@ import Achievements4 from "../Images/Achievements/Achievements4.jpg";
 import Achievements3 from "../Images/Achievements/Achievements3.jpg";
 import Achievements2 from "../Images/Achievements/Achievements2.jpg";
 import Achievements1 from "../Images/Achievements/Achievements1.jpg";
+
 import { link } from "./utils";
 
 export const AchievementsData = [
+  {
+    id: "students-of-webops-and-blockchain-club-conducts-the-first-ever-blockchain-based-elections-in-india",
+    title:
+      "Students of Webops and Blockchain Club conducts the first ever Blockchain based elections in India",
+    description:
+      "Our team embarked on the development of a blockchain-based voting system driven by our collective desire to revolutionize the electoral process. Recognizing the inherent challenges in traditional voting methods, we sought to enhance transparency, security, and immutability by harnessing the power of blockchain technology. By successfully conducting elections in our college using this innovative system, we not only demonstrated its effectiveness but also earned the distinguished honor of having our achievement registered in the India Book of Records as the first-ever blockchain-based election conducted in India.",
+    image: Achievements8,
+  },
   {
     id: "team-igem-bags-gold-medal-at-gogec-2021",
     title: "Team iGEM bags Gold Medal at GOGEC-2021",

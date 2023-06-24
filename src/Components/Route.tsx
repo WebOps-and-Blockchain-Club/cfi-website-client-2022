@@ -25,6 +25,11 @@ import ViewBlog from "./Blog/ViewBlog";
 import { AdminLoginPage } from "./Admin/AdminAuth";
 import Faqs from "./SIP/Faqs";
 import Addclub from "./Add/Addclub"
+import SummerSchool from "./SummerSchool";
+import Register from "./SummerSchool/Register/index";
+import { Session } from "inspector";
+import SessionPage from "./SummerSchool/SessionPage";
+import Profile from "./SummerSchool/Profile";
 
 interface Probs { }
 
@@ -86,6 +91,21 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+
+          {/* Summer School*/}
+          <Route path="/summer-school" element={<SummerSchool />} />
+          <Route path="/summer-school/register" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
+            <Register />
+          ) : (
+            <Navigate to="/summer-school" />
+          )} />
+          <Route path="/summer-school/profile" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
+            <Profile />
+          ) : (
+            <Navigate to="/summer-school" />
+          )} />
+          < Route path="/summer-school/session/:title" element={<SessionPage />} />
+
 
           {/* ADMIN */}
           <Route
