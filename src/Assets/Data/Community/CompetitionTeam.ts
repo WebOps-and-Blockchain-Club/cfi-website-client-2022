@@ -80,14 +80,14 @@ import AvishkarAchievements2b from "../../Images/Community/CompetitionTeam/Avish
 import AvishkarProject1 from "../../Images/Community/CompetitionTeam/Avishkar/Project1.jpg";
 import AvishkarProject2 from "../../Images/Community/CompetitionTeam/Avishkar/Project2.jpg";
 
-import AvishkarGallery1 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery1.jpg";
-import AvishkarGallery2 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery2.jpg";
-import AvishkarGallery3 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery3.jpg";
-import AvishkarGallery4 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery4.jpg";
-import AvishkarGallery5 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery5.jpg";
-import AvishkarGallery6 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery6.jpg";
-import AvishkarGallery7 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery7.jpg";
-import AvishkarGallery8 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery8.jpg";
+// import AvishkarGallery1 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery1.jpg";
+// import AvishkarGallery2 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery2.jpg";
+// import AvishkarGallery3 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery3.jpg";
+// import AvishkarGallery4 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery4.jpg";
+// import AvishkarGallery5 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery5.jpg";
+// import AvishkarGallery6 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery6.jpg";
+// import AvishkarGallery7 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery7.jpg";
+// import AvishkarGallery8 from "../../Images/Community/CompetitionTeam/Avishkar/Gallery8.jpg";
 import { link } from "../utils";
 
 //AGNIRATH
@@ -527,32 +527,32 @@ export const Teams: ITeams = {
       },
     ],
     website: "https://avishkarhyperloop.com/",
-    gallery: [
-      {
-        image: AvishkarGallery1,
-      },
-      {
-        image: AvishkarGallery2,
-      },
-      {
-        image: AvishkarGallery3,
-      },
-      {
-        image: AvishkarGallery4,
-      },
-      {
-        image: AvishkarGallery5,
-      },
-      {
-        image: AvishkarGallery6,
-      },
-      {
-        image: AvishkarGallery7,
-      },
-      {
-        image: AvishkarGallery8,
-      },
-    ],
+    // gallery: [
+    //   {
+    //     image: AvishkarGallery1,
+    //   },
+    //   {
+    //     image: AvishkarGallery2,
+    //   },
+    //   {
+    //     image: AvishkarGallery3,
+    //   },
+    //   {
+    //     image: AvishkarGallery4,
+    //   },
+    //   {
+    //     image: AvishkarGallery5,
+    //   },
+    //   {
+    //     image: AvishkarGallery6,
+    //   },
+    //   {
+    //     image: AvishkarGallery7,
+    //   },
+    //   {
+    //     image: AvishkarGallery8,
+    //   },
+    // ],
     email: "avishkarhyperloop@smail.iitm.ac.in",
     contacts: [
       {
