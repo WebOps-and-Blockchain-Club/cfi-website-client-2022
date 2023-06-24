@@ -40,6 +40,7 @@ import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
 import AvishkarLogo from "../../Assets/Images/CompetitionTeamLogo/Avishkar.png";
 import AnveshakLogo from "../../Assets/Images/CompetitionTeamLogo/Anveshak.png";
 import IGemLogo from "../../Assets/Images/CompetitionTeamLogo/IGem.png";
+import AgnirathLogo from "../../Assets/Images/CompetitionTeamLogo/Agnirath.png";
 
 import GalleryImage1 from "../../Assets/Images/Home/Gallery1.jpg";
 import GalleryImage2 from "../../Assets/Images/Home/Gallery2.jpg";
@@ -130,7 +131,7 @@ export const CompetitionTeamList = [
   },
   {
     name: "Team Agnirath",
-    logo: "",
+    logo: AgnirathLogo,
     desc: "",
     link: "/competition-teams/team-agnirath",
   },
