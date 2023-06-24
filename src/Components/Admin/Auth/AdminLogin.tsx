@@ -8,7 +8,7 @@ import Loading from "../../Shared/Dialog/Loading";
 import ErrorDialog from "../../Shared/Dialog/ErrorDialog";
 import SuccessDialog from "../../Shared/Dialog/SuccessDialog";
 
-interface Probs {}
+interface Probs { }
 
 const AdminLogin = (probs: Probs) => {
   const [errorMessage, setErrorMessage] = React.useState<string | undefined>();
@@ -29,6 +29,7 @@ const AdminLogin = (probs: Probs) => {
   }, [data?.login, error]);
 
   const handleLogin = async (googleData: any) => {
+
     try {
       await loginMutation({
         variables: {

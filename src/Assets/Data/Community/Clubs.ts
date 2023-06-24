@@ -3,35 +3,29 @@ import { IClubs } from "../../../Types";
 // Logo
 import PrintingLogo from "../../Images/ClubLogo/3DPrintingLogo.png";
 import AeroLogo from "../../Images/ClubLogo/AeroWhiteLogo.png";
-import AnalyticsLogo from "../../Images/ClubLogo/AnalyticsLogo.png";
-import CVILogo from "../../Images/ClubLogo/CVIWhiteLogo.png";
 import ElectronicsLogo from "../../Images/ClubLogo/ElectronicsLogo.png";
 import HorizonLogo from "../../Images/ClubLogo/HorizonWhiteLogo.png";
 import iBotLogo from "../../Images/ClubLogo/iBOTWhiteLogo.png";
-import iGEMLogo from "../../Images/ClubLogo/iGEMLogo.png";
 import ProductDesignLogo from "../../Images/ClubLogo/ProductDesignLogo.png";
 import ProgrammingLogo from "../../Images/ClubLogo/ProgrammingLogo.png";
 import SahaayLogo from "../../Images/ClubLogo/SahaayWhiteLogo.png";
 import EnvisageLogo from "../../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../../Images/ClubLogo/WebopsandBlockchainLogo.png";
+import AILogo from "../../Images/ClubLogo/AiLogo.png";
+import BiotechLogo from "../../Images/ClubLogo/BiotechLogo.png";
+import MathsLogo from "../../Images/ClubLogo/MathLogo.png";
 
 // CLUB HEADS
 import PrintingHead1 from "../../Images/ContactUs/Club/3DP_Suparn.jpg";
 import PrintingHead2 from "../../Images/ContactUs/Club/3DP_Nishanth.jpg";
 import AeroHead1 from "../../Images/ContactUs/Club/Aero_Abhigyan.png";
 import AeroHead2 from "../../Images/ContactUs/Club/Aero_Sanjeet.jpg";
-import AnalyticsHead1 from "../../Images/ContactUs/Club/Archish.png";
-import AnalyticsHead2 from "../../Images/ContactUs/Club/Abhiram.png";
-import CVIHead1 from "../../Images/ContactUs/Club/Nirupama.png";
-import CVIHead2 from "../../Images/ContactUs/Club/Abhipraay.png";
 import ElectronicsHead1 from "../../Images/ContactUs/Club/Electronics_Jayaram.jpeg";
 import ElectronicsHead2 from "../../Images/ContactUs/Club/Electronics_Mayur.jpeg";
 import HorizonHead1 from "../../Images/ContactUs/Club/Horizon_Aditya.jpg";
 import HorizonHead2 from "../../Images/ContactUs/Club/Horizon_Aadyot.jpeg";
 import iBotHead1 from "../../Images/ContactUs/Club/IBot_Satya_Sai.png";
 import iBotHead2 from "../../Images/ContactUs/Club/IBot_Abishek.jpg";
-import iGEMHead1 from "../../Images/ContactUs/Club/Shobhan.png";
-import iGEMHead2 from "../../Images/ContactUs/Club/Varshini.png";
 import ProductDesignHead1 from "../../Images/ContactUs/Club/PDC_Bharath.jpeg";
 import ProductDesignHead2 from "../../Images/ContactUs/Club/PDC_Swathi.jpg";
 import ProgrammingHead1 from "../../Images/ContactUs/Club/Programming_Chahel.jpeg";
@@ -43,11 +37,30 @@ import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Arjun.jpeg";
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/W&B_Rasagnya.jpeg";
 import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_Satwik.jpeg";
 import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/W&B_Akshay.jpg";
-import MathsHead from "../../Images/ContactUs/Club/Haricharan.png";
+import BiotechHead1 from "../../Images/ContactUs/Club/Biotech_Aditya.jpeg";
+import BiotechHead2 from "../../Images/ContactUs/Club/Biotech_Raghav.jpg";
+import MathsHead1 from "../../Images/ContactUs/Club/Maths_Haricharan.png";
+import MathsHead2 from "../../Images/ContactUs/Club/Maths_Sreeja.png";
+import AIHead1 from "../../Images/ContactUs/Club/Ai_Ruthwik.png";
+import AIHead2 from "../../Images/ContactUs/Club/Ai_Srikar.png";
+import AIHead3 from "../../Images/ContactUs/Club/Ai_Karthick.png";
 
-//ANALYTICS
-import AnalyticsAchievements1 from "../../Images/Community/Clubs/Analytics/Achievements1.gif";
-import AnalyticsAchievements2 from "../../Images/Community/Clubs/Analytics/Achievements2.png";
+//AERO
+import AeroAchievement1 from "../../Images/Community/Clubs/Aero/AeroAchievement1.jpeg";
+import AeroGallery1 from "../../Images/Community/Clubs/Aero/AeroGallery1.png";
+import AeroGallery2 from "../../Images/Community/Clubs/Aero/AeroGallery2.jpeg";
+import AeroGallery3 from "../../Images/Community/Clubs/Aero/AeroGallery3.jpeg";
+import AeroGallery4 from "../../Images/Community/Clubs/Aero/AeroGallery4.jpg";
+import AeroGallery5 from "../../Images/Community/Clubs/Aero/AeroGallery5.jpg";
+
+//AI
+import AIAchievements1 from "../../Images/Community/Clubs/AI/Achievements1.png";
+import AIAchievements2 from "../../Images/Community/Clubs/AI/Achievements2.png";
+import AIAchievements3 from "../../Images/Community/Clubs/AI/Achievements3.png";
+import AIAchievements4 from "../../Images/Community/Clubs/AI/Achievements4.png";
+
+import AIGallery1 from "../../Images/Community/Clubs/AI/Gallery1.png";
+import AIGallery2 from "../../Images/Community/Clubs/AI/Gallery2.png";
 
 //ELECTRONICS
 import ElectronicsAchievements1 from "../../Images/Community/Clubs/Electronics/Achievements1.jpeg";
@@ -107,7 +120,11 @@ import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png
 // WEBOPS AND BLOCKCHAIN
 import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements1.png";
 import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements2.png";
-import WebOpsAndBlockchainAchievement3 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements3.jpeg";
+import WebOpsAndBlockchainAchievement4 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements4.jpeg";
+
+//MATHS
+import MathsProject1 from "../../Images/Community/Clubs/Maths/Project1.png";
+import MathsProject2 from "../../Images/Community/Clubs/Maths/Project2.png";
 import { link } from "../utils";
 
 export const Clubs: IClubs = {
@@ -185,6 +202,12 @@ export const Clubs: IClubs = {
       "Being one of the earliest clubs founded in CFI, we are a 30-member family of drone and airplane enthusiasts whom the club has envisioned the dream to fly. We formally welcome new members each year, and our senior members take pride in backing the club—the club witnesses active participation with members from diverse branches of engineering and of different age groups. Regular workshops and timely meetings have kept the club lively throughout. The club has witnessed glory in several national and international competitions like IARC (International Aerial Robotics Competition); NAL MICAV (Micro Air Vehicle Flying Competition).  Building our own crafts and watching them take flight is a proud experience for each member and we hope to have young, inspired minds work onboard with us to share the joy of flying!!",
     achievements: [
       {
+        title: "4th place in ##NRC Competition",
+        description:
+          "4th Place in NRC Competition: Project GAIA participated and secured fourth place in Unacademy's National Robotics Competition 2022, competing against 200+ teams and over 800 participants from across India. Team Gaia presented an autonomous drone with an attached manipulator arm capable of scooping soil to plant seeds for conducting mass afforestation drives in areas inaccessible to humans. Currently, the idea and mechanism are in the patenting process.",
+        image: AeroAchievement1,
+      },
+      {
         description:
           "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
       },
@@ -206,116 +229,21 @@ export const Clubs: IClubs = {
         linkedIn: "https://www.linkedin.com/in/sanjeet-iyer-032849267/",
       },
     ],
-  },
-  // "maths-club": {
-  //   name: "Maths ##Club",
-  //   logo: AeroLogo,
-  //   oneLiner: "Getting High the ‘Wright’ Way !",
-  //   description:
-  //     "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
-  //   achievements: [
-  //     {
-  //       description:
-  //         "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
-  //     },
-  //   ],
-  //   email: "mathsclub.cfi@gmail.com",
-  //   contacts: [
-  //     {
-  //       name: "Haricharan B",
-  //       image: MathsHead,
-  //       email: "ae20b046@smail.iitm.ac.in",
-  //       phone: "9879253473",
-  //       linkedIn: "https://www.linkedin.com/in/pranit-zope-05b001215/",
-  //     },
-  //   ],
-  // },
-  "analytics-club": {
-    name: "Analytics## Club",
-    logo: AnalyticsLogo,
-    description: `The Analytics Club, CFI is a collective of passionate students working in many disciplines of Deep Learning and Data Science who apply these techniques to overcome problems in Natural Language Processing, Reinforcement Learning, Computer Vision, among others. Members of the club have worked in the industry as ML consultants, freelancers, and interns. Numerous club teams have managed to win national-level data science competitions such as Gartner HackElite, GS Quantify, Microsoft CodeFundo, Flipkart Grid, and Amex Ignite Program. Each year, chosen club teams compete in the Inter IIT Tech Meet, where they have secured Gold and Silver medals for their exceptional performance. Github - ${link(
-      "Link",
-      "https://github.com/analytics-club-iitm"
-    )}`,
-    achievements: [
+    gallery: [
       {
-        description: `Our ${link(
-          "project on style transfer",
-          "https://github.com/analytics-club-iitm/MiniProject-Style-Transfer"
-        )} gave the students a glimpse into what goes into making the funky camera filters that one uses on social media platforms. The unique aspect of this session was that it built the project from the ground up, ie: from setting up one laptop and access to a server to all the way building a deployable dashboard.`,
-        image: AnalyticsAchievements1,
+        image: AeroGallery2,
       },
       {
-        description: `We made and initiated a ${link(
-          "Community Run Paper Archive",
-          "https://github.com/analytics-club-iitm/Paper-Archive"
-        )} which lists summaries of various papers in the fields of Computer Vision, Natural Language Processing and Reinforcement Learning.`,
-        image: AnalyticsAchievements2,
-      },
-    ],
-    github: "https://github.com/analytics-club-iitm",
-    email: "analyticsclubcfi.iitm@gmail.com",
-    contacts: [
-      {
-        name: "Archish S",
-        image: AnalyticsHead1,
-        email: "archish@smail.iitm.ac.in",
-        phone: "8438322870",
-        linkedIn: "https://www.linkedin.com/in/archish-s-517b171b9/",
+        image: AeroGallery3,
       },
       {
-        name: "G Abhiram",
-        image: AnalyticsHead2,
-        email: "gabhiram@smail.iitm.ac.in",
-        phone: "9676617070",
-        linkedIn: "https://www.linkedin.com/in/abhiram-rao-b710141bb/",
-      },
-    ],
-  },
-  "cvi-club": {
-    name: "Computer Vision and## Intelligence Club",
-    logo: CVILogo,
-    description:
-      "The Computer Vision Group of IIT Madras was started in September 2009 with a vision of building a team of students with deep expertise in the technology of Computer Vision.   CVI has extraordinary mentorship and motivated and committed members, who have completed Industrial Projects by ITC, The Indian Railways, VDime, Eye hospital CHECK and multiple machine learning projects. <br /> The club undertakes projects ranging about topics from computer vision, deep learning, reinforcement learning and natural language processing. They are actively involved in projects and conduct sessions among our college community in these areas with the hope of impacting society with bleeding edge technology.",
-    achievements: [
-      {
-        title: "International Aerial ##Robotics Challenge ",
-        description:
-          "CVI represented India at the International Aerial Robotics Competition (IARC). We competed against elite teams from other top Universities in IARC and was acknowledged as the best vision team among all the participating teams.",
+        image: AeroGallery4,
       },
       {
-        title: "Helped Indian Railways ##automate railway line inspection ",
-        description:
-          "In this project for Indian Railways , CVI developed an infrared-based depth sensor technology to automate the overhead electric line inspection system with minimal human intervention , hence minimizing human risk and making the process cheaper.",
+        image: AeroGallery5,
       },
       {
-        title: "UAV’s For Disaster Management - ##Eye in the sky",
-        description:
-          "Developed an end-to-end solution based on AI and Computer Vision to improve the efficiency of rescue operations and disaster relief works.  Declared one of the top 20 innovative startups in India and was awarded INR 10 Lacs by IIGP 2.0 (India Innovation Growth Programme 2.0) .Awarded the Microsoft AI for Earth grant exclusively given to only 508 projects from all over the world.  Involved in discussions with the National Disaster Response Force (NDRF) and were invited to test our technology in their mock drills",
-      },
-      {
-        title: "HyperVerge - ##an IITM-incubated startup ",
-        description:
-          "HyperVerge is a startup that had its genesis in our CVI Club (previously known as CVG) of CFI. Today, HyperVerge is one of the top startups in the AI scene in the world. HyperVerge AI ranks high on the AI leaderboards published by NIST, HyperVerge software is used by millions of individuals on a daily basis. With large banks, e-commerce companies, fintechs as customers, HyperVerge AI is deployed at scale.",
-      },
-    ],
-    website: "https://iitmcvg.github.io/",
-    github: "https://github.com/iitmcvg",
-    email: "cvigroup.cfi@gmail.com",
-    contacts: [
-      {
-        name: "Nirupama S",
-        image: CVIHead1,
-        email: "ee20b092@smail.iitm.ac.in",
-        phone: "9962571729",
-        linkedIn: "https://in.linkedin.com/in/nirupama-sekar-1369241b3",
-      },
-      {
-        name: "Abhipraay Nevatia",
-        image: CVIHead2,
-        email: "me20b007@smail.iitm.ac.in",
-        phone: "9620774230",
-        linkedIn: "https://www.linkedin.com/in/abhipraay-nevatia/",
+        image: AeroGallery1,
       },
     ],
   },
@@ -539,43 +467,6 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  igem: {
-    name: "##iGem",
-    logo: iGEMLogo,
-    description:
-      "Team IGEM is a group of individuals passionate about the fascinating field of synthetic biology. They participate in the iGEM competition every year. For a competition so entirely steeped in innovation, collaboration, and education, the words ‘International Genetically Engineered Machine’ doesn’t quite portray the reality of things – the only machines at work here are the small, yet incredibly complex bundles of life growing on a Petri plate (and very occasionally, our brains)! <br /> The iGEM competition began in 2003 as a month-long course at the Massachusetts Institute of Technology. It eventually expanded over the years, with around 450 teams taking part in the 2019 edition. IIT-Madras has a long history with iGEM as well, having taken part in more than 10 editions since 2008, and has received many accolades at the international stage including, four gold medals, five silver medals, the Best Foundational Advance project, and Best New BioBrick Part or Device, Engineered in 2008, A Safety Commendation, Asia in 2011, Best New BioBrick Part, Natural, Asia in 2011, Best Human Practices Advance, Asia in 2013 and a nomination for Best Education and Public Engagement in 2019.",
-    achievements: [
-      {
-        title: "##Idec",
-        description:
-          "Won the “Science Contribution award” and “Industry Advisory award” and “Funny innovation award”",
-      },
-      {
-        description: "Igem Indian league won the GRAND PRIZE",
-      },
-      {
-        description:
-          "The team received a silver medal at the iGEM Giant Jamboree in 2016, a silver medal at the iGEM Giant Jamboree in 2017,  a Gold medal at the iGEM Giant Jamboree in 2018. The team also received a silver medal and was nominated for “Best Education & Public Engagement” for the Language Project in 2019. In 2021 they reached the Semifinals from ~ 30 teams that applied in the Synbio Power Pitch and won a Gold medal and the award for the Best Computational Project in GOGEC.",
-      },
-    ],
-    email: "igem@smail.iitm.ac.in",
-    contacts: [
-      {
-        name: "Shobhan Karthick",
-        image: iGEMHead1,
-        email: "be19b009@smail.iitm.ac.in",
-        phone: "6385188219",
-        linkedIn: "https://www.linkedin.com/in/shobhan-karthick/",
-      },
-      {
-        name: "Varshini S",
-        image: iGEMHead2,
-        email: "be19b006@smail.iitm.ac.in",
-        phone: "9840216729",
-        linkedIn: "https://www.linkedin.com/in/varshini-s-061190215/",
-      },
-    ],
-  },
   "product-design-club": {
     name: "Product Design## Club",
     logo: ProductDesignLogo,
@@ -787,6 +678,13 @@ export const Clubs: IClubs = {
     achievements: [
       {
         title:
+          "Students of Webops and Blockchain Club conducts the ##first ever Blockchain based elections in India",
+        description:
+          "Our team embarked on the development of a blockchain-based voting system driven by our collective desire to revolutionize the electoral process. Recognizing the inherent challenges in traditional voting methods, we sought to enhance transparency, security, and immutability by harnessing the power of blockchain technology. By successfully conducting elections in our college using this innovative system, we not only demonstrated its effectiveness but also earned the distinguished honor of having our achievement registered in the India Book of Records as the first-ever blockchain-based election conducted in India.",
+        image: WebOpsAndBlockchainAchievement4,
+      },
+      {
+        title:
           "Chennai Water Logging: \n \n ##An initiative to create a real-time flood map",
         description:
           "A platform that enables the public to report water logging details across the Chennai region. The data gathered through this platform aims to improve disaster preparedness and response in communities by gathering, sorting, and presenting data of flooding reports. This Crowd source data, curated through this platform will help to understand the reasons for waterlogging / inundation and help IIT Madras researchers to develop / design remedial measures that may be recommended to GCC, PWD and other relevant Govt. departments for their action.",
@@ -802,12 +700,6 @@ export const Clubs: IClubs = {
           "https://play.google.com/store/apps/details?id=com.cfi.clinsti"
         )}) and it got over 200 downloads within a month of its release.`,
         image: WebOpsAndBlockchainAchievement2,
-      },
-      {
-        title: "Summer School## Sessions",
-        description:
-          "We also conducted the Summer School in the month of July 2021 after the break of one year. 500+ students registered for the Summer School. Our club was among the clubs with the highest registrations. Lectures on HTML, CSS, JavaScript, Git and GitHub, Blockchain with hands on coding sessions and projects were conducted during the summer school.",
-        image: WebOpsAndBlockchainAchievement3,
       },
     ],
     email: "cfiwebops@smail.iitm.ac.in",
@@ -835,12 +727,142 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  // "maths-club": {
-  //   name: "Maths club",
-  //   logo: "",
-  //   description:
-  //     "The Mathematics Club was started in 2022 by a group of enthusiasts aspiring to build a math community and explore the beauty of mathematics at IIT Madras. Our club is a team of motivated individuals aspiring to work in different domains of mathematics. We conduct sessions and contests in topics like calculus, linear algebra, and probability while also delving into applied mathematics topics such as mathematics in machine learning, cryptography, and security. We also make use of mathematical animations to explain mind-bending topics to our audience.",
-  //   email: "",
-  //   contacts: [],
-  // },
+  "ai-club": {
+    name: "AI ##Club",
+    logo: AILogo,
+    oneLiner: "Translating Tensors",
+    email: "aiclubcfi@smail.iitm.ac.in",
+    description: `
+    <ul>
+    <li>The AI Club is a new club, introduced under the CFI umbrella formed by the merger of the previous two clubs: Analytics Club and CVI Club creating a unified venture that encompasses a broader scope of artificial intelligence, and promises even more exciting opportunities for our members.</li>
+    <li>We’re a passionate group of enthusiasts committed to tackling real-world challenges through the power of AI.</li>
+    <li>The primary vision of our club is to promote awareness of AI concepts and build an inclusive environment that exposes the student body to the field of AI.</li>
+    </ul>
+    `,
+    achievements: [
+      {
+        title: "Inter IIT ##Tech Meet 11.0",
+        image: AIAchievements1,
+        description:
+          "Secured podium finish in all Inter IIT Problem sets. Won Gold among all the participating IITs in DevRev (High Prep PS) and Bronze in CloudPhysician, ISRO (Mid Prep PS) events.",
+      },
+      {
+        title: "CISCO Convolve ##Hackathon",
+        image: AIAchievements2,
+        description:
+          "Winners of Convolve 2023, first-ever pan IIT AI/ML hackathon sponsored by Cisco, with a participation of over 700 teams.",
+      },
+      {
+        title: "ECCV ##2022",
+        image: AIAchievements3,
+        description:
+          "Published a paper on crack detection at the European Conference on Computer Vision (ECCV) in 2022 at Israel.",
+      },
+      {
+        title: "The Turing Prize ##(now AI Alignment Awards)",
+        image: AIAchievements4,
+        description:
+          "The Turing Prize, in collaboration with the Analytics Club IITM (now merged with CVI to form the AI Club) conducted sessions on AI Alignment over 4 days for the general student body with over 400+ attendees.",
+      },
+    ],
+    gallery: [
+      {
+        image: AIGallery1,
+      },
+      {
+        image: AIGallery2,
+      },
+    ],
+    contacts: [
+      {
+        name: "Ruthwik Chivukula",
+        phone: "9100173813",
+        email: "me21b166@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/ruthwik-chivukula-09027123a/",
+        image: AIHead1,
+      },
+      {
+        name: "Srikar Babu Gadipudi",
+        phone: "9573210009",
+        email: "ee21b138@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/srikar-babu-gadipudi-985b15250/",
+        image: AIHead2,
+      },
+      {
+        name: "Karthick Krishna M",
+        phone: "7338857571",
+        email: "ee21b067@smail.iitm.ac.in",
+        linkedIn: "http://linkedin.com/in/karthick-krishna-m-454777225",
+        image: AIHead3,
+      },
+    ],
+  },
+  "biotech-club": {
+    name: "Biotech ##Club",
+    logo: BiotechLogo,
+    oneLiner: "Thinking outside the Petri dish",
+    description:
+      "The Biotech Club, born in 2023 as a vertical under iGEM, is a group of passionate individuals determined to showcase the wonders of biotech to the student community. Our vision is to create an inclusive interdisciplinary haven where students can explore exciting ideas and endless possibilities in biotechnology. The club organizes a series of captivating events and engaging workshops to stimulate your brain, facing those ideas that keep you up at night (zombie apocalypse, anyone?). Apart from this, the club undertakes student projects in biotechnology. At the Biotech Club, the only prerequisite is a deep-seated desire to dive into biotechnology. The club offers a haven for anyone looking to get their hands dirty, ideate and dig deep to come up with solutions.<br /> <b>Together we’ll turn dreams into reality, one DNA strand at a time!</b>",
+    email: "biotechcfi@gmail.com",
+    contacts: [
+      {
+        name: "Aditya Ray",
+        email: "be21b002@smail.iitm.ac.in",
+        phone: "9903719964",
+        image: BiotechHead1,
+        linkedIn: "https://www.linkedin.com/in/aditya-ray-17001a23a/",
+      },
+      {
+        name: "Raghav",
+        email: "bs21b026@smail.iitm.ac.in",
+        phone: "9920486640",
+        image: BiotechHead2,
+        linkedIn: "https://www.linkedin.com/in/raghav-mathur-813230234",
+      },
+    ],
+    achievements: [
+      {
+        title: "Stay tuned!",
+        description:
+          "Remember, every expert was once a beginner. So, if our club's achievements seem a bit scarce at the moment, just think of us as experts in the making, with a touch of 'learning as we go' charm!",
+      },
+    ],
+  },
+  "mathematics-club": {
+    name: "Mathematics ##Club",
+    logo: MathsLogo,
+    email: "mathematicsclubiitm@gmail.com",
+    description:
+      "Mathematics club, CFI is a group of motivated and enthusiastic students conducting research on various topics in the field of Mathematics and aiming to develop a thriving Math culture. Started in November 2022, our team has conducted numerous workshops, problem-solving sessions, and contests, including our flagship event Integration Bee. Our areas of research include Probability and Statistics, Calculus, Game Theory, Galois Theory and Group Theory.",
+    projects: [
+      {
+        title: "Integration Bee",
+        image: MathsProject1,
+        description:
+          "We conducted our flagship event, IITM’s own Integration Bee in April 2023, in which over 150 students participated. Participants had a lot of fun solving some fancy integrals using common techniques like substitution, limit of sum, contour integrals, power series, and more!",
+      },
+      {
+        title: "Project on Monte Carlo Simulations",
+        image: MathsProject2,
+        description:
+          "Our first project on Monte Carlo Simulations involved numeric simulations of probability problems which cannot be solved analytically. Among the few projects in CFI to include freshmen, we came up with solutions to problems like natural selection and genetic drift, Arrhenius equation, and Kepler's law for arbitrary potentials.",
+      },
+    ],
+    contacts: [
+      {
+        name: "Haricharan B",
+        phone: "8248003579",
+        email: "haricharanb@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/haricharan-balasundaram/",
+        image: MathsHead1,
+      },
+      {
+        name: "Sreejaa Kumar",
+        phone: "9500039714",
+        email: "ee21b134@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/sreejaa-kumar/",
+        image: MathsHead2,
+      },
+    ],
+  },
 };

@@ -6,6 +6,9 @@ import { RoleAccess } from "../../Utils/config";
 import { ClubList, CompetitionTeamList } from "./Home";
 import BlogAuth from "../../Components/Blog/BlogAuth";
 import AdminAuth from "../../Components/Admin/AdminAuth";
+import RegisterButton from "../../Components/SummerSchool/Register/RegisterButton";
+import SummerSchoolAuth from "../../Components/SummerSchool/SummerSchoolAuth";
+import ProfileButton from "../../Components/SummerSchool/ProfileButton";
 
 export const NavbarItems = [
   {
@@ -33,9 +36,14 @@ export const NavbarItems = [
     name: "ACHIEVEMENTS",
     link: "/achievements",
   },
+  // {
+  //   name: "SIP'23",
+  //   link: "/sip",
+  //   newTab: true,
+  // },
   {
-    name: "SIP'23",
-    link: "/sip",
+    name: "Summer School '23",
+    link: "/summer-school",
     newTab: true,
   },
   {
@@ -147,6 +155,24 @@ export const NavbarSIPList = () => {
     },
     {
       component: SIPAuth,
+    },
+  ];
+};
+
+export const NavbarSummerSchoolList = () => {
+  return [
+    {
+      name: "HOME",
+      link: "/summer-school",
+    },
+    {
+      component: RegisterButton,
+    },
+    {
+      component: ProfileButton,
+    },
+    {
+      component: SummerSchoolAuth,
     },
   ];
 };
