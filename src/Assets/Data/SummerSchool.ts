@@ -586,7 +586,7 @@ const data = {
       ],
     },
     {
-      club: "envisageiitmadras@gmail.com",
+      club: "Team Envisage",
       title1: "Envisage : ##Into the Gameverse",
       title: "Envisage : Into the Gameverse",
       slot: "E",

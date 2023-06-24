@@ -828,7 +828,7 @@ export const Clubs: IClubs = {
       },
     ],
   },
-  "maths-club": {
+  "mathematics-club": {
     name: "Mathematics ##Club",
     logo: MathsLogo,
     email: "mathematicsclubiitm@gmail.com",

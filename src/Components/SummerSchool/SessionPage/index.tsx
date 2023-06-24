@@ -1,9 +1,9 @@
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import content from "../../../Assets/Data/SummerSchool"
 import Heading, { HeadingSub, HeadingSub1 } from '../../Shared/Heading'
-import { Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Chip, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import useWindowSize from '../../../Utils/windowSize'
 import { useEffect, useState } from 'react'
 import Loading from '../../Shared/Dialog/Loading';
@@ -15,6 +15,7 @@ const SessionPage = () => {
     const matches = useMediaQuery(theme.breakpoints.down("sm"));
     const matches2 = useMediaQuery(theme.breakpoints.down("md"));
     const [width] = useWindowSize();
+    const navigate = useNavigate();
 
     const [data, setData] = useState<{
         club?: string;
@@ -45,19 +46,42 @@ const SessionPage = () => {
                     <Heading white={data.title1.split("##")[0]} red={data.title1.split("##")[1]} />
                     <Grid
                         container
-                        marginTop={"2rem"}
                         direction="column"
                     >
+                        <Grid container gap={2} pt={1} justifyContent="center" paddingBottom={"5px"}>
+                            {data.club && <Chip
+                                label={data.club}
+                                sx={{
+                                    backgroundColor: "primary.contrastText",
+                                    ":hover": {
+                                        backgroundColor: "primary.contrastText",
+                                    },
+                                }}
+                                size="small"
+                                onClick={() => { navigate(`/clubs/${data.club!.toLowerCase().split(" ").join('-')}`); }}
+                            />}
+                            {
+                                data.clubs && data.clubs.map(club => <Chip
+                                    label={club}
+                                    sx={{
+                                        backgroundColor: "primary.contrastText",
+                                        ":hover": {
+                                            backgroundColor: "primary.contrastText",
+                                        },
+                                    }}
+                                    size="small"
+                                    onClick={() => { navigate(`/clubs/${club!.toLowerCase().split(" ").join('-')}`); }}
+                                />)
+                            }
+                        </Grid>
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             Slot {data.slot} </Typography>
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             {data.time} </Typography>
-                        {data.club && <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
-                            {data.club} </Typography>}
-                        {
-                            data.clubs && data.clubs.map(club => <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
-                                {club} </Typography>)
-                        }
+
+
+
+
 
                     </Grid>
 

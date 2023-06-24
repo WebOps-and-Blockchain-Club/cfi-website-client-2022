@@ -52,7 +52,7 @@ export type IClubs = {
   "webops-and-blockchain-club": IClub;
   "ai-club": IClub;
   "biotech-club": IClub;
-  "maths-club": IClub;
+  "mathematics-club": IClub;
 };
 
 export enum ClubsName {
@@ -67,7 +67,7 @@ export enum ClubsName {
   WEBOPS = "webops-and-blockchain-club",
   AI = "ai-club",
   BIOTECH = "biotech-club",
-  MATHS = "maths-club"
+  MATHS = "mathematics-club"
 
 }
 
