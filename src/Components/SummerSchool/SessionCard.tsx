@@ -30,7 +30,8 @@ function SessionCard({ heading, image, link, description, onSubmit }: MediaCardP
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    paddingBottom: "10px"
+                    paddingBottom: "20px",
+
                 }}
             >
                 <CardMedia
@@ -40,8 +41,8 @@ function SessionCard({ heading, image, link, description, onSubmit }: MediaCardP
                     sx={{
                         borderRadius: "20px 20px 0 0",
                         verticalAlign: "middle",
-                        objectFit: "cover",
-                        height: matches ? "50vw" : "270px",
+                        objectFit: "fill",
+                        height: matches ? "50vw" : "300px",
                     }}
                 />
                 <CardContent
@@ -52,6 +53,7 @@ function SessionCard({ heading, image, link, description, onSubmit }: MediaCardP
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "space-evenly",
+                        flex: "1 0 auto"
                     }}
                     style={{
                         paddingBottom: "20px",
@@ -92,12 +94,11 @@ function SessionCard({ heading, image, link, description, onSubmit }: MediaCardP
                             {description}
                         </Typography>
                     }
-
                 </CardContent>
                 <Button
                     sx={{
                         padding: "5px 20px",
-                        margin: "5px 20px",
+                        margin: "0 20px",
                         color: "primary.contrastText",
                         backgroundColor: "secondary.dark",
                         fontWeight: "bold",

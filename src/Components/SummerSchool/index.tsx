@@ -70,7 +70,6 @@ const SummerSchool = () => {
                                 onSubmit={onSubmit}
                             ></SessionCard>
                         </Grid>
-
                         )}
                     </Grid>
                 </CustomGridSection>

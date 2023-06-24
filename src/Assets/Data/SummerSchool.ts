@@ -128,7 +128,8 @@ const data = {
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
       id: "electronics-club",
       poster: Electronics,
-      description: "",
+      description:
+        "Unleash the opportunity to get proficiency in microcontroller programming using C++ and Micropython, Hands on projects in TinkerCad and Wokwi, learn to make a circuit diagram and compact it in a PCB using EasyEDA and fundamentals of digital electronics making your electronic devices work in a simulation software.",
       fulldesc: `Unleash the opportunity to get proficiency in microcontroller programming using C++ and Micropython, Hands on projects in TinkerCad and Wokwi, learn to make a circuit diagram and compact it in a PCB using EasyEDA and fundamentals of digital electronics making your electronic devices work in a simulation software.`,
       daywise: [
         "Start of 'Arduino,ESP32 and micropython' - Basics and Tinkercad",

@@ -33,6 +33,7 @@ import EnvisageLogo from "../Images/ClubLogo/EnvisageLogo.png";
 import WebOpsAndBlockchainLogo from "../Images/ClubLogo/WebopsandBlockchainLogo(withoutName).png";
 import BiotechLogo from "../Images/ClubLogo/BiotechLogo.png";
 import MathsLogo from "../Images/ClubLogo/MathLogo.png";
+import AILogo from "../Images/ClubLogo/AiLogo.png";
 
 import RaftarLogo from "../../Assets/Images/CompetitionTeamLogo/Raftar.png";
 import AbhiyaanLogo from "../../Assets/Images/CompetitionTeamLogo/Abhiyaan.png";
@@ -159,16 +160,6 @@ export const ClubList = [
     link: "/clubs/aero-club",
   },
   {
-    name: "Analytics Club",
-    logo: AnalyticsLogo,
-    link: "/clubs/analytics-club",
-  },
-  {
-    name: "Computer Vision & Intelligence Club",
-    logo: CVILogo,
-    link: "/clubs/cvi-club",
-  },
-  {
     name: "Electronics Club",
     logo: ElectronicsLogo,
     link: "/clubs/electronics-club",
@@ -207,6 +198,11 @@ export const ClubList = [
     name: "Webops and Blockchain Club",
     logo: WebOpsAndBlockchainLogo,
     link: "/clubs/webops-and-blockchain-club",
+  },
+  {
+    name: "AI Club",
+    logo: AILogo,
+    link: "/clubs/ai-club",
   },
   {
     name: "Biotech Club",

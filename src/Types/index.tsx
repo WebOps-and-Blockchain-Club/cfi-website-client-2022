@@ -42,8 +42,6 @@ export type IClub = {
 export type IClubs = {
   "3d-printing-club": IClub;
   "aero-club": IClub;
-  "analytics-club": IClub;
-  "cvi-club": IClub;
   "electronics-club": IClub;
   horizon: IClub;
   "ibot-club": IClub;
@@ -52,6 +50,7 @@ export type IClubs = {
   "team-sahaay": IClub;
   "team-envisage": IClub;
   "webops-and-blockchain-club": IClub;
+  "ai-club": IClub;
   "biotech-club": IClub;
   "maths-club": IClub;
 };
@@ -59,8 +58,6 @@ export type IClubs = {
 export enum ClubsName {
   PRINTING3D = "3d-printing-club",
   AERO = "aero-club",
-  ANALYTICS = "analytics-club",
-  CVI = "cvi-club",
   ELECTRONICS = "electronics-club",
   HORIZON = "horizon",
   PDC = "product-design-club",
@@ -68,8 +65,10 @@ export enum ClubsName {
   SAHAAY = "team-sahaay",
   ENVISAGE = "team-envisage",
   WEBOPS = "webops-and-blockchain-club",
+  AI = "ai-club",
   BIOTECH = "biotech-club",
   MATHS = "maths-club"
+
 }
 
 export type ITeam = {
