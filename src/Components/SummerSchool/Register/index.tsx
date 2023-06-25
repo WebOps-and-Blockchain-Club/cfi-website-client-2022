@@ -25,7 +25,12 @@ const Register = () => {
 
 
     const getInitVals = () => {
-        let registeredSessions = data?.getMe.clubs ?? [];
+        var registeredSessions = JSON.parse(JSON.stringify(data?.getMe.clubs ?? []));
+        console.log(registeredSessions);
+
+        for (var x of registeredSessions) {
+            x.slot = content.sessions.find((e) => e.id == x.id)?.slot
+        }
 
         let state: { id: any; slot: any; title: string }[] = []
         // for collabs
