@@ -41,11 +41,11 @@ export const NavbarItems = [
   //   link: "/sip",
   //   newTab: true,
   // },
-  // {
-  //   name: "Summer School '23",
-  //   link: "/summer-school",
-  //   newTab: true,
-  // },
+  {
+    name: "Summer School '23",
+    link: "/summer-school",
+    newTab: true,
+  },
   {
     name: "BLOGS",
     link: "/blog",
