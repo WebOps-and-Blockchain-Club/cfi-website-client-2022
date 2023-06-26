@@ -22,7 +22,7 @@ const Faqs = () => {
                     }}
                 >
                     {faqs.map((faq) => (
-                        <MediaCard data={{ title: '##' + faq.question, description: faq.answer }} />
+                        <MediaCard data={{ title: faq.question, description: faq.answer }} textAlign="left" />
                     ))}
                 </Grid>
             </CustomGridPage>

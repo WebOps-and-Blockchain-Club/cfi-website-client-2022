@@ -24,30 +24,29 @@ const Register = () => {
     ] = useAddCLubsMutation();
 
 
-    const getInitVals = () => {
+    const getRegistered = () => {
         var registeredSessions = JSON.parse(JSON.stringify(data?.getMe.clubs ?? []));
-        console.log(registeredSessions);
-
+        var registeredslots = data?.getMe.slots;
+        var registered = [];
+        console.log(registeredSessions)
         for (var x of registeredSessions) {
             x.slot = content.sessions.find((e) => e.id == x.id)?.slot
+            if (x.id == "product-design club" || x.id == "team-sahaay") x.slot = "C"
         }
-
-        let state: { id: any; slot: any; title: string }[] = []
-        // for collabs
         for (const item of registeredSessions) {
-            for (const session of content.sessions) {
-                if (session.ids && session.slot == item.slot) session.ids.forEach(id => state.push({ id: id, slot: item.slot, title: session.title }))
-            }
-        }
-
-        for (const item of registeredSessions) {
-            const matchingItem = content.sessions.find(new_item => { return new_item.id && new_item.id === item.id && new_item.slot === item.slot });
+            const matchingItem = content.sessions.find(new_item => { return (new_item.id && new_item.id === item.id || new_item.ids && item.id == "team-sahaay") && new_item.slot === item.slot });
             if (matchingItem) {
-                const { id, slot, title } = matchingItem;
-                state.push({ id, slot, title });
+                registered.push(matchingItem);
             }
         }
-        if (searchParams) content.sessions.forEach(session => { if (searchParams.get('name')?.split('-').join(" ") == session.title) state.push({ id: session.id, slot: session.slot, title: session.title }) })
+        if (registeredslots?.includes("F2")) registered.push(content.sessions[12])
+
+        return registered;
+    }
+    const getInitVals = () => {
+        let state: any;
+
+        if (searchParams) content.sessions.forEach(session => { if (searchParams.get('name')?.split('-').join(" ") == session.title) state = session })
 
         return state
     }
@@ -69,7 +68,7 @@ const Register = () => {
     }
 
     const submitCallBack = () => {
-        if (registerData?.addCLubs.id) navigate(`/summer-school/profile`);
+        if (registerData?.addCLubs.id) { navigate(`/summer-school/profile`); window.location.reload() }
     };
 
     useEffect(() => {
@@ -94,7 +93,7 @@ const Register = () => {
                     />
                 )}
                 <Heading red='Register' white=''></Heading>
-                <RegisterForm initialVals={getInitVals()} handleSubmit={handleSubmit} search={searchParams.get('name')?.split('-').join(" ")} />
+                <RegisterForm initialVals={getInitVals()} registered={getRegistered()} handleSubmit={handleSubmit} search={searchParams.get('name')?.split('-').join(" ")} />
             </CustomGridPage>
         </CustomBox>
     )

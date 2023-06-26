@@ -19,7 +19,9 @@ interface Probs {
   id?: string;
 }
 
+
 export default function MediaCard({ data, id, textAlign }: Probs) {
+
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));

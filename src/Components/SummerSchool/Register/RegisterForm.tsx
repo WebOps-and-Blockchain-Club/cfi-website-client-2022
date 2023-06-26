@@ -6,17 +6,18 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import content from "../../../Assets/Data/SummerSchool"
 import ErrorDialog from '../../Shared/Dialog/ErrorDialog';
+import { useNavigate } from 'react-router-dom';
 
 
 interface Props {
     handleSubmit: Function;
-    initialVals?: { id: string; slot: string; title: string }[] | undefined
+    initialVals?: any
+    registered?: any[]
     search?: string
 }
-const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
+const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) => {
     const data = content.sessions;
-
-    // const [input, setInput] = useState<Partial<AddCLubsInput>>();
+    const navigate = useNavigate()
 
     const [name, setName] = useState<string>();
     const [contact, setContact] = useState<string>();
@@ -29,14 +30,30 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
         e.preventDefault();
         if (selectedClubs.length == 0) setError("Select atleast one club to proceed");
         else {
+            console.log(selectedClubs)
             let slots = selectedClubs.map(club => club.slot).join(" ")
-            let clubIds = selectedClubs.map(club => club.id)
+
+            let clubIds: string[] = []
+            for (var x of selectedClubs) {
+                if (x.ids) clubIds.push(...x.ids)
+                if (x.id && !clubIds.includes(x.id)) clubIds.push(x.id)
+            }
+            console.log("clubIds")
+            console.log(clubIds)
             let final_inp = { name, contact, smail, slots, clubIds }
             handleSubmit(
                 final_inp
             );
         }
 
+    }
+
+    const isSlotRegistered = (slot: string) => {
+
+        for (var x of (registered ?? [])) {
+            if (slot == x.slot) return true;
+        }
+        return false
     }
 
 
@@ -47,20 +64,27 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
 
     const onAutoCompleteChange = (event: any, value: any) => {
         let club = value[value.length - 1];
-
-        if (value.length != 0 && isOtherClubsSelectedInSlot(club.slot) && value.length >= selectedClubs.length) value.pop()
+        if (value.length != 0 && ((isOtherClubsSelectedInSlot(club.slot) || isSlotRegistered(club.slot)) && value.length >= selectedClubs.length && !selectedClubs.includes(club)) || registered?.includes(club)) value.pop()
 
         setSelectedClubs(value as any);
     }
 
     const [selectedClubs, setSelectedClubs] = useState<
-        { id: string; slot: string; title: string }[]
+        { id: string; ids?: string[]; slot: string; title: string }[]
     >([]);
 
     useEffect(() => {
+        var initList = []
         if (initialVals) {
-            setSelectedClubs(initialVals);
+
+            if (registered?.includes(initialVals) && !isSlotRegistered(initialVals.slot)) initList.push(initialVals)
+            else {
+                setError('You cannot register for this due to a slot clash'); navigate("/summer-school/register", { replace: true });
+
+            }
+
         }
+        setSelectedClubs(initList);
     }, [initialVals]);
 
     return (
@@ -126,18 +150,21 @@ const RegisterForm = ({ handleSubmit, initialVals, search }: Props) => {
                             getOptionLabel={(option: any) => option.title}
                             renderOption={(props, option, { selected }) => {
                                 const session = option as any
-                                const isDisabled = isOtherClubsSelectedInSlot(session.slot);
+                                const isDisabled = isOtherClubsSelectedInSlot(session.slot) || registered?.includes(session) || isSlotRegistered(session.slot);
+
                                 if (selectedClubs.includes(session)) selected = true;
-                                var checked = selected && selectedClubs.includes(session)
+                                var checked = selected
+
+                                console.log(registered)
                                 return <li {...props}>
                                     <Checkbox
                                         icon={<CheckBoxOutlineBlankIcon fontSize="small" />}
                                         checkedIcon={<CheckBoxIcon fontSize="small" />}
                                         style={{ marginRight: 8 }}
-                                        checked={checked}
-                                        disabled={!selectedClubs.includes(session) && isDisabled}
+                                        checked={selected && isDisabled && !registered?.includes(session)}
+                                        disabled={(!selectedClubs.includes(session) && isDisabled) || registered?.includes(session)}
                                     />
-                                    <p style={{ margin: "0" }} className={!selectedClubs.includes(session) && isDisabled ? "disabled" : ""}>{"Slot " + session.slot + ` ( ${session.time} ) ` + " - " + session.title + " by "} <b>{(session.club ?? session.clubs.join(" and "))}</b>  </p>
+                                    <p style={{ margin: "0" }} className={(!selectedClubs.includes(session) && isDisabled) || registered?.includes(session) ? "disabled" : ""}>{"Slot " + session.slot + ` ( ${session.time} ) ` + " - " + session.title + " by "} <b>{(session.club ?? session.clubs.join(" and "))}</b>  </p>
                                 </li>
                             }
                             }

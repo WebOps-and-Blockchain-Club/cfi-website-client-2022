@@ -677,6 +677,11 @@ export const Clubs: IClubs = {
       "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects.",
     achievements: [
       {
+        title: "Launch of ##InstiSpace",
+        description:
+          "A community centric application oriented to solve problems of all students at IIT Madras. With its sections i.e. feeds,forums,lost and found and academics ,users problems like scrolling through smail for relevant information,connecting to people,keeping track of their courses and to check whether the mess menu is worth eating is solved.<br/>We intend to make this application address every possible issue a student might face studying and living in IITM.",
+      },
+      {
         title:
           "Students of Webops and Blockchain Club conducts the ##first ever Blockchain based elections in India",
         description:

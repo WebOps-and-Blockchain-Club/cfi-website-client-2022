@@ -213,7 +213,7 @@ export const ClubList = [
   {
     name: "Maths Club",
     logo: MathsLogo,
-    link: "/clubs/maths-club",
+    link: "/clubs/mathematics-club",
   },
 ];
 

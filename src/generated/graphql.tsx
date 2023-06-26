@@ -113,6 +113,11 @@ export type CreateTagsInput = {
   names: Array<Scalars['String']>;
 };
 
+export type DereristerInp = {
+  clubIds: Array<Scalars['String']>;
+  slot: Scalars['String'];
+};
+
 export type EditTagInput = {
   name?: InputMaybe<Scalars['String']>;
 };
@@ -171,6 +176,7 @@ export type Mutation = {
   createTags: Scalars['Boolean'];
   deleteAllProjects: Scalars['Boolean'];
   deleteComment: Scalars['Boolean'];
+  deregister: Scalars['Boolean'];
   editTag: Scalars['Boolean'];
   login: User;
   logout: Scalars['Boolean'];
@@ -230,6 +236,11 @@ export type MutationDeleteAllProjectsArgs = {
 
 export type MutationDeleteCommentArgs = {
   CommentId: Scalars['String'];
+};
+
+
+export type MutationDeregisterArgs = {
+  dereristerInp: DereristerInp;
 };
 
 
@@ -465,6 +476,13 @@ export type AddCLubsMutationVariables = Exact<{
 
 export type AddCLubsMutation = { addCLubs: { id: string, clubs?: Array<{ id: string, slot?: string | null }> | null } };
 
+export type DeregisterMutationVariables = Exact<{
+  dereristerInp: DereristerInp;
+}>;
+
+
+export type DeregisterMutation = { deregister: boolean };
+
 export type GetMeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -483,7 +501,7 @@ export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: stri
 export type GetMeSummerSchoolQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeSummerSchoolQuery = { getMe: { id: string, email: string, name: string, role: UserRole, clubs?: Array<{ id: string, slot?: string | null }> | null } };
+export type GetMeSummerSchoolQuery = { getMe: { id: string, email: string, name: string, role: UserRole, slots?: string | null, clubs?: Array<{ id: string, slot?: string | null }> | null } };
 
 export type GetBlogsQueryVariables = Exact<{
   filters?: InputMaybe<FilterBlog>;
@@ -949,6 +967,37 @@ export function useAddCLubsMutation(baseOptions?: ApolloReactHooks.MutationHookO
 export type AddCLubsMutationHookResult = ReturnType<typeof useAddCLubsMutation>;
 export type AddCLubsMutationResult = ApolloReactCommon.MutationResult<AddCLubsMutation>;
 export type AddCLubsMutationOptions = ApolloReactCommon.BaseMutationOptions<AddCLubsMutation, AddCLubsMutationVariables>;
+export const DeregisterDocument = gql`
+    mutation Deregister($dereristerInp: DereristerInp!) {
+  deregister(dereristerInp: $dereristerInp)
+}
+    `;
+export type DeregisterMutationFn = ApolloReactCommon.MutationFunction<DeregisterMutation, DeregisterMutationVariables>;
+
+/**
+ * __useDeregisterMutation__
+ *
+ * To run a mutation, you first call `useDeregisterMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useDeregisterMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [deregisterMutation, { data, loading, error }] = useDeregisterMutation({
+ *   variables: {
+ *      dereristerInp: // value for 'dereristerInp'
+ *   },
+ * });
+ */
+export function useDeregisterMutation(baseOptions?: ApolloReactHooks.MutationHookOptions<DeregisterMutation, DeregisterMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useMutation<DeregisterMutation, DeregisterMutationVariables>(DeregisterDocument, options);
+      }
+export type DeregisterMutationHookResult = ReturnType<typeof useDeregisterMutation>;
+export type DeregisterMutationResult = ApolloReactCommon.MutationResult<DeregisterMutation>;
+export type DeregisterMutationOptions = ApolloReactCommon.BaseMutationOptions<DeregisterMutation, DeregisterMutationVariables>;
 export const GetMeDocument = gql`
     query GetMe {
   getMe {
@@ -1112,6 +1161,7 @@ export const GetMeSummerSchoolDocument = gql`
     email
     name
     role
+    slots
     clubs {
       id
       slot

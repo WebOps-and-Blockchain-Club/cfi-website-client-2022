@@ -24,6 +24,12 @@ const data = {
         "We'll embark on a journey exploring various fields in biotechnology, ranging from cognitive neuroscience to protein modelling. We want to give all participants a flavour of the ongoing ideas in biotechnology.",
       title1: "Learn to Think ##Outside the Petri Dish!",
       title: "Learn to Think Outside the Petri Dish!",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/H96jWKLfgPE0aOlQOfuklH",
+        },
+      ],
       slot: "A",
       poster: Biotech,
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
@@ -81,6 +87,12 @@ const data = {
       title1: "Dwell into the ##Basics of Mathematics",
       title: "Dwell into the Basics of Mathematics",
       slot: "A",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/FQ5cyBwgmqo3aDNrd2h34q",
+        },
+      ],
       poster: Maths,
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
       id: "computer-vision and intelligence club",
@@ -125,6 +137,12 @@ const data = {
       title1: "Voltage ##Voyage",
       title: "Voltage Voyage",
       slot: "A",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/IZ3rpkTVIwqF6N99JfDUgF",
+        },
+      ],
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
       id: "electronics-club",
       poster: Electronics,
@@ -153,6 +171,12 @@ const data = {
       id: "aero-club",
       slot: "B",
       poster: Aero,
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/KpC0eCXsE1oJsa97XtvMm5",
+        },
+      ],
       time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
       fulldesc: `
       <b>Aerial Robotics:</b>
@@ -248,6 +272,12 @@ const data = {
         "This Summer School explore the Quantum Realm, Special Relativity, get to know the physics behind the particles, use of Statistical Physics in ML and how ML can be used in the Astronomy.",
       id: "horizon",
       slot: "B",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/LVJa450ymIvKpcim1U5GJf",
+        },
+      ],
       poster: Horizon,
       time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
       fulldesc: `
@@ -345,7 +375,12 @@ const data = {
         "RoboMaze: Constructing and Training Robots to ##Tackle Challenging Mazes",
       title:
         "RoboMaze: Constructing and Training Robots to Tackle Challenging Mazes",
-
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/FAiU9dXs3Tg8bBXvFelvxw",
+        },
+      ],
       description:
         "Embark on an Exciting Journey as iBot Club Presents an *Interactive 9-Session* Summer School, Unleashing the Secrets of Maze-Solving Robots! Learn the Art of Building Intelligent Bots that Navigate Mazes with Precision and Problem-Solving Prowess by Engaging in *Hands-On Offline Sessions* and an *Electrifying Maze Solving Tournament*.",
       id: "ibot-club",
@@ -386,6 +421,12 @@ const data = {
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
       ids: ["product-design club", "team-sahaay"],
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
+        },
+      ],
       poster: PDC_Sahaay,
       description:
         "This intensive 3-week program will empower you with the skills and knowledge at the intersection of technology, design, and business, unlocking your potential to create innovative solutions. From mastering design tools to understanding market dynamics, this workshop will equip you with the tools and mindset to thrive in the digital age.",
@@ -507,6 +548,12 @@ const data = {
       title: "Summer School '23 3D Printing club",
       id: "3d-priting club",
       slot: "D",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/DVLcFD6MyP9L32HjtHgoaT",
+        },
+      ],
       time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
       poster: _3DP,
       description:
@@ -565,6 +612,12 @@ const data = {
       club: "AI Club (Analytics/CVI)",
       title1: "Intro to ##ML, DL, and Computer Vision",
       title: "Intro to ML, DL, and Computer Vision",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/D1zKzaCEk1N7jlqzoJBB7E",
+        },
+      ],
       poster: AI,
       fulldesc:
         "A series of 9 sessions that span the foundation topics of Artificial Intelligence, covering everything from scratch. Discover the limitless possibilities of AI with us!",
@@ -590,6 +643,12 @@ const data = {
       title1: "Envisage : ##Into the Gameverse",
       title: "Envisage : Into the Gameverse",
       slot: "E",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/I491vu75opALURBiRPhfwt",
+        },
+      ],
       time: "5:00 PM - 7:30 PM (Mon, Wed, Fri)",
       poster: Envisage,
       description:
@@ -613,6 +672,12 @@ const data = {
       title1: "Code##Crafts",
       title: "CodeCrafts",
       poster: Programming1,
+      links: [
+        {
+          name: "Linktree",
+          link: "https://linktr.ee/PC_23_24",
+        },
+      ],
       description:
         "Elevate your coding prowess at our Software Dev Camp and shape the future of technology",
       slot: "F1",
@@ -641,6 +706,12 @@ const data = {
       club: "Programming Club",
       title1: "Competitive Coding ##Conclave",
       title: "Competitive Coding Conclave",
+      links: [
+        {
+          name: "Linktree",
+          link: "https://linktr.ee/PC_23_24",
+        },
+      ],
       poster: Programming2,
       time: "5:00 PM - 6:30 PM (Tue, Thu, Sat)",
       description:

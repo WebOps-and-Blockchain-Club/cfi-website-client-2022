@@ -67,6 +67,7 @@ query GetMeSummerSchool {
     email
     name
     role
+    slots
     clubs {
       id
       slot
