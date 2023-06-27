@@ -1,21 +1,29 @@
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { createSearchParams, useNavigate, useParams } from 'react-router-dom'
 import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import content from "../../../Assets/Data/SummerSchool"
 import Heading, { HeadingSub, HeadingSub1 } from '../../Shared/Heading'
-import { Chip, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Button, Chip, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import useWindowSize from '../../../Utils/windowSize'
 import { useEffect, useState } from 'react'
 import Loading from '../../Shared/Dialog/Loading';
 import { textAlign } from '@mui/system';
+
 
 const SessionPage = () => {
     const { title } = useParams<{ title: string }>()
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("sm"));
     const matches2 = useMediaQuery(theme.breakpoints.down("md"));
-    const [width] = useWindowSize();
     const navigate = useNavigate();
+    const onSubmit = (title: string) => {
+        const nameQueryParam = title.split(" ").join('-');
+        const searchParams = createSearchParams({ name: nameQueryParam }).toString();
+        const destination = `/summer-school/register?${searchParams}`;
+
+        console.log(destination)
+        navigate(destination);
+    }
 
     const [data, setData] = useState<{
         club?: string;
@@ -79,8 +87,26 @@ const SessionPage = () => {
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             {data.time} </Typography>
 
-
-
+                        <Button
+                            sx={{
+                                padding: "5px 20px",
+                                width: "fit-content",
+                                margin: "auto",
+                                marginTop: "1.5rem",
+                                color: "primary.contrastText",
+                                backgroundColor: "secondary.dark",
+                                fontWeight: "bold",
+                                fontSize: "16px",
+                                ":hover": {
+                                    backgroundColor: "secondary.main",
+                                    color: "primary.contrastText",
+                                },
+                            }}
+                            type="submit"
+                            onClick={(e: any) => { e.preventDefault(); onSubmit(data.title) }}
+                        >
+                            REGISTER
+                        </Button>
 
 
                     </Grid>

@@ -10,10 +10,11 @@ type MediaCardProps = {
     image: string;
     link: string;
     description?: string | undefined;
-    onSubmit: Function
+    onSubmit: Function;
+    clubs?: any
 };
 
-function SessionCard({ heading, image, link, description, onSubmit }: MediaCardProps) {
+function SessionCard({ heading, image, link, description, onSubmit, clubs }: MediaCardProps) {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down("sm"));
     return (
@@ -74,15 +75,29 @@ function SessionCard({ heading, image, link, description, onSubmit }: MediaCardP
                     }
                     {
                         <Grid item>
-                            description && <HeadingSub1 white={heading.split("##")[0]} red={heading.split("##")[1]} size="h5"></HeadingSub1>
+                            <HeadingSub1 white={heading.split("##")[0]} red={heading.split("##")[1]} size="h5"></HeadingSub1>
                         </Grid>
 
+                    }
+                    {
+                        clubs?.map((club: string) => <Typography
+                            component="p"
+                            color="primary.contrastText"
+                            sx={{
+                                textAlign: "center",
+                                fontSize: matches ? "20px" : "22px",
+                                letterSpacing: "1px",
+                                padding: "3px"
+                            }}
+                        >
+                            <b> {club}</b>
+                        </Typography>)
                     }
 
                     {
                         description && <Typography
                             component="div"
-                            color="primary.contrastText"
+                            color="#9BA4B5"
                             flex="1"
                             sx={{
                                 textAlign: "left",

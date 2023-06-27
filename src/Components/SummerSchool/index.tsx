@@ -17,7 +17,7 @@ const SummerSchool = () => {
     const onSubmit = (title: string) => {
 
         const nameQueryParam = title.split(" ").join('-');
-        const searchParams = createSearchParams({ name: nameQueryParam }).toString();
+        const searchParams = createSearchParams({ name: nameQueryParam.trim() }).toString();
         const destination = `register?${searchParams}`;
 
         navigate(destination);
@@ -68,6 +68,7 @@ const SummerSchool = () => {
                                 description={session.description}
                                 image={session.poster!}
                                 onSubmit={onSubmit}
+                                clubs={session.club ? [session.club] : session.clubs}
                             ></SessionCard>
                         </Grid>
                         )}

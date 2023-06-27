@@ -74,15 +74,15 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
     >([]);
 
     useEffect(() => {
+        console.log('init')
+        console.log(initialVals)
         var initList = []
         if (initialVals) {
-
-            if (registered?.includes(initialVals) && !isSlotRegistered(initialVals.slot)) initList.push(initialVals)
+            if (!registered?.includes(initialVals) && !isSlotRegistered(initialVals.slot)) initList.push(initialVals)
             else {
                 setError('You cannot register for this due to a slot clash'); navigate("/summer-school/register", { replace: true });
 
             }
-
         }
         setSelectedClubs(initList);
     }, [initialVals]);
