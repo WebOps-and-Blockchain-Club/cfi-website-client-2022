@@ -180,10 +180,10 @@ function Concepts() {
               height: matches
                 ? "200px"
                 : matches2
-                ? "325px"
-                : matcheslg
-                ? " 250px"
-                : "300px",
+                  ? "325px"
+                  : matcheslg
+                    ? " 250px"
+                    : "300px",
             }}
           >
             <img

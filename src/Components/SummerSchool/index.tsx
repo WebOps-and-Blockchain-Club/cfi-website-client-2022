@@ -1,10 +1,12 @@
 import CustomBox, { CustomGridPage, CustomGridSection } from '../Shared/CustomBox'
 import Heading, { HeadingSub, HeadingSub1 } from '../Shared/Heading'
 import content from "../../Assets/Data/SummerSchool"
-import { Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography, useMediaQuery, useTheme } from '@mui/material'
 import useWindowSize from '../../Utils/windowSize'
 import SessionCard from './SessionCard'
 import { useNavigate, createSearchParams } from 'react-router-dom'
+import { useState } from 'react'
+import { CustomAutocomplete, CustomInputLabel, CustomSelect } from '../Shared/InputField'
 
 const SummerSchool = () => {
     const theme = useTheme();
@@ -14,6 +16,7 @@ const SummerSchool = () => {
     const [width] = useWindowSize();
     const navigate = useNavigate()
 
+    const [slot, setSlot] = useState<string | null>(null);
     const onSubmit = (title: string) => {
 
         const nameQueryParam = title.split(" ").join('-');
@@ -21,6 +24,11 @@ const SummerSchool = () => {
         const destination = `register?${searchParams}`;
 
         navigate(destination);
+    }
+
+    const onChange = (event: any, value: any) => {
+        console.log(value);
+        setSlot(value)
     }
     return (
 
@@ -32,6 +40,17 @@ const SummerSchool = () => {
                     <Typography
                         variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
                         style={{
+                            color: "#BAD7E9",
+                            fontFamily: "Proxima Nova",
+                            paddingTop: "2rem"
+                        }}
+                        textAlign="center"
+                    >
+                        <b>{content.time}</b>
+                    </Typography>
+                    <Typography
+                        variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
+                        style={{
                             color: "#d6d6d6",
                             fontFamily: "Proxima Nova",
                             paddingTop: "2rem"
@@ -40,11 +59,38 @@ const SummerSchool = () => {
                         dangerouslySetInnerHTML={{ __html: content.description }}
                     >
                     </Typography>
+
                 </Grid>
 
 
                 <CustomGridSection>
                     <Heading white='All The ' red='Sessions' ></Heading>
+                    <Grid item paddingTop={"1rem"}>
+                        <FormControl>
+                            <CustomAutocomplete
+
+                                id="slot-select"
+                                renderInput={(params) => (
+                                    <TextField {...params} label="Filter By Slot" />
+                                )}
+                                sx={{ minWidth: "170px", justifyContent: "center" }}
+                                multiple={false}
+                                value={slot}
+                                options={["A", "B", "C", "D", "E", "F"]}
+                                getOptionLabel={(option: any) => option}
+                                renderOption={(props, option, { selected }) => {
+                                    return <li {...props} style={{ textAlign: "center" }}>
+                                        <p style={{ height: "5px" }}>    {(option as any)}</p>
+                                    </li>
+
+                                }
+                                }
+                                onChange={onChange}
+                            />
+
+                        </FormControl>
+                    </Grid>
+
                     <Grid
                         item
                         display="grid"
@@ -61,17 +107,21 @@ const SummerSchool = () => {
                         sx={{ height: "100%", padding: 0 }}
                         columnGap={{ xs: 3, sm: 4, md: 5, lg: 10 }}
                     >
-                        {content.sessions.map(session => <Grid item>
-                            <SessionCard
-                                heading={session.title1}
-                                link={`/summer-school/session/${session.title.split(" ").join('-')}`}
-                                description={session.description}
-                                image={session.poster!}
-                                onSubmit={onSubmit}
-                                clubs={session.club ? [session.club] : session.clubs}
-                            ></SessionCard>
-                        </Grid>
-                        )}
+                        {
+                            content.sessions.map(session => {
+                                if (slot == null || session.slot.includes(slot.toUpperCase())) return <Grid item>
+                                    <SessionCard
+                                        heading={session.title1}
+                                        link={`/summer-school/session/${session.title.split(" ").join('-')}`}
+                                        description={session.description}
+                                        image={session.poster!}
+                                        onSubmit={onSubmit}
+                                        clubs={session.club ? [session.club] : session.clubs}
+                                    ></SessionCard>
+                                </Grid>
+                            }
+
+                            )}
                     </Grid>
                 </CustomGridSection>
             </CustomGridPage>

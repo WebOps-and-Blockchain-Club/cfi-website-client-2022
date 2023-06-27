@@ -225,7 +225,7 @@ const Profile = () => {
                                                 margin: 'auto',
                                             }}
                                         >
-                                            <HashLink to={`/summer-school/session/${content.sessions[12].title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
+                                            <HashLink to={`/summer-school/session/${content.sessions[11].title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
                                                 <CardContent
                                                     sx={{
                                                         px: "30px",
@@ -239,7 +239,7 @@ const Profile = () => {
                                                     }}
                                                 >
 
-                                                    <HeadingSub1 white={content.sessions[12].title1.split('##')[0]} red={content.sessions[12].title1.split('##')[1]} size="h6" />
+                                                    <HeadingSub1 white={content.sessions[11].title1.split('##')[0]} red={content.sessions[11].title1.split('##')[1]} size="h6" />
 
                                                     <Typography
                                                         component="div"
@@ -248,7 +248,7 @@ const Profile = () => {
                                                             textAlign: "center",
                                                             fontSize: matches ? "16px" : "20px",
                                                         }}>
-                                                        {"Slot " + content.sessions[12].slot}
+                                                        {"Slot " + content.sessions[11].slot}
                                                     </Typography>
                                                     <Typography
                                                         component="div"
@@ -257,24 +257,24 @@ const Profile = () => {
                                                             textAlign: "center",
                                                             fontSize: matches ? "16px" : "20px",
                                                         }}>
-                                                        {"Slot " + content.sessions[12].time}
+                                                        {"Slot " + content.sessions[11].time}
                                                     </Typography>
                                                     {
-                                                        content.sessions[12].club && <Typography
+                                                        content.sessions[11].club && <Typography
                                                             component="div"
                                                             color="primary.contrastText"
                                                             sx={{
                                                                 textAlign: "center",
                                                                 fontSize: matches ? "16px" : "20px",
                                                             }}>
-                                                            {content.sessions[12].club}
+                                                            {content.sessions[11].club}
                                                         </Typography>
                                                     }
 
                                                 </CardContent>
                                             </HashLink>
                                             {
-                                                content.sessions[12].links?.map(e => {
+                                                content.sessions[11].links?.map(e => {
                                                     return <Typography
                                                         component="a"
                                                         target='_blank'
@@ -306,7 +306,7 @@ const Profile = () => {
                                                     },
                                                 }}
                                                 type="submit"
-                                                onClick={() => onSubmit(content.sessions[12].slot, [content.sessions[12].id!])}
+                                                onClick={() => onSubmit(content.sessions[11].slot, [content.sessions[12].id!])}
                                             >
                                                 DEREGISTER
                                             </Button>

@@ -16,6 +16,7 @@ import { link } from "./utils";
 const data = {
   description:
     "CFI presents the summer school 2023 in this summer break conducted by all the 13 clubs covering  different areas of Technology, Science, and Engineering!It offers the Freshie Youth, who have a lot to EXPLORE, the chance to learn and experience completely new things in the Open-to-All CFI .For students who aspire to represent IIT Madras at the upcoming Inter IIT Tech Meet, the summer schools will also serve as training ground. Participation shall serve as one of the selection criteria for the contingent.<br />These sessions will be conducted by the club heads and coordinators.An E-certificate will be provided to all the participants who have attended above 80% of the live sessions and have completed all the quizzes and tasks in the registered sessions.<br />Its open for all the students and offered for free of cost.",
+  time: "JULY 6TH to JULY 26TH",
   sessions: [
     {
       club: "Biotech Club",
@@ -669,41 +670,6 @@ const data = {
     },
     {
       club: "Programming Club",
-      title1: "Code##Crafts",
-      title: "CodeCrafts",
-      poster: Programming1,
-      links: [
-        {
-          name: "Linktree",
-          link: "https://linktr.ee/PC_23_24",
-        },
-      ],
-      description:
-        "Elevate your coding prowess at our Software Dev Camp and shape the future of technology",
-      slot: "F1",
-      time: "6:45 PM - 7:45 PM (Tue, Thu, Sat)",
-      id: "programming-club",
-      fulldesc: `
-        The camp comprises a total of 9 sessions, including one mini-project, a debugging contest (subject to feasibility), and a hands-on project as the culmination.<br/>
-
-        This camp serves as an excellent stepping stone for participants, introducing them to the world of Open Source and guiding them towards making contributions. Throughout the sessions, we will cover a diverse range of topics, including Object-Oriented Programming, Git, GitHub, STL, Pointers, Streams, and File Handling. Participants will also become familiarised with and prepared to participate in various Open Source events like HacktoberFest and Google Summer of Code.<br/>
-
-        By the end of the camp, participants will have gained a solid understanding of various concepts such as Pointers, Structs, Classes, Overloading, Constructor/Destructor, Operators, Functors, Inheritance, Virtual Functions, Templates, the workings of STL, as well as Streams and File Handling. Additionally, participants will be introduced to numerous modern C++ conventions, features, and useful tricks along their journey.<br/>
-        `,
-      daywise: [
-        "Intro to Open Source, GSoc, Git, GitHub, Stack & Heap",
-        "Pointers, Structs - along with mini Project release",
-        "Intro to OOPs and Classes",
-        "Constructor, Destructor and Overloading",
-        "Unary Operators and Functors - along with Project release",
-        "Inheritance and Virtual Functions",
-        "Templates",
-        "Working of STL (Standard Template Library)",
-        "Streams, File Handling and Sneak Peek to Future Topics",
-      ],
-    },
-    {
-      club: "Programming Club",
       title1: "Competitive Coding ##Conclave",
       title: "Competitive Coding Conclave",
       links: [
@@ -735,6 +701,41 @@ const data = {
         "Pair, Map, Stack, Queue, Dequeue, Set and MultiSet",
         "Modulo Arithmetic and Sieve<br/>Contest 2",
         "Priority Queues and Sneak Peak to future topics<br/>Final Contest",
+      ],
+    },
+    {
+      club: "Programming Club",
+      title1: "Code##Crafts",
+      title: "CodeCrafts",
+      poster: Programming1,
+      links: [
+        {
+          name: "Linktree",
+          link: "https://linktr.ee/PC_23_24",
+        },
+      ],
+      description:
+        "Elevate your coding prowess at our Software Dev Camp and shape the future of technology",
+      slot: "F1",
+      time: "6:45 PM - 7:45 PM (Tue, Thu, Sat)",
+      id: "programming-club",
+      fulldesc: `
+        The camp comprises a total of 9 sessions, including one mini-project, a debugging contest (subject to feasibility), and a hands-on project as the culmination.<br/>
+
+        This camp serves as an excellent stepping stone for participants, introducing them to the world of Open Source and guiding them towards making contributions. Throughout the sessions, we will cover a diverse range of topics, including Object-Oriented Programming, Git, GitHub, STL, Pointers, Streams, and File Handling. Participants will also become familiarised with and prepared to participate in various Open Source events like HacktoberFest and Google Summer of Code.<br/>
+
+        By the end of the camp, participants will have gained a solid understanding of various concepts such as Pointers, Structs, Classes, Overloading, Constructor/Destructor, Operators, Functors, Inheritance, Virtual Functions, Templates, the workings of STL, as well as Streams and File Handling. Additionally, participants will be introduced to numerous modern C++ conventions, features, and useful tricks along their journey.<br/>
+        `,
+      daywise: [
+        "Intro to Open Source, GSoc, Git, GitHub, Stack & Heap",
+        "Pointers, Structs - along with mini Project release",
+        "Intro to OOPs and Classes",
+        "Constructor, Destructor and Overloading",
+        "Unary Operators and Functors - along with Project release",
+        "Inheritance and Virtual Functions",
+        "Templates",
+        "Working of STL (Standard Template Library)",
+        "Streams, File Handling and Sneak Peek to Future Topics",
       ],
     },
   ],

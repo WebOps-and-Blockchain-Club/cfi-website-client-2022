@@ -39,7 +39,7 @@ const Register = () => {
                 registered.push(matchingItem);
             }
         }
-        if (registeredslots?.includes("F2")) registered.push(content.sessions[12])
+        if (registeredslots?.includes("F2")) registered.push(content.sessions[11])
 
         return registered;
     }

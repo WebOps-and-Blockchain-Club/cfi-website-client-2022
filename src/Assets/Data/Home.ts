@@ -9,6 +9,7 @@ import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
 import Highlights1 from "../Images/Home/Highlights_1.png";
 import Highlights2 from "../Images/SIP/Logo.png";
+import HighLights3 from "../Images/SummerSchool/CFI.png";
 
 import CurrentProjectsIcon from "../Icons/Stats/CurrentProjects.svg";
 import PeopleIcon from "../Icons/Stats/People.svg";
@@ -78,10 +79,11 @@ export const CarouselData = [
 
 export const HighlightsData = () => {
   const data: any[] = [
-    // {
-    //   url: "/summer-school",
-    //   title: "CFI Summer School, 2023",
-    // },
+    {
+      url: "/summer-school",
+      image: HighLights3,
+      title: "CFI Summer School, 2023",
+    },
     {
       url: "/open-house",
       image: Highlights1,
