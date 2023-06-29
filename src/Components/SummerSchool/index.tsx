@@ -5,8 +5,11 @@ import { Box, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typogr
 import useWindowSize from '../../Utils/windowSize'
 import SessionCard from './SessionCard'
 import { useNavigate, createSearchParams } from 'react-router-dom'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { CustomAutocomplete, CustomInputLabel, CustomSelect } from '../Shared/InputField'
+import AuthContext from '../../Utils/context'
+import ErrorDialog from '../Shared/Dialog/ErrorDialog'
+import { UserRole } from '../../generated/graphql'
 
 const SummerSchool = () => {
     const theme = useTheme();
@@ -15,15 +18,20 @@ const SummerSchool = () => {
     const matchesLG = useMediaQuery(theme.breakpoints.down("lg"));
     const [width] = useWindowSize();
     const navigate = useNavigate()
+    const { state } = useContext(AuthContext)!;
+    const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
     const [slot, setSlot] = useState<string | null>(null);
     const onSubmit = (title: string) => {
+        if (state?.user?.role === UserRole.User) {
+            const nameQueryParam = title.split(" ").join('-');
+            const searchParams = createSearchParams({ name: nameQueryParam.trim() }).toString();
+            const destination = `register?${searchParams}`;
 
-        const nameQueryParam = title.split(" ").join('-');
-        const searchParams = createSearchParams({ name: nameQueryParam.trim() }).toString();
-        const destination = `register?${searchParams}`;
+            navigate(destination);
+        }
+        else setErrorMessage("Login to Continue");
 
-        navigate(destination);
     }
 
     const onChange = (event: any, value: any) => {
@@ -34,6 +42,12 @@ const SummerSchool = () => {
 
         <CustomBox>
             <CustomGridPage>
+                {errorMessage && (
+                    <ErrorDialog
+                        message={errorMessage}
+                        handleClose={() => setErrorMessage(undefined)}
+                    />
+                )}
                 <Heading white='Summer ' red='School'></Heading>
 
                 <Grid item>

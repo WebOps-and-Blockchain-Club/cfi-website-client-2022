@@ -8,7 +8,7 @@ import Horizon from "../Images/SummerSchool/Horizon.png";
 import IBot from "../Images/SummerSchool/IBot.png";
 import Maths from "../Images/SummerSchool/Maths.jpeg";
 import Programming1 from "../Images/SummerSchool/Programming1.png";
-import Programming2 from "../Images/SummerSchool/Programming2.jpg";
+import Programming2 from "../Images/SummerSchool/Programming2.png";
 import Biotech from "../Images/SummerSchool/Biotech.png";
 import W_B from "../Images/SummerSchool/W&B.png";
 import { link } from "./utils";

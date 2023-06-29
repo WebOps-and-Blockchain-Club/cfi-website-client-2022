@@ -4,10 +4,11 @@ import CustomBox, { CustomGridPage } from "../../Shared/CustomBox";
 import content from "../../../Assets/Data/SummerSchool"
 import Heading, { HeadingSub, HeadingSub1 } from '../../Shared/Heading'
 import { Button, Chip, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import useWindowSize from '../../../Utils/windowSize'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Loading from '../../Shared/Dialog/Loading';
-import { textAlign } from '@mui/system';
+import AuthContext from '../../../Utils/context';
+import ErrorDialog from '../../Shared/Dialog/ErrorDialog';
+import { UserRole } from '../../../generated/graphql';
 
 
 const SessionPage = () => {
@@ -16,13 +17,19 @@ const SessionPage = () => {
     const matches = useMediaQuery(theme.breakpoints.down("sm"));
     const matches2 = useMediaQuery(theme.breakpoints.down("md"));
     const navigate = useNavigate();
-    const onSubmit = (title: string) => {
-        const nameQueryParam = title.split(" ").join('-');
-        const searchParams = createSearchParams({ name: nameQueryParam }).toString();
-        const destination = `/summer-school/register?${searchParams}`;
+    const { state } = useContext(AuthContext)!;
+    const [errorMessage, setErrorMessage] = useState<string | undefined>();
 
-        console.log(destination)
-        navigate(destination);
+    const onSubmit = (title: string) => {
+        if (state?.user?.role === UserRole.User) {
+            const nameQueryParam = title.split(" ").join('-');
+            const searchParams = createSearchParams({ name: nameQueryParam }).toString();
+            const destination = `/summer-school/register?${searchParams}`;
+
+            navigate(destination);
+        }
+        else setErrorMessage("Login to Continue");
+
     }
 
     const [data, setData] = useState<{
@@ -49,6 +56,12 @@ const SessionPage = () => {
     return (
         <CustomBox>
             <Loading loading={!data}></Loading>
+            {errorMessage && (
+                <ErrorDialog
+                    message={errorMessage}
+                    handleClose={() => setErrorMessage(undefined)}
+                />
+            )}
             <CustomGridPage>
                 {data && <>
                     <Heading white={data.title1.split("##")[0]} red={data.title1.split("##")[1]} />
