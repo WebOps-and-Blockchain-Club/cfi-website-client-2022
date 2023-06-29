@@ -9,6 +9,7 @@ import mail from "../../Assets/Icons/Social/email.png";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CFILogo from "../../Assets/Images/CFILogo/CFI Logo - White.png";
+import { link } from "../../Assets/Data/utils";
 
 interface Props { }
 
@@ -184,7 +185,7 @@ const Footer = (props: Props) => {
       </Grid>
       <Grid
         container
-        flexDirection={{ xs: "column", sm: "column", md: "row" }}
+        flexDirection="column"
         alignItems="center"
         justifyContent="space-evenly"
         sx={{ backgroundColor: "primary.light" }}
@@ -193,6 +194,9 @@ const Footer = (props: Props) => {
         <Typography color="primary.contrastText" textAlign="center">
           Developed by Students of WebOps & Blockchain Club and Branding & Engagement Team,
           CFI.
+        </Typography>
+        <Typography color="primary.contrastText" textAlign="center">
+          For any website related queries contact : Rasagnya | <a href='https://wa.me/+916302854348' target='_blank' rel='noopener noreferrer'>6302854348</a>
         </Typography>
       </Grid>
     </Grid>
