@@ -94,13 +94,10 @@ const Profile = () => {
                             >
                                 {
 
-
                                     data.getMe.clubs && data.getMe.clubs.map(club => {
                                         let slots = data.getMe.slots;
-                                        // console.log(data.getMe.clubs)
                                         let a = content.sessions.filter(e => { return ((e.id && e.id == club.id) || (e.ids && e.ids.includes(club.id))) });
                                         let x = a[0]
-                                        console.log(x)
                                         if (club.id != "team-sahaay" && slots?.includes(x.slot))
                                             return <Grid item>
                                                 <Card

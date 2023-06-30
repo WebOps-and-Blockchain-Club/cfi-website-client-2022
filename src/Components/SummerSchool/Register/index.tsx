@@ -29,16 +29,19 @@ const Register = () => {
         var registeredslots = data?.getMe.slots;
         var registered = [];
         for (var x of registeredSessions) {
-            x.slot = content.sessions.find((e) => e.id == x.id)?.slot
             if (x.id == "product-design club" || x.id == "team-sahaay") x.slot = "C"
+            x.slot = content.sessions.find((e) => e.id == x.id)?.slot
         }
         for (const item of registeredSessions) {
-            const matchingItem = content.sessions.find(new_item => { return (new_item.id && new_item.id === item.id || new_item.ids && item.id == "team-sahaay") && new_item.slot === item.slot });
+            const matchingItem = content.sessions.find(new_item => { return (new_item.id && new_item.id === item.id || new_item.ids && item.id == "team-sahaay") && new_item.slot === item.slot && new_item.id != "programming-club" });
             if (matchingItem) {
                 registered.push(matchingItem);
             }
+            if (item.id == "programming-club") {
+                if (registeredslots?.includes("F1")) registered.push(content.sessions[12]);
+                if (registeredslots?.includes("F2")) registered.push(content.sessions[11]);
+            }
         }
-        if (registeredslots?.includes("F1")) registered.push(content.sessions[12])
 
         return registered;
     }

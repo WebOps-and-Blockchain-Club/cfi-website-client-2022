@@ -501,7 +501,7 @@ export type GetMeBlogsQuery = { getMe: { blogs?: Array<{ id: string, title: stri
 export type GetMeSummerSchoolQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMeSummerSchoolQuery = { getMe: { id: string, email: string, name: string, role: UserRole, slots?: string | null, clubs?: Array<{ id: string, slot?: string | null }> | null } };
+export type GetMeSummerSchoolQuery = { getMe: { id: string, email: string, name: string, role: UserRole, slots?: string | null, clubs?: Array<{ id: string }> | null } };
 
 export type GetBlogsQueryVariables = Exact<{
   filters?: InputMaybe<FilterBlog>;
@@ -1164,7 +1164,6 @@ export const GetMeSummerSchoolDocument = gql`
     slots
     clubs {
       id
-      slot
     }
   }
 }

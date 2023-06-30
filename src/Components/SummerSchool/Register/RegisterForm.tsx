@@ -30,7 +30,6 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
         e.preventDefault();
         if (selectedClubs.length == 0) setError("Select atleast one club to proceed");
         else {
-            console.log(selectedClubs)
             let slots = selectedClubs.map(club => club.slot).join(" ")
 
             let clubIds: string[] = []
@@ -38,8 +37,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                 if (x.ids) clubIds.push(...x.ids)
                 if (x.id && !clubIds.includes(x.id)) clubIds.push(x.id)
             }
-            console.log("clubIds")
-            console.log(clubIds)
+
             let final_inp = { name, contact, smail, slots, clubIds }
             handleSubmit(
                 final_inp
@@ -74,8 +72,6 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
     >([]);
 
     useEffect(() => {
-        console.log('init')
-        console.log(initialVals)
         var initList = []
         if (initialVals) {
             if (!registered?.includes(initialVals) && !isSlotRegistered(initialVals.slot)) initList.push(initialVals)
@@ -155,7 +151,6 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                                 if (selectedClubs.includes(session)) selected = true;
                                 var checked = selected
 
-                                console.log(registered)
                                 return <li {...props}>
                                     <Checkbox
                                         icon={<CheckBoxOutlineBlankIcon fontSize="small" />}

@@ -70,7 +70,6 @@ query GetMeSummerSchool {
     slots
     clubs {
       id
-      slot
     }
   }
 }
