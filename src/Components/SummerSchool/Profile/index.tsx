@@ -92,127 +92,131 @@ const Profile = () => {
                                 }}
                                 columnGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
                             >
-                                {data.getMe.clubs && data.getMe.clubs.map(club => {
-                                    let slots = data.getMe.slots;
-                                    let a = content.sessions.filter(e => { console.log(e.id); return ((e.id && e.id == club.id) || (e.ids && e.ids.includes(club.id))) });
-                                    let x = a[0]
-                                    console.log(x)
-                                    if (club.id != "team-sahaay" && !(club.id == "programming-club" && !slots?.includes("F1")))
-                                        return <Grid item>
-                                            <Card
-                                                sx={{
-                                                    maxWidth: "25rem",
-                                                    borderRadius: "20px",
-                                                    display: "flex",
-                                                    backgroundColor: "primary.light",
-                                                    boxShadow:
-                                                        "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
-                                                    flexDirection: "column",
-                                                    margin: 'auto',
-                                                }}
-                                            >
-                                                <HashLink to={`/summer-school/session/${x.title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
-                                                    <CardContent
-                                                        sx={{
-                                                            px: "30px",
-                                                            py: "20px",
-                                                            display: "flex",
-                                                            flexDirection: "column",
-                                                            justifyContent: "space-evenly",
-                                                        }}
-                                                        style={{
-                                                            paddingBottom: "20px",
-                                                        }}
-                                                    >
+                                {
 
-                                                        <HeadingSub1 white={x.title1.split('##')[0]} red={x.title1.split('##')[1]} size="h6" />
 
-                                                        <Typography
-                                                            component="div"
-                                                            color="primary.contrastText"
+                                    data.getMe.clubs && data.getMe.clubs.map(club => {
+                                        let slots = data.getMe.slots;
+                                        // console.log(data.getMe.clubs)
+                                        let a = content.sessions.filter(e => { return ((e.id && e.id == club.id) || (e.ids && e.ids.includes(club.id))) });
+                                        let x = a[0]
+                                        console.log(x)
+                                        if (club.id != "team-sahaay" && slots?.includes(x.slot))
+                                            return <Grid item>
+                                                <Card
+                                                    sx={{
+                                                        maxWidth: "25rem",
+                                                        borderRadius: "20px",
+                                                        display: "flex",
+                                                        backgroundColor: "primary.light",
+                                                        boxShadow:
+                                                            "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
+                                                        flexDirection: "column",
+                                                        margin: 'auto',
+                                                    }}
+                                                >
+                                                    <HashLink to={`/summer-school/session/${x.title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
+                                                        <CardContent
                                                             sx={{
-                                                                textAlign: "center",
-                                                                fontSize: matches ? "16px" : "20px",
-                                                            }}>
-                                                            {"Slot " + x.slot}
-                                                        </Typography>
-                                                        <Typography
-                                                            component="div"
-                                                            color="primary.contrastText"
-                                                            sx={{
-                                                                textAlign: "center",
-                                                                fontSize: matches ? "16px" : "20px",
-                                                            }}>
-                                                            {"Slot " + x.time}
-                                                        </Typography>
-                                                        {
-                                                            x.club && <Typography
+                                                                px: "30px",
+                                                                py: "20px",
+                                                                display: "flex",
+                                                                flexDirection: "column",
+                                                                justifyContent: "space-evenly",
+                                                            }}
+                                                            style={{
+                                                                paddingBottom: "20px",
+                                                            }}
+                                                        >
+
+                                                            <HeadingSub1 white={x.title1.split('##')[0]} red={x.title1.split('##')[1]} size="h6" />
+
+                                                            <Typography
                                                                 component="div"
                                                                 color="primary.contrastText"
                                                                 sx={{
                                                                     textAlign: "center",
                                                                     fontSize: matches ? "16px" : "20px",
                                                                 }}>
-                                                                {x.club}
+                                                                {"Slot " + x.slot}
                                                             </Typography>
-                                                        }
-                                                        {
-                                                            x.clubs && x.clubs.map(e => <Typography
+                                                            <Typography
                                                                 component="div"
                                                                 color="primary.contrastText"
                                                                 sx={{
                                                                     textAlign: "center",
-                                                                    fontSize: matches ? "12px" : "14px",
+                                                                    fontSize: matches ? "16px" : "20px",
                                                                 }}>
-                                                                {e}
-                                                            </Typography>)
-                                                        }
+                                                                {"Slot " + x.time}
+                                                            </Typography>
+                                                            {
+                                                                x.club && <Typography
+                                                                    component="div"
+                                                                    color="primary.contrastText"
+                                                                    sx={{
+                                                                        textAlign: "center",
+                                                                        fontSize: matches ? "16px" : "20px",
+                                                                    }}>
+                                                                    {x.club}
+                                                                </Typography>
+                                                            }
+                                                            {
+                                                                x.clubs && x.clubs.map(e => <Typography
+                                                                    component="div"
+                                                                    color="primary.contrastText"
+                                                                    sx={{
+                                                                        textAlign: "center",
+                                                                        fontSize: matches ? "12px" : "14px",
+                                                                    }}>
+                                                                    {e}
+                                                                </Typography>)
+                                                            }
 
-                                                    </CardContent>
-                                                </HashLink>
-                                                {
-                                                    x.links?.map(e => {
-                                                        return <Typography
-                                                            component="a"
-                                                            target='_blank'
-                                                            href={e.link}
-                                                            color="red"
-                                                            sx={{
-                                                                textAlign: "center",
-                                                                fontSize: matches ? "16px" : "20px",
-                                                            }}>
-                                                            {e.name}
-                                                        </Typography>
-                                                    })
-                                                }
-                                                <Button
-                                                    sx={{
-                                                        padding: "5px 20px",
-                                                        marginTop: "15px",
-                                                        marginBottom: "15px",
-                                                        marginLeft: "auto",
-                                                        marginRight: "auto",
-                                                        width: "fit-content",
-                                                        color: "primary.contrastText",
-                                                        backgroundColor: "secondary.dark",
-                                                        fontWeight: "bold",
-                                                        fontSize: "16px",
-                                                        ":hover": {
-                                                            backgroundColor: "secondary.main",
+                                                        </CardContent>
+                                                    </HashLink>
+                                                    {
+                                                        x.links?.map(e => {
+                                                            return <Typography
+                                                                component="a"
+                                                                target='_blank'
+                                                                href={e.link}
+                                                                color="red"
+                                                                sx={{
+                                                                    textAlign: "center",
+                                                                    fontSize: matches ? "16px" : "20px",
+                                                                }}>
+                                                                {e.name}
+                                                            </Typography>
+                                                        })
+                                                    }
+                                                    <Button
+                                                        sx={{
+                                                            padding: "5px 20px",
+                                                            marginTop: "15px",
+                                                            marginBottom: "15px",
+                                                            marginLeft: "auto",
+                                                            marginRight: "auto",
+                                                            width: "fit-content",
                                                             color: "primary.contrastText",
-                                                        },
-                                                    }}
-                                                    type="submit"
-                                                    onClick={() => onSubmit(x.slot, x.club ? [x.id] : x.ids)}
-                                                >
-                                                    DEREGISTER
-                                                </Button>
-                                            </Card>
+                                                            backgroundColor: "secondary.dark",
+                                                            fontWeight: "bold",
+                                                            fontSize: "16px",
+                                                            ":hover": {
+                                                                backgroundColor: "secondary.main",
+                                                                color: "primary.contrastText",
+                                                            },
+                                                        }}
+                                                        type="submit"
+                                                        onClick={() => onSubmit(x.slot, x.club ? [x.id] : x.ids)}
+                                                    >
+                                                        DEREGISTER
+                                                    </Button>
+                                                </Card>
 
-                                        </Grid>
-                                })}
+                                            </Grid>
+                                    })}
                                 {
-                                    data.getMe?.slots?.includes("F2") && <Grid item>
+                                    data.getMe?.slots?.includes("F1") && <Grid item>
                                         <Card
                                             sx={{
                                                 maxWidth: "25rem",
@@ -225,7 +229,7 @@ const Profile = () => {
                                                 margin: 'auto',
                                             }}
                                         >
-                                            <HashLink to={`/summer-school/session/${content.sessions[11].title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
+                                            <HashLink to={`/summer-school/session/${content.sessions[12].title.split(" ").join('-')}`} style={{ textDecoration: "none" }}>
                                                 <CardContent
                                                     sx={{
                                                         px: "30px",
@@ -239,7 +243,7 @@ const Profile = () => {
                                                     }}
                                                 >
 
-                                                    <HeadingSub1 white={content.sessions[11].title1.split('##')[0]} red={content.sessions[11].title1.split('##')[1]} size="h6" />
+                                                    <HeadingSub1 white={content.sessions[12].title1.split('##')[0]} red={content.sessions[12].title1.split('##')[1]} size="h6" />
 
                                                     <Typography
                                                         component="div"
@@ -248,7 +252,7 @@ const Profile = () => {
                                                             textAlign: "center",
                                                             fontSize: matches ? "16px" : "20px",
                                                         }}>
-                                                        {"Slot " + content.sessions[11].slot}
+                                                        {"Slot " + content.sessions[12].slot}
                                                     </Typography>
                                                     <Typography
                                                         component="div"
@@ -257,24 +261,24 @@ const Profile = () => {
                                                             textAlign: "center",
                                                             fontSize: matches ? "16px" : "20px",
                                                         }}>
-                                                        {"Slot " + content.sessions[11].time}
+                                                        {"Slot " + content.sessions[12].time}
                                                     </Typography>
                                                     {
-                                                        content.sessions[11].club && <Typography
+                                                        content.sessions[12].club && <Typography
                                                             component="div"
                                                             color="primary.contrastText"
                                                             sx={{
                                                                 textAlign: "center",
                                                                 fontSize: matches ? "16px" : "20px",
                                                             }}>
-                                                            {content.sessions[11].club}
+                                                            {content.sessions[12].club}
                                                         </Typography>
                                                     }
 
                                                 </CardContent>
                                             </HashLink>
                                             {
-                                                content.sessions[11].links?.map(e => {
+                                                content.sessions[12].links?.map(e => {
                                                     return <Typography
                                                         component="a"
                                                         target='_blank'
@@ -306,7 +310,7 @@ const Profile = () => {
                                                     },
                                                 }}
                                                 type="submit"
-                                                onClick={() => onSubmit(content.sessions[11].slot, [content.sessions[12].id!])}
+                                                onClick={() => onSubmit(content.sessions[12].slot, [content.sessions[12].id!])}
                                             >
                                                 DEREGISTER
                                             </Button>

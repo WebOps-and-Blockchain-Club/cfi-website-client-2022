@@ -28,7 +28,6 @@ const Register = () => {
         var registeredSessions = JSON.parse(JSON.stringify(data?.getMe.clubs ?? []));
         var registeredslots = data?.getMe.slots;
         var registered = [];
-        console.log(registeredSessions)
         for (var x of registeredSessions) {
             x.slot = content.sessions.find((e) => e.id == x.id)?.slot
             if (x.id == "product-design club" || x.id == "team-sahaay") x.slot = "C"
@@ -39,7 +38,7 @@ const Register = () => {
                 registered.push(matchingItem);
             }
         }
-        if (registeredslots?.includes("F2")) registered.push(content.sessions[11])
+        if (registeredslots?.includes("F1")) registered.push(content.sessions[12])
 
         return registered;
     }
