@@ -21,6 +21,7 @@ const data = {
     {
       club: "Biotech Club",
       id: "biotech-club",
+      email: "biotechcfi@gmail.com",
       description:
         "We'll embark on a journey exploring various fields in biotechnology, ranging from cognitive neuroscience to protein modelling. We want to give all participants a flavour of the ongoing ideas in biotechnology.",
       title1: "Learn to Think ##Outside the Petri Dish!",
@@ -88,6 +89,7 @@ const data = {
       title1: "Dwell into the ##Basics of Mathematics",
       title: "Dwell into the Basics of Mathematics",
       slot: "A",
+      email: "mathematicsclubiitm@gmail.com",
       links: [
         {
           name: "Whatsapp",
@@ -138,6 +140,7 @@ const data = {
       title1: "Voltage ##Voyage",
       title: "Voltage Voyage",
       slot: "A",
+      email: "elecclub.cfi@gmail.com",
       links: [
         {
           name: "Whatsapp",
@@ -167,6 +170,7 @@ const data = {
       club: "Aero Club",
       title1: "Intro to ##Aerial Robotics and Aeromodelling",
       title: "Intro to Aerial Robotics and Aeromodelling",
+      email: "aeroclub.cfi@gmail.com",
       description:
         "This summer Aero Club, IITM will be conducting sessions on ROS and other softwares, on which much of Aerial Robotics is built as well as the Design of airplane wing using XFLR5.Register for the course right now for an exciting journey into drones and planes",
       id: "aero-club",
@@ -269,6 +273,7 @@ const data = {
       club: "Horizon",
       title1: "Into, Across and Beyond the ##Astroverse",
       title: "Into, Across and Beyond the Astroverse",
+      email: "horizon.iitm@gmail.com",
       description:
         "This Summer School explore the Quantum Realm, Special Relativity, get to know the physics behind the particles, use of Statistical Physics in ML and how ML can be used in the Astronomy.",
       id: "horizon",
@@ -376,6 +381,7 @@ const data = {
         "RoboMaze: Constructing and Training Robots to ##Tackle Challenging Mazes",
       title:
         "RoboMaze: Constructing and Training Robots to Tackle Challenging Mazes",
+      email: "ibotcfi@gmail.com",
       links: [
         {
           name: "Whatsapp",
@@ -419,6 +425,7 @@ const data = {
       clubs: ["Product Design Club", "Team Sahaay"],
       title1: "Tech.Design.##Biz",
       title: "Tech.Design.Biz",
+      emails: ["thepdc.cfi@gmail.com", "teamsahaayiitm@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
       ids: ["product-design club", "team-sahaay"],
@@ -549,6 +556,7 @@ const data = {
       title: "Summer School '23 3D Printing club",
       id: "3d-priting club",
       slot: "D",
+      email: "3dpc.cfi.iitm@gmail.com",
       links: [
         {
           name: "Whatsapp",
@@ -588,6 +596,7 @@ const data = {
       club: "WebOps and Blockchain Club",
       title1: "DevLaunch: ##App Dev X Blockchain",
       title: "DevLaunch: App Dev X Blockchain",
+      email: "cfiwebops@smail.iitm.ac.in",
       poster: W_B,
       description:
         "The Summer School camp aims at giving a flavour of app development,web development,blockchain integration along with crucial skills like DevOps,microservices, UI/UX etc.",
@@ -613,10 +622,15 @@ const data = {
       club: "AI Club (Analytics/CVI)",
       title1: "Intro to ##ML, DL, and Computer Vision",
       title: "Intro to ML, DL, and Computer Vision",
+      email: "aiclubcfi@smail.iitm.ac.in",
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/D1zKzaCEk1N7jlqzoJBB7E",
+          link: "https://chat.whatsapp.com/BfUFzrc4Z85GRonBU7IMVq",
+        },
+        {
+          name: "linktree",
+          link: "https://linktr.ee/AIClubIITM",
         },
       ],
       poster: AI,
@@ -643,6 +657,7 @@ const data = {
       club: "Team Envisage",
       title1: "Envisage : ##Into the Gameverse",
       title: "Envisage : Into the Gameverse",
+      email: "envisageiitmadras@gmail.com",
       slot: "E",
       links: [
         {
@@ -672,6 +687,7 @@ const data = {
       club: "Programming Club",
       title1: "Competitive Coding ##Conclave",
       title: "Competitive Coding Conclave",
+      email: "programmingclubiitm@gmail.com",
       links: [
         {
           name: "Linktree",
@@ -707,6 +723,7 @@ const data = {
       club: "Programming Club",
       title1: "Code##Crafts",
       title: "CodeCrafts",
+      email: "programmingclubiitm@gmail.com",
       poster: Programming1,
       links: [
         {

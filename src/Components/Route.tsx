@@ -30,6 +30,7 @@ import Register from "./SummerSchool/Register/index";
 import { Session } from "inspector";
 import SessionPage from "./SummerSchool/SessionPage";
 import Profile from "./SummerSchool/Profile";
+import SummerSchoolAdmin from "./Admin/SummerSchool";
 
 interface Probs { }
 
@@ -165,6 +166,16 @@ const AppRoutes = (probs: Probs) => {
                 <Navigate to="/admin" />
               ) : (
                 <AdminLoginPage />
+              )
+            }
+          />
+          <Route
+            path="/admin/summer-school"
+            element={
+              RoleAccess.BlogAdminAccess.includes(state.user?.role!) ? (
+                <SummerSchoolAdmin />
+              ) : (
+                <Navigate to="/admin/sign-in" />
               )
             }
           />

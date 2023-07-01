@@ -316,6 +316,8 @@ export type Query = {
   getMe: User;
   getProject?: Maybe<Project>;
   getProjects: GetProjectsOutput;
+  getRegisteredUsers: Array<User>;
+  getRegistrationCount: Scalars['Float'];
   getTag?: Maybe<Tag>;
   getTags?: Maybe<Array<Tag>>;
 };
@@ -345,6 +347,11 @@ export type QueryGetProjectArgs = {
 export type QueryGetProjectsArgs = {
   Filters?: InputMaybe<FilterProject>;
   Pagination?: InputMaybe<Pagination>;
+};
+
+
+export type QueryGetRegisteredUsersArgs = {
+  slot: Scalars['String'];
 };
 
 
@@ -540,6 +547,18 @@ export type GetClubsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetClubsQuery = { getClubs: Array<{ id: string, name: string, email: string }> };
+
+export type GetRegisteredUsersQueryVariables = Exact<{
+  slot: Scalars['String'];
+}>;
+
+
+export type GetRegisteredUsersQuery = { getRegisteredUsers: Array<{ id: string, email: string, smail?: string | null, contact?: string | null, name: string, slots?: string | null }> };
+
+export type GetRegistrationCountQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetRegistrationCountQuery = { getRegistrationCount: number };
 
 
 export const LoginDocument = gql`
@@ -1516,4 +1535,82 @@ export type GetClubsLazyQueryHookResult = ReturnType<typeof useGetClubsLazyQuery
 export type GetClubsQueryResult = ApolloReactCommon.QueryResult<GetClubsQuery, GetClubsQueryVariables>;
 export function refetchGetClubsQuery(variables?: GetClubsQueryVariables) {
       return { query: GetClubsDocument, variables: variables }
+    }
+export const GetRegisteredUsersDocument = gql`
+    query GetRegisteredUsers($slot: String!) {
+  getRegisteredUsers(slot: $slot) {
+    id
+    email
+    smail
+    contact
+    name
+    slots
+  }
+}
+    `;
+
+/**
+ * __useGetRegisteredUsersQuery__
+ *
+ * To run a query within a React component, call `useGetRegisteredUsersQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetRegisteredUsersQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetRegisteredUsersQuery({
+ *   variables: {
+ *      slot: // value for 'slot'
+ *   },
+ * });
+ */
+export function useGetRegisteredUsersQuery(baseOptions: ApolloReactHooks.QueryHookOptions<GetRegisteredUsersQuery, GetRegisteredUsersQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetRegisteredUsersQuery, GetRegisteredUsersQueryVariables>(GetRegisteredUsersDocument, options);
+      }
+export function useGetRegisteredUsersLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetRegisteredUsersQuery, GetRegisteredUsersQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetRegisteredUsersQuery, GetRegisteredUsersQueryVariables>(GetRegisteredUsersDocument, options);
+        }
+export type GetRegisteredUsersQueryHookResult = ReturnType<typeof useGetRegisteredUsersQuery>;
+export type GetRegisteredUsersLazyQueryHookResult = ReturnType<typeof useGetRegisteredUsersLazyQuery>;
+export type GetRegisteredUsersQueryResult = ApolloReactCommon.QueryResult<GetRegisteredUsersQuery, GetRegisteredUsersQueryVariables>;
+export function refetchGetRegisteredUsersQuery(variables: GetRegisteredUsersQueryVariables) {
+      return { query: GetRegisteredUsersDocument, variables: variables }
+    }
+export const GetRegistrationCountDocument = gql`
+    query getRegistrationCount {
+  getRegistrationCount
+}
+    `;
+
+/**
+ * __useGetRegistrationCountQuery__
+ *
+ * To run a query within a React component, call `useGetRegistrationCountQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetRegistrationCountQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetRegistrationCountQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetRegistrationCountQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<GetRegistrationCountQuery, GetRegistrationCountQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return ApolloReactHooks.useQuery<GetRegistrationCountQuery, GetRegistrationCountQueryVariables>(GetRegistrationCountDocument, options);
+      }
+export function useGetRegistrationCountLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<GetRegistrationCountQuery, GetRegistrationCountQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return ApolloReactHooks.useLazyQuery<GetRegistrationCountQuery, GetRegistrationCountQueryVariables>(GetRegistrationCountDocument, options);
+        }
+export type GetRegistrationCountQueryHookResult = ReturnType<typeof useGetRegistrationCountQuery>;
+export type GetRegistrationCountLazyQueryHookResult = ReturnType<typeof useGetRegistrationCountLazyQuery>;
+export type GetRegistrationCountQueryResult = ApolloReactCommon.QueryResult<GetRegistrationCountQuery, GetRegistrationCountQueryVariables>;
+export function refetchGetRegistrationCountQuery(variables?: GetRegistrationCountQueryVariables) {
+      return { query: GetRegistrationCountDocument, variables: variables }
     }

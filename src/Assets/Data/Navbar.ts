@@ -123,6 +123,10 @@ export const NavbarADMINList = () => {
       link: "/admin",
     },
     {
+      name: "SUMMER SCHOOL",
+      link: "/admin/summer-school",
+    },
+    {
       name: "BLOG",
       link: "/admin/blog",
     },
