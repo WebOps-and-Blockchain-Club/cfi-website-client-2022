@@ -598,6 +598,12 @@ const data = {
       title: "DevLaunch: App Dev X Blockchain",
       email: "cfiwebops@smail.iitm.ac.in",
       poster: W_B,
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/JqxT2wVFHcI75bYdRVBa0G",
+        },
+      ],
       description:
         "The Summer School camp aims at giving a flavour of app development,web development,blockchain integration along with crucial skills like DevOps,microservices, UI/UX etc.",
       fulldesc:
