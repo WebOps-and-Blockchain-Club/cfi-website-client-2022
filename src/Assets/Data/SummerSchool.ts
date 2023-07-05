@@ -603,6 +603,10 @@ const data = {
           name: "Whatsapp",
           link: "https://chat.whatsapp.com/JqxT2wVFHcI75bYdRVBa0G",
         },
+        {
+          name: "Microsoft Teams",
+          link: "https://teams.microsoft.com/l/team/19%3aD0QLMsqOOnzClg2NRE_-pLvuicUuRI2wKDqpnd-wGuw1%40thread.tacv2/conversations?groupId=d6891cef-0832-486f-bdd8-822bc1bf9023&tenantId=187ca15f-54e0-4673-86f6-b6d7f4c75eef",
+        },
       ],
       description:
         "The Summer School camp aims at giving a flavour of app development,web development,blockchain integration along with crucial skills like DevOps,microservices, UI/UX etc.",
@@ -632,7 +636,7 @@ const data = {
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/BfUFzrc4Z85GRonBU7IMVq",
+          link: "https://chat.whatsapp.com/Gkf9IUwYwjF5GDy3NB4fKA",
         },
         {
           name: "linktree",
