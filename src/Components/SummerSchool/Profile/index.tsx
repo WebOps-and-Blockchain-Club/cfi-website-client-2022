@@ -186,7 +186,7 @@ const Profile = () => {
                                                             </Typography>
                                                         })
                                                     }
-                                                    <Button
+                                                    {/* <Button
                                                         sx={{
                                                             padding: "5px 20px",
                                                             marginTop: "15px",
@@ -207,7 +207,7 @@ const Profile = () => {
                                                         onClick={() => onSubmit(x.slot, x.club ? [x.id] : x.ids)}
                                                     >
                                                         DEREGISTER
-                                                    </Button>
+                                                    </Button> */}
                                                 </Card>
 
                                             </Grid>
@@ -289,7 +289,7 @@ const Profile = () => {
                                                     </Typography>
                                                 })
                                             }
-                                            <Button
+                                            {/* <Button
                                                 sx={{
                                                     padding: "5px 20px",
                                                     marginTop: "15px",
@@ -310,7 +310,7 @@ const Profile = () => {
                                                 onClick={() => onSubmit(content.sessions[12].slot, [content.sessions[12].id!])}
                                             >
                                                 DEREGISTER
-                                            </Button>
+                                            </Button> */}
                                         </Card>
 
                                     </Grid>
