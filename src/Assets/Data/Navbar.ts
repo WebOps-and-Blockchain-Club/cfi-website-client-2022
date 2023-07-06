@@ -169,9 +169,9 @@ export const NavbarSummerSchoolList = () => {
       name: "HOME",
       link: "/summer-school",
     },
-    // {
-    //   component: RegisterButton,
-    // },
+    {
+      component: RegisterButton,
+    },
     {
       component: ProfileButton,
     },
