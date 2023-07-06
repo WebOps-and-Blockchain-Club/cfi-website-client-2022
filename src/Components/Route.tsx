@@ -95,11 +95,11 @@ const AppRoutes = (probs: Probs) => {
 
           {/* Summer School*/}
           <Route path="/summer-school" element={<SummerSchool />} />
-          <Route path="/summer-school/register" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
+          {/* <Route path="/summer-school/register" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
             <Register />
           ) : (
             <Navigate to="/summer-school" />
-          )} />
+          )} /> */}
           <Route path="/summer-school/profile" element={RoleAccess.SummerSchoolAccess.includes(state.user?.role) ? (
             <Profile />
           ) : (
