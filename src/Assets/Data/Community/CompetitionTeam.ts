@@ -28,7 +28,7 @@ import AgnirathHead3 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Risha
 import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/IGem_Aarohee.jpeg";
 import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/IGem_Sanjana.jpg";
 import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Aaditya_Abhyuday.jpeg";
-import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Ashish_Abhyuday.jpg";
+import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Ashish_Abhyuday.jpeg";
 
 // import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Ashish.webp";
 // import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Aaditya.webp";
@@ -323,7 +323,7 @@ export const Teams: ITeams = {
         image: AbhyudayGallery1,
       },
     ],
-    email: "abhiyaan@smail.iitm.ac.in",
+    email: "abhyudayiitm@smail.iitm.ac.in",
     contacts: [
       {
         name: "Aaditya Edupuganti",
