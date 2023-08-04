@@ -137,12 +137,12 @@ export const CompetitionTeamList = [
     desc: "",
     link: "/competition-teams/team-agnirath",
   },
-  // {
-  //   name: "Team Abhyuday",
-  //   logo: "",
-  //   desc: "",
-  //   link: "/competition-teams/team-abhyuday",
-  // },
+  {
+    name: "Team Abhyuday",
+    logo: "",
+    desc: "",
+    link: "/competition-teams/team-abhyuday",
+  },
   {
     name: "iGEM",
     logo: IGemLogo,
