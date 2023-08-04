@@ -113,7 +113,7 @@ import IGemGallery2 from "../../Images/Community/CompetitionTeam/IGem/Gallery2.j
 import AbhyudayLanding from "../../Images/Community/CompetitionTeam/Abhyuday/Landing.png";
 import AbhyudayAchievement1 from "../../Images/Community/CompetitionTeam/Abhyuday/Achievement1.jpg";
 import AbhyudayProject1 from "../../Images/Community/CompetitionTeam/Abhyuday/Project1.jpg";
-import AbhyudayGallery1 from "../../Images/Community/CompetitionTeam/Abhyuday/Gallery1.jpg";
+import AbhyudayGallery1 from "../../Images/Community/CompetitionTeam/Abhyuday/Gallery1.png";
 
 export const Teams: ITeams = {
   "raftar-formula-racing": {
