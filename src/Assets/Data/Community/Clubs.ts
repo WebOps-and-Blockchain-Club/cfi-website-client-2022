@@ -665,7 +665,7 @@ export const Clubs: IClubs = {
         name: "Arjun Balamurali",
         image: EnvisageHead2,
         email: "ce20b015@smail.iitm.ac.in",
-        phone: "6385140235",
+        phone: "9847140100",
         linkedIn: "https://www.linkedin.com/in/arjun-balamurali-0a8ab9209/",
       },
     ],

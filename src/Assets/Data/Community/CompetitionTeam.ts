@@ -8,6 +8,7 @@ import AnveshakLogo from "../../../Assets/Images/CompetitionTeamLogo/Anveshak.pn
 import AnveshakLogoM from "../../../Assets/Images/CompetitionTeamLogo/Anveshak(withoutName).png";
 import AgnirathLogo from "../../../Assets/Images/CompetitionTeamLogo/Agnirath.png";
 import IGemLogo from "../../../Assets/Images/CompetitionTeamLogo/IGem.png";
+import AbhyudayLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhyuday.png";
 // TEAM HEADS IMAGE
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Madhav.jpeg";
 import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Ragavendiran.jpeg";
@@ -26,6 +27,8 @@ import AgnirathHead2 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Bindu
 import AgnirathHead3 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Rishabh.jpg";
 import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/IGem_Aarohee.jpeg";
 import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/IGem_Sanjana.jpg";
+import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Aaditya_Abhyuday.jpeg";
+import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Ashish_Abhyuday.jpg";
 
 // import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Ashish.webp";
 // import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Abhyuday_Aaditya.webp";
@@ -105,6 +108,12 @@ import IGemProject3_a from "../../Images/Community/CompetitionTeam/IGem/Project3
 import IGemProject3_b from "../../Images/Community/CompetitionTeam/IGem/Project3_b.png";
 import IGemGallery1 from "../../Images/Community/CompetitionTeam/IGem/Gallery1.jpg";
 import IGemGallery2 from "../../Images/Community/CompetitionTeam/IGem/Gallery2.jpg";
+
+//Abhyuday
+import AbhyudayLanding from "../../Images/Community/CompetitionTeam/Abhyuday/Landing.png";
+import AbhyudayAchievement1 from "../../Images/Community/CompetitionTeam/Abhyuday/Achievement1.jpg";
+import AbhyudayProject1 from "../../Images/Community/CompetitionTeam/Abhyuday/Project1.jpg";
+import AbhyudayGallery1 from "../../Images/Community/CompetitionTeam/Abhyuday/Gallery1.jpg";
 
 export const Teams: ITeams = {
   "raftar-formula-racing": {
@@ -283,91 +292,55 @@ export const Teams: ITeams = {
       },
     ],
   },
-  // "team-abhyuday": {
-  //   name: "Team ##Abhyuday",
-  //   logo: AnveshakLogo,
-  //   landing: AnveshakLanding,
-  //   description:
-  //     "Team Abhiyaan is an enthusiastic group of multi-disciplinary students of IIT Madras, committed to building intelligent, robust, precise and safe ground navigation systems. The team comprising 45 members is based in Centre for Innovation (CFI), IIT Madras which provides a platform for creative ideas to be realized into ground-breaking product prototypes and revolutionary business models, with mentoring from the industry, faculty and alumni.",
-  //   achievements: [
-  //     {
-  //       description:
-  //         "The team took part in IGVC 2017, 2018, 2019 and returned with a lot of prizes. In 2017 the vehicle was ranked 13th overall and in 2018 it was ranked 10th. In 2019 the team got 2nd in interoperability 6th in design 5th in Autonav and 2nd overall and was awarded the Grand Lescoe Trophy. The team made fully autonomous unmanned ground robotic vehicle must navigate around an outdoor obstacle course under a prescribed time while maintaining certain speed, and remaining within the lane for IGVC Autonav. It also developed an autonomous smart driving cars compatible with current roadways and future intelligent highway systems. It’s capabilities include camera vision systems, lane following, obstacle, and pedestrian avoidance, roadway and parallel parking, road sign understanding, and other traffic functions.  In 2020 it participated in the Indy Autonomous Challenge which took place on the Indianapolis Motor Speedway. The team was one among the 5 Asian teams that qualified the first round and also got ranked the best in the social media contest in both communities and judges’ favourite categories. It also took part in KPIT Sparkle in which 30,000+ teams participated and was one of the 30 finalists.",
-  //     },
-  //     {
-  //       description:
-  //         "Team Abhiyaan unveiled its Driver-less Campus Shuttle project and showcased a proof of concept demonstration with our director as the passenger.",
-  //     },
-  //     {
-  //       description:
-  //         "Team Abhiyaan received a Special Mention at the Stage Two of the Intelligent Ground Vehicles Competition (IGVC) at Oakland University, USA.",
-  //     },
-  //     {
-  //       description:
-  //         "Team Abhiyaan is working towards building a fully autonomous shuttle for the IIT Madras campus.",
-  //     },
-  //   ],
-  //   projects: [
-  //     {
-  //       title: "Project ##MACRo",
-  //       description:
-  //         "Project MACRo (Martian Autonomous Core-sampling Rover) in collaboration with ExTeM research group, IIT Madras. Rover with autonomous drilling unit to collect regolith and core samples from Martian surface. Collaborating with ExTeM (research group at IITM including professors, industry, and international collaborators) for the project",
-  //     },
-  //     {
-  //       title: "ROS ##Software driver",
-  //       description:
-  //         'Developed and released an open-source ROS Software driver for the Septentrio Mosaic X5 GNSS module, bridging the gap between ROS and the state-of-the-art Mosaic technology. \n The driver is actively maintained and contributions are welcome. <br /> <center>GitHub Repository - <a href="https://github.com/Team-Abhiyaan/mosaic_gnss_driver" target="_blank" rel="noopener noreferrer">Link</a></center>',
-  //     },
-  //   ],
-  //   website: "https://www.abhyudayiitm.com/",
-  //   gallery: [
-  //     {
-  //       image: AbhiyaanGallery1,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery2,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery3,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery4,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery5,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery6,
-  //     },
-  //     {
-  //       image: AbhiyaanGallery7,
-  //     },
-  //   ],
-  //   email: "abhiyaan@smail.iitm.ac.in",
-  //   contacts: [
-  //     {
-  //       name: "Suraj Rathi",
-  //       image: AbhiyaanHead1,
-  //       email: "suraj.rathi00@gmail.com",
-  //       phone: "8830534626",
-  //       linkedIn: "https://www.linkedin.com/in/suraj-rathi/",
-  //     },
-  //     {
-  //       name: "Arun Krishna",
-  //       image: AbhiyaanHead2,
-  //       email: "arunkrish2603@gmail.com",
-  //       phone: "7550143818",
-  //       linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
-  //     },
-  //     {
-  //       name: "Sudharsan",
-  //       image: AbhiyaanHead2,
-  //       email: "s.sudharsan.raja@gmail.com",
-  //       phone: "7550117832",
-  //       linkedIn: "https://www.linkedin.com/in/sudharsan-raja-b07628201/",
-  //     },
-  //   ],
-  // },
+  "team-abhyuday": {
+    name: "Team ##Abhyuday",
+    logo: AbhyudayLogo,
+    landing: AbhyudayLanding,
+    description:
+      "Team Abhyuday is composed of 32 highly passionate & innovative students of IIT Madras, including undergraduates and a Ph.D. Scholar. We are united by our passion for spaceflight. We made a mark in the 2023 Spaceport America Cup when our rocket 'CHETAK-1' touched an apogee up to 10,000ft in New Mexico, USA in the world's largest intercollegiate rocketry competition SPACEPORT AMERICA CUP 2023. Furthermore, we are competing in the ISRO's CANSAT Competition-2023.",
+    achievements: [
+      {
+        description:
+          "Launched and recovered CHETAK-1 successfully in its first ever flight at SA Cup 2023, New Mexico.",
+        image: AbhyudayAchievement1,
+      },
+      {
+        description:
+          "In our first attempt, we were the only IIT to qualify for the Spaceport America Cup-2022.",
+      },
+    ],
+    projects: [
+      {
+        title: "##CHETAK-1",
+        image: AbhyudayProject1,
+        description:
+          "Team ABHYUDAY built sounding rocket CHETAK-1 and launched it successfully in the world’s largest intercollegiate rocketry competition, SPACEPORT AMERICA CUP 2023. Our rocket touched an apogee of around 10k feet in the 10K COTS motor challenge.",
+      },
+    ],
+    website: "https://www.abhyudayiitm.com/work",
+    gallery: [
+      {
+        image: AbhyudayGallery1,
+      },
+    ],
+    email: "abhiyaan@smail.iitm.ac.in",
+    contacts: [
+      {
+        name: "Aaditya Edupuganti",
+        image: AbhyudayHead1,
+        email: "ae19b104@smail.iitm.ac.in",
+        phone: "9390257854",
+        linkedIn: "https://www.linkedin.com/in/edupuganti-aaditya-9726381b2",
+      },
+      {
+        name: "Ashish Kumar Shroti",
+        image: AbhyudayHead2,
+        email: "me19b083@smail.iitm.ac.in",
+        phone: "9983321407",
+        linkedIn: "https://www.linkedin.com/in/ashish-kumar-shroti",
+      },
+    ],
+  },
   "team-anveshak": {
     name: "Team ##Anveshak",
     logo: AnveshakLogo,

@@ -92,7 +92,7 @@ export type ITeams = {
   "team-anveshak": ITeam;
   "team-avishkar-hyperloop": ITeam;
   "team-agnirath": ITeam;
-  // "team-abhyuday": ITeam
+  "team-abhyuday": ITeam
   "igem": ITeam
 };
 
@@ -102,7 +102,7 @@ export enum TeamsName {
   ANVESHAL = "team-anveshak",
   AVISHKAR = "team-avishkar-hyperloop",
   AGNIRATH = "team-agnirath",
-  // ABHYUDAY = "team-abhyuday"
+  ABHYUDAY = "team-abhyuday",
   IGEM = "igem"
 }
 
