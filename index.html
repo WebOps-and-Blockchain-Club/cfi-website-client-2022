@@ -2,21 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" id="light-scheme-icon" />
+    <link rel="icon" href="favicon.ico" id="light-scheme-icon" />
     <!-- <base href="https://cfi.iitm.ac.in/" /> -->
-    <base href="http://localhost:3000/" />
-    <link
-      rel="icon"
-      href="%PUBLIC_URL%/favicon-white.ico"
-      id="dark-scheme-icon"
-    />
+    <base href="http://localhost:5173/" />
+    <link rel="icon" href="favicon-white.ico" id="dark-scheme-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="<b>Centre For Innovation (CFI)</b> is the largest student-run innovation lab in India. It was established to serve as a launchpad for the ideas of the students of IIT Madras and nurture their creative output."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="logo192.png" />
     <script
       src="https://kit.fontawesome.com/fe06f24a1a.js"
       crossorigin="anonymous"
@@ -34,17 +30,9 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link
-      rel="manifest"
-      href="%PUBLIC_URL%/manifest.json"
-      id="light-scheme-manifest"
-    />
-    <link
-      rel="manifest"
-      href="%PUBLIC_URL%/manifest-dark.json"
-      id="dark-scheme-manifest"
-    />
-    <script src="/script.js"></script>
+    <link rel="manifest" href="manifest.json" id="light-scheme-manifest" />
+    <link rel="manifest" href="manifest-dark.json" id="dark-scheme-manifest" />
+    <script type="module" src="/src/index.tsx"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.

@@ -63,7 +63,7 @@ const Login = (probs: Probs) => {
         <SuccessDialog message="Login Successfully" callBack={loginCallback} />
       )}
       <GoogleLogin
-        clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID!}
+        clientId={import.meta.env.vite_GOOGLE_CLIENT_ID!}
         buttonText={probs.btnMessage ? probs.btnMessage : "Log in with Google"}
         onSuccess={handleLogin}
         onFailure={handleFailure}

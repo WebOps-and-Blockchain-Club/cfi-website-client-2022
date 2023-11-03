@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, SvgIcon, useMediaQuery, useTheme } from "@mui/material";
-import { ReactComponent as ExternalIcon } from "../../Assets/Images/external-link.svg";
+import ExternalIcon from "../../Assets/Images/external-link.svg?react";
 
 import "../../Styles/website-btn.css";
 
