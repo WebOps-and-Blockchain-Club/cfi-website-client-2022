@@ -125,6 +125,11 @@ import WebOpsAndBlockchainAchievement4 from "../../Images/Community/Clubs/WebOps
 //MATHS
 import MathsProject1 from "../../Images/Community/Clubs/Maths/Project1.png";
 import MathsProject2 from "../../Images/Community/Clubs/Maths/Project2.png";
+import MathsAchievement1 from "../../Images/Community/Clubs/Maths/Achievement1.png";
+import MathsGallery1 from "../../Images/Community/Clubs/Maths/Gallery1.png";
+import MathsGallery2 from "../../Images/Community/Clubs/Maths/Gallery2.png";
+import MathsGallery3 from "../../Images/Community/Clubs/Maths/Gallery3.png";
+
 import { link } from "../utils";
 
 export const Clubs: IClubs = {
@@ -836,6 +841,7 @@ export const Clubs: IClubs = {
   "mathematics-club": {
     name: "Mathematics ##Club",
     logo: MathsLogo,
+    oneLiner: "To infinity and beyond",
     email: "mathematicsclubiitm@gmail.com",
     description:
       "Mathematics club, CFI is a group of motivated and enthusiastic students conducting research on various topics in the field of Mathematics and aiming to develop a thriving Math culture. Started in November 2022, our team has conducted numerous workshops, problem-solving sessions, and contests, including our flagship event Integration Bee. Our areas of research include Probability and Statistics, Calculus, Game Theory, Galois Theory and Group Theory.",
@@ -851,6 +857,25 @@ export const Clubs: IClubs = {
         image: MathsProject2,
         description:
           "Our first project on Monte Carlo Simulations involved numeric simulations of probability problems which cannot be solved analytically. Among the few projects in CFI to include freshmen, we came up with solutions to problems like natural selection and genetic drift, Arrhenius equation, and Kepler's law for arbitrary potentials.",
+      },
+    ],
+    achievements: [
+      {
+        title: "Strategy Wars",
+        description:
+          "We conducted an interesting contest on the optimal strategy in a particular game, touching along concepts in combinatorial game theory and strategy algorithms. The event had a reception of 400+, with the freshies acing the event.",
+        image: MathsAchievement1,
+      },
+    ],
+    gallery: [
+      {
+        image: MathsGallery1,
+      },
+      {
+        image: MathsGallery2,
+      },
+      {
+        image: MathsGallery3,
       },
     ],
     contacts: [
