@@ -10,10 +10,10 @@ import Header from "./Navbar";
 
 interface Props {
   children:
-    | React.ReactChild[]
-    | React.ReactChildren[]
-    | React.ReactChild
-    | React.ReactNode;
+  | React.ReactChild[]
+  | React.ReactChildren[]
+  | React.ReactChild
+  | React.ReactNode;
 }
 
 const CustomBox = (props: Props) => {
@@ -65,7 +65,9 @@ const CustomBox = (props: Props) => {
       minHeight="100vh"
     >
       <Header />
-      {props.children}
+      <>
+        {props.children}
+      </>
       <Footer />
     </Grid>
   );
@@ -82,7 +84,9 @@ const CustomGridPage = (props: Props) => {
       justifyItems="center"
       alignItems="center"
     >
-      {props.children}
+      <>
+        {props.children}
+      </>
     </Grid>
   );
 };
@@ -98,7 +102,9 @@ const CustomGridSection = (props: Props) => {
       px={{ xs: 4, sm: 7, md: 10, lg: 14, xl: 18 }}
       py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
     >
-      {props.children}
+      <>
+        {props.children}
+      </>
     </Grid>
   );
 };
