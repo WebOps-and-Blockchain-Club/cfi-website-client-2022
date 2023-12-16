@@ -121,6 +121,11 @@ import EnvisageProject5 from "../../Images/Community/Clubs/Envisage/Project5.png
 import WebOpsAndBlockchainAchievement1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements1.png";
 import WebOpsAndBlockchainAchievement2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements2.png";
 import WebOpsAndBlockchainAchievement4 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements4.jpeg";
+import WebOpsAndBlockchainAchievement5 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Achievements5.png";
+import WebOpsAndBlockchainGallery1 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Gallery1.png";
+import WebOpsAndBlockchainGallery2 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Gallery2.png";
+import WebOpsAndBlockchainGallery3 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Gallery3.png";
+import WebOpsAndBlockchainGallery4 from "../../Images/Community/Clubs/WebOpsAndBlockchain/Gallery4.png";
 
 //MATHS
 import MathsProject1 from "../../Images/Community/Clubs/Maths/Project1.png";
@@ -678,10 +683,12 @@ export const Clubs: IClubs = {
   "webops-and-blockchain-club": {
     name: "WebOps and ##Blockchain Club",
     logo: WebOpsAndBlockchainLogo,
-    description:
-      "We are CFIs newly reformed club. A team of students who are passionate about Web Development and Blockchain. We use cutting-edge technology to develop sustainable solutions for real world problems. Our vision is to develop education, community and innovation based on blockchain technologies (blockchain is a system of recording information in a way that makes it difficult to change, hack or cheat the system) and web operations. Our mission is to actively facilitate understanding of web development and Blockchain technology through group discussion, organized events, guest speakers and undertake projects.",
+    description: `
+      We are a passionate group of students committed to leveraging cutting-edge technology, with a primary focus on blockchain and web operations, to develop innovative software solutions that address common user challenges and contribute to social well-being. Our mission extends beyond mere technical proficiency – we actively foster understanding in web development and blockchain technology through engaging group discussions, meticulously organized events, insightful guest speaker sessions, and collaborative project initiatives.<br/> <br />Our overarching goal is to create a dynamic learning environment that spans diverse domains, including web and app development, blockchain technology, DevOps, cloud computing, and more. Through our dedicated efforts, we aspire to not only explore but also excel in these fields, making meaningful contributions to the evolving landscape of technology while positively impacting education, community development, and innovation.
+      `,
     achievements: [
       {
+        image: WebOpsAndBlockchainAchievement5,
         title: "Launch of ##InstiSpace",
         description:
           "A community centric application oriented to solve problems of all students at IIT Madras. With its sections i.e. feeds,forums,lost and found and academics ,users problems like scrolling through smail for relevant information,connecting to people,keeping track of their courses and to check whether the mess menu is worth eating is solved.<br/>We intend to make this application address every possible issue a student might face studying and living in IITM.",
@@ -710,6 +717,20 @@ export const Clubs: IClubs = {
           "https://play.google.com/store/apps/details?id=com.cfi.clinsti"
         )}) and it got over 200 downloads within a month of its release.`,
         image: WebOpsAndBlockchainAchievement2,
+      },
+    ],
+    gallery: [
+      {
+        image: WebOpsAndBlockchainGallery1,
+      },
+      {
+        image: WebOpsAndBlockchainGallery2,
+      },
+      {
+        image: WebOpsAndBlockchainGallery3,
+      },
+      {
+        image: WebOpsAndBlockchainGallery4,
       },
     ],
     email: "cfiwebops@smail.iitm.ac.in",
