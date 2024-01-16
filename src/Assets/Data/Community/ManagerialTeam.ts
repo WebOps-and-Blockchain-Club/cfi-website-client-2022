@@ -1,8 +1,8 @@
 // TEAM HEADS
 import BEHead1 from "../../Images/ContactUs/CFIOffice/BnE_Himavarshini.jpg";
 import BEHead2 from "../../Images/ContactUs/CFIOffice/BnE_Angela.png";
-import FinanceHead1 from "../../Images/ContactUs/CFIOffice/Ratan.png";
-import FinanceHead2 from "../../Images/ContactUs/CFIOffice/Revati.png";
+import FinanceHead1 from "../../Images/ContactUs/CFIOffice/aayush.jpg";
+import FinanceHead2 from "../../Images/ContactUs/CFIOffice/madhav.jpg";
 import PMHead1 from "../../Images/ContactUs/CFIOffice/PM_Asharam.jpg";
 import PMHead2 from "../../Images/ContactUs/CFIOffice/PM_Tarun.jpeg";
 import PMHead3 from "../../Images/ContactUs/CFIOffice/PM_Sai_Charan.jpeg";
@@ -42,18 +42,18 @@ export const ManagerialTeams = [
     image: FinanceImage,
     contacts: [
       {
-        name: "Ratan Danush ",
+        name: "Aayush Rajesh Sinha",
         image: FinanceHead1,
-        email: "me19b066@smail.iitm.ac.in",
-        phone: "9791699221",
-        linkedIn: "https://www.linkedin.com/in/ratan-danush-95a1a31b4/",
+        email: "aayush@smail.iitm.ac.in",
+        phone: "8452999158",
+        linkedIn: "https://www.linkedin.com/in/iush",
       },
       {
-        name: "Revati Sawant",
+        name: "Madhavnambi.R.V",
         image: FinanceHead2,
-        email: "ed19b025@smail.iitm.ac.in",
-        phone: "7219220159",
-        linkedIn: "https://www.linkedin.com/in/revati-sawant-4403051aa/",
+        email: "na21b045@smail.iitm.ac.in",
+        phone: "8903172547",
+        linkedIn: "https://www.linkedin.com/in/madhavnambi-r-v-13443921a",
       },
     ],
   },
