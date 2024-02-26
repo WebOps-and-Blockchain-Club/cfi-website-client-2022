@@ -195,9 +195,9 @@ const Footer = (props: Props) => {
           Developed by Students of WebOps & Blockchain Club and Branding & Engagement Team,
           CFI.
         </Typography>
-        <Typography color="primary.contrastText" textAlign="center">
+        {/* <Typography color="primary.contrastText" textAlign="center">
           For any website related queries contact : Rasagnya | <a href='https://wa.me/+916302854348' target='_blank' rel='noopener noreferrer'>6302854348</a>
-        </Typography>
+        </Typography> */}
       </Grid>
     </Grid>
   );

@@ -23,5 +23,7 @@
   "include": [
     "src"
   ],
-  "types": ["vite-plugin-svgr/client"]
+  "types": [
+    "vite-plugin-svgr/client"
+  ]
 }

@@ -62,6 +62,7 @@ const CustomBox = (props: Props) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
+      sx={{ p: 0 }}
       minHeight="100vh"
     >
       <Header />
@@ -83,6 +84,7 @@ const CustomGridPage = (props: Props) => {
       direction="column"
       justifyItems="center"
       alignItems="center"
+      sx={{ p: 0 }}
     >
       <>
         {props.children}

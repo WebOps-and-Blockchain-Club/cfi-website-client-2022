@@ -28,13 +28,16 @@ iframe {
 
 @media screen and (max-width: 600px) {
   iframe {
-    width: calc(
-      100vw - 104px
-    ); /* 100vw subtracted by the intro section padding(32px) & card padding(15px) */
+    width: calc(100vw - 104px);
+    /* 100vw subtracted by the intro section padding(32px) & card padding(15px) */
     height: 45vw;
   }
 }
 
 .disabled {
   color: gray;
+}
+
+.nopadding {
+  padding: 0 !important;
 }

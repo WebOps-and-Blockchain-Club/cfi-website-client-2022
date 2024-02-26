@@ -16,8 +16,9 @@ import Logo from "../../Assets/Images/OpenHouse/OpenHouse2023_white.png";
 import Gather from "../../Assets/Images/OpenHouse/GatherLogo.svg";
 import OSLogo from "../../Assets/Images/OpenHouse/OSLogo.jpg";
 import { OpenHouseData, OpenHouseGallery } from "../../Assets/Data/OpenHouse";
+import SponsorLogog from './../../Assets/Images/OpenHouse/image1.png'
 
-interface Props {}
+interface Props { }
 
 const OpenHouse = (props: Props) => {
   const theme = useTheme();
@@ -53,7 +54,7 @@ const OpenHouse = (props: Props) => {
               }}
             />
           </Grid>
-          <Grid item container maxWidth={matches ? "80vw" : "40vw"} gap={4}>
+          <Grid item className="nopadding" container maxWidth={matches ? "80vw" : "40vw"} gap={0}>
             <Grid
               container
               item
@@ -79,9 +80,9 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  Offline - Sudha and Shankar Innovation Hub, near NAC
-                  <br />
-                  Online - Gather Town
+                  Venue: Terrace Hall
+                  {/* <br />
+                  Online - Gather Town */}
                 </Typography>
               </Grid>
             </Grid>
@@ -110,7 +111,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  12th March, 2023 - 10:00AM Onwards
+                  2nd March, 2024   - 11:00AM Onwards
                 </Typography>
               </Grid>
             </Grid>
@@ -121,34 +122,40 @@ const OpenHouse = (props: Props) => {
           <Grid
             item
             container
-            direction={matches ? "column" : i % 2 === 0 ? "row" : "row-reverse"}
+            direction={matches ? "column" : "row"}
             justifyContent="center"
             alignItems="center"
             py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
+            sx={{ p: 0 }}
             gap={10}
           >
-            <Grid item>
-              <CardMedia
-                component="img"
-                image={data.image}
-                alt={"image"}
-                sx={{
-                  verticalAlign: "middle",
-                  objectFit: "contain",
-                  height: matchesLG ? "100%" : "300px",
-                  maxWidth: matches ? "80vw" : "40vw",
-                  boxShadow: "6px 6px 6px 6px #7e0000",
-                  borderRadius: "20px",
-                }}
-              />
+            <Grid item paddingTop={0} alignItems="center" justifyContent="center">
+              {data.image &&
+                <CardMedia
+                  component="img"
+                  image={data.image}
+                  alt={"image"}
+                  sx={{
+                    padding: 0,
+                    verticalAlign: "middle",
+                    objectFit: "contain",
+                    alignItems: "center",
+                    height: matchesLG ? "100%" : "300px",
+                    maxWidth: matches ? "80vw" : "80vw",
+                    boxShadow: "6px 6px 6px 6px #7e0000",
+                    borderRadius: "20px",
+                  }}
+                />}
             </Grid>
-            <Grid item container maxWidth={matches ? "80vw" : "40vw"}>
+            <Grid item container paddingTop={0} maxWidth={matches ? "80vw" : "40vw"}>
               <Typography
                 variant={matches2 ? "body1" : "h6"}
                 color="primary.contrastText"
                 textAlign={"justify"}
+                dangerouslySetInnerHTML={{
+                  __html: data.content,
+                }}
               >
-                {data.content}
               </Typography>
             </Grid>
           </Grid>
@@ -161,35 +168,8 @@ const OpenHouse = (props: Props) => {
           direction={"column"}
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
         >
-          <Heading white="2022 " red="SPONSORS" />
-          <Grid
-            container
-            mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
-            rowGap={{ xs: 3, sm: 4, md: 5, lg: 6 }}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <a href="https://www.gather.town/" target="_blank" rel="noreferrer">
-              <CardMedia
-                component="img"
-                image={Gather}
-                alt={"data.name"}
-                sx={{
-                  borderRadius: "20px",
-                  verticalAlign: "middle",
-                  objectFit: "contain",
-                  // backgroundColor: "primary.light",
-                  // boxShadow:
-                  //   "5px 5px 5px #000000, -3px -3px 5px rgba(255, 255, 255, 0.1);",
-                  // padding: "20px",
-                  width: "300px",
-                }}
-              />
-            </a>
-          </Grid>
+          <Heading white="2024 " red="SPONSORS" />
+
           <Grid
             container
             mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}
@@ -201,13 +181,13 @@ const OpenHouse = (props: Props) => {
             }}
           >
             <a
-              href="https://www.ovenstory.in/"
+              href="https://www.stellantis.com/en"
               target="_blank"
               rel="noreferrer"
             >
               <CardMedia
                 component="img"
-                image={OSLogo}
+                image={SponsorLogog}
                 alt={"data.name"}
                 sx={{
                   borderRadius: "20px",
@@ -225,7 +205,7 @@ const OpenHouse = (props: Props) => {
         </Grid>
 
         {/* GALLERY */}
-        <Grid
+        {/* <Grid
           item
           container
           direction="row"
@@ -239,10 +219,10 @@ const OpenHouse = (props: Props) => {
           <Grid item mt={{ xs: 4, sm: 5, md: 6, lg: 7 }}>
             <Gallery data={OpenHouseGallery} />
           </Grid>
-        </Grid>
+        </Grid> */}
         {/* </Grid> */}
       </CustomGridPage>
-    </CustomBox>
+    </CustomBox >
   );
 };
 
