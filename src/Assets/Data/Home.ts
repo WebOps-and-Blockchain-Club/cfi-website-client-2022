@@ -7,7 +7,7 @@ import HomeLanding1P from "../Images/Home/Landing1P.jpg";
 import HomeLanding3P from "../Images/Home/Landing3P.jpg";
 import HomeLanding4P from "../Images/Home/Landing4.jpg";
 
-import Highlights1 from "../Images/Home/Highlights_1.png";
+import Highlights1 from "../Images/OpenHouse/image3.png";
 import Highlights2 from "../Images/SIP/Logo.png";
 import HighLights3 from "../Images/SummerSchool/CFI.png";
 
@@ -80,14 +80,14 @@ export const CarouselData = [
 export const HighlightsData = () => {
   const data: any[] = [
     {
+      url: "/open-house",
+      image: Highlights1,
+      title: "CFI Open House, 2024 - 15th edition of flagship event",
+    },
+    {
       url: "/summer-school",
       image: HighLights3,
       title: "CFI Summer School, 2023",
-    },
-    {
-      url: "/open-house",
-      image: Highlights1,
-      title: "CFI Open House, 2023 - 14th edition of flagship event",
     },
     {
       url: "/sip",
