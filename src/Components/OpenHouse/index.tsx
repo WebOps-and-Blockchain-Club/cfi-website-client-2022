@@ -111,7 +111,7 @@ const OpenHouse = (props: Props) => {
                   }}
                   textAlign={matches ? "center" : "start"}
                 >
-                  2nd March, 2024   - 11:00AM Onwards
+                  3rd March, 2024   - 11:00AM Onwards
                 </Typography>
               </Grid>
             </Grid>
