@@ -36,16 +36,16 @@ export const NavbarItems = [
     name: "ACHIEVEMENTS",
     link: "/achievements",
   },
-  // {
-  //   name: "SIP'23",
-  //   link: "/sip",
-  //   newTab: true,
-  // },
   {
-    name: "Summer School '23",
-    link: "/summer-school",
+    name: "SIP '24",
+    link: "/sip",
     newTab: true,
   },
+  // {
+  //   name: "Summer School '23",
+  //   link: "/summer-school",
+  //   newTab: true,
+  // },
   {
     name: "BLOGS",
     link: "/blog",

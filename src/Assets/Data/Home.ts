@@ -80,6 +80,11 @@ export const CarouselData = [
 export const HighlightsData = () => {
   const data: any[] = [
     {
+      url: "/sip",
+      image: Highlights2,
+      title: "Student Innovation Program, 2024 - Bring your ideas to life",
+    },
+    {
       url: "/open-house",
       image: Highlights1,
       title: "CFI Open House, 2024 - 15th edition of flagship event",
@@ -88,11 +93,6 @@ export const HighlightsData = () => {
       url: "/summer-school",
       image: HighLights3,
       title: "CFI Summer School, 2023",
-    },
-    {
-      url: "/sip",
-      image: Highlights2,
-      title: "Student Innovation Program, 2023 - Bring your ideas to life",
     },
   ];
   AchievementsData.map((_data) =>
