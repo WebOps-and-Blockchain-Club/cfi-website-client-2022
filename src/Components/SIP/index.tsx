@@ -130,7 +130,7 @@ const SIP = (probs: Probs, props: Props) => {
           py={{ xs: 8, sm: 10, md: 12, lg: 12 }}
           gap={10}
         >
-          <Grid item>
+          {/* <Grid item>
             <CardMedia
               component="img"
               image={Logo}
@@ -142,8 +142,10 @@ const SIP = (probs: Probs, props: Props) => {
                 maxWidth: matches ? "80vw" : "40vw",
               }}
             />
-          </Grid>
-          <Grid item container maxWidth={matches ? "80vw" : "40vw"} gap={4}>
+          </Grid> */}
+          <Grid item container
+            // maxWidth={matches ? "80vw" : "40vw"} 
+            gap={4}>
             <Grid
               container
               item

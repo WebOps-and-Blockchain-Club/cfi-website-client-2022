@@ -79,11 +79,11 @@ export const CarouselData = [
 
 export const HighlightsData = () => {
   const data: any[] = [
-    {
-      url: "/sip",
-      image: Highlights2,
-      title: "Student Innovation Program, 2024 - Bring your ideas to life",
-    },
+    // {
+    //   url: "/sip",
+    //   image: Highlights2,
+    //   title: "Student Innovation Program, 2024 - Bring your ideas to life",
+    // },
     {
       url: "/open-house",
       image: Highlights1,
