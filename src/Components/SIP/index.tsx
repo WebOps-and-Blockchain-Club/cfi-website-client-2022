@@ -167,14 +167,19 @@ const SIP = (probs: Probs, props: Props) => {
                 </Typography>
                 <Typography
                   variant={matches2 ? (matches ? "subtitle1" : "h6") : "h5"}
+                  dangerouslySetInnerHTML={{
+                    __html: SIPData.content,
+                  }}
                   style={{
                     color: "#d6d6d6",
                     fontFamily: "Proxima Nova",
                   }}
+
                   textAlign={matches ? "center" : "start"}
                 >
-                  {SIPData.content} <br />
+
                 </Typography>
+
               </Grid>
             </Grid>
           </Grid>
