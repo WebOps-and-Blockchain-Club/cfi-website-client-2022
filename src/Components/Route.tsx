@@ -78,7 +78,7 @@ const AppRoutes = (probs: Probs) => {
           <Route path="/sip" element={<SIP />} />
           <Route path="/sip/projects" element={<ProjectsList />} />
           <Route path="/sip/projects/:id" element={<Project />} />
-          <Route
+          {/* <Route
             path="/sip/projects/add"
             element={
               RoleAccess.SIPAddProjectAccess.includes(state.user?.role) ? (
@@ -87,7 +87,7 @@ const AppRoutes = (probs: Probs) => {
                 <Navigate to="/sip" />
               )
             }
-          />
+          /> */}
           <Route path="/sip/faqs" element={<Faqs />} />
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/about-us" element={<AboutUs />} />
