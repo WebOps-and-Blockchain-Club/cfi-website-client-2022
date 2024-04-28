@@ -100,7 +100,7 @@ const ViewBlog = (probs: Probs) => {
                   color="primary.contrastText"
                   textAlign="center"
                 >
-                  <div>{data.getBlog.createdBy.name}</div>
+                  <div>{data.getBlog.author ?? data.getBlog.createdBy.name}</div>
                   <Button
                     variant="text"
                     sx={{
