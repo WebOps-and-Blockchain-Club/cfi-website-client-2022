@@ -12,82 +12,18 @@ import Programming2 from "../Images/SummerSchool/Programming2.png";
 import Biotech from "../Images/SummerSchool/Biotech.png";
 import W_B from "../Images/SummerSchool/W&B.png";
 import { link } from "./utils";
+import { title } from "process";
 
 const data = {
   description:
-    "CFI presents the summer school 2023 in this summer break conducted by all the 13 clubs covering  different areas of Technology, Science, and Engineering!It offers the Freshie Youth, who have a lot to EXPLORE, the chance to learn and experience completely new things in the Open-to-All CFI .For students who aspire to represent IIT Madras at the upcoming Inter IIT Tech Meet, the summer schools will also serve as training ground. Participation shall serve as one of the selection criteria for the contingent.<br />These sessions will be conducted by the club heads and coordinators.An E-certificate will be provided to all the participants who have attended above 80% of the live sessions and have completed all the quizzes and tasks in the registered sessions.<br />Its open for all the students and offered for free of cost.",
-  time: "JULY 6TH to JULY 26TH",
+    "CFI presents the summer school 2024 in this summer break conducted by all the 14 clubs covering  different areas of Technology, Science, and Engineering!It offers the Freshie Youth, who have a lot to EXPLORE, the chance to learn and experience completely new things in the Open-to-All CFI .For students who aspire to represent IIT Madras at the upcoming Inter IIT Tech Meet, the summer schools will also serve as training ground. Participation shall serve as one of the selection criteria for the contingent.<br />These sessions will be conducted by the club heads and coordinators.An E-certificate will be provided to all the participants who have attended above 80% of the live sessions and have completed all the quizzes and tasks in the registered sessions.<br />Its open for all the students and offered for free of cost.",
+  time: "JUNE 14TH to JULY ",
   sessions: [
-    {
-      club: "Biotech Club",
-      id: "biotech-club",
-      email: "biotechcfi@gmail.com",
-      description:
-        "We'll embark on a journey exploring various fields in biotechnology, ranging from cognitive neuroscience to protein modelling. We want to give all participants a flavour of the ongoing ideas in biotechnology.",
-      title1: "Learn to Think ##Outside the Petri Dish!",
-      title: "Learn to Think Outside the Petri Dish!",
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/H96jWKLfgPE0aOlQOfuklH",
-        },
-      ],
-      slot: "A",
-      poster: Biotech,
-      time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
-      fulldesc: `
-        <b>Computational Protein Modelling:</b>
-        <ul>
-          <li> What are proteins? Their uses in the human body and in the environment.</li>
-          <li> Structure of proteins - from mRNA sequences to amino acid sequences and other higher-order structures.</li>
-          <li> Understanding the thermodynamics of protein folding and visualizations of protein microstates using Monte Carlo simulations.</li>
-          <li> Introduction to PyMOL and importing protein structures from PDB, showing them the interface and different visualizations of proteins. Perform structural analysis (bond angle, bond lengths, etc.) on a sample protein.</li>
-          <li> Importance of protein visualizations, protein-protein interactions.</li>
-          <li> Hands-on project: Modelling protein-protein interactions (SARS-CoV-2 RBD with human ACE-2).</li>
-          ${link("PyMOL documentation", "https://pymol.org/dokuwiki/")}
-           
-        </ul>
-        <b>CogNeuro - The science behind decision making:</b>
-        <ul>
-          <li> The participants will play multiple games (BART, STROOP, etc.) and understand concepts like foraging and decision-making (why do we use experiments to choose, ecological validity).</li>
-          <li> Mechanisms of EEG, tACS, tDCS, why do we use these, and what experiments do we use these for.</li>
-          <li> Hands-on project: We will simulate electric fields in the brain using SimNIBS.</li>
-          <li> We'll explore the challenges of data collection, T1 & T2 weighted images from MRIs.</li>
-          ${link(
-            "SimNIBS 4.0.1 documentation",
-            "https://simnibs.github.io/simnibs/build/html/documentation/documentation.html"
-          )}
-        </ul>
-        <b>Bioprinting:</b>
-        <ul>
-          <li> What is bioprinting and its application.</li>
-          <li> How we use cells in biomaterials to develop bio-ink and use it to bioprint organs.</li>
-          <li> 3D and 4D bioprinting simulations and manufacturing techniques.</li>
-          <li> Types of bioprinting, in-situ bioprinting, and ethical issues in bioprinting.</li>
-        </ul>
-        <b>Finding hidden messages in DNA:</b>
-        <ul>
-          <li> An introduction to replication mechanism in various organisms, and how this can be translated to computer science.</li>
-          <li> Given the origin of replication, what is the hidden message saying that replication should start here?</li>
-          <li> Using algorithms to find the sequence motifs (DNA A box) in the origin of replication.</li>
-          <li> We will find where genome replication begins using straightforward algorithms to do the same.</li>
-        </ul>
-        `,
-      daywise: [
-        "Bioprinting",
-        "Computational protein modelling - Introduction to proteins",
-        "Computational protein modelling - Introduction to modelling (PyMOL)",
-        "Computational protein modelling - Hands-on project",
-        "Finding hidden messages in DNA - Introduction",
-        "Finding hidden messages in DNA - Algorithmic approaches",
-        "CogNeuro - Playing cognitive games to understand neuroscience concepts",
-        "CogNeuro - Hands-on project",
-      ],
-    },
+    //maths
     {
       club: "Mathematics Club",
-      title1: "Dwell into the ##Basics of Mathematics",
-      title: "Dwell into the Basics of Mathematics",
+      title1: "MathLab and ##Computational Tools",
+      title: "MathLab and Computational Tools",
       slot: "A",
       email: "mathematicsclubiitm@gmail.com",
       links: [
@@ -98,81 +34,332 @@ const data = {
       ],
       poster: Maths,
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
-      id: "computer-vision and intelligence club",
+      id: "MathLab and Computational Tools",
       description:
         "Topics like Linear Algebra, Probability and Differential equations form the fundamentals of various topics in different domains. Attending this summer school will give an head start to all the students in their academic journey of IITM.",
       fulldesc: `
-     
-       <b>Probability:</b>
-          <ul>
-            <li> What is a random variable? Permutations &amp; Combinations, Conditional Probability: Theorem of Total probability, Bayes' theorem, Independent events.</li>
-            <li> Common distributions like Poisson, Binomial, Bernoulli, Normal, etc.</li>
-            <li> Expected Value of Random variable, Variance and higher moments, Theorem E[X] = E[E[X | N]], Central Limit Theorem.</li>
-            <li> Markov Chains: absorption, expected number of moves till we reach absorption state, etc.</li>
-          </ul>
-        
-        <b>Linear algebra:</b>
-          <ul>
-            <li> Matrices, Nullspace, Abstract vector space (finite dimensional), 4 vector spaces: Columnspace, Rowspace, Nullspace (kernel), and Reft Nullspace.</li>
-            <li> Rank and nullity, rank-nullity theorem, Orthonormal basis and basis transformation.</li>
-            <li> Diagonalization, e^{Matrix} and application in solving DEs and recursions.</li>
-          </ul>
+      <b>Mathematical Content :</b><br>
+      <ol>
+      <li>
+      Motivation for DEs
+      </li>     
       
-      <b>Differential Equations:</b>
-          <ul>
-            <li> Linear Constant Coefficient Differential Equations, homogeneous and non-homogeneous DEs, solving DEs using power series.</li>
-          </ul>
-       
-        <b>Coding applications:</b>
-          <ul>
-            <li> Usage of numpy in Python for linear algebra, Use of scipy in Python for differential equations</li>
-          </ul>
+      <li>
+      Brief review of known concepts
+      </li>
+      <li>
+      Bridging with first semester courses
+      </li>
+      <li>
+      Classification of DEs → Ordinary / Non, Linear / Non linear
+      </li>
+      <li>
+      Partial derivatives
+      </li>
+      <li>
+      Del operator
+      </li>
+      </ol>
+      <b>Roadmap</b> :  3 sessions overall (1 week)
         `,
-      syllabus: `
-      <ul>
-      <li>Linear algebra and Probability theory and problem solving from basics to intermediate.</li>
-      <li>Differential equations and their coding applications ( Majorly Numpy and Scipy for DE )</li>
-      </ul>
-      `,
+      sessionTitle: ["First session", "Second session", "Third session", "Post session"],
+      sessionwise: [{
+        title: "First session",
+        description: `<ul>
+        <li>Motivating DEs - 30 minutes</li>
+        <li>Basic theory - 30 minutes</li>
+        <li>Vector calculus (del operator) - 30 minutes</li>
+        <li>Solving some DEs along with the attendees - 20 minutes</li>
+        <li>Motivate them as to why analytical solutions are not always useful - 10 minutes</li>
+        <li>Start off with GNU Octave - 30 minutes</li>
+    </ul>
+    `},
+      {
+        title: "Second session",
+        description: `<ul>
+    <li>Spend the first 10 minutes assembling everything</li>
+    <li>Teach the Euler method, mention its extensions - 40 minutes</li>
+    <li>Code along in GNU Octave - (30 minutes first problem, 30 minutes second problem that yields bad results)</li>
+    <li>Move on to non-ordinary problems</li>
+    <li>Try to solve them</li>
+    <li>Show undesirable results - 5 minutes</li>
+    <li>Pose H-atom problem - 15 minutes</li>
+  </ul>
+  `,
+      },
+      {
+        title: "Third session",
+        description: `<ul>
+        <li>Introduce Fourier series and how it's useful - 40 minutes</li>
+        <li>Do some theory - 20 minutes</li>
+        <li>Solve some polynomials in Octave - 20 minutes</li>
+        <li>Use that to solve DEs in Octave - 20 minutes</li>
+        <li>Closing remarks, summarizing everything - 20 minutes</li>
+        </ul>
+        `,
+
+      },
+      {
+        title: "Post session",
+        description: `<ul>
+        <li>First session - Assignment on DE theory</li>
+        <li>Second session - Assignment on numerical methods theory + fill in templated code</li>
+        <li>Third session - Assignment on Fourier series theory + fill in templated code</li>
+        <li>Discussion of past assignment post-session for interested candidates</li>
+        </ul>
+        `,
+
+
+      },
+      ],
+
+
     },
+    //PDC
     {
-      club: "Electronics Club",
-      title1: "Voltage ##Voyage",
-      title: "Voltage Voyage",
-      slot: "A",
-      email: "elecclub.cfi@gmail.com",
+      clubs: ["Product Design Club"],
+      title1: "Innovate. Design. ##Inspire",
+      title: "Innovate Design Inspire",
+      emails: ["thepdc.cfi@gmail.com"],
+      slot: "C",
+      time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
+      ids: ["product-design club"],
+      id: "Innovate Design Inspire",
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/IZ3rpkTVIwqF6N99JfDUgF",
+          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
         },
       ],
-      time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
-      id: "electronics-club",
-      poster: Electronics,
+      poster: PDC_Sahaay,
       description:
-        "Unleash the opportunity to get proficiency in microcontroller programming using C++ and Micropython, Hands on projects in TinkerCad and Wokwi, learn to make a circuit diagram and compact it in a PCB using EasyEDA and fundamentals of digital electronics making your electronic devices work in a simulation software.",
-      fulldesc: `Unleash the opportunity to get proficiency in microcontroller programming using C++ and Micropython, Hands on projects in TinkerCad and Wokwi, learn to make a circuit diagram and compact it in a PCB using EasyEDA and fundamentals of digital electronics making your electronic devices work in a simulation software.`,
-      daywise: [
-        "Start of 'Arduino,ESP32 and micropython' - Basics and Tinkercad",
-        "Tinkercad continuation and Wokwi",
-        "I2C and arduinos communication",
-        "MicroPython and UDP(making programs chat)",
-        "Start of 'PCB Design' - easyEDA and theory part",
-        "Route a circuit",
-        "Start of 'Digital Design' - Introduction to binary systems, gates and combinatorial circuits.",
-        "Sequential circuits (latches and flipflops)",
-        "Counters and Registers",
+        "Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.",
+      fulldesc: ``,
+      sessionwise: [
+        {
+          title: "Introduction to Product Design and Management",
+          description:
+            `<b>Objective</b>: Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.<br>
+           <ol>
+    <li>Welcome and Introduction
+        <ul>
+            <li>Overview of the summer school program</li>
+            <li>Importance of product design and management</li>
+        </ul>
+    </li>
+    <li>Fundamentals of Product Design
+        <ul>
+            <li>Definition and scope</li>
+            <li>Key stages in product design: Ideation, Design, Development, and Launch</li>
+        </ul>
+    </li>
+    <li>Introduction to Product Management
+        <ul>
+            <li>Role and responsibilities of a product manager</li>
+            <li>Product life cycle management</li>
+        </ul>
+    </li>
+    <li>Case Study: Successful Products
+        <ul>
+            <li>Analysis of successful products and their design process</li>
+            <li>Group discussion on takeaways</li>
+        </ul>
+    </li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+
+           `,
+        },
+        {
+          title: "Design Thinking and Ideation Techniques",
+          description: `
+          <b>Objective</b>: Introduce design thinking methodology and various ideation techniques to foster creativity.
+          <ol>
+    <li>Introduction to Design Thinking
+        <ul>
+            <li>Principles and stages of design thinking: Empathize, Define, Ideate, Prototype, Test</li>
+        </ul>
+    </li>
+    <li>Empathy and User Research
+        <ul>
+            <li>Techniques for understanding user needs: Interviews, Surveys, Observation</li>
+        </ul>
+    </li>
+    <li>Ideation Techniques
+        <ul>
+            <li>Brainstorming, Mind Mapping, SCAMPER, and other ideation methods</li>
+            <li>Hands-on activity: Group brainstorming session</li>
+        </ul>
+    </li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+
+
+          `,
+        },
+        {
+          title: "Introduction to Fusion 360",
+          description: `
+          <b>Objective</b>: Teach the basics of Fusion 360 for 3D design and prototyping.
+          <ol>
+    <li>Overview of Fusion 360
+        <ul>
+            <li>Introduction to CAD and its importance in product design</li>
+        </ul>
+    </li>
+    <li>Getting Started with Fusion 360
+        <ul>
+            <li>Interface navigation</li>
+            <li>Basic tools and features</li>
+            <li>Creating a simple 3D model</li>
+        </ul>
+    </li>
+    <li>Hands-on Activity
+        <ul>
+            <li>Guided exercise: Design a basic product component</li>
+            <li>Tips and tricks for efficient modeling</li>
+        </ul>
+    </li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+          `,
+        },
+        {
+          title: "Prototyping and Testing",
+          description: `
+          <b>Objective</b>: Explore various prototyping methods and the importance of testing in the product design process.
+          <ol>
+    <li>Introduction to Prototyping
+        <ul>
+            <li>Different types of prototypes: Low-fidelity, High-fidelity, Digital, Physical</li>
+        </ul>
+    </li>
+    <li>Tools and Materials for Prototyping
+        <ul>
+            <li>Software tools for digital prototyping</li>
+            <li>Materials for physical prototyping</li>
+        </ul>
+    </li>
+    <li>Testing and Iteration
+        <ul>
+            <li>Importance of user testing</li>
+            <li>Methods for collecting feedback and iterating designs</li>
+        </ul>
+    </li>
+    <li>Hands-on Activity
+        <ul>
+            <li>Quick prototyping exercise using available materials</li>
+        </ul>
+    </li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+
+          `,
+        },
+        {
+          title:
+            "Introduction to Figma",
+          description: `
+          <b>Objective</b>: Teach the basics of Figma for UI/UX design and prototyping.
+          <ol>
+    <li>Overview of Figma
+        <ul>
+            <li>Introduction to UI/UX design and its relevance in product design</li>
+        </ul>
+    </li>
+    <li>Getting Started with Figma
+        <ul>
+            <li>Interface navigation</li>
+            <li>Basic tools and features</li>
+            <li>Creating a simple wireframe</li>
+        </ul>
+    </li>
+    <li>Hands-on Activity
+        <ul>
+            <li>Guided exercise: Design a basic app interface</li>
+            <li>Collaboration features in Figma</li>
+        </ul>
+    </li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+
+          `,
+        },
+        {
+          title: "Product Development and Roadmapping",
+          description: `
+          <b>Objective</b>: Understand the process of product development and how to create a product roadmap.
+          <ol>
+    <li>Stages of Product Development
+        <ul>
+            <li>Concept development</li>
+            <li>Design</li>
+            <li>Development</li>
+            <li>Testing</li>
+            <li>Launch</li>
+        </ul>
+    </li>
+    <li>Creating a Product Roadmap
+        <ul>
+            <li>Importance of roadmapping</li>
+            <li>Tools and techniques for roadmapping</li>
+            <li>Example roadmap creation</li>
+        </ul>
+    </li>
+    <li>MVP making</li>
+    <li>Q&A and Wrap-up</li>
+</ol>
+
+          `,
+        },
+        {
+          title: "Marketing and Launch Strategies",
+          description: `
+          <b>Objective<b>: Learn about product marketing and strategies for a successful product launch.
+          <ol>
+          <li>Introduction to Product Marketing
+              <ul>
+                  <li>Role of marketing in product success</li>
+                  <li>Market research and positioning</li>
+              </ul>
+          </li>
+          <li>Launch Strategies
+              <ul>
+                  <li>Planning a product launch</li>
+                  <li>Go-to-market strategies</li>
+                  <li>Measuring launch success</li>
+              </ul>
+          </li>
+          <li>Case Study: Successful Product Launches
+              <ul>
+                  <li>Analysis of real-world examples</li>
+                  <li>Group discussion on key learnings</li>
+              </ul>
+          </li>
+          <li>Q&A and Wrap-up</li>
+      </ol>
+      
+          `,
+        },
+        {
+          title: "Product Pitch",
+          description: `Competition for students.
+          `
+        },
       ],
     },
 
+    //Aero
     {
       club: "Aero Club",
-      title1: "Intro to ##Aerial Robotics and Aeromodelling",
-      title: "Intro to Aerial Robotics and Aeromodelling",
+      title1: "From Theory to ##Takeoff",
+      title: "From Theory to Takeoff",
       email: "aeroclub.cfi@gmail.com",
       description:
-        "This summer Aero Club, IITM will be conducting sessions on ROS and other softwares, on which much of Aerial Robotics is built as well as the Design of airplane wing using XFLR5.Register for the course right now for an exciting journey into drones and planes",
+        `
+This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
+Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.
+Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.`,
       id: "aero-club",
       slot: "B",
       poster: Aero,
@@ -184,418 +371,252 @@ const data = {
       ],
       time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
       fulldesc: `
-      <b>Aerial Robotics:</b>
-          <ul>
-            <li>Introduction to drones</li>
-            <li>Installation and tutorials of software's like ROS, Gazebo</li>
-            <li>Exploring the environment and teaching the usage of these software</li>
-            <li>Integration of these various software's for simulating navigation</li>
-            <li>Basics of C and Python programming</li>
-            <li>Tasks based on what is taught</li>
-          </ul>
-        <b>Aeromodelling:</b>
-          <ul>
-            <li>Basics about model airplanes, its types, and components</li>
-            <li>Intro to the basic terms during the summer school and the concepts and ideas in aeromodelling</li>
-            <li>Basic electronics and materials used</li>
-            <li>Installation, Exploring the environment and teaching the usage of XFLR5</li>
-            <li>Wing analysis and airfoil design</li>
-            <li>Tasks based on what is taught</li>
-          </ul>
+      <b>Introduction:</b> <br>
+Soar to new heights with the Aero Club's Summer School. 
+<br>
+<p>
+This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
+Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.</p>
+Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.<br>
+
+<b>Course Description:</b><br>
+<p>The Aero Club Summer School is a comprehensive program that covers the fundamentals of aerodynamics, aircraft modeling, flight simulations, and robotics applications in aviation. <br>
+</p>
+Over the course of six days, participants will embark on an exhilarating journey through the following modules.
+<p><b>Softwares requirement:</b>    
+<ol>
+    <li>XFLR5</li>
+    <li>Fusion360</li>
+    <li>VM/Dual boot Ubuntu 22.04</li>
+    <li>Gazebo, and Pymavlink</li>
+    <li>ROS2 Humble - Turtlesim</li>
+    <li>Ardupilot Mission Planner</li>
+</ol></p>
+
+        `
+      ,
+      sessionwise: [
+        {
+          title: "Basics of Aerodynamics",
+          description: `
+          <b>Lesson</b>- Delve into the fundamental principles that govern flight, including lift, drag, and how aircraft defy gravity.
+          `,
+        },
+        {
+          title: "Modeling a RC Plane",
+          description: `
+          <b>Lesson</b>- Transform ideas into 3D models: Design a RC aircraft with Fusion360.
         
-        `,
-      sessionwise: [
-        {
-          description: `
-          <ul>
-          <li>Introduction to Aero Club - briefly talk about what we do; Summer School Timeline explanation</li>
-          <li>Basics about drones and its types</li>
-          <li>Components of a drone - Propellers, BLDC motors, ESCs, Batteries, Flight Controllers</li>
-          <li>Guidelines for ROS, XFLR5 and other software installation will be explained briefly and also a installation guide will given</li>
-          </ul>
           `,
         },
         {
+          title: "Analysis of an airfoil",
           description: `
-          <ul>
-          <li>Exploring ROS filesystem; Learn basic Linux and ROS commands</li>
-          <li>Creating and setting up a catkin workspace as well as ROS packages</li>
-          <li>Understand basics of ROS like what are nodes, topics, parameters, messages and services</li>
-          <li>Tutorial of inbuilt turtlesim package using the rqt plot to explain the functionality of the turtle's motion;</li>
-          <li>Basics of python and C++ programming will be briefed (some reference material maybe provided to the participants to get a better idea before the next session)</li>
-          </ul>
+          <b>Lesson</b>- Explore the intricacies of airfoil design, visualize airflow patterns and performance using XFLR5.
           `,
         },
         {
+          title: "ROS2 and MAVROS",
           description: `
-          <ul>
-          <li>Revise programming fundamentals from last session</li>
-          <li>Writing a basic publisher and subscriber node, service client will be taught (C++/python)</li>
-          <li>Guidance for installation and intro to Ardupilot and gazebo</li>
-          </ul>
+          <b>Lesson</b>- Step into the world of robotics with an introduction to ROS2 and MAVROS, a communication node for UAV.
           `,
         },
         {
+          title: "Gazebo Simulation",
           description: `
-          <ul>
-          <li>ROS integration with Ardupilot and Gazebo for communication and control.</li>
-          <li>ROS packages and nodes commonly used for interfacing with Ardupilot and Gazebo.</li>
-          <li>Understanding path planning.</li>
-          <li>A mini project based on what has been taught.</li>
-          </ul>
+          <b>Lesson</b>- Immerse yourself in realistic flight simulations using Gazebo. Create virtual environments, test flight scenarios, and gain hands-on experience in simulation-based aircraft development from your computer.
           `,
-          session_nums: "4 to 6",
         },
         {
+          title: "Ground Control Stations, Drone Simulation and Computer Vision",
           description: `
-            <ul>
-            <li>Basics about model airplanes, its types and components.</li>
-            <li>Intro to the basic terms which will be used frequently during the summer school.</li>
-            <li>Concepts and ideas in aeromodelling such as control surfaces, types of motion, etc.</li>
-            <li>Basic electronics used in an model airplanes; Different materials used in aeromodelling.</li>
-            </ul>
-            `,
-          session_nums: "7",
+          
+          <b>Lesson</b>- Simulate a drone on a real map with Ardupilot. Progress to 3D simulation, navigate a virtual warehouse with only a drone control terminal. Ultimately, leverage ROS in conjunction with Computer Vision to script an autonomous search mission.
+
+
+          `,
         },
         {
+          title: "Hover Huddle",
           description: `
-          <ul>
-          <li>Installation and getting started with XFLR5.</li>
-          <li>Describing what is XFLR5 and its usage.</li>
-          <li>Design & analysis of airfoil and wing.</li>
-          </ul>
+          
+          <b>Lesson</b>- To cover content if left out in earlier sessions along with clearing doubts related to assignments.
+          
+
           `,
-          session_nums: "8 and 9",
         },
+
       ],
     },
+    //cysec
     {
-      club: "Horizon",
-      title1: "Into, Across and Beyond the ##Astroverse",
-      title: "Into, Across and Beyond the Astroverse",
-      email: "horizon.iitm@gmail.com",
+      club: "CyberSecurity Club",
+      title1: "The Art of ##Exploitation",
+      title: "The Art of Exploitation",
+      email: "cs22b010@smail.iitm.ac.in",
       description:
-        "This Summer School explore the Quantum Realm, Special Relativity, get to know the physics behind the particles, use of Statistical Physics in ML and how ML can be used in the Astronomy.",
-      id: "horizon",
-      slot: "B",
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/LVJa450ymIvKpcim1U5GJf",
-        },
-      ],
-      poster: Horizon,
-      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
-      fulldesc: `
-        <ul>
-        <li><b>Particle Physics Odyssey:</b> Introduction to particle and nuclear physics. Neutrino physics and recent experimental results/developments.</li>
-        <li><b>Quantum Physics - Counterintuitively Intuitive:</b> We introduce the Counterintuitive ideas that are at the heart of Quantum mechanics and explore them through a mix of thought experiments and math.</li>
-        <li><b>Quantum Compute with us:</b> We will cover the fundamentals of Quantum Computing theory covering some cool examples, a bit of linear algebra, how they can be built, and a fundamental question about quantum theory.</li>
-        <li><b>Basic Python for Physics and Astronomy:</b> General Python concepts needed for physics and astronomy.</li>
-        <li><b>Data Driven Astronomy:</b> Using Data Science concepts to study exoplanets.</li>
-        <li><b>Statistical Physics of learning:</b> We will cover how concepts of statistical physics can be applied to learning theory and how thermodynamics is related to it. We'll cover common statistical mechanics models used in Neural Networks and Deep Learning.</li>
-        <li><b>Introduction to Special Relativity:</b> We will take the first step in exploring the fascinating interplay between space and time, delving into the concept of time dilation and the relativistic effects that occur as objects approach the speed of light.</li>
-        </ul><br/>
-        We will have assignments of each topic.
+        `Your hacking journey begins here!
+
+        With this 9 session course on binary exploitation learn everything needed to jumpstart your hacking journey covering everything from the basics of C to advanced topics including ret2libc , ASLR etc.
+        
+        Get equipped to overcome any challenge involving binary exploitation with this one of a kind educational experience.
         `,
-      sessionwise: [
-        {
-          title: "Particle physics",
-          description:
-            "<ul><li>Standard model, Feynman diagrams, nuclear physics, accelerators</li></ul>",
-        },
-        {
-          title: "Particle physics",
-          description:
-            "<ul><li>Neutrino physics and Neutrino oscillations, Recent developments and results in particle physics collision experiments</li></ul>",
-        },
-        {
-          title: "Quantum Physics - Counterintuitively Intuitive",
-          description: `
-          <ul>
-          <li><b>Quantum Behaviour</b> - Particles, Waves and Something in between</li>
-          <li><b>The uncertainty principle</b> - We can't know everything!</li>
-          <li><b>Measurement and Schrodinger's Cat</b></li>
-          <li><b>Wavefunctions and Schrodinger's Equation</b></li>
-          <li><b>Spin</b> - Fundamentally Quantum</li>
-          <li><b>Dirac Notation</b> - Some cool Linear Algebra</li>
-          <li><b>Multiple Spin Half Systems</b> - Entanglement and a Hint at Quantum Computing</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Quantum Compute with us",
-          description: `
-          <ul>
-          <li><b>Building Blocks</b> - Qubits and Their Visualization</li>
-          <li>Multiple Qubits and Einstein Podolsky Rosen Pairs</li>
-          <li><b></b>Quantum Gates with an example</b> - Quantum Teleportation</li>
-          <li>Schmidt Decomposition A.k.a Singular Value Decomposition</li>
-          <li>Faster than Classical 1 Deutsch Algorithm</li>
-          <li>Faster than Classical 2 Grover's Search Algorithm with a Geometric Vectorial Intuition</li>
-          <li><b>Building a Quantum Computer</b> - Fundamentals and Present Situation</li>
-          <li><b>Bell's Inequality</b> - What Einstein couldn't believe</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Basic Python for Physics and Astronomy",
-          description:
-            "<ul><li>Python data types, control statements, numpy, pandas, astropy basics, scipy basics.</li></ul>",
-        },
-        {
-          title: "Data Driven Astronomy",
-          description: `
-            <ul>
-            <li>Exoplanets: Definition, Types, Distribution across the universe</li>
-            <li>Why study exoplanets - Possibility of extraterrestrial life or intelligence?  Using python to study these.</li>
-            </ul>
-          `,
-        },
-        {
-          title: "Statistical Physics of Learning",
-          description: `
-          <ul>
-          <li>How learning works and error, prior and posterior probability</li>
-          <li>ensembles, free energy, Gibbs distribution</li>
-          <li>Thermodynamics of learning, maximum likehood learning</li>
-          <li>Applications in machine learning</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Introduction to Special Relativity",
-          description: `
-            <ul>
-            <li>Frames of reference, Starting postulates of Einstein , Michaelson Morley experiment</li>
-            <li>Why no ether, Relativity of simultaneity, Lorentz factor , time dilation, length contraction</li>
-            <li>Why is Lightspeed a universal speed limit? , Barn paradox, Twin paradox</li>
-            </ul>
-          `,
-        },
-      ],
-    },
-    {
-      club: "iBot Club",
-      title1:
-        "RoboMaze: Constructing and Training Robots to ##Tackle Challenging Mazes",
-      title:
-        "RoboMaze: Constructing and Training Robots to Tackle Challenging Mazes",
-      email: "ibotcfi@gmail.com",
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/FAiU9dXs3Tg8bBXvFelvxw",
-        },
-      ],
-      description:
-        "Embark on an Exciting Journey as iBot Club Presents an *Interactive 9-Session* Summer School, Unleashing the Secrets of Maze-Solving Robots! Learn the Art of Building Intelligent Bots that Navigate Mazes with Precision and Problem-Solving Prowess by Engaging in *Hands-On Offline Sessions* and an *Electrifying Maze Solving Tournament*.",
-      id: "ibot-club",
-      slot: "B",
-      poster: IBot,
-      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
-      fulldesc: `
-        <b>Background:</b><br/> The history of maze solving and robotics is intertwined, showcasing the evolution of intelligent machines and their ability to navigate complex mazes. In the mid-20th century, researchers developed basic maze-solving robots using analog circuitry. As computing technology advanced, digital computers and sophisticated sensors were integrated into maze-solving robots, improving their perception and decision-making. Path planning algorithms and machine learning techniques further enhanced their capabilities. Today, maze-solving robots continue to serve as testbeds for robotics research and education, with advancements in sensor technology and computation leading to more accurate and efficient maze navigation.<br/>
-
-        For more context look into this ${link(
-          "video about Micromouse, the fastest maze-solving competition on Earth.",
-          "https://youtu.be/ZMQbHMgK2rw"
-        )} <br/><br/>
-
-        <b>Summer school details:</b><br/>
-
-        Summer school by iBot club will consist of 9 online sessions, to teach concepts spanning 3 modules (mechanical, electronics and software) which will aid each 1 of you to create a maze solving robot. Each session will be followed by a task (taking no more than an hr. even for absolute beginners) which has to be submitted within the respective deadlines. Topics covered in the different sessions are mentioned in the syllabus.<br/>
-
-        Students with regular attendance and on-time submission of completed tasks will be able to participate in the offline Hands-on sessions held in August 1st week. Here students will be provided with robotic kits for free where they will construct and train a general maze solving robot. Summer school ends with an electrifying Maze Solving Tournament where teams of students can compete to finish a maze the fastest.<br/>
-        `,
-      daywise: [
-        "Intro to Robotics, Ideation of maze solving bot design",
-        "Electronic components commonly used in robots (sensors, battery, motors, motor drivers, ics)",
-        "Linux - Intro to linux terminal and scripts, basic linux commands, file handling, some of the most useful commands especially in robotics.",
-        "3D designing using Fusion 360 for parts of the robot",
-        "Breakdown of electronics involved in the maze solving robot and a common navigation algorithm",
-        "Python - Variables and data types, if-else statements, loops, data structures(list, tuple, dictionary), functions, libraries and modules",
-        "Animation of the maze solving bot using simulation softwares",
-        "Arduino coding with more complex maze solving algorithms",
-        "ROS - Installation of ros noetic, configuration of ros workspace (catkin_ws), basic ros commands and tools, writing nodes (publisher and subscriber) using python",
-      ],
-    },
-
-    {
-      clubs: ["Product Design Club", "Team Sahaay"],
-      title1: "Tech.Design.##Biz",
-      title: "Tech.Design.Biz",
-      emails: ["thepdc.cfi@gmail.com", "teamsahaayiitm@gmail.com"],
-      slot: "C",
-      time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      ids: ["product-design club", "team-sahaay"],
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
-        },
-      ],
-      poster: PDC_Sahaay,
-      description:
-        "This intensive 3-week program will empower you with the skills and knowledge at the intersection of technology, design, and business, unlocking your potential to create innovative solutions. From mastering design tools to understanding market dynamics, this workshop will equip you with the tools and mindset to thrive in the digital age.",
-      fulldesc: `
-        In this dynamic and hands-on Summer School session, we will explore the synergies between technology, design, and business, offering a comprehensive learning experience that will enable you to craft innovative solutions. Each class will be a blend of theory, practical exercises, and real-world case studies, providing you with the practical skills and knowledge to tackle complex challenges.<br/><br/>
-        <b>Topics Covered:</b><br/>
-        <ul>
-        <li>Introduction to Product Design</li>
-        <li>Prototyping and Iterative Design - Part 1: Fusion 360</li>
-        <li>Crafting and Engaging User Experiences</li>
-        <li>Prototyping and Iterative Design - Part 2: Figma</li>
-        <li>Product Management: Balancing Vision, Requirements, and Stakeholder Expectations</li>
-        <li>Sell me this pen! Product to Market</li>
-        <li>Introduction to Python</li>
-        <li>Project Pitch and Evaluation</li>
-        </ul>
-
-        <b>Activities:</b>
-        <ul>
-        <li>Design Challenges and Group Projects: Immerse yourself in exciting design challenges and collaborative group projects that will put your skills to the test. Work alongside fellow participants to ideate, prototype, and iterate on innovative product solutions.</li>
-        <li>Hands-on Prototyping Exercises: Get hands-on experience in prototyping tools like Fusion 360 and Figma. Perfect your knowledge with the after-session exercises.</li>
-        <li>Interactive Discussions and Brainstorming Sessions: Engage in thought-provoking discussions and stimulating brainstorming sessions. Explore the intersection of technology, design, and business as you dive deep into relevant topics, share insights, and exchange ideas. </li>
-        <li>Final Project Showcase and Evaluation: Test your newly acquired skills and knowledge with a final showcase. Present your product idea and demonstrate your understanding of the concepts covered during the workshop. The team with the most outstanding product will be awarded e prestigious "Best Project Certificate" as a testament to their exceptional work.</li>
-        </ul>
-        `,
-      sessionwise: [
-        {
-          title: "Introduction to Product Design",
-          description:
-            "<ul><li><b>Understanding the Product Triad:</b> Unveiling the Relationship between Technology, Design, and Business</li><b><li>Empathy-Driven Design:</b> Putting Users at the Center of the Design Process Human-Centered Design Principles and Methodologies</li></ul>",
-        },
-        {
-          title: "Prototyping and Iterative Design; Part 1- Fusion 360",
-          description: `
-          <ul>
-          <li>Hands-on Prototyping with Fusion</li>
-          <li>Introduction to Fusion 360</li>
-          <li>Sketching in Fusion 360</li>
-          <li>3D Modeling Basics</li>
-          <li>Parametric Design in Fusion 360</li>
-          <li>Assembly Design</li>
-          <li>Creating Renderings and Animations</li><br/>
-          more...
-        </ul>
-          `,
-        },
-        {
-          title: "Crafting and Engaging User Experiences",
-          description: `
-          <ul>
-          <li><b>User Experience (UX) Design:</b> Creating Intuitive and Engaging Interfaces</li>
-          <li>Usability Principles and Best Practices</li>
-          <li><b>Gamification and User Engagement:</b> Techniques to enhance user motivation and Retention</li>
-          <li><b>Usability Testing and User Feedback:</b> Gathering insights to improve product usability</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Prototyping and Iterative Design; Part 2- Figma",
-          description: `
-          <ul>
-          <li>Overview of Figma and its Features</li>
-          <li>Getting familiar with the interface and tools</li>
-          <li>Creating frames and artboards</li>
-          <li>Working with shapes, text, and images</li>
-          <li>Applying colors, gradients, and styles</li>
-          <li>Creating interactive prototypes</li>
-          <li>Defining hotspots and transitions</li><br/>
-          more...
-          </ul>
-          `,
-        },
-        {
-          title:
-            "Product Management: Balancing Vision, Requirements, and Stakeholder Expectations",
-          description: `
-          <ul>
-          <li>Introduction to Product Management</li>
-          <li>Defining Product Vision and Strategy</li>
-          <li>Product Discovery and Market Research</li>
-          <li>Product Road-mapping and Prioritization</li>
-          <li>Product Metrics</li>
-          <li><b>Data-driven Design:</b> Leveraging analytics and user data to inform design decisions</li>
-          <li><b>Case Studies:</b> Real-world Examples and Best Practices</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Sell me this pen! : Product to Market",
-          description: `
-          <ul>
-          <li><b>Business Strategy and Product Development:</b> Identifying Market Opportunities</li>
-          <li>Creating Sustainable Business Models and Achieving Product-Market Fit</li>
-          <li><b>Branding and Identity Design:</b> Creating a unique and recognizable brand presence</li>
-          <li><b>Technology Trends:</b> Exploring emerging technologies and their impact on product development</li>
-          <li>Exploring AR, VR, and MR</li>
-          <li>Conversational AI and ChatGPT</li>
-          </ul>
-          `,
-        },
-        {
-          title: "Intro to Python",
-          description: `
-          <ul>
-          <li>Basic Programming Concepts and Python Fundamentals</li>
-          <li>Python Applications in Product Design and Development</li><br/>
-          more...
-          </ul>
-          `,
-        },
-        {
-          title: "Project Pitch and Evaluation",
-        },
-      ],
-    },
-    {
-      club: "3D Printing Club",
-      title1: "Summer School '23 ##3D Printing club",
-      title: "Summer School '23 3D Printing club",
-      id: "3d-priting club",
+      id: "cysec-club",
       slot: "D",
-      email: "3dpc.cfi.iitm@gmail.com",
+      poster: Aero,
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/DVLcFD6MyP9L32HjtHgoaT",
+          link: "",
         },
       ],
       time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
-      poster: _3DP,
-      description:
-        "Get ready to build the future layer by layer. Ctrl+P is past, Ctrl+3DP is here to last.",
-      fulldesc: `
-      <b>Topics:<b>
-        <ul>
-          <li>Introduction to 3D Printing: Basics, technologies, and applications</li>
-          <li>3D Modeling and Design: Learning CAD software for creating 3D models</li>
-          <li>3D Printing Materials: Exploring different materials used in 3D printing</li>
-          <li>Print Preparation: Understanding slicing software and optimizing print settings</li>
-          <li>Post-Processing Techniques: Finishing and refining printed objects</li>
-          <li>Advanced Printing Techniques: Multi-color, multi-material, and support structures</li>
-          <li>Design for 3D Printing: Optimization techniques for successful prints</li>
-          <li>3D Scanning and Reverse Engineering: Techniques for capturing and reproducing physical objects</li>
-          <li>Industrial Applications of 3D Printing: Case studies and real-world examples</li>
-          <li>Future Trends in 3D Printing: Exploring emerging technologies and applications</li>
-        </ul>
-        `,
-      daywise: [
-        "Basics of 3D printing",
-        "Types of 3D printing",
-        "Parts of FDM 3D printer",
-        "Parts of FDM 3D printer",
-        "CAD modelling using Fusion 360",
-        "CAD modelling using Fusion 360",
-        "STL files and slicer",
+      fulldesc: `<h1>Introduction : </h2>
+      Your hacking journey begins here!
+      
+      With this 9 session course on binary exploitation learn everything needed to jumpstart your hacking journey covering everything from the basics of C to advanced topics including ret2libc , ASLR etc.
+      
+      Get equipped to overcome any challenge involving binary exploitation with this one of a kind educational experience.
+      
+      <h2>Course Description :</h2>
+      
+      The course will be covering everything needed to get immediately started with solving challenges in 9 comprehensive modules as follows 
+      
+
+        `
+      ,
+      sessionwise: [
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Basic C language
+          </li>
+          <li>
+          Basic Linux Commands
+          </li>
+          </ul>
+          
+       
+          `,
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Introduction to compilation 
+          </li>
+          <li>
+          Introduction to assembly language
+          </li>
+          </ul>
+       
+          `,
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Using GDB 
+          
+          </li>
+          <li>
+          Overwriting a variable with basic buffer overflow
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Understanding how stack frames work
+          
+          </li>
+          <li>
+          Types of buffer overflow
+          </li>
+          <li>
+          ret2function
+          </li>
+          <li>
+          ret2shellcode
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Stack canaries as a mitigation to buffer overflow
+          </li>
+          <li>
+          Leaking the canary with format string
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "",
+          description: `
+          <ul>
+          <li>W^X, preventing shellcode execution
+          </li>
+          <li>
+          ret2libc to overcome shellcode execution           
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "",
+          description: `
+          <ul>
+          <li>Understanding ASLR; the what, the how, and the why
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "",
+          description: `
+          <ul>
+          <li>
+          Position Independent Code
+          </li>
+          <li>
+          Procedure Linkage Table
+          </li>
+          <li>
+          Global Offset Table
+          </li>
+          <li>
+          Relocations Read Only - and how it is a necessary evil
+          </li>
+          </ul>
+          `,
+        }, {
+          description: `
+          <ul>
+          <li>
+          Overcoming ASLR with ret2plt
+          </li>
+          <li>
+          GOT overwrite with format string
+          </li>
+          </ul>
+          `,
+        },
+
       ],
     },
+
+    //W&B
     {
       club: "WebOps and Blockchain Club",
-      title1: "DevLaunch: ##App Dev X Blockchain",
-      title: "DevLaunch: App Dev X Blockchain",
+      title1: "WebDev ##Enigma",
+      title: "WebDev Enigma",
       email: "cfiwebops@smail.iitm.ac.in",
       poster: W_B,
       links: [
@@ -609,29 +630,684 @@ const data = {
         },
       ],
       description:
-        "The Summer School camp aims at giving a flavour of app development,web development,blockchain integration along with crucial skills like DevOps,microservices, UI/UX etc.",
+        "We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.",
       fulldesc:
-        "Through the course of Summer School we will be developing a project which will be similar to the BookMyShow app but it would involve integration with Blockchain.We aim to create an application where event organisers can issue tickets as unique tokens on the blockchain, and users can purchase and transfer tickets securely.",
-      daywise: [
-        "UI/UX development,hands-on experience with figma, Intro to microservices and proper use and functioning of git",
-        "Webdev using HTML,CSS and Javascript",
-        "Developing a strong understanding of object-oriented programming (OOP) concepts in Dart, the programming language for Flutter.",
-        "Introduction to App dev through Flutter and starting with the frontend of the project",
-        "Flavour of backend development and gaining knowledge in developing server side applications with Nodejs",
-        "Building the backend of the project",
-        "Gaining a comprehensive understanding of blockchain technology, its underlying concepts, and its applications in various industries.",
-        "Expertise in writing smart contracts and connecting these contracts",
-        "Integration of the smartcontracts with the frontend, Intro to DevOps and their applications",
-      ],
+        `
+        <h2>Introduction</h2>
+
+We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.
+
+<h2>Requirements</h2>
+<ul>
+<li>
+Laptop or Computer
+</li>
+<li>
+A Compatible Code Editor (preferably Visual Studio Code) Installed on Your System
+</li>
+<li>
+Stable internet connection
+</li>
+</ul>
+
+        `,
+      sessionwise: [
+        {
+          title: "Starting with HTML, CSS Basics to Get Hands-On Coding a Website",
+          description: `
+          <ul>
+          <li>Introduction to the foundations of web development with HTML and CSS</li>
+          <li>Understanding the structure of web pages and styling techniques</li>
+          <li>Hands-on practice to create a basic web page</li>
+      </ul>
+            `,
+        },
+        {
+          title: "Learn to Use Git and GitHub and Insights in UI/UX Designing",
+          description: `
+          <ul>
+          <li>Essentials of version control using Git and GitHub</li>
+          <li>Learning to track changes, collaborate on projects, and manage code repositories</li>
+          <li>Insights into UI/UX design principles</li>
+          <li>Emphasis on user-centric design and creating intuitive interfaces</li>
+      </ul>   
+         
+            `,
+        },
+        {
+          title: "Diving into JavaScript and Its Concepts",
+          description: `
+          <ul>
+    <li>Introduction to JavaScript and its syntax</li>
+    <li>Learning about variables, functions, and events</li>
+    <li>Adding interactivity and dynamic content to websites</li>
+    <li>Laying the groundwork for more advanced web development topics</li>
+</ul>
+
+            `,
+        }, {
+          title: " Mastering Backend Development with Express and Databases",
+          description: `
+          <ul>
+          <li>Introduction to backend development using Express.js</li>
+          <li>Interacting with databases</li>
+          <li>Overview of how backend systems work</li>
+      </ul>
+      
+            `,
+        }, {
+          title: "Conquering Frontend Development with React",
+          description: `
+          <ul>
+    <li>Delving into React and its components</li>
+    <li>Learning about state management and the React lifecycle</li>
+    <li>Creating dynamic and responsive web applications</li>
+    <li>Enhancing skills in frontend development</li>
+</ul>
+
+            `,
+        }, {
+          title: " Diving into Blockchain Technology",
+          description: `
+          <ul>
+          <li>Introduction to blockchain technology and its fundamental concepts</li>
+          <li>Explanation of wallets and smart contracts</li>
+          <li>Basics of coding in Solidity</li>
+          <li>Understanding the potential and applications of blockchain</li>
+      </ul>
+      
+            `,
+        }, {
+          title: "Exploring More on Solidity and Integrating Blockchain with Ethers.JS",
+          description: `
+          <ul>
+          <li>Deepening knowledge of Solidity and complex smart contracts</li>
+          <li>Learning to use the Ethers.js library</li>
+          <li>Gaining proficiency in connecting blockchain functionalities with frontend applications</li>
+      </ul>
+      
+            `,
+        }, {
+          title: "Final Integration",
+          description: `<ul>
+          <li>Bringing together all the skills and knowledge acquired throughout the course</li>
+          <li>Working on integrating the frontend, backend, and blockchain components into a cohesive project</li>
+          <li>Emphasizing the importance of full-stack development</li>
+      </ul>
+      `
+        }],
+
       slot: "D",
       time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
       id: "webops-and blockchain club",
     },
 
+    //Horizon
     {
-      club: "AI Club (Analytics/CVI)",
-      title1: "Intro to ##ML, DL, and Computer Vision",
-      title: "Intro to ML, DL, and Computer Vision",
+      club: "Horizon",
+      title1: "The Space Route: ##Navigating through Cosmos",
+      title: "The Space Route: Navigating through Cosmos",
+      email: "horizon.iitm@gmail.com",
+      description:
+        `
+        This Summer School, Horizon presents the opportunity for you to learn in 7 days of informative sessions ,about observation of the night sky and astrophotography, physics inspired computation with simulations of astronomical events like the big bang, multiple fascinating astrophysics concepts, Cosmology with aspects of the universe explained like the expanding universe along with the Cosmological Principle,finishing with some machine learning in astronomy.
+        `,
+      id: "horizon",
+      slot: "B",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/LVJa450ymIvKpcim1U5GJf",
+        },
+      ],
+      poster: Horizon,
+      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
+      fulldesc: `
+      <h2>Introduction: </h2>
+
+This Summer School, Horizon presents the opportunity for you to learn in 7 days of informative sessions ,about observation of the night sky and astrophotography, physics inspired computation with simulations of astronomical events like the big bang, multiple fascinating astrophysics concepts, Cosmology with aspects of the universe explained like the expanding universe along with the Cosmological Principle,finishing with some machine learning in astronomy.
+        `,
+      sessionwise: [
+        {
+          title: "Introduction to Observational Astronomy and Astrophotography",
+          description:
+            `
+            <b><Topics<b>
+            <ol>
+            <li>
+            What we can observe in the nightsky unaided; a small guide to observing these objects.
+            </li>
+            <li>
+            Inspecting the telescope - How does it work, length of telescope, aperture and f ratio. 
+            </li>
+            <li>
+            Coordinate systems - Alt Az and RA Dec. 
+            </li>
+            <li>
+            Intro to mounts - why we need mounts - why do we need to track objects - difference between altaz and eq mounts. 
+            </li>
+            <li>
+            Capturing the nightsky - Astrophotography vs Normal photography.
+            </li>
+            <li>
+            More about AP - stacking - how to increase SNR, seeing, dark frames, bias frames, flat frames.
+            </li>
+            <li>
+            Sensors - CMOS vs CCD - the fundamental working principles behind the two.
+            </li>
+            </ol>
+
+            `,
+        },
+        {
+          title: "Physics Inspired Computation",
+          description:
+            "What is Optimisation?, Optimization techniques - Gravitational search ",
+          session_nums: "2.1"
+        },
+        {
+          title: "Optimization, Central Force Optimization, ., Physics Inspired Neural Networks.",
+          description:
+            `Colliding Bodies Optimization, Harmony Search Algorithm, Big Bang - Big Crunch, Simulated Annealing, Quantum Annealing, The Ising model.
+            <h3>Learning Outcomes :</h3> An understanding of optimization problems and how it can be approached in different ways. `,
+          session_nums: "2.2"
+        },
+
+        {
+          title: "Astrophysics Concepts",
+          description: `
+          <ul>
+         
+          `,
+          session_nums: "3"
+        },
+        {
+          title: "Cosmology: Exploring the Unfolding of the Universe",
+          description: `
+          Introduction, The Cosmological Principle - Homogeneity and Isotropy, The fabric of Spacetime, FLRW Metric, Basics of Einstein’s Field Equations
+          `,
+          session_nums: "4.1"
+        },
+        {
+          title: "Cosmology: Exploring the Unfolding of the Universe",
+          description:
+            `The Expanding Universe, Cosmological Redshift, Hubble Parameter, Friedmann’s Equations, The agent of expansion - The Dark Energy (if time permits)
+            <h3>Assignments :</h3> Post-session problem solving tutorials, programming assignments (if we cover)
+            <h3>Pre Requisites :</h3> Differential equation, Classical mechanics, Basics of Programming (not necessary, but a good add-on)
+            <h3>Learning Outcomes :</h3> It’s cosmology! The ultimate answer to all the existential questions! What else do you need !?
+            `,
+
+          session_nums: "4.2"
+        },
+        {
+          title: "ML in Astronomy",
+          description: `
+            <ul>
+            <li>Intro to ML,</li>
+            <li>Need of ML in Astronomy</li>
+            <li>Applications of ML in Astronomy</li>
+            <li>Hands-on demonstration</li>
+            </ul>
+          `,
+          session_nums: "5"
+        },
+      ],
+    },
+    // Sahaay
+
+    {
+      clubs: ["Team Sahaay"],
+      title1: "Innovate##X",
+      title: "InnovateX",
+      emails: ["teamsahaayiitm@gmail.com"],
+      slot: "C",
+      time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
+      ids: ["team-sahaay"],
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
+        },
+      ],
+      poster: PDC_Sahaay,
+      description:
+        "Ever wanted to learn software, electronics, and mechanics all at once while applying these skills in real-world scenarios? Join InnovateX 2024 to dive into facial recognition, embedded programming, Fusion 360, and more. ",
+      fulldesc: `
+      <h2>Intro: </h2>  Ever wanted to learn software, electronics, and mechanics all at once while applying these skills in real-world scenarios? Join InnovateX 2024 to dive into facial recognition, embedded programming, Fusion 360, and more. 
+
+      <h2>Course Description:</h2>Through interactive modules on Python, Arduino, OpenCV, and Fusion 360, you'll gain hands-on experience in software development, IoT, embedded systems, computer vision, and mechanical design. By the end of 8 sessions, you will be able to apply these skills to solve a real-world problem in the final project.
+      <h3>Project:</h3> Apply all the skills you’ve learned to solve a socially relevant problem under the guidance of a mentor from our team.
+<h4>Requirements:</h4>
+Laptop, Internet
+Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step details on how to use these software :)
+
+        `,
+      sessionwise: [
+        {
+          title: "Introduction to Design Thinking and Python Programming",
+          description: `
+          <ul>
+          <li>Explore the principles of design thinking to foster innovation
+          </li>
+          <li>
+          Understand how python works right from the basics, including identifiers, data types, conditional statements and loops          
+          </li>
+          </ul>
+          `,
+        },
+        {
+          title: "Diving into Functions and Numpy",
+          description: `
+          <ul>
+          <li>  Define and use functions
+          
+          </li>
+          <li>         
+          Use Numpy for numerical computing and performing matrix operations.
+          </li>
+          </ul>
+          `,
+        },
+        {
+          title: "Introduction to Development boards and Embedded Programming,",
+          description: `
+          <ul>
+          <li>    Get familiar with various development boards like Arduino UNO, ESP32, and Raspberry Pi.
+          </li>
+          <li>         
+          Detailed look into Arduino UNO, power options, digital and analog signals, pins, electronic components, and using Arduino IDE and TinkerCad.
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "Advanced IoT and Communication Protocols:",
+          description: `
+          <ul>
+          <li>    Deep dive into SPI and I2C protocols, and their simulation in TinkerCad.     
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "Exploring OpenCV",
+          description: `
+          <ul>
+          <li>     Image Processing with OpenCV: Learn to read, resize, and transform images and videos.    
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "Advanced Image Techniques and facial recognition:",
+          description: `
+          <ul>
+          <li>       Explore color spaces, filters, contour detection, edge detection, and face recognition.  
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "Mechanical Design with Fusion 360:",
+          description: `
+          <ul>
+          <li>   Introduction to sketching and part modeling in Fusion 360, including projections, splines, and basic 3D modeling.
+          
+          </li>
+          <li>         
+          Constraints and Joints: Learn about applying constraints and creating joints in your models.
+          </li>
+          </ul>
+          `,
+        }, {
+          title: "Advanced Fusion 360 Techniques",
+          description: `
+          <ul>
+          <li>Continue exploring advanced features, forms, and basic simulations in Fusion 360.         
+          </li>
+          </ul>
+          `,
+        },
+
+      ],
+    },
+
+    // Envisage
+    {
+      club: "Team Envisage",
+      title1: "Gamecraft: Unleash Your ##Inner Game Dev!",
+      title: "Gamecraft: Unleash Your Inner Game Dev!",
+      email: "envisageiitmadras@gmail.com",
+      slot: "E",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/I491vu75opALURBiRPhfwt",
+        },
+      ],
+      time: "5:00 PM - 7:30 PM (Mon, Wed, Fri)",
+      poster: Envisage,
+      description:
+        `This course is your gateway to the exciting world of game development! Over the next 7 sessions, you'll embark on a hands-on journey where you'll learn the fundamental concepts and tools needed to bring your game ideas to life.
+        Whether you're a complete beginner or have some prior experience, this course caters to all skill levels. We will guide you through everything you need to know, from core game design principles to programming and 3D modeling.
+        `,
+      id: "team-envisage",
+      fulldesc: `
+      <h2>Course Description:</h2>
+      This course is your gateway to the exciting world of game development! Over the next 7 sessions, you'll embark on a hands-on journey where you'll learn the fundamental concepts and tools needed to bring your game ideas to life.
+      Whether you're a complete beginner or have some prior experience, this course caters to all skill levels. We will guide you through everything you need to know, from core game design principles to programming and 3D modeling.
+      <h2>What will you do:</h2>
+      Explore core game development concepts like design, programming, and art.
+      Learn to use industry-standard tools: Unity for game creation and Blender for 3D modeling.
+      Create your own 3D models and implement basic game mechanics.
+      Gain a foundational understanding of 2D game development with a brief introduction to Pygame.
+      <h3>This course is perfect for:</h3>
+      Beginners with no prior game development experience.
+      Aspiring game developers who want to learn the basics quickly.
+      Anyone who wants to explore the creative world of game design.
+      <h3>By the end of this course, you'll be able to:</h3>
+      Design and build a playable 3D game using Unity and Blender.
+      Understand the fundamental principles of game development.
+      Gain the confidence to continue learning and creating your own games.
+      
+      <h3>Software Requirements:</h3>
+      Download and install Unity3D, Pygame, a Code Editor, and Blender before the course begins.
+      
+        `,
+      sessionwise: [
+        {
+          title: " Introduction & Setting Up",
+          description: `
+          <ul>
+          <li>Welcome and Introductions: The instructor will introduce themself and the course outline.
+          </li>
+          <li>Game Development Fundamentals: We'll discuss core concepts like game design, programming, and art in the context of game creation.</li>
+          <li>
+          Software Installation: We'll walk you through downloading and installing the necessary software: Unity3D, Pygame, and Blender.
+          </li>
+          <li>
+          Unity Interface Overview: Get familiar with the Unity interface, including the Hierarchy, Inspector, Scene view, and Game view. This hands-on session will guide you through navigating the workspace.
+          </li>
+          
+          
+          <ul>
+          <h3>Assignment:</h3>
+          <ul>
+          <li>Briefly research and write a paragraph about different genres of video games (e.g., Role-Playing Games, Strategy Games, Puzzle Games).
+          
+          </li>
+          <li>
+          Explore the Unity interface on your own and try creating a new project.
+          </li>
+          </ul>
+          `
+        },
+        {
+          title: "Introduction to Game Development & Pygame",
+          description: `
+          <ul>
+          <li>Game Design Fundamentals: Explore core concepts of game design like mechanics, dynamics, and aesthetics.
+          
+          </li>
+          <li>Introduction to Pygame: Learn the basics of Pygame, a popular library for creating 2D games in Python.</li>
+          <li>Building a Simple 2D Game: Participants will create a basic 2D game in Pygame (e.g., a moving object controlled by the keyboard).</li>
+          </ul>
+          <h3>Assignment:</h3>
+          <ul>
+          <li>Explore online resources to learn more about Pygame and experiment with creating different variations of the basic 2D game.
+          </li>
+          <li>
+          Create a simple game with your chosen theme in Pygame.</li>
+          </ul>
+          `
+        }, {
+          title: "Blender Introduction & 3D Modelling",
+          description: `
+          <ul>
+          <li>Blender Interface Overview: Learn the basic layout of Blender for navigation and object manipulation.
+          
+          
+          </li>
+          <li>Creating Simple 3D Models: Focus on creating basic geometric shapes like cubes, spheres, and cylinders for your Unity game.</li>
+          <li>Object Transformation & Editing: Learn how to move, rotate, scale, and edit the created models. This session will involve hands-on practice manipulating objects in Blender.</li>
+          <li>Introduction to Blender Animation (Optional): Briefly introduce the concept of animation in Blender, explaining keyframes and the timeline.</li>
+          </ul>
+          <h3>Hands-On Practice:<h3>
+          <ul>
+          <li>In Blender, practice creating different variations of the basic shapes covered in class (cube, sphere, cylinder).
+          
+          </li>
+          <li>Try experimenting with combining these shapes to form slightly more complex models that could be used in your game (e.g., a simple house, a tree).</li>
+          </ul>
+          `
+        }, {
+          title: " Blender Texturing & Animation",
+          description: `
+          <ul>
+          <li>Simple Texturing in Blender: Explore basic techniques for applying textures to the created models (using free textures is recommended).
+          
+          
+          </li>
+          <li>Blender Animation: This session dives deeper into animation concepts:
+          <ul>
+          <li>Keyframes and the Timeline in detail.</li>
+          <li>Advanced animation techniques like creating walking cycles and jumping animations.</li>
+          </ul></li>
+          <li>Creating Animations: Participants will create more complex animations for their models in Blender (e.g., a character walking, rotating object with multiple parts).</li>
+          <li>Preparing Models for Unity: Learn about optimization techniques for models before exporting to Unity (e.g., reducing polygon count, assigning materials).</li>
+          </ul>
+          <h3>Hands-On Practice:</h3>
+          <ul>
+          <li>Following an online tutorial (optional), create a more intricate model in Blender with detailed animation and textures suitable for your game concept.</li>
+          <li>Ensure your models are optimized for export to Unity using the techniques covered in class.</li>
+          </ul>          
+          `
+        }, {
+          title: "Building the 3D Game in Unity (Part 1) & Importing Models",
+          description: `
+          <ul>
+          <li>Unity Components: We'll introduce essential components like GameObjects, Transforms, Colliders, and Rigidbody that are fundamental for building your game in Unity.
+          </li>
+          <li> Importing Models from Blender: Learn the process of importing the prepared models with animations from Blender into a new Unity project.</li>
+          <li>Creating the Game Environment: Start building the level for your 3D game using the imported models with animation and basic shapes. Explore adding simple lights and background elements.</li>
+          <li>Scripting Fundamentals (C#): Begin with a basic introduction to C# scripting in Unity, focusing on essential concepts like variables and functions.</li>
+          </ul>`
+        }, {
+          title: " Building the 3D Game in Unity (Part 2)",
+          description: `
+          <ul>
+          <li>Unity Components: We'll introduce essential components like GameObjects, Transforms, Colliders, and Rigidbody that are fundamental for building your game in Unity.
+          
+          </li>
+          <li>Creating the Game Environment: Start building the level for your 3D game using basic shapes or importing simple assets (free assets recommended). This session will provide hands-on experience constructing the game world.</li>
+          <li>Scripting Fundamentals (C#): Begin with a basic introduction to C# scripting in Unity, focusing on essential concepts like variables and functions that will allow you to control elements within your game.</li>
+          </ul>
+          <h3>Hands-On Practice:</h3>
+
+          <ul>
+          <li>Based on your chosen 3D game idea that incorporates animation, sketch a more detailed level layout or storyboard showcasing how the animations will be used within the game (e.g., platforms that move with animations, enemies with attack animations).</li>
+          <li>In Unity, experiment with positioning, rotating, and triggering the animations of your imported models to create a basic interactive game environment.</li>
+          <li>In Unity, try creating a few basic scripts that modify object properties (e.g., change color, position). This will give you a taste of how scripting can affect your game.</li>
+          </ul>`
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>Implementing Player Movement: Use C# scripts to control player movement within the game environment using keyboard or mouse input. We'll guide you through the process of scripting player movement.
+          </li>
+          <li>Adding Game Mechanics: Introduce basic game mechanics relevant to your chosen 3D game (e.g., simple enemy movement, basic scoring system). We'll discuss various mechanics you can implement to make your game more engaging.</li>
+          <li>User Interface (UI) Elements: Briefly introduce creating simple UI elements like text displays or buttons in Unity. Learn how to display information and interact with the game through UI elements.</li>
+          <li>Course Wrap-up & Next Steps: Discuss resources for further learning in both Unity3D and Blender, answer any questions you may have, and provide guidance for continuing your game development exploration.</li>
+          </ul>
+
+          <h3>Final Assignment:</h3>
+
+          <ul>
+          <li>Develop a simple, playable 2D game in Pygame.
+         
+          
+          
+          </li>
+          <li> Model, Texture, Rig and Animate the 3D Model covered in the sessions.</li>
+          <li>Develop a playable 3D game in Unity using the concepts learned throughout the course.</li>
+          
+          
+          <li>
+          The game should incorporate the following:
+          <ul>
+          <li>Models you created in Blender during the course.</li>
+          <li>Basic player movement mechanics (e.g., using keyboard or mouse input).</li>
+          <li>A simple game environment or level.</li>
+          <li>(Optional) A basic scoring system or objective to make the game more engaging.</li>
+          <li>Extra Points for adding something new to the game.</li>
+          </ul>
+          </li>
+          </ul>
+          `
+        },
+
+      ],
+    },
+
+
+    //elec
+    {
+      club: "Electronics Club",
+      title1: "Summer##tronics",
+      title: "Summertronics",
+      slot: "A",
+      email: "elecclub.cfi@gmail.com",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/IZ3rpkTVIwqF6N99JfDUgF",
+        },
+      ],
+      time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
+      id: "electronics-club",
+      poster: Electronics,
+      description:
+        "Unleash the opportunity to get proficiency in microcontroller programming using C++ and Micropython, Hands on projects in TinkerCad and Wokwi, learn to make a circuit diagram and compact it in a PCB using EasyEDA and fundamentals of digital electronics making your electronic devices work in a simulation software.",
+      fulldesc: `<h1>Arena 1: Micontroller`,
+      sessionwise: [
+        {
+          title: "Introduction to Microcontrollers",
+          description: `
+          <ul>
+          <li>What is a Microcontroller, how is it different from a SBC etc..
+          </li>
+          <li> Introduction to various sensors and other peripherals(not many because of time constraint)</li>
+          <li>Hands on simulation with Tinkercad and Wokwi</li>
+          <li>Working with arduino and esp32 in simulation softwares</li>
+          </ul>
+        `,
+          session_nums: "1"
+        },
+        {
+          title: "Communication protocols",
+          description: `
+          <ul>
+          <li>Explaining communication protocols and demonstrating them. 
+          </li>
+          <li>SPI, I2C explanation with simulation</li>
+          </ul>
+        `,
+          session_nums: "2"
+        },
+        {
+          title: "Integrating of peripherals/Demonstration of Wifi and bluetooth capabilities and oled display",
+          description: `
+          <ul>
+          <li>Using esp32 demonstration of a game or a real life working model
+          </li>
+          <li>OR Demonstration of Wifi and bluetooth capabilities and oled display with simulation</li>
+          </ul>
+          <h1>Arena 2 - Digital Systems </h1>
+        `,
+          session_nums: "3"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>Introduction to Binary numbers and their arithmetic operations
+          </li>
+          <li>Introduction to Logic Gates.</li>
+          <li>Simulation in Logisim</li>
+          <li>Introduction to K-Maps, Min terms, Max terms.</li>
+          </ul>
+          
+        `,
+          session_nums: "1"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>Explaining them a simple half adder
+          
+          
+          
+          </li>
+          <li>Designing a half adder.</li>
+          <li>Telling them on how to upgrade this to full adder (1-bit)</li>
+          <li>Upgrading 1-bit to multiple bits</li>
+          </ul>
+          <h1>Arena 3 - Signal Processing</h1>
+          `,
+          session_nums: "2"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>What is a Signal?
+          </li>
+          <li>Introduction to Matlab, plotting signals and syncing it with a time vector.</li>
+          <li>Basic outline of general Signal Processing systems</li>
+          <li>What is Convolution?</li>
+          <li>Convolution of two signals in Matlab.
+          
+          </li>
+          <li>Introduction to Fourier Series.</li>
+          </ul>
+        `,
+          session_nums: "1"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>Recap of Fourier series.
+          </li>
+          <li>Demonstration of Fourier series in Matlab.</li>
+          <li>Introduction to Fourier Transforms.</li>
+          <li>How does Fourier transform occur in Matlab?</li>
+          <li>Demonstration.</li>
+          </ul>
+        `,
+          session_nums: "2"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>What is a Filter?
+          </li>
+          <li>General types of Filter.</li>
+          <li>What is White Noise Filter?</li>
+          <li>Demonstration.</li>
+          </ul>
+        `,
+          session_nums: "3"
+        },
+      ]
+
+
+    },
+
+    //AI
+    {
+      club: "AI Club ",
+      title1: "Intro to ##AL",
+      title: "Intro to AL",
       email: "aiclubcfi@smail.iitm.ac.in",
       links: [
         {
@@ -644,59 +1320,342 @@ const data = {
         },
       ],
       poster: AI,
-      fulldesc:
-        "A series of 9 sessions that span the foundation topics of Artificial Intelligence, covering everything from scratch. Discover the limitless possibilities of AI with us!",
       description:
-        "A series of 9 sessions that span the foundation topics of Artificial Intelligence, covering everything from scratch. Discover the limitless possibilities of AI with us!",
+        "We will be offering an exciting, hands-on learning adventure spread across nine dynamic sessions. Participants will dive deep into the fascinating world of artificial intelligence, mastering Python programming, data preprocessing, machine learning algorithms, deep learning, and natural language processing. The course is designed to be accessible for complete beginners while still covering complex and advanced topics.",
+      fulldesc:
+        `<h3>Introduction</h3>
+      We will be offering an exciting, hands-on learning adventure spread across nine dynamic sessions. Participants will dive deep into the fascinating world of artificial intelligence, mastering Python programming, data preprocessing, machine learning algorithms, deep learning, and natural language processing. The course is designed to be accessible for complete beginners while still covering complex and advanced topics.
+            <h3>Requirements </h3>
+            Laptop or Computer
+
+            `,
       id: "analytics-club",
       slot: "E",
       time: "5:00 PM - 7:30 PM (Mon, Wed, Fri)",
-      daywise: [
-        "Intro to Python, Numpy, Pandas and Matplotlib",
-        "Linear, Logistic and Polynomial Regression",
-        "KNNs, SVMs, Naive Bayes Classifiers",
-        "Decision Trees, Random Forest and Ensemble methods",
-        "Intro to Deep Learning, Neural Networks, Pytorch basics",
-        "Adds on to improve model performance: Data preprocessing, feature engineering, regularization, optimizers",
-        "CNNs (theory and implementation)",
-        "Object Detection - Haar Cascade, HOGs, RCNN, YOLO",
-        "Intro to RL",
-      ],
+      sessionwise: [
+        {
+          title: "Introduction to Python and OOP Concepts",
+          description: `
+          <ul>
+          <li>Introduction to the basics of Python programming.
+          
+          
+          </li>
+          <li>Understanding object-oriented programming (OOP) principles.</li>
+          <li>practice with classes, objects, inheritance, and polymorphism.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Data Analysis with Numpy, Pandas, and Data Visualization with Matplotlib",
+          description: `
+          <ul>
+          <li>Essentials of data manipulation using Numpy and Pandas.</li>
+          <li>Techniques for data preprocessing and cleaning.</li>
+          <li>Introduction to data visualization using Matplotlib.</li>
+          <li>Practical exercises to manipulate and visualize datasets.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Understanding Linear, Logistic, and Polynomial Regression",
+          description: `
+          <ul>
+          <li>Introduction to regression and its importance.
+         
+          </li>
+          <li> Understanding the concepts of linear, logistic, and polynomial regression.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Exploring KNN, SVM, and Naive Bayes",
+          description: `
+          <ul>
+          <li>Deep dive into K-nearest neighbors (KNN), support vector machines (SVM), and Naive Bayes classifiers.
+          
+          
+          
+          </li>
+          <li>Understanding the mathematical foundations and applications of these algorithms.</li>
+          <li>Practical implementation of KNN, SVM, and Naive Bayes using Python.</li>
+          <li>Analyzing the performance of different classifiers.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Decision Trees, Ensemble Methods, and Random Forest",
+          description: `
+          <ul>
+          <li>Introduction to decision trees and their working principles.</li>
+          <li>Exploring ensemble methods like bagging and boosting.</li>
+          <li>Detailed study of the Random Forest algorithm.</li>
+          <li>Build and evaluate decision trees and random forests to compare performance.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Introduction to Deep Learning, Neural Networks, and Pytorch Basics",
+          description: `
+          <ul>
+          <li>Overview of deep learning and its significance.
+          </li>
+          <li>Understanding neural networks and their architectures.</li>
+          <li>Introduction to Pytorch and its fundamental concepts.</li>
+          <li>Building simple neural networks using Pytorch.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Optimizers, Regularization, Normalization, and Batch Gradient Descent",
+          description: `
+          <ul>
+          <li>Exploring various optimization techniques for neural networks.
+          </li>
+          <li>Understanding regularization and normalization methods.</li>
+          <li>Implementing batch gradient descent.</li>
+          <li>Data preprocessing techniques for deep learning models.</li>
+          </ul>
+        `,
+        },
+        {
+          title: "Convolutional Neural Networks (CNN)",
+          description: `
+          <ul>
+          <li>Introduction to Convolutional Neural Networks (CNN) and their applications.
+          
+          </li>
+          <li>Theory behind CNNs, including convolutional layers, pooling layers, and fully connected layers.
+          </li>
+          <li>Example Implementation of CNNs. </li>
+          </ul>
+        `,
+        },
+        {
+          title: "Natural Language Processing (NLP)",
+          description: `
+          <ul>
+          <li>Basics of Natural Language Processing (NLP). 
+          </li>
+          <li>Understanding text preprocessing techniques, such as tokenization and stemming.</li>
+          <li>Introduction to RNNs and LSTMs</li>
+          <li>Practical implementation of NLP models using Python libraries.</li>
+          </ul>
+        `,
+        },
+
+      ]
     },
+    // Bio tech
     {
-      club: "Team Envisage",
-      title1: "Envisage : ##Into the Gameverse",
-      title: "Envisage : Into the Gameverse",
-      email: "envisageiitmadras@gmail.com",
-      slot: "E",
+      club: "Biotech Club",
+      id: "biotech-club",
+      email: "biotechcfi@gmail.com",
+      description:
+        "During the courses, you'll learn about lab-grown organs that could revolutionize transplants, explore biotech innovations that fought COVID-19, and decode the molecules orchestrating the fascinating behaviors of animals. Acquire valuable skills, deepen your knowledge, and get a head start in applying what you learn to solve real-world problems.",
+      title1: "Unlocking Life's Secrets: ##Ethology, Viruses, and Bio-printed Solutions",
+      title: "Unlocking Life's Secrets: Ethology, Viruses, and Bio-printed Solutions",
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/I491vu75opALURBiRPhfwt",
+          link: "https://chat.whatsapp.com/H96jWKLfgPE0aOlQOfuklH",
         },
       ],
-      time: "5:00 PM - 7:30 PM (Mon, Wed, Fri)",
-      poster: Envisage,
-      description:
-        "Get ready to take a leap of faith into the world of Game Development with this course on Blender and Unity that will give you all the tools to dive into the Gameverse!",
-      id: "team-envisage",
+      slot: "A",
+      poster: Biotech,
+      time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
+
       fulldesc: `
-          Alright, let's do this one more time.<br/>
-          Our name is Envisage, and for the last 12 years, we've been the one and only Techno-entertainment team in IIT Madras, bringing you projects that bring you the best of both worlds.<br/>
-          Today, we bring to you a dive into the multiverse of game development, with a course in Blender and Unity!<br/>
-          Unity is a cross platform game development engine that is widely considered to be one of the most user friendly game engines, and was used to make several industry defining games like Ori and the Will of the Wisps, Cuphead, Genshin Impact and many more! In this course, you will use Unity to script player movement, physics, interactions, create a UI and basically make learn how to make the framework of the game that you can expand to your heart's content!<br/>
-          Blender is an open source 3D modelling, animation, video editing and compositing software, truly one of the most versatile software available to anyone! But in this course, you will primarily learn how to model environments, characters and prepare both of them for use in your games in Unity.<br/>
-          How will you know that you're ready?<br/>
-          You won't.<br/>
-          That's all it is.<br/>
-          A leap of faith.<br/>
+      Ready to dive into the groundbreaking world of biotech? Join the BIOTECH CLUB's summer courses and transform your understanding of modern science. 
+
+From learning about lab-grown organs that could revolutionise transplants, exploring the biotech innovations that fought COVID-19, or decoding the fascinating behaviours of animals, our sessions offer hands-on, real-world applications tailored to first-year college students. Gain valuable skills, deepen your knowledge, and get a head start in applying your knowledge to solve real-world problems.
+
+<h1>3D printing Organ Systems</h1>
+From Petri Dish to Patients: The Future of Medicine with Lab-Grown Organs
+<h2>Course Description: </h2>
+Explore the cutting-edge world of lab-grown organs and their transformative potential in modern medicine. From foundational concepts to real-world applications, this course delves into the science and ethical considerations of organ regeneration, providing a comprehensive overview of this groundbreaking field.
+
+<h1>Our Battle with COVID</h1>
+How We Used Special Techniques in Biotech to Fight a Pandemic
+
+<h2>Course Description: </h2>
+Gain insights into the crucial role of biotechnology in combating the COVID-19 pandemic. This course covers the basics of biotech, the specifics of SARS-CoV-2, testing methodologies, and the development of vaccines, providing a detailed understanding of the scientific response to a global health crisis.
+
+<h1>Ethology and the genes that Make you YOU</h1>
+ 
+<h2>Course Description:</h2>
+Delve into the fascinating study of animal behavior (humans are just animals after all) with a focus on core ethological concepts. This course explores the causation, development, function, and evolution of behavior, offering a comprehensive introduction to the field through theory and case studies.
         `,
-      syllabus: "Unity and Blender",
+      sessionwise: [
+        {
+          title: "Foundation and Exploration",
+          description: `
+          Introduction:
+          <ul>
+          <li>Briefly discuss the organ transplant waitlist crisis and its impact on patients.</li>
+          <li>Introduce the concept of lab-grown organs as a potential solution.</li>
+          </ul>
+
+
+          Stem Cells:
+          <ul>
+          <li>Explain the role of stem cells in organ development and regeneration.</li>
+          <li>Discuss different types of stem cells and their potential for organ creation.</li>
+          </ul>
+
+
+Organoids:
+          <ul>
+          <li>Introduce the concept of organoids and their uses in disease modelling and drug testing.</li>
+          <li>Showcase real-world examples of organoid research and its applications.</li>
+          <li>Introduction to 3D bioprinting.</li>
+          </ul>
+        `,
+          session_nums: "1.1"
+        },
+        {
+          title: "Applications",
+          description: `
+          Challenges:
+          <ul>
+          <li>Discuss the complexities of replicating functional organs in a lab.</li>
+          </ul>
+          
+          Success Stories:
+          <ul>
+          <li>Highlight successful examples of lab-grown tissues and simple organs.</li>
+          <li>Ethical Considerations:</li>
+          </ul>
+        `,
+          session_nums: "1.2"
+        },
+        {
+          title: "Future",
+          description: `
+          Personalized Medicine:
+          <ul>
+          <li>Discuss the potential for using a patient's own cells to grow customized organs, reducing the risk of organ rejection.</li>
+          <li>Explain how this could revolutionize organ transplantation and personalized medicine.</li>
+          </ul>
+The Impact on Healthcare:
+<ul>
+          <li>Discuss the potential changes in organ donation, patient wait times, and treatment options.</li>
+          <li>Detailed discussion about the use of organoids in drug testing and disease modeling with real-life examples.</li>
+
+          </ul>
+
+
+Case Study:
+          <ul>
+          <li>To deepen the understanding and explore more into the topic, participants will be given a case study as homework.</li>
+          </ul>
+        `,
+          session_nums: "1.3"
+        },
+        {
+          title: "Introduction to Biotech:",
+          description: `
+          SARS-CoV-2 Overview:
+
+
+
+<ul>
+<li>Outline of SARS-CoV-2, highlighting its distinctive features crucial for detection and immunization.
+</li>
+<li>Explanation of the virus's genetic material (RNA), the significance of the spikes, and how the virus binds to human cells.</li>
+
+</ul>
+RT-PCR Testing:
+          <ul>
+          <li>History and elaboration of the RT-PCR technique.</li>
+        
+          </ul>
+        `,
+          session_nums: "2.1"
+        },
+        {
+          title: "",
+          description: `
+          Drawbacks of PCR Testing:
+
+
+
+
+
+
+          <ul>
+          <li>Discussion of limitations and alternative techniques (DETECTR and SHERLOCK tools).</li>
+          </ul>Case Study:
+          <ul>
+          <li>Detailed case study on the UC Berkeley team's efforts in fighting the pandemic.</li>
+          </ul>Vaccine Mechanisms:
+          <ul>
+          <li>Mechanisms of vaccines, including newer types such as RNA and DNA vaccines.</li>
+          </ul>
+        `,
+          session_nums: "2.2"
+        },
+        {
+          title: "",
+          description: `
+          Vaccines:
+
+
+          <ul>
+          <li>Detailed discussion on Covishield and Covaxin, especially their use in India.</li>
+          </ul>Bioinformatics:
+          <ul>
+          <li>Rudimentary bioinformatics session on Rosalind, with proper explanations and coding instructions for beginners.</li>
+          </ul>
+        `,
+          session_nums: "2.3"
+        },
+        {
+          title: "Introduction",
+          description: `
+          <ul>
+          <li>Importance of studying core animal behavior.
+         
+          </li>
+          <li> Basics of Animal Behavior: Causation and Ontogeny.</li>
+          </ul>
+        `,
+          session_nums: "3.1"
+        },
+        {
+          title: "Function",
+          description: `
+          <ul>
+          <li>Introduction to behavioral functions.
+          </li>
+          <li>Topics include Altruism, Kin Selection, Inclusive Fitness, and the Hamiltonian equation.</li>
+          <li>Case study on Sexual Dimorphism.</li>
+          <li>Example linking Game Theory.</li>
+          <li>Basics of evolution based on natural selection.</li>
+          </ul>
+        `,
+          session_nums: "3.2"
+        },
+        {
+          title: "",
+          description: `
+          <ul>
+          <li>Behavioural Genetics
+          
+          </li>
+          <li>Behavioural Epigenetics</li>
+          </ul>
+        `,
+          session_nums: "3.3"
+        },
+      ]
     },
+
+    //PC1
     {
       club: "Programming Club",
-      title1: "Competitive Coding ##Conclave",
-      title: "Competitive Coding Conclave",
+      title1: "ADaPT - ##Algorithms, Data structures and Problem-solving Techniques",
+      title: "ADaPT - Algorithms, Data structures and Problem-solving Techniques",
       email: "programmingclubiitm@gmail.com",
       links: [
         {
@@ -707,32 +1666,28 @@ const data = {
       poster: Programming2,
       time: "5:00 PM - 6:30 PM (Tue, Thu, Sat)",
       description:
-        "Unleash your coding potential and conquer the world of algorithms at our extremely beginner friendly Competitive Programming Camp!",
-      slot: "F2",
+        "This camp offers an introduction to competitive programming in C++, covering essential techniques, data structures, and algorithms. Sessions are designed to build a strong foundation and enhance your skills in competitive programming. Each session will be followed by a well curated problem set on the respective topics. The camp will also include two codeforces-style contests and a session on a few advanced topics (last session). ",
+      slot: "F",
       id: "programming-club",
-      fulldesc: `
-        Join our immersive Competitive Programming Camp, spanning 9 knowledge-packed sessions, each accompanied by a problem set for practice. Elevate your skills with 3 exhilarating contests featuring original problems.<br/>
-
-        Embark on a journey starting from the fundamentals of C++, mastering crucial concepts like I/O and arithmetic as we gradually nurture your problem-solving intuition. Uncover the power of diverse data structures offered by C++, and unleash your potential with a repertoire of algorithmic techniques, such as frequency arrays, prefix arrays, greedy algorithms, complete search, binary search, two pointers, modulo arithmetic, and the sieve.<br/>
-
-        Immerse yourself in our dynamic sessions, equipping yourself with the necessary tools to conquer the realm of competitive programming. Through captivating contests and meticulously crafted problem sets, gain invaluable hands-on experience and refine your implementation skills with these multifaceted techniques. Prepare to excel and leave your mark in the world of competitive programming.<br/>
+      fulldesc: `This camp offers an introduction to competitive programming in C++, covering essential techniques, data structures, and algorithms. Sessions are designed to build a strong foundation and enhance your skills in competitive programming. Each session will be followed by a well curated problem set on the respective topics. The camp will also include two codeforces-style contests and a session on a few advanced topics (last session). 
         `,
       daywise: [
-        "Intro to CP, Basic I/O & Arithmetic",
-        "Loops, Arrays, Vectors and Strings",
-        "Frequency Arrays and Time Complexity",
-        "Recursion, Prefix Sums and GCD",
-        "Greedy and Brute Force<br/>Contest 1",
-        "Binary Search and Two Pointers",
-        "Pair, Map, Stack, Queue, Dequeue, Set and MultiSet",
-        "Modulo Arithmetic and Sieve<br/>Contest 2",
-        "Priority Queues and Sneak Peak to future topics<br/>Final Contest",
+        "Intro to competitive, C++ basic syntax ",
+        "Sorting, Time complexity",
+        "Greedy and Brute Force",
+        "Recursion, Prefix sum and Frequency array",
+        "Binary Search, Two pointers",
+        "STL Data Structures: ",
+        "Modulo Arithmetic and Number theory",
+        "Game theory, Bitmasks",
       ],
     },
+
+    //PC2
     {
       club: "Programming Club",
-      title1: "Code##Crafts",
-      title: "CodeCrafts",
+      title1: "Code##Craft",
+      title: "CodeCraft",
       email: "programmingclubiitm@gmail.com",
       poster: Programming1,
       links: [
@@ -742,65 +1697,309 @@ const data = {
         },
       ],
       description:
-        "Elevate your coding prowess at our Software Dev Camp and shape the future of technology",
-      slot: "F1",
-      time: "6:45 PM - 7:45 PM (Tue, Thu, Sat)",
+        "This camp provides an introduction to Object-Oriented Programming (OOP) in C++ and essential Git techniques. Participants will learn fundamental OOP concepts and key C++ language features. Additionally, the camp covers crucial Git skills, preparing you for modern development workflows. The program includes mini-tasks on covered topics and features two hands-on projects to apply your knowledge in both domains.",
+      slot: "F",
+      time: "5 PM - 7 PM (Tue, Thu, Sat)",
       id: "programming-club",
-      fulldesc: `
-        The camp comprises a total of 9 sessions, including one mini-project, a debugging contest (subject to feasibility), and a hands-on project as the culmination.<br/>
-
-        This camp serves as an excellent stepping stone for participants, introducing them to the world of Open Source and guiding them towards making contributions. Throughout the sessions, we will cover a diverse range of topics, including Object-Oriented Programming, Git, GitHub, STL, Pointers, Streams, and File Handling. Participants will also become familiarised with and prepared to participate in various Open Source events like HacktoberFest and Google Summer of Code.<br/>
-
-        By the end of the camp, participants will have gained a solid understanding of various concepts such as Pointers, Structs, Classes, Overloading, Constructor/Destructor, Operators, Functors, Inheritance, Virtual Functions, Templates, the workings of STL, as well as Streams and File Handling. Additionally, participants will be introduced to numerous modern C++ conventions, features, and useful tricks along their journey.<br/>
+      fulldesc: `This camp provides an introduction to Object-Oriented Programming (OOP) in C++ and essential Git techniques. Participants will learn fundamental OOP concepts and key C++ language features. Additionally, the camp covers crucial Git skills, preparing you for modern development workflows. The program includes mini-tasks on covered topics and features two hands-on projects to apply your knowledge in both domains.
         `,
       daywise: [
-        "Intro to Open Source, GSoc, Git, GitHub, Stack & Heap",
-        "Pointers, Structs - along with mini Project release",
-        "Intro to OOPs and Classes",
-        "Constructor, Destructor and Overloading",
-        "Unary Operators and Functors - along with Project release",
-        "Inheritance and Virtual Functions",
+        "Introduction to Git",
+        "Pointers, structures, stack and heap",
+        "Introduction to classes",
+        "Overloading, abstraction, encapsulation and polymorphism",
+        "Inheritance and virtual functions",
         "Templates",
-        "Working of STL (Standard Template Library)",
-        "Streams, File Handling and Sneak Peek to Future Topics",
+        "Git advanced topics",
+
       ],
     },
+
+
+    //iBot
+    {
+      club: "iBot Club",
+      title1:
+        "Mobile Robots: ##From basics to advanced",
+
+      title:
+        "Mobile Robots: From basics to advanced",
+      email: "ibotcfi@gmail.com",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/FAiU9dXs3Tg8bBXvFelvxw",
+        },
+      ],
+      description:
+        "Welcome to an exhilarating adventure in robotics! Join us and discover the fascinating art of creating mobile robots that can explore, navigate, and identify objects. No prior experience is necessary! We will start from the basics.   Don't miss out – secure your spot in the course today and unleash your potential in the world of robotics!",
+      id: "ibot-club",
+      slot: "B",
+      poster: IBot,
+      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
+      fulldesc: `
+        
+Welcome to an exhilarating adventure in robotics! Join us and discover the fascinating art of creating mobile robots that can explore, navigate, and identify objects. No prior experience is necessary! We will start from the basics.   Don't miss out – secure your spot in the course today and unleash your potential in the world of robotics!
+
+
+<h2>Course Description:</h2>
+
+The course consists of seven sessions and will guide you through the process of building a mobile robot. Each session will be followed by an interesting taskYou will learn to use essential software such as Fusion 360, Tinkercad, Arduino IDE, Simulink, ROS, and OpenCV. Throughout the course, you will gain the knowledge and skills needed to design, control, and code the mobile robot of your choice through assignments and interactive sessions. Students who attend regularly and submit completed tasks on time will receive participation certificates.
+
+<h3>Software Requirements: </h3>
+
+Fusion 360, 
+Tinkercad Account, 
+Simulink, 
+ROS2,
+ Gazebo. 
+
+        `,
+      sessionwise: [
+        {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture: The World of Robotics and Explain Robot’s Anatomy (all domains, but towards more mechanical and electrical), Electronics Fundamentals, Mechanics Fundamentals.
+             </li>
+            <li> Assignment 1: Robotic System Analysis and Proposing a Mobile Robot For any given Scenario.</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture: Mechanical Designing of Robot (Using Fusion 360)
+             </li>
+            <li> Assignment 2:Designing the robot proposed in Assignment 1 in Fusion 360.</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li> Lecture:  Tinkercad and Arduino Programming(Using Tinkercad)	
+            </li>
+            <li> Assignment 3:Implement Arduino programming on the sensors and actuators that are used in the proposal in Assignment 1.</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture: Control Systems Introduction and Implementation of PID using Transfer Function (Using Simulink)
+             </li>
+            <li>Assignment 4:Control System Design and PID Tuning for the proposal in Assignment 1.</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture : Introduction to ROS2  and Simulation in Gazebo(Software)
+            </li>
+            <li>Assignment 5: Create a basic URDF model for the proposal in Assignment 1, and try to simulate it in Gazebo.</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture:  Computer Vision Basics and Real-Time Object Tracking in Robotics (Software).
+            </li>
+            <li>Assignment 6:Real Real-time Object Classification Challenge. (Dataset will be given).</li>
+            </ul>
+         
+            `,
+        }, {
+          title: "",
+          description: `
+            <ul>
+            <li>Lecture:  Understanding SLAM(Simultaneous localisation and mapping) Sampling Based Planning Algorithms RRT* and the Dijkstra Algorithm.
+            </li>
+            <li>Assignment 7:Try and implement navigation with the help of Model Predictive Control.</li>
+            </ul>
+         
+            `,
+        },
+      ]
+    },
+    //3DP
+    {
+      club: "3D Printing Club",
+      title1: "Sketch to Structure:##Discovering 3D Printing",
+      title: "Sketch to Structure: Discovering 3D Printing",
+      id: "3d-priting club",
+
+      email: "3dpc.cfi.iitm@gmail.com",
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/DVLcFD6MyP9L32HjtHgoaT",
+        },
+      ],
+      slot: "C",
+      time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
+      poster: _3DP,
+      description:
+        "Buckle up to step into the realm of 3D Printing and Additive manufacturing. Learn various steps involved in 3D Printing starting from 3D modeling to 3D printing and post processing. We’ll be covering all concepts from beginner level so don’t worry about having no prior knowledge. What else are you waiting for ? Join us and make yourself knowledgeable in the field that’s gonna revolutionize the future !!",
+      fulldesc: `
+      <b>Topics:<b>
+      Buckle up to step into the realm of 3D Printing and Additive manufacturing. Learn various steps involved in 3D Printing starting from 3D modeling to 3D printing and post processing. We’ll be covering all concepts from beginner level so don’t worry about having no prior knowledge. What else are you waiting for ? Join us and make yourself knowledgeable in the field that’s gonna revolutionize the future !!
+
+
+<h3>Course Description:</h3>
+This course will be covering the following aspects of 3D Printing:
+<ul>
+          <li>3D modeling: We'll teach you the basics of Autodesk Fusion 360 and Blender covering concepts like sketching and basic 3D features and examples.</li>
+          <li>Slicing: Here, we teach concepts about slicing and g-code and about how to optimize the print by choosing the right set of parameters.</li>
+          <li>Choosing and setting up a 3D printer: We'll cover various types of 3D printers and what application each type is used for and how to choose the right type for a particular requirement. We'll also see more on parts of an FDM 3D printer and materials used in 3D printing.</li>
+          <li>Post-processing and applications: Learn why additive manufacturing processes require post processing and different techniques used. Also, we'll be covering some fascinating applications of 3D Printing and how it's changing the future.</li>
+        </ul>
+
+
+
+
+
+
+What will you do:
+<ul>
+          <li>We'll be covering the basics of 3D Printing and walk you through the processes involved. By the end of this course, you'll be able to model a 3D part, slice it and print it in a 3D printer knowing fully about the various constraints and conditions involved.</li>
+        </ul>
+
+
+This course is perfect for:
+<ul>
+          <li>College students who want to get into the manufacturing sector can equip themselves with this very demanding skill and make themselves futureproof.</li>
+          <li>School students who are curious about knowing how things are made can learn a process that is how manufacturing will be seen in a few decades.</li>
+          <li>Anyone who would like to learn about this cool tech and upskill themselves in yet another field.
+          </li>
+        </ul>
+
+        `,
+      sessionwise: [
+        {
+          title: "Introduction to 3D Printing and 3D Modeling",
+          description: `
+      <ul>
+      <li>3d printing:
+      Steps involved in the entire process of creating a 3d printed model.
+      
+      </li>
+      <li>3d modeling:
+      <ul>
+      <li>Introduction to fusion 360
+      </li>
+      <li>Basic tools, Creating and editing sketches, usage of constraints etc.</li>
+      </ul>
+      </li>
+      </ul>
+      `,
+        },
+        {
+          title: "Advance Fusion 360",
+          description: `
+      <ul>
+      <li>More deeper view into the tools of fusion 360 to create a 3d object.
+      
+      </li>
+      </ul>Assignment: 
+      
+      <ul>
+      <li>Prepare a basic 3d model using fusion 360 (corresponding views will be provided by us)</li>
+      </ul>
+      `,
+        },
+        {
+          title: "Introduction to Blender Software",
+          description: `
+      <ul>
+      <li>Basic tools, usage of modifiers and different modes available in Blender required to create a 3D model
+      
+      </li>
+      <li>Introduction to Box modeling and demonstration of some models and animations prepared on Blender.
+      </li>
+      </ul>Assignment:
+      
+      <ul>
+      <li>Recreate a 3D model developed during the session</li>
+      </ul>
+      `,
+        },
+        {
+          title: "Slicing a 3D model and G-code",
+          description: `
+      <ul>
+      <li>A comprehensive demonstration on how to slice a 3D model and the various parameters to be considered. A detailed explanation of what is g-code, format of g-code, and some of the essential g-codes which are mainly used in 3D printing.</li>
+      </ul>
+      Assignment<ul>
+      <li>Write a report on how a change in layer height, infill density, print speed, temperature, and brim/skirt/raft affects the print time (more details about the assignment will be provided during the lecture). </li>
+      </ul>
+      `,
+        },
+        {
+          title: "Types of 3D printers",
+          description: `
+      <ul>
+      <li>Choosing the Right 3D Printer and Material: Essential Insights and Tips. Learn the principle of commonly used 3D Printing technologies and materials used for printing in different applications.
+      </li>
+      </ul>Assignment:
+     
+      <ul>
+      <li> Write a report outlining the best 3D printer and supplies to use for a certain problem statement. (Participants are encouraged to explore different types of printers and problems faced in various sectors)
+      </li>
+      </ul>
+      `,
+        },
+        {
+          title: "Setting up a 3d printer ",
+          description: `
+      <ul>
+      <li>Detailed explanation on various parts of an FDM 3d printer and their uses.
+      </li>
+      <li>Demonstration on how various parts of the printer should be set up before starting the printing process.
+      </li>
+      </ul>Assignment:
+      
+     
+      <ul>
+      <li> Analyze the working of a 3d printing process other than FDM and write a brief report describing its parts.
+      </li>
+      </ul>
+      `,
+        },
+        {
+          title: " Post-processing of the printed 3D models, applications and problems faced in 3D printing",
+          description: `
+      <ul>
+      <li>A detailed view of post-processing of the printed 3D models in various types of 3D printing.
+      
+      </li>
+      <li>Some of the problems faced while printing a model, and how to overcome them.
+      </li>
+      <li>Various real-life applications of 3D printing.
+      </li>
+      </ul>Assignment:
+      
+      <ul>
+      <li>Write a report on an interesting application of 3D printing in about 200 words.
+      </li>
+      </ul>Final Assignment:
+      
+      <ul>
+      <li>Giving a review on topics learnt from this course describing the different steps of 3D Printing covered in the sessions.</li>
+      </ul>
+      `,
+        },
+      ]
+    },
+
+
   ],
-  // [
-  //   {
-  //     club: "Club",
-  //     title: "Title",
-  //     slot: "A",
-  //     id: "club",
-  //   },
-
-  //   {
-  //     club: "club5",
-  //     title: "Title 5",
-  //     slot: "A",
-  //     id: "club5",
-  //   },
-
-  //   {
-  //     club: "club1",
-  //     title: "Title 1_1",
-  //     slot: "B1",
-  //     id: "club1",
-  //   },
-
-  //   {
-  //     club: "club1",
-  //     title: "Title 1_2",
-  //     slot: "B2",
-  //     id: "club1",
-  //   },
-
-  //   {
-  //     clubs: ["club3", "club4"],
-  //     title: "Collab stuff",
-  //     slot: "C",
-  //     ids: ["club3", "club4"],
-  //   },
-  // ],
 };
 export default data;

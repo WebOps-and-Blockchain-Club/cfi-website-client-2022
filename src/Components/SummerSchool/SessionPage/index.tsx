@@ -190,17 +190,18 @@ const SessionPage = () => {
                                     data.sessionwise.map((session, index) => {
                                         return <Grid container direction="column"
                                         >
-                                            <HeadingSub white={`Day ${session.session_nums || index + 1}`} red={session.title ? ` - ${session.title}` : ""}></HeadingSub>
-                                            {
-                                                session.description &&
-                                                <Typography
-                                                    variant={matches2 ? (matches ? "subtitle1" : "h6") : "h6"}
-                                                    component="div"
-                                                    color="primary.contrastText"
+                                            <HeadingSub white={`Session ${session.session_nums || index + 1}`} red={session.title ? ` - ${session.title}` : ""}></HeadingSub>
+                                            <p>
+                                                {
+                                                    session.description &&
+                                                    <Typography
+                                                        variant={matches2 ? (matches ? "subtitle1" : "h6") : "h6"}
+                                                        component="div"
+                                                        color="primary.contrastText"
 
-                                                    dangerouslySetInnerHTML={{ __html: session.description }}
-                                                />
-                                            }
+                                                        dangerouslySetInnerHTML={{ __html: session.description }}
+                                                    />
+                                                }</p>
                                         </Grid>
                                     })
                                 }
