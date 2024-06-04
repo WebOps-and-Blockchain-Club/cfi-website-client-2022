@@ -1,24 +1,253 @@
-import PDC_Sahaay from "../Images/SummerSchool/PDC_Sahaay.png";
+import PDC from "../Images/SummerSchool/PDC.jpg";
+import Sahaay from "../Images/SummerSchool/Sahaay.png";
 import _3DP from "../Images/SummerSchool/3DP.png";
 import Aero from "../Images/SummerSchool/Aero.png";
 import AI from "../Images/SummerSchool/AI.png";
 import Electronics from "../Images/SummerSchool/Electronics.png";
 import Envisage from "../Images/SummerSchool/Envisage.png";
 import Horizon from "../Images/SummerSchool/Horizon.png";
-import IBot from "../Images/SummerSchool/IBot.png";
-import Maths from "../Images/SummerSchool/Maths.jpeg";
+import IBot from "../Images/SummerSchool/IBot.jpg";
+import Maths from "../Images/SummerSchool/Maths.png";
 import Programming1 from "../Images/SummerSchool/Programming1.png";
 import Programming2 from "../Images/SummerSchool/Programming2.png";
+import CySec from "../Images/SummerSchool/CySec.png";
 import Biotech from "../Images/SummerSchool/Biotech.png";
 import W_B from "../Images/SummerSchool/W&B.png";
 import { link } from "./utils";
-import { title } from "process";
 
 const data = {
   description:
     "CFI presents the summer school 2024 in this summer break conducted by all the 14 clubs covering  different areas of Technology, Science, and Engineering!It offers the Freshie Youth, who have a lot to EXPLORE, the chance to learn and experience completely new things in the Open-to-All CFI .For students who aspire to represent IIT Madras at the upcoming Inter IIT Tech Meet, the summer schools will also serve as training ground. Participation shall serve as one of the selection criteria for the contingent.<br />These sessions will be conducted by the club heads and coordinators.An E-certificate will be provided to all the participants who have attended above 80% of the live sessions and have completed all the quizzes and tasks in the registered sessions.<br />Its open for all the students and offered for free of cost.",
-  time: "JUNE 14TH to JULY ",
+  time: "JUNE 14TH to JULY 7TH",
   sessions: [
+    //Aero
+    {
+      club: "Aero Club",
+      title1: "From Theory to ##Takeoff",
+      title: "From Theory to Takeoff",
+      email: "aeroclub.cfi@gmail.com",
+      description:
+        `
+This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
+Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.
+Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.`,
+      id: "aero-club",
+      slot: "B",
+      poster: Aero,
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/KpC0eCXsE1oJsa97XtvMm5",
+        },
+      ],
+      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
+      fulldesc: `
+      <b>Introduction:</b> <br>
+Soar to new heights with the Aero Club's Summer School. 
+<br>
+<p>
+This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
+Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.</p>
+Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.<br>
+
+<b>Course Description:</b><br>
+<p>The Aero Club Summer School is a comprehensive program that covers the fundamentals of aerodynamics, aircraft modeling, flight simulations, and robotics applications in aviation. <br>
+</p>
+Over the course of six days, participants will embark on an exhilarating journey through the following modules.
+<p><b>Softwares requirement:</b>    
+<ol>
+    <li>XFLR5</li>
+    <li>Fusion360</li>
+    <li>VM/Dual boot Ubuntu 22.04</li>
+    <li>Gazebo, and Pymavlink</li>
+    <li>ROS2 Humble - Turtlesim</li>
+    <li>Ardupilot Mission Planner</li>
+</ol></p>
+
+        `
+      ,
+      sessionwise: [
+        {
+          title: "Basics of Aerodynamics",
+          description: `
+          <b>Lesson</b>- Delve into the fundamental principles that govern flight, including lift, drag, and how aircraft defy gravity.
+          `,
+        },
+        {
+          title: "Modeling a RC Plane",
+          description: `
+          <b>Lesson</b>- Transform ideas into 3D models: Design a RC aircraft with Fusion360.
+        
+          `,
+        },
+        {
+          title: "Analysis of an airfoil",
+          description: `
+          <b>Lesson</b>- Explore the intricacies of airfoil design, visualize airflow patterns and performance using XFLR5.
+          `,
+        },
+        {
+          title: "ROS2 and MAVROS",
+          description: `
+          <b>Lesson</b>- Step into the world of robotics with an introduction to ROS2 and MAVROS, a communication node for UAV.
+          `,
+        },
+        {
+          title: "Gazebo Simulation",
+          description: `
+          <b>Lesson</b>- Immerse yourself in realistic flight simulations using Gazebo. Create virtual environments, test flight scenarios, and gain hands-on experience in simulation-based aircraft development from your computer.
+          `,
+        },
+        {
+          title: "Ground Control Stations, Drone Simulation and Computer Vision",
+          description: `
+          
+          <b>Lesson</b>- Simulate a drone on a real map with Ardupilot. Progress to 3D simulation, navigate a virtual warehouse with only a drone control terminal. Ultimately, leverage ROS in conjunction with Computer Vision to script an autonomous search mission.
+
+
+          `,
+        },
+        {
+          title: "Hover Huddle",
+          description: `
+          
+          <b>Lesson</b>- To cover content if left out in earlier sessions along with clearing doubts related to assignments.
+          
+
+          `,
+        },
+
+      ],
+    },
+    //W&B
+    {
+      club: "WebOps and Blockchain Club",
+      title1: "WebDev ##Enigma",
+      title: "WebDev Enigma",
+      email: "cfiwebops@smail.iitm.ac.in",
+      poster: W_B,
+      links: [
+        {
+          name: "Whatsapp",
+          link: "https://chat.whatsapp.com/JqxT2wVFHcI75bYdRVBa0G",
+        },
+        {
+          name: "Microsoft Teams",
+          link: "https://teams.microsoft.com/l/team/19%3aD0QLMsqOOnzClg2NRE_-pLvuicUuRI2wKDqpnd-wGuw1%40thread.tacv2/conversations?groupId=d6891cef-0832-486f-bdd8-822bc1bf9023&tenantId=187ca15f-54e0-4673-86f6-b6d7f4c75eef",
+        },
+      ],
+      description:
+        "We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.",
+      fulldesc:
+        `
+    <h2>Introduction</h2>
+
+We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.
+
+<h2>Requirements</h2>
+<ul>
+<li>
+Laptop or Computer
+</li>
+<li>
+A Compatible Code Editor (preferably Visual Studio Code) Installed on Your System
+</li>
+<li>
+Stable internet connection
+</li>
+</ul>
+
+    `,
+      sessionwise: [
+        {
+          title: "Starting with HTML, CSS Basics to Get Hands-On Coding a Website",
+          description: `
+      <ul>
+      <li>Introduction to the foundations of web development with HTML and CSS</li>
+      <li>Understanding the structure of web pages and styling techniques</li>
+      <li>Hands-on practice to create a basic web page</li>
+  </ul>
+        `,
+        },
+        {
+          title: "Learn to Use Git and GitHub and Insights in UI/UX Designing",
+          description: `
+      <ul>
+      <li>Essentials of version control using Git and GitHub</li>
+      <li>Learning to track changes, collaborate on projects, and manage code repositories</li>
+      <li>Insights into UI/UX design principles</li>
+      <li>Emphasis on user-centric design and creating intuitive interfaces</li>
+  </ul>   
+     
+        `,
+        },
+        {
+          title: "Diving into JavaScript and Its Concepts",
+          description: `
+      <ul>
+<li>Introduction to JavaScript and its syntax</li>
+<li>Learning about variables, functions, and events</li>
+<li>Adding interactivity and dynamic content to websites</li>
+<li>Laying the groundwork for more advanced web development topics</li>
+</ul>
+
+        `,
+        }, {
+          title: " Mastering Backend Development with Express and Databases",
+          description: `
+      <ul>
+      <li>Introduction to backend development using Express.js</li>
+      <li>Interacting with databases</li>
+      <li>Overview of how backend systems work</li>
+  </ul>
+  
+        `,
+        }, {
+          title: "Conquering Frontend Development with React",
+          description: `
+      <ul>
+<li>Delving into React and its components</li>
+<li>Learning about state management and the React lifecycle</li>
+<li>Creating dynamic and responsive web applications</li>
+<li>Enhancing skills in frontend development</li>
+</ul>
+
+        `,
+        }, {
+          title: " Diving into Blockchain Technology",
+          description: `
+      <ul>
+      <li>Introduction to blockchain technology and its fundamental concepts</li>
+      <li>Explanation of wallets and smart contracts</li>
+      <li>Basics of coding in Solidity</li>
+      <li>Understanding the potential and applications of blockchain</li>
+  </ul>
+  
+        `,
+        }, {
+          title: "Exploring More on Solidity and Integrating Blockchain with Ethers.JS",
+          description: `
+      <ul>
+      <li>Deepening knowledge of Solidity and complex smart contracts</li>
+      <li>Learning to use the Ethers.js library</li>
+      <li>Gaining proficiency in connecting blockchain functionalities with frontend applications</li>
+  </ul>
+  
+        `,
+        }, {
+          title: "Final Integration",
+          description: `<ul>
+      <li>Bringing together all the skills and knowledge acquired throughout the course</li>
+      <li>Working on integrating the frontend, backend, and blockchain components into a cohesive project</li>
+      <li>Emphasizing the importance of full-stack development</li>
+  </ul>
+  `
+        }],
+
+      slot: "D",
+      time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
+      id: "webops-and blockchain club",
+    },
     //maths
     {
       club: "Mathematics Club",
@@ -131,7 +360,7 @@ const data = {
           link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
         },
       ],
-      poster: PDC_Sahaay,
+      poster: PDC,
       description:
         "Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.",
       fulldesc: ``,
@@ -349,105 +578,7 @@ const data = {
       ],
     },
 
-    //Aero
-    {
-      club: "Aero Club",
-      title1: "From Theory to ##Takeoff",
-      title: "From Theory to Takeoff",
-      email: "aeroclub.cfi@gmail.com",
-      description:
-        `
-This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
-Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.
-Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.`,
-      id: "aero-club",
-      slot: "B",
-      poster: Aero,
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/KpC0eCXsE1oJsa97XtvMm5",
-        },
-      ],
-      time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
-      fulldesc: `
-      <b>Introduction:</b> <br>
-Soar to new heights with the Aero Club's Summer School. 
-<br>
-<p>
-This intensive six-day only journey offers an immersive dive into aeronautical engineering principles, aircraft design methodologies, and pioneering aviation technologies. 
-Participants will gain comprehensive knowledge of aerodynamics, robotics applications, and advanced flight simulations.</p>
-Ignite your passion for aviation and elevate your expertise through this unparalleled educational experience.<br>
 
-<b>Course Description:</b><br>
-<p>The Aero Club Summer School is a comprehensive program that covers the fundamentals of aerodynamics, aircraft modeling, flight simulations, and robotics applications in aviation. <br>
-</p>
-Over the course of six days, participants will embark on an exhilarating journey through the following modules.
-<p><b>Softwares requirement:</b>    
-<ol>
-    <li>XFLR5</li>
-    <li>Fusion360</li>
-    <li>VM/Dual boot Ubuntu 22.04</li>
-    <li>Gazebo, and Pymavlink</li>
-    <li>ROS2 Humble - Turtlesim</li>
-    <li>Ardupilot Mission Planner</li>
-</ol></p>
-
-        `
-      ,
-      sessionwise: [
-        {
-          title: "Basics of Aerodynamics",
-          description: `
-          <b>Lesson</b>- Delve into the fundamental principles that govern flight, including lift, drag, and how aircraft defy gravity.
-          `,
-        },
-        {
-          title: "Modeling a RC Plane",
-          description: `
-          <b>Lesson</b>- Transform ideas into 3D models: Design a RC aircraft with Fusion360.
-        
-          `,
-        },
-        {
-          title: "Analysis of an airfoil",
-          description: `
-          <b>Lesson</b>- Explore the intricacies of airfoil design, visualize airflow patterns and performance using XFLR5.
-          `,
-        },
-        {
-          title: "ROS2 and MAVROS",
-          description: `
-          <b>Lesson</b>- Step into the world of robotics with an introduction to ROS2 and MAVROS, a communication node for UAV.
-          `,
-        },
-        {
-          title: "Gazebo Simulation",
-          description: `
-          <b>Lesson</b>- Immerse yourself in realistic flight simulations using Gazebo. Create virtual environments, test flight scenarios, and gain hands-on experience in simulation-based aircraft development from your computer.
-          `,
-        },
-        {
-          title: "Ground Control Stations, Drone Simulation and Computer Vision",
-          description: `
-          
-          <b>Lesson</b>- Simulate a drone on a real map with Ardupilot. Progress to 3D simulation, navigate a virtual warehouse with only a drone control terminal. Ultimately, leverage ROS in conjunction with Computer Vision to script an autonomous search mission.
-
-
-          `,
-        },
-        {
-          title: "Hover Huddle",
-          description: `
-          
-          <b>Lesson</b>- To cover content if left out in earlier sessions along with clearing doubts related to assignments.
-          
-
-          `,
-        },
-
-      ],
-    },
     //cysec
     {
       club: "CyberSecurity Club",
@@ -463,7 +594,7 @@ Over the course of six days, participants will embark on an exhilarating journey
         `,
       id: "cysec-club",
       slot: "D",
-      poster: Aero,
+      poster: CySec,
       links: [
         {
           name: "Whatsapp",
@@ -612,135 +743,7 @@ Over the course of six days, participants will embark on an exhilarating journey
       ],
     },
 
-    //W&B
-    {
-      club: "WebOps and Blockchain Club",
-      title1: "WebDev ##Enigma",
-      title: "WebDev Enigma",
-      email: "cfiwebops@smail.iitm.ac.in",
-      poster: W_B,
-      links: [
-        {
-          name: "Whatsapp",
-          link: "https://chat.whatsapp.com/JqxT2wVFHcI75bYdRVBa0G",
-        },
-        {
-          name: "Microsoft Teams",
-          link: "https://teams.microsoft.com/l/team/19%3aD0QLMsqOOnzClg2NRE_-pLvuicUuRI2wKDqpnd-wGuw1%40thread.tacv2/conversations?groupId=d6891cef-0832-486f-bdd8-822bc1bf9023&tenantId=187ca15f-54e0-4673-86f6-b6d7f4c75eef",
-        },
-      ],
-      description:
-        "We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.",
-      fulldesc:
-        `
-        <h2>Introduction</h2>
 
-We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.
-
-<h2>Requirements</h2>
-<ul>
-<li>
-Laptop or Computer
-</li>
-<li>
-A Compatible Code Editor (preferably Visual Studio Code) Installed on Your System
-</li>
-<li>
-Stable internet connection
-</li>
-</ul>
-
-        `,
-      sessionwise: [
-        {
-          title: "Starting with HTML, CSS Basics to Get Hands-On Coding a Website",
-          description: `
-          <ul>
-          <li>Introduction to the foundations of web development with HTML and CSS</li>
-          <li>Understanding the structure of web pages and styling techniques</li>
-          <li>Hands-on practice to create a basic web page</li>
-      </ul>
-            `,
-        },
-        {
-          title: "Learn to Use Git and GitHub and Insights in UI/UX Designing",
-          description: `
-          <ul>
-          <li>Essentials of version control using Git and GitHub</li>
-          <li>Learning to track changes, collaborate on projects, and manage code repositories</li>
-          <li>Insights into UI/UX design principles</li>
-          <li>Emphasis on user-centric design and creating intuitive interfaces</li>
-      </ul>   
-         
-            `,
-        },
-        {
-          title: "Diving into JavaScript and Its Concepts",
-          description: `
-          <ul>
-    <li>Introduction to JavaScript and its syntax</li>
-    <li>Learning about variables, functions, and events</li>
-    <li>Adding interactivity and dynamic content to websites</li>
-    <li>Laying the groundwork for more advanced web development topics</li>
-</ul>
-
-            `,
-        }, {
-          title: " Mastering Backend Development with Express and Databases",
-          description: `
-          <ul>
-          <li>Introduction to backend development using Express.js</li>
-          <li>Interacting with databases</li>
-          <li>Overview of how backend systems work</li>
-      </ul>
-      
-            `,
-        }, {
-          title: "Conquering Frontend Development with React",
-          description: `
-          <ul>
-    <li>Delving into React and its components</li>
-    <li>Learning about state management and the React lifecycle</li>
-    <li>Creating dynamic and responsive web applications</li>
-    <li>Enhancing skills in frontend development</li>
-</ul>
-
-            `,
-        }, {
-          title: " Diving into Blockchain Technology",
-          description: `
-          <ul>
-          <li>Introduction to blockchain technology and its fundamental concepts</li>
-          <li>Explanation of wallets and smart contracts</li>
-          <li>Basics of coding in Solidity</li>
-          <li>Understanding the potential and applications of blockchain</li>
-      </ul>
-      
-            `,
-        }, {
-          title: "Exploring More on Solidity and Integrating Blockchain with Ethers.JS",
-          description: `
-          <ul>
-          <li>Deepening knowledge of Solidity and complex smart contracts</li>
-          <li>Learning to use the Ethers.js library</li>
-          <li>Gaining proficiency in connecting blockchain functionalities with frontend applications</li>
-      </ul>
-      
-            `,
-        }, {
-          title: "Final Integration",
-          description: `<ul>
-          <li>Bringing together all the skills and knowledge acquired throughout the course</li>
-          <li>Working on integrating the frontend, backend, and blockchain components into a cohesive project</li>
-          <li>Emphasizing the importance of full-stack development</li>
-      </ul>
-      `
-        }],
-
-      slot: "D",
-      time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
-      id: "webops-and blockchain club",
-    },
 
     //Horizon
     {
@@ -869,7 +872,7 @@ This Summer School, Horizon presents the opportunity for you to learn in 7 days 
           link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
         },
       ],
-      poster: PDC_Sahaay,
+      poster: Sahaay,
       description:
         "Ever wanted to learn software, electronics, and mechanics all at once while applying these skills in real-world scenarios? Join InnovateX 2024 to dive into facial recognition, embedded programming, Fusion 360, and more. ",
       fulldesc: `
