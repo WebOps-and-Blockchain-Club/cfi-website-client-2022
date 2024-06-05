@@ -14,14 +14,13 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  /** The javascript `Date` as string. Type represents date and time as the ISO Date string. */
   DateTime: any;
-  /** The `Upload` scalar type represents a file upload. */
   Upload: any;
 };
 
 export type AddCLubsInput = {
   clubIds: Array<Scalars['String']>;
+  college: Scalars['String'];
   contact: Scalars['String'];
   name: Scalars['String'];
   slots: Scalars['String'];
@@ -375,6 +374,7 @@ export type TagBlogsArgs = {
 export type User = {
   blogs?: Maybe<Array<Blog>>;
   clubs?: Maybe<Array<Club>>;
+  college?: Maybe<Scalars['String']>;
   contact?: Maybe<Scalars['String']>;
   email: Scalars['String'];
   id: Scalars['String'];

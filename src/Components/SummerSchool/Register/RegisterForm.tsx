@@ -21,6 +21,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
 
     const [name, setName] = useState<string>();
     const [contact, setContact] = useState<string>();
+    const [college, setCollege] = useState<string>();
     const [smail, setSmail] = useState<string | undefined>();
 
 
@@ -38,7 +39,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                 if (x.id && !clubIds.includes(x.id)) clubIds.push(x.id)
             }
 
-            let final_inp = { name, contact, smail, slots, clubIds }
+            let final_inp = { name, contact, college, smail, slots, clubIds }
             handleSubmit(
                 final_inp
             );
@@ -121,6 +122,18 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                         fullWidth
                         value={contact}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setContact(e.target.value)}
+                    />
+                </Grid>
+                <Grid item container gap={4}>
+                    <CustomTextField
+                        id="college"
+                        label="College Name"
+                        variant="outlined"
+                        size="small"
+                        required
+                        fullWidth
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCollege(e.target.value)}
+                        value={college}
                     />
                 </Grid>
                 <Grid item container gap={4}>

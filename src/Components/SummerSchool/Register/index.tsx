@@ -37,10 +37,6 @@ const Register = () => {
             if (matchingItem) {
                 registered.push(matchingItem);
             }
-            if (item.id == "programming-club") {
-                if (registeredslots?.includes("F1")) registered.push(content.sessions[12]);
-                if (registeredslots?.includes("F2")) registered.push(content.sessions[11]);
-            }
         }
 
         return registered;
@@ -57,6 +53,7 @@ const Register = () => {
         try {
             if (!submitData) setErrorMessage('Enter all the required fields')
             else {
+                console.log(submitData)
                 await SSRegisterMutation({
                     variables: {
                         addClubsInput: submitData
@@ -75,7 +72,9 @@ const Register = () => {
 
     useEffect(() => {
         if (error) setErrorMessage("Some Error Occurred");
+        console.log(error)
         if (createError) setErrorMessage("Some Error Occurred");
+        console.log(createError)
     }, [error, createError]);
 
     return (

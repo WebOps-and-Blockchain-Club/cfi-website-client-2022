@@ -24,6 +24,7 @@ const SessionPage = () => {
         if (state?.user?.role === UserRole.User) {
             const nameQueryParam = title.split(" ").join('-');
             const searchParams = createSearchParams({ name: nameQueryParam }).toString();
+            console.log(searchParams)
             const destination = `/summer-school/register?${searchParams}`;
 
             navigate(destination);
@@ -100,7 +101,7 @@ const SessionPage = () => {
                         <Typography color="primary.contrastText" textAlign={"center"} variant="h5" fontWeight="bold">
                             {data.time} </Typography>
 
-                        {/* <Button
+                        <Button
                             sx={{
                                 padding: "5px 20px",
                                 width: "fit-content",
@@ -119,7 +120,7 @@ const SessionPage = () => {
                             onClick={(e: any) => { e.preventDefault(); onSubmit(data.title) }}
                         >
                             REGISTER
-                        </Button> */}
+                        </Button>
 
 
                     </Grid>
