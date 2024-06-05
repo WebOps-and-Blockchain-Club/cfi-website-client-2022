@@ -92,7 +92,7 @@ export const HighlightsData = () => {
     {
       url: "/summer-school",
       image: HighLights3,
-      title: "CFI Summer School, 2023",
+      title: "CFI Summer School, 2024",
     },
   ];
   AchievementsData.map((_data) =>
