@@ -18,7 +18,7 @@ import { link } from "./utils";
 const data = {
   description:
     "CFI presents the summer school 2024 in this summer break conducted by all the 14 clubs covering  different areas of Technology, Science, and Engineering!It offers the Freshie Youth, who have a lot to EXPLORE, the chance to learn and experience completely new things in the Open-to-All CFI .For students who aspire to represent IIT Madras at the upcoming Inter IIT Tech Meet, the summer schools will also serve as training ground. Participation shall serve as one of the selection criteria for the contingent.<br />These sessions will be conducted by the club heads and coordinators.An E-certificate will be provided to all the participants who have attended above 80% of the live sessions and have completed all the quizzes and tasks in the registered sessions.<br />Its open for all the students and offered for free of cost.",
-  time: "JUNE 14TH to JULY 7TH",
+  time: "JUNE 17TH to JULY 7TH",
   sessions: [
     //Aero
     {
@@ -263,7 +263,7 @@ Stable internet connection
       ],
       poster: Maths,
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
-      id: "MathLab and Computational Tools",
+      id: "mathematics-club",
       description:
         "Topics like Linear Algebra, Probability and Differential equations form the fundamentals of various topics in different domains. Attending this summer school will give an head start to all the students in their academic journey of IITM.",
       fulldesc: `
@@ -353,7 +353,7 @@ Stable internet connection
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
       ids: ["product-design club"],
-      id: "Innovate Design Inspire",
+      id: "product-design-club",
       links: [
         {
           name: "Whatsapp",
@@ -1309,8 +1309,8 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
     //AI
     {
       club: "AI Club ",
-      title1: "Intro to ##AL",
-      title: "Intro to AL",
+      title1: "Intro to ##AI",
+      title: "Intro to AI",
       email: "aiclubcfi@smail.iitm.ac.in",
       links: [
         {
