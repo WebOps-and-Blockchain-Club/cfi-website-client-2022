@@ -270,23 +270,25 @@ Stable internet connection
       <b>Mathematical Content :</b><br>
       <ol>
       <li>
-      Motivation for DEs
+      Differential Equations
       </li>     
       
       <li>
-      Brief review of known concepts
+      Root-finding using Newton Raphson, Bracketing
       </li>
       <li>
-      Bridging with first semester courses
+      Euler's method, Prediction-Correction improvement
       </li>
       <li>
-      Classification of DEs → Ordinary / Non, Linear / Non linear
+      Finite Difference method 
       </li>
       <li>
-      Partial derivatives
+      Fourier Series and introductory Fourier transform
       </li>
       <li>
-      Del operator
+      Denoising data using FT
+      </li>
+      <li>A lot of real-world examples and GNU octave
       </li>
       </ol>
       <b>Roadmap</b> :  3 sessions overall (1 week)
@@ -295,51 +297,49 @@ Stable internet connection
       sessionwise: [{
         title: "First session",
         description: `<ul>
-        <li>Motivating DEs - 30 minutes</li>
-        <li>Basic theory - 30 minutes</li>
-        <li>Vector calculus (del operator) - 30 minutes</li>
-        <li>Solving some DEs along with the attendees - 20 minutes</li>
-        <li>Motivate them as to why analytical solutions are not always useful - 10 minutes</li>
-        <li>Start off with GNU Octave - 30 minutes</li>
+        <li>Root finding methods - open and bracketing</li>
+        <li>Motivation for the study of Differential Equations</li>
+        <li>Differential equations, their classification, methods of solving them</li>
+        <li>ODEs and PDEs</li>
+        <li>Motivation for numerical methods</li>
     </ul>
     `},
       {
         title: "Second session",
         description: `<ul>
-    <li>Spend the first 10 minutes assembling everything</li>
-    <li>Teach the Euler method, mention its extensions - 40 minutes</li>
-    <li>Code along in GNU Octave - (30 minutes first problem, 30 minutes second problem that yields bad results)</li>
-    <li>Move on to non-ordinary problems</li>
-    <li>Try to solve them</li>
-    <li>Show undesirable results - 5 minutes</li>
-    <li>Pose H-atom problem - 15 minutes</li>
+    <li>Teaching Euler's method, error analysis on Euler's method, and a brief explanation of predictor-corrector methods (like Heun and Runge-Kutta)</li>
+    <li> Install and start off with GNU Octave</li>
+    <li>Basics of Octave and programming</li>
+    <li>Deriving and solving ODEs in octave (Code along)</li>
+    <li>Brief explanation of finite difference method and solving a PDE in Octave</li>
   </ul>
   `,
       },
       {
         title: "Third session",
         description: `<ul>
-        <li>Introduce Fourier series and how it's useful - 40 minutes</li>
-        <li>Do some theory - 20 minutes</li>
-        <li>Solve some polynomials in Octave - 20 minutes</li>
-        <li>Use that to solve DEs in Octave - 20 minutes</li>
-        <li>Closing remarks, summarizing everything - 20 minutes</li>
+        <li>Motivation for fourier series</li>
+        <li>Fourier series theory ending with a brief intro to Fourier Transform</li>
+        <li>Numerical root finding in octave (Code along)</li>
+        <li>Numerical root finding in octave (Code along)</li>
+        <li>Denoising noisy signals in octave (using Fourier transform) and then using numerical methods to find roots (Code along)</li>
+        <li>Closing remarks, summarizing everything</li>
         </ul>
         `,
 
       },
-      {
-        title: "Post session",
-        description: `<ul>
-        <li>First session - Assignment on DE theory</li>
-        <li>Second session - Assignment on numerical methods theory + fill in templated code</li>
-        <li>Third session - Assignment on Fourier series theory + fill in templated code</li>
-        <li>Discussion of past assignment post-session for interested candidates</li>
-        </ul>
-        `,
+        // {
+        //   title: "Post session",
+        //   description: `<ul>
+        //   <li>First session - Assignment on DE theory</li>
+        //   <li>Second session - Assignment on numerical methods theory + fill in templated code</li>
+        //   <li>Third session - Assignment on Fourier series theory + fill in templated code</li>
+        //   <li>Discussion of past assignment post-session for interested candidates</li>
+        //   </ul>
+        //   `,
 
 
-      },
+        // },
       ],
 
 
