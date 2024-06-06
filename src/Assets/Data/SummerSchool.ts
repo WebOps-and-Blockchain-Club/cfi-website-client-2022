@@ -37,7 +37,7 @@ Ignite your passion for aviation and elevate your expertise through this unparal
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/KpC0eCXsE1oJsa97XtvMm5",
+          link: "https://whatsapp.com/channel/0029Vaggj07Id7nNjdKFqB16",
         },
       ],
       time: "10:30 AM- 1 PM (Tue, Thu, Sat)",
@@ -129,12 +129,12 @@ Over the course of six days, participants will embark on an exhilarating journey
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/JqxT2wVFHcI75bYdRVBa0G",
+          link: "https://whatsapp.com/channel/0029VagdqGxLY6dDCLqlnf0S",
         },
-        {
-          name: "Microsoft Teams",
-          link: "https://teams.microsoft.com/l/team/19%3aD0QLMsqOOnzClg2NRE_-pLvuicUuRI2wKDqpnd-wGuw1%40thread.tacv2/conversations?groupId=d6891cef-0832-486f-bdd8-822bc1bf9023&tenantId=187ca15f-54e0-4673-86f6-b6d7f4c75eef",
-        },
+        // {
+        //   name: "Microsoft Teams",
+        //   link: "https://teams.microsoft.com/l/team/19%3aD0QLMsqOOnzClg2NRE_-pLvuicUuRI2wKDqpnd-wGuw1%40thread.tacv2/conversations?groupId=d6891cef-0832-486f-bdd8-822bc1bf9023&tenantId=187ca15f-54e0-4673-86f6-b6d7f4c75eef",
+        // },
       ],
       description:
         "We will be offering an exciting, hands-on learning adventure spread across eight dynamic sessions. Participants will dive deep into web development, mastering UI/UX design, version control, JavaScript, backend development, React, and cutting-edge blockchain technology.",
@@ -357,7 +357,7 @@ Stable internet connection
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
+          link: "https://chat.whatsapp.com/IGmd3aneXq2G7Jixuymh9Q",
         },
       ],
       poster: PDC,
@@ -598,7 +598,7 @@ Stable internet connection
       links: [
         {
           name: "Whatsapp",
-          link: "",
+          link: "https://whatsapp.com/channel/0029VagYPmcJf05WWAIFbQ2c",
         },
       ],
       time: "2:00 PM - 4:30 PM (Tue, Thu, Sat)",
@@ -760,7 +760,7 @@ Stable internet connection
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/LVJa450ymIvKpcim1U5GJf",
+          link: "https://whatsapp.com/channel/0029VabfQTR0G0Xk2Tg7yu1r",
         },
       ],
       poster: Horizon,
@@ -869,7 +869,7 @@ This Summer School, Horizon presents the opportunity for you to learn in 7 days 
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/Iif2WtUCby0Gt8hdkAwdWY",
+          link: "https://whatsapp.com/channel/0029VagfuMjDeON4yp6hxt2X",
         },
       ],
       poster: Sahaay,
@@ -981,7 +981,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/I491vu75opALURBiRPhfwt",
+          link: "https://chat.whatsapp.com/GTzCyug3KHxGrh0NXvrWEw",
         },
       ],
       time: "5:00 PM - 7:30 PM (Mon, Wed, Fri)",
@@ -1180,7 +1180,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/IZ3rpkTVIwqF6N99JfDUgF",
+          link: "https://whatsapp.com/channel/0029VagtLFkG3R3k99ItSI2n",
         },
       ],
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
@@ -1315,12 +1315,12 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/Gkf9IUwYwjF5GDy3NB4fKA",
+          link: "https://whatsapp.com/channel/0029VahcTCjCnA80xCmGES1f",
         },
-        {
-          name: "linktree",
-          link: "https://linktr.ee/AIClubIITM",
-        },
+        // {
+        //   name: "linktree",
+        //   link: "https://linktr.ee/AIClubIITM",
+        // },
       ],
       poster: AI,
       description:
@@ -1461,7 +1461,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/H96jWKLfgPE0aOlQOfuklH",
+          link: "https://whatsapp.com/channel/0029Vah1vcKATRSoQUvcor2S",
         },
       ],
       slot: "A",
@@ -1580,12 +1580,6 @@ RT-PCR Testing:
           title: "",
           description: `
           Drawbacks of PCR Testing:
-
-
-
-
-
-
           <ul>
           <li>Discussion of limitations and alternative techniques (DETECTR and SHERLOCK tools).</li>
           </ul>Case Study:
@@ -1663,7 +1657,7 @@ RT-PCR Testing:
       links: [
         {
           name: "Linktree",
-          link: "https://linktr.ee/PC_23_24",
+          link: "https://whatsapp.com/channel/0029VacKTRRInlqWzeIfuJ0j",
         },
       ],
       poster: Programming2,
@@ -1696,7 +1690,7 @@ RT-PCR Testing:
       links: [
         {
           name: "Linktree",
-          link: "https://linktr.ee/PC_23_24",
+          link: "https://whatsapp.com/channel/0029VacKTRRInlqWzeIfuJ0j",
         },
       ],
       description:
@@ -1731,7 +1725,7 @@ RT-PCR Testing:
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/FAiU9dXs3Tg8bBXvFelvxw",
+          link: "https://whatsapp.com/channel/0029VahG1jq2ER6gilgOZg3o",
         },
       ],
       description:
@@ -1843,7 +1837,7 @@ ROS2,
       links: [
         {
           name: "Whatsapp",
-          link: "https://chat.whatsapp.com/DVLcFD6MyP9L32HjtHgoaT",
+          link: "https://whatsapp.com/channel/0029VagpVPa8vd1KeQoA581i",
         },
       ],
       slot: "C",

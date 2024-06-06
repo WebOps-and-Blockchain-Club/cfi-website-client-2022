@@ -171,7 +171,7 @@ const Profile = () => {
 
                                                         </CardContent>
                                                     </HashLink></>
-                                                    {/* {
+                                                    {
                                                         x.links?.map(e => {
                                                             return <Typography
                                                                 component="a"
@@ -185,7 +185,7 @@ const Profile = () => {
                                                                 {e.name}
                                                             </Typography>
                                                         })
-                                                    } */}
+                                                    }
                                                     {/* <Button
                                                         sx={{
                                                             padding: "5px 20px",
@@ -274,7 +274,7 @@ const Profile = () => {
 
                                                 </CardContent>
                                             </HashLink>
-                                            {/* {
+                                            {
                                                 content.sessions[12].links?.map(e => {
                                                     return <Typography
                                                         component="a"
@@ -288,7 +288,7 @@ const Profile = () => {
                                                         {e.name}
                                                     </Typography>
                                                 })
-                                            } */}
+                                            }
                                             {/* <Button
                                                 sx={{
                                                     padding: "5px 20px",
