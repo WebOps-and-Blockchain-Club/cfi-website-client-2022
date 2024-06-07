@@ -71,7 +71,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
 
     const onAutoCompleteChange = (event: any, value: any) => {
         let club = value[value.length - 1];
-        if (value.length != 0 && ((isOtherClubsSelectedInSlot(club.slot) || isSlotRegistered(club.slot)) && value.length >= selectedClubs.length && !selectedClubs.includes(club)) || registered?.includes(club)) value.pop()
+        if (value.length != 0 && ((isFourSummerSchoolSelected() || isOtherClubsSelectedInSlot(club.slot) || isSlotRegistered(club.slot)) && value.length >= selectedClubs.length && !selectedClubs.includes(club)) || registered?.includes(club)) value.pop()
 
         setSelectedClubs(value as any);
     }
