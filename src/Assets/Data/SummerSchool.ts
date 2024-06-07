@@ -352,7 +352,6 @@ Stable internet connection
       emails: ["thepdc.cfi@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      ids: ["product-design club"],
       id: "product-design-club",
       links: [
         {
@@ -865,7 +864,7 @@ This Summer School, Horizon presents the opportunity for you to learn in 7 days 
       emails: ["teamsahaayiitm@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      ids: ["team-sahaay"],
+      id: "team-sahaay",
       links: [
         {
           name: "Whatsapp",
