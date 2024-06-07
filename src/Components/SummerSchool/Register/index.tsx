@@ -33,7 +33,7 @@ const Register = () => {
             x.slot = content.sessions.find((e) => e.id == x.id)?.slot
         }
         for (const item of registeredSessions) {
-            const matchingItem = content.sessions.find(new_item => { return (new_item.id && new_item.id === item.id || new_item.ids && item.id == "team-sahaay") && new_item.slot === item.slot && new_item.id != "programming-club" });
+            const matchingItem = content.sessions.find(new_item => { return (new_item.id && new_item.id === item.id || new_item.id && item.id == "team-sahaay") && new_item.slot === item.slot && new_item.id != "programming-club" });
             if (matchingItem) {
                 registered.push(matchingItem);
             }
