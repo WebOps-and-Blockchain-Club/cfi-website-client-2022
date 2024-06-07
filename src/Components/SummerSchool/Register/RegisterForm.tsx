@@ -167,7 +167,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                             getOptionLabel={(option: any) => option.title}
                             renderOption={(props, option, { selected }) => {
                                 const session = option as any
-                                const isDisabled = isOtherClubsSelectedInSlot(session.slot) || registered?.includes(session) || isSlotRegistered(session.slot);
+                                const isDisabled = isOtherClubsSelectedInSlot(session.slot) || registered?.includes(session) || isSlotRegistered(session.slot) || isFourSummerSchoolSelected();
 
                                 if (selectedClubs.includes(session)) selected = true;
                                 var checked = selected
