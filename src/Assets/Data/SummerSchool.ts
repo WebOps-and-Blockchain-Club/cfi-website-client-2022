@@ -352,7 +352,8 @@ Stable internet connection
       emails: ["thepdc.cfi@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      id: "product-design-club",
+      id: "product-design club",
+      ids: ["product-design club"],
       links: [
         {
           name: "Whatsapp",
@@ -864,6 +865,7 @@ This Summer School, Horizon presents the opportunity for you to learn in 7 days 
       emails: ["teamsahaayiitm@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
+      ids: ["team-sahaay"],
       id: "team-sahaay",
       links: [
         {
@@ -1323,7 +1325,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       ],
       poster: AI,
       description:
-        "We will be offering an exciting, hands-on learning adventure spread across nine dynamic sessions. Participants will dive deep into the fascinating world of artificial intelligence, mastering Python programming, data preprocessing, machine learning algorithms, deep learning, and natural language processing. The course is designed to be accessible for complete beginners while still covering complex and advanced topics.",
+        "Welcome to MathLab, our immersive summer school meticulously designed to build strong conceptual foundations while equipping you with practical skills in GNU Octave. Through interactive sessions and practical exercises, you'll harness the power of GNU Octave to bring these concepts to life, applying each of the concepts that you learn to real-world problems. Join us and elevate your mathematical skills this summer!",
       fulldesc:
         `<h3>Introduction</h3>
       We will be offering an exciting, hands-on learning adventure spread across nine dynamic sessions. Participants will dive deep into the fascinating world of artificial intelligence, mastering Python programming, data preprocessing, machine learning algorithms, deep learning, and natural language processing. The course is designed to be accessible for complete beginners while still covering complex and advanced topics.
