@@ -158,7 +158,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                     />
                     <Grid item container gap={4}>
                         <Typography variant="caption" color="text.secondary">
-                            Only Select 4 Session
+                            Only Select 4 or less Session
                         </Typography>
 
                     </Grid>
