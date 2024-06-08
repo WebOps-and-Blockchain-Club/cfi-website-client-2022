@@ -127,6 +127,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                         label="Mobile No."
                         variant="outlined"
                         size="small"
+                        required
                         fullWidth
                         value={contact}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setContact(e.target.value)}
@@ -150,6 +151,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                         label="Email (Smail ID if from IITM)"
                         variant="outlined"
                         size="small"
+                        required
                         fullWidth
                         value={smail}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSmail(e.target.value)}
