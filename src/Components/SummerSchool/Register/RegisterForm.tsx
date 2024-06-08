@@ -62,7 +62,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
         }
         return false
     }
-    
+
 
 
     const isOtherClubsSelectedInSlot = (slot: string) => {
@@ -75,7 +75,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
             setError('You cannot select more than 4 sessions');
             return;
         }
-        
+
         let club = value[value.length - 1];
         if (value.length != 0 && ((isFourSummerSchoolSelected() || isOtherClubsSelectedInSlot(club.slot) || isSlotRegistered(club.slot)) && value.length >= selectedClubs.length && !selectedClubs.includes(club)) || registered?.includes(club)) value.pop()
 
@@ -99,7 +99,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
     }, [initialVals]);
 
     useEffect(() => {
-        if (registered?.length > 4) {
+        if (registered && registered.length > 4) {
             setError('You cannot register for more than 4 sessions');
             navigate("/summer-school/register", { replace: true });
         }
@@ -188,7 +188,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                             getOptionLabel={(option: any) => option.title}
                             renderOption={(props, option, { selected }) => {
                                 const session = option as any
-                                const isDisabled = selectedClubs.length >= 4 ||isOtherClubsSelectedInSlot(session.slot) || registered?.includes(session) || isSlotRegistered(session.slot) || isFourSummerSchoolSelected();
+                                const isDisabled = selectedClubs.length >= 4 || isOtherClubsSelectedInSlot(session.slot) || registered?.includes(session) || isSlotRegistered(session.slot) || isFourSummerSchoolSelected();
 
                                 if (selectedClubs.includes(session)) selected = true;
                                 var checked = selected
