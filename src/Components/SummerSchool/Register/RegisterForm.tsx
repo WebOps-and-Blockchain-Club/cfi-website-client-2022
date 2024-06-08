@@ -156,8 +156,8 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
                         value={smail}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSmail(e.target.value)}
                     />
-                    <Grid item container gap={4}>
-                        <Typography variant="caption" color="text.secondary">
+                    <Grid item container gap={2}>
+                        <Typography variant="caption" color="white">
                             Only Select 4 or less Session
                         </Typography>
 
