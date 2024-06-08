@@ -54,14 +54,6 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
         }
         return false
     }
-    const isFourSummerSchoolSelected = () => {
-        if (registered == undefined) return false
-        if (registered?.length >= 4) {
-            setError("You can only register for 4 clubs")
-            return true
-        }
-        return false
-    }
 
 
     const isOtherClubsSelectedInSlot = (slot: string) => {
