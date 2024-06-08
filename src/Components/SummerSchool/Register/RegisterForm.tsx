@@ -62,6 +62,7 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
         }
         return false
     }
+    
 
 
     const isOtherClubsSelectedInSlot = (slot: string) => {
@@ -91,6 +92,13 @@ const RegisterForm = ({ handleSubmit, initialVals, search, registered }: Props) 
         }
         setSelectedClubs(initList);
     }, [initialVals]);
+
+    useEffect(() => {
+        if (registered?.length > 4) {
+            setError('You cannot register for more than 4 sessions');
+            navigate("/summer-school/register", { replace: true });
+        }
+    }, [registered, navigate]);
 
     return (
         <form style={{ width: "100%", paddingTop: "2rem" }}>
