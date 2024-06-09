@@ -99,7 +99,7 @@ const Profile = () => {
                                         // let a = content.sessions.filter(e => { return ((e.id && e.id == club.id) || (e.ids && e.ids.includes(club.id))) });
                                         let a = content.sessions.filter(e => e.id === club.id);
                                         let x = a[0]
-                                        if (club.id != "team-sahaay" && slots?.includes(x.slot))
+                                        if (slots?.includes(x.slot))
                                             return <Grid item>
                                                 <Card
                                                     sx={{
