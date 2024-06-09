@@ -265,7 +265,7 @@ Stable internet connection
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
       id: "mathematics-club",
       description:
-        "Topics like Linear Algebra, Probability and Differential equations form the fundamentals of various topics in different domains. Attending this summer school will give an head start to all the students in their academic journey of IITM.",
+        "Welcome to MathLab, our immersive summer school meticulously designed to build strong conceptual foundations while equipping you with practical skills in GNU Octave. Through interactive sessions and practical exercises, you'll harness the power of GNU Octave to bring these concepts to life, applying each of the concepts that you learn to real-world problems. Join us and elevate your mathematical skills this summer!",
       fulldesc: `
       <b>Mathematical Content :</b><br>
       <ol>
