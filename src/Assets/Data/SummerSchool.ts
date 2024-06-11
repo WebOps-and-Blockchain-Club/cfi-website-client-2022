@@ -865,7 +865,7 @@ This Summer School, Horizon presents the opportunity for you to learn in 7 days 
       emails: ["teamsahaayiitm@gmail.com"],
       slot: "C",
       time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      ids: ["team-sahaay"],
+
       id: "team-sahaay",
       links: [
         {
@@ -1458,7 +1458,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       description:
         "During the courses, you'll learn about lab-grown organs that could revolutionize transplants, explore biotech innovations that fought COVID-19, and decode the molecules orchestrating the fascinating behaviors of animals. Acquire valuable skills, deepen your knowledge, and get a head start in applying what you learn to solve real-world problems.",
       title1: "Unlocking Life's Secrets: ##Ethology, Viruses, and Bio-printed Solutions",
-      title: "Unlocking Life's Secrets: Ethology, Viruses, and Bio-printed Solutions",
+      title: "Unlocking Life Secrets",
       links: [
         {
           name: "Whatsapp",
@@ -1469,181 +1469,182 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
       poster: Biotech,
       time: "10:30 AM - 1 PM (Mon, Wed, Fri)",
 
-      fulldesc: `
-      Ready to dive into the groundbreaking world of biotech? Join the BIOTECH CLUB's summer courses and transform your understanding of modern science. 
+      fulldesc:
+        `
+            Ready to dive into the groundbreaking world of biotech? Join the BIOTECH CLUB's summer courses and transform your understanding of modern science. 
 
-From learning about lab-grown organs that could revolutionise transplants, exploring the biotech innovations that fought COVID-19, or decoding the fascinating behaviours of animals, our sessions offer hands-on, real-world applications tailored to first-year college students. Gain valuable skills, deepen your knowledge, and get a head start in applying your knowledge to solve real-world problems.
+      From learning about lab-grown organs that could revolutionise transplants, exploring the biotech innovations that fought COVID-19, or decoding the fascinating behaviours of animals, our sessions offer hands-on, real-world applications tailored to first-year college students. Gain valuable skills, deepen your knowledge, and get a head start in applying your knowledge to solve real-world problems.
 
-<h1>3D printing Organ Systems</h1>
-From Petri Dish to Patients: The Future of Medicine with Lab-Grown Organs
-<h2>Course Description: </h2>
-Explore the cutting-edge world of lab-grown organs and their transformative potential in modern medicine. From foundational concepts to real-world applications, this course delves into the science and ethical considerations of organ regeneration, providing a comprehensive overview of this groundbreaking field.
+      <h1>3D printing Organ Systems</h1>
+      From Petri Dish to Patients: The Future of Medicine with Lab-Grown Organs
+      <h2>Course Description: </h2>
+      Explore the cutting-edge world of lab-grown organs and their transformative potential in modern medicine. From foundational concepts to real-world applications, this course delves into the science and ethical considerations of organ regeneration, providing a comprehensive overview of this groundbreaking field.
 
-<h1>Our Battle with COVID</h1>
-How We Used Special Techniques in Biotech to Fight a Pandemic
+      <h1>Our Battle with COVID</h1>
+      How We Used Special Techniques in Biotech to Fight a Pandemic
 
-<h2>Course Description: </h2>
-Gain insights into the crucial role of biotechnology in combating the COVID-19 pandemic. This course covers the basics of biotech, the specifics of SARS-CoV-2, testing methodologies, and the development of vaccines, providing a detailed understanding of the scientific response to a global health crisis.
+      <h2>Course Description: </h2>
+      Gain insights into the crucial role of biotechnology in combating the COVID-19 pandemic. This course covers the basics of biotech, the specifics of SARS-CoV-2, testing methodologies, and the development of vaccines, providing a detailed understanding of the scientific response to a global health crisis.
 
-<h1>Ethology and the genes that Make you YOU</h1>
- 
-<h2>Course Description:</h2>
-Delve into the fascinating study of animal behavior (humans are just animals after all) with a focus on core ethological concepts. This course explores the causation, development, function, and evolution of behavior, offering a comprehensive introduction to the field through theory and case studies.
-        `,
+      <h1>Ethology and the genes that Make you YOU</h1>
+
+      <h2>Course Description:</h2>
+      Delve into the fascinating study of animal behavior (humans are just animals after all) with a focus on core ethological concepts. This course explores the causation, development, function, and evolution of behavior, offering a comprehensive introduction to the field through theory and case studies.
+              `,
       sessionwise: [
         {
           title: "Foundation and Exploration",
           description: `
-          Introduction:
-          <ul>
-          <li>Briefly discuss the organ transplant waitlist crisis and its impact on patients.</li>
-          <li>Introduce the concept of lab-grown organs as a potential solution.</li>
-          </ul>
+                Introduction:
+                <ul>
+                <li>Briefly discuss the organ transplant waitlist crisis and its impact on patients.</li>
+                <li>Introduce the concept of lab-grown organs as a potential solution.</li>
+                </ul>
 
 
-          Stem Cells:
-          <ul>
-          <li>Explain the role of stem cells in organ development and regeneration.</li>
-          <li>Discuss different types of stem cells and their potential for organ creation.</li>
-          </ul>
+                Stem Cells:
+                <ul>
+                <li>Explain the role of stem cells in organ development and regeneration.</li>
+                <li>Discuss different types of stem cells and their potential for organ creation.</li>
+                </ul>
 
 
-Organoids:
-          <ul>
-          <li>Introduce the concept of organoids and their uses in disease modelling and drug testing.</li>
-          <li>Showcase real-world examples of organoid research and its applications.</li>
-          <li>Introduction to 3D bioprinting.</li>
-          </ul>
-        `,
+      Organoids:
+                <ul>
+                <li>Introduce the concept of organoids and their uses in disease modelling and drug testing.</li>
+                <li>Showcase real-world examples of organoid research and its applications.</li>
+                <li>Introduction to 3D bioprinting.</li>
+                </ul>
+              `,
           session_nums: "1.1"
         },
         {
           title: "Applications",
           description: `
-          Challenges:
-          <ul>
-          <li>Discuss the complexities of replicating functional organs in a lab.</li>
-          </ul>
-          
-          Success Stories:
-          <ul>
-          <li>Highlight successful examples of lab-grown tissues and simple organs.</li>
-          <li>Ethical Considerations:</li>
-          </ul>
-        `,
+                Challenges:
+                <ul>
+                <li>Discuss the complexities of replicating functional organs in a lab.</li>
+                </ul>
+
+                Success Stories:
+                <ul>
+                <li>Highlight successful examples of lab-grown tissues and simple organs.</li>
+                <li>Ethical Considerations:</li>
+                </ul>
+              `,
           session_nums: "1.2"
         },
         {
           title: "Future",
           description: `
-          Personalized Medicine:
-          <ul>
-          <li>Discuss the potential for using a patient's own cells to grow customized organs, reducing the risk of organ rejection.</li>
-          <li>Explain how this could revolutionize organ transplantation and personalized medicine.</li>
-          </ul>
-The Impact on Healthcare:
-<ul>
-          <li>Discuss the potential changes in organ donation, patient wait times, and treatment options.</li>
-          <li>Detailed discussion about the use of organoids in drug testing and disease modeling with real-life examples.</li>
+                Personalized Medicine:
+                <ul>
+                <li>Discuss the potential for using a patient's own cells to grow customized organs, reducing the risk of organ rejection.</li>
+                <li>Explain how this could revolutionize organ transplantation and personalized medicine.</li>
+                </ul>
+      The Impact on Healthcare:
+      <ul>
+                <li>Discuss the potential changes in organ donation, patient wait times, and treatment options.</li>
+                <li>Detailed discussion about the use of organoids in drug testing and disease modeling with real-life examples.</li>
 
-          </ul>
+                </ul>
 
 
-Case Study:
-          <ul>
-          <li>To deepen the understanding and explore more into the topic, participants will be given a case study as homework.</li>
-          </ul>
-        `,
+      Case Study:
+                <ul>
+                <li>To deepen the understanding and explore more into the topic, participants will be given a case study as homework.</li>
+                </ul>
+              `,
           session_nums: "1.3"
         },
         {
           title: "Introduction to Biotech:",
           description: `
-          SARS-CoV-2 Overview:
+                SARS-CoV-2 Overview:
 
 
 
-<ul>
-<li>Outline of SARS-CoV-2, highlighting its distinctive features crucial for detection and immunization.
-</li>
-<li>Explanation of the virus's genetic material (RNA), the significance of the spikes, and how the virus binds to human cells.</li>
+      <ul>
+      <li>Outline of SARS-CoV-2, highlighting its distinctive features crucial for detection and immunization.
+      </li>
+      <li>Explanation of the virus's genetic material (RNA), the significance of the spikes, and how the virus binds to human cells.</li>
 
-</ul>
-RT-PCR Testing:
-          <ul>
-          <li>History and elaboration of the RT-PCR technique.</li>
-        
-          </ul>
-        `,
+      </ul>
+      RT-PCR Testing:
+                <ul>
+                <li>History and elaboration of the RT-PCR technique.</li>
+
+                </ul>
+              `,
           session_nums: "2.1"
         },
         {
           title: "",
           description: `
-          Drawbacks of PCR Testing:
-          <ul>
-          <li>Discussion of limitations and alternative techniques (DETECTR and SHERLOCK tools).</li>
-          </ul>Case Study:
-          <ul>
-          <li>Detailed case study on the UC Berkeley team's efforts in fighting the pandemic.</li>
-          </ul>Vaccine Mechanisms:
-          <ul>
-          <li>Mechanisms of vaccines, including newer types such as RNA and DNA vaccines.</li>
-          </ul>
-        `,
+                Drawbacks of PCR Testing:
+                <ul>
+                <li>Discussion of limitations and alternative techniques (DETECTR and SHERLOCK tools).</li>
+                </ul>Case Study:
+                <ul>
+                <li>Detailed case study on the UC Berkeley team's efforts in fighting the pandemic.</li>
+                </ul>Vaccine Mechanisms:
+                <ul>
+                <li>Mechanisms of vaccines, including newer types such as RNA and DNA vaccines.</li>
+                </ul>
+              `,
           session_nums: "2.2"
         },
         {
           title: "",
           description: `
-          Vaccines:
+                Vaccines:
 
 
-          <ul>
-          <li>Detailed discussion on Covishield and Covaxin, especially their use in India.</li>
-          </ul>Bioinformatics:
-          <ul>
-          <li>Rudimentary bioinformatics session on Rosalind, with proper explanations and coding instructions for beginners.</li>
-          </ul>
-        `,
+                <ul>
+                <li>Detailed discussion on Covishield and Covaxin, especially their use in India.</li>
+                </ul>Bioinformatics:
+                <ul>
+                <li>Rudimentary bioinformatics session on Rosalind, with proper explanations and coding instructions for beginners.</li>
+                </ul>
+              `,
           session_nums: "2.3"
         },
         {
           title: "Introduction",
           description: `
-          <ul>
-          <li>Importance of studying core animal behavior.
-         
-          </li>
-          <li> Basics of Animal Behavior: Causation and Ontogeny.</li>
-          </ul>
-        `,
+                <ul>
+                <li>Importance of studying core animal behavior.
+
+                </li>
+                <li> Basics of Animal Behavior: Causation and Ontogeny.</li>
+                </ul>
+              `,
           session_nums: "3.1"
         },
         {
           title: "Function",
           description: `
-          <ul>
-          <li>Introduction to behavioral functions.
-          </li>
-          <li>Topics include Altruism, Kin Selection, Inclusive Fitness, and the Hamiltonian equation.</li>
-          <li>Case study on Sexual Dimorphism.</li>
-          <li>Example linking Game Theory.</li>
-          <li>Basics of evolution based on natural selection.</li>
-          </ul>
-        `,
+                <ul>
+                <li>Introduction to behavioral functions.
+                </li>
+                <li>Topics include Altruism, Kin Selection, Inclusive Fitness, and the Hamiltonian equation.</li>
+                <li>Case study on Sexual Dimorphism.</li>
+                <li>Example linking Game Theory.</li>
+                <li>Basics of evolution based on natural selection.</li>
+                </ul>
+              `,
           session_nums: "3.2"
         },
         {
           title: "",
           description: `
-          <ul>
-          <li>Behavioural Genetics
-          
-          </li>
-          <li>Behavioural Epigenetics</li>
-          </ul>
-        `,
+                <ul>
+                <li>Behavioural Genetics
+
+                </li>
+                <li>Behavioural Epigenetics</li>
+                </ul>
+              `,
           session_nums: "3.3"
         },
       ]
