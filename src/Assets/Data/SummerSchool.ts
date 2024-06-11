@@ -1654,7 +1654,7 @@ Fusion 360, Google Collab, TinkerCad (Fret not, we’ll provide step-by-step det
     {
       club: "Programming Club",
       title1: "ADaPT - ##Algorithms, Data structures and Problem-solving Techniques",
-      title: "ADaPT - Algorithms, Data structures and Problem-solving Techniques",
+      title: "ADaPT",
       email: "programmingclubiitm@gmail.com",
       links: [
         {
