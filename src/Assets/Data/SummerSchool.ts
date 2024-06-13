@@ -347,7 +347,7 @@ Stable internet connection
     
     //PDC
     {
-        clubs: ["Product Design Club"],
+        clubs: ["Product Design Club ##X ECell"],
         title1: "Innovate. Design. ##Inspire",
         title: "Innovate Design Inspire",
         emails: ["thepdc.cfi@gmail.com"],
