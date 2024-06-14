@@ -344,16 +344,17 @@ Stable internet connection
 
 
     },
+    
     //PDC
     {
-      clubs: ["Product Design Club"],
-      title1: "Innovate. Design. ##Inspire",
-      title: "Innovate Design Inspire",
-      emails: ["thepdc.cfi@gmail.com"],
-      slot: "C",
-      time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
-      id: "product-design club",
-      ids: ["product-design club"],
+        clubs: ["Product Design Club X ECell"],
+        title1: "Innovate. Design. ##Inspire",
+        title: "Innovate Design Inspire",
+        emails: ["thepdc.cfi@gmail.com"],
+        slot: "C",
+        time: "2:00 PM - 4:30 PM (Mon, Wed, Fri)",
+        id: "product-design club",
+        ids: ["product-design club"],
       links: [
         {
           name: "Whatsapp",
@@ -363,217 +364,60 @@ Stable internet connection
       poster: PDC,
       description:
         "Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.",
-      fulldesc: ``,
+      fulldesc: "",
       sessionwise: [
+        // Session 1
         {
-          title: "Introduction to Product Design and Management",
+          title: "Introduction to Product Design and Management (Nandini)",
           description:
-            `<b>Objective</b>: Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.<br>
-           <ol>
-    <li>Welcome and Introduction
-        <ul>
-            <li>Overview of the summer school program</li>
-            <li>Importance of product design and management</li>
-        </ul>
-    </li>
-    <li>Fundamentals of Product Design
-        <ul>
-            <li>Definition and scope</li>
-            <li>Key stages in product design: Ideation, Design, Development, and Launch</li>
-        </ul>
-    </li>
-    <li>Introduction to Product Management
-        <ul>
-            <li>Role and responsibilities of a product manager</li>
-            <li>Product life cycle management</li>
-        </ul>
-    </li>
-    <li>Case Study: Successful Products
-        <ul>
-            <li>Analysis of successful products and their design process</li>
-            <li>Group discussion on takeaways</li>
-        </ul>
-    </li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-
-           `,
+            "<b>Objective</b>: Provide an overview of product design and management, introducing key concepts and setting the stage for subsequent sessions.<br><ol><li>Welcome and Introduction<ul><li>Overview of the summer school program</li><li>Importance of product design and management</li></ul></li><li>Fundamentals of Product Design<ul><li>Definition and scope</li><li>Key stages in product design: Ideation, Design, Development, and Launch</li></ul></li><li>Introduction to Product Management<ul><li>Role and responsibilities of a product manager</li><li>Product life cycle management</li></ul></li><li>Case Study: Successful Products<ul><li>Analysis of successful products and their design process</li><li>Group discussion on takeaways</li></ul></li><li>Announcement of the Product Pitch competition</li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 2
         {
-          title: "Design Thinking and Ideation Techniques",
-          description: `
-          <b>Objective</b>: Introduce design thinking methodology and various ideation techniques to foster creativity.
-          <ol>
-    <li>Introduction to Design Thinking
-        <ul>
-            <li>Principles and stages of design thinking: Empathize, Define, Ideate, Prototype, Test</li>
-        </ul>
-    </li>
-    <li>Empathy and User Research
-        <ul>
-            <li>Techniques for understanding user needs: Interviews, Surveys, Observation</li>
-        </ul>
-    </li>
-    <li>Ideation Techniques
-        <ul>
-            <li>Brainstorming, Mind Mapping, SCAMPER, and other ideation methods</li>
-            <li>Hands-on activity: Group brainstorming session</li>
-        </ul>
-    </li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-
-
-          `,
+          title: "Design Thinking and Ideation Techniques (Tarani)",
+          description:
+            "<b>Objective</b>: Introduce design thinking methodology and various ideation techniques to foster creativity.<br><ol><li>Introduction to Design Thinking<ul><li>Principles and stages of design thinking: Empathize, Define, Ideate, Prototype, Test</li></ul></li><li>Empathy and User Research<ul><li>Techniques for understanding user needs: Interviews, Surveys, Observation</li></ul></li><li>Ideation Techniques<ul><li>Brainstorming, Mind Mapping, SCAMPER, and other ideation methods</li><li>Hands-on activity: Group brainstorming session</li></ul></li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 3
         {
-          title: "Introduction to Fusion 360",
-          description: `
-          <b>Objective</b>: Teach the basics of Fusion 360 for 3D design and prototyping.
-          <ol>
-    <li>Overview of Fusion 360
-        <ul>
-            <li>Introduction to CAD and its importance in product design</li>
-        </ul>
-    </li>
-    <li>Getting Started with Fusion 360
-        <ul>
-            <li>Interface navigation</li>
-            <li>Basic tools and features</li>
-            <li>Creating a simple 3D model</li>
-        </ul>
-    </li>
-    <li>Hands-on Activity
-        <ul>
-            <li>Guided exercise: Design a basic product component</li>
-            <li>Tips and tricks for efficient modeling</li>
-        </ul>
-    </li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-          `,
+          title: "Introduction to Fusion 360 (Pranav and Praveen)",
+          description:
+            "<b>Objective</b>: Teach the basics of Fusion 360 for 3D design and prototyping.<br><ol><li>Overview of Fusion 360<ul><li>Introduction to CAD and its importance in product design</li></ul></li><li>Getting Started with Fusion 360<ul><li>Interface navigation</li><li>Basic tools and features</li><li>Creating a simple 3D model</li></ul></li><li>Hands-on Activity<ul><li>Guided exercise: Design a basic product component</li><li>Tips and tricks for efficient modeling</li></ul></li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 4
         {
-          title: "Prototyping and Testing",
-          description: `
-          <b>Objective</b>: Explore various prototyping methods and the importance of testing in the product design process.
-          <ol>
-    <li>Introduction to Prototyping
-        <ul>
-            <li>Different types of prototypes: Low-fidelity, High-fidelity, Digital, Physical</li>
-        </ul>
-    </li>
-    <li>Tools and Materials for Prototyping
-        <ul>
-            <li>Software tools for digital prototyping</li>
-            <li>Materials for physical prototyping</li>
-        </ul>
-    </li>
-    <li>Testing and Iteration
-        <ul>
-            <li>Importance of user testing</li>
-            <li>Methods for collecting feedback and iterating designs</li>
-        </ul>
-    </li>
-    <li>Hands-on Activity
-        <ul>
-            <li>Quick prototyping exercise using available materials</li>
-        </ul>
-    </li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-
-          `,
+          title: "Prototyping and Testing (Tarani)",
+          description:
+            "<b>Objective</b>: Explore various prototyping methods and the importance of testing in the product design process.<br><ol><li>Introduction to Prototyping<ul><li>Different types of prototypes: Low-fidelity, High-fidelity, Digital, Physical</li></ul></li><li>Tools and Materials for Prototyping<ul><li>Software tools for digital prototyping</li><li>Materials for physical prototyping</li></ul></li><li>Testing and Iteration<ul><li>Importance of user testing</li><li>Methods for collecting feedback and iterating designs</li></ul></li><li>Hands-on Activity<ul><li>Quick prototyping exercise using available materials</li></ul></li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 5
         {
-          title:
-            "Introduction to Figma",
-          description: `
-          <b>Objective</b>: Teach the basics of Figma for UI/UX design and prototyping.
-          <ol>
-    <li>Overview of Figma
-        <ul>
-            <li>Introduction to UI/UX design and its relevance in product design</li>
-        </ul>
-    </li>
-    <li>Getting Started with Figma
-        <ul>
-            <li>Interface navigation</li>
-            <li>Basic tools and features</li>
-            <li>Creating a simple wireframe</li>
-        </ul>
-    </li>
-    <li>Hands-on Activity
-        <ul>
-            <li>Guided exercise: Design a basic app interface</li>
-            <li>Collaboration features in Figma</li>
-        </ul>
-    </li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-
-          `,
+          title: "Introduction to Figma (Nandini)",
+          description:
+            "<b>Objective</b>: Teach the basics of Figma for UI/UX design and prototyping.<br><ol><li>Overview of Figma<ul><li>Introduction to UI/UX design and its relevance in product design</li></ul></li><li>Getting Started with Figma<ul><li>Interface navigation</li><li>Basic tools and features</li><li>Creating a simple wireframe</li></ul></li><li>Hands-on Activity<ul><li>Guided exercise: Design a basic app interface</li><li>Collaboration features in Figma</li></ul></li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 6
         {
-          title: "Product Development and Roadmapping",
-          description: `
-          <b>Objective</b>: Understand the process of product development and how to create a product roadmap.
-          <ol>
-    <li>Stages of Product Development
-        <ul>
-            <li>Concept development</li>
-            <li>Design</li>
-            <li>Development</li>
-            <li>Testing</li>
-            <li>Launch</li>
-        </ul>
-    </li>
-    <li>Creating a Product Roadmap
-        <ul>
-            <li>Importance of roadmapping</li>
-            <li>Tools and techniques for roadmapping</li>
-            <li>Example roadmap creation</li>
-        </ul>
-    </li>
-    <li>MVP making</li>
-    <li>Q&A and Wrap-up</li>
-</ol>
-
-          `,
+          title: "Product Development, Market research and MVP making (Praveen + E-Cell)",
+          description:
+            "<b>Objective</b>: Understand the process of product development and how to create a product roadmap.<br>Techniques for Idea Generation: Techniques for generating innovative business ideas, including brainstorming and problem identification. Strategies for Idea Validation: Strategies for validating and testing the feasibility of ideas through market research and customer feedback. Case studies and examples of successful idea generation and validation processes. Market Research Fundamentals: Importance of understanding target markets, customer needs, and competitive landscapes. Methods for conducting effective market research, such as surveys, interviews, and data analysis. Applying market research findings to refine and validate business ideas. MVP making Q&A and Wrap-up",
         },
+        // Session 7
         {
-          title: "Marketing and Launch Strategies",
-          description: `
-          <b>Objective<b>: Learn about product marketing and strategies for a successful product launch.
-          <ol>
-          <li>Introduction to Product Marketing
-              <ul>
-                  <li>Role of marketing in product success</li>
-                  <li>Market research and positioning</li>
-              </ul>
-          </li>
-          <li>Launch Strategies
-              <ul>
-                  <li>Planning a product launch</li>
-                  <li>Go-to-market strategies</li>
-                  <li>Measuring launch success</li>
-              </ul>
-          </li>
-          <li>Case Study: Successful Product Launches
-              <ul>
-                  <li>Analysis of real-world examples</li>
-                  <li>Group discussion on key learnings</li>
-              </ul>
-          </li>
-          <li>Q&A and Wrap-up</li>
-      </ol>
-      
-          `,
+          title: "Marketing and Launch Strategies (Pranav)",
+          description:
+            "<b>Objective<b>: Learn about product marketing and strategies for a successful product launch.<br><ol><li>Introduction to Product Marketing<ul><li>Role of marketing in product success</li><li>Market research and positioning</li></ul></li><li>Launch Strategies<ul><li>Planning a product launch</li><li>Go-to-market strategies</li><li>Measuring launch success</li></ul></li><li>Case Study: Successful Product Launches<ul><li>Analysis of real-world examples</li><li>Group discussion on key learnings</li></ul></li><li>Q&A and Wrap-up</li></ol>",
         },
+        // Session 8
         {
-          title: "Product Pitch",
-          description: `Competition for students.
-          `
+          title: "Marketing, Branding, and Funding Your Startup (Ecell)",
+          description:
+            "Marketing and Branding Fundamentals: Core principles of marketing tailored for startups and small businesses. Developing a comprehensive marketing plan, including target audience identification, branding, and promotional strategies. Leveraging digital marketing tools and platforms for customer acquisition and engagement. Funding and Investment Strategies: Overview of different sources of startup funding (bootstrapping, loans, angel investors, venture capital) and their criteria. Techniques for pitching to investors, preparing investment proposals, and negotiating funding terms. Q&A and wrap up",
+        },
+        // Session 9
+        {
+          title: "Product pitch competition",
+          description: "Round 1: Slide set submission The submissions will be done before the session. Top 10 will go to the final round. Round 2: Pitch 3 Winners will be selected.",
         },
       ],
     },
