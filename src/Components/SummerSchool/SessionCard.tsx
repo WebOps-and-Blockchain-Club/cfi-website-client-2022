@@ -110,7 +110,7 @@ function SessionCard({ heading, image, link, description, onSubmit, clubs }: Med
                         </Typography>
                     }
                 </CardContent>
-                <Button
+                {/* <Button
                     sx={{
                         padding: "5px 20px",
                         margin: "0 20px",
@@ -127,7 +127,7 @@ function SessionCard({ heading, image, link, description, onSubmit, clubs }: Med
                     onClick={(e: any) => { e.preventDefault(); onSubmit(heading.split("##").join("")) }}
                 >
                     REGISTER
-                </Button>
+                </Button> */}
             </Card>
         </HashLink>
     );
