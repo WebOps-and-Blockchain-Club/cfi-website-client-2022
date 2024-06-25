@@ -16,13 +16,13 @@ import BiotechLogo from "../../Images/ClubLogo/BiotechLogo.png";
 import MathsLogo from "../../Images/ClubLogo/MathLogo.png";
 
 // CLUB HEADS
-import PrintingHead1 from "../../Images/ContactUs/Club/3DPC_ Sabarinathan_2024.jpg";
-import PrintingHead2 from "../../Images/ContactUs/Club/Pravin Ravi_3DPC_2024.jpg";
+import PrintingHead1 from "../../Images/ContactUs/Club/3DPC_Sabarinathan_2024.jpg";
+import PrintingHead2 from "../../Images/ContactUs/Club/Pravin_Ravi_3DPC_2024.jpg";
 import AeroHead1 from "../../Images/ContactUs/Club/Aero_Abhigyan.png";
 import AeroHead2 from "../../Images/ContactUs/Club/Aero_Sanjeet.jpg";
 import ElectronicsHead1 from "../../Images/ContactUs/Club/Arunachalam_Electronics_2024.jpg";
 import ElectronicsHead2 from "../../Images/ContactUs/Club/Pranesh_Electronics_2024.jpg";
-import HorizonHead1 from "../../Images/ContactUs/Club/Tanisha Ray_Horizon_2024.jpg";
+import HorizonHead1 from "../../Images/ContactUs/Club/Tanisha_Ray_Horizon_2024.jpg";
 import HorizonHead2 from "../../Images/ContactUs/Club/Vatsal_Horizon_2024.jpeg";
 import iBotHead1 from "../../Images/ContactUs/Club/IBot_Satya_Sai.png";
 import iBotHead2 from "../../Images/ContactUs/Club/IBot_Abishek.jpg";
@@ -41,7 +41,7 @@ import BiotechHead1 from "../../Images/ContactUs/Club/Shivan_Biotech_2024.jpg";
 import BiotechHead2 from "../../Images/ContactUs/Club/Vinya_Biotech_2024.jpg";
 import MathsHead1 from "../../Images/ContactUs/Club/Maths_Haricharan.png";
 import MathsHead2 from "../../Images/ContactUs/Club/Maths_Sreeja.png";
-import AIHead1 from "../../Images/ContactUs/Club/Mahendra Kurup_AI Club_2024.jpg";
+import AIHead1 from "../../Images/ContactUs/Club/Mahendra_Kurup_AI_Club_2024.jpg";
 // AI only one head so remove others
 
 //AERO
