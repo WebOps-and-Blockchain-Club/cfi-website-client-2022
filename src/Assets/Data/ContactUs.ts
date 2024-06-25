@@ -7,7 +7,7 @@ import { ClubsName, IContact, TeamsName } from "../../Types";
 import FACAD1 from "../Images/ContactUs/CFIOffice/FACAD_Prabhu.png";
 // import FACAD2 from "../Images/ContactUs/CFIOffice/FACAD_Satyanarayanan.png";
 // import COCAS from "../Images/ContactUs/CFIOffice/COCAS_Nithin.png";
-import CFIHead from "../Images/ContactUs/CFIOffice/CFI_Head_Sarthak.jpg";
+import CFIHead from "../Images/ContactUs/CFIOffice/CFIHead_Madhavnambi.jpg";
 
 export const ContactUsData = () => {
   let result: IContact[] = [
