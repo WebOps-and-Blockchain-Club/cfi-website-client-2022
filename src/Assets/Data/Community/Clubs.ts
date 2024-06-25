@@ -16,7 +16,7 @@ import BiotechLogo from "../../Images/ClubLogo/BiotechLogo.png";
 import MathsLogo from "../../Images/ClubLogo/MathLogo.png";
 
 // CLUB HEADS
-import PrintingHead1 from "../../Images/ContactUs/Club/3DPC_ Sabarinathan_2024.jpg";
+import PrintingHead1 from "../../Images/ContactUs/Club/Sabari_3DPC-2024.jpg";
 import PrintingHead2 from "../../Images/ContactUs/Club/Pravin Ravi_3DPC_2024.jpg";
 import AeroHead1 from "../../Images/ContactUs/Club/Aero_Abhigyan.png";
 import AeroHead2 from "../../Images/ContactUs/Club/Aero_Sanjeet.jpg";
@@ -37,7 +37,7 @@ import EnvisageHead2 from "../../Images/ContactUs/Club/Maadhav_Patel_Envisage_20
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/Abhishek_W&B.jpg";
 import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_purushottam.jpeg";
 import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/Girinath_W&B_2024.jpg";
-import BiotechHead1 from "../../Images/ContactUs/Club/Shivan_Biotech_2024.jpg";
+import BiotechHead1 from "../../Images/ContactUs/Club/Shivan_Biotech_2024.png";
 import BiotechHead2 from "../../Images/ContactUs/Club/Vinya_Biotech_2024.jpg";
 import MathsHead1 from "../../Images/ContactUs/Club/Maths_Haricharan.png";
 import MathsHead2 from "../../Images/ContactUs/Club/Maths_Sreeja.png";
