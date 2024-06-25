@@ -35,7 +35,7 @@ import SahaayHead2 from "../../Images/ContactUs/Club/Sahaay_Rishi.jpeg";
 import EnvisageHead1 from "../../Images/ContactUs/Club/Envisage_Harshitha.jpg";
 import EnvisageHead2 from "../../Images/ContactUs/Club/Envisage_Arjun.jpeg";
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/W&B_Rasagnya.jpeg";
-import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_Satwik.jpeg";
+import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_purushottam.jpeg";
 import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/W&B_Akshay.jpg";
 import BiotechHead1 from "../../Images/ContactUs/Club/Biotech_Aditya.jpeg";
 import BiotechHead2 from "../../Images/ContactUs/Club/Biotech_Raghav.jpg";
@@ -743,11 +743,11 @@ export const Clubs: IClubs = {
         linkedIn: "https://www.linkedin.com/in/rasagnya-gudipudi/",
       },
       {
-        name: "Satwik Anand",
+        name: "Purushottam Sharma",
         image: WebOpsAndBlockchainHead2,
-        email: "ee21b120@smail.iitm.ac.in",
-        phone: "9327686198",
-        linkedIn: "https://www.linkedin.com/in/satwik-anand-362959236",
+        email: "ee22b073@smail.iitm.ac.in",
+        phone: "7028759701",
+        linkedIn: "https://www.linkedin.com/in/purushottamjairajsharma/",
       },
       {
         name: "Akshay Pratap Singh ",
