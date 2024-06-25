@@ -16,7 +16,7 @@ import RaftarHead3 from "../../Images/ContactUs/CompetitionTeam/Raftar_Harish.pn
 import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Arun.jpeg";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Sudharsan.jpeg";
 import AbhiyaanHead3 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Aneesh.jpg";
-import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Pranav_Avishkar_2024.jpg";
+import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Pranav_Avishkar.jpg";
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Varun.jpg";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Aniketh.jpeg";
 import AnveshakHead3 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Shivendra.jpeg";

@@ -20,7 +20,7 @@ import PrintingHead1 from "../../Images/ContactUs/Club/3DPC_Sabarinathan_2024.jp
 import PrintingHead2 from "../../Images/ContactUs/Club/Pravin_Ravi_3DPC_2024.jpg";
 import AeroHead1 from "../../Images/ContactUs/Club/Aero_Abhigyan.png";
 import AeroHead2 from "../../Images/ContactUs/Club/Aero_Sanjeet.jpg";
-import ElectronicsHead1 from "../../Images/ContactUs/Club/Arunachalam_Electronics_2024.jpg";
+import ElectronicsHead1 from "../../Images/ContactUs/Club/Arunachalam_Electronics.jpg";
 import ElectronicsHead2 from "../../Images/ContactUs/Club/Pranesh_Electronics_2024.jpg";
 import HorizonHead1 from "../../Images/ContactUs/Club/Tanisha_Ray_Horizon_2024.jpg";
 import HorizonHead2 from "../../Images/ContactUs/Club/Vatsal_Horizon_2024.jpeg";
