@@ -18,3 +18,4 @@ generates:
       skipTypename: true
       flattenGeneratedTypes: true
       addDocBlocks: true
+      camelCasedEnums: true 

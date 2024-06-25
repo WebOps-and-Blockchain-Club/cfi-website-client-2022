@@ -16,15 +16,11 @@ import RaftarHead3 from "../../Images/ContactUs/CompetitionTeam/Raftar_Harish.pn
 import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Arun.jpeg";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Sudharsan.jpeg";
 import AbhiyaanHead3 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Aneesh.jpg";
-import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Shrid.jpeg";
-import AvishkarHead2 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Medha.jpeg";
-import AvishkarHead3 from "../../Images/ContactUs/CompetitionTeam/Avishkar_Siddhant.jpeg";
+import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Pranav_Avishkar_2024.jpg";
 import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Varun.jpg";
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Aniketh.jpeg";
 import AnveshakHead3 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Shivendra.jpeg";
-import AgnirathHead1 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Aditya.jpg";
-import AgnirathHead2 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Bindusara.jpg";
-import AgnirathHead3 from "../../Images/ContactUs/CompetitionTeam/Agnirath_Rishabh.jpg";
+import AgnirathHead1 from "../../Images/ContactUs/CompetitionTeam/Akash_Agnirath_2024.jpg";
 import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/IGem_Aarohee.jpeg";
 import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/IGem_Sanjana.jpg";
 import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Aaditya_Abhyuday.jpeg";
@@ -529,25 +525,11 @@ export const Teams: ITeams = {
     email: "avishkarhyperloop@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Shrid Suresh",
+        name: "Pranav Singhal",
         image: AvishkarHead1,
-        email: "me20b162@smail.iitm.ac.in",
+        email: "ed21b047@smail.iitm.ac.in",
         phone: "7358722528",
-        linkedIn: "https://www.linkedin.com/in/shrid-suresh-b2940b195/",
-      },
-      {
-        name: "Medha Kommajosyula",
-        image: AvishkarHead2,
-        email: "ed20b039@smail.iitm.ac.in",
-        phone: "9391384643",
-        linkedIn: "https://www.linkedin.com/in/medha-k-b8966621b/",
-      },
-      {
-        name: "Siddhant Patole",
-        image: AvishkarHead3,
-        email: "ce20b107@smail.iitm.ac.in",
-        phone: "9130034460",
-        linkedIn: "https://www.linkedin.com/in/siddhant-patole-a7b149255/",
+        linkedIn: "https://www.linkedin.com/in/pranav-singhal-81ba30223/",
       },
     ],
   },
@@ -578,25 +560,11 @@ export const Teams: ITeams = {
     email: "agnirath@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Aditya Ravindran",
+        name: "Akash Thakur",
         image: AgnirathHead1,
-        email: "na20b004@smail.iitm.ac.in",
+        email: "ae21b102@smail.iitm.ac.in",
         phone: "9884913874",
-        linkedIn: "https://www.linkedin.com/in/aditya-ravindran-1b734b211",
-      },
-      {
-        name: "Bindusara Reddy",
-        image: AgnirathHead2,
-        email: "na20b013@smail.iitm.ac.in",
-        phone: "8296354579",
-        linkedIn: "https://www.linkedin.com/in/bindusara-reddy-890b131b9",
-      },
-      {
-        name: "Rishabh Sharma",
-        image: AgnirathHead3,
-        email: "na20b051@smail.iitm.ac.in",
-        phone: "7710936213",
-        linkedIn: "https://www.linkedin.com/in/rishabh-sharma-a35440202",
+        linkedIn: "https://www.linkedin.com/in/akash-thakur-6696a6239/",
       },
     ],
   },

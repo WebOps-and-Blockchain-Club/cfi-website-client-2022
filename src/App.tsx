@@ -5,7 +5,7 @@ import { AuthContextProvider } from "./Utils/context";
 import { ApolloProvider } from "@apollo/client";
 import client from "./Graphql";
 import ReactGA from 'react-ga4';
-
+    
 interface Probs {}
 
 const theme = createTheme({
