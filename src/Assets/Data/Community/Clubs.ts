@@ -67,7 +67,6 @@ import ElectronicsAchievements2 from "../../Images/Community/Clubs/Electronics/A
 import ElectronicsAchievements3 from "../../Images/Community/Clubs/Electronics/Achievements3.jpeg";
 import ElectronicsAchievements4 from "../../Images/Community/Clubs/Electronics/Achievements4.gif";
 
-
 import ElectronicsGallery1 from "../../Images/Community/Clubs/Electronics/Gallery1.gif";
 import ElectronicsGallery2 from "../../Images/Community/Clubs/Electronics/Gallery2.jpg";
 import ElectronicsGallery3 from "../../Images/Community/Clubs/Electronics/Gallery3.jpg";
