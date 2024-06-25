@@ -37,7 +37,7 @@ import EnvisageHead2 from "../../Images/ContactUs/Club/Maadhav_Patel_Envisage_20
 import WebOpsAndBlockchainHead1 from "../../Images/ContactUs/Club/Abhishek_W&B.jpg";
 import WebOpsAndBlockchainHead2 from "../../Images/ContactUs/Club/W&B_purushottam.jpeg";
 import WebOpsAndBlockchainHead3 from "../../Images/ContactUs/Club/Girinath_W&B_2024.jpg";
-import BiotechHead1 from "../../Images/ContactUs/Club/Shivan_Biotech_2024.jpg";
+import BiotechHead1 from "../../Images/ContactUs/Club/Biotech_shivan.jpg";
 import BiotechHead2 from "../../Images/ContactUs/Club/Vinya_Biotech_2024.jpg";
 import MathsHead1 from "../../Images/ContactUs/Club/Maths_Haricharan.png";
 import MathsHead2 from "../../Images/ContactUs/Club/Maths_Sreeja.png";
