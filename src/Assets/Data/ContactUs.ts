@@ -29,11 +29,11 @@ export const ContactUsData = () => {
       email: "cfi@smail.iitm.ac.in",
       members: [
         {
-          name: "Sarthak Saurav",
+          name: "Madhavnambi R V",
           image: CFIHead,
-          email: "ep20b035@smail.iitm.ac.in",
-          phone: "8328950772",
-          linkedIn: "https://www.linkedin.com/in/sarthak-saurav/",
+          email: "na21b045@smail.iitm.ac.in",
+          phone: "8903172547",
+          linkedIn: "https://www.linkedin.com/in/madhavnambi-r-v-13443921a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=",
         },
       ],
     },
