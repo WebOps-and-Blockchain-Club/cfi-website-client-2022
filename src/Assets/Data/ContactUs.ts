@@ -31,7 +31,7 @@ export const ContactUsData = () => {
         {
           name: "Madhavnambi R V",
           image: CFIHead,
-          email: "na21b045@smail.iitm.ac.in",
+          email: "cfi@smail.iitm.ac.in",
           phone: "8903172547",
           linkedIn: "https://www.linkedin.com/in/madhavnambi-r-v-13443921a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=",
         },
