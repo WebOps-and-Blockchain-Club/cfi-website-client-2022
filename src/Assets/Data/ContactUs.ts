@@ -8,6 +8,8 @@ import FACAD1 from "../Images/ContactUs/CFIOffice/FACAD_Prabhu.png";
 // import FACAD2 from "../Images/ContactUs/CFIOffice/FACAD_Satyanarayanan.png";
 // import COCAS from "../Images/ContactUs/CFIOffice/COCAS_Nithin.png";
 import CFIHead from "../Images/ContactUs/CFIOffice/CFIHead_Madhavnambi.jpg";
+import CFIHEAD2 from "../Images/ContactUs/CFIOffice/Suparn_Gupta_CFIHEAD.png"
+import CFIHEAD3 from "../Images/ContactUs/CFIOffice/Ashmitha_CFIHEAD.jpg"
 
 export const ContactUsData = () => {
   let result: IContact[] = [
@@ -37,17 +39,25 @@ export const ContactUsData = () => {
         },
       ],
     },
-    // {
-    //   title: "Co-Curricular Affairs ##Secretary",
-    //   members: [
-    //     {
-    //       name: "Nithin S",
-    //       image: COCAS,
-    //       email: "sec_cocur@smail.iitm.ac.in",
-    //       phone: "9361334004",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Student Associate ##Head",
+      members: [
+        {
+          name: "Suparn Gupta",
+          image: CFIHEAD2,
+          email: "ce21b124@smail.iitm.ac.in",
+          phone: "8899888557",
+          linkedIn: "https://www.linkedin.com/in/suparn-gupta-2b4b06285?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCHzniUxKSL6ObT0RIpYiCw%3D%3D"
+        },
+        {
+          name: "Ashmitha",
+          image: CFIHEAD3,
+          email: "ce21b024@smail.iitm.ac.in",
+          phone: "9840494963",
+          linkedIn: "https://www.linkedin.com/in/ashmitha-jaysi-sivakumar-4637aa240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        }
+      ],
+    },
   ];
 
   // ManagerialTeams.map((_club: any) =>
