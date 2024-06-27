@@ -13,7 +13,7 @@ import AbhyudayLogo from "../../../Assets/Images/CompetitionTeamLogo/Abhyuday.pn
 import RaftarHead1 from "../../Images/ContactUs/CompetitionTeam/Raftar_Madhav.jpeg";
 import RaftarHead2 from "../../Images/ContactUs/CompetitionTeam/Raftar_Ragavendiran.jpeg";
 import RaftarHead3 from "../../Images/ContactUs/CompetitionTeam/Raftar_Harish.png";
-import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Arun.jpeg";
+import AbhiyaanHead1 from "../../Images/ContactUs/CompetitionTeam/Aayush_Abhiyaan_2024.jpeg";
 import AbhiyaanHead2 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Sudharsan.jpeg";
 import AbhiyaanHead3 from "../../Images/ContactUs/CompetitionTeam/Abhiyaan_Aneesh.jpg";
 import AvishkarHead1 from "../../Images/ContactUs/CompetitionTeam/Pranav_Avishkar_2024.jpeg";
@@ -21,8 +21,8 @@ import AnveshakHead1 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Varun
 import AnveshakHead2 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Aniketh.jpeg";
 import AnveshakHead3 from "../../Images/ContactUs/CompetitionTeam/Anveshak_Shivendra.jpeg";
 import AgnirathHead1 from "../../Images/ContactUs/CompetitionTeam/Akash_Agnirath_2024.jpg";
-import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/IGem_Aarohee.jpeg";
-import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/IGem_Sanjana.jpg";
+import IGemHead1 from "../../Images/ContactUs/CompetitionTeam/Anirudh_iGEM_2024.jpg";
+import IGemHead2 from "../../Images/ContactUs/CompetitionTeam/Twisha_iGEM_2024.jpg";
 import AbhyudayHead1 from "../../Images/ContactUs/CompetitionTeam/Aaditya_Abhyuday.jpeg";
 import AbhyudayHead2 from "../../Images/ContactUs/CompetitionTeam/Ashish_Abhyuday.jpeg";
 
@@ -266,11 +266,11 @@ export const Teams: ITeams = {
     email: "abhiyaan@smail.iitm.ac.in",
     contacts: [
       {
-        name: "Arun Krishna",
+        name: "Aayush Agrawal",
         image: AbhiyaanHead1,
-        email: "arunkrish2603@gmail.com",
+        email: "ch21b003@smail.iitm.ac.in",
         phone: "7550143818",
-        linkedIn: "https://www.linkedin.com/in/arunkrishna-a-m-s-6257ba190/",
+        linkedIn: "https://www.linkedin.com/in/aayush--agrawal/",
       },
       {
         name: "Sudharsan",
@@ -627,10 +627,10 @@ export const Teams: ITeams = {
     gallery: [{ image: IGemGallery1 }, { image: IGemGallery2 }],
     contacts: [
       {
-        name: "Aarohee Vora",
+        name: "Twisha T S",
         phone: "7045525122",
-        email: "aaroheeavora@gmail.com",
-        linkedIn: "https://www.linkedin.com/in/aarohee-vora-681417213",
+        email: "be21b042@smail.iitm.ac.in",
+        linkedIn: "https://www.linkedin.com/in/twisha-shivashankar-76a53223b",
         image: IGemHead1,
       },
       {
