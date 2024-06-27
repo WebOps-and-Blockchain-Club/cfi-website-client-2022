@@ -396,7 +396,7 @@ export const Clubs: IClubs = {
         name: "Tanisha Ray",
         image: HorizonHead1,
         email: "ph22b003@smail.iitm.ac.in",
-        phone: "7606849932",
+        phone: "9366664660",
         linkedIn: "https://www.linkedin.com/in/tanisha-ray-90a7ba251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
       {
