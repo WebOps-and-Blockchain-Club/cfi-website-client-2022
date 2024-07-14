@@ -185,13 +185,13 @@ export const Clubs: IClubs = {
     //       "The club has been involved in projects for the betterment of the medical field such as printing prosthesis for injured animals, printing affordable and lightweight plaster cast for humans and also designing an ergonomic crutch for the disabled.",
     //   },
     // ],
-    email: "3dpc.cfi.iitm@gmail.com",
+    email: "3dpc_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Sabarinathan S S",
         image: PrintingHead1,
         email: "ed22b028@smail.iitm.ac.in",
-        phone: "8899888557",
+        phone: "9442611194",
         linkedIn: "https://www.linkedin.com/in/sabarinathan-s-s-309a56257/",
       },
       {
@@ -221,7 +221,7 @@ export const Clubs: IClubs = {
           "The Club won the gold medal at 2021 Inter-IIT 9.0 DRDO DGRE’s VISION-BASED OBSTACLE AVOIDANCE DRONE.",
       },
     ],
-    email: "aeroclub.cfi@gmail.com",
+    email: "aeroclub_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Abhigyan Roy",
@@ -334,7 +334,7 @@ export const Clubs: IClubs = {
         image: ElectronicsGallery15,
       },
     ],
-    email: "elecclub.cfi@gmail.com",
+    email: "elecclub_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Arunachalam Ramesh",
@@ -390,7 +390,7 @@ export const Clubs: IClubs = {
         image: HorizonAchievements5,
       },
     ],
-    email: "horizon.iitm@gmail.com",
+    email: "horizon_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Tanisha Ray",
@@ -457,7 +457,7 @@ export const Clubs: IClubs = {
         image: IBotGallery8,
       },
     ],
-    email: "ibotcfi@gmail.com",
+    email: "ibot_cfi@smail.iitm.ac.in",
     website: "http://aiitra.org/",
     contacts: [
       {
@@ -500,7 +500,7 @@ export const Clubs: IClubs = {
         )}.`,
       },
     ],
-    email: "thepdc.cfi@gmail.com",
+    email: "pdc_cfi@smail.iitm.ac.in",
     website:
       "https://sites.google.com/smail.iitm.ac.in/productdesignclub/home?authuser=1",
     contacts: [
@@ -542,7 +542,7 @@ export const Clubs: IClubs = {
           "ACM International Collegiate Programming Contest is an annual multi-tiered programming competition among the universities of the world. In the Gwalior region, team Supercalifragilistic secured the 2nd position amongst 98 teams. This certainly guarantees a spot for IIT-M at the World Finals to be held in Beijing.",
       },
     ],
-    email: "programmingclubiitm@gmail.com",
+    email: "programmingclub_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Chahel Singh",
@@ -585,7 +585,7 @@ export const Clubs: IClubs = {
         image: SahaayAchievements3,
       },
     ],
-    email: "teamsahaayiitm@gmail.com",
+    email: "teamsahaay_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Pranav Yadav",
@@ -661,7 +661,7 @@ export const Clubs: IClubs = {
         image: EnvisageProject5,
       },
     ],
-    email: "envisageiitmadras@gmail.com",
+    email: "envisage_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Mayush Kumar",
@@ -819,7 +819,7 @@ export const Clubs: IClubs = {
     oneLiner: "Thinking outside the Petri dish",
     description:
       "The Biotech Club, born in 2023 as a vertical under iGEM, is a group of passionate individuals determined to showcase the wonders of biotech to the student community. Our vision is to create an inclusive interdisciplinary haven where students can explore exciting ideas and endless possibilities in biotechnology. The club organizes a series of captivating events and engaging workshops to stimulate your brain, facing those ideas that keep you up at night (zombie apocalypse, anyone?). Apart from this, the club undertakes student projects in biotechnology. At the Biotech Club, the only prerequisite is a deep-seated desire to dive into biotechnology. The club offers a haven for anyone looking to get their hands dirty, ideate and dig deep to come up with solutions.<br /> <b>Together we’ll turn dreams into reality, one DNA strand at a time!</b>",
-    email: "biotechcfi@gmail.com",
+    email: "biotech_cfi@smail.iitm.ac.in",
     contacts: [
       {
         name: "Shivan Ajay Iyer",
@@ -848,7 +848,7 @@ export const Clubs: IClubs = {
     name: "Mathematics ##Club",
     logo: MathsLogo,
     oneLiner: "To infinity and beyond",
-    email: "mathematicsclubiitm@gmail.com",
+    email: "mathematicsclub_cfi@smail.iitm.ac.in",
     description:
       "Mathematics club, CFI is a group of motivated and enthusiastic students conducting research on various topics in the field of Mathematics and aiming to develop a thriving Math culture. Started in November 2022, our team has conducted numerous workshops, problem-solving sessions, and contests, including our flagship event Integration Bee. Our areas of research include Probability and Statistics, Calculus, Game Theory, Galois Theory and Group Theory.",
     projects: [
